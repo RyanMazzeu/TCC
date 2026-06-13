@@ -1,0 +1,36 @@
+# Ignorar arquivos auxiliares de compilação LaTeX
+# Se main.log já estiver rastreado, remova-o do índice com: git rm --cached main.log
+*.latexmkrc
+main.log
+*.aux
+*.log
+*.toc
+*.out
+*.bbl
+*.blg
+*.brf
+*.idx
+*.ilg
+*.ind
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.synctex
+*.nav
+*.snm
+*.vrb
+*.dvi
+*.ps
+*.run.xml
+*.glg
+*.glo
+*.gls
+*.ist
+*.acn
+*.acr
+*.alg
+*.loa
+*.maf
+*.mtc*
