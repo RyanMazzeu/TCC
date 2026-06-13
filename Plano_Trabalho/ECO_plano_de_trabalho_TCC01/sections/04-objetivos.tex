@@ -7,14 +7,14 @@ O objetivo geral desta pesquisa consiste em analisar o impacto de diferentes arq
 Para alcançar o propósito geral e responder à problemática de infraestrutura e custos computacionais que envolvem esses sistemas, estabelecem-se os seguintes objetivos específicos:
 
 \begin{enumerate}
-    \item \textbf{Mapear e catalogar} as abordagens clássicas e avançadas de recuperação de contexto, com ênfase detalhada no funcionamento algorítmico dos métodos Stuff, Refine, Map Reduce, Map Re-rank, Query Step-Down e Reciprocal RAG.
+    \item \textbf{Mapear e catalogar} as abordagens clássicas e avançadas de recuperação de contexto, com ênfase detalhada no funcionamento algorítmico dos métodos Stuff, Refine, Map Reduce, Map Re-rank, Query Step-Down e Reciprocal RAG \cite{topsakal2023langchain}.
     \item \textbf{Avaliar e comparar} o desempenho de diferentes bancos de dados vetoriais (como ChromaDB, FAISS e Pinecone) em simulações cruzadas, mensurando de forma quantitativa métricas físicas de infraestrutura como o uso de CPU, consumo de memória RAM e latência de tempo de execução.
     
     \item \textbf{Mensurar} a variação da acurácia semântica das respostas geradas a partir de métricas de similaridade de cosseno, correlacionando a precisão do texto final com a eficácia de diferentes modelos de embedding (incluindo Bge-en-small, Text-embedding-v3-large e Cohere-en-v3).
 
     \item \textbf{Investigar} a influência e a viabilidade da aplicação de filtros de compressão contextual (focados em limiares de similaridade e redundância) sobre a contenção e redução do volume total de tokens trafegados por requisição, analisando o tradeoff gerado entre a economia financeira de processamento e a eventual perda de qualidade informacional.
 
-    \item \textbf{Validar} as hipóteses e configurações propostas por meio de uma abordagem de testes sistemáticos baseada em varredura em grade (grid-search), executando os experimentos propostos sobre conjuntos de dados de múltiplos domínios públicos de alta complexidade (como relatórios SEC 10Q, Llama2 ArXiv e MedQA).
+    \item \textbf{Validar} as hipóteses e configurações propostas por meio de uma abordagem de testes sistemáticos baseada em varredura em grade (grid-search), executando os experimentos propostos sobre conjuntos de dados de múltiplos domínios públicos de alta complexidade (como relatórios SEC 10Q, Llama2 ArXiv e MedQA) \cite{sakar2025rag}.
 
      \item \textbf{Sintetizar e propor} um arcabouço de boas práticas ou guia de tomada de decisão para engenheiros de software e pesquisadores, indicando as melhores combinações de componentes RAG para restrições específicas de custo, tempo ou hardware.
     
