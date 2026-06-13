@@ -2,7 +2,14 @@
 \contentsline {section}{\numberline {1}Introdução}{2}{section.1}%
 \contentsline {section}{\numberline {2}Motivação}{3}{section.2}%
 \contentsline {section}{\numberline {3}Revisão bibliográfica}{4}{section.3}%
-\contentsline {section}{\numberline {4}Objetivos específicos}{5}{section.4}%
-\contentsline {section}{\numberline {5}Materiais e métodos}{6}{section.5}%
-\contentsline {section}{\numberline {6}Resultados esperados}{7}{section.6}%
-\contentsline {section}{\numberline {7}Cronograma de atividades do TCC02}{8}{section.7}%
+\contentsline {subsection}{\numberline {3.1}Limitações dos LLMs e a consolidação do RAG}{4}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Métodos de manipulação de contexto e o compromisso de eficiência}{4}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Estratégias avançadas de recuperação}{4}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Contexto longo, estruturação documental e fragmentação}{5}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Infraestrutura de armazenamento e recuperação vetorial}{5}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Aplicações de domínio específico}{5}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}Lacunas identificadas}{5}{subsection.3.7}%
+\contentsline {section}{\numberline {4}Objetivos específicos}{6}{section.4}%
+\contentsline {section}{\numberline {5}Materiais e métodos}{7}{section.5}%
+\contentsline {section}{\numberline {6}Resultados esperados}{8}{section.6}%
+\contentsline {section}{\numberline {7}Cronograma de atividades do TCC02}{9}{section.7}%
