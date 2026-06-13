@@ -7,8 +7,7 @@
 \providecommand{\BIBentrySTDinterwordspacing}{\spaceskip=0pt\relax}
 \providecommand{\BIBentryALTinterwordstretchfactor}{4}
 \providecommand{\BIBentryALTinterwordspacing}{\spaceskip=\fontdimen2\font plus
-\BIBentryALTinterwordstretchfactor\fontdimen3\font minus
-  \fontdimen4\font\relax}
+\BIBentryALTinterwordstretchfactor\fontdimen3\font minus \fontdimen4\font\relax}
 \providecommand{\BIBforeignlanguage}[2]{{%
 \expandafter\ifx\csname l@#1\endcsname\relax
 \typeout{** WARNING: IEEEtran.bst: No hyphenation pattern has been}%
@@ -22,63 +21,39 @@
 \BIBdecl
 
 \bibitem{andriopoulos2023augmenting}
-K.~Andriopoulos and J.~Pouwelse, ``Augmenting {LLMs} with knowledge: A survey
-  on hallucination prevention,'' arXiv preprint arXiv:2309.16459, 2023.
+K.~Andriopoulos and J.~Pouwelse, ``Augmenting {LLMs} with knowledge: A survey on hallucination prevention,'' arXiv preprint arXiv:2309.16459, 2023.
 
 \bibitem{ma2024vectorsurvey}
-L.~Ma, R.~Zhang, Y.~Han, S.~Yu, Z.~Wang, Z.~Ning, J.~Zhang, P.~Xu, P.~Li,
-  Z.~Qiao, W.~Ju, C.~Chen, D.~Wang, K.~Liu, P.~Wang, P.~Wang, Y.~Fu, C.~Liu,
-  Y.~Zhou, and C.-T. Lu, ``A comprehensive survey on vector database: Storage
-  and retrieval technique, challenge,'' arXiv preprint arXiv:2310.11703, 2024.
+L.~Ma, R.~Zhang, Y.~Han, S.~Yu, Z.~Wang, Z.~Ning, J.~Zhang, P.~Xu, P.~Li, Z.~Qiao, W.~Ju, C.~Chen, D.~Wang, K.~Liu, P.~Wang, P.~Wang, Y.~Fu, C.~Liu, Y.~Zhou, and C.-T. Lu, ``A comprehensive survey on vector database: Storage and retrieval technique, challenge,'' arXiv preprint arXiv:2310.11703, 2024.
 
 \bibitem{topsakal2023langchain}
-O.~Topsakal and T.~C. Akinci, ``Creating large language model applications
-  utilizing {LangChain}: A primer on developing {LLM} apps fast,'' in
-  \emph{Proceedings of the 5th International Conference on Applied Engineering
-  and Natural Sciences (ICAENS)}, Konya, Turkey, 2023.
+O.~Topsakal and T.~C. Akinci, ``Creating large language model applications utilizing {LangChain}: A primer on developing {LLM} apps fast,'' in \emph{Proceedings of the 5th International Conference on Applied Engineering and Natural Sciences (ICAENS)}, Konya, Turkey, 2023.
 
 \bibitem{sakar2025rag}
-T.~{\c{S}}akar and H.~Emekci, ``Maximizing {RAG} efficiency: A comparative
-  analysis of {RAG} methods,'' \emph{Natural Language Processing}, vol.~31, pp.
-  1--25, 2025.
+T.~{\c{S}}akar and H.~Emekci, ``Maximizing {RAG} efficiency: A comparative analysis of {RAG} methods,'' \emph{Natural Language Processing}, vol.~31, pp. 1--25, 2025.
 
 \bibitem{barnett2024seven}
-S.~Barnett, S.~Kurniawan, S.~Thudumu, Z.~Brannelly, and M.~Abdelrazek, ``Seven
-  failure points when engineering a retrieval augmented generation system,''
-  arXiv preprint arXiv:2401.05856, 2024.
+S.~Barnett, S.~Kurniawan, S.~Thudumu, Z.~Brannelly, and M.~Abdelrazek, ``Seven failure points when engineering a retrieval augmented generation system,'' arXiv preprint arXiv:2401.05856, 2024.
 
 \bibitem{ma2023query}
-X.~Ma, Y.~Gong, P.~He, H.~Zhao, and N.~Duan, ``Query rewriting for
-  retrieval-augmented large language models,'' arXiv preprint arXiv:2305.14283,
-  2023.
+X.~Ma, Y.~Gong, P.~He, H.~Zhao, and N.~Duan, ``Query rewriting for retrieval-augmented large language models,'' arXiv preprint arXiv:2305.14283, 2023.
 
 \bibitem{rackauckas2024ragfusion}
-Z.~Rackauckas, ``{RAG-Fusion}: A new take on retrieval-augmented generation,''
-  arXiv preprint arXiv:2402.03367, 2024.
+Z.~Rackauckas, ``{RAG-Fusion}: A new take on retrieval-augmented generation,'' arXiv preprint arXiv:2402.03367, 2024.
 
 \bibitem{liu2023lost}
-N.~F. Liu, K.~Lin, J.~Hewitt, A.~Paranjape, M.~Bevilacqua, F.~Petroni, and
-  P.~Liang, ``Lost in the middle: How language models use long contexts,''
-  arXiv preprint arXiv:2307.03172, 2023.
+N.~F. Liu, K.~Lin, J.~Hewitt, A.~Paranjape, M.~Bevilacqua, F.~Petroni, and P.~Liang, ``Lost in the middle: How language models use long contexts,'' arXiv preprint arXiv:2307.03172, 2023.
 
 \bibitem{nair2023drilling}
-I.~Nair, S.~Somasundaram, A.~Saxena, and K.~Goswami, ``Drilling down into the
-  discourse structure with {LLMs} for long document question answering,'' arXiv
-  preprint arXiv:2311.13565, 2023.
+I.~Nair, S.~Somasundaram, A.~Saxena, and K.~Goswami, ``Drilling down into the discourse structure with {LLMs} for long document question answering,'' arXiv preprint arXiv:2311.13565, 2023.
 
 \bibitem{schwaber2025chunking}
-R.~Schwaber-Cohen and A.~Patel, ``Chunking strategies for {LLM} applications,''
-  Pinecone Learning Center, 2025, dispon{\'i}vel em:
-  \url{https://www.pinecone.io/learn/chunking-strategies/}.
+R.~Schwaber-Cohen and A.~Patel, ``Chunking strategies for {LLM} applications,'' Pinecone Learning Center, 2025, dispon{\'i}vel em: \url{https://www.pinecone.io/learn/chunking-strategies/}.
 
 \bibitem{cui2023chatlaw}
-J.~Cui, M.~Ning, Z.~Li, H.~Li, Y.~Yan, B.~Chen, B.~Ling, Y.~Tian, and L.~Yuan,
-  ``{Chatlaw}: A multi-agent legal assistant based on a role-aligned
-  mixture-of-experts architecture,'' arXiv preprint arXiv:2306.16092, 2023.
+J.~Cui, M.~Ning, Z.~Li, H.~Li, Y.~Yan, B.~Chen, B.~Ling, Y.~Tian, and L.~Yuan, ``{Chatlaw}: A multi-agent legal assistant based on a role-aligned mixture-of-experts architecture,'' arXiv preprint arXiv:2306.16092, 2023.
 
 \bibitem{gupta2023gptinvestar}
-U.~Gupta, ``{GPT-InvestAR}: Enhancing stock investment strategies through
-  annual report analysis with large language models,'' arXiv preprint
-  arXiv:2309.03079, 2023.
+U.~Gupta, ``{GPT-InvestAR}: Enhancing stock investment strategies through annual report analysis with large language models,'' arXiv preprint arXiv:2309.03079, 2023.
 
 \end{thebibliography}
