@@ -1,70 +1,155 @@
 \newpage
-\section{Cronograma de atividades do TCC02}
+\section{Cronograma de atividades do TCC}
 \label{sc:cronograma}
 
+As atividades planejadas para a execução deste Trabalho de Conclusão de Curso (TCC) estão distribuídas ao longo de cinco fases principais (F.1 a F.5), detalhadas na Tabela \ref{tab:fases}. A distribuição temporal destas atividades entre os meses de maio e setembro de 2026 está ilustrada nos gráficos de Gantt na sequência.
+
+\vspace{0.5cm}
+
 \begin{longtable}{p{\textwidth}}
-% pairs: absolute number (percentage)
 \toprule%
 \myrowcolour%
-\bfseries F.0: Título da Fase 0 \\ %Alterar o título da fase
+\bfseries F.1: Proposição e Delimitação \\
 \midrule
-Breve descrição da fase 0
-\\
-\midrule
-\myrowcolour%
-\bfseries Atividades planejadas para a fase 0 \\
-\midrule
-A.0.1 Atividade 01 \\
-A.0.2 Atividades 02 \\
-\midrule
-\myrowcolour%
-\bfseries Resultados esperados para a fase 0\\
-\midrule
-%\lipsum[2] \\
-Descrição dos resultados esperados para a fase 0. 
-Esses resultados demarcam o fim da fase.\\
-\toprule%
-\myrowcolour%
-\bfseries F.0: Título da Fase 1 \\
-\midrule
-Breve descrição da fase 0
-\\
+Definição do tema, objetivos, pergunta de pesquisa e escopo do trabalho. \\
 \midrule
 \myrowcolour%
 \bfseries Atividades planejadas para a fase 1 \\
 \midrule
-A.1.1 Atividade 01 \\
-A.1.2 Atividades 02 \\
+Elaboração do anteprojeto; reunião com orientador; definição da metodologia. \\
 \midrule
 \myrowcolour%
-\bfseries Resultados esperados para a fase 1 \\
+\bfseries Resultados esperados para a fase 1\\
 \midrule
-%\lipsum[2] \\
-Descrição dos resultados esperados para a fase 0.
-Esses resultados demarcam o fim da fase.\\
-
+Anteprojeto aprovado pelo orientador e plano de trabalho definido.\\
+\toprule%
+\myrowcolour%
+\bfseries F.2: Revisão Bibliográfica \\
+\midrule
+Levantamento e síntese da literatura relevante para fundamentar o TCC. \\
+\midrule
+\myrowcolour%
+\bfseries Atividades planejadas para a fase 2 \\
+\midrule
+Pesquisa em bases; leitura crítica; organização das referências (BibTeX). \\
+\midrule
+\myrowcolour%
+\bfseries Resultados esperados para a fase 2 \\
+\midrule
+Estado da arte consolidado e seção de revisão escrita.\\
+\toprule%
+\myrowcolour%
+\bfseries F.3: Metodologia e Implementação \\
+\midrule
+Desenvolvimento do método, ferramentas e implementação do experimento/protótipo. \\
+\midrule
+\myrowcolour%
+\bfseries Atividades planejadas para a fase 3 \\
+\midrule
+Desenho experimental; implementação do protótipo; testes iniciais. \\
+\midrule
+\myrowcolour%
+\bfseries Resultados esperados para a fase 3 \\
+\midrule
+Protótipo funcional e conjunto de dados/resultados preliminares.\\
+\toprule%
+\myrowcolour%
+\bfseries F.4: Análise, Redação e Entrega \\
+\midrule
+Análise dos resultados, redação dos capítulos e preparação da versão final. \\
+\midrule
+\myrowcolour%
+\bfseries Atividades planejadas para a fase 4 \\
+\midrule
+Análise estatística/qualitativa; escrita dos capítulos; revisão com orientador. \\
+\midrule
+\myrowcolour%
+\bfseries Resultados esperados para a fase 4 \\
+\midrule
+Versão final do relatório entregue e pronta para defesa.\\
+\toprule%
+\myrowcolour%
+\bfseries F.5: Preparação da Apresentação/Defesa \\
+\midrule
+Preparação de slides, ensaio e ajustes finais para a defesa. \\
+\midrule
+\myrowcolour%
+\bfseries Atividades planejadas para a fase 5 \\
+\midrule
+Criação de apresentação; ensaios; correções finais. \\
+\midrule
+\myrowcolour%
+\bfseries Resultados esperados para a fase 5 \\
+\midrule
+Apresentação pronta e cronograma de defesa agendado.\\
 \bottomrule
+\caption{Detalhamento das fases do TCC}
+\label{tab:fases}
 \end{longtable}
 
+\subsection*{Distribuição Temporal (2026)}
 
-
+\noindent
+% Configurações globais para os gráficos ficarem padronizados
 \begin{ganttchart}[
-y unit title=.6cm,
-y unit chart=.6cm,
-x unit = 2.8cm,
-hgrid,
-vgrid,
-time slot format=isodate-yearmonth,
-time slot unit=month,
-inline,
-bar height=0.7,
-bar/.append style={fill=gray!50, inner sep=0pt}
-]{2025-01}{2025-06}
-\gantttitlecalendar{year, month} \\
-  %\ganttgroup{\textbf{F.0}}{2016-07}{2018-06} \\
-  \ganttbar{F.0: A.0.1}{2025-03}{2025-05} \\
-  \ganttbar{F.0: A.0.2}{2025-05}{2025-06} \\
-  
-  %\ganttmilestone{F.6: A.6.4}{2025-06} \\
+  y unit title=.6cm,
+  y unit chart=.7cm,
+  x unit = \dimexpr\textwidth/6\relax, % Divide a largura da página perfeitamente em 6 colunas
+  hgrid,
+  vgrid={*1{draw=gray!30, dashed}}, % Linhas verticais tracejadas e suaves
+  time slot format=isodate-yearmonth,
+  time slot unit=month,
+  inline, % Coloca o texto dentro da barra
+  bar height=0.6,
+  bar label font=\small\bfseries\color{white}, % Letra branca e negrito para contraste
+  bar/.append style={fill=blue!60!cyan, rounded corners=2pt, draw=blue!80!black, thick} % Design moderno
+]{2026-01}{2026-06}
 
+  % Títulos do primeiro semestre
+  \gantttitle{1º Semestre}{6} \\
+  \gantttitle{Jan}{1}
+  \gantttitle{Fev}{1}
+  \gantttitle{Mar}{1}
+  \gantttitle{Abr}{1}
+  \gantttitle{Mai}{1}
+  \gantttitle{Jun}{1} \\
+  
+  % Barras do primeiro semestre (Apenas a sigla para caber)
+  \ganttbar{F.1}{2026-05}{2026-05} \\
+  \ganttbar{F.2}{2026-05}{2026-06} \\
+  \ganttbar{F.3}{2026-06}{2026-06} 
 \end{ganttchart}
+
+\vspace{1cm} % Espaço entre os dois semestres
+
+\noindent
+\begin{ganttchart}[
+  y unit title=.6cm,
+  y unit chart=.7cm,
+  x unit = \dimexpr\textwidth/6\relax, 
+  hgrid,
+  vgrid={*1{draw=gray!30, dashed}},
+  time slot format=isodate-yearmonth,
+  time slot unit=month,
+  inline,
+  bar height=0.6,
+  bar label font=\small\bfseries\color{white},
+  bar/.append style={fill=blue!60!cyan, rounded corners=2pt, draw=blue!80!black, thick}
+]{2026-07}{2026-12}
+
+  % Títulos do segundo semestre
+  \gantttitle{2º Semestre}{6} \\
+  \gantttitle{Jul}{1}
+  \gantttitle{Ago}{1}
+  \gantttitle{Set}{1}
+  \gantttitle{Out}{1}
+  \gantttitle{Nov}{1}
+  \gantttitle{Dez}{1} \\
+  
+  % Barras do segundo semestre
+  \ganttbar{F.3}{2026-07}{2026-08} \\
+  \ganttbar{F.4}{2026-08}{2026-09} \\
+  \ganttbar{F.5}{2026-09}{2026-09}
+\end{ganttchart}
+
+\newpage
