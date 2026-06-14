@@ -34,3 +34,5 @@ main.log
 *.loa
 *.maf
 *.mtc*
+.venv
+.env
