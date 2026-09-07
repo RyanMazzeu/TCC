@@ -1,0 +1,32 @@
+[
+  {
+    "dominio": "revalida",
+    "n_chunks": 430,
+    "n_perguntas": 12,
+    "chromadb": {
+      "tempo_indexacao_s": 0.4248,
+      "memoria_indexacao_mb": 38.68,
+      "tempo_consulta_medio_ms": 3.059
+    }
+  },
+  {
+    "dominio": "grendene",
+    "n_chunks": 199,
+    "n_perguntas": 3,
+    "chromadb": {
+      "tempo_indexacao_s": 0.1708,
+      "memoria_indexacao_mb": 2.77,
+      "tempo_consulta_medio_ms": 5.924
+    }
+  },
+  {
+    "dominio": "sbc",
+    "n_chunks": 42,
+    "n_perguntas": 3,
+    "chromadb": {
+      "tempo_indexacao_s": 0.0951,
+      "memoria_indexacao_mb": 3.25,
+      "tempo_consulta_medio_ms": 2.818
+    }
+  }
+]

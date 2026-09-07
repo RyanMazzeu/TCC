@@ -1,0 +1,26 @@
+{
+  "fonte": "Grendene S.A. — ITR (Informações Trimestrais) 30/09/2025",
+  "url": "https://s3.sa-east-1.amazonaws.com/static.grendene.aatb.com.br/IFRS_ITR/2458_GRENDENESET25.ITR.pdf",
+  "observacao": "Diferente do Revalida, este documento não vem com perguntas/respostas prontas. As perguntas abaixo foram escritas por nós, cada uma com resposta ancorada em um trecho literal do próprio documento (citado em 'trecho_fonte').",
+  "perguntas": [
+    {
+      "id": "grendene_q1",
+      "pergunta": "Qual foi a taxa final de conversão do Dólar Americano (USD) em 30/09/2025, segundo as notas explicativas?",
+      "resposta_esperada": "5,3186",
+      "trecho_fonte": "Dólar Americano (\"USD\") Taxa Final 30/09/2025: 5,3186"
+    },
+    {
+      "id": "grendene_q2",
+      "pergunta": "A partir de que momento uma controlada passa a ser incorporada e mantida na consolidação das informações trimestrais da Grendene?",
+      "resposta_esperada": "As controladas são incorporadas à consolidação a partir da data em que a Companhia obtém o controle e permanecem consolidadas até a data em que esse controle deixa de existir.",
+      "trecho_fonte": "As controladas são incorporadas à consolidação a partir da data em que Companhia obtém o controle e permanece consolidada até a data em que esse controle deixa de existir."
+    },
+    {
+      "id": "grendene_q3",
+      "pergunta": "Qual foi o saldo consolidado de caixa e bancos da Grendene em 30/09/2025, conforme a nota de Caixa e equivalentes?",
+      "resposta_esperada": "13.092 (em milhares de reais)",
+      "trecho_fonte": "Caixa e bancos ... Consolidado 30/09/2025: 13.092",
+      "observacao_pos_execucao": "A pergunta é ambígua: 'caixa e bancos' é só a sub-linha específica (13.092), diferente do total 'Caixa e Equivalentes de Caixa' (13.092 de caixa e bancos + 78.919 de equivalentes de caixa = 92.011), que aparece no balanço patrimonial, na DFC e na nota de instrumentos financeiros -- 3 lugares diferentes do documento, todos consistentes em 92.011. O modelo recuperado respondeu com o total mais proeminente (92.011), não com a sub-linha estreita perguntada. Não é erro de conteúdo -- é ambiguidade de escopo numérico, mantida aqui como achado, não corrigida silenciosamente."
+    }
+  ]
+}

@@ -1,0 +1,579 @@
+Comparac ¸˜ao de Modelos de Embeddings e LLMs para
+Gerac ¸˜ao Aumentada por Recuperac ¸˜ao em Portugu ˆes
+Luiz Sabiano Ferreira Medeiros 1, Hil ´ario Tomaz Alves de Oliveira 1
+1 Programa de P´os-Graduac ¸˜ao em Computac ¸˜ao Aplicada – PPComp
+Instituto Federal do Esp´ırito Santo (IFES)
+Av. dos Sabi´as 330 – Morada de Laranjeiras – Serra – ES – Brazil – 29166-630
+luizsabiano@gmail.com, hilario.oliveira@ifes.edu.br
+Abstract. Large language models (LLMs) represent a breakthrough in natural
+language processing, boosting performance in tasks such as text generation and
+question answering. However, they face challenges such as hallucinations and
+lack of access to updated information. The Retrieval-Augmented Generation
+(RAG) technique seeks to mitigate these problems by integrating external in-
+formation retrieval into text generation, improving the accuracy and timeliness
+of the answers. This work investigated several open-source and proprietary
+embedding models and LLMs applied to the RAG technique, considering three
+databases containing documents written in Brazilian Portuguese. The experi-
+mental results demonstrated that the Multilingual E5 large and Gemma 2 9B
+models obtained the best performance among the evaluated models based on
+different evaluation measures.
+Resumo. Os modelos de linguagem de larga escala (LLMs) representam um
+avanc ¸o para a´area de processamento de linguagem natural, impulsionando o
+desempenho em tarefas como gerac ¸˜ao de texto e resposta a perguntas. No en-
+tanto, eles enfrentam desafios como alucinac ¸˜oes e falta de acesso a informac ¸˜oes
+atualizadas. A t ´ecnica de gerac ¸˜ao aumentada por recuperac ¸˜ao (RAG) busca
+mitigar esses problemas ao integrar recuperac ¸˜ao de informac ¸˜oes externas `a
+gerac ¸˜ao de texto, melhorando a precis ˜ao e a atualidade das respostas. Este
+trabalho realizou uma investigac ¸˜ao de diversos modelos embeddings e LLMs de
+c´odigo aberto e propriet´arios aplicados `a t´ecnica RAG considerando trˆes bases
+de dados contendo documentos escritos em portugu ˆes do Brasil. Os resultados
+experimentais demonstraram que os modelos Multilingual E5 large e Gemma 2
+9B obtiveram o melhor desempenho dentre os modelos avaliados com base em
+diferentes medidas de avaliac ¸˜ao.
+1. Introduc ¸˜ao
+O surgimento dos modelos de linguagem de larga escala (LLMs, do ingl ˆes Large Lan-
+guage Models) representou um importante avanc ¸o para a´area de Processamento de Lin-
+guagem Natural (PLN), permitindo o desenvolvimento de sistemas capazes de executar ta-
+refas como gerac ¸˜ao de texto, criac ¸˜ao autom´atica de resumos e a capacidade de responder a
+perguntas com grande fluˆencia [Zhao et al. 2023]. Esses modelos s˜ao treinados com gran-
+des quantidades de dados para aprender padr˜oes lingu´ısticos e gerar respostas semelhantes
+`as humanas. Mesmo com alta capacidade em responder perguntas, os LLMs enfrentam
+dois desafios importantes. Primeiro, eles s ˜ao propensos a gerar informac ¸˜oes incorretas
+ou enganosas, um fen ˆomeno conhecido como alucinac ¸˜ao [Ji et al. 2023]. Segundo, seu
+conhecimento ´e limitado aos dados usados durante o treinamento, o que pode resultar em
+respostas desatualizadas ou incompletas quando questionados sobre informac ¸˜oes recentes
+ou conte´udo espec´ıfico de um dom´ınio [Lewis et al. 2020].
+Para mitigar essas limitac ¸˜oes, a t ´ecnica de gerac ¸˜ao aumentada por recuperac ¸˜ao (RAG,
+do ingl ˆes Retrieval-Augmented Generation ) surgiu como uma abordagem que com-
+bina a tradicional ´area de Recuperac ¸˜ao de Informac ¸˜ao (RI) com o uso de LLM para
+gerac ¸˜ao de respostas [Lewis et al. 2020]. Ao incorporar um mecanismo de recuperac ¸˜ao,
+a t ´ecnica de RAG permite que os LLMs acessem fontes de conhecimento externas di-
+namicamente, reduzindo a depend ˆencia de dados de treinamento est ´aticos e aprimo-
+rando a precis˜ao factual das respostas geradas [Fan et al. 2024]. Essa abordagem h ´ıbrida
+´e particularmente relevante em dom ´ınios que exigem informac ¸˜oes atualizadas, como
+aplicac ¸˜oes no dom´ınio jur´ıdico [Wiratunga et al. 2024], m ´edico [Xiong et al. 2024] e fi-
+nanceiro [Iaroshev et al. 2024]. Al ´em disso, usando RAG ´e poss´ıvel mitigar o problema
+de alucinac ¸˜ao ao fundamentar as respostas geradas nos documentos recuperados, melho-
+rando sua confiabilidade e alinhamento com o conhecimento factual [Chen et al. 2024].
+A arquitetura b´asica de um sistema de RAG consiste em dois componentes principais: o
+m´odulo de recuperac ¸˜ao e o m´odulo de gerac ¸˜ao, conforme ilustrado na Figura 1. O m´odulo
+de recuperac ¸˜ao ´e respons ´avel por buscar documentos relevantes em uma ou mais bases
+de dados externas, geralmente utilizando modelos de embeddings para representar tanto
+a consulta do usu ´ario quanto os documentos, al ´em de algoritmos de similaridade para
+identificar as correspondˆencias mais relevantes. O m ´odulo de gerac ¸˜ao, por sua vez, gera
+a resposta com base na consulta do usu ´ario e nos documentos recuperados, produzindo
+respostas que integram o conhecimento extra ´ıdo. A escolha dos modelos para ambos os
+m´odulos impacta diretamente a efic ´acia do sistema, tornando sua selec ¸˜ao uma decis ˜ao
+cr´ıtica no projeto e implementac ¸˜ao de um sistema de RAG.
+Pergunta Busca 
+Semântica
+1 2 3
+4
+>_
+Sistema de
+Buscas Banco de dados 
+de embeddings
+LLM
+Usuário
+Pergunta e
+Contexto
+Resposta
+Figura 1. Fluxo b ´asico de um sistema tradicional de RAG.
+Diversos estudos investigaram o desempenho de abordagens baseadas em RAG, prin-
+cipalmente na l ´ıngua inglesa [Fan et al. 2024]. Apesar da disponibilidade de diversos
+modelos de embedding e LLMs multil ´ıngues, ainda h ´a poucos estudos comparativos
+que avaliem sua efic ´acia no contexto da t ´ecnica de RAG para o portugu ˆes do Brasil
+[Passinato et al. 2024]. Compreender o desempenho de diferentes modelos em tarefas
+de recuperac ¸˜ao e gerac ¸˜ao ´e fundamental para melhorar o desempenho dos modelos e
+adapt´a-los a diferentes cen´arios de aplicac ¸˜ao.
+Neste contexto, este trabalho tem como objetivo realizar uma an´alise comparativa de mo-
+delos de embeddings e LLMs no ˆambito da t´ecnica de RAG, com foco no desempenho dos
+m´odulos de recuperac ¸˜ao e gerac ¸˜ao, em documentos escritos em portugu ˆes do Brasil. Na
+etapa de recuperac ¸˜ao de informac ¸˜ao, foram avaliados cinco modelos de embeddings de
+texto, compreendendo o modelo de c´odigo aberto Multilingual E5 [Wang et al. 2024] e o
+modelo propriet´ario da OpenAI1, ambos em diferentes variac ¸˜oes em tamanho de arquite-
+tura. Para a etapa de gerac ¸˜ao, foram investigados os modelos de c´odigo aberto do Llama
+[Grattafiori et al. 2024] e Gemma [Team et al. 2024], bem como os modelos propriet´arios
+Sabi´a-3 e Sabiazinho-3 [Abonizio et al. 2024].
+Os experimentos foram conduzidos utilizando tr ˆes corporas (Pir ´a [Paschoal et al. 2021],
+FairytaleQA PT-BR [Leite et al. 2024] e Squad 2 PT-BR [Rajpurkar et al. 2018]) de per-
+guntas e respostas dispon ´ıveis na literatura. A avaliac ¸ ˜ao dos modelos foi realizada
+com as tradicionais m ´etricas do ROUGE e BERTScore, al ´em das medidas de fideli-
+dade (faithfulness) e relevˆancia da resposta, computadas por meio da ferramenta RAGAS
+[Es et al. 2024]. Os experimentos realizados consideraram modelos com diferentes es-
+calas de par ˆametros para comparar suas capacidades em tarefas espec ´ıficas e identificar
+soluc ¸˜oes vi´aveis em cen´arios com recursos computacionais abundantes ou limitados.
+Duas quest ˜oes de pesquisa guiaram os experimentos realizados. Primeiramente, busca-
+mos determinar qual modelo de embedding apresenta o melhor desempenho entre os ava-
+liados, analisando seu impacto na qualidade da recuperac ¸˜ao. Em seguida, investigamos
+qual LLM gera respostas mais precisas e contextualmente relevantes. Ao abordar essas
+quest˜oes, este trabalho busca identificar as configurac ¸˜oes mais eficazes, contribuindo para
+futuras pesquisas voltadas ao desenvolvimento de aplicac ¸˜oes de RAG em portugu ˆes. O
+c´odigo-fonte desenvolvido neste trabalho est´a dispon´ıvel em
+https://github.com/luizsabiano/rag_eval_ptbr.
+2. Trabalhos Relacionados
+Desde a introduc ¸˜ao da t ´ecnica de RAG por Lewis et al. [Lewis et al. 2020], diversos
+trabalhos tˆem investigado e aprimorado essa abordagem, com o objetivo de desenvolver
+soluc ¸˜oes capazes de responder `as perguntas dos usu´arios de maneira mais precisa e con-
+textualmente relevante. Embora v ´arios estudos tenham explorado diferentes estrat ´egias
+baseadas em RAG [Fan et al. 2024], ainda h ´a poucas pesquisas focadas em documentos
+escritos em portugu ˆes do Brasil. Nesta sec ¸˜ao, apresentamos uma an ´alise dos trabalhos
+que abordaram o uso de RAG para o portuguˆes.
+O trabalho de Costa e Souza Filho [da Costa and e Souza Filho 2024] investigou aborda-
+gens de ajuste fino e RAG para a adaptac ¸˜ao de LLMs no contexto de perguntas e respostas.
+Os autores avaliaram os modelos PTT5 e Llama 3 com 8 bilh˜oes de parˆametros (8B). Para
+o m´odulo de Recuperac ¸˜ao de Informac ¸˜ao (RI), foram analisados os m ´etodos Best Match
+25 (BM25), Dense Passage Retriever (DPR) e ColBERT. Os modelos foram avaliados
+utilizando as m ´etricas do ROUGE-1, ROUGE-L, BERTScore e GPTScore. Os experi-
+mentos foram conduzidos com as bases de dados Pir´a e Databricks-Dolly, e os resultados
+demonstraram que a incorporac ¸˜ao de dados externos relevantes por meio de RAG melho-
+rou a qualidade das respostas geradas pelos LLMs, em comparac ¸˜ao com o uso exclusivo
+1https://platform.openai.com/docs/guides/embeddings/embedding-models
+do ajuste fino. Al´em disso, observou-se que o modelo PTT5, quando ajustado, apresentou
+desempenho semelhante ao Llama 3 8B sem ajuste.
+Passinato et al. [Passinato et al. 2024] propuseram o desenvolvimento de um chatbot para
+o dom´ınio de informac ¸˜oes oftalmol´ogicas, utilizando tr ˆes t´ecnicas de RAG: Naive RAG,
+HYDE e Rewrite-Retrieve-Read. Os modelos analisados foram o Mistral, com 7 bilh ˜oes
+de par ˆametros (7B), para gerac ¸˜ao de texto, e o Multilingual E5, para representac ¸˜oes de
+embeddings. O corpus utilizado foi coletado manualmente na internet a partir de artigos
+publicados em blogs mantidos por hospitais e cl ´ınicas especializadas. A avaliac ¸˜ao dos
+resultados foi realizada com oframework RAGAS, utilizando as m´etricas de fidelidade de
+contexto, relevˆancia da resposta e relevˆancia do contexto. Os experimentos demonstraram
+que a t ´ecnica Rewrite-Retrieve-Read apresentou melhor desempenho, especialmente em
+perguntas formuladas de maneira mais informal e em casos em que o contexto recuperado
+continha entre 500 e 750 caracteres.
+O estudo apresentado em [Paranhos et al. 2024] avaliou o impacto de diferentes arquitetu-
+ras RAG no contexto jur´ıdico, analisando cinco abordagens: Naive RAG, HyDE, Correc-
+tive RAG, Self-RAG e RAG-Fusion. O modelo de embedding do Google foi utilizado para
+indexac ¸˜ao e recuperac ¸˜ao, enquanto o modelo Gemini 1.5 Pro foi usado para gerac ¸˜ao das
+respostas. A avaliac ¸˜ao, realizada com o framework RAGAS, considerou m´etricas como
+fidelidade, revocac ¸˜ao e precis ˜ao do contexto. Os resultados indicam que o Self-RAG ´e a
+abordagem mais robusta para perguntas que exigem fidelidade e relev ˆancia, enquanto o
+RAG-Fusion se destacou em cen´arios que demandam alta precis˜ao na recuperac ¸˜ao.
+Kuratomi et al. [Kuratomi et al. 2024] projetaram e avaliaram um assistente virtual base-
+ado em RAG, desenvolvido especificamente para a Universidade de S ˜ao Paulo (USP).
+Os autores avaliaram diferentes modelos de recuperac ¸ ˜ao e gerac ¸˜ao, ajustando hiper-
+parˆametros como tamanho do bloco ( chunks) e n ´umero de documentos recuperados. O
+conjunto de dados utilizado foi coletado de 866 documentos dispon ´ıveis no site da USP,
+abrangendo o per´ıodo entre janeiro de 2023 at´e maio de 2024. Foram utilizados cinco mo-
+delos de embeddings: Paraphrase MiniLM, Paraphrase Mpnet, Distiluse base e BM25.
+Como modelos de LLMs, foram avaliados o GPT 3.5, Llama 3, Mixtral e Sabi´a-2.
+A Tabela 1 apresenta as principais caracter´ısticas de cada trabalho relacionado: modelo de
+embedding utilizado para recuperac ¸˜ao de informac ¸˜ao, modelo generativo (LLM), base de
+dados e m´etricas de avaliac ¸˜ao utilizados. Em geral, observou-se que os trabalhos existen-
+tes avaliam o desempenho dos modelos em um´unico dom´ınio e, com excec ¸˜ao do trabalho
+de [Kuratomi et al. 2024], pouca diversidade de modelos foi considerada nos experimen-
+tos. Por isso, este estudo expandiu trabalhos anteriores ao investigar a efic´acia de diversos
+modelos de embeddings e LLMs em tr ˆes bases de dados p ´ublicas de dom´ınios distintos,
+possibilitando uma avaliac ¸˜ao em diferentes contextos e estilos textuais. Al ´em disso, a
+avaliac ¸˜ao foi realizada por meio das m ´etricas tradicionais do ROUGE-L e BERTScore,
+bem como de m´etricas derivadas da biblioteca RAGAS, que usa uma abordagem de LLM
+como juiz.
+3. Materiais e M ´etodos
+3.1. Conjuntos de Dados
+A avaliac ¸˜ao de um sistema de RAG requer um conjunto de dados anotados com, no
+m´ınimo, tr ˆes elementos: (i) uma pergunta, (ii) o contexto no qual a resposta pode ser
+Tabela 1. Comparativo dos trabalhos relacionados.
+Trabalho Modelo deEmbeddingLLM Base de Dados A valiac ¸˜ao
+[da Costa and e Souza Filho 2024]BM25, DPR e ColBERTPPT5 e
+Llama 3 8B
+Pir´a e
+Databricks Dolly
+ROUGE-1, ROUGE-L,
+BERTScore e
+M´etrica pr´opria
+[Passinato et al. 2024] E5 Mistral 7B Artigos de blogs RAGAS
+[Paranhos et al. 2024]Embeddingsda OpenAIGemini 1.5 proDocumentos do TCE-GORAGAS
+[Kuratomi et al. 2024]
+Paraphrase MiniLM,
+Paraphrase Mpnet base,
+Distiluse base
+GPT 3.5,
+Llama 3,
+Mixtral e
+Sabia 2
+Coletado no
+site da USP
+F1-score,
+Similaridade de cosseno e
+M´etrica pr´opria utlizando LLM
+Trabalho Proposto
+E5 (small, base e large),
+embeddingsda OpenAI
+(small e large)
+Llama,
+Gemma,
+Sabi´a 3 e
+Sabiazinho 3
+Pir´a,
+FairytaleQA PT-BR e
+Squad 2 PT-BR
+Recall, ROUGE-L, BERTScore e
+RAGAS
+encontrada e (iii) a resposta correspondente. Neste trabalho, foram utilizadas as bases
+de dados do Pir´a [Paschoal et al. 2021], SQuAD 2 [Rajpurkar et al. 2018] e FairytaleQA
+PT-BR [Leite et al. 2024].
+O Pir´a ´e um conjunto de dados bil´ıngue (portuguˆes e inglˆes) de perguntas e respostas sobre
+o oceano, biodiversidade, mudanc ¸as clim´aticas e a costa brasileira. ´E o primeiro corpus
+com suporte ao portugu ˆes, contendo 2.261 registros extra ´ıdos de (i) resumos de artigos
+cient´ıficos sobre o litoral brasileiro e (ii) trechos de relat´orios da ONU sobre o oceano. As
+perguntas e respostas foram geradas e avaliadas manualmente por volunt ´arios, incluindo
+estudantes e pesquisadores da Universidade de S˜ao Paulo [Paschoal et al. 2021].
+O FairytaleQA ´e um conjunto de dados contendo 10.580 pares de perguntas e respos-
+tas em ingl ˆes, criado por especialistas educacionais a partir de 278 hist ´orias infantis,
+visando avaliar a compreens ˜ao narrativa de alunos do jardim de inf ˆancia `a oitava s ´erie
+[Xu et al. 2022]. Com intuito de suprir a escassez de bases de dados em outros idiomas,
+Leite et al. [Leite et al. 2024] traduziram o FairytaleQA para espanhol, franc ˆes e por-
+tuguˆes, incluindo suas variantes europeia e brasileira. Neste trabalho, utilizamos a vers˜ao
+da base de dados traduzida para o portuguˆes do Brasil.
+O Stanford Question Answering Dataset 2.0 (SQuAD2) ´e um conjunto de dados desen-
+volvido para a compreens ˜ao de texto por m ´aquinas, combinando 100.000 perguntas e
+respostas de sua primeira vers ˜ao (SQuAD1.1), extra ´ıdas de 536 artigos da Wikip ´edia,
+com mais de 50.000 perguntas sem resposta, formuladas por crowdworkers para se asse-
+melharem `as respond´ıveis [Rajpurkar et al. 2018]. Neste estudo, foi utilizada uma vers˜ao
+traduzida automaticamente do SQuAD2 pelo Tradutor do Google e comumente usada em
+trabalhos para o portuguˆes do Brasil.
+A Tabela 2 apresenta a m ´edia e o desvio padr ˜ao do n ´umero de palavras por componente
+(contexto, pergunta e resposta) nas bases de dados PIR´A, FairytaleQA PT-BR e SQuAD2
+PT-BR. Destaca-se que apenas os exemplos do conjunto de teste de cada base foram
+utilizados, uma vez que n˜ao foi realizado treinamento de modelos neste trabalho. Embora
+contenha um n ´umero significativamente menor de perguntas, a base de dados Pir ´a foi
+utilizada devido `a alta qualidade de suas perguntas e respostas, bem como por abranger um
+dom´ınio de conhecimento mais desafiador em comparac ¸˜ao com as bases do FairyTaleQA
+PT-BR e SQuAD2 PT-BR.
+Tabela 2. Estat´ ıstica das bases de dados.
+Conjunto Teste Palavras
+Base de Dados Registros Componente M´edia Desvio Padr ˜ao
+Pir´a 216 Contexto 284,51 149,11
+Pergunta 14,73 5,94
+Resposta 16,07 15,16
+FairyTaleQA PT-BR 1.007 Contexto 197,96 86,92
+Pergunta 7,95 3,35
+Resposta 6,98 5,57
+SQuAD2 PT-BR 5.930 Contexto 153,24 68,25
+Pergunta 11,91 4,06
+Resposta 3,62 3,83
+3.2. Modelos de Embeddings e LLMs A valiados
+Nesta sec ¸˜ao, s˜ao apresentados os modelos de embeddings e LLMs utilizados nos experi-
+mentos realizados. Os modelos selecionados incluem tanto alternativas de c ´odigo aberto
+quanto modelos propriet´arios, variando em termos do tamanho da representac ¸˜ao vetorial,
+n´umero de parˆametros e capacidade de gerac ¸˜ao de respostas.
+Os modelos Multilingual E5 pertencem a uma fam ´ılia de modelos de embeddings de
+c´odigo aberto desenvolvida para tarefas de recuperac ¸˜ao de informac ¸˜oes e classificac ¸˜ao
+semˆantica [Wang et al. 2024]. Eles est ˜ao dispon´ıveis em trˆes configurac ¸˜oes: Small, Base
+e Large. O Multilingual E5 Small possui um espac ¸o vetorial de 384 dimens˜oes e 118
+milh˜oes de par ˆametros, enquanto o Multilingual E5 Base tem 768 dimens ˜oes e 278
+milh˜oes de parˆametros. O modelo Multilingual E5 Large oferece uma representac ¸˜ao ve-
+torial de 1.024 dimens ˜oes e 560 milh ˜oes de par ˆametros. Al ´em disso, foram considera-
+dos dois modelos propriet ´arios da OpenAI (text-embedding-3-small e text-embedding-3-
+large), com 1.536 e 3.072 dimens˜oes, respectivamente.
+Os experimentos avaliaram diversos LLMs de c ´odigo aberto e propriet ´arios, como o
+Gemma 2, da Google, em variantes de 2 e 9 bilh ˜oes de par ˆametros [Team et al. 2024];
+o Llama 3, da Meta, sendo avaliados os modelos de 1, 3, 8 e 70 bilh ˜oes de par ˆametros
+[Grattafiori et al. 2024]; e os modelos Sabi´a 3 e Sabiazinho 3, da Maritaca AI, otimizados
+para o portuguˆes do Brasil [Abonizio et al. 2024].
+3.3. Metodologia Experimental
+A avaliac ¸˜ao dos modelos de embeddings e LLM foi realizada por meio de dois expe-
+rimentos, ambos utilizando as bases de dados do Pir ´a, FairytaleQA PT-BR e SQuAD2
+PT-BR.
+O primeiro experimento avaliou a efic´acia dos modelos de embeddings de texto na tarefa
+de recuperac ¸˜ao de informac ¸˜ao, focando na assertividade do contexto recuperado. Para
+cada base de dados, todos os contextos foram indexados no banco de dados vetorial do
+ChromaDB2, com o objetivo de verificar se, dada uma pergunta de entrada, os modelos
+eram capazes de recuperar o contexto correto, considerando diferentes valores no top-n
+contextos recuperados. A m ´etrica recall@n foi utilizada para medir a capacidade dos
+modelos de recuperar o contexto real, quantificando a porcentagem de casos em que o
+2https://www.trychroma.com/
+contexto correto estava presente entre os n contextos recuperados. Al ´em disso, o custo
+computacional foi analisado, correlacionando a melhoria na m ´etrica de recall@n com o
+aumento da quantidade m ´edia de tokens nos top-n contextos recuperados. O modelo de
+embedding com o melhor custo-benef ´ıcio, considerando os tr ˆes conjuntos de dados, foi
+selecionado para o m´odulo de recuperac ¸˜ao utilizado no Experimento 2.
+O segundo experimento focou na avaliac ¸ ˜ao das respostas geradas pelos modelos de
+LLM. As m´etricas utilizadas foram a fidelidade (faithfulness) e a relevˆancia das respostas
+(answer relevance), avaliadas com o framework RAGAS [Es et al. 2024]. O modeloGPT-
+4o-mini da OpenAI foi usado como LLM juiz para computar as m ´etricas de avaliac ¸˜ao.
+A fidelidade quantifica a consist ˆencia das respostas em relac ¸˜ao ao contexto recuperado,
+enquanto a relev ˆancia mede o grau em que as respostas atendem `a pergunta original.
+Al´em disso, foram incorporadas as m ´etricas do ROUGE-L [Lin 2004] e do BERTScore
+[Zhang et al. 2019] para quantificar a similaridade l ´exica e sem ˆantica entre as respostas
+geradas e as respostas de referˆencia. O prompt usado para gerac ¸˜ao das perguntas foi:
+Vocˆe ´e um assistente virtual respons ´avel por responder `as perguntas
+dos usu ´arios. Responda `a PERGUNTA a seguir com base apenas no
+CONTEXTO fornecido e nenhum conhecimento a mais. Fornec ¸a uma
+resposta detalhada e precisa escrita usando a norma culta do portugu ˆes
+do Brasil. N ˜ao fornec ¸a informac ¸˜oes n ˜ao mencionadas no CONTEXTO.
+Caso n ˜ao seja poss´ıvel responder `a pergunta usando somente o contexto
+fornecido, retorne `a mensagem “NONE”.
+CONTEXTO: {contexto}
+PERGUNTA: {pergunta}
+4. Resultados
+4.1. Experimento 1 - A valiac ¸˜ao dos Modelos de Embedding
+A Figura 2 apresenta os resultados do primeiro experimento, visando avaliar diferentes
+modelos de embeddings para compor o m ´odulo de recuperac ¸˜ao da informac ¸˜ao. O eixo
+x representa a quantidade de contextos recuperados ( top-n) do banco de dados vetorial,
+enquanto o eixo y `a esquerda indica o valor da m ´etrica de recall@n e o eixo y `a direita
+mostra a quantidade m ´edia de tokens do prompt constru´ıdo usando os contextos recu-
+perados. A relac ¸˜ao entre essas vari ´aveis evidencia o compromisso entre o aumento da
+quantidade de tokens do prompt (representado por linhas pontilhadas) e a melhoria da
+m´etrica de recall@n (representado por linhas s´olidas).
+A an ´alise do aumento na quantidade de tokens (linhas pontilhadas) revela uma relac ¸˜ao
+diretamente proporcional entre a quantidade de contextos recuperados ( top-n) e a quan-
+tidade m ´edia de tokens. A homogeneidade entre os modelos indica que, dentro do in-
+tervalo analisado, essa vari´avel n˜ao influencia significativamente a escolha do modelo de
+recuperac ¸˜ao. Por outro lado, a evoluc ¸˜ao da m ´etrica de recall@n (linhas s ´olidas) n˜ao se-
+gue a mesma linearidade. H ´a um aumento acentuado do recall@n entre top-1 e top-3,
+seguido por um crescimento moderado at´e top-5, com estabilizac ¸˜ao subsequente e ganhos
+m´ınimos al ´em desse ponto. A comparac ¸˜ao entre a quantidade m ´edia de tokens e o re-
+call@n mostra que, ap´os top-5, o aumento de tokens gera benef´ıcios marginais, mas acar-
+reta um maior custo computacional por conta da quantidade de tokens no prompt. Assim,
+o top-5 foi definido como o melhor ponto de equil´ıbrio identificado neste experimento.
+1 3 5 10 20
+T op-n
+0.65
+0.70
+0.75
+0.80
+0.85
+0.90
+0.95Recall
+multilingual_e5_base
+multilingual_e5_small
+OpenAI_3_small
+OpenAI_3_large
+multilingual_e5_large
+0
+1000
+2000
+3000
+4000
+5000
+6000
+Média de tokens
+(a) Pir´a
+1 3 5 10 20
+T op-n
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9Recall
+multilingual_e5_base
+multilingual_e5_small
+OpenAI_3_small
+OpenAI_3_large
+multilingual_e5_large
+0
+1000
+2000
+3000
+4000
+Média de tokens
+ (b) FairytaleQA PT-BR
+1 3 5 10 20
+T op-n
+0.65
+0.70
+0.75
+0.80
+0.85
+0.90
+0.95Recall
+multilingual_e5_base
+multilingual_e5_small
+OpenAI_3_small
+OpenAI_3_large
+multilingual_e5_large
+0
+500
+1000
+1500
+2000
+2500
+3000
+3500
+Média de tokens
+(c) SQuAD2 PT-BR
+Figura 2. Resultados do experimento de avaliac ¸˜ao dos modelos de embeddings.
+Considerando o top-5, os modelos Multilingual E5 large e o text-embedding-3-large da
+OpenAI apresentam desempenho semelhante, alcanc ¸ando0, 689 e 0, 677 no FairytaleQA
+PT-BR e 0, 909 e 0, 911 no SQuAD2 PT-BR, respectivamente. No PIR ´A, o modelo large
+da OpenAI obteve o melhor desempenho, comrecall de 0, 940, enquanto os modelosMul-
+tilingual E5 small, base e large apresentaram valores ligeiramente inferiores, de 0, 920,
+0, 910 e 0, 910, respectivamente.
+Os modelos de embeddings da OpenAI foram utilizados como refer ˆencia devido `a sua
+ampla adoc ¸˜ao e desempenho reconhecido. No entanto, por se tratarem de modelos pro-
+priet´arios acess´ıveis via aApplication Programming Interface(API) da OpenAI, levantam
+preocupac ¸˜oes quanto `a seguranc ¸a de dados sens´ıveis e envolvem custos de uso. Por outro
+lado, o Multilingual E5 large apresentou resultados competitivos, tendo o melhor de-
+sempenho no FairytaleQA PT-BR, o segundo no SQuAD2 PT-BR (superado apenas pelo
+modelo large da OpenAI) e o terceiro no PIR ´A (atr´as do modelo large da OpenAI e do
+Multilingual E5 small). Devido a esse desempenho e ao fato de ser de c ´odigo aberto, o
+Multilingual E5 large foi considerado o melhor modelo neste experimento.
+4.2. Experimento 2 - A valiac ¸˜ao dos LLMs
+O objetivo deste segundo experimento ´e avaliar diferentes LLMs para a gerac ¸˜ao da res-
+posta para a pergunta do usu ´ario, considerando os contextos recuperados. Com base nos
+resultados do Experimento 1, utilizamos o modelo de embedding Multilingual E5 large
+e os cinco contextos mais relevantes ( top-5) do banco de dados vetorial para compor o
+prompt. A Tabela 3 apresenta os resultados obtidos utilizando a m´etrica de recall compu-
+tada das medidas do ROUGE-L e BERTScore nos conjuntos de dados: Pir´a, FairytaleQA
+PT-BR e SQuAD2 PT-BR. O modelo com melhor desempenho em cada base de dados e
+medida de avaliac ¸˜ao est´a destacado em negrito.
+Tabela 3. Resultados considerando as medidas do ROUGE-L e BERTScore.
+Modelos / Medidas A valiac ¸˜ao Pir´a FairytaleQA PT-BR SQuAD2 PT-BR
+ROUGE-LBERTScoreROUGE-LBERTScoreROUGE-LBERTScore
+LLama 3.2 1B 0,147 0,725 0,105 0,715 0,118 0,708
+Llama 3.2 3B 0,218 0,768 0,127 0,729 0,138 0,728
+Llama 3.1 8B 0,172 0,755 0,079 0,701 0,073 0,712
+Llama 3.1 70B 0,267 0,793 0,158 0,753 0,207 0,761
+Gemma 2 2B 0,287 0,766 0,188 0,755 0,269 0,763
+Gemma 2 9B 0,394 0,799 0,268 0,779 0,453 0,799
+Sabi´a 3 0,195 0,779 0,143 0,751 0,177 0,751
+Sabiazinho 3 0,172 0,781 0,119 0,743 0,129 0,736
+Os resultados obtidos pelos modelos apresentam uma certa variabilidade. No entanto,
+o modelo Gemma 2 9B demonstrou desempenho superior em todas as bases de dados e
+m´etricas de avaliac ¸˜ao. Apesar das diferenc ¸as de dom´ınio entre as bases, seu desempenho
+manteve-se est´avel. O tamanho da arquitetura influenciou o desempenho dos modelos
+Llama, com o modelo de 70B superando, em geral, os de 1B, 3B e 8B. Esse padr ˜ao
+tamb´em foi observado entre os modelos do Gemma de 2B e 9B. Uma an ´alise manual
+revelou que o modelo Llama 3.2 1B frequentemente gerava respostas indicando impos-
+sibilidade de responder `a pergunta, mesmo quando o contexto correto estava presente no
+prompt. Esse comportamento tamb´em foi observado nos modelos Llama de 3B e 8B.
+De modo geral, o baixo desempenho dos modelos pode ser atribu´ıdo a dois fatores princi-
+pais: (i) As respostas presentes nas bases de dados s˜ao, em sua maioria, curtas, enquanto
+os LLMs, especialmente os modelos maiores (Sabi´a 3, Sabiazinho 3 e LLama 70B), apre-
+sentaram uma tend ˆencia de gerar respostas mais longas e detalhadas; e (ii) As m´etricas
+BERTScore e, em especial, ROUGE-L apresentam limitac ¸˜oes por n˜ao capturarem nuan-
+ces como variac ¸˜oes lexicais ou estruturais que mant ˆem o mesmo significado. Adicional-
+mente, essas m´etricas tendem a favorecer respostas mais curtas e com maior similaridade
+em relac ¸˜ao `as de referˆencia.
+Para complementar a avaliac ¸˜ao dos LLMs analisados, foram utilizadas as m ´etricas de
+fidelidade e relevˆancia da resposta, computadas por meio da biblioteca RAGAS. Devido
+a restric ¸˜oes orc ¸ament´arias relacionadas ao uso do modelo GPT-4o-mini para o c ´alculo
+dessas m´etricas, a avaliac ¸˜ao foi realizada apenas nas bases de dados do Pir´a e FairyTaleQA
+PT-BR. Os resultados obtidos est ˜ao apresentados na Tabela 4, com os melhores valores
+em cada m´etrica e base de dados destacados em negrito.
+Tabela 4. Resultados considerando as medidas de Fidelidade e Relev ˆancia da
+Resposta.
+Modelos / Medidas A valiac ¸˜ao Pir´a FairytaleQA PT-BR
+FidelidadeRelevˆancia da RespostaFidelidadeRelevˆancia da Resposta
+LLama 3.2 1B 0,571 0,599 0,512 0,480
+Llama 3.2 3B 0,781 0,704 0,665 0,556
+Llama 3.1 8B 0,667 0,576 0,544 0,411
+Llama 3.1 70B 0,781 0,716 0,669 0,581
+Gemma 2 2B 0,789 0,690 0,672 0,553
+Gemma 2 9B 0,789 0,692 0,670 0,555
+Sabi´a 3 0,775 0,710 0,668 0,574
+Sabiazinho 3 0,727 0,648 0,631 0,506
+Os resultados das m ´etricas de fidelidade e relev ˆancia da resposta apresentaram menor
+variabilidade em comparac ¸˜ao com ROUGE-L e BERTScore. Com excec ¸˜ao dos modelos
+Llama 3.2 1B e Llama 3.1 8B, que tiveram desempenho significativamente inferior, os
+demais modelos obtiveram resultados mais equilibrados. O Gemma 2 9B destacou-se
+como a melhor opc ¸˜ao, superando at´e mesmo o Llama 3.1 70B, que possui uma arquitetura
+significativamente maior. Al ´em disso, por ser um modelo de c ´odigo aberto, o Gemma 2
+9B demonstrou alto desempenho em relac ¸˜ao ao Sabi´a-3, que ´e propriet´ario. Para cen´arios
+com recursos computacionais mais limitados, o Gemma 2 2B surge como uma alternativa
+interessante, pois apresentou resultados similares aos obtidos pelo Gemma 9B, mas com
+uma arquitetura consideravelmente mais leve.
+5. Conclus ˜oes
+Este trabalho avaliou o desempenho de diferentes modelos de embeddings e LLMs na
+construc ¸˜ao de um sistema de recuperac ¸˜ao aumentada por gerac ¸˜ao (RAG) para documen-
+tos escritos em portugu ˆes do Brasil. Foram realizados experimentos com tr ˆes bases de
+dados da literatura, diversas m´etricas de avaliac ¸˜ao e diferentes modelos de c ´odigo aberto
+e propriet´arios. O primeiro experimento identificou que o modelo Multilingual E5 large
+apresentou o melhor custo-benef´ıcio entre a m ´etrica de recall e o custo computacional e
+financeiro. J ´a o segundo experimento revelou que o Gemma 2 9B obteve um desempe-
+nho mais consistente em todas as bases de dados, destacando-se nas m´etricas ROUGE-L,
+BERTScore, fidelidade e relevˆancia da resposta. Os resultados experimentais demostra-
+ram que modelos de c ´odigo aberto podem ser alternativas vi ´aveis em cen ´arios onde a
+privacidade dos dados ´e um aspecto importante.
+Uma limitac ¸˜ao deste trabalho est ´a relacionada ao fato de as bases de dados utilizadas
+conterem, em geral, respostas relativamente curtas, o que pode ter restringido a an´alise de
+respostas mais longas e detalhadas geradas por modelos como o Sabi ´a 3 e o Sabiazinho
+3. Dessa forma, como proposta para trabalhos futuros, sugere-se a realizac ¸ ˜ao de uma
+an´alise qualitativa das respostas geradas, com o objetivo de identificar cen ´arios em que
+os modelos produziram respostas mais completas e factualmente corretas. Outra linha
+de pesquisa contempla a explorac ¸˜ao de novas arquiteturas de RAG, como a abordagem
+Hyde, bem como a investigac ¸˜ao do impacto da inclus˜ao de etapas de reescrita de consultas
+e de revis˜ao das respostas geradas.
+Agradecimentos
+Os autores agradecem `a FAPES/UnAC (Nº FAPES 1228/2022 P 2022-CD0RQ, Nº SIA-
+FEM 2022-CD0RQ) pelo apoio financeiro concedido por meio do sistema UniversidadES.
+Referˆencias
+Abonizio, H., Almeida, T. S., Laitz, T., Junior, R. M., Bon ´as, G. K., Nogueira, R., and
+Pires, R. (2024). Sabi ´a-3 technical report. arXiv preprint arXiv:2410.12049.
+Chen, J., Lin, H., Han, X., and Sun, L. (2024). Benchmarking large language models in
+retrieval-augmented generation. In Proceedings of the AAAI Conference on Artificial
+Intelligence, volume 38, pages 17754–17762.
+da Costa, L. and e Souza Filho, J. O. (2024). Adapting llms to new domains: A com-
+parative study of fine-tuning and rag strategies for portuguese qa tasks. In Anais do
+XV Simp´osio Brasileiro de Tecnologia da Informac ¸˜ao e da Linguagem Humana, pages
+267–277, Porto Alegre, RS, Brasil. SBC.
+Es, S., James, J., Anke, L. E., and Schockaert, S. (2024). Ragas: Automated evaluation of
+retrieval augmented generation. InProceedings of the 18th Conference of the European
+Chapter of the Association for Computational Linguistics: System Demonstrations ,
+pages 150–158.
+Fan, W., Ding, Y ., Ning, L., Wang, S., Li, H., Yin, D., Chua, T.-S., and Li, Q. (2024).
+A survey on rag meeting llms: Towards retrieval-augmented large language models.
+In Proceedings of the 30th ACM SIGKDD Conference on Knowledge Discovery and
+Data Mining, pages 6491–6501.
+Grattafiori, A., Dubey, A., Jauhri, A., Pandey, A., Kadian, A., Al-Dahle, A., Letman, A.,
+Mathur, A., Schelten, A., Vaughan, A., et al. (2024). The llama 3 herd of models.arXiv
+preprint arXiv:2407.21783.
+Iaroshev, I., Pillai, R., Vaglietti, L., and Hanne, T. (2024). Evaluating retrieval-augmented
+generation models for financial report question and answering. Applied Sciences ,
+14(20):9318.
+Ji, Z., Lee, N., Frieske, R., Yu, T., Su, D., Xu, Y ., Ishii, E., Bang, Y . J., Madotto, A.,
+and Fung, P. (2023). Survey of hallucination in natural language generation. ACM
+computing surveys, 55(12):1–38.
+Kuratomi, G., Pirozelli, P., Cozman, F., and Peres, S. (2024). A rag-based institutional as-
+sistant. In Anais do XXI Encontro Nacional de Inteligˆencia Artificial e Computacional,
+pages 755–766, Porto Alegre, RS, Brasil. SBC.
+Leite, B., Os ´orio, T. F., and Cardoso, H. L. (2024). Fairytaleqa translated: Enabling
+educational question and answer generation in less-resourced languages. In European
+Conference on Technology Enhanced Learning, pages 222–236. Springer.
+Lewis, P., Perez, E., Piktus, A., Petroni, F., Karpukhin, V ., Goyal, N., K¨uttler, H., Lewis,
+M., Yih, W.-t., Rockt ¨aschel, T., et al. (2020). Retrieval-augmented generation for
+knowledge-intensive nlp tasks. Advances in neural information processing systems ,
+33:9459–9474.
+Lin, C.-Y . (2004). ROUGE: A package for automatic evaluation of summaries. In Text
+Summarization Branches Out, pages 74–81, Barcelona, Spain. Association for Com-
+putational Linguistics.
+Paranhos, S., Tomazini, J., Junior, C. C., and de Oliveira, S. T. (2024). Avaliac ¸ ˜ao do
+impacto de diferentes padr ˜oes arquiteturais rag em dom ´ınios jur´ıdicos. In Anais da
+XII Escola Regional de Inform´atica de Goi´as, pages 99–108, Porto Alegre, RS, Brasil.
+SBC.
+Paschoal, A. F., Pirozelli, P., Freire, V ., Delgado, K. V ., Peres, S. M., Jos´e, M. M., Naka-
+sato, F., Oliveira, A. S., Brand˜ao, A. A., Costa, A. H., et al. (2021). Pir ´a: A bilingual
+portuguese-english dataset for question-answering about the ocean. In Proceedings of
+the 30th ACM International Conference on Information & Knowledge Management ,
+pages 4544–4553.
+Passinato, E. B., Rios, W. S., and Galv ˜ao Filho, A. R. (2024). Integrac ¸ ˜ao de modelos
+de linguagem e rag na criac ¸˜ao de chatbots oftalmol ´ogicos. In Simp´osio Brasileiro de
+Computac ¸˜ao Aplicada `a Sa´ude (SBCAS), pages 354–365. SBC.
+Rajpurkar, P., Jia, R., and Liang, P. (2018). Know what you don’t know: Unanswerable
+questions for squad. In Proceedings of the 56th Annual Meeting of the Association for
+Computational Linguistics (Volume 2: Short Papers), pages 784–789.
+Team, G., Mesnard, T., Hardin, C., Dadashi, R., Bhupatiraju, S., Pathak, S., Sifre, L.,
+Rivi`ere, M., Kale, M. S., Love, J., et al. (2024). Gemma: Open models based on
+gemini research and technology. arXiv preprint arXiv:2403.08295.
+Wang, L., Yang, N., Huang, X., Yang, L., Majumder, R., and Wei, F. (2024). Multilingual
+e5 text embeddings: A technical report. arXiv preprint arXiv:2402.05672.
+Wiratunga, N., Abeyratne, R., Jayawardena, L., Martin, K., Massie, S., Nkisi-Orji, I.,
+Weerasinghe, R., Liret, A., and Fleisch, B. (2024). Cbr-rag: case-based reasoning for
+retrieval augmented generation in llms for legal question answering. In International
+Conference on Case-Based Reasoning, pages 445–460. Springer.
+Xiong, G., Jin, Q., Lu, Z., and Zhang, A. (2024). Benchmarking retrieval-augmented
+generation for medicine. In Findings of the Association for Computational Linguistics
+ACL 2024, pages 6233–6251.
+Xu, Y ., Wang, D., Yu, M., Ritchie, D., Yao, B., Wu, T., Zhang, Z., Li, T. J.-J., Bradford,
+N., Sun, B., Hoang, T. B., Sang, Y ., Hou, Y ., Ma, X., Yang, D., Peng, N., Yu, Z.,
+and Warschauer, M. (2022). Fantastic questions and where to find them: FairytaleQA
+– an authentic dataset for narrative comprehension. Association for Computational
+Linguistics.
+Zhang, T., Kishore, V ., Wu, F., Weinberger, K. Q., and Artzi, Y . (2019). Bertscore:
+Evaluating text generation with bert. arXiv preprint arXiv:1904.09675.
+Zhao, W. X., Zhou, K., Li, J., Tang, T., Wang, X., Hou, Y ., Min, Y ., Zhang, B., Zhang,
+J., Dong, Z., et al. (2023). A survey of large language models. arXiv preprint ar-
+Xiv:2303.18223, 1(2).

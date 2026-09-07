@@ -1,0 +1,27 @@
+{
+  "fonte": "Revalida INEP 2024/2, Prova Discursiva, Questão 3",
+  "url_prova": "https://download.inep.gov.br/revalida/provas_e_gabaritos/2024_2_PV_discursiva_regular.pdf",
+  "url_gabarito": "https://download.inep.gov.br/revalida/provas_e_gabaritos/2024_2_PEP_discursiva_versao_final.pdf",
+  "corpus_documentos": [
+    "codigo_etica_medica_cfm.txt",
+    "sbp_consulta_adolescente.txt"
+  ],
+  "vinheta": "Uma adolescente de 16 anos vai desacompanhada a uma consulta em unidade de atenção primária. Ela revela ter iniciado vida sexual com seu namorado de mesma idade e afirma que gostaria de realizar um exame para saber se está grávida, visto que teve relações desprotegidas. Ela também deseja, caso não esteja grávida, uma prescrição de contraceptivo oral.",
+  "perguntas": [
+    {
+      "id": "revalida_q3_a",
+      "pergunta": "Explique se a paciente poderá ser atendida sem a presença de um responsável maior de idade, considerando suas demandas quanto ao teste de gravidez e quanto à prescrição de contraceptivo, e se há necessidade de quebra de sigilo com um responsável legal nesse caso.",
+      "resposta_esperada": "A paciente pode ser atendida sem um acompanhante, uma vez que demonstre capacidade de discernimento sobre suas queixas. Não há necessidade de quebra de sigilo médico, porque não há risco de dano ao paciente ou a terceiros se essas informações da consulta não forem reveladas ao responsável legal."
+    },
+    {
+      "id": "revalida_q3_b",
+      "pergunta": "Caso seja confirmada a gravidez da paciente, qual deverá ser a conduta do médico quanto ao atendimento da adolescente nas consultas de pré-natal e quanto à quebra de sigilo com um responsável legal?",
+      "resposta_esperada": "Em caso de confirmação da gestação, há necessidade de comunicação a um responsável legal, o que pode ser feito pela própria paciente. No entanto, caso a paciente não faça essa comunicação, deve ocorrer quebra do sigilo médico. A adolescente pode ser atendida durante suas consultas de pré-natal sem o acompanhante."
+    },
+    {
+      "id": "revalida_q3_c",
+      "pergunta": "Considere que a unidade onde ocorreu a consulta promova grupos de discussão em saúde e que já estão agendadas reuniões com temas de gestação na adolescência e prevenção de infecções sexualmente transmissíveis. Nesse caso, essa paciente poderia frequentar essas reuniões? Se sim, seria necessária a autorização de um responsável? Explique.",
+      "resposta_esperada": "Sim, ela pode frequentar as reuniões. Não há necessidade de autorização do responsável, visto que esse tipo de reunião envolve aspectos de orientação e de educação em saúde."
+    }
+  ]
+}

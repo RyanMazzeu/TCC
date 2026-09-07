@@ -1,0 +1,650 @@
+MINISTÉRIO DA SAÚDE
+GUIA DE
+VIGILÂNCIA
+EM SAÚDE
+6ª edição 
+Brasília DF 2023
+VOLUME
+1
+107
+CID-10: A39.0 – meningite meningocócica; A39.2 – meningococcemia aguda
+DOENÇA MENINGOCÓCICA
+CARACTERÍSTICAS GERAIS
+	} DESCRIÇÃO
+A doença meningocócica é uma infecção bacteriana aguda. Quando se apresenta na forma de doença 
+invasiva, caracteriza-se por uma ou mais síndromes clínicas, sendo a meningite meningocócica  
+a mais frequente delas, e a meningococcemia a forma mais grave.
+	} AGENTE ETIOLÓGICO
+A Neisseria meningitidis (meningococo) é um diplococo Gram-negativo, aeróbio, imóvel, pertencente 
+à família Neisseriaceae. A composição antigênica da cápsula polissacarídica permite a classificação 
+do meningococo em 12 diferentes sorogrupos: A, B, C, E, H, I, K, L, W, X, Y e Z. Os sorogrupos A, B, C, 
+Y , W e X são os principais responsáveis pela ocorrência da doença invasiva, portanto de epidemias.  
+Os meningococos são também classificados em sorotipos e sorossubtipos, de acordo com  
+a composição antigênica das proteínas de membrana externa PorB e PorA, respectivamente 
+(PLOTKIN et al., 2018). 
+A N. meningitidis demonstrou ter a capacidade de permutar o material genético que é responsável 
+pela produção da cápsula e, com isso, alterar o sorogrupo. Como a proteção conferida pelas vacinas 
+é sorogrupo específica, esse fenômeno pode ter consequências no uso e na formulação das vacinas 
+antimeningocócicas. 
+	} RESERVATÓRIO
+O ser humano é o reservatório, sendo a nasofaringe o local de colonização do microrganismo.  
+A colonização assintomática da nasofaringe pela N. meningitidis caracteriza o estado de portador 
+que ocorre frequentemente, chegando a ser maior que 10% em determinadas faixas etárias nos 
+períodos endêmicos, podendo o indivíduo albergar o meningococo por período prolongado.
+As taxas de incidência de portadores são maiores entre adolescentes e adultos jovens e em camadas 
+socioeconômicas menos privilegiadas.
+	} MODO DE TRANSMISSÃO
+Contato direto pessoa a pessoa, por meio de secreções respiratórias de pessoas infectadas, 
+assintomáticas ou doentes. A transmissão por fômites não é importante.
+108
+Ministério da Saúde |  Guia de Vigilância em Saúde
+	} PERÍODO DE INCUBAÇÃO
+Em média, de três a quatro dias, podendo variar de dois a dez dias.
+Após a colonização da nasofaringe, a probabilidade de desenvolver doença meningocócica invasiva 
+dependerá da virulência da cepa, das condições imunitárias do hospedeiro e da capacidade de 
+eliminação do agente na corrente sanguínea, pela ação de anticorpos séricos com atividade 
+bactericida mediada pela ativação do complemento. O baço também exerce um importante papel 
+na eliminação da bactéria na corrente sanguínea.
+	} PERÍODO DE TRANSMISSIBILIDADE
+Persiste até que o meningococo desapareça da nasofaringe. Em geral, a bactéria é eliminada da 
+nasofaringe em até 24 horas de antibioticoterapia adequada.
+	} SUSCETIBILIDADE, VULNERABILIDADE E IMUNIDADE
+A suscetibilidade é geral, entretanto o grupo etário de maior risco é formado por crianças menores 
+de 5 anos, principalmente as menores de 1 ano.
+A doença meningocócica invasiva ocorre primariamente em pessoas suscetíveis recentemente 
+colonizadas por uma cepa patogênica. Inúmeros fatores de risco têm sido associados, tais como: 
+infecções respiratórias virais recentes (especialmente influenza), aglomeração no domicílio, residir 
+em quartéis, dormir em acampamento militar ou em alojamentos de estudantes, tabagismo (passivo 
+ou ativo), condições socioeconômicas menos privilegiadas e contato próximo com portadores.  
+O risco de desenvolver doença invasiva entre contatos domiciliares de um doente é cerca de 500  
+a 800 vezes maior que na população geral.
+Asplenia (anatômica ou funcional), deficiência de properdina, de C3 e de componentes terminais 
+do complemento (C5 a C9) também estão associadas a maior risco de desenvolvimento de doença 
+meningocócica. As pessoas com tais condições clínicas, em função da incapacidade de provocar 
+a morte intracelular da bactéria, apresentam maior risco de episódios recorrentes de doença 
+meningocócica e, portanto, são consideradas grupos prioritários para profilaxia com vacinas.
+Em portadores, a colonização assintomática da nasofaringe por meningococos tipáveis e não tipáveis 
+e por outras espécies de Neisseria – como, por exemplo, a N. lactamica – acaba funcionando 
+como um processo imunizante e resulta em produção de anticorpos protetores (SÁFADI; BEREZIN; 
+OSELKA, 2012). 
+	} MANIFESTAÇÕES CLÍNICAS
+A infecção invasiva pela N. meningitidis pode apresentar amplo espectro clínico, que varia desde 
+febre transitória e bacteremia oculta até formas fulminantes, com a morte do paciente em poucas 
+horas após o início dos sintomas.
+A meningite meningocócica e a meningococcemia são as formas clínicas mais frequentemente 
+observadas, podendo ocorrer isoladamente ou associadas. A denominação doença meningocócica 
+torna-se apropriada nesse contexto, sendo adotada internacionalmente.
+O quadro de meningite pode se instalar em algumas horas, iniciado com intensa sintomatologia, 
+ou mais paulatinamente, em alguns dias, acompanhado de outras manifestações (Quadro 1), 
+109
+Doença meningocócica
+geralmente indistinguíveis de outras meningites bacterianas. A meningite meningocócica é a 
+forma mais frequente de doença meningocócica invasiva e associa-se, em cerca de 60% dos casos,  
+à presença de lesões cutâneas petequiais bastante características (NATIONAL INSTITUTE FOR 
+HEALTH AND CARE EXCELLENCE, 2010).
+Em lactentes com meningite, a pesquisa de sinais meníngeos é extremamente difícil, e a rigidez 
+de nuca nem sempre está presente. Nessas circunstâncias, deve-se realizar o exame cuidadoso  
+da fontanela bregmática:
+• Abaulamento e/ou aumento de tensão da fontanela, aliados a febre, irritabilidade, gemência, 
+inapetência e vômitos.
+Em lactentes jovens, sobretudo no período neonatal, a suspeita de meningite torna-se nota damente 
+mais difícil, pois a sintomatologia e os dados de exame físico são os mais diversos possíveis:
+• No recém-nascido, a febre nem sempre está presente.
+• Observa-se, com frequência, hipotermia, recusa alimentar, cianose, convulsões, apatia e 
+irritabilidade, que se alternam, respiração irregular e icterícia.
+QUADRO 1 – Sinais e sintomas de meningite bacteriana e meningococcemia
+SINAIS/SINTOMAS
+MENINGITE BACTERIANA 
+(MENINGITE MENINGOCÓ- 
+CICA E MENINGITE CAUSADA 
+POR OUTRAS BACTÉRIAS)
+DOENÇA MENINGO-
+CÓCICA (MENINGITE 
+MENINGOCÓCICA COM 
+MENINGOCOCCEMIA)
+MENINGO-
+COCCEMIA
+Sinais e sintomas não específicos comuns
+Febrea
+Vômitos/náuseas
+Letargia
+Irritabilidade
+Recusa alimentar
+Cefaleia
+Dor muscular/articular
+Dificuldade respiratória
+Sinais e sintomas não específicos menos comuns
+Calafrios/tremores
+Dor abdominal/distensão/diarreia NS
+Dor/coriza no nariz, ouvido 
+ e/ou garganta NS
+Sinais e sintomas mais específicos
+Petéquias/sinais hemorrágicosb
+Rigidez na nuca NS
+Alteração no estado mentalc
+continua
+110
+Ministério da Saúde |  Guia de Vigilância em Saúde
+SINAIS/SINTOMAS
+MENINGITE BACTERIANA 
+(MENINGITE MENINGOCÓ- 
+CICA E MENINGITE CAUSADA 
+POR OUTRAS BACTÉRIAS)
+DOENÇA MENINGO-
+CÓCICA (MENINGITE 
+MENINGOCÓCICA COM 
+MENINGOCOCCEMIA)
+MENINGO-
+COCCEMIA
+Tempo de enchimento capilar 
+>2 segundos NS
+Alteração na cor da pele NS
+Choque
+Hipotensão NS
+Dor na perna NS
+Extremidades frias NS
+Abaulamento da fontanelad NS
+Fotofobia
+Sinal de Kernig
+Sinal de Brudzinski
+Inconsciência
+Estado clínico precário/tóxico
+Paresia
+Déficit neurológico focale
+Convulsões
+Sinais de choque
+• Tempo de enchimento capilar >2 segundos 
+• Alteração na coloração da pele
+• Taquicardia e/ou hipotensão 
+• Dificuldade respiratória
+• Dor na perna 
+• Extremidades frias
+• Estado clínico precário/tóxico
+• Estado de alteração mental/diminuição da consciência 
+• Baixo débito urinário
+ Sinais e sintomas presentes   Sinais e sintomas ausentes  NS  Não se sabe se sinal/sintoma  
+está presente (sem evidências  
+científicas reportadas)
+Fonte: National Institute for Health and Care Excellence, 2010.
+aNem sempre presente, especialmente em recém-nascidos.
+bDeve-se estar ciente de que uma erupção pode ser menos visível em tons de pele mais escuras – verificar solas dos pés e mãos.
+cInclui delírio, confusão, sonolência e diminuição da consciência.
+dRelevante apenas em crianças menores de 2 anos.
+eIncluindo o envolvimento do nervo craniano e a anormalidade da pupila.
+conclusão
+111
+Doença meningocócica
+Em 15% a 20% dos pacientes com doença meningocócica, identificam-se formas de evolução muito 
+rápidas, geralmente fulminantes, devidas somente à septicemia meningocócica, sem meningite, e 
+que se manifestam por sinais clínicos de choque e coagulação intravascular disseminada (CIVD), 
+caracterizando a síndrome de Waterhouse-Friderichsen. Trata-se de um quadro de instalação 
+repentina, que se inicia com febre, cefaleia, mialgia e vômitos, seguidos de palidez, sudorese, 
+hipotonia muscular, taquicardia, pulso fino e rápido, queda de pressão arterial, oligúria e má 
+perfusão periférica.
+Suspeita-se da síndrome Waterhouse-Friderichsen nos quadros de instalação precoce, em doente 
+com sinais clínicos de choque e extensas lesões purpúricas. A CIVD que se associa determina 
+aumento da palidez, prostração, hemorragias, taquicardia e taquipneia.
+Um rash maculopapular, não petequial, difícil de distinguir de um exantema de origem viral, e 
+geralmente de curta duração, pode estar presente no início do quadro em até 15% das crianças 
+com meningococcemia.
+No Quadro 1, são apresentados os principais sinais e sintomas observados nos casos de meningite 
+bacteriana (meningite meningocócica e meningite causada por outras bactérias) e doença 
+meningocócica (meningite meningocócica e/ou meningococcemia) (NATIONAL INSTITUTE FOR 
+HEALTH AND CARE EXCELLENCE, 2010).
+	} COMPLICAÇÕES
+As convulsões estão presentes em 20% das crianças com meningite meningocócica. A ocorrência, 
+assim como a presença de sinais neurológicos focais, é menos frequente que nas meningites por 
+pneumococo ou por Haemophilus infuenzae sorotipo b.
+Nos casos de meningococcemia, o coma pode sobrevir em algumas horas. Associa-se a elevadas 
+taxas de letalidade, geralmente acima de 40%, sendo a maioria dos óbitos nas primeiras 48 horas 
+do início dos sintomas.
+	} DIAGNÓSTICO
+Diagnóstico laboratorial
+Os principais exames para o esclarecimento diagnóstico de casos suspeitos são:
+• Cultura: pode ser realizada com diversos tipos de fluidos corporais, principalmente líquido 
+cefalorraquidiano (LCR), sangue e raspado de lesões petequeais. É considerada padrão-  
+-ouro para diagnóstico da doença meningocócica por ter alto grau de especificidade. Tem 
+como objetivo o isolamento da bactéria para identificação da espécie, e posteriormente  
+o sorogrupo, o sorotipo e o sorossubtipo do meningococo invasivo.
+• Bacterioscopia direta: pode ser realizada a partir do LCR e de outros fluidos corpóreos 
+normalmente estéreis e de raspagem de petéquias. A coloração do LCR pela técnica de Gram 
+permite, ainda que com baixo grau de especificidade, caracterizar morfológica e tintorial-
+mente as bactérias presentes – no caso do meningococo, um diplococo Gram-negativo.
+• Aglutinação pelo látex: detecta o antígeno bacteriano em amostras de LCR. Partículas de 
+látex, sensibilizadas com antissoros específicos, permitem, por técnica de aglutinação rápida 
+(em lâmina ou placa), detectar o antígeno bacteriano nas amostras. Pode ocorrer resultado 
+112
+Ministério da Saúde |  Guia de Vigilância em Saúde
+falso-positivo, em indivíduos portadores do fator reumático ou em reações cruzadas com 
+outros agentes.
+• Reação em cadeia da polimerase (PCR): detecta o DNA da N. meningitidis presente nas 
+amostras clínicas (LCR, soro, sangue total e fragmentos de tecidos). Também permite a 
+genogrupagem dos sorogrupos do meningococo. A PCR em tempo real (qPCR) é uma modi-
+ficação da técnica tradicional de PCR que identifica o DNA-alvo com maior sensibilidade  
+e especificidade e em menor tempo de reação.
+Mais informações sobre os procedimentos técnicos para coleta de amostras, fluxos laboratoriais, 
+informações sobre conservação e transporte de amostras, bem como detalhamento sobre os 
+principais exames realizados para diagnóstico das meningites, encontram-se no Anexo A do texto 
+“Outras meningites”.
+Diagnóstico diferencial
+Dependerá da forma de apresentação da doença. 
+• Nas formas clínicas mais leves, bacteremia sem sepse, o diagnóstico deve ser feito com 
+doenças exantemáticas, principalmente as virais e as doenças do trato respiratório superior.
+• Para meningoccemia, os principais diagnósticos são sepse de outras etiologias, febres 
+hemorrágicas (dengue, febre amarela, hantavirose), febre maculosa, leptospirose forma 
+íctero-hemorrágica (doença de Weill), malária (Plasmodium falciparum) e endocardite 
+bacteriana. Nas meningites, o diagnóstico diferencial principal deve ser feito com outros 
+agentes causadores, principalmente o Streptococcus pneumoniae e o H. influenzae, além 
+das formas virais e de outras causas de meningoencefalite.
+	} TRATAMENTO
+A antibioticoterapia deve ser instituída o mais precocemente possível, de preferência, logo após  
+a punção lombar e a coleta de sangue para hemocultura. O uso de antibiótico deve ser associado  
+a outros tipos de tratamento de suporte, como reposição de líquidos e cuidadosa assistência.
+O Quadro 2 apresenta a recomendação de antibioticoterapia para casos de doença meningocócica 
+em crianças e adultos (GAGLIARDI; TAKAYANAGUI, 2019). Estes medicamentos constam no 
+Componente Estratégico da Assistência Farmacêutica da Relação Nacional de Medicamentos 
+Essenciais (Rename), e estão disponíveis no hiperlink: https://www.conass.org.br/wp-content/
+uploads/2022/01/RENAME-2022.pdf (BRASIL, 2022a).
+QUADRO 2 – Recomendação de antibioticoterapia para casos de doença meningocócica
+GRUPO ETÁRIO ANTIBIÓTICOS DOSE (ENDOVENOSA) INTERVALO DURAÇÃO
+Crianças
+Penicilina ou 200.000 UI/kg/dia  
+a 400.000 UI/kg/dia 4 em 4 horas
+5 a 7 diasAmpicilina ou 200 mg/kg/dia  
+a 300 mg/kg/dia 6 em 6 horas
+Ceftriaxona 100 mg/kg/dia 12 em 12 horas
+Adultos Ceftriaxona 2 g 12 em 12 horas 7 dias
+Fonte: Gagliardi; Takayanagui, 2019.
+113
+Doença meningocócica
+O uso de corticoide nas situações de choque é discutível, pois há controvérsias a respeito da 
+influência favorável ao prognóstico.
+	} VIGILÂNCIA EPIDEMIOLÓGICA
+Objetivos
+• Monitorar a situação epidemiológica da doença meningocócica no País.
+• Detectar surtos precocemente.
+• Orientar a utilização e avaliar a efetividade das medidas de prevenção e controle.
+• Monitorar a prevalência dos sorogrupos e sorotipos de N. meningitidis circulantes.
+• Monitorar o perfil da resistência bacteriana das cepas de N. meningitidis identificadas.
+• Produzir e disseminar informações epidemiológicas.
+	} DEFINIÇÃO DE CASO 
+Suspeito
+Crianças acima de 1 ano de idade e adultos com febre, cefaleia, vômitos, rigidez da nuca e outros 
+sinais de irritação meníngea (Kernig e Brudzinski), convulsões e/ou manchas vermelhas no corpo.
+Nos casos de meningococcemia, atentar para eritema/exantema, além de sinais e sintomas 
+inespecíficos (sugestivos de septicemia), como hipotensão, diarreia, dor abdominal, dor em membros 
+inferiores, mialgia, rebaixamento do sensório, entre outros.
+Em crianças abaixo de 1 ano de idade, os sintomas clássicos referidos podem não ser tão evidentes. 
+É importante considerar, para a suspeita diagnóstica, sinais de irritabilidade, como choro persistente, 
+e verificar a existência de abaulamento de fontanela.
+Confirmado
+• Todo paciente que cumpra os critérios de caso suspeito e cujo diagnóstico seja confirmado 
+por meio dos exames laboratoriais específicos: cultura, e/ou PCR, e/ou látex.
+• Ou todo paciente que cumpra os critérios de caso suspeito e que apresente história de 
+vínculo epidemiológico com caso confirmado laboratorialmente para N. meningitidis por um 
+dos exames laboratoriais específicos, mas que não tenha realizado nenhum deles.
+• Ou todo paciente que cumpra os critérios de caso suspeito com bacterioscopia da amostra 
+clínica com presença de diplococo Gram-negativo.
+• Ou todo paciente que cumpra os critérios de caso suspeito com clínica sugestiva de doença 
+meningocócica com presença de petéquias/sufusões hemorrágicas (meningococcemia).
+Descartado
+Caso suspeito com diagnóstico confirmado para outra doença.
+114
+Ministério da Saúde |  Guia de Vigilância em Saúde
+	} NOTIFICAÇÃO
+Doença de notificação compulsória em até 24 horas para as Secretarias Municipais e Estaduais  
+de Saúde. Os surtos, os aglomerados de casos (clusters) ou óbitos são de notificação imediata.
+Todos os casos suspeitos ou confirmados devem ser notificados às autoridades competentes, por 
+profissionais da área de assistência, vigilância, e por aqueles de laboratórios públicos e privados, 
+por intermédio de contato por telefone, fax, e-mail, ou outras formas de comunicação. A notificação 
+deve ser registrada no Sistema de Informação de Agravos de Notificação (Sinan), por meio do 
+preenchimento da Ficha de Investigação de Meningite.
+	} INVESTIGAÇÃO
+Deve ser realizada para obtenção de informações quanto à caracterização clínica do caso (incluindo 
+a análise dos exames laboratoriais) e as possíveis fontes de transmissão da doença.
+A Ficha de Investigação de Meningite é o instrumento utilizado para a investigação. Todos os seus 
+campos devem ser criteriosamente preenchidos, mesmo se a informação for negativa. Outras 
+informações podem ser incluídas conforme a necessidade.
+	} ROTEIRO DA INVESTIGAÇÃO
+Identificação do paciente
+Preencher todos os campos referentes à notificação (dados gerais, do caso e de residência).
+Coleta de dados clínicos e epidemiológicos
+As fontes de coleta de dados são entrevista com o profissional de saúde que atendeu o caso, 
+dados do prontuário, entrevista de familiares e pacientes, quando possível, e pessoas identificadas  
+na investigação como contato próximo do caso.
+Para confirmar a suspeita diagnóstica
+• Verificar se as informações se enquadram na definição de caso.
+• Verificar os resultados de exames de sangue/soro, e/ou LCR, e/ou raspados de lesões 
+petequiais encaminhados ao laboratório.
+• Verificar a evolução clínica do paciente.
+Para identificação da área de transmissão 
+Coletar informações na residência e nos locais usual mente frequentados pelos indivíduos aco-
+metidos (creches, escolas, locais de trabalho, quartéis, igrejas, e outros pontos de convívio social 
+em que pode haver contato próximo e prolongado com outras pessoas), considerando o período 
+anterior a 15 dias do adoecimento, para identificar possíveis fontes de infecção.
+Para determinação da extensão da área de transmissão 
+Em relação à identificação do risco de propagação da transmissão:
+• Identificar todos os contatos próximos e prolongados do caso.
+• Investigar a existência de casos secundários e coprimários.
+115
+Doença meningocócica
+• Verificar histórico vacinal do paciente e dos contatos.
+• Avaliar a cobertura vacinal do município.
+Coleta e remessa de material para exames
+• A coleta de espécimes clínicos (LCR, sangue, e/ou lesões petequiais) para o diagnóstico 
+laboratorial deve ser realizada logo após a suspeita clínica de doença meningocócica, prefe-
+rencialmente antes do início do tratamento com antibiótico.
+• A adoção imediata do tratamento adequado não impede a coleta de material para o diag-
+nóstico etiológico, mas recomenda-se que a coleta das amostras seja feita o mais próximo 
+possível do momento do início do tratamento.
+• O material coletado em meio estéril deve ser processado inicialmente no laboratório local 
+para orientação da conduta médica. Subsequentemente, esse material e/ou a cepa de  
+N. meningitidis já isolada deverá ser encaminhada ao Laboratório Central de Saúde Pública 
+(Lacen) para realização de diagnóstico mais específico. 
+• O LCR deve ser coletado exclusivamente por médico especializado seguindo as normas 
+técnicas e os fluxos recomendados no Anexo A do texto “Outras meningites”. 
+• Nem sempre é possível aguardar os resultados laboratoriais para instituição das medidas de 
+controle cabíveis, embora sejam imprescindíveis para confirmação do caso, direcionamento 
+das medidas de controle e orientação para o encerramento das investigações.
+É obrigatória a coleta de material clínico do paciente para realização dos exames laboratoriais  
+a fim de confirmar o diagnóstico etiológico e identificar o sorogrupo de N. menigitidis circulante.
+Análise de dados
+Essa é uma etapa fundamental da investigação epidemiológica e corresponde à interpretação 
+dos dados coletados em seu conjunto. Essa análise deverá ser orientada por algumas perguntas, 
+tais como:
+• Qual foi – ou quais foram – a(s) fonte(s) de infecção?
+• O caso sob investigação transmitiu a doença para outra(s) pessoa(s)?
+• Trata-se de caso(s) isolado(s) ou de um surto?
+• Existem medidas de controle a serem executadas?
+Isso significa que a investigação epidemiológica não se esgota no preenchimento da ficha de 
+investigação de um caso. A análise rotineira dos dados registrados no banco do Sinan é considerada 
+atividade fundamental para que se alcance o objetivo final da vigilância epidemiológica, que é o 
+controle das doenças.
+Algumas atividades consideradas inerentes à vigilância da doença meningocócica são:
+• Acompanhamento semanal do número de casos de doença meningocócica, por município, 
+para detectar surtos.
+• Análise da situação epidemiológica da doença meningocócica utilizando os indicadores 
+de morbimortalidade: incidência, mortalidade e letalidade por faixa etária, sazonalidade, 
+sorogrupo circulante, entre outros.
+116
+Ministério da Saúde |  Guia de Vigilância em Saúde
+• Análise de indicadores operacionais da vigilância: oportunidade de realização da quimio-
+profilaxia, oportunidade de investigação e encerramento dos casos, percentual de casos 
+confirmados por critério laboratorial, percentual de casos com sorogrupo identificado, 
+cobertura vacinal, entre outros.
+Encerramento de caso
+Deve ocorrer após a verificação de todas as informações necessárias para a conclusão do caso, no 
+prazo de 60 dias após a notificação. O encerramento de um caso de doença meningocócica pode 
+ser realizado pelos seguintes critérios:
+• Critério laboratorial específico (cultura, PCR ou látex) – caso com identificação da  
+N. meningitidis na cultura de amostras clínicas, ou com detecção do DNA da bactéria por 
+PCR na amostra clínica, ou com presença de antígenos bacterianos na amostra clínica 
+detectados por látex.
+• Critério laboratorial inespecífico (bacterioscopia) – caso com presença de diplococos Gram- 
+-negativos na amostra clínica.
+• Critério de vínculo epidemiológico: caso sem exames laboratoriais positivos, mas que teve 
+contato próximo com caso confirmado por critério laboratorial específico em um período 
+anterior, de até 15 dias, ao aparecimento dos sintomas.
+• Critério clínico: caso de meningococcemia ou de meningite meningocócica associada à 
+meningococcemia, sem exames laboratoriais positivos.
+• Necropsia: óbito com achados anatomopatológicos compatíveis com meningite meningo-
+cócica e/ou meningococcemia.
+Relatório final
+Os dados da investigação em situações de surto, aglomerados de casos (clusters) ou óbitos deverão 
+ser sumarizados em um relatório com informações a respeito da distribuição dos casos por tempo, 
+lugar e pessoa.
+	} MEDIDAS DE PREVENÇÃO E CONTROLE
+Objetivos
+• Prevenir casos secundários entre os contatos próximos de um caso suspeito de doença 
+meningocócica.
+• Prevenir caso de doença meningocócica entre crianças e adolescentes.
+Quimioprofilaxia 
+A quimioprofilaxia, embora não assegure efeito protetor absoluto e prolongado, tem sido adotada 
+como medida eficaz na prevenção de casos secundários. Os casos secundários são raros e, 
+geralmente, ocorrem nas primeiras 48 horas a partir do primeiro caso.
+O risco de doença entre os contatos próximos é maior durante os primeiros dias após o início da 
+doença, o que requer que a quimioprofilaxia seja administrada o mais rápido possível.
+117
+Doença meningocócica
+Está indicada para os contatos próximos de casos suspeitos de doença meningocócica (AMERICAN 
+ACADEMY OF PEDIATRICS, 2018).
+Contatos próximos são os moradores do mesmo domicílio, indivíduos que compartilham  
+o mesmo dormitório (em alojamentos, quartéis, entre outros), comunicantes de creches e escolas, 
+e pessoas diretamente expostas às secreções do paciente.
+A quimioprofilaxia também está indicada para o paciente no momento da alta ou na internação no 
+mesmo esquema preconizado para os contatos próximos, exceto se o tratamento da doença foi 
+realizado com ceftriaxona.
+Não há recomendação para os profissionais da área de saúde que atenderam o caso de doença 
+meningocócica, exceto para aqueles que realizaram procedimentos invasivos (intubação 
+orotraqueal, passagem de cateter nasogástrico) sem utilização de equipamento de proteção 
+individual (EPI) adequado.
+O antibiótico de escolha para a quimioprofilaxia é a rifampicina, que deve ser administrada em 
+dose adequada e simultaneamente a todos os contatos próximos, preferencialmente até 48 horas 
+da exposição à fonte de infecção (doente), considerando o prazo de transmissibilidade e o período 
+de incubação da doença.
+Alternativamente, outros antibióticos podem ser utilizados para a quimioprofilaxia (Quadro 3).  
+A recomendação para uso preferencial e/ou restrito da rifampicina, além do tratamento da tuberculose 
+no País, visa evitar a seleção de cepas resistentes de meningococos.
+Em relação às gestantes, esse medicamento tem sido utilizado para quimioprofilaxia, pois não há 
+evidências de que a rifampicina possa apresentar efeitos teratogênicos. A relação risco/benefício 
+do uso de antibióticos pela gestante deverá ser avaliada pelo médico assistente.
+Estes medicamentos constam no Componente Estratégico da Assistência Farmacêutica da Rename, 
+e estão disponíveis no hiperlink: https://www.conass.org.br/wp-content/uploads/2022/01/
+RENAME-2022.pdf (BRASIL, 2022a).
+QUADRO 3 – Esquema quimioprofilático indicado para doença meningocócica
+DROGA IDADE DOSE INTERVALO DURAÇÃO
+Rifampicina
+<1 mês 5 mg/kg/dose 12 em 12 horas
+2 dias
+Crianças ≥1 mês e adultos 10 mg/kg/dose  
+(máximo de 600 mg) 12 em 12 horas
+Ceftriaxona
+<12 anos 125 mg;
+intramuscular
+Dose única
+≥12 anos 250 mg;
+intramuscular
+Ciprofloxacino >18 anos 500 mg; uso oral Dose única
+Fonte: Gagliardi; Takayanagui, 2019.
+118
+Ministério da Saúde |  Guia de Vigilância em Saúde
+Todos os contatos próximos de um caso de doença meningocócica, independentemente do 
+estado vacinal, deverão receber a quimioprofilaxia. É importante observar o cartão de vacina, 
+pois crianças e adolescentes que não são vacinados devem receber a quimioprofilaxia e atualizar  
+o cartão vacinal conforme preconizado pelo Programa Nacional de Imunizações do Ministério  
+da Saúde (PNI/MS).
+	} IMUNIZAÇÃO
+A vacinação é considerada a forma mais eficaz na prevenção da doença, e as vacinas contra o 
+meningococo são sorogrupo ou sorossubtipo específicas. Estes imunobiológicos são utilizados na 
+rotina para imunização e também para controle de surtos.
+Em 1999 foi licenciada, no Reino Unido, uma vacina de polissacarídeos capsulares do meningococo 
+C conjugados a proteínas (toxóide tetânico e CRM197). Essa vacina é T-dependente, induz memória 
+imunológica, tem efeito booster e sua proteção é de longa duração. Também reduz a colonização do 
+meningococo na orofaringe. Pode ser aplicada a lactentes jovens, tal como outras vacinas conjugadas. 
+Sua eficácia é maior que 90% e proporciona efeito de proteção nos não vacinados quando se obtêm 
+altas coberturas vacinais na população, incluindo vacinação de adolescentes (proteção coletiva)
+(BRASIL, 2019). 
+Vacina meningocócica C (Conjugada)
+Está disponível no Calendário Nacional de Vacinação do Programa Nacional de Imunizações e 
+introduzida na vacinação de rotina desde o ano 2010. O esquema vacinal consiste de 2 doses, aos 3 
+e 5 meses de idade, com intervalo de 60 dias entre as doses, mínimo de 30 dias. Uma dose de reforço 
+é recomendada aos 12 meses de idade, podendo ser administrada até os 4 anos de idade. Em 2017, 
+foi incorporada a vacina meningocócica C (Conjugada) para adolescentes de 11 a 14 anos, como 
+dose de reforço, de acordo com a situação vacinal. Em 2020, a vacina meningocócica conjugada 
+ACWY foi incorporada ao calendário nacional de vacinação do PNI, para uso em adolescentes de 
+11 e 12 anos de idade (BRASIL, 2022b, 2017, 2020b).
+Também é ofertada nos Centros de Referência para Imunobiológicos Especiais (Crie), para pessoas 
+em situações de risco a partir de 12 meses de idade, sendo recomendada nas seguintes situações 
+(BRASIL, 2019):
+• Imunodeficiências adquiridas. 
+• Paciente oncológico com doença em atividade ou até alta médica.
+• Fístula liquórica e derivação ventrículo-peritoneal DVP .
+• Implante de cóclea.
+• Trissomias.
+• Doenças de depósito.
+• Hepatopatia crônica.
+• Doença neurológica incapacitante.
+Nos Crie, o esquema de vacinação de uma ou duas doses com intervalo de 8 a 12 semanas, de 
+acordo com a condição de risco, e uma dose de reforço após cinco anos, repetindo uma dose a cada 
+cinco anos ou não, também de acordo com cada uma das situações de risco acima citada.
+119
+Doença meningocócica
+Essa vacina é contraindicada para pessoas com hipersensibilidade a qualquer componente desse 
+imunobiológico. Os eventos adversos são eritema, enduração e dor/sensibilidade no local da injeção, 
+febre baixa e irritabilidade, sonolência, alteração no sono, perda de apetite, diarréia, vômitos, cefaléia, 
+vesículas, dermatite (inflamação da pele), urticária e prurido. Há relatos raros de petequias e púrpuras 
+(manchas purpúreas na pele e nas mucosas) (BRASIL, 2020b).
+Vacina meningocócica ACWY (conjugada)
+Está disponível no Calendário Nacional de Vacinação do Programa Nacional de Imunizações (PNI) 
+desde 2020, para a prevenção da doença sistêmica causada pela Neisseria meningitidis dos 
+sorogrupos A, C, W ou Y . A vacinação é recomendada para adolescentes na faixa etária de 11 e 12 
+anos de idade (BRASIL, 2020a, 2020b). A vacina meningo B não está disponível no SUS.
+Essa vacina também é indicada nos Crie para pacientes com as seguintes indicações (BRASIL, 2023):
+• Asplenia anatômica e funcional, doença falciforme e talassemias. 
+• Deficiência de complemento e frações. 
+• Terapia com inibidor de complemento. 
+• Pessoas vivendo com HIV/aids.
+• Imunodeficiências congênitas.
+• Transplante de células-tronco hematopoiéticas.
+• Transplante de órgãos sólidos.
+• Microbiologista.
+Em pessoas a partir dos 12 meses de idade, administrar uma ou duas doses das vacinas 
+meningocócicas conjugadas ACWY , conforme a indicação. 
+Essa vacina é contraindicada para pessoas com hipersensibilidade a qualquer componente desse 
+imunobiológico. 
+Os eventos adversos são eritema, enduração e dor/sensibilidade no local da injeção, febre baixa  
+e irritabilidade.
+	} MANEJO E CONTROLE DE SURTO
+Os surtos de doença meningocócica estão entre as situações mais desafiadoras para as autoridades 
+de saúde pública, devido ao potencial de grande morbidade e mortalidade, com muita repercussão 
+social e nos meios de comunicação.
+As respostas sanitárias variam em cada surto e dependerão da identificação, ou não, de vínculo 
+epidemiológico entre os casos, das faixas etárias acometidas, da distribuição geográfica e de 
+outros riscos.
+O objetivo do manejo dos surtos de doença meningocócica é interromper a cadeia de transmissão 
+e evitar a ocorrência de novos casos.
+No Quadro 4, é apresentado um glossário com o significado de termos importantes para investigação 
+de surto de doença meningocócica (BARROSO et al., 1998; MBAEYI et al., 2019; WALDMAN, 1998).
+120
+Ministério da Saúde |  Guia de Vigilância em Saúde
+QUADRO 4 – Glossário de termos importantes na investigação de surtos de doença meningocócica
+TERMOS DEFINIÇÃO
+Caso primário Paciente com doença meningocócica sem história de contato com caso suspeito  
+ou confirmado.
+Caso 
+coprimário
+Contato próximo que adoece nas primeiras 24 horas do início da manifestação clínica 
+do caso primário.
+Caso 
+secundário
+Contato próximo que adoece após 24 horas do início da manifestação clínica do 
+caso primário.
+Portador Indivíduo colonizado, na nasofaringe, pela N. meningitidis, sem manifestação clínica 
+da doença.
+Surto
+Ocorrência de casos além do que é esperado para a população ou determinado 
+grupo de indivíduos, em um período específico do tempo, que atendem aos critérios 
+de surtos comunitários ou institucionais estabelecidos.
+Surto 
+comunitário
+Ocorrência de três ou mais casos primários, do mesmo sorogrupo, confirmados por 
+critério laboratorial específico (cultura e/ou PCR), em período inferior ou igual a três 
+meses, em residentes da mesma área geográfica, que não sejam comunicantes entre 
+si, resultando em uma taxa de ataque primária ≥10 casos/100 mil habitantes.
+Surto 
+institucional
+Ocorrência de três ou mais casos, do mesmo sorogrupo, confirmados por critério 
+laboratorial específico (cultura e/ou PCR), em período inferior ou igual a três 
+meses, entre pessoas que compartilham o mesmo ambiente (trabalho, escola, ou 
+outra instituição), mas que não tenham contato estabelecido umas com as outras, 
+resultando em uma taxa de ataque primária ≥10 casos/100 mil habitantes.
+Taxa de  
+ataque primária 
+(casos/100 mil 
+habitantes)
+TA = [(casos primários do mesmo sorogrupo confirmados no período ≤3 meses) / 
+(população sob risco)] x 100.000.
+Os casos secundários devem ser excluídos, e cada grupo de casos coprimários deve 
+ser considerado como um caso.
+Fonte: Barroso et al.,1998; Mbaeyi et al. 2019; Waldman, 1998.
+RECOMENDAÇÕES PARA O BLOQUEIO VACINAL
+A vacinação de bloqueio está indicada nas situações em que haja a caracterização de um surto de 
+doença meningocócica (Quadro 4), para o qual seja conhecido o sorogrupo responsável por meio 
+de confirmação laboratorial específica (cultura e/ou PCR) e haja vacina eficaz disponível.
+A vacinação somente será utilizada a partir de decisão conjunta das três esferas de gestão, e a 
+estratégia de vacinação será definida considerando a análise epidemiológica, as características da 
+população e a área geográfica de ocorrência dos casos.
+Todos os procedimentos relacionados com a realização das ações de vacinação deverão estar de 
+acordo com as normas técnicas preconizadas pelo Programa Nacional de Imunização.
+Após a vacinação, são necessários de sete a dez dias para a obtenção de títulos protetores de 
+anticorpos. Casos ocorridos em pessoas vacinadas, no período de até dez dias após a vacinação, não 
+devem ser considerados falhas da vacinação. Esses casos podem acontecer, visto que o indivíduo 
+pode ainda não ter produzido imunidade ou estar em período de incubação da doença, que varia 
+de dois a dez dias.
+121
+Doença meningocócica
+REFERÊNCIAS
+AMERICAN ACADEMY OF PEDIATRICS. Meningococcal infections. In: KIMBERLIN, D. W. et al. 
+(ed.). Red Book: 2018-2021 Report of the Committee on Infectious Diseases. 31. ed. Itasca, IL: 
+American Academy of Pediatrics, 2018. p. 550-560.
+BARROSO, D. E. et al. Doença meningocócica: epidemiologia e controle dos casos secundários. 
+Revista de Saúde Pública, v. 32, n. 1, p. 89-97, fev. 1998.
+BRASIL. Ministério da Saúde. Secretaria de Vigilância em Saúde. Departamento de vigilância 
+epidemiológica. Coordenação-Geral do Programa Nacional de Imunizações. Orientações 
+técnico-operacionais para a Vacinação dos Adolescentes com a Vacina Meningocócica ACWY 
+(Conjugada). Brasília, DF: MS, 2022a. Disponível em: https://www.cosemsmg.org.br/site/index.
+php/todas-as-noticias-do-cosems/63-ultimas-noticias-do-cosems/2686-informe- tecnico-
+vacina-meningococica-acwy-conjugada. Acesso em: 7 jan. 2021.
+BRASIL. Ministério da Saúde. Secretaria de Vigilância em Saúde e Ambiente. Departamento do 
+Programa Nacional de Imunizações. Coordenação-Geral de Incorporação Científica e Imunização. 
+Calendário de vacinação. Brasília, DF: MS, 2022b. Disponível em: https://www.gov.br/saude/
+pt-br/assuntos/saude-de-a-a-z/c/calendario-nacional-de-vacinacao/calendario-vacinal-2022/
+calendario-nacional-de-vacinacao-2022-crianca/view. Acesso em: 8 ago. 2022.
+BRASIL. Ministério da Saúde. Secretaria de Vigilância em Saúde. Departamento de Imunização e 
+Doença Transmissíveis. Manual de Vigilância epidemiológica de eventos adversos pós-vacinação. 
+4. ed. atual. Brasília, DF: MS, 2020a. Disponível em: https://www.gov. br/saude/pt-br/media/
+pdf/2021/julho/07/manual_eventos-_adversos_pos_vacinacao_4ed_ atualizada.pdf. Acesso 
+em: 22 out. 2021.
+BRASIL. Ministério da Saúde. Secretaria de Vigilância em Saúde e Ambiente. Departamento do 
+Programa Nacional de Imunizações. Coordenação-Geral de Incorporação Científica e Imunização.
+Calendário de vacinação do adolescente. Brasília, DF: MS, 2020b. Disponível em: https://www.
+gov.br/saude/pt-br/assuntos/saude-de-a-a-z/c/calendario-nacional-de-vacinacao/calendario-
+vacinal-2022/anexo-calendario-de-vacinacao-do-adolescente_atualizado_-final-20-09-2022-
+copia.pdf. Acesso em: 8 ago. 2022.
+BRASIL. Ministério da Saúde. Secretaria de Vigilância em Saúde e Ambiente. Departamento do 
+Programa Nacional de Imunizações. Coordenação-Geral de Incorporação Científica e Imunização. 
+Instrução normativa referente ao calendário nacional de vacinação 2022. Brasília, DF: MS, 
+2020c. Disponível em: https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/c/calendario-
+nacional-de-vacinacao/calendario-vacinal-2022/instrucao-normativa-calendario-nacional-de-
+vacinacao-2022/view. Acesso em: 8 ago. 2022.
+BRASIL. Ministério da Saúde. Secretaria de Vigilância em Saúde. Departamento de Doenças 
+Transmissíveis. Coordenação-Geral do Programa Nacional de Imunizações. Nota informativa 
+n.º 135-SEI/2017-CGPNI/DEVIT/SVS/MS. Informa as mudanças no Calendário Nacional de 
+Vacinação para o ano de 2018. Brasília, DF: MS, 2017. Disponível em: https://saude.es.gov.br/
+Media/sesa/Imuniza%C3%A7%C3%A3o/SEI_MS%20-%20Nota%20Informativa%20135%20
+-%20mudancas%20no%20calendario%20nacional%20de%20vacinacao%202018.pdf. Acesso 
+em: 7 jan. 2021.
+122
+Ministério da Saúde |  Guia de Vigilância em Saúde
+BRASIL. Ministério da Saúde. Secretaria de Vigilância em Saúde. Departamento de Imunização e 
+Doença Transmissíveis. Manual dos centros de referência para imunobiológicos especiais. 5. ed. 
+Brasília, DF: MS, 2019. Disponível em: https://portalarquivos2.saude.gov.br/images/pdf/2019/
+dezembro/11/manual-centros-referencia-imunobiologicos-especiais-5ed.pdf. Acesso em: 7 jan. 2021.
+BRASIL. Ministério da Saúde. Secretaria de Ciência, Tecnologia, Inovação e Insumos Estratégicos 
+em Saúde. Departamento de Assistência Farmacêutica e Insumos Estratégicos. Relação Nacional 
+de Medicamentos Essenciais: Rename 2022. Brasília, DF: MS, 2022c. Disponível em: https://www.
+conass.org.br/wp-content/uploads/2022/01/RENAME-2022.pdf. Acesso em: 28 jul. 2022.
+GAGLIARDI, R. J.; TAKAYANAGUI, O. M. Tratado de neurologia da academia brasileira de 
+neurologia. 2. ed. Rio de Janeiro: Elsevier, 2019. 
+HARRISON, L. H.; GRANOFF , D. M.; POLLARD, A. J. Meningococcal vaccines. In: PLOTKIN, S. A. 
+et al. Plotkin`s Vaccines. 7th ed. Philadelphia: Saunders: Elsevier, 2018. p. 921-981.
+MBAEYI, S. A. et al. Epidemiology of Meningococcal Disease Outbreaks in the United States, 
+2009–2013. Clinical Infectious Diseases, v. 68, n. 4, p. 580-585, 1 fev. 2019.
+NATIONAL INSTITUTE FOR HEALTH AND CARE EXCELLENCE. Bacterial meningitis and 
+meningococcal sepcticaemia in under 16s: recognition, diagnosis and management. 2010. (NICE 
+clinical guideline, 102). Disponível em: https://www.nice.org.uk/guidance/cg102/resources/
+meningitis-bacterial-and-meningococcal-septicaemia-in-under- 16s-recognition-diagnosis-and-
+management-pdf-35109325611205. Acesso em: 23 dez. 2013.
+SÁFADI, M. A. P .; BEREZIN, E. N.; OSELKA, G. W. A critical appraisal of the recommendations for the 
+use of meningococcal conjugate vaccines. Jornal de Pediatria, v. 88, n 3, p. 195-202, 23 maio 2012.
+WALDMAN, E. A. Vigilância em saúde pública. São Paulo: USP , 1998. (Série Saúde & Cidadania).

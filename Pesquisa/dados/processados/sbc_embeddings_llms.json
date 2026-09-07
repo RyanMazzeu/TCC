@@ -1,0 +1,25 @@
+{
+  "fonte": "Medeiros, L. S. F.; Oliveira, H. T. A. (2025). Comparação de Modelos de Embeddings e LLMs para Geração Aumentada por Recuperação em Português. SEMISH/CSBC, IFES.",
+  "url": "https://sol.sbc.org.br/index.php/semish/article/download/36829/36615/",
+  "observacao": "Documento único como corpus (igual ao Llama2 Paper original). Sem gabarito pronto -- perguntas escritas por nós, cada uma ancorada em trecho literal do paper.",
+  "perguntas": [
+    {
+      "id": "sbc_q1",
+      "pergunta": "Quais foram as três bases de dados (corpora) utilizadas nos experimentos deste trabalho?",
+      "resposta_esperada": "Pirá, FairytaleQA PT-BR e SQuAD2 PT-BR.",
+      "trecho_fonte": "foram utilizadas as bases de dados do Pirá, SQuAD 2 e FairytaleQA PT-BR"
+    },
+    {
+      "id": "sbc_q2",
+      "pergunta": "No primeiro experimento (avaliação dos modelos de embedding), qual valor de top-n foi definido como o melhor ponto de equilíbrio entre a métrica de recall e o custo computacional em tokens?",
+      "resposta_esperada": "Top-5 foi definido como o melhor ponto de equilíbrio identificado neste experimento.",
+      "trecho_fonte": "Assim, o top-5 foi definido como o melhor ponto de equilíbrio identificado neste experimento."
+    },
+    {
+      "id": "sbc_q3",
+      "pergunta": "Segundo as conclusões do trabalho, qual modelo de embedding apresentou o melhor custo-benefício entre recall e custo computacional/financeiro, e qual LLM obteve o desempenho mais consistente entre as bases de dados avaliadas?",
+      "resposta_esperada": "O modelo Multilingual E5 large apresentou o melhor custo-benefício entre a métrica de recall e o custo computacional e financeiro. O Gemma 2 9B obteve um desempenho mais consistente em todas as bases de dados.",
+      "trecho_fonte": "O primeiro experimento identificou que o modelo Multilingual E5 large apresentou o melhor custo-benefício entre a métrica de recall e o custo computacional e financeiro. Já o segundo experimento revelou que o Gemma 2 9B obteve um desempenho mais consistente em todas as bases de dados"
+    }
+  ]
+}

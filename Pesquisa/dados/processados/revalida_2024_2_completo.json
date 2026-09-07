@@ -1,0 +1,88 @@
+{
+  "fonte": "Revalida INEP 2024/2, Prova Discursiva, Questões 1, 3, 4 e 5",
+  "observacao_escopo": "Questão 2 (trauma/ATLS) foi deliberadamente omitida: a única referência bibliográfica do gabarito é o manual oficial do curso ATLS (American College of Surgeons), que é pago e protegido por direitos autorais -- não buscamos isso. Item 1c (descrição de radiografia) e partes de outros itens que dependem de imagens (raio-X, partograma) foram omitidos ou adaptados quando a informação necessária já aparecia em texto no próprio padrão de resposta.",
+  "url_prova": "https://download.inep.gov.br/revalida/provas_e_gabaritos/2024_2_PV_discursiva_regular.pdf",
+  "url_gabarito": "https://download.inep.gov.br/revalida/provas_e_gabaritos/2024_2_PEP_discursiva_versao_final.pdf",
+  "corpus_documentos": [
+    "codigo_etica_medica_cfm.txt",
+    "sbp_consulta_adolescente.txt",
+    "revalida_ref_tev_scielo.txt",
+    "revalida_ref_parto_febrasgo.txt",
+    "revalida_ref_meningococica_ms.txt"
+  ],
+  "perguntas": [
+    {
+      "id": "revalida_q1_a",
+      "vinheta": "Uma mulher de 38 anos é atendida em hospital de pronto-socorro com dispneia acentuada. Ela queixa-se de falta de ar muito intensa, iniciada, subitamente, há 2 horas. A acompanhante relata que, há 3 dias, a paciente procurou a emergência por dispneia, tosse, hemoptise e dor torácica ventilatório-dependente à esquerda. Nessa ocasião, foi iniciado tratamento para pneumonia. Atualmente, a paciente se encontra pálida, com cianose labial. Frequência cardíaca 132 bpm, frequência respiratória 34 irpm, pressão arterial 100x70 mmHg, temperatura axilar 36,8°C, saturação de O2 88% em ar ambiente. Após oxigênio a 100% por máscara não reinalante, a saturação sobe para 93%. Ausculta pulmonar com sons presentes e simétricos. Antecedentes: lúpus eritematoso sistêmico e síndrome do anticorpo antifosfolípide.",
+      "pergunta": "Qual é o diagnóstico atual mais provável para explicar o agravamento do quadro respiratório?",
+      "resposta_esperada": "Tromboembolismo pulmonar (TEP) agudo.",
+      "observacao": "Item (c) da questão original (descrever alteração radiológica) foi omitido: depende de uma radiografia de tórax anexada à prova, que não temos em formato de texto."
+    },
+    {
+      "id": "revalida_q1_b",
+      "vinheta": "Uma mulher de 38 anos é atendida em hospital de pronto-socorro com dispneia acentuada. Ela queixa-se de falta de ar muito intensa, iniciada, subitamente, há 2 horas. A acompanhante relata que, há 3 dias, a paciente procurou a emergência por dispneia, tosse, hemoptise e dor torácica ventilatório-dependente à esquerda. Nessa ocasião, foi iniciado tratamento para pneumonia. Atualmente, a paciente se encontra pálida, com cianose labial. Antecedentes: lúpus eritematoso sistêmico e síndrome do anticorpo antifosfolípide. O diagnóstico atual mais provável é tromboembolismo pulmonar (TEP) agudo.",
+      "pergunta": "Cite três sinais clínicos que, se presentes no seguimento do exame físico da paciente, corroborariam o diagnóstico de tromboembolismo pulmonar por trombose venosa profunda associada.",
+      "resposta_esperada": "Edema na coxa e/ou na perna com dor à palpação da panturrilha (sinal de Bancroft); dor na panturrilha com a dorsiflexão passiva do pé (sinal de Homans); veias varicosas superficiais visíveis na perna afetada mesmo na posição supina (sinal de Prats)."
+    },
+    {
+      "id": "revalida_q3_a",
+      "vinheta": "Uma adolescente de 16 anos vai desacompanhada a uma consulta em unidade de atenção primária. Ela revela ter iniciado vida sexual com seu namorado de mesma idade e afirma que gostaria de realizar um exame para saber se está grávida, visto que teve relações desprotegidas. Ela também deseja, caso não esteja grávida, uma prescrição de contraceptivo oral.",
+      "pergunta": "Explique se a paciente poderá ser atendida sem a presença de um responsável maior de idade, considerando suas demandas quanto ao teste de gravidez e quanto à prescrição de contraceptivo, e se há necessidade de quebra de sigilo com um responsável legal nesse caso.",
+      "resposta_esperada": "A paciente pode ser atendida sem um acompanhante, uma vez que demonstre capacidade de discernimento sobre suas queixas. Não há necessidade de quebra de sigilo médico, porque não há risco de dano ao paciente ou a terceiros se essas informações da consulta não forem reveladas ao responsável legal."
+    },
+    {
+      "id": "revalida_q3_b",
+      "vinheta": "Uma adolescente de 16 anos vai desacompanhada a uma consulta em unidade de atenção primária. Ela revela ter iniciado vida sexual com seu namorado de mesma idade e afirma que gostaria de realizar um exame para saber se está grávida, visto que teve relações desprotegidas.",
+      "pergunta": "Caso seja confirmada a gravidez da paciente, qual deverá ser a conduta do médico quanto ao atendimento da adolescente nas consultas de pré-natal e quanto à quebra de sigilo com um responsável legal?",
+      "resposta_esperada": "Em caso de confirmação da gestação, há necessidade de comunicação a um responsável legal, o que pode ser feito pela própria paciente. No entanto, caso a paciente não faça essa comunicação, deve ocorrer quebra do sigilo médico. A adolescente pode ser atendida durante suas consultas de pré-natal sem o acompanhante."
+    },
+    {
+      "id": "revalida_q3_c",
+      "vinheta": "Uma adolescente de 16 anos vai desacompanhada a uma consulta em unidade de atenção primária, buscando teste de gravidez e contraceptivo.",
+      "pergunta": "Considere que a unidade onde ocorreu a consulta promova grupos de discussão em saúde e que já estão agendadas reuniões com temas de gestação na adolescência e prevenção de infecções sexualmente transmissíveis. Essa paciente poderia frequentar essas reuniões? Se sim, seria necessária a autorização de um responsável? Explique.",
+      "resposta_esperada": "Sim, ela pode frequentar as reuniões. Não há necessidade de autorização do responsável, visto que esse tipo de reunião envolve aspectos de orientação e de educação em saúde."
+    },
+    {
+      "id": "revalida_q4_a",
+      "vinheta": "Uma paciente de 30 anos, primigesta, com 40 semanas de idade gestacional, sem cirurgias prévias nem antecedentes mórbidos relevantes, é internada em trabalho de parto espontâneo às 5h da manhã com contrações. Os movimentos fetais estão presentes e ativos, não ocorreu perda de líquido ou sangue na internação. A paciente está lidando bem com a dor. Às 9h, a parturiente está mais cansada e queixosa e apresenta discreto sangramento vaginal; nova avaliação por toque vaginal mostra que a dilatação do colo do útero evoluiu de 4 para 6 centímetros nesse intervalo de 4 horas.",
+      "pergunta": "Fundamentado nas recomendações da Organização Mundial da Saúde (2018), qual é o diagnóstico correto do caso clínico?",
+      "resposta_esperada": "Evolução normal do trabalho de parto (parto eutócico). A progressão do trabalho de parto não deve seguir um período fixo; a evolução de 4 para 6 centímetros em 4 horas está dentro do esperado."
+    },
+    {
+      "id": "revalida_q4_b",
+      "vinheta": "Uma paciente de 30 anos, primigesta, com 40 semanas de idade gestacional, em trabalho de parto espontâneo desde às 5h. Às 9h, nova avaliação por toque vaginal mostra que a dilatação do colo do útero evoluiu de 4 para 6 centímetros nesse intervalo de 4 horas, e a apresentação fetal desceu e rotacionou.",
+      "pergunta": "Fundamentado nas recomendações da Organização Mundial da Saúde (2018), é possível constatar sinais de progressão, ou de não progressão, do trabalho de parto? Forneça duas justificativas completas para a sua resposta.",
+      "resposta_esperada": "Há sinais de progressão normal do trabalho de parto. Justificativas: a apresentação fetal desceu e rotacionou; e a dilatação do colo do útero progrediu dentro do esperado para o caso e para a dinâmica uterina apresentada."
+    },
+    {
+      "id": "revalida_q4_c",
+      "vinheta": "Uma paciente de 30 anos, primigesta, com 40 semanas de idade gestacional, em trabalho de parto espontâneo, com evolução normal (dilatação de 4 para 6 centímetros em 4 horas, dentro do esperado segundo as recomendações da OMS de 2018).",
+      "pergunta": "Qual conduta deve ser seguida diante dessa evolução normal do trabalho de parto?",
+      "resposta_esperada": "A conduta a ser adotada é prosseguir com o acompanhamento regular do trabalho de parto: verificação da dinâmica uterina e ausculta dos batimentos cardíacos fetais; incentivo ao uso de métodos para alívio da dor; e incentivo à livre movimentação da gestante."
+    },
+    {
+      "id": "revalida_q5_a",
+      "vinheta": "Um pré-escolar de 3 anos, previamente hígido, é trazido pela mãe à unidade básica de saúde (UBS), com febre, cefaleia e vômitos em jato há 1 dia. Nega diarreia, sintomas respiratórios, problemas no ouvido ou na garganta. Ao exame físico: regular estado geral, desidratado (2+/4+), sonolento e irritado, com fácies de dor e choroso. Otoscopia e oroscopia sem alterações, ausculta cardíaca e respiratória normais. Abdome indolor. Presença de petéquias em tronco e extremidades. FR 38 irpm, FC 130 bpm, temperatura axilar 38,5°C. Família frequenta creche local.",
+      "pergunta": "Cite o achado adicional do exame físico que precisa ser investigado na definição diagnóstica.",
+      "resposta_esperada": "Rigidez de nuca, sinais meníngeos ou irritação meníngea (sinais de Kernig e de Brudzinski)."
+    },
+    {
+      "id": "revalida_q5_b",
+      "vinheta": "Um pré-escolar de 3 anos, previamente hígido, com febre, cefaleia e vômitos em jato há 1 dia, sonolento e irritado, com petéquias em tronco e extremidades, e rigidez de nuca ao exame físico. Frequenta creche com outras crianças.",
+      "pergunta": "Considerando os critérios clínico-epidemiológicos, qual é a principal hipótese diagnóstica?",
+      "resposta_esperada": "Doença meningocócica (meningite meningocócica / meningococcemia)."
+    },
+    {
+      "id": "revalida_q5_c",
+      "vinheta": "Um pré-escolar de 3 anos com quadro clínico e epidemiológico compatível com doença meningocócica (febre, cefaleia, vômitos em jato, petéquias, rigidez de nuca), atendido em uma unidade básica de saúde (UBS), distante 3 horas do serviço de urgência.",
+      "pergunta": "Cite seis condutas a serem instituídas imediatamente na UBS para tratar esse paciente.",
+      "resposta_esperada": "Realizar medidas de suporte (reposição hídrica, observação clínica, antiemético e/ou analgésico); solicitar transferência imediata e segura para serviço hospitalar de referência; iniciar a primeira dose de um antibiótico; prescrever antitérmico ou controlar a febre; prescrever corticoide sistêmico; tratar a criança para evitar hipoglicemia."
+    },
+    {
+      "id": "revalida_q5_d",
+      "vinheta": "Um pré-escolar de 3 anos com diagnóstico de doença meningocócica, que frequenta creche junto com outras crianças, incluindo dois irmãos.",
+      "pergunta": "Cite cinco medidas de vigilância em saúde recomendadas para esse caso.",
+      "resposta_esperada": "Notificação compulsória imediata ao SINAN; indicação de quimioprofilaxia para contatos e comunicantes; isolamento respiratório para gotículas e uso de máscara cirúrgica pelos profissionais de saúde; comunicação à creche sobre a suspeita, para atenção a novos casos e higiene do ambiente; atualização vacinal de contactantes não vacinados."
+    }
+  ]
+}

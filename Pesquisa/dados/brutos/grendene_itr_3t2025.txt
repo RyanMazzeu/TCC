@@ -1,0 +1,6976 @@
+Grendene S.A. 
+Informações Trimestrais (ITR) em 
+30 de setembro de 2025 
+e relatório sobre a revisão de  
+informações trimestrais 
+www.pwc.com.br 
+PricewaterhouseCoopers Auditores Independentes Ltda.,  
+Rua Mostardeiro, 800, 8o e 9o, Ed. Madison Center,  
+Porto Alegre, RS, Brasil, 90430-000 
+T: +55 (11) 4004-8000 
+Relatório sobre a revisão de informações trimestrais 
+Aos Administradores e Acionistas 
+Grendene S.A. 
+Introdução 
+Revisamos as informações trimestrais, individuais e consolidadas, da Grendene S.A. 
+("Companhia"), contidas no Formulário de Informações Trimestrais (ITR) referente ao 
+trimestre findo em 30 de setembro de 2025, que compreendem o balanço patrimonial em 
+30 de setembro de 2025 e as respectivas demonstrações do resultado e do resultado 
+abrangente para os períodos de três e de nove meses findos nessa data e das mutações do 
+patrimônio líquido e dos fluxos de caixa para o período de nove meses findo nessa data, 
+incluindo as notas explicativas.  
+A administração é responsável pela elaboração das informações contábeis intermediárias 
+individuais e consolidadas de acordo com o Pronunciamento Técnico CPC 21 - Demonstração 
+Intermediária e com a norma internacional de contabilidade IAS 34 - Interim Financial 
+Reporting, emitida pelo International Accounting Standards Board (IASB), assim como pela 
+apresentação dessas informações de forma condizente com as normas expedidas pela 
+Comissão de Valores Mobiliários, aplicáveis à elaboração das Informações Trimestrais (ITR). 
+Nossa responsabilidade é a de expressar uma conclusão sobre essas informações contábeis 
+intermediárias com base em nossa revisão. 
+Alcance da revisão 
+Conduzimos nossa revisão de acordo com as normas brasileiras e internacionais de revisão 
+de informações intermediárias (NBC TR 2410 - Revisão de Informações Intermediárias 
+Executada pelo Auditor da Entidade e ISRE 2410 - Review of Interim Financial Information 
+Performed by the Independent Auditor of the Entity, respectivamente). Uma revisão de 
+informações intermediárias consiste na realização de indagações, principalmente às pessoas 
+responsáveis pelos assuntos financeiros e contábeis e na aplicação de procedimentos 
+analíticos e de outros procedimentos de revisão. O alcance de uma revisão é 
+significativamente menor do que o de uma auditoria conduzida de acordo com as normas de 
+auditoria e, consequentemente, não nos permitiu obter segurança de que tomamos 
+conhecimento de todos os assuntos significativos que poderiam ser identificados em uma 
+auditoria. Portanto, não expressamos uma opinião de auditoria. 
+Conclusão 
+Com base em nossa revisão, não temos conhecimento de nenhum fato que nos leve a 
+acreditar que as informações trimestrais individuais e consolidadas incluídas nas 
+informações trimestrais acima referidas não foram elaboradas, em todos os aspectos 
+relevantes, de acordo com o CPC 21 e o IAS 34, aplicáveis à elaboração das Informações 
+Trimestrais (ITR), e apresentadas de forma condizente com as normas expedidas pela 
+Comissão de Valores Mobiliários. 
+Grendene S.A. 
+3 
+Outros assuntos - Demonstrações do valor adicionado 
+As informações trimestrais acima referidas incluem as Demonstrações do Valor  
+Adicionado (DVA), individuais e consolidadas, referentes ao período de nove meses findo em 
+30 de setembro de 2025, elaboradas sob a responsabilidade da administração da Companhia 
+e apresentadas como informação suplementar para fins do IAS 34. Essas demonstrações 
+foram submetidas a procedimentos de revisão executados em conjunto com a revisão das 
+informações trimestrais, com o objetivo de concluir se elas estão conciliadas com as 
+informações trimestrais e registros contábeis, conforme aplicável, e se sua forma e conteúdo 
+estão de acordo com os critérios definidos no Pronunciamento Técnico CPC 09 - 
+"Demonstração do Valor Adicionado". Com base em nossa revisão, não temos conhecimento 
+de nenhum fato que nos leve a acreditar que essas demonstrações do valor adicionado não 
+foram elaboradas, em todos aspectos relevantes, segundo os critérios definidos nesse 
+Pronunciamento Técnico e de forma consistente em relação às informações trimestrais 
+individuais e consolidadas tomadas em conjunto. 
+Porto Alegre, 6 de novembro de 2025 
+PricewaterhouseCoopers 
+Auditores Independentes Ltda. 
+CRC 2SP000160/F-6 
+Rafael Biedermann Mariante 
+Contador CRC 1SP243373/O-0 
+
+Índice
+Dados da Empresa
+Composição do Capital
+1
+DFs Individuais
+Balanço Patrimonial Ativo
+2
+Balanço Patrimonial Passivo
+4
+Demonstração do Resultado
+6
+Demonstração do Resultado Abrangente
+7
+Demonstração do Fluxo de Caixa (Método Indireto)
+8
+Demonstração das Mutações do Patrimônio Líquido
+DMPL - 01/01/2025 à 30/09/2025
+10
+DMPL - 01/01/2024 à 30/09/2024
+11
+Demonstração de Valor Adicionado
+12
+DFs Consolidadas
+Balanço Patrimonial Ativo
+13
+Balanço Patrimonial Passivo
+15
+Demonstração do Resultado
+17
+Demonstração do Resultado Abrangente
+18
+Demonstração do Fluxo de Caixa (Método Indireto)
+19
+Demonstração das Mutações do Patrimônio Líquido
+DMPL - 01/01/2025 à 30/09/2025
+21
+DMPL - 01/01/2024 à 30/09/2024
+22
+Demonstração de Valor Adicionado
+23
+Notas Explicativas
+24
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+Dados da Empresa / Composição do Capital
+Número de Ações
+(Mil)
+Trimestre Atual
+30/09/2025
+Do Capital Integralizado
+Ordinárias
+902.160
+Preferenciais
+0
+Total
+902.160
+Em Tesouraria
+Ordinárias
+0
+Preferenciais
+0
+Total
+0
+PÁGINA: 1 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+DFs Individuais / Balanço Patrimonial Ativo
+(Reais Mil)
+Código da 
+Conta
+Descrição da Conta
+Trimestre Atual
+30/09/2025
+Exercício Anterior
+31/12/2024
+1
+Ativo Total
+4.497.871
+4.458.391
+1.01
+Ativo Circulante
+2.673.264
+2.930.056
+1.01.01
+Caixa e Equivalentes de Caixa
+60.756
+48.016
+1.01.02
+Aplicações Financeiras
+1.007.966
+1.087.668
+1.01.02.01
+Aplicações Financeiras Avaliadas a Valor Justo através do 
+Resultado
+6.708
+10.089
+1.01.02.01.02
+Títulos Designados a Valor Justo
+6.708
+10.089
+1.01.02.03
+Aplicações Financeiras Avaliadas ao Custo Amortizado
+1.001.258
+1.077.579
+1.01.03
+Contas a Receber
+1.033.367
+1.280.586
+1.01.03.01
+Clientes
+1.028.121
+1.265.827
+1.01.03.02
+Outras Contas a Receber
+5.246
+14.759
+1.01.04
+Estoques
+462.650
+369.167
+1.01.06
+Tributos a Recuperar
+50.822
+95.689
+1.01.06.01
+Tributos Correntes a Recuperar
+50.822
+95.689
+1.01.06.01.01
+Créditos Tributários
+50.822
+84.856
+1.01.06.01.02
+Imposto de Renda e Contribuição Social a Recuperar
+0
+10.833
+1.01.07
+Despesas Antecipadas
+12.926
+11.531
+1.01.08
+Outros Ativos Circulantes
+44.777
+37.399
+1.01.08.03
+Outros
+44.777
+37.399
+1.02
+Ativo Não Circulante
+1.824.607
+1.528.335
+1.02.01
+Ativo Realizável a Longo Prazo
+471.943
+482.915
+1.02.01.01
+Aplicações Financeiras Avaliadas a Valor Justo através do 
+Resultado
+186.689
+192.124
+1.02.01.01.01
+Títulos Designados a Valor Justo
+186.689
+192.124
+1.02.01.03
+Aplicações Financeiras Avaliadas ao Custo Amortizado
+234.554
+247.296
+1.02.01.04
+Contas a Receber
+9.248
+8.503
+1.02.01.04.01
+Clientes
+9.173
+8.455
+1.02.01.04.02
+Outras Contas a Receber
+75
+48
+1.02.01.07
+Tributos Diferidos
+18.705
+15.784
+1.02.01.07.01
+Imposto de Renda e Contribuição Social Diferidos
+18.705
+15.784
+1.02.01.08
+Despesas Antecipadas
+2.102
+2.550
+1.02.01.09
+Créditos com Partes Relacionadas
+2.058
+75
+1.02.01.09.02
+Créditos com Controladas
+2.058
+75
+1.02.01.10
+Outros Ativos Não Circulantes
+18.587
+16.583
+1.02.01.10.03
+Depósitos Judiciais
+511
+487
+1.02.01.10.04
+Créditos tributários
+12.783
+16.016
+1.02.01.10.05
+Outros
+5.293
+80
+1.02.02
+Investimentos
+724.346
+444.296
+1.02.02.01
+Participações Societárias
+723.934
+443.884
+1.02.02.01.01
+Participações em Coligadas
+622.250
+305.411
+1.02.02.01.02
+Participações em Controladas
+96.032
+132.821
+1.02.02.01.04
+Outros Investimentos
+5.652
+5.652
+1.02.02.02
+Propriedades para Investimento
+412
+412
+1.02.03
+Imobilizado
+557.726
+532.761
+1.02.03.01
+Imobilizado em Operação
+510.080
+486.038
+1.02.03.03
+Imobilizado em Andamento
+47.646
+46.723
+PÁGINA: 2 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+DFs Individuais / Balanço Patrimonial Ativo
+(Reais Mil)
+Código da 
+Conta
+Descrição da Conta
+Trimestre Atual
+30/09/2025
+Exercício Anterior
+31/12/2024
+1.02.04
+Intangível
+70.592
+68.363
+1.02.04.01
+Intangíveis
+70.592
+68.363
+1.02.04.01.02
+Intangíveis
+70.592
+68.363
+PÁGINA: 3 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+DFs Individuais / Balanço Patrimonial Passivo
+(Reais Mil)
+Código da 
+Conta
+Descrição da Conta
+Trimestre Atual
+30/09/2025
+Exercício Anterior
+31/12/2024
+2
+Passivo Total
+4.497.871
+4.458.391
+2.01
+Passivo Circulante
+428.425
+398.850
+2.01.01
+Obrigações Sociais e Trabalhistas
+130.001
+112.358
+2.01.01.01
+Obrigações Sociais
+24.840
+15.136
+2.01.01.02
+Obrigações Trabalhistas
+105.161
+97.222
+2.01.02
+Fornecedores
+61.306
+57.656
+2.01.02.01
+Fornecedores Nacionais
+57.899
+51.711
+2.01.02.02
+Fornecedores Estrangeiros
+3.407
+5.945
+2.01.03
+Obrigações Fiscais
+38.809
+39.617
+2.01.03.01
+Obrigações Fiscais Federais
+33.577
+34.973
+2.01.03.01.01
+Imposto de Renda e Contribuição Social a Pagar
+5.928
+303
+2.01.03.01.02
+Impostos, Taxas e Contribuições
+27.649
+34.670
+2.01.03.02
+Obrigações Fiscais Estaduais
+5.198
+4.544
+2.01.03.03
+Obrigações Fiscais Municipais
+34
+100
+2.01.04
+Empréstimos e Financiamentos
+68.859
+56.629
+2.01.04.01
+Empréstimos e Financiamentos
+68.859
+56.629
+2.01.04.01.01
+Em Moeda Nacional
+3.260
+2.118
+2.01.04.01.02
+Em Moeda Estrangeira
+65.599
+54.511
+2.01.05
+Outras Obrigações
+126.982
+126.732
+2.01.05.02
+Outros
+126.982
+126.732
+2.01.05.02.04
+Obrigações Contratuais
+9.737
+10.735
+2.01.05.02.05
+Comissões a Pagar
+55.594
+59.497
+2.01.05.02.06
+Adiantamentos de Clientes
+16.241
+30.031
+2.01.05.02.07
+Outras Contas a Pagar
+45.410
+26.469
+2.01.06
+Provisões
+2.468
+5.858
+2.01.06.01
+Provisões Fiscais Previdenciárias Trabalhistas e Cíveis
+2.468
+5.858
+2.01.06.01.01
+Provisões Fiscais
+84
+5.494
+2.01.06.01.02
+Provisões Previdenciárias e Trabalhistas
+898
+325
+2.01.06.01.04
+Provisões Cíveis
+1.486
+39
+2.02
+Passivo Não Circulante
+18.715
+18.595
+2.02.01
+Empréstimos e Financiamentos
+13.618
+12.310
+2.02.01.01
+Empréstimos e Financiamentos
+13.618
+12.310
+2.02.01.01.01
+Em Moeda Nacional
+13.618
+12.310
+2.02.02
+Outras Obrigações
+1.806
+2.573
+2.02.02.02
+Outros
+1.806
+2.573
+2.02.02.02.03
+Fornecedores Nacionais
+0
+143
+2.02.02.02.04
+Outras Contas a Pagar
+1.806
+2.430
+2.02.04
+Provisões
+3.291
+3.712
+2.02.04.01
+Provisões Fiscais Previdenciárias Trabalhistas e Cíveis
+3.291
+3.712
+2.02.04.01.01
+Provisões Fiscais
+1.338
+1.297
+2.02.04.01.02
+Provisões Previdenciárias e Trabalhistas
+1.947
+2.409
+2.02.04.01.04
+Provisões Cíveis
+6
+6
+2.03
+Patrimônio Líquido
+4.050.731
+4.040.946
+2.03.01
+Capital Social Realizado
+2.256.130
+2.256.130
+2.03.02
+Reservas de Capital
+6.038
+3.722
+PÁGINA: 4 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+DFs Individuais / Balanço Patrimonial Passivo
+(Reais Mil)
+Código da 
+Conta
+Descrição da Conta
+Trimestre Atual
+30/09/2025
+Exercício Anterior
+31/12/2024
+2.03.02.04
+Opções Outorgadas
+6.038
+3.722
+2.03.04
+Reservas de Lucros
+1.777.542
+1.764.178
+2.03.04.01
+Reserva Legal
+281.993
+270.163
+2.03.04.02
+Reserva Estatutária
+12.547
+10.683
+2.03.04.07
+Reserva de Incentivos Fiscais
+1.428.104
+1.269.273
+2.03.04.08
+Dividendo Adicional Proposto
+0
+120.559
+2.03.04.10
+Juros Sobre o Capital Próprio
+51.000
+93.500
+2.03.04.11
+Dividendos intermediários
+3.898
+0
+2.03.07
+Ajustes Acumulados de Conversão
+11.021
+16.916
+PÁGINA: 5 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+DFs Individuais / Demonstração do Resultado
+(Reais Mil)
+Código da 
+Conta
+Descrição da Conta
+Trimestre Atual
+01/07/2025
+ à 
+30/09/2025
+Acumulado do Atual 
+Exercício
+01/01/2025
+ à 
+30/09/2025
+Igual Trimestre do 
+Exercício Anterior
+01/07/2024
+ à 
+30/09/2024
+Acumulado do Exercício 
+Anterior
+01/01/2024
+ à 
+30/09/2024
+3.01
+Receita de Venda de Bens e/ou Serviços
+716.747
+1.778.483
+749.152
+1.767.904
+3.02
+Custo dos Bens e/ou Serviços Vendidos
+-393.349
+-1.003.589
+-390.763
+-965.190
+3.03
+Resultado Bruto
+323.398
+774.894
+358.389
+802.714
+3.04
+Despesas/Receitas Operacionais
+-246.908
+-604.593
+-212.796
+-542.847
+3.04.01
+Despesas com Vendas
+-171.646
+-431.786
+-170.390
+-419.904
+3.04.02
+Despesas Gerais e Administrativas
+-31.350
+-92.033
+-27.943
+-80.971
+3.04.04
+Outras Receitas Operacionais
+6.760
+9.330
+1.871
+8.410
+3.04.05
+Outras Despesas Operacionais
+-16.346
+-41.033
+-2.476
+-3.257
+3.04.06
+Resultado de Equivalência Patrimonial
+-34.326
+-49.071
+-13.858
+-47.125
+3.05
+Resultado Antes do Resultado Financeiro e dos Tributos
+76.490
+170.301
+145.593
+259.867
+3.06
+Resultado Financeiro
+89.786
+261.693
+108.396
+204.864
+3.06.01
+Receitas Financeiras
+110.152
+339.331
+132.486
+292.612
+3.06.02
+Despesas Financeiras
+-20.366
+-77.638
+-24.090
+-87.748
+3.07
+Resultado Antes dos Tributos sobre o Lucro
+166.276
+431.994
+253.989
+464.731
+3.08
+Imposto de Renda e Contribuição Social sobre o Lucro
+-27.791
+-36.570
+-30.474
+-59.878
+3.08.01
+Corrente
+-31.200
+-39.491
+-31.621
+-30.075
+3.08.02
+Diferido
+3.409
+2.921
+1.147
+-29.803
+3.09
+Resultado Líquido das Operações Continuadas
+138.485
+395.424
+223.515
+404.853
+3.11
+Lucro/Prejuízo do Período
+138.485
+395.424
+223.515
+404.853
+3.99
+Lucro por Ação - (Reais / Ação)
+3.99.01
+Lucro Básico por Ação
+3.99.01.01
+ON
+0,1535
+0,4384
+0,2478
+0,4488
+3.99.02
+Lucro Diluído por Ação
+3.99.02.01
+ON
+0,1535
+0,4384
+0,2478
+0,4489
+PÁGINA: 6 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+DFs Individuais / Demonstração do Resultado Abrangente
+(Reais Mil)
+Código da 
+Conta
+Descrição da Conta
+Trimestre Atual
+01/07/2025
+ à 
+30/09/2025
+Acumulado do Atual 
+Exercício
+01/01/2025
+ à 
+30/09/2025
+Igual Trimestre do 
+Exercício Anterior
+01/07/2024
+ à 
+30/09/2024
+Acumulado do Exercício 
+Anterior
+01/01/2024
+ à 
+30/09/2024
+4.01
+Lucro Líquido do Período
+138.485
+395.424
+223.515
+404.853
+4.02
+Outros Resultados Abrangentes
+3.209
+-5.895
+-983
+9.679
+4.02.01
+Ajustes Cumulativos de Conversão de Moeda Estrangeira
+-1.415
+-10.519
+-983
+9.997
+4.02.02
+Realização do ajuste de reclassificação - perda/ganho na baixa de investimento
+4.624
+4.624
+0
+-318
+4.03
+Resultado Abrangente do Período
+141.694
+389.529
+222.532
+414.532
+PÁGINA: 7 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+DFs Individuais / Demonstração do Fluxo de Caixa (Método Indireto)
+(Reais Mil)
+Código da 
+Conta
+Descrição da Conta
+Acumulado do Atual 
+Exercício
+01/01/2025
+ à 
+30/09/2025
+Acumulado do Exercício 
+Anterior
+01/01/2024
+ à 
+30/09/2024
+6.01
+Caixa Líquido Atividades Operacionais
+534.386
+652.819
+6.01.01
+Caixa Gerado nas Operações
+335.786
+411.831
+6.01.01.01
+Lucro líquido do período
+395.424
+404.853
+6.01.01.02
+Resultado de equivalência patrimonial
+49.071
+47.125
+6.01.01.03
+Depreciação e amortização
+66.596
+62.039
+6.01.01.04
+Valor residual da baixa do imobilizado e intangível
+1.145
+7.048
+6.01.01.05
+Imposto de renda e contribuição social diferidos
+-2.921
+29.803
+6.01.01.06
+Plano de opções de compra ou subscrição de ações
+5.335
+2.041
+6.01.01.07
+Redutoras do contas a receber de clientes
+14.407
+-23.902
+6.01.01.08
+Perdas estimada para estoques obsoletos
+12
+-888
+6.01.01.09
+Provisão para riscos trabalhistas, fiscais e cível
+-3.811
+-719
+6.01.01.10
+Despesas de juros de financiamentos
+947
+621
+6.01.01.11
+Receita de juros de aplivações financeiras
+-180.561
+-116.635
+6.01.01.12
+Valor justo de instrumentos financeiros de renda variável
+5.852
+-12.608
+6.01.01.13
+Variações cambiais, líquidas
+-15.813
+13.371
+6.01.01.14
+Realização do ajuste de reclassificação - ganho/perda na 
+baixa de investimento
+4.624
+-318
+6.01.01.15
+Movimentação de combinação de negócio
+-4.521
+0
+6.01.02
+Variações nos Ativos e Passivos
+192.975
+235.413
+6.01.02.01
+Contas a receber de clientes
+222.581
+89.996
+6.01.02.02
+Estoques
+-93.495
+-46.206
+6.01.02.03
+Creditos tributários
+37.267
+108.977
+6.01.02.04
+Outras contas a receber
+4.774
+31.806
+6.01.02.05
+Fornecedores
+3.507
+26.301
+6.01.02.06
+Salários e encargos a pagar
+17.643
+25.731
+6.01.02.07
+Impostos, taxas e contribuições
+1.067
+2.959
+6.01.02.08
+Adiantamentos de clientes
+-13.790
+-3.366
+6.01.02.09
+Outras contas a pagar
+13.421
+-785
+6.01.03
+Outros
+5.625
+5.575
+6.01.03.01
+Imposto de renda e contribuição social pagos
+5.625
+5.575
+6.02
+Caixa Líquido Atividades de Investimento
+-157.466
+-401.379
+6.02.01
+Integralizações de capital
+-336.930
+-3.246
+6.02.02
+Reduções de capital
+958
+1.360
+6.02.03
+Aquisições em imobilizado e intangível
+-94.082
+-98.051
+6.02.04
+Aplicações financeiras
+-2.222.811
+-2.090.456
+6.02.05
+Resgate de aplicações financeiras
+2.282.854
+1.637.806
+6.02.06
+Juros recebidos de aplicações financeiras
+212.545
+151.208
+6.03
+Caixa Líquido Atividades de Financiamento
+-364.180
+-264.338
+6.03.01
+Captação de empréstimos e financiamentos
+338.414
+280.152
+6.03.02
+Pagamento de empréstimos e financiamentos
+-309.764
+-308.198
+6.03.03
+Juros pagos de empréstimos e financiamentos
+-246
+-408
+6.03.04
+Dividendos pagos
+-281.429
+-139.825
+6.03.05
+Juros sobre o capital próprio pagos
+-110.000
+-95.000
+6.03.06
+Aquisição de ações em tesouraria
+-4.836
+-3.036
+PÁGINA: 8 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+DFs Individuais / Demonstração do Fluxo de Caixa (Método Indireto)
+(Reais Mil)
+Código da 
+Conta
+Descrição da Conta
+Acumulado do Atual 
+Exercício
+01/01/2025
+ à 
+30/09/2025
+Acumulado do Exercício 
+Anterior
+01/01/2024
+ à 
+30/09/2024
+6.03.07
+Venda de ações em tesouraria pelo exercício de opção de 
+compra
+3.681
+1.977
+6.05
+Aumento (Redução) de Caixa e Equivalentes
+12.740
+-12.898
+6.05.01
+Saldo Inicial de Caixa e Equivalentes
+48.016
+56.968
+6.05.02
+Saldo Final de Caixa e Equivalentes
+60.756
+44.070
+PÁGINA: 9 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+DFs Individuais / Demonstração das Mutações do Patrimônio Líquido / DMPL - 
+01/01/2025
+ à 
+30/09/2025
+(Reais Mil)
+Código da 
+Conta
+Descrição da Conta
+Capital Social 
+Integralizado
+Reservas de Capital, 
+Opções Outorgadas e 
+Ações em Tesouraria
+Reservas de Lucro
+Lucros ou Prejuízos 
+Acumulados
+Outros Resultados 
+Abrangentes
+Patrimônio Líquido
+5.01
+Saldos Iniciais
+2.256.130
+3.722
+1.764.178
+0
+16.916
+4.040.946
+5.02
+Ajustes de Exercícios Anteriores
+0
+0
+0
+0
+0
+0
+5.03
+Saldos Iniciais Ajustados
+2.256.130
+3.722
+1.764.178
+0
+16.916
+4.040.946
+5.04
+Transações de Capital com os Sócios
+0
+2.316
+-157.297
+-224.763
+0
+-379.744
+5.04.02
+Gastos com Emissão de Ações
+0
+-1.864
+1.864
+0
+0
+0
+5.04.03
+Opções Outorgadas Reconhecidas
+0
+5.335
+0
+0
+0
+5.335
+5.04.04
+Ações em Tesouraria Adquiridas
+0
+-4.836
+0
+0
+0
+-4.836
+5.04.05
+Ações em Tesouraria Vendidas
+0
+3.681
+0
+0
+0
+3.681
+5.04.06
+Dividendos
+0
+0
+-120.559
+0
+0
+-120.559
+5.04.07
+Juros sobre Capital Próprio
+0
+0
+-93.500
+0
+0
+-93.500
+5.04.08
+Dividendos intermediários
+0
+0
+3.897
+-164.763
+0
+-160.866
+5.04.09
+Dividendos prescritos
+0
+0
+1
+0
+0
+1
+5.04.10
+Juros sobre o capital próprio intermediários
+0
+0
+51.000
+-60.000
+0
+-9.000
+5.05
+Resultado Abrangente Total
+0
+0
+0
+395.424
+-5.895
+389.529
+5.05.01
+Lucro Líquido do Período
+0
+0
+0
+395.424
+0
+395.424
+5.05.02
+Outros Resultados Abrangentes
+0
+0
+0
+0
+-5.895
+-5.895
+5.05.02.04
+Ajustes de Conversão do Período
+0
+0
+0
+0
+-10.519
+-10.519
+5.05.02.06
+Realização do ajuste de reclassificação - perda na baixa do 
+investimento
+0
+0
+0
+0
+4.624
+4.624
+5.06
+Mutações Internas do Patrimônio Líquido
+0
+0
+170.661
+-170.661
+0
+0
+5.06.01
+Constituição de Reservas
+0
+0
+170.661
+-170.661
+0
+0
+5.07
+Saldos Finais
+2.256.130
+6.038
+1.777.542
+0
+11.021
+4.050.731
+PÁGINA: 10 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+DFs Individuais / Demonstração das Mutações do Patrimônio Líquido / DMPL - 
+01/01/2024
+ à 
+30/09/2024
+(Reais Mil)
+Código da 
+Conta
+Descrição da Conta
+Capital Social 
+Integralizado
+Reservas de Capital, 
+Opções Outorgadas e 
+Ações em Tesouraria
+Reservas de Lucro
+Lucros ou Prejuízos 
+Acumulados
+Outros Resultados 
+Abrangentes
+Patrimônio Líquido
+5.01
+Saldos Iniciais
+1.231.302
+2.657
+2.424.790
+0
+694
+3.659.443
+5.02
+Ajustes de Exercícios Anteriores
+0
+0
+0
+0
+0
+0
+5.03
+Saldos Iniciais Ajustados
+1.231.302
+2.657
+2.424.790
+0
+694
+3.659.443
+5.04
+Transações de Capital com os Sócios
+1.024.828
+384
+-1.021.204
+-223.589
+0
+-219.581
+5.04.01
+Aumentos de Capital
+1.024.828
+0
+-1.024.828
+0
+0
+0
+5.04.02
+Gastos com Emissão de Ações
+0
+-598
+598
+0
+0
+0
+5.04.03
+Opções Outorgadas Reconhecidas
+0
+2.041
+0
+0
+0
+2.041
+5.04.04
+Ações em Tesouraria Adquiridas
+0
+-3.036
+0
+0
+0
+-3.036
+5.04.05
+Ações em Tesouraria Vendidas
+0
+1.977
+0
+0
+0
+1.977
+5.04.06
+Dividendos
+0
+0
+-50.816
+0
+0
+-50.816
+5.04.07
+Juros sobre Capital Próprio
+0
+0
+-80.750
+0
+0
+-80.750
+5.04.08
+Dividendos Intermediários 
+0
+0
+79.591
+-168.589
+0
+-88.998
+5.04.09
+Juros sobre Capital próprio imputados aos dividendos
+0
+0
+55.000
+-55.000
+0
+0
+5.04.10
+Dividendo Prescrito
+0
+0
+1
+0
+0
+1
+5.05
+Resultado Abrangente Total
+0
+0
+0
+404.853
+9.679
+414.532
+5.05.01
+Lucro Líquido do Período
+0
+0
+0
+404.853
+0
+404.853
+5.05.02
+Outros Resultados Abrangentes
+0
+0
+0
+0
+9.679
+9.679
+5.05.02.04
+Ajustes de Conversão do Período
+0
+0
+0
+0
+9.997
+9.997
+5.05.02.06
+Realização do ajuste de reclassificação - ganho na baixa do 
+investimento
+0
+0
+0
+0
+-318
+-318
+5.06
+Mutações Internas do Patrimônio Líquido
+0
+0
+181.264
+-181.264
+0
+0
+5.06.01
+Constituição de Reservas
+0
+0
+181.264
+-181.264
+0
+0
+5.07
+Saldos Finais
+2.256.130
+3.041
+1.584.850
+0
+10.373
+3.854.394
+PÁGINA: 11 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+DFs Individuais / Demonstração de Valor Adicionado
+(Reais Mil)
+Código da 
+Conta
+Descrição da Conta
+Acumulado do Atual 
+Exercício
+01/01/2025
+ à 
+30/09/2025
+Acumulado do Exercício 
+Anterior
+01/01/2024
+ à 
+30/09/2024
+7.01
+Receitas
+2.027.718
+2.046.175
+7.01.01
+Vendas de Mercadorias, Produtos e Serviços
+2.033.719
+2.027.286
+7.01.02
+Outras Receitas
+-1.264
+2.115
+7.01.04
+Provisão/Reversão de Créds. Liquidação Duvidosa
+-4.737
+16.774
+7.02
+Insumos Adquiridos de Terceiros
+-998.988
+-1.008.983
+7.02.01
+Custos Prods., Mercs. e Servs. Vendidos
+-503.726
+-518.280
+7.02.02
+Materiais, Energia, Servs. de Terceiros e Outros
+-495.250
+-491.591
+7.02.03
+Perda/Recuperação de Valores Ativos
+-12
+888
+7.03
+Valor Adicionado Bruto
+1.028.730
+1.037.192
+7.04
+Retenções
+-53.435
+-49.432
+7.04.01
+Depreciação, Amortização e Exaustão
+-53.435
+-49.432
+7.05
+Valor Adicionado Líquido Produzido
+975.295
+987.760
+7.06
+Vlr Adicionado Recebido em Transferência
+297.879
+251.018
+7.06.01
+Resultado de Equivalência Patrimonial
+-49.071
+-47.125
+7.06.02
+Receitas Financeiras
+346.845
+298.039
+7.06.03
+Outros
+105
+104
+7.07
+Valor Adicionado Total a Distribuir
+1.273.174
+1.238.778
+7.08
+Distribuição do Valor Adicionado
+1.273.174
+1.238.778
+7.08.01
+Pessoal
+532.349
+487.307
+7.08.01.01
+Remuneração Direta
+438.204
+401.218
+7.08.01.02
+Benefícios
+53.848
+49.048
+7.08.01.03
+F.G.T.S.
+40.297
+37.041
+7.08.02
+Impostos, Taxas e Contribuições
+264.074
+255.655
+7.08.02.01
+Federais
+211.612
+220.556
+7.08.02.02
+Estaduais
+50.813
+33.433
+7.08.02.03
+Municipais
+1.649
+1.666
+7.08.03
+Remuneração de Capitais de Terceiros
+81.327
+90.963
+7.08.03.01
+Juros
+77.638
+87.748
+7.08.03.02
+Aluguéis
+3.689
+3.215
+7.08.04
+Remuneração de Capitais Próprios
+395.424
+404.853
+7.08.04.01
+Juros sobre o Capital Próprio
+60.000
+55.000
+7.08.04.02
+Dividendos
+164.763
+168.589
+7.08.04.03
+Lucros Retidos / Prejuízo do Período
+170.661
+181.264
+PÁGINA: 12 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+DFs Consolidadas / Balanço Patrimonial Ativo
+(Reais Mil)
+Código da 
+Conta
+Descrição da Conta
+Trimestre Atual
+30/09/2025
+Exercício Anterior
+31/12/2024
+1
+Ativo Total
+4.524.891
+4.500.059
+1.01
+Ativo Circulante
+2.761.241
+3.042.039
+1.01.01
+Caixa e Equivalentes de Caixa
+92.011
+76.109
+1.01.02
+Aplicações Financeiras
+1.007.966
+1.087.668
+1.01.02.01
+Aplicações Financeiras Avaliadas a Valor Justo através do 
+Resultado
+6.708
+10.089
+1.01.02.01.02
+Títulos Designados a Valor Justo
+6.708
+10.089
+1.01.02.03
+Aplicações Financeiras Avaliadas ao Custo Amortizado
+1.001.258
+1.077.579
+1.01.03
+Contas a Receber
+1.002.369
+1.216.663
+1.01.03.01
+Clientes
+997.043
+1.201.854
+1.01.03.02
+Outras Contas a Receber
+5.326
+14.809
+1.01.04
+Estoques
+540.009
+502.517
+1.01.06
+Tributos a Recuperar
+57.881
+104.306
+1.01.06.01
+Tributos Correntes a Recuperar
+57.881
+104.306
+1.01.06.01.01
+Créditos Tributários
+57.455
+93.186
+1.01.06.01.02
+Imposto de Renda e Contribuição Social a Recuperar
+426
+11.120
+1.01.07
+Despesas Antecipadas
+13.950
+14.340
+1.01.08
+Outros Ativos Circulantes
+47.055
+40.436
+1.01.08.03
+Outros
+47.055
+40.436
+1.02
+Ativo Não Circulante
+1.763.650
+1.458.020
+1.02.01
+Ativo Realizável a Longo Prazo
+470.160
+484.870
+1.02.01.01
+Aplicações Financeiras Avaliadas a Valor Justo através do 
+Resultado
+186.689
+192.124
+1.02.01.01.01
+Títulos Designados a Valor Justo
+186.689
+192.124
+1.02.01.03
+Aplicações Financeiras Avaliadas ao Custo Amortizado
+234.554
+247.296
+1.02.01.04
+Contas a Receber
+9.492
+10.384
+1.02.01.04.01
+Clientes
+9.173
+8.455
+1.02.01.04.02
+Outras Contas a Receber
+319
+1.929
+1.02.01.07
+Tributos Diferidos
+18.508
+15.711
+1.02.01.07.01
+Imposto de Renda e Contribuição Social Diferidos
+18.508
+15.711
+1.02.01.08
+Despesas Antecipadas
+2.161
+2.611
+1.02.01.10
+Outros Ativos Não Circulantes
+18.756
+16.744
+1.02.01.10.03
+Depósitos Judiciais
+561
+534
+1.02.01.10.04
+Créditos Tributários
+12.902
+16.130
+1.02.01.10.06
+Outros ativos
+5.293
+80
+1.02.02
+Investimentos
+628.314
+311.475
+1.02.02.01
+Participações Societárias
+627.902
+311.063
+1.02.02.01.01
+Participações em Coligadas
+622.250
+305.411
+1.02.02.01.05
+Outros Investimentos
+5.652
+5.652
+1.02.02.02
+Propriedades para Investimento
+412
+412
+1.02.03
+Imobilizado
+560.300
+558.895
+1.02.03.01
+Imobilizado em Operação
+498.440
+495.042
+1.02.03.02
+Direito de Uso em Arrendamento
+1.082
+17.130
+1.02.03.03
+Imobilizado em Andamento
+60.778
+46.723
+1.02.04
+Intangível
+104.876
+102.780
+1.02.04.01
+Intangíveis
+85.975
+78.163
+PÁGINA: 13 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+DFs Consolidadas / Balanço Patrimonial Ativo
+(Reais Mil)
+Código da 
+Conta
+Descrição da Conta
+Trimestre Atual
+30/09/2025
+Exercício Anterior
+31/12/2024
+1.02.04.01.02
+Intangíveis
+85.975
+78.163
+1.02.04.02
+Goodwill
+18.901
+24.617
+PÁGINA: 14 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+DFs Consolidadas / Balanço Patrimonial Passivo
+(Reais Mil)
+Código da 
+Conta
+Descrição da Conta
+Trimestre Atual
+30/09/2025
+Exercício Anterior
+31/12/2024
+2
+Passivo Total
+4.524.891
+4.500.059
+2.01
+Passivo Circulante
+455.027
+428.642
+2.01.01
+Obrigações Sociais e Trabalhistas
+131.130
+114.003
+2.01.01.01
+Obrigações Sociais
+25.028
+15.282
+2.01.01.02
+Obrigações Trabalhistas
+106.102
+98.721
+2.01.02
+Fornecedores
+74.336
+69.558
+2.01.02.01
+Fornecedores Nacionais
+57.899
+51.711
+2.01.02.02
+Fornecedores Estrangeiros
+16.437
+17.847
+2.01.03
+Obrigações Fiscais
+39.637
+40.611
+2.01.03.01
+Obrigações Fiscais Federais
+34.405
+35.959
+2.01.03.01.01
+Imposto de Renda e Contribuição Social a Pagar
+5.928
+461
+2.01.03.01.02
+Impostos, taxas e contribuições
+28.477
+35.498
+2.01.03.02
+Obrigações Fiscais Estaduais
+5.198
+4.544
+2.01.03.03
+Obrigações Fiscais Municipais
+34
+108
+2.01.04
+Empréstimos e Financiamentos
+69.667
+65.488
+2.01.04.01
+Empréstimos e Financiamentos
+68.859
+56.629
+2.01.04.01.01
+Em Moeda Nacional
+3.260
+2.118
+2.01.04.01.02
+Em Moeda Estrangeira
+65.599
+54.511
+2.01.04.03
+Financiamento por Arrendamento
+808
+8.859
+2.01.05
+Outras Obrigações
+137.789
+133.124
+2.01.05.02
+Outros
+137.789
+133.124
+2.01.05.02.04
+Obrigações Contratuais 
+9.737
+10.735
+2.01.05.02.05
+Comissões a Pagar
+55.594
+58.912
+2.01.05.02.06
+Adiantamentos de clientes
+21.455
+34.412
+2.01.05.02.07
+Outras Contas a Pagar
+51.003
+29.065
+2.01.06
+Provisões
+2.468
+5.858
+2.01.06.01
+Provisões Fiscais Previdenciárias Trabalhistas e Cíveis
+2.468
+5.858
+2.01.06.01.01
+Provisões Fiscais
+84
+5.494
+2.01.06.01.02
+Provisões Previdenciárias e Trabalhistas
+898
+325
+2.01.06.01.04
+Provisões Cíveis
+1.486
+39
+2.02
+Passivo Não Circulante
+19.133
+30.471
+2.02.01
+Empréstimos e Financiamentos
+14.036
+23.336
+2.02.01.01
+Empréstimos e Financiamentos
+13.618
+12.310
+2.02.01.01.01
+Em Moeda Nacional
+13.618
+12.310
+2.02.01.03
+Financiamento por Arrendamento
+418
+11.026
+2.02.02
+Outras Obrigações
+1.806
+2.573
+2.02.02.02
+Outros
+1.806
+2.573
+2.02.02.02.03
+Fornecedores Nacionais
+0
+143
+2.02.02.02.04
+Outros Débitos
+1.806
+2.430
+2.02.04
+Provisões
+3.291
+4.562
+2.02.04.01
+Provisões Fiscais Previdenciárias Trabalhistas e Cíveis
+3.291
+4.562
+2.02.04.01.01
+Provisões Fiscais
+1.338
+1.297
+2.02.04.01.02
+Provisões Previdenciárias e Trabalhistas
+1.947
+3.259
+2.02.04.01.04
+Provisões Cíveis
+6
+6
+2.03
+Patrimônio Líquido Consolidado
+4.050.731
+4.040.946
+PÁGINA: 15 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+DFs Consolidadas / Balanço Patrimonial Passivo
+(Reais Mil)
+Código da 
+Conta
+Descrição da Conta
+Trimestre Atual
+30/09/2025
+Exercício Anterior
+31/12/2024
+2.03.01
+Capital Social Realizado
+2.256.130
+2.256.130
+2.03.02
+Reservas de Capital
+6.038
+3.722
+2.03.02.04
+Opções Outorgadas
+6.038
+3.722
+2.03.04
+Reservas de Lucros
+1.777.542
+1.764.178
+2.03.04.01
+Reserva Legal
+281.993
+270.163
+2.03.04.02
+Reserva Estatutária
+12.547
+10.683
+2.03.04.07
+Reserva de Incentivos Fiscais
+1.428.104
+1.269.273
+2.03.04.08
+Dividendo Adicional Proposto
+0
+120.559
+2.03.04.10
+Juros Sobre o Capital Próprio
+51.000
+93.500
+2.03.04.11
+Dividendo Intermediário
+3.898
+0
+2.03.07
+Ajustes Acumulados de Conversão
+11.021
+16.916
+PÁGINA: 16 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+DFs Consolidadas / Demonstração do Resultado
+(Reais Mil)
+Código da 
+Conta
+Descrição da Conta
+Trimestre Atual
+01/07/2025
+ à 
+30/09/2025
+Acumulado do Atual 
+Exercício
+01/01/2025
+ à 
+30/09/2025
+Igual Trimestre do 
+Exercício Anterior
+01/07/2024
+ à 
+30/09/2024
+Acumulado do Exercício 
+Anterior
+01/01/2024
+ à 
+30/09/2024
+3.01
+Receita de Venda de Bens e/ou Serviços
+760.103
+1.879.203
+749.482
+1.769.150
+3.02
+Custo dos Bens e/ou Serviços Vendidos
+-406.628
+-1.029.067
+-390.747
+-965.296
+3.03
+Resultado Bruto
+353.475
+850.136
+358.735
+803.854
+3.04
+Despesas/Receitas Operacionais
+-277.775
+-681.261
+-213.391
+-544.544
+3.04.01
+Despesas com Vendas
+-231.132
+-575.147
+-171.375
+-427.681
+3.04.02
+Despesas Gerais e Administrativas
+-37.958
+-110.364
+-28.040
+-82.032
+3.04.04
+Outras Receitas Operacionais
+6.979
+10.163
+1.871
+11.018
+3.04.05
+Outras Despesas Operacionais
+-20.710
+-67.545
+-2.722
+-6.471
+3.04.06
+Resultado de Equivalência Patrimonial
+5.046
+61.632
+-13.125
+-39.378
+3.05
+Resultado Antes do Resultado Financeiro e dos Tributos
+75.700
+168.875
+145.344
+259.310
+3.06
+Resultado Financeiro
+90.409
+263.243
+108.735
+205.672
+3.06.01
+Receitas Financeiras
+111.492
+342.198
+132.856
+293.718
+3.06.02
+Despesas Financeiras
+-21.083
+-78.955
+-24.121
+-88.046
+3.07
+Resultado Antes dos Tributos sobre o Lucro
+166.109
+432.118
+254.079
+464.982
+3.08
+Imposto de Renda e Contribuição Social sobre o Lucro
+-27.624
+-36.694
+-30.564
+-60.129
+3.08.01
+Corrente
+-31.033
+-39.491
+-31.703
+-30.319
+3.08.02
+Diferido
+3.409
+2.797
+1.139
+-29.810
+3.09
+Resultado Líquido das Operações Continuadas
+138.485
+395.424
+223.515
+404.853
+3.11
+Lucro/Prejuízo Consolidado do Período
+138.485
+395.424
+223.515
+404.853
+3.11.01
+Atribuído a Sócios da Empresa Controladora
+138.485
+395.424
+223.515
+404.853
+3.99
+Lucro por Ação - (Reais / Ação)
+3.99.01
+Lucro Básico por Ação
+3.99.01.01
+ON
+0,1535
+0,4384
+0,2478
+0,4488
+3.99.02
+Lucro Diluído por Ação
+3.99.02.01
+ON
+0,1535
+0,4384
+0,2478
+0,4488
+PÁGINA: 17 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+DFs Consolidadas / Demonstração do Resultado Abrangente
+(Reais Mil)
+Código da 
+Conta
+Descrição da Conta
+Trimestre Atual
+01/07/2025
+ à 
+30/09/2025
+Acumulado do Atual 
+Exercício
+01/01/2025
+ à 
+30/09/2025
+Igual Trimestre do 
+Exercício Anterior
+01/07/2024
+ à 
+30/09/2024
+Acumulado do Exercício 
+Anterior
+01/01/2024
+ à 
+30/09/2024
+4.01
+Lucro Líquido Consolidado do Período
+138.485
+395.424
+223.515
+404.853
+4.02
+Outros Resultados Abrangentes
+3.209
+-5.895
+-983
+9.679
+4.02.01
+Diferenças cambiais sobre controladas no exterior
+-1.415
+-10.519
+-983
+9.997
+4.02.02
+Realização do ajuste de reclassificação - perda/ganho na baixa de investimento
+4.624
+4.624
+0
+-318
+4.03
+Resultado Abrangente Consolidado do Período
+141.694
+389.529
+222.532
+414.532
+4.03.01
+Atribuído a Sócios da Empresa Controladora
+141.694
+389.529
+222.532
+414.532
+PÁGINA: 18 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+DFs Consolidadas / Demonstração do Fluxo de Caixa (Método Indireto)
+(Reais Mil)
+Código da 
+Conta
+Descrição da Conta
+Acumulado do Atual 
+Exercício
+01/01/2025
+ à 
+30/09/2025
+Acumulado do Exercício 
+Anterior
+01/01/2024
+ à 
+30/09/2024
+6.01
+Caixa Líquido Atividades Operacionais
+473.748
+650.720
+6.01.01
+Caixa Gerado nas Operações
+247.995
+407.450
+6.01.01.01
+Lucro líquido do período
+395.424
+404.853
+6.01.01.02
+Resultado de equivalência patrimonial
+-61.632
+39.378
+6.01.01.03
+Depreciação e amortização
+75.933
+63.054
+6.01.01.04
+Valor residual da baixa de imobilizado e intangível
+13.566
+9.567
+6.01.01.05
+Imposto de renda e contribuição social diferidos
+-2.797
+29.810
+6.01.01.06
+Plano de opções de compra e subscrição de ações
+5.335
+2.041
+6.01.01.07
+Redutoras do contas a receber de clientes
+14.831
+-23.954
+6.01.01.08
+Perdas estimadas para estoques obsoletos
+8.078
+-693
+6.01.01.09
+Provisão para riscos trabalhistas, fiscais e cíveis
+-4.661
+-378
+6.01.01.10
+Despesas de juros de empréstimos, financiamentos e 
+arrendamentos
+1.015
+-289
+6.01.01.11
+Receita de juros de aplicações financeiras
+-180.561
+-116.635
+6.01.01.12
+Valor justo de instrumentos financeiros
+5.852
+-12.608
+6.01.01.13
+Variações cambiais, líquidas
+-24.712
+13.622
+6.01.01.14
+Realização do ajuste de reclassificação - ganho/perda na 
+baixa de investimento
+4.624
+-318
+6.01.01.15
+Valor de baixa de arrendamento
+-2.300
+0
+6.01.02
+Variações nos Ativos e Passivos
+220.286
+237.694
+6.01.02.01
+Contas a receber de clientes
+189.262
+90.221
+6.01.02.02
+Estoques
+-45.570
+-46.442
+6.01.02.03
+Créditos tributários
+38.959
+108.776
+6.01.02.04
+Outras contas a receber
+10.768
+35.978
+6.01.02.05
+Fornecedores
+4.635
+26.419
+6.01.02.06
+Salários e encargos a pagar
+17.127
+25.325
+6.01.02.07
+Impostos, taxas e contribuições
+1.059
+3.012
+6.01.02.08
+Adiantamentos de clientes
+-12.957
+-3.386
+6.01.02.09
+Outras contas a pagar
+17.003
+-2.209
+6.01.03
+Outros
+5.467
+5.576
+6.01.03.01
+Imposto de renda e contribuição social
+5.467
+5.576
+6.02
+Caixa Líquido Atividades de Investimento
+-87.635
+-399.138
+6.02.01
+Integralizações de capital
+-256.165
+-1.005
+6.02.02
+Reduções de capital
+958
+1.360
+6.02.03
+Aquisições de imobilizado e intangível
+-105.016
+-98.051
+6.02.04
+Aplicações financeiras
+-2.222.811
+-2.090.456
+6.02.05
+Resgate de aplicações financeiras
+2.282.854
+1.637.806
+6.02.06
+Juros recebidos de aplicações financeiras
+212.545
+151.208
+6.03
+Caixa Líquido Atividades de Financiamento
+-370.211
+-265.537
+6.03.01
+Captação de empréstimos e financiamentos
+338.414
+280.152
+6.03.02
+Pagamento de empréstimos, financiamentos e 
+arrendamentos
+-315.725
+-309.221
+6.03.03
+Juros pagos de empréstimos, financiamentos e 
+arrendamentos
+-316
+-584
+6.03.04
+Dividendos pagos
+-281.429
+-139.825
+6.03.05
+Juros sobre o capital próprio pagos
+-110.000
+-95.000
+PÁGINA: 19 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+DFs Consolidadas / Demonstração do Fluxo de Caixa (Método Indireto)
+(Reais Mil)
+Código da 
+Conta
+Descrição da Conta
+Acumulado do Atual 
+Exercício
+01/01/2025
+ à 
+30/09/2025
+Acumulado do Exercício 
+Anterior
+01/01/2024
+ à 
+30/09/2024
+6.03.06
+Aquisição de ações em tesouraria
+-4.836
+-3.036
+6.03.07
+Venda de ações em tesouraria pelo exercício de opção de 
+compra
+3.681
+1.977
+6.05
+Aumento (Redução) de Caixa e Equivalentes
+15.902
+-13.955
+6.05.01
+Saldo Inicial de Caixa e Equivalentes
+76.109
+73.735
+6.05.02
+Saldo Final de Caixa e Equivalentes
+92.011
+59.780
+PÁGINA: 20 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+DFs Consolidadas / Demonstração das Mutações do Patrimônio Líquido / DMPL - 
+01/01/2025
+ à 
+30/09/2025
+(Reais Mil)
+Código da 
+Conta
+Descrição da Conta
+Capital Social 
+Integralizado
+Reservas de Capital, 
+Opções Outorgadas e 
+Ações em Tesouraria
+Reservas de Lucro
+Lucros ou Prejuízos 
+Acumulados
+Outros Resultados 
+Abrangentes
+Patrimônio Líquido
+Participação dos Não 
+Controladores
+Patrimônio Líquido 
+Consolidado
+5.01
+Saldos Iniciais
+2.256.130
+3.722
+1.764.178
+0
+16.916
+4.040.946
+0
+4.040.946
+5.02
+Ajustes de Exercícios Anteriores
+0
+0
+0
+0
+0
+0
+0
+0
+5.03
+Saldos Iniciais Ajustados
+2.256.130
+3.722
+1.764.178
+0
+16.916
+4.040.946
+0
+4.040.946
+5.04
+Transações de Capital com os Sócios
+0
+2.316
+-157.297
+-224.763
+0
+-379.744
+0
+-379.744
+5.04.02
+Gastos com Emissão de Ações
+0
+-1.864
+1.864
+0
+0
+0
+0
+0
+5.04.03
+Opções Outorgadas Reconhecidas
+0
+5.335
+0
+0
+0
+5.335
+0
+5.335
+5.04.04
+Ações em Tesouraria Adquiridas
+0
+-4.836
+0
+0
+0
+-4.836
+0
+-4.836
+5.04.05
+Ações em Tesouraria Vendidas
+0
+3.681
+0
+0
+0
+3.681
+0
+3.681
+5.04.06
+Dividendos
+0
+0
+-120.559
+0
+0
+-120.559
+0
+-120.559
+5.04.07
+Juros sobre Capital Próprio
+0
+0
+-93.500
+0
+0
+-93.500
+0
+-93.500
+5.04.08
+Dividendos intermediários
+0
+0
+3.897
+-164.763
+0
+-160.866
+0
+-160.866
+5.04.09
+Dividendos prescritos
+0
+0
+1
+0
+0
+1
+0
+1
+5.04.10
+Juros sobre o capital próprio 
+intermediários
+0
+0
+51.000
+-60.000
+0
+-9.000
+0
+-9.000
+5.05
+Resultado Abrangente Total
+0
+0
+0
+395.424
+-5.895
+389.529
+0
+389.529
+5.05.01
+Lucro Líquido do Período
+0
+0
+0
+395.424
+0
+395.424
+0
+395.424
+5.05.02
+Outros Resultados Abrangentes
+0
+0
+0
+0
+-5.895
+-5.895
+0
+-5.895
+5.05.02.04
+Ajustes de Conversão do Período
+0
+0
+0
+0
+-10.519
+-10.519
+0
+-10.519
+5.05.02.06
+Realização do ajuste de reclassificação - 
+perda na baxa do investimento
+0
+0
+0
+0
+4.624
+4.624
+0
+4.624
+5.06
+Mutações Internas do Patrimônio Líquido
+0
+0
+170.661
+-170.661
+0
+0
+0
+0
+5.06.01
+Constituição de Reservas
+0
+0
+170.661
+-170.661
+0
+0
+0
+0
+5.07
+Saldos Finais
+2.256.130
+6.038
+1.777.542
+0
+11.021
+4.050.731
+0
+4.050.731
+PÁGINA: 21 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+DFs Consolidadas / Demonstração das Mutações do Patrimônio Líquido / DMPL - 
+01/01/2024
+ à 
+30/09/2024
+(Reais Mil)
+Código da 
+Conta
+Descrição da Conta
+Capital Social 
+Integralizado
+Reservas de Capital, 
+Opções Outorgadas e 
+Ações em Tesouraria
+Reservas de Lucro
+Lucros ou Prejuízos 
+Acumulados
+Outros Resultados 
+Abrangentes
+Patrimônio Líquido
+Participação dos Não 
+Controladores
+Patrimônio Líquido 
+Consolidado
+5.01
+Saldos Iniciais
+1.231.302
+2.657
+2.424.790
+0
+694
+3.659.443
+0
+3.659.443
+5.02
+Ajustes de Exercícios Anteriores
+0
+0
+0
+0
+0
+0
+0
+0
+5.03
+Saldos Iniciais Ajustados
+1.231.302
+2.657
+2.424.790
+0
+694
+3.659.443
+0
+3.659.443
+5.04
+Transações de Capital com os Sócios
+1.024.828
+384
+-1.021.204
+-223.589
+0
+-219.581
+0
+-219.581
+5.04.01
+Aumentos de Capital
+1.024.828
+0
+-1.024.828
+0
+0
+0
+0
+0
+5.04.02
+Gastos com Emissão de Ações
+0
+-598
+598
+0
+0
+0
+0
+0
+5.04.03
+Opções Outorgadas Reconhecidas
+0
+2.041
+0
+0
+0
+2.041
+0
+2.041
+5.04.04
+Ações em Tesouraria Adquiridas
+0
+-3.036
+0
+0
+0
+-3.036
+0
+-3.036
+5.04.05
+Ações em Tesouraria Vendidas
+0
+1.977
+0
+0
+0
+1.977
+0
+1.977
+5.04.06
+Dividendos
+0
+0
+-50.816
+0
+0
+-50.816
+0
+-50.816
+5.04.07
+Juros sobre Capital Próprio
+0
+0
+-80.750
+0
+0
+-80.750
+0
+-80.750
+5.04.08
+Dividendos Intermediários
+0
+0
+79.591
+-168.589
+0
+-88.998
+0
+-88.998
+5.04.09
+Juros sobre o Capital Próprio Imputados 
+aos dividendos
+0
+0
+55.000
+-55.000
+0
+0
+0
+0
+5.04.10
+Dividendos Prescritos
+0
+0
+1
+0
+0
+1
+0
+1
+5.05
+Resultado Abrangente Total
+0
+0
+0
+404.853
+9.679
+414.532
+0
+414.532
+5.05.01
+Lucro Líquido do Período
+0
+0
+0
+404.853
+0
+404.853
+0
+404.853
+5.05.02
+Outros Resultados Abrangentes
+0
+0
+0
+0
+9.679
+9.679
+0
+9.679
+5.05.02.04
+Ajustes de Conversão do Período
+0
+0
+0
+0
+9.997
+9.997
+0
+9.997
+5.05.02.06
+Realização do ajuste de reclassificação - 
+ganho na baixa do investimento
+0
+0
+0
+0
+-318
+-318
+0
+-318
+5.06
+Mutações Internas do Patrimônio Líquido
+0
+0
+181.264
+-181.264
+0
+0
+0
+0
+5.06.01
+Constituição de Reservas
+0
+0
+181.264
+-181.264
+0
+0
+0
+0
+5.07
+Saldos Finais
+2.256.130
+3.041
+1.584.850
+0
+10.373
+3.854.394
+0
+3.854.394
+PÁGINA: 22 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+DFs Consolidadas / Demonstração de Valor Adicionado
+(Reais Mil)
+Código da 
+Conta
+Descrição da Conta
+Acumulado do Atual 
+Exercício
+01/01/2025
+ à 
+30/09/2025
+Acumulado do Exercício 
+Anterior
+01/01/2024
+ à 
+30/09/2024
+7.01
+Receitas
+2.112.952
+2.047.390
+7.01.01
+Vendas de Mercadorias, Produtos e Serviços
+2.134.579
+2.028.533
+7.01.02
+Outras Receitas
+-16.394
+2.011
+7.01.04
+Provisão/Reversão de Créds. Liquidação Duvidosa
+-5.233
+16.846
+7.02
+Insumos Adquiridos de Terceiros
+-1.158.487
+-1.016.023
+7.02.01
+Custos Prods., Mercs. e Servs. Vendidos
+-529.204
+-518.386
+7.02.02
+Materiais, Energia, Servs. de Terceiros e Outros
+-620.686
+-498.363
+7.02.03
+Perda/Recuperação de Valores Ativos
+-8.597
+726
+7.03
+Valor Adicionado Bruto
+954.465
+1.031.367
+7.04
+Retenções
+-62.773
+-50.446
+7.04.01
+Depreciação, Amortização e Exaustão
+-62.773
+-50.446
+7.05
+Valor Adicionado Líquido Produzido
+891.692
+980.921
+7.06
+Vlr Adicionado Recebido em Transferência
+411.523
+259.927
+7.06.01
+Resultado de Equivalência Patrimonial
+61.632
+-39.378
+7.06.02
+Receitas Financeiras
+349.786
+299.201
+7.06.03
+Outros
+105
+104
+7.07
+Valor Adicionado Total a Distribuir
+1.303.215
+1.240.848
+7.08
+Distribuição do Valor Adicionado
+1.303.215
+1.240.848
+7.08.01
+Pessoal
+559.667
+488.516
+7.08.01.01
+Remuneração Direta
+462.300
+402.427
+7.08.01.02
+Benefícios
+56.712
+49.048
+7.08.01.03
+F.G.T.S.
+40.655
+37.041
+7.08.02
+Impostos, Taxas e Contribuições
+265.479
+256.218
+7.08.02.01
+Federais
+212.886
+221.031
+7.08.02.02
+Estaduais
+50.813
+33.468
+7.08.02.03
+Municipais
+1.780
+1.719
+7.08.03
+Remuneração de Capitais de Terceiros
+82.645
+91.261
+7.08.03.01
+Juros
+78.955
+88.046
+7.08.03.02
+Aluguéis
+3.690
+3.215
+7.08.04
+Remuneração de Capitais Próprios
+395.424
+404.853
+7.08.04.01
+Juros sobre o Capital Próprio
+60.000
+55.000
+7.08.04.02
+Dividendos
+164.763
+168.589
+7.08.04.03
+Lucros Retidos / Prejuízo do Período
+170.661
+181.264
+PÁGINA: 23 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+ 
+Notas explicativas às informações trimestrais 
+30 de setembro de 2025  
+(Em milhares de reais) 
+ 
+ 
+1.   Informações Gerais 
+ 
+1.1. A Companhia 
+ 
+A Grendene S.A. (“Companhia”) é uma sociedade anônima de capital aberto, localizada na Av. 
+Pimentel Gomes n° 214, em Sobral – CE, e foi estabelecida em 1971. Atualmente, é controlada 
+pelo acionista Alexandre Grendene Bartelle, e têm suas ações listadas no segmento do Novo 
+Mercado, na B3 S.A. – Brasil, Bolsa, Balcão, sob o código GRND3.  
+ 
+As principais atividades da Companhia e suas controladas (“o Grupo”) são o desenvolvimento, 
+produção, distribuição e comercialização de calçados plásticos, atendendo a todos os públicos.  
+ 
+O Grupo conta com quatro unidades industriais localizadas em dois estados brasileiros: Ceará e 
+Rio Grande do Sul. Sua atuação comercial se dá por meio de: (i) lojas próprias; (ii) franquias — 
+sendo que as marcas Melissa e Mini Melissa são administradas diretamente  pela Companhia; e 
+(iii) canais de e-commerce — que abrangem as marcas Melissa, Grendha, Zaxy, Rider, Cartago, 
+Ipanema e Grendene Kids, ampliando a presença digital e o alcance junto ao consumidor final. 
+Além disso, a Grendene S.A. é detentora da marca Pega Forte. 
+ 
+1.2. Reforma Tributária 
+ 
+A Lei Complementar 214/25, aprovada em 16 de janeiro de 2025, que estabelece a Reforma 
+Tributária sobre o consumo, substitui de forma gradual os tributos atuais (PIS, COFINS, ICMS, 
+ISS e IPI) e institui novos tributos: a  CBS (Contribuição sobre Bens e Serv iços), o IBS (Imposto 
+sobre Bens e Serviços) e o IS (Imposto Seletivo), este último não aplicável à Companhia. Haverá 
+um período de transição de 2026 até 2032, em que os dois sistemas tributários – antigo e novo – 
+coexistirão. 
+ 
+A Companhia tem acompanhado de forma contínua os desdobramentos da regulamentação 
+infraconstitucional e os atos normativos em tramitação no Congresso Nacional, notadamente os 
+projetos de lei complementar apresentados em 2025, que tratam da operacionalização do IBS, 
+da CBS, dos regimes específicos e das regras de transição. 
+ 
+Até a presente data, os efeitos da Reforma Tributária não impactaram diretamente as informações 
+trimestrais de 30 de setembro de 2025, considerando que os novos tributos ainda não estão em 
+vigor. Entretanto, a Administração deu início a estudos técnicos e medidas preparatórias com 
+foco nos seguintes aspectos:  
+• Avaliação dos impactos fiscais e operacionais da transição do regime cumulativo para o 
+regime não cumulativo; 
+• Reestruturação dos sistemas e apuração tributária para adequação às novas exigências;  
+• Análise de impactos nos preços, margens , contratos vigentes  e laudos de incentivos 
+fiscais; e 
+• Revisão do planejamento tributário sob a ótica do novo modelo federativo . 
+ 
+A Companhia foi selecionada para participar do Projeto Piloto da Reforma Tributária junto à 
+Receita Federal do Brasil (RFB), posicionando a empresa entre os principais agentes do setor 
+privado envolvidos na transição para o novo regime de tributação do consumo no Brasil. A iniciativa 
+visa testar e aprimorar soluções tecnológicas, antecipar os impactos da nova legislação fiscal, 
+contribuir com sugestões técnicas para o modelo definitivo, e propiciará a capacitação das nossas 
+equipes visando uma transição eficiente. 
+ 
+Notas Explicativas                                
+PÁGINA: 24 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+ 
+Notas explicativas às informações trimestrais--continuação 
+30 de setembro de 2025  
+(Em milhares de reais) 
+ 
+ 
+1.   Informações Gerais--Continuação 
+ 
+1.2. Reforma Tributária--Continuação 
+ 
+Dada a complexidade da reforma tributária e sua fase ainda preliminar de regulamentação, a 
+Administração avalia que, neste momento, não é possível estimar com razoável segurança os 
+efeitos quantitativos que a mudança poderá ter sobre as operações da Companhia e segue 
+monitorando a evolução do tema e manterá seus acionistas e o mercado informados  sobre 
+quaisquer impactos relevantes, em conformidade com seu compromisso com a transparência, a 
+governança corporativa e a conformidade regulatória. 
+ 
+1.3. Troca do escriturador da Companhia 
+ 
+A Companhia comunica que, desde 1º de julho de 2025, substituiu seu escriturador responsável 
+pela custódia e administração das ações em circulação, realizando a troca do Banco Bradesco 
+S.A. pelo BTG Pactual Serviços Financeiros S.A. DTVM, conforme divulgad o no fato relevante 
+publicado em 23 de junho de 2025. 
+ 
+Ressaltamos que essa mudança não implicará qualquer alteração nos direitos dos acionistas, 
+incluindo o pagamento de dividendos e demais remunerações, que continuarão a ser creditados 
+nas contas previamente informadas pelo Acionista Escritural. 
+ 
+ 
+2.   Base de preparação e apresentação das informações trimestrais 
+ 
+As informações trimestrais individuais e consolidadas, referente ao período findo em 30 de setembro 
+de 2025, foram elaboradas em conformidade  com o CPC 21 (R1) – Demonstração Intermediária, 
+emitido pelo Comitê de Pronunciamentos Contábeis (CPC) , e o IAS 34 – Interim Financial Reporting 
+emitido pelo International Accounting Standards Board (IASB) , de forma condizente com as normas 
+expedidas pela Comissão de Valores Mobiliários (CVM), para apresentação das Informações 
+Trimestrais (ITR). A emissão foi aprovada pelo Conselho de Administração em 6 de novembro de 
+2025. 
+ 
+Essas informações trimestrais individuais e consolidadas foram elaboradas para atualizar os usuários 
+sobre as informações relevantes do período e devem  ser analisadas em conjunto com as 
+demonstrações financeiras completas do exercício findo em 31 de dezembro de 2024.  
+ 
+Em razão da ausência de alterações significativas neste trimestre, as notas explicativas listadas no 
+quadro abaixo, presentes nas demonstrações financeiras anuais de 2024, não estão sendo incluídas 
+ou apresentadas no mesmo grau de detalhamento nestas informações trimestrais individuais e 
+consolidadas. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Notas Explicativas                                
+PÁGINA: 25 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+ 
+Notas explicativas às informações trimestrais--continuação 
+30 de setembro de 2025  
+(Em milhares de reais) 
+ 
+ 
+2.   Base de preparação e apresentação das informações trimestrais--Continuação 
+ 
+Número e título das notas explicativas 
+  
+2 Base de preparação e apresentação das demonstrações financeiras 
+4 Julgamentos, estimativas e premissas contábeis 
+5 Caixa e equivalentes 
+7 Contas a receber de clientes 
+8 Estoques 
+9 Créditos tributários 
+11 Investimentos 
+12 Imobilizado 
+13 Intangível 
+14 Empréstimos e financiamentos 
+19 Subvenções governamentais para investimentos 
+20 Imposto de renda e contribuição social  
+21 Instrumentos financeiros 
+23 Partes relacionadas 
+25 Receita líquida de vendas e serviços 
+26 Informações por segmento 
+31 Seguros 
+ 
+Os valores são apresentados em Reais (“R$”), moeda funcional da Companhia, considerando o custo 
+histórico, com exceção de determinados instrumentos financeiros e o plano de opções de compra e 
+subscrição de ações, que são mensurados pelo seu valor justo. 
+ 
+As principais taxas de câmbio utilizadas pela Companhia para conversão das informações trimestrais 
+das controladas à moeda funcional foram baseadas na taxa de câmbio de fechamento da data de 
+referência. Já a taxa média, corresponde à média ponderada das taxas aplicadas ao longo do período, 
+conforme apresentado a seguir: 
+ 
+  Taxa Final  Taxa Média 
+         
+  30/09/2025  31/12/2024  30/09/2025  30/09/2024 
+         
+Dólar Americano (“USD”)  5,3186  6,1923  5,3674  5,5416 
+Euro (“EUR”)  6,2414  6,4363  6,2998  6,1523 
+ 
+As principais políticas contábeis aplicadas  estão detalhadas nas notas explicativas, onde são 
+descritos os critérios aplicados para a mensuração dos ativos, passivos e demais elementos, 
+assegurando a consistência e comparabilidade entre os períodos. 
+ 
+Adicionalmente, a Demonstração do Valor Adicionado (DVA) individual e consolidada, requerida pela 
+legislação societária brasileira, foi apresentada de acordo como o Pronunciamento Técnico CPC 09, 
+como parte integrante das informações trimestrais , enquanto para IFRS representa informação 
+suplementar. 
+ 
+Todas as informações relevantes próprias das informações trimestrais , e somente elas, estão 
+evidenciadas e refletem as práticas de gestão da Companhia.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Notas Explicativas                                
+PÁGINA: 26 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+ 
+Notas explicativas às informações trimestrais--continuação 
+30 de setembro de 2025  
+(Em milhares de reais) 
+ 
+ 
+3.   Informações trimestrais consolidadas 
+ 
+As informações trimestrais  consolidadas abrangem informações da Grendene S.A. e das suas 
+controladas, conforme demonstrado na Nota 10 - Investimentos. 
+ 
+As controladas são incorporadas à consolidação a partir da data em que Companhia obtém o controle 
+e permanece consolidada até a data em que esse controle deixa de existir.  
+ 
+Os períodos sociais das controladas coincidem com o da controladora , e as políticas contábeis da 
+Companhia estão em conformidade com as normas internacionais de contabilidade e com as práticas 
+contábeis adotadas no Brasil, sendo aplicadas para a controladora e suas controladas, considerando 
+as particularidades operacionais de cada unidade. 
+ 
+ 
+4.   Caixa e equivalentes  
+ 
+Apresentamos a composição do caixa e equivalentes: 
+ 
+      Controladora  Consolidado 
+             
+Modalidade  Indexadores 
+ Taxa média de 
+rendimento (a.a.) 
+ 
+30/09/2025  31/12/2024 
+ 
+30/09/2025  31/12/2024 
+             
+ Disponibilidade      1.451  8.235  13.092  10.385 
+Caixa e bancos  –  –  1.451  8.235  13.092  10.385 
+             
+ Equivalentes de caixa      59.305  39.781  78.919  65.724 
+Debêntures compromissadas  CDI  14,45% e 11,16%  59.305  39.781  59.305  39.781 
+Fundo de investimento  –  13,43% e 11,53%  -  -  16.514  15.000 
+Conta movimento  Pré-fixada  3,45%  -  -  43  1.264 
+Conta movimento  –  3,84%  -  -  3.057  9.679 
+      60.756   48.016   92.011  76.109 
+ 
+ 
+5.   Aplicações financeiras e outros ativos financeiros 
+ 
+As aplicações financeiras são registradas pelo valor de aquisição, atualizadas até as datas 
+dos balanços, aproximando-se de seu valor justo, não excedendo ao seu valor de mercado 
+ou de realização. A classificação destes títulos e valores mobiliários são ap resentados na 
+Nota 20 – Instrumentos financeiros.  
+ 
+A exposição da Companhia e suas controladas a riscos de taxas de juros e análise de sensibilidade 
+para ativos e passivos financeiros estão divulgados na Nota 21 – Gestão de riscos. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Notas Explicativas                                
+PÁGINA: 27 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+ 
+Notas explicativas às informações trimestrais--continuação 
+30 de setembro de 2025  
+(Em milhares de reais) 
+ 
+ 
+5.   Aplicações financeiras e outros ativos financeiros--Continuação 
+ 
+As aplicações financeiras  e outros ativos financeiros  da Companhia apresentam a seguinte 
+composição: 
+ 
+Controladora / Consolidado 
+         
+Modalidade  Indexadores 
+ Taxa média de 
+rendimento (a.a.) 
+ 
+30/09/2025  31/12/2024 
+         
+Circulante      1.007.966  1.087.668 
+  Aplicações financeiras      1.001.258  1.077.579 
+Certificados depósitos bancários  CDI  15,30% e 12,70%   973.590  1.062.167 
+Notas do tesouro nacional  IPCA   8,64% e 11,23%  27.668  15.412 
+         
+  Outros ativos financeiros      6.708  10.089 
+Sociedades em Conta de Participação – SCPs (i)   –  –  6.708  10.089 
+         
+Não circulante      421.243  439.420 
+  Aplicações financeiras        110.422  137.235 
+Notas do tesouro nacional  IPCA   11,11% e 9,04%  10.251  37.065 
+Certificado de operações estruturada – COE  Pré-fixado  15,00%  100.171  100.170 
+         
+ Outros ativos financeiros       310.821  302.185 
+   SCP Baronesa de Itu (ii)  INCC   16,23% e 15,55%   47.769  43.909 
+   SCP São Sebastião (ii)  INCC   14,55%    -  33.676 
+   SCP Mangabeira (ii)  INCC   15,23%  76.363  - 
+   SCP CFL Inc Par S.A. – SCP CFL & GDN (ii)  INCC  17,55%  -  32.476 
+   Sociedades em Conta de Participação – SCPs (i)   –  –  144.995  147.474 
+   SPE Geradora Várzea Solar II S.A.(iii)  –  –  41.694  44.650 
+ 
+(i) Corresponde a participação em Sociedades em Conta de Participação – SCPs, que têm como objetivo a aquisição de 
+imóveis, estruturação, desenvolvimento, incorporação, exploração e comercialização dos empreendimentos 
+imobiliários, através de recursos e esforç os para conclusão das obras. Este instrumento financeiro está registrado a 
+valor justo por meio do resultado, determinado a partir do fluxo de caixa descontado, de acordo com a curva esperada 
+de vendas, utilizando como premissa o valor médio das últimas un idades vendidas, trazido a valor presente por uma 
+taxa de desconto de INCC + 8% à 12,68% a.a., em termos reais, que refletem o risco do retorno e TIR esperados. 
+(ii) Representa os instrumentos financeiros registrados pelo  custo de aquisição e atualizados até a data do balanço, de 
+acordo com as cláusulas contratuais, referentes a: Seleto (59,81%), SCP Baronesa de Itu (100%); SCP São Sebastião 
+(48%, encerrada em mar/25); SCP Mangabeira (99%) e SCP CFL Inc Par S.A. – CFL & GDN (100%, encerrada em 
+abr/25), os quais têm como objetivo a aquisição de imóveis, construção, estruturação, desenvolvimento, incorporação, 
+exploração, comercialização das unidades autônomas, execução, conclusão e entrega das obras do Empreendimento 
+Imobiliário. 
+(iii) Corresponde à participação em Sociedade de Propósito Específico (SPE) – Geradora Várzea Solar II S.A., que têm 
+por objetivo a implantação e exploração da Geradora Fotovoltaica Solar Várzea; a qual entregará 10 MW/médios de 
+energia elétrica incentivada à Co mpanhia, com vigência até 31 de dezembro de 2043. O preço da energia é fixado 
+conforme contrato e possui  o aproveitamento dos benefícios da autoprodução. Este instrumento financeiro está 
+registrado a valor justo por meio do resultado e  atualizados até  a da ta do balanço, de acordo com as cláusulas 
+contratuais. 
+ 
+As movimentações das aplicações financeiras estão demonstradas a seguir:  
+ 
+  Controladora / Consolidado 
+                 
+  Saldo em 
+31/12/2024  Aplicações 
+ 
+Resgate   Valor Justo 
+ Receita de 
+juros 
+ Juros 
+recebidos 
+ Saldo em 
+ 30/09/2025 
+               
+Aplicações financeiras  1.114.644  2.180.011  (2.217.387)  -  136.136  (201.895)  1.011.509 
+Aplicação financeira – COE   100.170  -  -  -  10.651  (10.650)  100.171 
+Aplicações financeiras – SCPs  110.061  36.000  (35.018)  -  13.089  -  124.132 
+Sociedades em conta de 
+participação – SCPs 
+ 157.563  6.800  (30.449) (i)  (2.896)  20.685 (ii)  -  151.703 
+Sociedades de propósito 
+específico – SPE 
+ 44.650 
+ 
+-  -  (2.956)  -  -  41.694 
+  1.527.088  2.222.811  (2.282.854)  (5.852)  180.561  (212.545)  1.429.209 
+ 
+(i) Refere-se ao resgate do valor principal do capital inicial investido em SCPs; 
+(ii) Refere-se ao valor dos dividendos recebidos, decorrente da distribuição de resultados das SCPs. 
+ 
+ 
+ 
+ 
+Notas Explicativas                                
+PÁGINA: 28 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+ 
+Notas explicativas às informações trimestrais--continuação 
+30 de setembro de 2025  
+(Em milhares de reais) 
+ 
+ 
+6.   Contas a receber de clientes 
+ 
+Na tabela a seguir, apresentamos o detalhamento do contas a receber de clientes: 
+ 
+  Controladora  Consolidado 
+         
+  30/09/2025  31/12/2024  30/09/2025  31/12/2024 
+         
+Mercado interno   951.672  1.086.893  951.672  1.086.893 
+Mercado externo  135.060  194.512  143.199  198.540 
+Mercado externo - Partes relacionadas   41.119  69.027  2.359  1.059 
+  1.127.851  1.350.432  1.097.230  1.286.492 
+Perdas estimadas para créditos de liquidação duvidosa  (7.082)  (2.345)  (7.539)  (2.378) 
+Descontos por pontualidade estimados  (56.462)  (47.380)  (56.462)  (47.380) 
+Ajustes a valor presente   (27.013)  (26.425)  (27.013)  (26.425) 
+  1.037.294  1.274.282  1.006.216  1.210.309 
+Circulante  1.028.121  1.265.827  997.043  1.201.854 
+Não circulante  9.173  8.455  9.173  8.455 
+ 
+Em 30 de setembro de 2025, o prazo médio de recebimento praticado para as vendas realizadas no 
+mercado interno é de 116 dias (mesmo prazo em 2024) e no mercado externo é de 108 dias (82 dias 
+em 31 de dezembro de 2024). 
+ 
+Não há quaisquer ônus reais, garantias prestadas e/ou restrições aos valores de contas a receber de 
+clientes. 
+ 
+A classificação por prazo de vencimento dos títulos do contas a receber de clientes, analisada em 
+conjunto com as perdas estimadas para crédito de liquidação duvidosa (PECLD), estão demonstrados 
+a seguir: 
+ 
+  Controladora 
+         
+  30/09/2025  31/12/2024 
+  Saldos  PECLD  Saldos  PECLD 
+         
+Títulos a vencer  1.091.381  -  1.305.390  - 
+Títulos vencidos até 30 dias  10.776  (6)  18.702  - 
+Títulos vencidos de 31 até 60 dias  2.282  (6)  8.506  - 
+Títulos vencidos de 61 até 90 dias  983  (2)  421  (2) 
+Títulos vencidos há mais de 91 dias  22.429  (7.068)  17.413  (2.343) 
+  1.127.851  (7.082)  1.350.432  (2.345) 
+ 
+    Consolidado 
+         
+  30/09/2025  31/12/2024 
+  Saldos  PECLD  Saldos  PECLD 
+         
+Títulos a vencer  1.057.366  -  1.240.545  - 
+Títulos vencidos até 30 dias  11.004  (6)  18.975  - 
+Títulos vencidos de 31 até 60 dias  2.958  (6)  8.514  - 
+Títulos vencidos de 61 até 90 dias  1.364  (2)  421  (2) 
+Títulos vencidos há mais de 91 dias  24.538  (7.525)  18.037  (2.376) 
+  1.097.230  (7.539)  1.286.492  (2.378) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Notas Explicativas                                
+PÁGINA: 29 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+ 
+Notas explicativas às informações trimestrais--continuação 
+30 de setembro de 2025  
+(Em milhares de reais) 
+ 
+ 
+6.   Contas a receber de clientes--Continuação 
+ 
+As movimentações das perdas estimadas para créditos de liquidação duvidosa e descontos por 
+pontualidade estimados, estão demonstradas a seguir: 
+ 
+  Perdas estimadas para créditos 
+de liquidação duvidosa 
+ Descontos por pontualidade 
+estimados 
+         
+  Controladora  Consolidado  Controladora  Consolidado 
+         
+Saldos em 31/12/2023  (21.541)  (21.740)  (44.088)  (44.088) 
+Adições  (3.232)  (3.357)  (120.305)  (120.305) 
+Realizações  7.546  7.700  93.026  93.026 
+Reversões  14.882  15.046  23.987  23.987 
+Variação cambial  -  (27)  -  - 
+Saldos em 31/12/2024  (2.345)  (2.378)  (47.380)  (47.380) 
+         
+Adições  (7.221)  (7.841)  (108.883)  (108.883) 
+Realizações  2.268  2.268  73.234  73.234 
+Reversões  216  340  26.567  26.567 
+Variação cambial  -  72  -  - 
+Saldos em 30/09/2025  (7.082)  (7.539)  (56.462)  (56.462) 
+ 
+ 
+7.   Estoques 
+ 
+Os estoques apresentam a seguinte composição: 
+ 
+  Controladora  Consolidado 
+         
+  30/09/2025  31/12/2024  30/09/2025  31/12/2024 
+         
+Calçados   127.205  75.302  196.963  156.290 
+Acessórios  1.450  962  2.218  1.992 
+Mercadoria para revenda  466  745  466  745 
+Insumos e componentes fabricados  45.200  46.181  45.200  46.181 
+Matérias-primas  125.551  109.861  125.551  109.861 
+Materiais de embalagem  26.444  20.837  26.444  20.837 
+Materiais intermediários e diversos  57.075  51.767  57.075  51.767 
+Matrizes e ferramentais   32.215  28.705  32.215  28.705 
+Adiantamentos a fornecedores  15.613  12.351  15.613  12.351 
+Importações em andamento  17.431  14.166  27.845  60.480 
+Estoques em poder de terceiros   22.498  16.776  27.281  22.092 
+Perdas estimadas para ajuste dos estoques obsoletos  (8.498)  (8.486)  (16.862)  (8.784) 
+  462.650  369.167  540.009              502.517             
+ 
+As movimentações das perdas estimadas para ajuste dos estoques obsoletos estão demonstradas a 
+seguir: 
+ 
+  Controladora  Consolidado 
+     
+Saldos em 31/12/2023  (10.200)  (10.360) 
+Adições  (13.609)  (13.825) 
+Realizações  4.061  4.061 
+Reversões  11.262  11.394 
+Variação cambial  -  (54) 
+Saldos em 31/12/2024  (8.486)  (8.784) 
+     
+Adições  (23.253)  (31.927) 
+Realizações  1.537  1.537 
+Reversões  21.704  21.793 
+Variação cambial  -  519 
+Saldos em 30/09/2025  (8.498)  (16.862) 
+ 
+Não há quaisquer ônus reais, garantias prestadas e/ou restrições à plena utilização dos estoques.  
+Notas Explicativas                                
+PÁGINA: 30 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+ 
+Notas explicativas às informações trimestrais--continuação 
+30 de setembro de 2025  
+(Em milhares de reais) 
+ 
+ 
+8.   Créditos tributários 
+ 
+  Controladora  Consolidado 
+         
+  30/09/2025  31/12/2024  30/09/2025  31/12/2024 
+         
+Imposto de renda retido na fonte  29.300  17.171  31.340  19.259 
+ICMS   3.110  3.160  3.110  4.110 
+IRPJ – Crédito sobre juros Selic (i)  -  22.629  -  22.629 
+IRPJ – Programa de alimentação do trabalhador (PAT)  -  2.549  -  2.549 
+PIS e COFINS a recuperar (ii)  5.356  40.722  5.356  40.722 
+Créditos fiscais (iii)  25.685  14.474  25.685  14.474 
+Outros  154  167  4.866  5.573 
+  63.605  100.872  70.357  109.316 
+Circulante  50.822  84.856  57.455  93.186 
+Não circulante  12.783  16.016  12.902  16.130 
+ 
+(i) Refere-se aos créditos de IRPJ sobre juros Selic, nas repetições de indébito tributário de ações judiciais tributárias, 
+reconhecidos através da IFRIC 23/  ICPC 22, suportados pela decisão do STF através no Recurso Extraordinário (RE) 
+1.063.187. O processo ajuizado pela Companhia transitou em julgado em 25 de julho de 2023, com pedido de habilitação 
+deferido em 11 de outubro de 2023. 
+(ii) Refere-se principalmente a: (a) o valor de R$27.442 em 31 de dezembro de 2024 corresponde ao crédito decorrente de 
+decisão judicial transitada em julgado em 13 de fevereiro de 2019, que reconheceu o direito da Companhia à exclusão do 
+ICMS da base de cálculo do PIS e da COFINS. O pedido de habilitação foi deferido em 19 de setembro de 2019, e, desde 
+o exercício de 2020, a Companhia vem utilizando o crédito por meio de  declarações de compensação; (b) o valor 
+de R$4.036 (R$12.781 em 31 de dezembro de 2024 ) refere-se ao crédito tributário reconhecido judicialmente em  09 de 
+outubro de 2023, relativo à aquisição de insumos utilizados pela Grendene S.A. em suas atividades operacionais. O pedido 
+de habilitação foi deferido em 7 de novembro de 2024, e o crédito está sendo utilizado conforme a legislação vigente. 
+(iii) Refere-se aos créditos fiscais à alíquota de 25% de IRPJ, apurados sobre os custos de depreciação e amortização dos 
+estabelecimentos incentivados de ICMS (Nota 1 8.a) relativos à implantação ou à expansão do empreendimento 
+econômico, conforme Lei 14.789/23 . O pedido de ressarcimento , do período de 2024 (R$14.474) foi solicitado pela 
+Companhia, encontrando-se em análise pela RFB e após deferimento, a compensação será realizada. 
+ 
+ 
+9.   Outros créditos (Ativo) 
+ 
+A composição de outros créditos, classificados no ativo circulante e não circulante, está demonstrada 
+a seguir: 
+ 
+  Controladora  Consolidado 
+         
+  30/09/2025  31/12/2024  30/09/2025  31/12/2024 
+         
+Antecipações diversas  28.676  13.844  29.989  16.181 
+Antecipações salariais  9.779  8.594  9.782  8.597 
+Créditos com coligadas  3.659  14.878  3.659  14.878 
+Créditos com controladas  2.058  75  -  - 
+Custos e despesas antecipadas  2.102  2.550  2.161  2.611 
+Fundo de marketing  2.663  83  2.663  83 
+Outros créditos  5.293  80  6.499  2.658 
+  54.230  40.104  54.753  45.008 
+Circulante  44.777  37.399  47.055  40.436 
+Não circulante  9.453  2.705  7.698  4.572 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Notas Explicativas                                
+PÁGINA: 31 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+ 
+Notas explicativas às informações trimestrais--continuação 
+30 de setembro de 2025  
+(Em milhares de reais) 
+ 
+ 
+10.  Investimentos 
+ 
+Os investimentos da Companhia apresentam a seguinte composição: 
+ 
+  Controladora  Consolidado 
+         
+  30/09/2025  31/12/2024  30/09/2025  31/12/2024 
+         
+Participações em controladas  69.035  108.681  -  - 
+Mais valia  9.384  -  -  - 
+Ágio  18.901  24.617  -  - 
+Lucros não realizados em controladas  (1.288)  (477)  -  - 
+Participações em coligadas  622.250  305.411  622.250  305.411 
+Participação em outras sociedades  5.652  5.652  5.652  5.652 
+Outros investimentos  412  412  412  412 
+  724.346  444.296  628.314  311.475 
+ 
+a) Participações societárias nos investimentos 
+ 
+Nomes 
+ 
+Características principais 
+ País-
+sede 
+ 
+Relacionamento 
+ Percentual de 
+participação 
+     31/03/     
+       30/09/2025  31/12/2024 
+           
+Consolidadas           
+MHL Calçados Ltda.   Industrialização e comercialização de calçados. 
+Atualmente, encontra-se sem atividade operacional. 
+ Brasil  Controlada Direta  99,998%  99,998% 
+Grendene USA, Inc.   Representante comercial através da comercialização e 
+distribuição de nossos produtos no mercado norte -
+americano. Atualmente, encontra -se sem atividade 
+operacional. 
+ USA  Controlada Direta  100,00% 
+ 
+100,00% 
+Grendene Italy, S.R.L.  Representante comercial através da comercialização e 
+distribuição de nossos produtos. 
+ Itália  Controlada Direta  100,00%  100,00% 
+Grendene Global Brands Limited   Distribuição e comercialização dos produtos da Grendene 
+no mercado internacional. 
+ Reino 
+Unido 
+ Controlada Direta  100,00%  100,00% 
+Não consolidadas           
+YOUPE Participações S.A.  Administração de bens próprios e a participação, 
+diretamente ou através de subsidiárias, no capital social de 
+outras sociedades, no país ou no exterior, inclusive a 
+celebração de Sociedades em Conta de Participação. 
+ Brasil  Coligada  18,952%  18,952% 
+HIPE Participações S.A.  Administração de bens próprios e a participação, 
+diretamente ou através de subsidiárias, como quotista ou 
+acionista, no capital social de outras sociedades, no país ou 
+no exterior, e/ou em fundos de investimento, como cotista, 
+incluindo a celebração de sociedades em conta de 
+participação. 
+ Brasil  Coligada  49,92%  49,92% 
+NM GAP II Participações S.A.  Administração de bens próprios e a participação, 
+diretamente ou através de subsidiárias, como quotista ou 
+acionista, no capital social de outras sociedades, no país ou 
+no exterior, e/ou em fundos de investimento, como cotista, 
+incluindo a celebração de sociedades em conta de 
+participação. 
+ Brasil  Coligada  42,77%  42,77% 
+NM IBIRA Participações S.A.  A administração de bens próprios e a participação, 
+diretamente ou através de subsidiárias, como quotista ou 
+acionista, no capital social de outras sociedades, no país ou 
+no exterior, e/ou em fundos de investimento, como cotista, 
+incluindo a celebração de sociedades em conta de 
+participação. 
+ Brasil  Coligada  59,48%  59,48% 
+NM Vila Participações S.A.  Participação direta ou por meio de subsidiárias no capital 
+social, como quotista ou acionista, no Brasil ou exterior; e/ou 
+em fundos de investimentos, como cotista. 
+ Brasil  Coligada  99,998%  99,9995% 
+NM GAP Participações Ltda  A participação, diretamente ou através de subsidiárias, 
+como quotista ou acionista, no capital social de outras 
+sociedades, no país ou no exterior, e/ou em fundos de 
+investimento, como cotista, incluindo a celebração de 
+instrumentos de constituição de sociedades em conta de 
+participação. 
+ Brasil  Outras Sociedades  15,1%  15,1% 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Notas Explicativas                                
+PÁGINA: 32 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+ 
+Notas explicativas às informações trimestrais--continuação 
+30 de setembro de 2025  
+(Em milhares de reais) 
+ 
+ 
+10.  Investimentos--Continuação 
+ 
+b) Movimentação  
+ 
+As movimentações dos investimentos estão demonstradas a seguir:  
+ 
+    Investimentos       
+                       
+ 
+ 
+Saldos 
+em 
+31/12/2024  
+Redução 
+de capital   
+Integralização 
+de capital 
+ 
+Aquisição 
+ Baixa/ 
+transferência 
+de 
+investimento  Mais valia 
+ 
+Ágio 
+ 
+Dividendo 
+ 
+Resultado de 
+equivalência 
+patrimonial 
+ 
+Diferenças 
+cambiais 
+sobre 
+controladas   
+ 
+Saldos 
+em 
+30/09/2025 
+                       
+Participações em controladas  132.821  -  80.765  -  -  9.384  (5.716)  -  (110.703)  (10.519)  96.032 
+  MHL Calçados Ltda.  15.308  -  -  -  -  -  -  -  1.751  -  17.059 
+  Grendene USA, Inc.  118  -  287  -  -  -  -  -  (202)  (22)  181 
+  Grendene Italy, S.R.l.  4.553  -  -  -  -  -  -  -  (1.213)  (144)  3.196 
+  Grendene Global Brands 
+Limited  
+ 112.842  -  80.478  -  -  9.384  (5.716)  -  (111.039)  (10.353)  75.596 
+                       
+Participações em coligadas  305.411  -  256.165  -  -  -  -  (958)  61.632  -  622.250 
+  YOUPE Participações S.A.   635  -  -  -  -  -  -  (1)  13  -  647 
+  HIPE Participações S.A.   229.575  -  -  -  -  -  -  (290)  (28)  -  229.257 
+  NM GAP II Participações S.A.  25.545  -  -  -  -  -  -  (667)  24.069  -  48.947 
+  NM IBIRA Participações S.A.   41.996  -  -  -  -  -  -  -  39.568  -  81.564 
+  NM Vila Participações S.A.  7.660  -  256.165  -  -  -  -  -  (1.990)  -  261.835 
+                       
+Participação em outras 
+sociedades 
+ 
+5.652  -  -  -  -  -  -  -  -  -  5.652 
+  NM GAP Participações Ltda.  5.652  -  -  -  -  -  -  -  -  -  5.652 
+ 
+ 
+     
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Outros investimentos   412  -  -  -  -  -  -  -  -  -  412 
+  Outros  412  -  -  -  -  -  -  -  -  -  412 
+                       
+  444.296  -  336.930  -  -  9.384  (5.716)  (958)  (49.071)  (10.519)  724.346 
+ 
+    Investimentos       
+                       
+ 
+ 
+Saldos 
+em 
+31/12/2023  
+Redução 
+de capital   
+Integralização 
+de capital 
+ 
+Aquisição 
+ 
+Baixa/ 
+transferência 
+de 
+investimento  
+Reserva 
+de lucros 
+ 
+Ágio 
+ 
+Dividendo 
+ 
+Resultado de 
+equivalência 
+patrimonial 
+ 
+Diferenças 
+cambiais 
+sobre 
+controladas 
+e joint 
+venture 
+no exterior 
+ 
+Saldos 
+em 
+31/12/2024 
+                       
+Participações em controladas  20.594  -  10.252  39.267  39.111  4.554  24.617  -  (7.883)  2.309  132.821 
+  MHL Calçados Ltda.  14.704  -  -  -  -  -  -  -  604  -  15.308 
+  Grendene USA, Inc. (i)  2.792  -  2.241  -  -  -  -  -  (5.018)  103  118 
+  Grendene Italy, S.R.l.  3.098  -  -  -  -  4.554  -  -  (3.469)  370  4.553 
+  Grendene Global Brands 
+Limited  
+ -  -  8.011  39.267  39.111  -  24.617  -  -  1.836  112.842 
+                       
+Participações em coligadas  223.055  (26.706)  9.505  -  -  -  -  (10.356)  109.913  -  305.411 
+  YOUPE Participações S.A.   10.962  (10.277)  -  -  -  -  -  (551)  501  -  635 
+  HIPE Participações S.A.   134.699  -  1.005  -  -  -  -  (5.307)  99.178  -  229.575 
+  NM GAP II Participações S.A.  21.543  -  -  -  -  -  -  (2.642)  6.644  -  25.545 
+  NM IBIRA Participações S.A.   55.851  (16.429)  -  -  -  -  -  (1.856)  4.430  -  41.996 
+  NM Vila Participações S.A.  -  -  8.500  -  -  -  -  -  (840)  -  7.660 
+                       
+Participação em joint venture  88.331  -  -  -  (39.111)  -  -  -  (63.451)  14.231  - 
+  Grendene Global Brands 
+Limited 
+ 88.331  -  -  -  (39.111)  -  -  -  (63.451)  14.231  - 
+                       
+Participação em outras 
+sociedades 
+ 
+5.652  -  -  
+ 
+- 
+ 
+-  -  -  -  -  -  5.652 
+  NM GAP Participações Ltda.  5.652  -  -  -  -  -  -  -  -  -  5.652 
+ 
+ 
+     
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Outros investimentos   412  -  -  -  -  -  -  -  -  -  412 
+  Outros  412  -  -  -  -  -  -  -  -  -  412 
+                       
+  338.044  (26.706)  19.757  39.267  -  4.554  24.617  (10.356)  38.579  16.540  444.296 
+ 
+(i) Valor consolidado da controlada Grendene USA, Inc. e a controlada indireta Grendene New York, L.L.C. até junho de 2024. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Notas Explicativas                                
+PÁGINA: 33 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+ 
+Notas explicativas às informações trimestrais--continuação 
+30 de setembro de 2025  
+(Em milhares de reais) 
+ 
+ 
+10.  Investimentos--Continuação 
+ 
+c) Informações financeiras resumidas das controladas (consolidadas) , coligadas, joint 
+venture e outras sociedades 
+ 
+  30/09/2025 
+       
+  Investimentos  Balanço   DRE  
+  % de 
+Participação 
+Participação 
+no PL   Ativo Passivo 
+Patrimônio 
+Líquido  Receitas 
+Custos e 
+despesas 
+Resultado 
+líquido  
+            
+Participações em controladas            
+  MHL Calçados Ltda.  99,998% 17.059  17.070 11 17.059  1.754 (3) 1.751 
+  Grendene USA, Inc.   100,00% 181  236 55 181  - (202) (202)  
+  Grendene Italy, S.R.L.  100,00% 3.449  8.217 4.768 3.449  4.718 (6.155) (1.437) 
+  Grendene Global Brands Limited   100,00% 48.346  108.435 60.089 48.346  269.559 (379.563) (110.004) 
+            
+Participações em coligadas            
+  YOUPE Participações S.A.   18,952% 647  31.292 27.979 3.313  129 (65) 64 
+  HIPE Participações S.A.   49,92% 229.257  459.245 3 459.242  26 (80) (54) 
+  NM GAP II Participações S.A.  42,77% 48.947  115.521 1.091 114.430  64.706 (8.436) 56.270 
+  NM IBIRA Participações S.A.   59,48% 81.564  138.951 1.831 137.120  66.547 (27) 66.520 
+  NM Vila Participações S.A.  99,998% 261.835  259.042 7 259.035  133 (2.123) (1.990) 
+            
+Participação em outras sociedades            
+  NM GAP Participações Ltda.  15,1% 5.652  49.327 24 49.303  5.316 (370) 4.946 
+ 
+A data de encerramento do período de apuração das informações resumidas do Balanço e DRE  das coligadas e outras 
+sociedades é 31 de agosto de 2025. 
+ 
+  31/12/2024 
+       
+  Investimentos  Balanço   DRE  
+  % de 
+Participação 
+Participação 
+no PL   Ativo Passivo 
+Patrimônio 
+Líquido  Receitas 
+Custos e 
+despesas 
+Resultado 
+líquido  
+            
+Participações em controladas            
+  MHL Calçados Ltda.  99,998% 15.308  16.170 862 15.308  1.505 (901) 604 
+  Grendene USA, Inc. (i)  100,00% 118  187 69 118  2.608 (7.626) (5.018) 
+  Grendene Italy, S.R.L.  100,00% 5.030  7.059 2.029 5.030  3.032 (6.304) (3.272) 
+  Grendene Global Brands Limited   100,00% 88.225  183.732 95.507 88.225  - - - 
+            
+Participações em coligadas            
+  YOUPE Participações S.A.   18,952% 635  41.896 38.545 3.351  2.715 (72) 2.643 
+  HIPE Participações S.A.   49,92% 229.575  461.379 1.501 459.878  198.723 (52) 198.671 
+  NM GAP II Participações S.A.  42,77% 25.545  60.848 1.101 59.747  19.364 (3.830) 15.534 
+  NM IBIRA Participações S.A.   59,48% 41.996  88.716 18.115 70.601  7.477 (30) 7.447 
+  NM Vila Participações S.A.  99,9995% 7.660  4.214 53 4.161  8 (848) (840) 
+            
+Participação em joint venture                                                               
+  Grendene Global Brands Limited  49,9% -  - - -  162.362 (289.518) (127.156) 
+            
+Participação em outras sociedades            
+  NM GAP Participações Ltda.  15,1% 5.652  45.844 24 45.820  1.864 1.995 3.859 
+ 
+A data de encerramento do período de apuração das informações resumidas do Balanço e DRE das coligadas, joint venture 
+e outras sociedades é 30 de novembro de 2024. 
+ 
+(i) Valor consolidado da controlada Grendene USA, Inc. e a controlada indireta Grendene New York, L.L.C. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Notas Explicativas                                
+PÁGINA: 34 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+ 
+Notas explicativas às informações trimestrais--continuação 
+30 de setembro de 2025  
+(Em milhares de reais) 
+ 
+ 
+10.  Investimentos--Continuação 
+ 
+d) Combinação de negócio 
+ 
+Em 1º de dezembro de 2024, a Companhia adquiriu 50,1% das ações da Grendene Global Brands 
+Limited (“GGB”) por R$54.857, sendo R$41.146 pagos à vista e R$13.711 mantidos como saldo a 
+pagar. Desse valor, R$19.945 foram registrados em “Outras contas a pagar p or aquisição”, 
+incluindo R$12.027 de saldo remanescente e R$7.918 referentes a ajustes previstos na 
+negociação final com a Radar Private Fund I LP. 
+ 
+Com essa aquisição, a Grendene passou a deter 100% da GGB, tornando-se sua controladora. A 
+operação está alinhada à estratégia de internacionalização das marcas, ampliando a presença 
+global da Companhia, além de apoiar o avanço em iniciativas de digitaliza ção e no modelo de 
+vendas direto ao consumidor (“Direct-to-Consumer” – DTC). 
+ 
+A combinação de negócios foi realizada em estágios. A participação anteriormente detida: (i) 
+apurou um ganho de R$5.108, pela mensuração ao valor justo na data em que o controle foi obtido, 
+registrado em “Outras receitas operacionais”; (ii) apurou uma perda de R$4.624 relacionada à 
+baixa da variação cambial acumulada, registrada em “Outras despesas operacionais”. Os efeitos 
+foram reconhecidos no resultado e em outros resultados abrangentes. 
+ 
+A operação foi avaliada por laudo de PPA (Purchase Price Allocation), considerando a mensuração 
+ao valor justo na data da aquisição.  O ágio de R$ 18.901 gerado pela aquisição é atribuível à 
+rentabilidade futura esperada com as operações da “GGB”. 
+ 
+A tabela abaixo apresenta um resumo da apuração dos valores da transação no momento da sua 
+conclusão: 
+ 
+Contraprestação pela compra  1/12/2024 
+   
+Preço de aquisição   54.857 
+Patrimônio líquido da adquirida  (30.827) 
+Valor justo dos ativos líquidos identificáveis  (5.129) 
+Ativo líquido adquirido  (35.956) 
+Ágio  18.901 
+ 
+Apresentamos a seguir a contraprestação e os valores dos ativos adquiridos e passivos assumidos 
+reconhecidos a valor justo na data da aquisição. 
+ 
+  Valor justo reconhecido 
+na aquisição 
+   
+Ativos  165.135 
+  Caixa e equivalentes  24.251 
+  Contas a receber de clientes  4.799 
+  Estoques  96.517 
+  Despesas antecipadas  2.672 
+  Outros créditos   8.377 
+  Imobilizado   2.512 
+  Relacionamento com clientes   7.799 
+  Propriedade intelectual  18.208 
+   
+Passivos  (93.367) 
+  Contratos de arrendamentos  (19.439) 
+  Contas a pagar  (69.386) 
+  Outros passivos  (4.542) 
+   
+Total dos ativos líquidos identificáveis  71.768 
+   
+  Patrimônio líquido contábil (inicial)  61.531 
+  Valor justo dos ativos líquidos identificáveis (Mais valia)  10.237 
+Total da contraprestação  71.768 
+Notas Explicativas                                
+PÁGINA: 35 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+ 
+Notas explicativas às informações trimestrais--continuação 
+30 de setembro de 2025  
+(Em milhares de reais) 
+ 
+ 
+ 
+10.  Investimentos--Continuação 
+ 
+d) Combinação de negócio--Continuação 
+ 
+A contabilização dos ativos líquidos identificáveis nestas informações trimestrais foi realizada com 
+base na avaliação do valor justo , refletindo a melhor estimativa disponível conforme laudo de  
+avaliação independente utilizado na elaboração do PPA (Purchase Price Allocation). 
+ 
+A alocação do valor justo dos ativos adquiridos está apresentada a seguir: 
+ 
+  Valor justo  
+   
+Imobilizado  (6.693) 
+Propriedade intelectual  17.378 
+Relacionamento com clientes   (448) 
+  10.237 
+Montante não alocado (ágio)  18.901 
+  29.138 
+ 
+As principais premissas, utilizada na mensuração de valor justo, estão apresentadas a seguir: 
+ 
+Imobilizado: Compreende os móveis e utensílios e equipamentos de informática, avaliado ao valor 
+justo, estimado através do método de Quantificação do Custo Indireto. 
+ 
+Propriedade intelectual: Corresponde ao valor justo das receitas geradas por meios digitais (como 
+site próprio e marketplaces de terceiros) no mercado internacional dos EUA e China, determinado 
+com base na propriedade intelectual desenvolvida e parametrizada pela Target. Esse valor é 
+estimado utilizando a abordagem de renda, por meio do método Relief from Royalty. 
+ 
+Relacionamento com cliente: A avaliação do relacionamento com clientes foi realizada com base 
+na receita dos canais de atacado, conforme fornecidos pela Administração. Uma análise detalhada 
+do comportamento e da rotatividade dos clientes do atacado da “GGB”, utilizando um histórico  de 
+3 anos, este intervalo de tempo traz uma perspectiva atual da base de clientes. Para projeção de 
+receita, foram aplicados ajustes de preço em linha com à inflação americana e crescimentos reais 
+de faturamento da base de client es existentes, representando 32,7% da receita total. Valor justo 
+do relacionamento com clientes, foi estimado através da abordagem de renda usando o método 
+Multi-Period Excess Earnings (MPEEM). 
+ 
+Montante não alocado : compreende os ativos tangíveis e intangíveis não alocados no relatório 
+PPA (Purchase Price Allocation), o qual não considerou análise de ativo fiscal diferido ou passivo 
+diferido. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Notas Explicativas                                
+PÁGINA: 36 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+ 
+Notas explicativas às informações trimestrais--continuação 
+30 de setembro de 2025  
+(Em milhares de reais) 
+ 
+ 
+11.  Imobilizado 
+ 
+Apresentamos nas tabelas abaixo a composição do imobilizado: 
+ 
+  Controladora 
+           
+  Terrenos, prédios, 
+instalações e 
+benfeitorias em 
+prédios locados 
+Máquinas & 
+equipamentos e 
+ferramentas 
+ 
+ 
+Móveis e 
+utensílios 
+Equipamentos 
+de 
+processamento 
+de dados 
+ 
+Imobilizado 
+em 
+andamento(i) 
+Produção de 
+bens em 
+andamento(ii) 
+Instalações 
+ambientais(iii) 
+ 
+ 
+ 
+Outros Total 
+           
+Bens em uso totalmente 
+depreciados 
+ 
+     
+  
+  
+ Saldo em 31/12/2024  168.836 204.775 16.562 35.147 - - 10.694 5.085 441.099 
+ Saldo em 30/09/2025  175.553 223.889 19.017 34.191 - - 12.030 5.111 469.791 
+           
+Custo do imobilizado           
+Saldo em 31/12/2023  427.123 572.020 44.556 68.148 73.598 11.397 25.422 7.327 1.229.591 
+  Adições  5.100 35.657 2.482 2.855 49.816 9.653 581 604 106.748 
+  Antecipações /Importações 
+em andamento 
+ - 2.823 (64) 97 (1.812) (33) - 2 1.013 
+  Baixas  (199) (10.180) (64) (4.258) (5.181) (1.231) - (308) (21.421) 
+  Transferências  70.529 11.667 1.463 20 (78.100) (11.384) 5.805 - - 
+Saldo em 31/12/2024  502.553 611.987 48.373 66.862 38.321 8.402 31.808 7.625 1.315.931 
+           
+  Adições  456 26.799 1.446 3.605 33.877 10.548 335 268 77.334 
+  Antecipações /Importações 
+em andamento 
+ - 2.423 (32) (97) 1.113 85 - (21) 3.471 
+  Baixas  (26) (9.399) (16) (2.817) (397) (38) - - (12.693) 
+  Transferências  11.915 18.514 198 72 (25.268) (5.865) 434 - - 
+Saldo em 30/09/2025  514.898 650.324 49.969 67.625 47.646 13.132 32.577 7.872 1.384.043 
+           
+Depreciação acumulada            
+Saldo em 31/12/2023  (271.507) (356.331) (27.956) (48.476) - - (16.234) (5.988) (726.492) 
+  Depreciação  (20.430) (39.084) (3.051) (6.337) - - (1.794) (325) (71.021) 
+  Baixas  116 9.836 41 4.042 - - - 308 14.343 
+  Transferências  - 11 - (11) - - - - - 
+Saldo em 31/12/2024  (291.821) (385.568) (30.966) (50.782) - - (18.028) (6.005) (783.170) 
+           
+  Depreciação   (15.943) (30.215) (2.331) (4.808) - - (1.203) (343) (54.843) 
+  Baixas  26 8.950 16 2.704 - - - - 11.696 
+  Transferências  - 3 (3) - - - - - - 
+Saldo em 30/09/2025  (307.738) (406.830) (33.284) (52.886) - - (19.231) (6.348) (826.317) 
+           
+Valor contábil líquido           
+   Saldo em 31/12/2024  210.732 226.419 17.407 16.080 38.321 8.402 13.780 1.620   532.761  
+   Saldo em 30/09/2025  207.160 243.494 16.685 14.739 47.646 13.132  13.346 1.524   557.726  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Notas Explicativas                                
+PÁGINA: 37 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+ 
+Notas explicativas às informações trimestrais--continuação 
+30 de setembro de 2025  
+(Em milhares de reais) 
+ 
+ 
+11.   Imobilizado--Continuação 
+ 
+  Consolidado 
+            
+  Terrenos, prédios, 
+instalações e 
+benfeitorias em 
+prédios locados 
+Máquinas & 
+equipamentos 
+e ferramentas 
+ 
+ 
+Móveis e 
+utensílios 
+Equipamentos 
+de 
+processamento 
+de dados 
+ 
+Imobilizado 
+em 
+andamento(i) 
+Produção de 
+bens em 
+andamento(ii) 
+Instalações 
+ambientais(iii) 
+ 
+Direito 
+de 
+uso(iv) 
+ 
+ 
+ 
+Outros Total 
+            
+Bens em uso totalmente 
+depreciados 
+ 
+     
+   
+  
+ Saldo em 31/12/2024  168.836 204.775 16.562 35.209 - - 10.694 - 5.085 441.161 
+ Saldo em 30/09/2025  175.553 223.889 19.017 34.620 - - 12.030 - 5.111 470.220 
+            
+Custo do imobilizado            
+Saldo em 31/12/2023  427.123 572.020 44.556 68.242 73.598 11.397 25.422 79.492 7.327 1.309.177 
+  Adições  5.605 35.657 11.048 3.543 54.978 9.653 581 65.571 604 187.240 
+  Antecipações /Importações 
+em andamento 
+ - 2.823 (64) 97 (1.812) (33) - - 2 1.013 
+  Baixas   (399) (10.180) (2.033) (4.400) (5.181) (1.231) - (89.784) (308) (113.516) 
+Transferências  75.094 11.667 2.060 20 (83.262) (11.384) 5.805 - - - 
+Variação cambial  5 - 179 27 - - - 3.337 - 3.548 
+Saldo em 31/12/2024  507.428 611.987 55.746 67.529 38.321 8.402 31.808 58.616 7.625 1.387.462 
+            
+  Adições  456 26.799 2.085 3.619 33.877 10.548 335 - 268 77.987 
+  Antecipações /Importações 
+em andamento 
+ - 2.423 (32) (97) 1.113 85 - - (21) 3.471 
+Baixas   (4.619) (9.399) (4.122) (2.817) (397) (38) - (21.507) - (42.899) 
+Transferências  11.915 18.514 198 72 (25.268) (5.865) 434 - - - 
+Variação cambial  (282) - (712) (78) - - - (6.377) - (7.449) 
+Saldo em 30/09/2025  514.898 650.324 53.163 68.228 47.646 13.132 32.577 30.732 7.872 1.418.572 
+            
+Depreciação acumulada             
+Saldo em 31/12/2023  (271.507) (356.331) (27.956) (48.546) - - (16.234) (56.559) (5.988) (783.121) 
+Depreciação   (20.763) (39.084) (6.843) (6.859) - - (1.794) (41.716) (325) (117.384) 
+Baixas  203 9.836 760 4.138 - - - 58.890 308 74.135 
+Transferências  - 11 - (11) - - - - - - 
+Variação cambial  (6) - (68) (22) - - - (2.101) - (2.197) 
+Saldo em 31/12/2024  (292.073) (385.568) (34.107) (51.300) - - (18.028) (41.486) (6.005) (828.567) 
+            
+Depreciação  (15.948) (30.215) (3.084) (4.890) - - (1.203) (5.852) (343) (61.535) 
+Baixas  268 8.950 1.821 2.704 - - - 12.538 - 26.281 
+Transferências  - 3 (3) - - - - - - - 
+Variação cambial  15  317 67 - - - 5.150 - 5.549 
+Saldo em 30/09/2025  (307.738) (406.830) (35.056) (53.419) - - (19.231) (29.650) (6.348) (858.272) 
+            
+Valor contábil líquido            
+Saldo em 31/12/2024  215.355 226.419 21.639 16.229 38.321 8.402 13.780 17.130 1.620 558.895 
+Saldo em 30/09/2025  207.160 243.494 18.107 14.809 47.646 13.132 13.346 1.082 1.524 560.300 
+ 
+(i) Refere-se a: Prédios Industriais R$11.911 (R$9.459 em 31 de dezembro de 2024); Instalações R$17.725 (R$12.871 em 31 
+de dezembro de 2024); Peças e Conjuntos de Reposição R$18.010 (R$15.991 em 31 de dezembro de 2024). 
+(ii) As principais naturezas que compõe o grupo são referentes a bens fabricados/desenvolvidos internamente, especialmente 
+Máquinas & Equipamentos, Ferramentas, Instalações e Móveis e Utensílios. 
+(iii) Referem-se principalmente a instalações voltadas para ações de energia renovável e tratamento de efluentes.  
+(iv) Refere-se aos valores de contratos de locação de arrendamento mercantil, conforme descrito na Nota 14. 
+ 
+Tempo de vida útil estimada 
+ 
+O tempo de vida útil dos ativos depreciados pelo método linear está demonstrado seguir: 
+ 
+ Ativos  Vida útil estimada   Ativos  Vida útil estimada 
+ 
+Prédios  25 anos  
+ 
+Equipamentos de 
+processamento de dados  5 anos 
+ 
+Instalações  10 anos  
+ 
+Imobilizado em 
+andamento  Conforme classificação, 
+quando ativados 
+ 
+Benfeitorias em prédios 
+locados 
+ Conforme prazo dos 
+contratos de locação 
+ 
+ 
+Produção de bens em 
+andamento  Conforme classificação, 
+quando ativados 
+ 
+Máquinas & 
+equipamentos 
+ 10 anos  
+ 
+Instalações ambientais  10 anos 
+ 
+Ferramentas  5 anos  
+ 
+Direito de uso  Conforme prazo dos 
+contratos de locação 
+ Móveis e utensílios  10 anos  
+ Outros  5 e 10 anos 
+ 
+Notas Explicativas                                
+PÁGINA: 38 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+ 
+Notas explicativas às informações trimestrais--continuação 
+30 de setembro de 2025  
+(Em milhares de reais) 
+ 
+ 
+12.  Intangível 
+ 
+  Controladora 
+        
+  
+Software 
+Marcas e 
+patentes Tecnologia 
+Software em 
+desenvolvimento Outros Total 
+        
+Custo do intangível        
+Saldo em 31/12/2023  83.785 32.165 11.927 21.796 1.533 151.206 
+Aquisições  385 2.337 - 16.349 - 19.071 
+Baixas  (46) (156) - (396) - (598) 
+Transferências  19.082 - - (19.082) - - 
+Saldo em 31/12/2024  103.206 34.346 11.927 18.667 1.533 169.679 
+        
+Aquisições  386 1.065 - 11.826 - 13.277 
+Baixa  - - - (148) - (148) 
+Transferências  10.889 - - (10.889) - - 
+Saldo em 30/09/2025  114.481 35.411 11.927 19.456 1.533 182.808 
+        
+Amortização acumulada         
+Saldo em 31/12/2023  (60.119) (16.771) (11.318) - (860) (89.068) 
+Amortização   (9.428) (2.485) (384) - (38) (12.335) 
+Baixas  19 67 1 - - 87 
+Saldo em 31/12/2024  (69.528) (19.189) (11.701) - (898) (101.316) 
+        
+Amortização   (8.719) (1.934) (219) - (28) (10.900) 
+Saldo em 30/09/2025  (78.247) (21.123) (11.920) - (926) (112.216) 
+        
+Valor contábil líquido        
+Saldo em 31/12/2024  33.678 15.157 226 18.667 635 68.363 
+Saldo em 30/09/2025  36.234 14.288 7 19.456 607 70.592 
+ 
+  Consolidado 
+          
+  
+Software 
+Marcas e 
+patentes Tecnologia 
+Software em 
+desenvolvimento Ágio Outros Total 
+         
+Custo do intangível         
+Saldo em 31/12/2023  83.785 34.585 11.927 21.796 - 1.533 153.626 
+Aquisições  2.462 2.337 - 16.861 - 14.995 36.655 
+Aquisição controlada  - - - - 24.617 - 24.617 
+Baixa  (46) (2.654) - (396) - - (3.096) 
+Transferências  19.082 - - (19.082) - - - 
+Variação cambial  39 78 - 4 - 344 465 
+Saldo em 31/12/2024  105.322 34.346 11.927 19.183 24.617 16.872 212.267 
+         
+Aquisições  399 1.065 - 11.857 - 10.237 23.558 
+Baixa  - - - (201) (5.716) - (5.917) 
+Transferências  11.238 - - (11.238) - - - 
+Variação cambial  (316) - - 36 - (2.164) (2.444) 
+Saldo em 30/09/2025  116.643 35.411 11.927 19.637 18.901 24.945 227.464 
+         
+Amortização acumulada          
+Saldo em 31/12/2023  (60.119) (16.771) (11.318) - - (860) (89.068) 
+Amortização   (10.673) (2.485) (384) - - (6.807) (20.349) 
+Baixa  19 67 1 - - - 87 
+Variação cambial  (24) - - - - (133) (157) 
+Saldo em 31/12/2024  (70.797) (19.189) (11.701) - - (7.800) (109.487) 
+         
+Amortização  (9.042) (1.934) (219) - - (3.203) (14.398) 
+Variação cambial  197 - - - - 1.100 1.297 
+Saldo em 30/09/2025  (79.642) (21.123) (11.920) - - (9.903) (122.588) 
+         
+Valor contábil líquido         
+    Saldo em 31/12/2024  34.525 15.157 226 19.183 24.617 9.072 102.780 
+    Saldo em 30/09/2025  37.001 14.288 7 19.637 18.901 15.042 104.876 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Notas Explicativas                                
+PÁGINA: 39 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+ 
+Notas explicativas às informações trimestrais--continuação 
+30 de setembro de 2025  
+(Em milhares de reais) 
+ 
+ 
+12.  Intangível--Continuação 
+ 
+A Companhia não possui em 30 de setembro de 2025 e 31 de dezembro de 2024, ativos intangíveis 
+gerados internamente. 
+ 
+Tempo de vida útil estimada 
+ 
+O tempo de vida útil dos ativos amortizados pelo método linear está demonstrado a seguir: 
+ 
+ Ativos  Vida útil estimada 
+    
+ 
+Software  5 anos 
+ 
+Marcas e patentes  10 anos 
+ 
+Fundos de comércio  5 anos e/ou conforme contratos 
+ 
+Tecnologia  5 anos 
+ 
+Software em desenvolvimento  5 anos a partir da ativação 
+ 
+ 
+13.  Empréstimos e financiamentos  
+ 
+As obrigações por empréstimos e financiamentos estão demonstradas a seguir:  
+ 
+  Controladora / Consolidado 
+                 
+      30/09/2025  31/12/2024 
+ 
+ Indexador  Taxa de juros 
+(a.a.) 
+ Circulante  
+Não 
+circulante  Total  Circulante  
+Não 
+circulante  Total 
+                 
+Moeda Nacional                 
+Financiamentos 
+incentivados 
+ TJLP  8,96% e 7,43%  3.260  13.618  16.878  2.118  12.310  14.428 
+Moeda Estrangeira                 
+ACE   Dólar +  4,59% e 5,54%  65.599  -  65.599  54.511  -  54.511 
+      68.859  13.618  82.477  56.629  12.310  68.939 
+ 
+a) Financiamentos incentivados (ICMS e exportação) 
+ 
+Os financiamentos aqui classificados dizem respeito às parcelas não incentivadas das subvenções 
+governamentais (Nota 19), concedidos através do FDI – Fundo de Desenvolvimento Industrial do 
+Ceará, por intermédio do agente financeiro estabelecido por este fundo, decorrentes do ICMS 
+devido (Provin/Proade) e produtos exportados (Proapi), os quais devem ser liquidados no prazo 
+de 36 e 60 meses após a sua liberação. 
+ 
+O reconhecimento do benefício de redução dos valores devidos, ocorre no momento da obtenção 
+dos financiamentos, por refletir com maior adequação o regime de competência do exercício, uma 
+vez que, os custos dos tributos referentes às operações incentivadas também estão sendo 
+registrados concomitantemente aos benefícios. 
+ 
+As parcelas de longo prazo, têm a seguinte composição por ano de vencimento:  
+ 
+Vencimentos  2026  2027  2028  2029  2030  Total 
+             
+  Proapi  518  749  1.592  1.432  1.110  5.401 
+  Provin   168  -  -  -  -  168 
+  Proade  552  2.140  2.274  1.974  1.109  8.049 
+ Total  1.238  2.889  3.866  3.406  2.219  13.618 
+Notas Explicativas                                
+PÁGINA: 40 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+ 
+Notas explicativas às informações trimestrais--continuação 
+30 de setembro de 2025  
+(Em milhares de reais) 
+ 
+ 
+13.  Empréstimos e financiamentos--Continuação 
+ 
+b) ACE (Adiantamento sobre cambiais entregues) 
+ 
+Estas antecipações são captações de recursos em moeda nacional ao exportador, após o 
+embarque da mercadoria ao exterior, que possuem vencimentos até março de 2026. As operações 
+são garantidas mediante a transferência ao banco dos direitos sobre as vendas a prazo.  
+ 
+ 
+14.  Contratos de arrendamentos  
+ 
+O Grupo avalia, na data d o início de cada contrato, se este constitui um arrendamento, ou 
+seja, se confere o direito de controlar o uso de um ativo identificado por um período 
+determinado. 
+ 
+Adota-se uma única abordagem para reconhecimento e mensuração dos arrendamentos, 
+com exceção dos contratos de curto prazo (prazo igual ou inferior há 12 meses) e daqueles 
+que envolvem ativos de baixo valor, os quais são contabilizados como despesa linear durante 
+o período do contrato. 
+ 
+O Grupo mant ém contrato s de locaç ões firmados com terceiros , classificado como 
+arrendamento mercantil, celebrados por meio da sua controlada Grendene Global Brands. 
+Estes contratos foram negociados  pela Administração para obter flexibilidade na gestão da 
+carteira de ativos arrendados e alinhar-se às necessidades de negócio do Grupo. 
+ 
+As taxas de desconto aplicadas para mensuração do passivo de arrendamento foram 
+determinadas com base em índices de inflação e em taxas estimadas para captação de 
+empréstimos, refletindo condições e prazos similares aos dos contratos de arrendamento, 
+de modo a representar adequadamente o valor presente dos fluxos de caixa futuros.  
+ 
+A tabela abaixo evidencia as taxas praticadas, os vencimentos e prazos dos contratos vigentes: 
+ 
+Contratos de aluguéis de imóveis  Vencimento  Prazo  Taxas média (a.a.) 
+       
+Grendene Global Brands USA – Escritório Miami  31/03/2027  5 anos e 3 meses  1,15% 
+Grendene Global Brands USA – Ceva  31/05/2025 (i)  3 anos   1,61% 
+Grendene Global Brands Shanghai – Escritório China  31/08/2025 (ii)  2 anos e 6 meses  4,75% 
+ 
+(i) Com o encerramento do contrato original, foi firmado um aditivo com vigência até outubro de 2025, o qual, pelas suas 
+características, não se enquadra na classificação de arrendamento.  
+(ii) Com o encerramento do contrato original, foi firmado um aditivo com vigência até março de 2026, o qual, pelas suas 
+características, não se enquadra na classificação de arrendamento. 
+ 
+As movimentações do passivo de arrendamento estão demonstradas a seguir:  
+ 
+  Consolidado 
+   
+Saldo em 31/12/2023  23.997 
+Adição (i)  47.389 
+Baixa   (36.934) 
+Juros apropriados e pagos  (1.139) 
+Pagamentos  (15.049) 
+Variação cambial  1.621 
+Saldo em 31/12/2024  19.885 
+   
+Baixa (ii)  (11.269) 
+Juros apropriados e pagos  (2) 
+Pagamentos  (5.961) 
+Variação cambial  (1.427) 
+Saldo em 30/09/2025  1.226 
+   Passivo circulante  808 
+   Passivo não circulante  418 
+ 
+(i) Refere-se aos contratos da Grendene Global Brands. 
+(ii) Refere-se as baixas de contratos da Grendene Global Brands (San Diego, Saw Grass, Baybrook Mall, Glendale e China). 
+Notas Explicativas                                
+PÁGINA: 41 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+ 
+Notas explicativas às informações trimestrais--continuação 
+30 de setembro de 2025  
+(Em milhares de reais) 
+ 
+ 
+14.  Contratos de arrendamentos--Continuação 
+ 
+Em 30 de setembro de 2025, a Companhia reconheceu como despesas de aluguéis de curto prazo, 
+o valor de R$ 3.689 (R$3.215 em 30 de setembro de 2024 ) e no consolidado o valor de R$ 3.690 
+(R$3.215 em 30 de setembro de 2024). 
+ 
+ 
+15.  Provisões, passivos contingentes e ativos contingentes 
+ 
+A Companhia e suas controladas são partes envolvidas em processos administrativos e 
+ações judiciais de natureza trabalhista, fiscal, cível e ambiental, decorrentes do curso normal 
+de suas operações. 
+ 
+Periodicamente, o quadro de contingências é revisado por meio de avaliações realizadas 
+pelo departamento jurídico interno e assessores jurídicos externos, que classificam a 
+probabilidade de perdas nas seguintes categorias: (i) Provável; (ii) Possível; e (iii) Remota. 
+ 
+a) Provisões – Risco de perda provável 
+ 
+As perdas consideradas prováveis foram adequadamente provisionadas, em montante suficiente 
+para cobrir eventuais decisões desfavoráveis, conforme detalhado a seguir:  
+ 
+  Controladora  Consolidado 
+                 
+  Trabalhistas   Fiscais    Cíveis  Total  Trabalhistas   Fiscais   Cíveis  Total 
+                 
+Saldos em 31/12/2023  3.567  2.110  481  6.158  4.076  2.110  481  6.667 
+Adições  2.425  4.704  -  7.129  2.775  4.704  -  7.479 
+Realizações  (2.888)  (48)  (165)  (3.101)  (2.897)  (48)  (165)  (3.110) 
+Reversões  (395)  -  (285)  (680)  (395)  -  (285)  (680) 
+Correção monetária  25  25  14  64  25  25  14  64 
+Saldos em 31/12/2024  2.734  6.791  45  9.570  3.584  6.791  45  10.420 
+   Circulante  325  5.494  39  5.858  325  5.494  39  5.858 
+   Não circulante  2.409  1.297  6  3.712  3.259  1.297  6  4.562 
+                 
+Saldos em 31/12/2024  2.734  6.791  45  9.570  3.584  6.791  45  10.420 
+Adições  1.959  9.456  1.443  12.858  1.959  9.456  1.443  12.858 
+Realizações  (1.796)  (14.557)  -  (16.353)  (2.296)  (14.557)  -  (16.853) 
+Reversões  201  -  -  201  (149)  -  -  (149) 
+Correção monetária  (253)  (268)  4  (517)  (253)  (268)  4  (517) 
+Saldos em 30/09/2025  2.845  1.422  1.492  5.759  2.845  1.422  1.492  5.759 
+   Circulante  898  84  1.486  2.468  898  84  1.486  2.468 
+   Não circulante  1.947  1.338  6  3.291  1.947  1.338  6  3.291 
+ 
+Trabalhistas: Referem -se às reclamações apresentadas por ex -empregados por suposto 
+descumprimento de normas trabalhistas, referentes a verbas indenizatórias; adicionais de 
+insalubridade; e verbas entendidas como devidas por responsabilidade subsidiária.  
+ 
+Fiscais: Incluem: (i) R$1.338 referentes à ação relativa à incidência de PIS/COFINS-Importação 
+sobre serviços recebidos do exterior;  e (ii) R$84 de provisão para honorários em execução fiscal 
+estadual. 
+ 
+Cíveis: Abrangem: (i) R$43 da ação anulatória de autuação pelo Procon/SP; (ii) R$6 da anulação 
+do registro de marca e (iii) R$1.443 de execução fiscal do Procon/SP. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Notas Explicativas                                
+PÁGINA: 42 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+ 
+Notas explicativas às informações trimestrais--continuação 
+30 de setembro de 2025  
+(Em milhares de reais) 
+ 
+ 
+15.  Provisões, passivos contingentes e ativos contingentes--Continuação 
+ 
+b) Passivos contingentes – Risco de perda possível 
+ 
+A Companhia e suas controladas  são partes em processos  de naturezas trabalhistas, fiscais, 
+cíveis e ambientais, cujos riscos de perda  foram classificados como possíveis, conforme 
+avaliações de seus assessores jurídicos . Em conformidade com as normas contábeis vigentes, 
+não há constituição de provisões para esses casos.  
+ 
+A seguir, apresentamos o montante estimado das ações classificadas com risco de perda possível: 
+ 
+  Controladora  Consolidado 
+         
+  30/09/2025  31/12/2024  30/09/2025  31/12/2024 
+         
+Trabalhistas   2.450  2.559  2.450  2.669 
+Fiscais  49.205  46.385  49.205  46.385 
+Cíveis   27.852  29.124  27.852  29.124 
+Ambientais   347  350  347  350 
+  79.854  78.418  79.854  78.528 
+ 
+Trabalhistas: referem-se às reclamações apresentadas por ex -empregados, por  suposto 
+descumprimento de normas trabalhistas, referentes a verbas indenizatórias e adicionais de 
+insalubridade.  
+ 
+Fiscais: referem-se aos seguintes litígios: (i) R$412 de contribuição previdenciária sobre seguro 
+de vida coletivo disponibilizado para os empregados); (ii) R$9.523 da execução relacionada à 
+glosa de compensação de crédito presumido de IPI, apurado a título de ressarcimento relativo a 
+PIS e COFINS ; (iii) R$1.933 da execução relacionada à glosa de compensação de COFINS;  (iv) 
+R$6.629 da glosa de compensação com créditos apurados no Reintegra com débitos da COFINS; 
+(v) R$12.312 da execução do Estado do Rio Grande do Sul sobre apropriação incorreta de crédito 
+de ICMS; e (vi) R$18.396 referentes ao recolhimento de CIDE – remessas.  
+ 
+Cíveis: referem -se a: (i) R$9.477 da ação indenizatória de ex representantes comerciais; (ii) 
+R$6.000 da ação indenizatória de ex -cliente, alegando suposto contrato de distribuição;  e (iii) 
+R$12.355 das ações anulatórias de autuação fiscal por suposto descumprimento das normas de 
+consumo; (iv) R$20 de ações indenizatórias diversas.  
+ 
+Ambientais: referem -se a autos de infração decorrentes de suposto descumprimento das 
+condicionantes estabelecidas na licença ambiental. 
+ 
+c) Ativos contingentes 
+ 
+A Companhia discute, na esfera judicial, o direito ao ressarcimento da contribuição previdenciária 
+sobre a folha de pagamento proporcional ao décimo terceiro salário pago em dezembro de 2011, 
+no montante de R$8.368. 
+ 
+Esse ativo, de natureza fiscal, não foi reconhecido contabilmente, uma vez que, até a presente 
+data, não há segurança razoável quanto à sua realização. 
+ 
+ 
+ 
+ 
+ 
+ 
+Notas Explicativas                                
+PÁGINA: 43 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+ 
+Notas explicativas às informações trimestrais--continuação 
+30 de setembro de 2025  
+(Em milhares de reais) 
+ 
+ 
+16.  Outras contas a pagar (Passivo) 
+ 
+A composição de outras contas a pagar , classificados no passivo circulante e não circulante, está 
+demonstrada a seguir: 
+ 
+  Controladora  Consolidado 
+         
+  30/09/2025  31/12/2024  30/09/2025  31/12/2024 
+         
+Contas a pagar por aquisição (i)  19.945  22.738  19.945  22.738 
+Adiantamentos diversos  2.639  3.264  2.639  3.264 
+Adiantamentos de coligadas  21.423  2.079  21.423  2.079 
+Fundo de marketing  2.663  83  2.663  83 
+Obrigações financeiras  391  563  391  563 
+Outros débitos  155  172  5.748  2.768 
+  47.216  28.899  52.809  31.495 
+Circulante  45.410  26.469  51.003  29.065 
+Não circulante  1.806  2.430  1.806  2.430 
+ 
+(i) Refere-se ao valor a pagar pela aquisição da controlada Grendene Global Brands. 
+ 
+ 
+17.  Patrimônio líquido 
+ 
+a) Capital social 
+ 
+Em 30 de setembro de 2025 e 31 de dezembro de 2024, o capital social totalmente subscrito e 
+integralizado está representado por 902.160.000 ações ordinárias, normativas, escriturais e sem 
+valor nominal. As ações representativas do capital social estão compreendidas em classe única 
+quanto à natureza dos direitos de seus possuidores e todas com igual direito a voto, respeitadas 
+as condições legais. 
+ 
+A seguir apresentamos a composição acionária da Companhia: 
+ 
+  Composição acionária 
+         
+  30/09/2025  31/12/2024 
+  Ações ON  %   Ações ON   % 
+         
+Alexandre Grendene Bartelle  376.328.607  41,71%  376.328.607  41,71% 
+Pedro Grendene Bartelle  125.312.376  13,89%  125.312.376  13,89% 
+Giovana Bartelle Veloso  37.132.797  4,12%  37.132.797  4,12% 
+Pedro Bartelle  34.557.397  3,83%  34.557.397  3,83% 
+André de Camargo Bartelle  29.201.277  3,24%  29.201.277  3,24% 
+Gabriella de Camargo Bartelle  28.912.677  3,20%  28.912.677  3,20% 
+Radar Gestora de Recursos Ltda (*)  -  0%  86.592.400  9,60% 
+Diretoria e Membros do Conselho  2.685.502  0,30%  2.696.783  0,30% 
+Ações em circulação  268.029.367  29,71%  181.425.686  20,11% 
+  902.160.000  100,00%  902.160.000  100,00% 
+ 
+(*) Em 13 de agosto de 2025, a Radar Gestora de Recursos Ltda. informou a redução de sua participação acionária na 
+Grendene S.A., passando a administrar aproximadamente 4,10% das ações ordinárias. O percentual informado está 
+abaixo do limite exigido para divulgação. 
+ 
+b) Reserva de capital 
+ 
+Corresponde ao valor dos planos de opções de compra ou subscrição de ações outorgados pela 
+Companhia a seus administradores, conforme descrito na Nota 23 – Plano de opções de compra 
+ou subscrição de ações. 
+ 
+ 
+Notas Explicativas                                
+PÁGINA: 44 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+ 
+Notas explicativas às informações trimestrais--continuação 
+30 de setembro de 2025  
+(Em milhares de reais) 
+ 
+ 
+17.  Patrimônio líquido--Continuação 
+ 
+c) Ações em tesouraria  
+ 
+Em 08 de agosto de 2024, o Conselho de Administração aprovou, através da Ata n° 110, a criação 
+de um novo programa de recompra de ações ordinárias nominativas da Companhia, sem valor 
+nominal, para permanência em tesouraria e/ou posterior alienação ou cancelamento, para o 
+cumprimento do exercício das futuras opções outorgadas e exercíveis para seus executivos d o 
+programa de plano de outorga de opções de compra ou subscrição de ações (Nota 23), limitado a 
+5.000.000 ações ordinárias, com prazo de encerramento em 06 de novembro de 2025.  
+ 
+Apresentamos na tabela abaixo a movimentação das ações em tesouraria: 
+ 
+  Controladora 
+       
+  Quantidade   Valor  
+ 
+Preço médio 
+     
+ 
+ 
+Saldo em 31/12/2023  (2.671)  (20) 
+ 
+7,39 
+Aquisição de ações  (430.942)  (3.036)  7,05 
+Opções de ações exercidas (Nota 23)  433.613  3.056  7,05 
+Saldo em 31/12/2024  -  - 
+ 
+- 
+   Aquisição de ações  (876.852)  (4.836) 
+ 
+5,52 
+   Opções de ações exercidas (Nota 23)  876.852  4.836 
+ 
+5,52 
+Saldo em 30/09/2025  -  -  - 
+ 
+d) Reservas de lucros 
+ 
+d.1) Reserva legal 
+ 
+Constituída com base em 5% do lucro líquido do exercício, deduzidos do valor dos incentivos 
+fiscais mantidos em contas de reservas, limitada a 20% do capital social integralizado, que 
+corresponde ao montante de R$ 281.993 em 30 de setembro de 2025 (R$270.163 em 31 de 
+dezembro de 2024).  
+ 
+d.2) Reserva para aquisição de ações 
+ 
+O saldo de R$12.547 em 30 de setembro de 2025 (R$10.683 em 31 de dezembro de 2024), 
+refere-se ao valor destinado  à recompra ou aquisição de ações de emissão  própria, para o 
+cumprimento do benefício de remuneração baseada em ações, oferecid o aos participantes 
+do plano de opções de compra ou subscrição de ações da Companhia.  
+ 
+A reserva está limitada a 20% do capital social e pode ser constituída com até 100% do lucro 
+líquido remanescente, após as deduções legais e estatutárias. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Notas Explicativas                                
+PÁGINA: 45 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+ 
+Notas explicativas às informações trimestrais--continuação 
+30 de setembro de 2025  
+(Em milhares de reais) 
+ 
+ 
+17.  Patrimônio líquido--Continuação 
+ 
+d) Reservas de lucros--Continuação 
+ 
+d.3) Incentivos fiscais 
+ 
+Corresponde à parcela  do lucro decorrente de subvenções governamentais para 
+investimentos (Nota 1 8) advind as do incentivo fiscal federal e dos incentivos fiscais 
+estaduais, ambos não incluídos na base de cálculo dos dividendos. 
+ 
+As movimentações estão demonstradas a seguir: 
+ 
+  Controladora / Consolidado 
+         
+ 
+ Incentivo 
+exportação 
+(Proapi) 
+ Incentivo  
+ICMS  
+(Provin e Proade)  
+Incentivo 
+Imposto  
+de renda 
+ Total  
+         
+Saldo em 31/12/2023  235.437  776.647  1.024.828  2.036.912 
+Destinação: Aumento de capital social  -  -  (1.024.828)  (1.024.828) 
+Incentivos fiscais gerados pela operação   -  136.431  120.758  257.189 
+Saldo em 31/12/2024  235.437  913.078  120.758  1.269.273 
+         
+Incentivos fiscais gerados pela operação   -  89.905  68.926  158.831 
+Saldo em 30/09/2025  235.437  1.002.983  189.684  1.428.104 
+ 
+e) Outros resultados abrangentes 
+ 
+Corresponde ao efeito acumulado de conversão cambial da moeda funcional para a moeda original 
+das informações trimestrais  das controladas , apurados sobre os investimentos societários 
+mantidos no exterior, avaliados pelo método de equivalência patrimonial. Esse efeito acumulado 
+será revertido para o resultado do período, como ajuste de reclassificação como ganho ou perda, 
+quando da alienação ou baixa do investimento. 
+ 
+f) Dividendos e juros sobre o capital próprio 
+ 
+O Estatuto Social e a legislação societária preveem distribuição de dividendo mínimo 
+obrigatório de 25% do lucro líquido remanescente do exercício, após constituição das 
+reservas previstas em lei.  
+ 
+A distribuição trimestral e ou semestral poderá ocorrer de forma antecipada, como 
+“Dividendos Intermediários” e /ou “Dividendo Adicional Proposto”. 
+ 
+Quando deliberados pelo Conselho de Administração, os juros sobre o capital próprio 
+são computados aos dividendos, com base na taxa de ju ros de longo prazo (TJLP) 
+vigente no exercício. Os juros sobre o capital próprio estão demonstrados no patrimônio 
+líquido e seu efeito fiscal no demonstrativo de resultado. 
+ 
+Os dividendos não reclamados pelos acionistas no prazo de 3 (três) anos da data da 
+deliberação, revertem em favor da Companhia. 
+ 
+A Ata da 1 13ª Reunião do Conselho de Administração realizada em 27 de fevereiro de 
+2025, aprovou o pagamento de dividendos adicionais propostos pela Administração em 
+31 de dezembro de 2024. Os valores foram pagos aos acionistas, a partir de 7 de maio de 
+2025, da seguinte forma: (i) R$120.555 de dividendo adicional; (ii) R$110.000 (R$93.500 
+líquido de IRRF) de juros sobre o capital próprio . Adicionalmente, o valor de R$4 de 
+dividendos prescritos. 
+Notas Explicativas                                
+PÁGINA: 46 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+ 
+Notas explicativas às informações trimestrais--continuação 
+30 de setembro de 2025  
+(Em milhares de reais) 
+ 
+ 
+17.  Patrimônio líquido--Continuação 
+ 
+f) Dividendos e juros sobre o capital próprio--Continuação 
+ 
+A Ata da 114ª Reunião do Conselho de Administração realizada em 8 de maio de 2025, aprovou 
+o pagamento de dividendos intermediários no valor de R$ 57.547 (representando R$0,0 638 por 
+ação), que foram pagos aos acionistas a partir de 29 de maio 2025, relativos ao saldo apurado até 
+31 de março de 2025. 
+ 
+A Ata da 116ª Reunião do Conselho de Administração realizada em 7 de agosto de 2025, aprovou 
+o pagamento de dividendos intermediários no valor de R$103.323 (representando R$0,1145 por 
+ação), sendo: (i) R$103.319 de dividendo intermediário; e (ii) R$4 de dividendos prescritos ; que 
+serão pagos aos acionistas a partir de 10 de setembro 2025, relativos ao saldo apurado até 30 de 
+junho de 2025. 
+ 
+A Administração propôs a distribuição de dividendos intermediários no valor de R$ 63.898 
+(representando R$0, 0708 por ação), sendo: (i) R$3.897 de dividendo intermediário; (ii) R$1 de 
+dividendos prescritos; e (iii) R$60.000 (R$51.000 líquido de IRRF) de juros sobre o capital próprio 
+relativo ao saldo apurado até 30 de setembro de 2025. 
+ 
+g) Resultado por ação 
+  
+A reconciliação do resultado líquido aos montantes utilizados para calcular o resultado básico e 
+diluído por ação (em milhares de reais, exceto valor por ação), está demonstrado a seguir:  
+ 
+  Controladora / Consolidado 
+     
+  30/09/2025  30/09/2024 
+     
+Numerador     
+Resultado líquido do período (a)  395.424  404.853 
+     
+Denominador      
+Média ponderada de ações ordinárias   902.160.000  902.160.000 
+Média ponderada de ações ordinárias em tesouraria   (155.405)  (104.498) 
+Média ponderada de ações ordinárias em circulação (b)  902.004.595  902.055.502 
+     
+Potencial incremento (redução) nas ações ordinárias, em virtude do plano de 
+opções de compra ou subscrição de ações 
+ (106.964)  (211.242) 
+Média ponderada de ações ordinárias, considerando potencial incremento (c)  901.897.631  901.844.260 
+     
+Resultado básico por ação ordinária (a/b)  0,4384  0,4488 
+Resultado diluído por ação ordinária (a/c)  0,4384  0,4489 
+ 
+ 
+18.  Subvenções governamentais para investimentos 
+ 
+As subvenções governamentais recebidas pela  Companhia têm a natureza de subvenção 
+para investimento, e correspondem à: (i) incentivos fiscais de ICMS relativamente às suas 
+atividades operacionais localizadas nos estados do Ceará, e (ii) redução de 75% do imposto 
+de renda incidente sobre os lucros dos empreendimentos instalados no estado do Ceará 
+calculado com base no lucro da exploração. 
+ 
+As subvenções governamentais são reconhecidas quando há razoável segurança de que 
+foram cumpridas as condições estabelecidas nos convênios. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Notas Explicativas                                
+PÁGINA: 47 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+ 
+Notas explicativas às informações trimestrais--continuação 
+30 de setembro de 2025  
+(Em milhares de reais) 
+ 
+ 
+18.  Subvenções governamentais para investimentos--Continuação 
+ 
+a) Incentivos fiscais estaduais 
+ 
+Proade – Programa de atração de empreendimentos estratégicos, iniciado a partir de 1° de outubro 
+de 2021, em substituição ao Programa de incentivo ao desenvolvimento industrial (Provin), o qual 
+consiste no diferimento equivalente a 88% para as unidades de Sobral, Fortaleza e Crato, do valor 
+do ICMS efetivamente recolhido, incidente sobre a sua produção própria. Do valor de cada parcela 
+do benefício, o equivalente a 1% será pago de uma só vez, no último dia do mês de vencimento, 
+após 60 meses  (Sobral) e 36 meses (Fortaleza e Crato)  e será devidamente corrigida, desde a 
+data do desembolso até a data de vencimento (31/12/2032), pela aplicação da TJLP.  
+ 
+Proapi – Programa de incentivos às atividades portuárias e industriais do Ceará, que vigorou até 
+31 de março de 2017, na unidade de Sobral – CE. 
+ 
+O Conselho Estadual de Desenvolvimento Industrial (CEDIN) publicou em 14/11/2019 Resolução 
+n° 131 que dispõe sobre o parcelamento do saldo de créditos do incentivo Proapi, o qual poderá 
+ser quitado em 60 parcelas mensais iguais e sucessivas.  
+ 
+Desta forma, o saldo registrado pela Companhia como títulos a receber de R$4.864, trazido a valor 
+presente em 30 de setembro de 2025 é de R$4.686 (R$14.530 em 31 de dezembro de 2024, que 
+trazido a valor presente era de R$12.737). 
+ 
+Os saldos destes incentivos foram registrados no resultado da controladora e consolidado, no 
+grupo de receita líquida de vendas, conforme demonstrado na Nota 2 4. Esses valores foram 
+alocados como reserva de lucros na conta de "Incentivos Fiscais" no patrimônio líquido. A partir 
+de 2024, o incentivo fiscal de ICMS (Proade) pass ou a ser tributado de PIS, COFINS, IRPJ e 
+CSLL, e a reserva constituída apresenta-se líquida desses impostos. 
+ 
+b) Incentivo fiscal federal 
+ 
+A Companhia é beneficiária de incentivo fiscal obtido por redução de 75% do imposto de renda 
+incidente sobre os lucros dos empreendimentos localizados nas unidades industriais sediadas na 
+área de atuação da SUDENE, conforme demonstrado no quadro abaixo: 
+ 
+Unidades incentivadas  Projeto  Percentual de redução   Prazos de vigência 
+       
+Fortaleza – CE  Modernização  75%  Dez/2030 
+Sobral – CE  Modernização  75%  Dez/2031 
+Crato – CE  Modernização  75%  Dez/2026 
+             
+Os saldos deste incentivo foram registrados no resultado da Companhia, no grupo do imposto de 
+renda corrente, conforme demonstrado na Nota 19. Em contrapartida, esses valores foram 
+reconhecidos na reserva de lucros à conta de “Incentivos fiscais”, no patrimônio líquido.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Notas Explicativas                                
+PÁGINA: 48 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+ 
+Notas explicativas às informações trimestrais--continuação 
+30 de setembro de 2025  
+(Em milhares de reais) 
+ 
+ 
+19.  Imposto de renda e contribuição social 
+ 
+a) Imposto de renda e contribuição social correntes 
+ 
+Os valores devidos do imposto de renda e contribuição social correntes, líquidos dos incentivos 
+fiscais e registrados como despesa nos exercícios, estão demonstrados a seguir: 
+ 
+  Controladora  Consolidado 
+         
+  30/09/2025  30/09/2024  30/09/2025  30/09/2024 
+         
+Imposto de renda  (9.910)  (734)  (9.910)  (909) 
+Valor devido  (78.836)  (79.188)  (78.836)  (79.363) 
+   Incentivo fiscal  68.926  78.454  68.926  78.454 
+         
+Contribuição social  (29.581)  (29.341)  (29.581)  (29.410) 
+Valor devido  (29.581)  (29.341)  (29.581)  (29.410) 
+         
+  (39.491)  (30.075)  (39.491)  (30.319) 
+ 
+b) Imposto de renda e contribuição social diferidos 
+ 
+A composição do imposto de renda e contribuição social diferidos está demonstrada a seguir:  
+ 
+  Controladora  Consolidado 
+         
+  30/09/2025  31/12/2024  30/09/2025  31/12/2024 
+         
+Perdas estimadas para créditos de liquidação duvidosa  1.080  358  1.080  358 
+Descontos por pontualidade estimados  8.610  7.225  8.610  7.225 
+Ajustes a valor presente   4.147  4.303  4.147  4.303 
+Valor justo de instrumentos financeiros de SPE   2.207  1.202  2.207  1.202 
+Perdas estimadas para ajuste dos estoques obsoletos  1.296  1.294  1.296  1.294 
+Provisão para riscos trabalhistas, fiscais e cíveis  878  1.459  878  1.459 
+Outros  487  (57)  290  (130) 
+  18.705  15.784  18.508  15.711 
+ 
+c) Estimativa de realização do imposto de renda e contribuição social diferido 
+ 
+A realização do imposto de renda e contribuição social diferido está suportada por estudos 
+técnicos de viabilidade, os quais demonstram uma estimativa da realização dos ativos diferidos.  
+ 
+A Companhia estima a realização dos créditos tributários nos seguintes exercícios: 
+ 
+  Controladora  Consolidado 
+         
+  30/09/2025  31/12/2024  30/09/2025  31/12/2024 
+         
+2025  8.097  13.723  7.900  13.650 
+2026  7.682  448  7.682  448 
+2027  566  227  566  227 
+2028  53  39  53  39 
+2029 a 2074  2.307  1.347  2.307  1.347 
+  18.705  15.784  18.508  15.711 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Notas Explicativas                                
+PÁGINA: 49 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+ 
+Notas explicativas às informações trimestrais--continuação 
+30 de setembro de 2025  
+(Em milhares de reais) 
+ 
+ 
+19.  Imposto de renda e contribuição social--Continuação 
+ 
+d) Conciliação da despesa tributária com as alíquotas oficiais 
+ 
+Os valores do imposto de renda e contribuição social, calculados às alíquotas nominais, 
+registrados no resultado, estão conciliados conforme segue: 
+ 
+  Controladora  Consolidado 
+         
+  30/09/2025  30/09/2024  30/09/2025  30/09/2024 
+         
+Resultado antes dos tributos   431.994  464.731  432.118  464.982 
+         
+Alíquota nominal combinadas de Imposto de Renda (25%) e 
+Contribuição Social (9%) 
+ (146.878)  (158.009)  (146.920)  (158.094) 
+         
+Ajustes para demonstração da taxa efetiva         
+Adições         
+  Ajustes a valor justo  (985)  -  (985)  - 
+  Custos e despesas não dedutíveis  (540)  -  (539)  - 
+  Resultado de equivalência patrimonial   (38.645)  (19.826)  (686)  (17.207) 
+  Realização ajuste reclassificação – ganho na baixa de 
+investimento 
+ (1.572)  -  (1.572)  - 
+  Outras adições   (3.994)  (694)  (41.953)  (3.504) 
+Exclusões         
+  Ajustes a valor justo  -  11.131  -  11.131 
+  Custos e despesas não dedutíveis  -  3.324  -  3.326 
+  Créditos fiscais de subvenção para investimento   3.812  3.682  3.812  3.682 
+  Programa alimentação do trabalhador (PAT)  3.286  -  3.286  - 
+  Incentivos fiscais de dedução do IRPJ   30  2.296  30  2.296 
+  Incentivo à inovação tecnológica  6.986  7.036  6.986  7.036 
+  Juros sobre o capital próprio imputado aos dividendos  37.400  -  37.400  - 
+  Resultado de equivalência patrimonial  22.237  3.819  22.237  3.819 
+  Outros instrumentos financeiros - Dividendos  11.486  3.648  11.486  3.648 
+  Combinação de negócio – mais valia   1.737  -  1.737  - 
+  Outras exclusões  144  5.261  61  5.284 
+Valor antes da dedução do incentivo fiscal (Lucro da 
+exploração) 
+ (105.496)  (138.332)  (105.620)  (138.583) 
+         
+Incentivos fiscais (Lucro da exploração)   68.926  78.454  68.926  78.454 
+         
+Total de IR e CS registrados no resultado  (36.570)  (59.878)  (36.694)  (60.129) 
+Corrente  (39.491)  (30.075)  (39.491)  (30.319) 
+Diferido   2.921  (29.803)  2.797  (29.810) 
+         
+Alíquota efetiva   8,5%  12,9%  8,2%  12,9% 
+ 
+ 
+20.  Instrumentos financeiros 
+ 
+A Companhia mantém operações com instrumentos financeiros, cujos riscos são administrados 
+através de estratégias de posições financeiras e sistemas de limite de exposição dos mesmos. Todas 
+as operações são integralmente reconhecidas na contabilidade.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Notas Explicativas                                
+PÁGINA: 50 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+ 
+Notas explicativas às informações trimestrais--continuação 
+30 de setembro de 2025  
+(Em milhares de reais) 
+ 
+ 
+20.  Instrumentos financeiros--Continuação 
+ 
+No quadro abaixo, apresentamos a classificação dos principais ativos e passivos financeiros da 
+Companhia e suas controladas: 
+ 
+  Controladora  Consolidado 
+         
+  30/09/2025  31/12/2024  30/09/2025  31/12/2024 
+         
+Ativos financeiros ao custo amortizado (*)          
+Caixa e equivalentes   60.756  48.016  92.011  76.109 
+Aplicações financeiras e outros ativos financeiros   1.235.812  1.324.875  1.235.812  1.324.875 
+Contas a receber de clientes  1.037.294  1.274.282  1.006.216  1.210.309 
+Ativos financeiros ao valor justo por meio do resultado         
+Outros ativos financeiros (ii)   193.397  202.213  193.397  202.213 
+Derivativos (i) (*)  -  851  -  851 
+         
+Passivos financeiros ao custo amortizado (*)         
+Empréstimos e financiamentos  82.477  68.939  82.477  68.939 
+Contratos de arrendamentos  -  -  1.226  19.885 
+Fornecedores  61.306  57.799  74.336  69.701 
+Comissões a pagar  55.594  59.497  55.594  58.912 
+            
+(*) Os saldos contábeis de 30 de setembro de 2025 e 31 de dezembro de 2024 refletem os valores justos dos instrumentos 
+financeiros. 
+(i) Nível 2: Operações que possuem informações observáveis para ativos e passivos, que não tenham preços cotados; 
+(ii) Nível 3: Operações que não possuem dados observáveis para ativos e passivos e que refletem premissas para a 
+precificação. 
+ 
+Operações de instrumentos derivativos cambiais  
+ 
+A estratégia de contratação dessas operações visa proteger as receitas de vendas e os ativos 
+financeiros da Companhia e de suas controladas expostas à variação cambial. Os instrumentos são 
+utilizados exclusivamente para fins de hedge, com o portifólio composto pela venda futura de dólares 
+dos Estados Unidos, por meio de instrumentos financeiros específicos, como contratos de venda na 
+B3 e Adiantamentos de Câmbio Entregues (ACE). 
+ 
+Nas operações de contrato de venda na B3 , o impacto no fluxo de caixa da Companhia e de suas 
+controladas ocorre à medida que são apurados os  ajustes da cotação do dólar dos Estados Unidos 
+até a liquidação dos contratos. 
+ 
+Para reduzir a exposição cambial líquida de seus negócios, a Administração da Companhia determina 
+que os gestores poderão negociar contratos futuros de vendas de USD, exclusivamente na B3 até o 
+limite máximo dado pela soma dos seguintes itens: (i) saldos bancários em moeda estrangeira 
+mantidos no exterior; (ii) aplicações financeiras mantidas no exterior; (iii) saldo de contas a receber 
+(denominados em USD) de câmbios a contratar; (iv) até 25% das projeções de exportações anuais 
+equivalente há aproximadamente 90 dias de exportações previstas (normalmente correspondente a 
+pedidos em carteira e negociações de vendas em andamento), menos (a) saldos de fornecedores 
+mantidos em moeda estrangeira, (b) importações em andamento, e (c) ACC (Adiantamento de 
+contrato de câmbio).  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Notas Explicativas                                
+PÁGINA: 51 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+ 
+Notas explicativas às informações trimestrais--continuação 
+30 de setembro de 2025  
+(Em milhares de reais) 
+ 
+ 
+20.  Instrumentos financeiros--Continuação 
+ 
+Operações de instrumentos derivativos cambiais--Continuação  
+ 
+Os riscos são monitorados diariamente e gerenciados por meio de controles internos, que visam 
+demonstrar os limites de exposição e adequá-los à política de gestão de riscos da Companhia. 
+ 
+As operações de hedge cambial realizadas na B3 são efetuadas por corretoras especializadas, com 
+a exigência de garantias específicas. O valor das garantias, em 30 de setembro de 2025, totaliza 
+R$37.920 (R$52.477 em 31 de dezembro de 2024 ), sendo composto por aplicações financeiras da 
+Companhia em títulos públicos, em conformidade com os limites e exposições ao risco de câmbio 
+estabelecidos na política de gestão de riscos e pelas contrapartes envolvidas. 
+ 
+No quadro abaixo está demonstrado a posição de 31 de dezembro de 2024, com os valores nominais 
+e de mercado. 
+ 
+  Valor de referência 
+(notional) – USD  Valor de referência – R$  Saldo a Receber (Pagar) 
+             
+  30/09/2025  31/12/2024  30/09/2025  31/12/2024  30/09/2025  31/12/2024 
+             
+Contratos futuros             
+  Compromisso de venda  -  (47.000)  -  (292.326)  -  851 
+ 
+Essas operações estão diretamente associadas ao recebimento das vendas e a ativos financeiros 
+denominados em moeda estrangeira, os quais estão sujeitos à variação da taxa de câmbio e visam 
+compensar eventuais ganhos ou perdas resultantes dessa flutuação cambial. O saldo a receber , 
+registrado em 31 de dezembro de 2024, é de R$851 e está classificado em “títulos a receber”. 
+ 
+ 
+21.  Gestão de riscos 
+ 
+Os riscos são gerenciados, através das políticas de governança, que estabelecem as técnicas de 
+acompanhamento, mensuração e monitoramento contínuo da exposição, alinhadas às estratégias de 
+crescimento dos negócios e da responsabilidade socioambiental.  
+ 
+a) Gestão de riscos operacionais 
+ 
+A estrutura organizacional dos processos de gerenciamento de riscos da Companhia, utiliza como 
+parâmetro as três linhas do IIA (The Institute of Internal Auditors) e metodologicamente baseia-se 
+no framework ERM ( Enterprise Risk Management ) do COSO ( Committee of Sponsoring 
+Organizations of the Treadway Commission ), no que diz respeito ao fluxo de identificação, 
+avaliação, tratamento e monitoramento dos riscos aos quais a Companhia e suas controladas 
+estão expostas. 
+ 
+Nesse sentido, a Companhia atua junto aos riscos: estratégico, operacional, de conformidade, 
+financeiro e mercado, da informação, tecnológico e socioambiental, conforme política aprovada 
+pelo Conselho de Administração da Grendene. 
+ 
+No que se refere ao tratamento dos riscos: 
+ 
+(i) O processo de gerenciamento de riscos corporativos permeia todos os processos de 
+negócios, portanto, todos os colaboradores são responsáveis pela gestão dos riscos da 
+Companhia, desde a definição de estratégias e projetos, como na execução de suas funções 
+no dia a dia; 
+ 
+ 
+ 
+Notas Explicativas                                
+PÁGINA: 52 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+ 
+Notas explicativas às informações trimestrais--continuação 
+30 de setembro de 2025  
+(Em milhares de reais) 
+ 
+ 
+21.  Gestão de riscos--Continuação 
+ 
+a) Gestão de riscos operacionais--Continuação 
+ 
+(ii) O Departamento de Governança, Riscos e Compliance (GRC) coordena o processo de 
+Gerenciamento de Riscos Corporativos da Grendene, assessorando metodologicamente as 
+áreas de negócios na identificação, classificação, avaliação e tratamento dos riscos inerentes 
+aos seus processos; 
+ 
+(iii) A função da Auditoria Interna é de examinar com independência, imparcialidade e de forma 
+tempestiva a efetividade e qualidade do processo de gerenciamento de riscos corporativos da 
+Grendene, registrando as fragilidades e fazendo recomendações para a melhoria e ajustes 
+no referido processo. 
+ 
+O Comitê de Auditoria supervisiona as atividades, a efetividade, a evolução e a estrutura do 
+gerenciamento de riscos corporativos da Grendene S.A., bem como sugere melhorias ao Conselho 
+de Administração.  
+ 
+Toda essa estrutura visa garantir, com o devido patrocínio e monitoramento da alta gestão (como 
+Diretoria e Conselho de Administração), uma eficiente e eficaz gestão de riscos corporativos na 
+Companhia. 
+ 
+b) Gestão de riscos sociais e ambientais 
+ 
+A Companhia está exposta à riscos socioambientais pela possibilidade de ocorrência de danos 
+ambientais, uso inadequado de recursos naturais, não atendimento às exigências e 
+regulamentações vigentes, pela obsolescência de estoque, pelos impactos de clima ex tremo e 
+falha nas respostas às mudanças climáticas. 
+ 
+Risco do uso inadequado de recursos naturais : há riscos relacionados ao descarte inadequado 
+dos resíduos gerados em nossas operações.  
+ 
+Para mitigar esses riscos, a Companhia conta com o “Plano de Gerenciamento de Resíduos 
+Sólidos” e o “Programa de Coleta Seletiva”, em todas as unidades. Esse plano e programa 
+estabelecem diretrizes claras para o armazenamento, transporte e destinação ambientalmente 
+adequada dos resíduos. Além disso, investimos em tecnologias industriais avanç adas, como 
+máquinas e equipamentos, que ampliam a nossa eficiência no uso de materiais e auxiliam para a 
+redução do desperdício. 
+ 
+Não atendimento às exigências e regulamentações socioambientais:  decorrentes da criação ou 
+alteração de normas estabelecidas pelos órgãos reguladores, que podem impactar o controle das 
+atividades reguladas, as condições de fornecimento e as regulamentações ambientais ou fiscais.  
+ 
+A Companhia monitora constantemente os requisitos legais aplicáveis às suas atividades e realiza 
+avaliações regulares para garantir a conformidade com as normas ambientais nacionais e 
+internacionais. Utiliza um software modular de gestão, que funciona como  Sistema de Gestão e 
+Monitoramento de Requisitos Legais Aplicáveis, proporcionando uma gestão eficiente, segura e 
+ágil em tempo real. Assim, minimiza os riscos e prejuízos, otimizando os processos e garantindo 
+o cumprimento das leis e normas internacionais de certificação ISO. 
+ 
+Obsolescência de estoques: Com a crescente importância das questões climáticas nas decisões 
+de consumo, existe o risco de que certos produtos se tornem obsoletos, caso não atendam às 
+novas expectativas de sustentabilidade e responsabilidade ambiental dos consumidores. Essas 
+mudanças podem afetar a demanda por produtos, resultando em estoques que não atendem às 
+preferências de mercado. 
+ 
+Notas Explicativas                                
+PÁGINA: 53 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+ 
+Notas explicativas às informações trimestrais--continuação 
+30 de setembro de 2025  
+(Em milhares de reais) 
+ 
+ 
+21.  Gestão de riscos--Continuação 
+ 
+b) Gestão de riscos sociais e ambientais--Continuação 
+ 
+Para mitigar esse risco, implementa-se medidas proativas, como a diversificação da cadeia de 
+suprimentos, investimentos em tecnologias limpas e o engajamento contínuo com as partes 
+interessadas. Essas ações são fundamentais para adaptar os produtos às demandas emergentes, 
+garantir sua relevância no mercado e evitar a obsolescência dos estoques.  
+ 
+Riscos climáticos: há risco de falha nas respostas climáticas e o risco de clima extremo. Esses 
+riscos podem causar problemas, como falta de água e energia elétrica, especialmente porque 
+parte de nossas operações industriais está localizada no semiárido brasileiro. Além dis so, o 
+excesso de chuvas pode impactar as rotas logísticas, afetando o desempenho e prazos de 
+entregas.  
+ 
+Para minimizar esses riscos, adotam-se ações que visam a redução e reuso de água e a eficiência 
+energética, através do uso de energia renovável para reduzir os impactos das emissões de gases 
+de efeito estufa em nossas operações. Estrategicamente, a Companhia detém investimento em 
+negócio de energia (SPE  – Geradora Várzea Solar II S.A.), visando atender parte de sua 
+necessidade de consumo de energia por meio de fontes renováveis. 
+ 
+Os mecanismos de gestão e monitoramento destes riscos, seguem a política de sustentabilidade 
+que é guiada por três pilares: (i) Valorização e respeito às pessoas; (ii) Operações ecoeficientes; 
+e (iii) Produtos de menor impacto. 
+ 
+c) Gestão de riscos financeiros  
+ 
+c.1) Riscos de crédito 
+ 
+O Grupo está exposto aos riscos de crédito em suas atividades operacionais decorrente do 
+contas a receber de clientes e de contrapartes em investimentos financeiros, incluindo 
+depósitos em bancos e instituições financeiras, transações cambiais e outros ins trumentos 
+financeiros.  
+ 
+As práticas de gestão de risco são as seguintes: (i) Contas a receber de clientes : a 
+Administração visa minimizar eventuais problemas decorrentes da inadimplência de seus 
+clientes, por meio da análise de créditos da carteira de clientes, estabelecimento de limite de 
+vendas e vendas pulverizadas. Não há clientes que individualmente repr esentem mais que 
+5% do total do contas a receber de clientes da Companhia em 30 de setembro de 2025 e 31 
+de dezembro de 2024; e (ii) Instrumentos financeiros, caixa e equivalentes e outros ativos 
+financeiros: os recursos financeiros da Companhia estão alocados de forma diversificada em 
+ativos financeiros que podem ser papéis emitidos por instituições financeiras que são 
+considerados pelo mercado como de primeira linha, títulos públicos ou títulos privados, como 
+por exemplo, debêntures, certificados de recebíveis imobiliários, títulos de crédito, entre 
+outros, que buscam remuneração atrelada a uma cesta de indicadores como: CDI, taxas pré-
+fixadas ou corrigidos por índices de inflação.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Notas Explicativas                                
+PÁGINA: 54 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+ 
+Notas explicativas às informações trimestrais--continuação 
+30 de setembro de 2025  
+(Em milhares de reais) 
+ 
+ 
+21.  Gestão de riscos--Continuação 
+ 
+c) Gestão de riscos financeiros--Continuação  
+ 
+c.1) Riscos de crédito--Continuação 
+ 
+As oportunidades de investimento de maior risco (aquelas com títulos privados), são avaliadas 
+pelo comitê de investimentos criado para este fim e que, segundo política da Companhia, 
+pode destinar até R$1,2 bilhões para este tipo de investimento. 
+ 
+c.2) Riscos de liquidez 
+ 
+A Companhia monitora a política de geração de caixa das atividades para evitar o 
+descasamento entre as contas a receber e a pagar, garantindo assim a liquidez para o 
+cumprimento de suas obrigações. As principais fontes de recursos financeiros utilizados pela 
+Companhia residem no próprio volume de recursos advindos da comercialização dos seus 
+produtos; com a característica de forte geração de caixa e baixa inadimplência. 
+Adicionalmente, mantém saldos em aplicações financeiras passíveis de resgate há qualquer 
+momento e apresenta sólidas condições financeiras e patrimoniais para cumprir com suas 
+obrigações de curto e médio prazo.  
+ 
+A seguir, apresentamos a projeção dos pagamentos contratuais da Companhia, que inclui 
+os juros futuros. 
+ 
+  Controladora / Consolidado 
+             
+  30/09/2025  31/12/2024 
+  Até um 
+ano 
+ De 1 a 5 
+anos 
+  
+Total 
+ Até um 
+ano 
+ De 1 a 5 
+anos 
+  
+Total 
+             
+Financiamentos incentivados  3.352  16.100  19.452  2.203  14.629  16.832 
+Financiamentos – ACE  67.600  -  67.600  55.894  -  55.894 
+  70.952  16.100  87.052  58.097  14.629  72.726 
+ 
+c.3) Riscos de mercado 
+ 
+Os riscos de mercado envolvem principalmente a possibilidade de oscilação nas taxas de 
+juros, taxas de câmbio, preço das commodities e ações. 
+ 
+i) Risco da taxa de juros 
+ 
+Este risco está relacionado à possibilidade de a Companhia incorrer em perdas devido à 
+flutuação das taxas de juros, o que poderia aumentar suas despesas financeiras com 
+empréstimos e financiamentos ou reduzir o retorno de suas aplicações. A Companhia 
+monitora constantemente a volatilidade das taxas de juros no mercado.  
+ 
+A política da Companhia visa manter seus recursos aplicados em instrumentos financeiros 
+atrelados ao CDI, em taxas pré -fixadas ou corrigidos pela inflação, o que ajuda a mitigar 
+os impactos de variações nas taxas de juros de mercado. 
+ 
+Apresentamos as posições em aberto de 30 de setembro de 2025, inclusos os testes de 
+sensibilidade para cenários de variação de taxas ou indicadores. Esses testes consideram 
+um cenário provável, com impactos decrescentes para aplicações financeiras e crescentes 
+para os financiamentos, conforme segue: 
+ 
+ 
+ 
+Notas Explicativas                                
+PÁGINA: 55 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+ 
+Notas explicativas às informações trimestrais--continuação 
+30 de setembro de 2025  
+(Em milhares de reais) 
+ 
+ 
+21.  Gestão de riscos--Continuação 
+ 
+c) Gestão de riscos financeiros--Continuação 
+ 
+c.3) Riscos de mercado--Continuação 
+ 
+i) Risco da taxa de juros--Continuação 
+ 
+    Cenário de sensibilidade 
+               
+Fator de risco 
+ 
+% a.a. 
+ Saldo em 
+30/09/2025 
+ Remoto 
+- 50%  
+Possível 
+- 25% 
+ Provável  Possível 
++ 25% 
+ Remoto 
++ 50% 
+               
+Aplicações financeiras de renda fixa               
+CDI  14,9000%  973.590  113.267  121.381  129.326  140.278  147.934 
+IPCA  5,1305%  37.919  3.238  3.709  4.180  4.651  5.121 
+INCC  7,2274%  124.132  11.959  13.451  14.941  16.429  17.915 
+               
+Financiamentos incentivados               
+TJLP  9,0700%  (16.878)  (1.032)  (1.289)  (1.547)  (774)  (516) 
+ 
+ii) Risco cambial 
+ 
+O risco da Companhia está atrelado às operações do contas a receber de clientes 
+originada das exportações, aplicações financeiras e investimentos no exterior, para as 
+quais são constituídas um hedge natural para proteção das oscilações de câmbio. A 
+gestão avalia seus ativos e passivos expostos ao risco da variação cambial, e se 
+necessário, contrata instrumentos financeiros derivativos adicionais. 
+ 
+Em 30 de setembro de 202 5, a Companhia possui cobertura para suas exposições à 
+flutuação cambial nas operações de vendas para o mercado externo, com vencimento dos 
+contratos de exportação no valor de USD12.335 (USD8.804 em 31 de dezembro de 2024). 
+ 
+Os valores líquidos ativos e passivos em moeda estrangeira, estão demonstrados a seguir: 
+ 
+        Cenário de sensibilidade 
+                 
+Fator de risco 
+ Posição 
+carteira 
+em USD  Cotação  
+Saldo em 
+30/09/2025  
+Remoto 
+- 50%  
+Possível 
+- 25% 
+ 
+Possível 
++ 25% 
+ 
+Remoto 
++ 50% 
+               
+Exposição cambial               
+               
+ Ativo               
+  Conta corrente  17  5,3180  90  (45)  (23)  23  45 
+  Contas a receber de clientes  33.129  5,3180  176.179  (88.090)  (44.045)  44.045  88.090 
+ 
+              
+ Passivo               
+  Adiantamento de clientes  (1.618)  5,3180  (8.607)  4.303  2.152  (2.152)  (4.303) 
+  Contas a pagar  (2.952)  5,3186  (15.698)  7.849  3.924  (3.924)  (7.849) 
+  Empréstimos e financiamentos - ACE  (12.335)  5,3180  (65.599)  32.800  16.400  (16.400)  (32.800) 
+Exposição líquida   16.241    86.365  (43.183)  (21.592)  21.592  43.183 
+ 
+ii) Risco de preço das commodities 
+ 
+Esse risco está relacionado à possibilidade de oscilação no preço das matérias primas e 
+demais insumos utilizados no processo de produção. Em função de utilizar commodities 
+como matéria-prima, a Companhia poderá ter seus custos dos produtos vendidos afetados 
+por alterações nos preços internacionais destes materiais. Para minimizar esse risco, a 
+Companhia monitora permanentemente as oscilações de preço nos mercados  nacional e 
+internacional e quando for o caso, utiliza -se da formação de estoques estratégicos para 
+manter suas atividades comerciais. 
+ 
+ 
+ 
+ 
+Notas Explicativas                                
+PÁGINA: 56 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+ 
+Notas explicativas às informações trimestrais--continuação 
+30 de setembro de 2025  
+(Em milhares de reais) 
+ 
+ 
+21.  Gestão de riscos--Continuação 
+ 
+c) Gestão de riscos financeiros--Continuação 
+ 
+c.3) Riscos de mercado--Continuação 
+ 
+iii) Risco da taxa de retorno das SCPs 
+ 
+O risco da Companhia está relacionado ao retorno esperado de cada operação, levando 
+em consideração não apenas os riscos específicos de cada ativo, mas também as 
+expectativas macroeconômicas do mercado, como as perspectivas para a construção civil 
+e o cenário da taxa básica de juros. 
+ 
+A Companhia projetou o impacto das operações em Sociedade em Conta de Participação 
+(SCPs), com base na taxa média de retorno esperada até 30 de setembro de 202 5, 
+conforme demonstrado a seguir:  
+ 
+      Cenário de sensibilidade 
+               
+Fator de risco 
+ Taxa média 
+de retorno  
+Saldo em 
+30/09/2025  
+Remoto 
+- 50%  
+Possível 
+- 25% 
+ Provável 
+ 
+ Possível 
++ 25% 
+ Remoto 
++ 50% 
+               
+Outros ativos financeiros - SCPs               
+   Valores dos imóveis  18,5231%  151.703  2.822  4.233  5.848  7.056  8.467 
+ 
+d) Gestão de capital 
+ 
+A Administração tem como objetivo assegurar a continuidade dos negócios da Companhia, 
+protegendo seu capital contra mudanças nas condições econômicas, a fim de reduzir os custos de 
+capital e maximizar o retorno aos acionistas. Para manter ou ajustar a estrutura de capital, a 
+Companhia pode revisar sua política de pagamento de dividendos, captar empréstimos, emitir 
+valores mobiliários no mercado financeiro, entre outras ações. 
+ 
+A política da Companhia visa manter um baixo nível de alavancagem, sendo monitorada por meio 
+do índice de alavancagem financeira, conforme demonstrado abaixo: 
+ 
+  Controladora  Consolidado 
+         
+  30/09/2025  31/12/2024  30/09/2025  31/12/2024 
+         
+Empréstimos e financiamentos   82.477  68.939  82.477  68.939 
+Contratos de arrendamentos  -  -  1.226  19.885 
+(-) Caixa e equivalentes   (60.756)  (48.016)  (92.011)  (76.109) 
+Dívida líquida  21.721  20.923  (8.308)  12.715 
+         
+Patrimônio líquido  4.050.731  4.040.946  4.050.731  4.040.946 
+Índice de alavancagem financeira  0,5%  0,5%  -0,2%  0,3% 
+ 
+ 
+22.  Partes relacionadas 
+ 
+As partes relacionadas da Companhia são: controladas  e coligadas, outras empresas com 
+participação de acionistas e profissionais chaves da administração da Companhia.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Notas Explicativas                                
+PÁGINA: 57 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+ 
+Notas explicativas às informações trimestrais--continuação 
+30 de setembro de 2025  
+(Em milhares de reais) 
+ 
+ 
+22.  Partes relacionadas--Continuação 
+ 
+a) Montantes dos saldos e transações com partes relacionadas 
+ 
+  Controladora  Consolidado 
+             
+  Natureza das 
+operações 
+ Relacionamento  30/09/2025  31/12/2024  30/09/2025  31/12/2024 
+             
+ATIVO   
+ 
+ 
+ 
+831.732  560.125  694.882  359.261 
+             
+ Outros ativos financeiros   
+ 
+ 
+ 
+60.559  31.649  60.559  31.649 
+  SCP Gouda Even II  Investimento  Outras transações 
+ 
+-  3.750  -  3.750 
+  SCP Mairinque  Investimento 
+ 
+Outras transações 
+ 
+20.109  23.358  20.109  23.358 
+  SCP Primavera  Investimento 
+ 
+Outras transações 
+ 
+40.450  -  40.450  - 
+  SCP Venâncio  Investimento 
+ 
+Outras transações 
+ 
+-  4.541  -  4.541 
+             
+ Contas a receber de clientes   
+ 
+ 
+ 
+41.119  69.051  2.359  1.083 
+  Grendene Italy SRL.  Venda de calçados 
+ 
+Controlada direta 
+ 
+1.328  1.044  -  - 
+  Grendene Global Brands Limited (i)  Venda de calçados  
+ 
+Controlada direta 
+ 
+37.432  66.924  -  - 
+  Vulcabras BA Calçados e Artigos Esportivos S.A.  Venda de insumos 
+ 
+Outras transações 
+ 
+-  24  -  24 
+  Calzados Azaleia Peru S.A.  Venda de calçados 
+ 
+Outras transações 
+ 
+2.359  1.059  2.359  1.059 
+             
+Estoques   
+ 
+ 
+ 
+400  588  400  588 
+  Vulcabras - CE, Calçados e Artigos   Esportivos S.A. 
+   
+ Compras de calçados 
+ 
+Outras transações 
+ 
+108  296  108  296 
+ Compras de matrizes e 
+ferramentais 
+ Outras transações  292  292  292  292 
+             
+ Outros créditos   
+ 
+ 
+ 
+5.720  14.953  3.662  14.878 
+  Grendene Italy SRL.  Outros créditos 
+ 
+Controlada direta 
+ 
+2.058  75  -  - 
+  YOUPE Participações S.A.  Outros créditos  Coligada  2.749  3.771  2.749  3.771 
+  NM GAP II Participações S.A.  Outros créditos  Coligada  -  17  -  17 
+  HIPE Participações S.A.  Outros créditos  Coligada  -  367  -  367 
+  NM IBIRA Participações S.A.  Outros créditos  Coligada  910  10.723  910  10.723 
+  Vulcabras - CE, Calçados e Artigos   Esportivos S.A.  Outros créditos  Outras transações  3  -  3  - 
+             
+ Investimentos   
+ 
+ 
+ 
+723.934  443.884  627.902  311.063 
+  MHL Calçados Ltda.  Investimento 
+ 
+Controlada direta 
+ 
+17.059  15.308  -  - 
+  Grendene USA, Inc  Investimento 
+ 
+Controlada direta 
+ 
+181  118  -  - 
+  Grendene Italy S.R.L.  Investimento 
+ 
+Controlada direta 
+ 
+3.196  4.553  -  - 
+  Grendene Global Brands Limited.(i)  Investimento 
+ 
+Controlada direta 
+ 
+75.596  112.842  -  - 
+  YOUPE Participações S.A.  Investimento 
+ 
+Coligada 
+ 
+647  635  647  635 
+  HIPE Participações S.A.  Investimento 
+ 
+Coligada 
+ 
+229.257  229.575  229.257  229.575 
+  NM GAP II Participações S.A.  Investimento 
+ 
+Coligada 
+ 
+48.947  25.545  48.947  25.545 
+  NM IBIRA Participações S.A.  Investimento 
+ 
+Coligada 
+ 
+81.564  41.996  81.564  41.996 
+  NM Vila Participações S.A.  Investimento 
+ 
+Coligada 
+ 
+261.835  7.660  261.835  7.660 
+  NM GAP Participações Ltda.  Investimento 
+ 
+Outras sociedades 
+ 
+5.652  5.652  5.652  5.652 
+             
+             
+PASSIVO   
+ 
+ 
+ 
+42.509  26.461  42.509  25.876 
+             
+ Obrigações contratuais      1.138  1.035  1.138  1.035 
+  Vulcabras - CE, Calçados e Artigos Esportivos S.A.  Licenciamento (Uso da 
+marca “Azaleia”) 
+ Outras transações  1.138  1.035  1.138  1.035 
+             
+ Comissões a pagar      -  585  -  - 
+  Grendene Global Brands Limited.(i)  Serviços de comissão  Controlada direta  -  585  -  - 
+             
+ Adiantamento de clientes      3  24  3  24 
+  Vulcabras - CE, Calçados e Artigos Esportivos S.A.  Adiantamentos recebidos  Outras transações  3  24  3  24 
+             
+ Outras contas a pagar      41.368  24.817  41.368  24.817 
+  Radar Privati Fund I LP e afiliados (“Fundos Radar”)  Aquisição de controlada  Outas transações  19.945  22.738  19.945  22.738 
+  HIPE Participações S.A.  Adiantamentos recebidos  Coligadas  11.020  657  11.020  657 
+  YOUPE Participações S.A.  Adiantamentos recebidos  Coligadas  -  154  -  154 
+  NM GAP II Participações S.A.  Adiantamentos recebidos  Coligadas  8.721  877  8.721  877 
+  NM IBIRA Participações S.A.  Adiantamentos recebidos  Coligadas  273  391  273  391 
+  NM GAP Participações Ltda.  Adiantamentos recebidos  Outras sociedades  1.409  -  1.409  - 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Notas Explicativas                                
+PÁGINA: 58 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+ 
+Notas explicativas às informações trimestrais--continuação 
+30 de setembro de 2025  
+(Em milhares de reais) 
+ 
+ 
+22.  Partes relacionadas--Continuação 
+ 
+a) Montantes dos saldos e transações com partes relacionadas--Continuação 
+ 
+  Controladora  Consolidado 
+               
+  Natureza das 
+operações 
+ Relacionamento  Prazos  30/09/2025  30/09/2024  30/09/2025  30/09/2024 
+               
+DEMONSTRAÇÃO DO RESULTADO   
+ 
+ 
+ 
+  (815)  (8.729)  72.086  (1.512) 
+               
+ Receita líquida de vendas   
+ 
+ 
+ 
+  47.539  34.969  4.068  34.342 
+  Grendene Italy S.R.L.  Venda de calçados 
+ 
+Controlada direta 
+ 
+170 dias  1.976  627  -  - 
+  Grendene Global Brands Limited.(i)  Venda de calçados 
+ 
+Controlada direta 
+ 
+264 dias  41.495  38.641  -  38.641 
+ Descontos por pontualidade 
+ 
+ 
+ 
+-  -  (8.162)  -  (8.162) 
+  Vulcabras - CE, Calçados e Artigos 
+Esportivos S.A.   
+ Receita de serviços (Uso 
+Marca) 
+ 
+Outras transações 
+ 
+52 dias  -  85  -  85 
+  Calzados Azaleia Peru S.A.  Venda de calçados 
+ 
+Outras transações 
+ 
+105 dias  4.068  3.778  4.068  3.778 
+               
+ Despesas com vendas   
+ 
+ 
+ 
+  (3.295)  (3.089)  (2.628)  (2.900) 
+  Grendene Italy S.R.L.  Publicidade e propaganda (*) 
+(**) 
+ 
+Controlada direta 
+ 
+-  (5)  (182)  -  - 
+ Amostras de calçados (*) 
+ 
+ 
+ 
+-  (69)  (2)  -  - 
+ Outras despesas (*) 
+ 
+ 
+ 
+-  (2)  (5)  -  - 
+   Grendene Global Brands Limited (i)  Serviços de comissão 
+ 
+Controlada direta 
+ 
+97 dias  (269)  (278)  -  (278) 
+ Amostras de calçados (*) 
+ 
+ 
+ 
+-  (312)  (161)  -  (161) 
+ Publicidade e propaganda (*) 
+(**) 
+ 
+ 
+ 
+-  (9)  (4)  -  (4) 
+  Outras despesas (*) 
+ 
+ 
+ 
+-  (1)  -  -  - 
+  Vulcabras BA Calçados e Artigos 
+Esportivos S.A. 
+ Publicidade e propaganda (**) 
+ 
+Outras transações 
+ 
+63 dias  -  (6)  -  (6) 
+  Vulcabras – CE, Calçados e Artigos 
+Esportivos SA. 
+ Licenciamento (Uso da 
+marca “Azaleia”) 
+ 
+Outras transações 
+ 
+90 dias  (2.586)  (2.409)  (2.586)  (2.409) 
+ Perda de negócio 
+ 
+ 
+ 
+7 dias  -  (23)  -  (23) 
+ Publicidade e propaganda 
+(**) 
+ 
+ 
+ 
+90 dias  -  (1)  -  (1) 
+  Calzados Azaleia Peru S.A.  Amostras de calçados (*) 
+ 
+Outras transações 
+ 
+-  (35)  (11)  (35)  (11) 
+ Publicidade e propaganda (*) 
+(**) 
+ 
+ 
+ 
+-  (7)  (7)  (7)  (7) 
+               
+ Resultado de equivalência patrimonial   
+ 
+ 
+ 
+  (49.070)  (47.125)  61.633  (39.378) 
+  MHL Calçados Ltda.  Equivalência patrimonial 
+ 
+Controlada direta 
+ 
+  1.751  328  -  - 
+  Grendene USA, Inc.  Equivalência patrimonial 
+ 
+Controlada direta 
+ 
+  (202)  (4.954)  -  - 
+  Grendene Italy S.R.L.  Equivalência patrimonial 
+ 
+Controlada direta 
+ 
+  (1.213)  (3.121)  -  - 
+  Grendene Global Brands Limited. (i)  Equivalência patrimonial 
+ 
+Controlada direta 
+ 
+  (111.039)  (50.610)  -  (50.610) 
+  YOUPE Participações S.A.  Equivalência patrimonial 
+ 
+Coligada 
+ 
+  13  501  13  501 
+  HIPE Participações S.A.  Equivalência patrimonial 
+ 
+Coligada 
+ 
+  (27)  2.761  (27)  2.761 
+  NM GAP II Participações S.A.  Equivalência patrimonial 
+ 
+Coligada 
+ 
+  24.069  6.647  24.069  6.647 
+  NM IBIRA Participações S.A.  Equivalência patrimonial 
+ 
+Coligada 
+ 
+  39.568  1.323  39.568  1.323 
+  NM Vila Participações S.A. 
+ 
+Equivalência patrimonial 
+ 
+Coligada 
+   
+(1.990) 
+ 
+- 
+ 
+(1.990) 
+ 
+- 
+               
+Outras receitas operacionais        5.108  -  5.108  - 
+Grendene Global Brands Limited. (i)  Ganho pela mensuração ao 
+valor justo da participação 
+anterior 
+ Controlada direta    5.108  -  5.108  - 
+  
+             
+Outras despesas operacionais        (6.064)  -  (6.064)  - 
+  Grendene Global Brands Limited. (i)  Ajuste na aquisição de 
+investimento 
+ Controlada direta    (587)  -  (587)  - 
+ Amortização mais valia      (853)  -  (853)  - 
+  Realização do ajuste de 
+reclassificação – perda na 
+baixa de investimento 
+     (4.624)  -  (4.624)  - 
+               
+ Resultado financeiro        4.967  6.516  9.969  6.424 
+  Grendene USA, Inc.  Variação cambial, líquida  Controlada direta    (2)  4  -  - 
+  Grendene Italy S.R.L.  Variação cambial, líquida  Controlada direta    (124)  40  -  - 
+ Outras receitas financeiras  Controlada direta    19  48  -  - 
+  Grendene Global Brands Limited. (i)  Variação cambial, líquida  Controlada direta    (4.895)  4.438  -  4.438 
+  Calzados Azaleia Peru S.A.  Variação cambial, líquida  Outras transações    (167)  156  (167)  156 
+  SCP Jesuíno Maciel  Rendimento e AVJ  Outras transações    -  285  -  285 
+  SCP Mairinque  Rendimento e AVJ  Outras transações    1.948  1.154  1.948  1.154 
+  SCP Venâncio  Rendimento e AVJ  Outras transações    331  391  331  391 
+  SCP Gouda Even II  Rendimento e AVJ  Outras transações    7.857  -  7.857  - 
+                
+(i) A Grendene Global Brands Limited, passou de joint venture para controlada da Grendene S.A. a partir de 1° de dezembro 
+de 2024, através da aquisição de 50,1% das ações de titularidade da Radar Private Fund I LP e afiliados (“Fundos Radar”). 
+ 
+(*) Transações sem valor comercial, mensuradas ao valor de custo. 
+(**) Publicidade e propaganda referente a envio de produto para influencers e material para ponto de venda. 
+ 
+ 
+ 
+ 
+ 
+Notas Explicativas                                
+PÁGINA: 59 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+ 
+Notas explicativas às informações trimestrais--continuação 
+30 de setembro de 2025  
+(Em milhares de reais) 
+ 
+ 
+22.  Partes relacionadas--Continuação 
+ 
+b) Remuneração da administração 
+ 
+Na Assembleia Geral Ordinária de 17 de abril de 202 5, foi aprovad a a remuneração global dos 
+administradores para o exercício de 202 5, no valor de até R$ 11.000 (R$9.300 em 202 4), 
+abrangendo a Diretoria Estatutária da Companhia, incluindo os planos de remuneração baseados 
+em ações e o Conselho de Administração. Essas despesas estão registradas na rubrica de 
+despesas gerais e administrativas, conforme demonstrado a seguir: 
+ 
+  Controladora 
+             
+  30/09/2025  30/09/2024 
+  Honorários  Remuneração  Variável (*)  Honorários  Remuneração  Variável (*) 
+             
+Conselho da administração  1.447  146  -  1.386  140  - 
+Diretoria estatutária  4.291  -  1.837  4.539  -  663 
+  5.738  146  1.837  5.925  140  663 
+  
+(*) Refere-se às despesas apuradas no período, relativas ao prêmio do plano de ações de compra ou subscrição de 
+ações, conforme descrito na Nota 23. 
+ 
+c) Outras partes relacionadas 
+ 
+A Companhia utiliza serviços de assessoria e agenciamento de viagens de empresas pertencentes 
+aos membros da administração chave, conforme demonstrados a seguir:  
+ 
+  Controladora 
+     
+  30/09/2025  30/09/2024 
+     
+Dall’Onder Viagens & Turismo Ltda.  464  358 
+Mailson da Nóbrega Consultoria S/S Ltda.  54  54 
+Ochman Advogados Associados  67  125 
+  585  537 
+ 
+Os gastos incorridos com estes serviços representaram aproximadamente 0,04% das despesas 
+gerais da Companhia. Em 30 de setembro de 2025 e 31 de dezembro de 2024, não há valores em 
+aberto para pagamento.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Notas Explicativas                                
+PÁGINA: 60 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+ 
+Notas explicativas às informações trimestrais--continuação 
+30 de setembro de 2025  
+(Em milhares de reais) 
+ 
+ 
+22.  Partes relacionadas--Continuação 
+ 
+c) Outras partes relacionadas--Continuação 
+ 
+Em 30 de setembro de 2025 e 31 de dezembro de 2024 , ocorreram transações com partes 
+relacionadas indiretas, acionistas e administração-chave da Companhia, conforme segue: 
+ 
+Pessoas jurídicas 
+e físicas 
+ Relação da parte com a Companhia  Natureza da operação 
+     
+Even Construtora e 
+Incorporadora S.A  
+ 
+ Investidora da Nova Milano Investimentos, com 46,29% da participação 
+societária, gestora da qual Alexandre Grendene Bartelle detêm o 
+controle. 
+ Fiadora das obrigações dos empreendimentos 
+imobiliários: (i) SCP Jesuíno Maciel (encerrada em 
+set/24), (ii) SCP Venâncio  (encerrada em set/25) , (iii) 
+SCP Mairinque, e (iv) SCP Gouda Even II (encerrada em 
+set/25); atuando também como garantidora da SCP 
+Primavera por meio da RFM-E, 
+Veneza Negócios e 
+Participações S.A. 
+ Empresa pertencente aos acionistas Alexandre Grendene Bartelle e 
+Pedro Grendene Bartelle 
+ Acionista nos investimentos imobiliários nas coligadas: (i) 
+YOUPE Participações S.A., (ii) NM GAP II Participações S.A, 
+e de outras sociedades: (i) NM GAP Participações Ltda. 
+Nova Milano 
+Investimentos Ltda. 
+ Empresa pertencente ao acionista Alexandre Grendene Bartelle e 
+gestão do Vice-presidente: Gelson Luiz Rostirolla 
+ Acionista nos investimentos imobiliários nas coligadas: (i) 
+YOUPE Participações S.A., (ii) HIPE Participações S.A., (iii) 
+NM GAP II Participações S.A. , (iv) NM IBIRA Participações 
+S.A. e (v) NM Vila Participações S.A. 
+Radar Private Fund I LP 
+e afiliados (“Fundos 
+Radar”) 
+ Sociedade na joint venture Grendene Global Brands Limited.  Investimento na joint venture  Grendene Global Brands 
+Limited, (encerrada em nov/24). Valor a receber referente a 
+venda da Grendene Global Brands. 
+André de Camargo 
+Bartelle 
+ Acionista   Investidor nos empreendimentos imobiliários: (i) SCP Neto de 
+Araujo, (ii) YOUPE Participações S.A., (iii) HIPE Participações 
+S.A., e (iv) NM GAP II Participações S.A. 
+Gabriela de Camargo 
+Bartelle  
+ Acionista  Investidora nos empreendimentos imobiliários : (i) YOUPE 
+Participações S.A., (ii) HIPE Participações S.A. e (iii) NM 
+IBIRA Participações S.A. 
+Rudimar Dall’Onder  Diretor Presidente  Investidor nos empreendimentos imobiliários : (i) YOUPE 
+Participações S.A., (ii) HIPE Participações S.A., (iii) NM GAP 
+II Participações S.A., e (iv) NM IBIRA Participações S.A. 
+Vulcabras BA Calçados 
+e Artigos Esportivos S.A. 
+ Empresa interligada, na medida em que a Vulcabras CE é controladora 
+da Vulcabras - BA Calçados e Artigos Esportivos S.A. e a Vulcabras 
+CE é controlada da Vulcabras S.A. e o acionista controlador da 
+Vulcabras S.A. e, portanto, o acionista controlador indireto das suas 
+Controladas faz parte do bloco de controle da Grendene. Assim, a 
+Grendene e a Vulcabras e suas empresas Controlad as são empresas 
+interligadas. A Vulcabras - CE Calçados e Artigos Esportivos S.A. é 
+uma controlada direta da Vulcabras S.A. e a Vulcabras - BA Calçados 
+e Artigos Esportivos S.A. é uma controlada indireta da Vulcabras S.A. 
+ Transação de venda de insumos e publicidade e propaganda. 
+Vulcabras - CE, 
+Calçados e Artigos 
+Esportivos S.A. 
+ A Vulcabras - CE, Calçados e Artigos Esportivos S.A. e a Companhia 
+são empresas interligadas, na medida em que a Vulcabras CE é 
+controlada da Vulcabras S.A. e o acionista controlador da Vulcabras 
+S.A. e, portanto, o acionista controlador indireto das suas Controladas 
+faz parte do bloco de controle da Grendene. Assim, a Grendene e a 
+Vulcabras e suas empresas Controladas são empresas interligadas. A 
+Vulcabras - CE Calçados e Artigos Esportivos S.A. é uma controlada 
+direta da Vulcabras S.A. e a Vulcabras - BA Calçados e Artigos 
+Esportivos S.A. é uma controlada indireta da Vulcabras S.A. 
+ Transação de venda de insumos, compra de calçados e 
+insumos, compra de materiais, licenciamento (marcas: 
+“Azaleia” e “Melissa”), indenizações e publicidade de 
+propaganda. 
+Transações sem valor comercial de amostras de calçados. 
+Calzados Azaleia Peru 
+S.A. 
+ Empresa interligada, na medida em que a Vulcabras CE é controladora 
+da Calçados Azaleia Peru S.A. e a Vulcabras CE é controlada da 
+Vulcabras S.A. e o acionista controlador da Vulcabras S.A. e, portanto, 
+o acionista controlador indireto das suas Controladas faz parte do bloco 
+de controle da Grendene. Assim, a Grendene e a Vulc abras e suas 
+empresas Controladas são empresas interligadas. A Vulcabras - CE 
+Calçados e Artigos Esportivos S.A. é uma controlada direta da 
+Vulcabras S.A. e a Calçados Azaleia Peru S.A. é uma controlada 
+indireta da Vulcabras S.A. 
+ Transação de venda de calçados. 
+Transações sem valor comercial de amostras de calçados e 
+publicidade e propaganda. 
+ 
+Não há outras transações, exceto dividendos e juros sobre o capital próprio pagos, entre a 
+Companhia e suas partes relacionadas. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Notas Explicativas                                
+PÁGINA: 61 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+ 
+Notas explicativas às informações trimestrais--continuação 
+30 de setembro de 2025  
+(Em milhares de reais) 
+ 
+ 
+23.  Plano de opções de compra ou subscrição de ações 
+ 
+O Plano de Opção de Compra ou Subscrição de Ações, aprovado pelos acionistas da 
+Companhia em Assembleia Geral Extraordinária em 14 de Abril de 2008, concede aos 
+diretores e gerentes, exceto diretores controladores, o direito de adquirir ações da 
+Companhia, na forma e condições descritas no plano. 
+ 
+As opções de ações podem ser exercidas até 6 anos contados da data da outorga, com 
+período de carência ( vesting) de 3 anos, com liberação de 33% a partir do primeiro 
+aniversário, 66% a partir do segundo aniversário e 100% a partir do terceiro aniversário.  
+ 
+No primeiro trimestre de 2025, foram adquiridas 876.852 ações, ao custo médio de R$5,52 por ação, 
+totalizando R$4.836, com o objetivo de atender ao exercício dos planos de opção de compra de 
+ações. 
+ 
+A diferença entre o preço médio de exercício das opções e o custo médio das ações adquiridas e 
+canceladas até 30 de setembro de 2025, para cumprimento dos exercícios de opções de ações, 
+resultou no reconhecimento de um ganho de R$1.864 no patrimônio líquido, uma vez que a liquidação 
+das opções dos planos ocorre com instrumentos patrimoniais.   
+ 
+a) Premissas para reconhecimento das despesas com remuneração de ações 
+ 
+As ações são mensuradas a valor justo na data da outorga e a despesa é reconhecida no resultado 
+como “despesa com pessoal”, ao longo do período em que o direito ao exercício de opção é 
+adquirido, em contrapartida ao patrimônio líquido.  
+ 
+O valor justo das opções outorgadas foi estimado usando-se o modelo de precificação de opções 
+“Black-Scholes”. As premissas econômicas consideradas foram: (i) dividendos esperados obtidos 
+com base na média de pagamentos de dividendos por ação em relação ao valor de mercado das 
+ações nos últimos 12 meses; (ii) volatilidade baseada na oscilação média histórica do preço da 
+ação dos últimos 18 meses anteriores à data da outorga; (iii) a taxa de juros livre de risco a taxa 
+média projetada da Selic, divulgada pel o Banco Central (BACEN). No quadro a seguir 
+apresentamos o detalhamento dessas informações: 
+ 
+  15° Plano  17° Plano  18° Plano 
+       
+Data da outorga  24/02/2022  29/02/2024  27/02/2025 
+Total de opções de compra concedido  1.402.950  1.385.736  4.792.758 
+Preço de exercício   4,50  3,70  3,07 
+Volatilidade estimada  25,95%  17,05%  24,43% 
+Dividendo esperado sobre as ações  5%  5%  9% 
+Taxa de juros livre de risco média ponderada  12,25%  9,00%  15,00% 
+Maturidade máxima  6 anos  6 anos  6 anos 
+Maturidade média  2,5 anos  2,5 anos  2,5 anos 
+Valor justo na data da concessão  3,79  2,75  2,28 
+ 
+A Companhia não está compromissada à recompra de ações que forem adquiridas pelos 
+beneficiários. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Notas Explicativas                                
+PÁGINA: 62 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+ 
+Notas explicativas às informações trimestrais--continuação 
+30 de setembro de 2025  
+(Em milhares de reais) 
+ 
+ 
+23.  Plano de opções de compra ou subscrição de ações--Continuação 
+ 
+b) Movimentação das opções de compra ou subscrição de ações 
+ 
+As movimentações decorrentes das operações de compra ou subscrição de ações, estão  
+ 
+  15º Plano  17° Plano  18° Plano  Saldo final 
+         
+Saldo em 31/12/2023   876.480  -  -  876.480 
+  Outorga  -  1.385.736  -  1.385.736 
+  Exercidas  (433.613)  -  -  (433.613) 
+  Canceladas  (9.254)  (25.797)  -  (35.051) 
+Saldo em 31/12/2024  433.613  1.359.939  -  1.793.552 
+         
+  Outorga  -  -  4.792.758  4.792.758 
+  Exercidas  (429.993)  (446.859)  -  (876.852) 
+  Canceladas  (3.620)  (44.764)  (123.369)  (171.753) 
+Saldo em 30/09/2025   -  868.316  4.669.389  5.537.705 
+         
+  Opções exercíveis em 2026  -  434.158  1.556.463  1.990.621 
+  Opções exercíveis em 2027  -  434.158  1.556.463  1.990.621 
+  Opções exercíveis em 2028  -  -  1.556.463  1.556.463 
+  -  868.316  4.669.389  5.537.705 
+         
+Resultado das opções outorgadas, reconhecidas em 30/09/2024  (1.677)  -  -  (1.677) 
+Resultado das opções outorgadas, reconhecidas em 30/09/2025  (1.674)  (1.289)  (56)  (3.019) 
+         
+Despesa com pessoal em 30/09/2024  (489)  (1.552)  -  (2.041) 
+Despesa com pessoal em 30/09/2025  (46)  (858)  (4.431)  (5.335) 
+ 
+ 
+24.  Receita líquida de vendas e serviços 
+ 
+A receita líquida de vendas e serviços apresenta a seguinte composição: 
+ 
+  Controladora  Consolidado 
+         
+  30/09/2025  30/09/2024  30/09/2025  30/09/2024 
+         
+Receita bruta de vendas e serviços  2.257.559  2.191.630  2.485.915  2.193.303 
+Mercado interno  1.930.911  1.892.411  1.930.911  1.892.411 
+Ajuste a valor presente   (67.441)  (66.947)  (67.441)  (66.947) 
+Reintegra  27  24  27  24 
+Mercado externo  404.644  376.654  633.000  378.327 
+Ajuste a valor presente   (10.979)  (10.872)  (10.979)  (10.872) 
+Reintegra  397  360  397  360 
+Devolução de vendas  (108.541)  (64.073)  (184.569)  (64.465) 
+Descontos por pontualidade  (113.077)  (98.102)  (164.553)  (98.137) 
+Tributos sobre as vendas e serviços  (370.283)  (371.421)  (370.415)  (371.421) 
+Incentivo fiscal ICMS (Proade)   134.187  136.699  134.187  136.699 
+Contribuição previdenciária sobre a receita bruta   (21.362)  (26.829)  (21.362)  (26.829) 
+  1.778.483  1.767.904  1.879.203  1.769.150 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Notas Explicativas                                
+PÁGINA: 63 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+ 
+Notas explicativas às informações trimestrais--continuação 
+30 de setembro de 2025  
+(Em milhares de reais) 
+ 
+ 
+25.  Informações por segmento 
+ 
+a) Distribuição por área geográfica 
+ 
+A receita bruta no mercado interno e externo, estão assim demonstradas: 
+ 
+  Controladora  Consolidado 
+         
+  
+30/09/2025 
+ 
+30/09/2024  30/09/2025 
+ 
+30/09/2024 
+         
+Mercado interno – Brasil   1.863.497  1.825.488  1.863.497  1.825.488 
+Mercado externo  394.062  366.142  622.418  367.815 
+  América do Norte  44.183  49.216  125.506  49.216 
+  Ásia e Oceania  71.029  74.031  215.484  74.034 
+  Europa  59.000  56.626  61.571  58.273 
+  América Central e Sul - Latam    200.206  161.631  200.206  161.631 
+  África e Oriente Médio - Mea  19.644  24.638  19.651  24.661 
+  2.257.559  2.191.630  2.485.915  2.193.303 
+ 
+Não há clientes que individualmente representem mais que 5% das vendas no mercado interno 
+ou externo. 
+ 
+b) Ativos não circulantes 
+ 
+Do total de ativos não circulantes da Companhia, aproximadamente 4% referem-se aos 
+investimentos no exterior de suas controladas. As informações financeiras resumidas destas 
+empresas estão apresentadas na Nota 10 – Investimentos. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Notas Explicativas                                
+PÁGINA: 64 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+ 
+Notas explicativas às informações trimestrais--continuação 
+30 de setembro de 2025  
+(Em milhares de reais) 
+ 
+ 
+26.  Custos e despesas por natureza 
+ 
+A Companhia apresenta a demonstração do resultado por função. A classificação por natureza dos 
+custos e despesas operacionais são demonstradas a seguir: 
+ 
+  Controladora  Consolidado 
+         
+  30/09/2025  30/09/2024  30/09/2025  30/09/2024 
+         
+Custos dos produtos vendidos  (1.003.589)  (965.190)  (1.029.067)  (965.296) 
+Matéria prima  (415.119)  (402.266)  (423.491)  (402.303) 
+Custos com pessoal  (408.226)  (373.379)  (420.434)  (373.424) 
+Consumos/Perdas operacionais do negócio  (23.516)  (34.719)  (23.516)  (34.719) 
+Consumos materiais intermediários  (9.324)  (7.839)  (9.324)  (7.839) 
+Gastos com materiais  (8.047)  (7.607)  (8.047)  (7.607) 
+Gastos com manutenções  (21.660)  (19.678)  (21.660)  (19.678) 
+Depreciação e amortização   (36.984)  (37.301)  (36.984)  (37.301) 
+Serviços de terceiros  (9.459)  (9.672)  (9.459)  (9.672) 
+Gastos com TI  (9.989)  (9.860)  (9.989)  (9.860) 
+Viagens e estadias  (3.408)  (2.873)  (3.408)  (2.873) 
+Energia, água e custos ambientais  (25.586)  (27.485)  (25.586)  (27.485) 
+Outros custos  (32.271)  (32.511)  (37.169)  (32.535) 
+         
+Despesas com vendas  (431.786)  (419.904)  (575.147)  (427.681) 
+Comissões  (82.858)  (77.848)  (98.359)  (78.988) 
+Fretes  (107.599)  (108.432)  (122.491)  (109.025) 
+Fretes armazenagem  -  -  (12.512)  - 
+Licenciamentos   (29.305)  (27.712)  (29.300)  (27.712) 
+Publicidade e propaganda  (72.674)  (80.067)  (112.319)  (82.174) 
+Amostras de calçados  (15.071)  (13.680)  (15.800)  (13.680) 
+Convenções  (12.495)  (10.727)  (12.495)  (10.727) 
+Despesas com pessoal  (55.958)  (52.054)  (72.136)  (52.861) 
+Depreciação e amortização  (7.779)  (6.219)  (15.829)  (7.233) 
+Serviços de terceiros  (4.143)  (4.458)  (8.414)  (4.572) 
+Gastos com TI  (8.531)  (7.323)  (20.238)  (8.068) 
+Viagens e estadias  (8.172)  (6.787)  (10.511)  (6.983) 
+Energia, água e despesas ambientais  (517)  (306)  (530)  (377) 
+Aluguéis  (3.393)  (2.975)  (3.018)  (2.975) 
+Outras despesas  (23.291)  (21.316)  (41.195)  (22.306) 
+         
+Despesas gerais e administrativas  (92.033)  (80.971)  (110.364)  (82.032) 
+Despesas com pessoal  (67.105)  (58.219)  (77.344)  (58.444) 
+Depreciação e amortização  (3.514)  (3.416)  (4.801)  (3.417) 
+Serviços de terceiros  (5.037)  (4.971)  (9.296)  (5.545) 
+Gastos com TI  (3.431)  (3.208)  (5.619)  (3.304) 
+Viagens e estadias  (1.145)  (667)  (1.247)  (667) 
+Energia, água e despesas ambientais  (923)  (916)  (923)  (916) 
+Despesas tributárias  (8.041)  (7.028)  (8.045)  (7.073) 
+Outras despesas  (2.837)  (2.546)  (3.089)  (2.666) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Notas Explicativas                                
+PÁGINA: 65 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+ 
+Notas explicativas às informações trimestrais--continuação 
+30 de setembro de 2025  
+(Em milhares de reais) 
+ 
+ 
+27.  Outras receitas (despesas) operacionais 
+ 
+  Controladora  Consolidado 
+         
+  30/09/2025  30/09/2024  30/09/2025  30/09/2024 
+         
+Outras receitas operacionais  9.330  8.410  10.163  11.018 
+Baixa de investimento em controlada  -  318  -  318 
+Combinação de negócio (i)  5.108  -  5.108  - 
+Créditos processuais  634  4.012  634  4.012 
+Negociação comercial  625  625  625  625 
+Receita de vendas de imobilizado, sucata e outros  1.279  1.803  1.313  1.803 
+Recuperação de custos e despesas  1.180  1.138  1.972  1.292 
+Rescisão de contrato de aluguel  -  -  -  2.454 
+Outras receitas operacionais  504  514  511  514 
+         
+Outras despesas operacionais  (41.033)  (3.257)  (67.545)  (6.471) 
+   Combinação de negócio (ii)  (6.064)  -  (6.064)  - 
+   Comissões ex-franqueadora  (3.734)  (5.460)  (3.734)  (5.460) 
+   Custos de vendas e baixa de imobilizado, sucata e 
+outros 
+ (3.723)  (5.615)  (3.779)  (8.120) 
+Despesas tributárias/ Multas indedutíveis  (16.242)  -  (16.242)  - 
+Indenizações  (2.208)  (1.988)  (4.719)  (2.004) 
+Perdas estimadas (reversão) para créditos de 
+liquidação duvidosa 
+ (4.040) 
+ 
+11.332 
+ 
+(4.040) 
+ 
+11.332 
+Perdas por não realização de ativos  (13)  888  (8.598)  726 
+Processos e provisões judiciais  (257)  364  593  23 
+Recuperação de receitas  -  (434)  (639)  (434) 
+Rescisão de contrato de aluguel  -  -  (15.476)  - 
+Serviços de terceiros/ Sesi e Senai / Doações  (886)  (1.628)  (886)  (1.628) 
+Outras despesas operacionais  (3.866)  (716)  (3.961)  (906) 
+ 
+ 
+(i) Ganho pela mensuração ao valor justo da participação anterior na data de aquisição do controle da GGB (Nota 10.d); 
+(ii) Refere-se a: (i) R$4.624 Realização do ajuste de reclassificação – perda na baixa da variação cambial acumulada  da 
+participação anteriormente detida (Nota 10.d); (ii) R$853 amortização de mais valia; e (iii) R$587 ajuste na aquisição de 
+investimento (Ágio). 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Notas Explicativas                                
+PÁGINA: 66 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+ 
+Notas explicativas às informações trimestrais--continuação 
+30 de setembro de 2025  
+(Em milhares de reais) 
+ 
+ 
+28.  Resultado financeiro 
+ 
+  Controladora  Consolidado 
+         
+  30/09/2025  30/09/2024  30/09/2025  30/09/2024 
+         
+Receitas financeiras  339.331  292.612  342.198  293.718 
+Receitas com operações de derivativos  
+   cambiais – B3 
+ 36.206  19.881  36.206  19.881 
+Receitas com variação cambial  41.392  41.805  42.665  41.807 
+Rendimentos de aplicações financeiras (i)  139.509  94.485  141.167  95.680 
+Resultado de outros ativos financeiros – SCPs (ii)  30.878  47.812  30.878  47.812 
+Resultado de certificado operações estruturadas – 
+COE (iii) 
+ 10.156  (6.506)  10.156  (6.506) 
+Ajustes a valor presente (iv)  79.447  83.782  79.447  83.782 
+Juros ativos (v)  4.327  14.257  4.356  14.270 
+Juros recebidos de clientes  4.174  2.112  4.174  2.112 
+PIS e COFINS sobre receitas financeiras  (6.956)  (5.426)  (7.031)  (5.482) 
+Outras receitas financeiras  198  410  180  362 
+         
+Despesas financeiras  (77.638)  (87.748)  (78.955)  (88.046) 
+Despesas com operações de derivativos 
+     cambiais – B3 
+ (6.558)  (37.800)  (6.558)  (37.800) 
+Despesas com variação cambial  (52.597)  (34.195)  (53.434)  (34.212) 
+Despesas bancárias  (1.837)  (5.090)  (2.147)  (5.106) 
+Despesas de financiamentos (i)  (11.375)  (7.057)  (11.375)  (7.057) 
+Outras despesas financeiras  (5.271)  (3.606)  (5.441)  (3.871) 
+         
+  261.693  204.864  263.243  205.672 
+  
+(i) Refere-se a receitas e despesas de juros sobre aplicações e financiamentos, reconhecidas pela taxa de juros efetiva sobre 
+o montante principal em aberto. 
+(ii) Contempla os resultados de: (i) rendimentos; (ii) dividendos e JSCP; (iii) ajuste a valor justo; e (iv) tributação;   
+(iii) Contempla os resultados de: (i) rendimentos; (ii) ajuste a valor justo; e (iii) tributação;   
+(iv) Inclui o ajuste a valor presente do contas a receber de clientes; e 
+(v) Refere-se, principalmente, às atualizações (Selic) dos saldos decorrentes dos processos: (i) exclusão do ICMS na base 
+do cálculo do PIS e da COFINS e; (ii) créditos de IRPJ e CSLL sobre juros Selic nas repetições de indébitos tributários de 
+ações judiciais tributárias (Nota 8).  
+ 
+ 
+29.  Informações complementares às Demonstrações do Fluxo de Caixa 
+ 
+As principais transações que não afetam o caixa e equivalentes, estão demonstradas a seguir:  
+ 
+  Controladora  Consolidado 
+         
+  30/09/2025  30/09/2024  30/09/2025  30/09/2024 
+         
+Variação cambial em investimentos  10.519  (9.997)  -  (9.700) 
+Direito de uso – Baixa   -  -  (8.969)  (22.444) 
+Passivo de arrendamento – Baixa  -  -  8.969  22.444 
+Dividendos intermediários propostos  3.898  79.592  3.898  79.592 
+Juros sobre o capital próprio propostos, líquido de 
+IRRF 
+ 51.000  55.000  51.000  55.000 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Notas Explicativas                                
+PÁGINA: 67 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1
+ 
+Notas explicativas às informações trimestrais--continuação 
+30 de setembro de 2025  
+(Em milhares de reais) 
+ 
+ 
+30.  Eventos subsequentes 
+ 
+Reorganização societária:  Em 6 de novembro de 2025, o Conselho de Administração da Grendene 
+S.A. aprovou plano de reorganização societária envolvendo suas controladas no exterior, com o 
+objetivo de simplificar a estrutura societária, reduzir custos administrativos e otimizar a gove rnança. 
+No âmbito da reorganização, foi aprovada a aquisição, pela Companhia, da totalidade das units 
+representativas do capital da Grendene Global Brands USA LLC, anteriormente detidas pela 
+Grendene Global Brands Limited UK. Após a aquisição, será iniciad o o processo de dissolução e 
+liquidação da GGB UK, conforme legislação societária vigente no Reino Unido.  
+ 
+Novo Programa de Recompra :  Em 6 de novembro de 2025, o Conselho de Administração da 
+Grendene S.A. aprovou a criação de um novo programa de recompra de ações ordinárias, 
+nominativas e sem valor nominal, representativas do capital social da Companhia, com o objetivo de 
+atender ao exercício de futuras opções no âmbito do Programa de Opção de Compra ou Subscrição 
+de Ações da Companhia ( Stock Options). O programa prevê a recompra de até 5.000.000 ações, 
+correspondentes a 1,9% das ações em circulação, no período  de 07 de novembro de 2025 a 05 de 
+novembro de 2026, sem redução do capital social. 
+ 
+ 
+Notas Explicativas                                
+PÁGINA: 68 de 68
+ITR - Informações Trimestrais - 30/09/2025 - GRENDENE S.A. Versão : 1

@@ -1,0 +1,1 @@
+O Trabalho de Conclusão de Curso (TCC) é uma etapa fundamental na formação acadêmica. Ele permite ao aluno aplicar os conhecimentos adquiridos durante o curso em um projeto prático ou teórico. Para avaliar um sistema de RAG, métricas comuns incluem similaridade de cosseno, tempo de resposta, uso de CPU e memória, e contagem de tokens.
