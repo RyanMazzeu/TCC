@@ -21,6 +21,30 @@
       "resposta_esperada": "13.092 (em milhares de reais)",
       "trecho_fonte": "Caixa e bancos ... Consolidado 30/09/2025: 13.092",
       "observacao_pos_execucao": "A pergunta é ambígua: 'caixa e bancos' é só a sub-linha específica (13.092), diferente do total 'Caixa e Equivalentes de Caixa' (13.092 de caixa e bancos + 78.919 de equivalentes de caixa = 92.011), que aparece no balanço patrimonial, na DFC e na nota de instrumentos financeiros -- 3 lugares diferentes do documento, todos consistentes em 92.011. O modelo recuperado respondeu com o total mais proeminente (92.011), não com a sub-linha estreita perguntada. Não é erro de conteúdo -- é ambiguidade de escopo numérico, mantida aqui como achado, não corrigida silenciosamente."
+    },
+    {
+      "id": "grendene_q4",
+      "pergunta": "Qual foi o lucro líquido consolidado da Grendene no terceiro trimestre de 2025 (julho a setembro), segundo a Demonstração do Resultado Abrangente?",
+      "resposta_esperada": "138.485 (em milhares de reais)",
+      "trecho_fonte": "Lucro Líquido Consolidado do Período — Trimestre Atual 01/07/2025 a 30/09/2025: 138.485"
+    },
+    {
+      "id": "grendene_q5",
+      "pergunta": "Qual foi o patrimônio líquido consolidado da Grendene em 30/09/2025, segundo o Balanço Patrimonial Passivo?",
+      "resposta_esperada": "4.050.731 (em milhares de reais)",
+      "trecho_fonte": "Patrimônio Líquido Consolidado — Trimestre Atual 30/09/2025: 4.050.731"
+    },
+    {
+      "id": "grendene_q6",
+      "pergunta": "Qual é o objetivo da Administração descrito na nota de Gestão de Capital, e quais ações a Companhia pode tomar para manter ou ajustar sua estrutura de capital?",
+      "resposta_esperada": "A Administração tem como objetivo assegurar a continuidade dos negócios da Companhia, protegendo seu capital contra mudanças nas condições econômicas, a fim de reduzir os custos de capital e maximizar o retorno aos acionistas. Para manter ou ajustar a estrutura de capital, a Companhia pode revisar sua política de pagamento de dividendos, captar empréstimos, emitir valores mobiliários no mercado financeiro, entre outras ações.",
+      "trecho_fonte": "Nota 'd) Gestão de capital': A Administração tem como objetivo assegurar a continuidade dos negócios da Companhia, protegendo seu capital contra mudanças nas condições econômicas..."
+    },
+    {
+      "id": "grendene_q7",
+      "pergunta": "Qual foi o índice de alavancagem financeira consolidado da Grendene em 30/09/2025, segundo a nota de Gestão de Capital?",
+      "resposta_esperada": "-0,2%",
+      "trecho_fonte": "Índice de alavancagem financeira — Consolidado 30/09/2025: -0,2%"
     }
   ]
 }

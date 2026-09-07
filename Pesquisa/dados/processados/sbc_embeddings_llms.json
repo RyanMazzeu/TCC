@@ -20,6 +20,36 @@
       "pergunta": "Segundo as conclusões do trabalho, qual modelo de embedding apresentou o melhor custo-benefício entre recall e custo computacional/financeiro, e qual LLM obteve o desempenho mais consistente entre as bases de dados avaliadas?",
       "resposta_esperada": "O modelo Multilingual E5 large apresentou o melhor custo-benefício entre a métrica de recall e o custo computacional e financeiro. O Gemma 2 9B obteve um desempenho mais consistente em todas as bases de dados.",
       "trecho_fonte": "O primeiro experimento identificou que o modelo Multilingual E5 large apresentou o melhor custo-benefício entre a métrica de recall e o custo computacional e financeiro. Já o segundo experimento revelou que o Gemma 2 9B obteve um desempenho mais consistente em todas as bases de dados"
+    },
+    {
+      "id": "sbc_q4",
+      "pergunta": "Considerando o top-5, quais foram os valores de recall obtidos pelo Multilingual E5 large e pelo text-embedding-3-large da OpenAI no dataset FairytaleQA PT-BR?",
+      "resposta_esperada": "0,689 para o Multilingual E5 large e 0,677 para o text-embedding-3-large da OpenAI.",
+      "trecho_fonte": "os modelos Multilingual E5 large e o text-embedding-3-large da OpenAI apresentam desempenho semelhante, alcançando 0,689 e 0,677 no FairytaleQA PT-BR"
+    },
+    {
+      "id": "sbc_q5",
+      "pergunta": "No Experimento 2 (avaliação dos LLMs), qual modelo demonstrou desempenho superior em todas as bases de dados e métricas de avaliação (ROUGE-L e BERTScore)?",
+      "resposta_esperada": "Gemma 2 9B.",
+      "trecho_fonte": "o modelo Gemma 2 9B demonstrou desempenho superior em todas as bases de dados e métricas de avaliação."
+    },
+    {
+      "id": "sbc_q6",
+      "pergunta": "Por que a avaliação das métricas de fidelidade e relevância da resposta (RAGAS) foi realizada apenas nas bases de dados Pirá e FairyTaleQA PT-BR, e não também no SQuAD2 PT-BR?",
+      "resposta_esperada": "Devido a restrições orçamentárias relacionadas ao uso do modelo GPT-4o-mini para o cálculo dessas métricas.",
+      "trecho_fonte": "Devido a restrições orçamentárias relacionadas ao uso do modelo GPT-4o-mini para o cálculo dessas métricas, a avaliação foi realizada apenas nas bases de dados do Pirá e FairyTaleQA PT-BR."
+    },
+    {
+      "id": "sbc_q7",
+      "pergunta": "Segundo os autores, quais são os dois fatores principais que explicam o baixo desempenho geral dos LLMs nas métricas ROUGE-L e BERTScore?",
+      "resposta_esperada": "(i) as respostas de referência das bases de dados são, em sua maioria, curtas, enquanto os LLMs, especialmente os maiores, tendem a gerar respostas mais longas e detalhadas; e (ii) as métricas BERTScore e ROUGE-L têm limitações por não capturarem variações lexicais ou estruturais que mantêm o mesmo significado, e tendem a favorecer respostas mais curtas e similares às de referência.",
+      "trecho_fonte": "o baixo desempenho dos modelos pode ser atribuído a dois fatores principais: (i) As respostas presentes nas bases de dados são, em sua maioria, curtas... e (ii) As métricas BERTScore e, em especial, ROUGE-L apresentam limitações..."
+    },
+    {
+      "id": "sbc_q8",
+      "pergunta": "Quantos registros de teste tem a base de dados FairytaleQA PT-BR, e por que a base Pirá foi utilizada mesmo tendo significativamente menos registros que as outras duas bases?",
+      "resposta_esperada": "A base FairytaleQA PT-BR tem 1.007 registros de teste. A base Pirá foi utilizada devido à alta qualidade de suas perguntas e respostas, e por abranger um domínio de conhecimento mais desafiador em comparação com as bases FairyTaleQA PT-BR e SQuAD2 PT-BR.",
+      "trecho_fonte": "Embora contenha um número significativamente menor de perguntas, a base de dados Pirá foi utilizada devido à alta qualidade de suas perguntas e respostas, bem como por abranger um domínio de conhecimento mais desafiador..."
     }
   ]
 }

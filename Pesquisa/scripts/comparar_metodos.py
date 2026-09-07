@@ -12,7 +12,7 @@ os.environ.setdefault("EMBEDDING_MODEL_NAME", "BAAI/bge-m3")
 import pipeline_base as pb
 
 DADOS_DIR = pb.BASE_DIR / "dados"
-LOG_PATH = pb.METRICAS_DIR / "comparativo_6_metodos_v2.jsonl"
+LOG_PATH = pb.METRICAS_DIR / "comparativo_6_metodos_v3.jsonl"
 METODOS = ["stuff", "refine", "map_reduce", "map_rerank", "query_step_down", "reciprocal"]
 
 
