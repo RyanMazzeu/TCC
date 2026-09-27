@@ -1,0 +1,17 @@
+\begin{table}[htbp]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\caption{Comparação de infraestrutura entre ChromaDB (persistente) e FAISS (\texttt{IndexFlatL2}, em memória) sobre os mesmos vetores BGE-M3.}
+\label{tab:vectorstores}
+\begin{tabular}{lccccccc}
+\toprule
+& \multicolumn{2}{c}{Indexação (ms)} & \multicolumn{2}{c}{Consulta (ms)} & \multicolumn{2}{c}{Memória (MB)} & Concordância \\ \cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7}
+Domínio (fragmentos) & Chroma & FAISS & Chroma & FAISS & Chroma & FAISS & top-$k$ \\
+\midrule
+Revalida (430) & 424,8 & 0,8 & 3,059 & 0,049 & 38,68 & 2,05 & 100\% \\
+Grendene (199) & 170,8 & 0,1 & 5,924 & 0,022 & 2,77 & 0,02 & 100\% \\
+SBC (42) & 95,1 & 0,1 & 2,818 & 0,016 & 3,25 & 0,00 & 100\% \\
+\bottomrule
+\end{tabular}
+\end{table}

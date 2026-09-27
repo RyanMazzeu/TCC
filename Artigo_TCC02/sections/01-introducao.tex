@@ -1,0 +1,21 @@
+\section{Introdução}
+\label{sc:introducao}
+
+Os Modelos de Linguagem de Grande Porte (LLMs) ampliaram de forma expressiva o alcance de sistemas de processamento de linguagem natural, mas continuam sujeitos a alucinações e ao envelhecimento do conhecimento aprendido durante o treinamento. A Geração Aumentada por Recuperação (RAG) \cite{lewis2020rag} consolidou-se como a principal alternativa não-paramétrica para mitigar esse problema \cite{andriopoulos2023augmenting}: em vez de depender apenas do conhecimento interno do modelo, o sistema recupera trechos relevantes de uma base documental, indexada em um banco de dados vetorial \cite{ma2024vectorsurvey}, e os fornece ao LLM no momento da geração. Na prática, porém, um pipeline RAG envolve uma sequência de escolhas de engenharia --- o método de injeção do contexto, o banco vetorial, o modelo de embedding, filtros de compressão --- cujo efeito combinado sobre qualidade da resposta, consumo de tokens e tempo de execução raramente é medido de forma sistemática.
+
+Şakar e Emekci \cite{sakar2025rag} realizaram a análise mais abrangente desse espaço de decisão: uma busca em grade com 23.625 configurações, cruzando seis métodos de RAG (Stuff, Refine, Map-Reduce, Map-Rerank, Query Step-Down e Reciprocal RAG), três bancos vetoriais, três modelos de embedding, três LLMs e filtros de compressão contextual, sobre três domínios em inglês --- relatórios financeiros (SEC 10-Q), documentação técnico-científica (artigo do Llama 2) e questões médicas (MedQA). O estudo mostra que não há arquitetura universalmente ótima: o Reciprocal RAG obteve a maior similaridade com as respostas de referência, enquanto o Stuff foi o mais rápido e o mais econômico em tokens.
+
+Esses resultados, no entanto, foram obtidos exclusivamente com documentos em inglês e avaliados por uma única métrica de qualidade, a similaridade de cosseno entre resposta gerada e resposta de referência. Não se sabe se as mesmas conclusões se sustentam em português, idioma em que a literatura de avaliação de RAG ainda é escassa \cite{medeiros2025embeddings}, nem se a escolha da métrica altera a ordenação dos métodos. Este trabalho investiga essas duas questões. Mantém-se a estrutura comparativa do estudo de referência --- os mesmos seis métodos, o mesmo tamanho de fragmento e a mesma lógica de compressão por limiar de similaridade ---, mas os três domínios em inglês são substituídos por equivalentes brasileiros com respostas de referência oficiais ou ancoradas literalmente no texto-fonte: a prova discursiva do Revalida 2024/2 (INEP) no domínio médico, as Informações Trimestrais da Grendene S.A. (CVM/B3) no domínio financeiro e um artigo científico brasileiro sobre RAG em português \cite{medeiros2025embeddings} no domínio técnico-científico.
+
+O trabalho busca responder às seguintes questões de pesquisa:
+
+\begin{enumerate}
+  \item[\textbf{QP1.}] Como os seis métodos de RAG se comparam em qualidade de resposta e em custo (tokens e tempo) sobre documentos em português?
+  \item[\textbf{QP2.}] A ordenação dos métodos depende da métrica de qualidade adotada --- similaridade de cosseno ou métricas do \emph{framework} RAGAS \cite{es2024ragas}?
+  \item[\textbf{QP3.}] Qual é o compromisso entre economia de tokens e perda de qualidade da compressão contextual por limiar de similaridade, e limiares fixos são transferíveis entre domínios?
+  \item[\textbf{QP4.}] Como ChromaDB e FAISS se comparam em custo de infraestrutura quando operam sobre os mesmos vetores?
+\end{enumerate}
+
+Como questão metodológica transversal, verifica-se ainda se o juiz automático das métricas RAGAS --- o mesmo LLM que gera as respostas --- concorda com um juiz independente de outra família de modelos, dado o risco conhecido de viés de autopreferência em avaliações por LLM \cite{zheng2023judging, panickssery2024selfpref}.
+
+O restante do artigo está organizado da seguinte forma. A Seção~\ref{sc:fundamentacao} apresenta a fundamentação teórica e os trabalhos relacionados. A Seção~\ref{sc:metodos} descreve os corpora, o pipeline, as métricas e a análise estatística. A Seção~\ref{sc:resultados} apresenta os resultados, discutidos na Seção~\ref{sc:discussao} junto com as limitações do estudo. A Seção~\ref{sc:conclusao} conclui o trabalho.

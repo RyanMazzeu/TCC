@@ -1,0 +1,55 @@
+% !TeX program = pdflatex
+% Artigo do TCC02 -- rascunho. O template oficial da coordenação para o TCC02 não está no
+% repositório (ver Plano_Trabalho/LEIAM-ME.txt); as seções ficam em arquivos separados justamente
+% pra poderem ser movidas para o template oficial sem retrabalho.
+% Compilar: latexmk -pdf main.tex
+
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,brazil]{babel}
+\usepackage{mathptmx}
+\usepackage[top=25mm,bottom=25mm,left=25mm,right=25mm]{geometry}
+\usepackage{setspace}\onehalfspacing
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage{caption}
+\captionsetup{font=small,labelfont=bf}
+\setlength{\marginparwidth}{2cm}
+\usepackage[disable]{todonotes} % trocar [disable] por [] pra ver as pendências marcadas no texto
+\usepackage[hidelinks]{hyperref}
+
+\graphicspath{{../Pesquisa/resultados/graficos/}}
+\newcommand{\tabela}[1]{\input{../Pesquisa/resultados/tabelas/#1.tex}}
+
+\title{Eficiência de métodos de RAG em documentos em português:\\
+uma análise comparativa em domínios médico, financeiro e técnico-científico}
+\author{
+  Afonso Henriques Massunari \and Ryan Alves Mazzeu\\[2mm]
+  \small Engenharia de Computação -- Universidade Federal de Itajubá (UNIFEI)\\[1mm]
+  \small Orientador: Carlos Henrique Valério de Moraes
+}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\input{sections/00-resumo.tex}
+\input{sections/01-introducao.tex}
+\input{sections/02-fundamentacao.tex}
+\input{sections/03-materiais_e_metodos.tex}
+\input{sections/04-resultados.tex}
+\input{sections/05-discussao.tex}
+\input{sections/06-conclusao.tex}
+
+\renewcommand\refname{Referências}
+\bibliographystyle{IEEEtran}
+\bibliography{referencias}
+
+\end{document}

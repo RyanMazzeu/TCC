@@ -1,0 +1,19 @@
+\begin{table}[htbp]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\caption{Custo médio por pergunta de cada método de RAG ($k = 4$; 27 perguntas).}
+\label{tab:custo_metodos}
+\begin{tabular}{lcccc}
+\toprule
+Método & Chamadas ao LLM & Tokens (média $\pm$ DP) & Relativo ao Stuff & Tempo total (s) \\
+\midrule
+Stuff & 1 & 1.313 $\pm$ 254 & 1,0$\times$ & 3,40 $\pm$ 1,70 \\
+Refine & $k$ & 2.453 $\pm$ 437 & 1,9$\times$ & 10,32 $\pm$ 4,03 \\
+Map-Reduce & $k+1$ & 1.987 $\pm$ 315 & 1,5$\times$ & 7,30 $\pm$ 2,87 \\
+Map-Rerank & $k$ & 1.931 $\pm$ 253 & 1,5$\times$ & 5,83 $\pm$ 1,77 \\
+Query Step-Down & 6 & 6.773 $\pm$ 1.222 & 5,2$\times$ & 12,44 $\pm$ 3,49 \\
+Reciprocal & 5 & 6.592 $\pm$ 1.268 & 5,0$\times$ & 9,06 $\pm$ 1,70 \\
+\bottomrule
+\end{tabular}
+\end{table}

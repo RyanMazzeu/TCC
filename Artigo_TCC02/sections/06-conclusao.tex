@@ -1,0 +1,20 @@
+\section{Conclusão}
+\label{sc:conclusao}
+
+Este trabalho replicou, com documentos em português, o desenho comparativo de Şakar e Emekci~\cite{sakar2025rag} para seis métodos de RAG, em três domínios brasileiros com respostas de referência verificáveis: o Revalida 2024/2 (médico), as Informações Trimestrais da Grendene S.A. (financeiro) e um artigo científico sobre RAG em português (técnico-científico). Além da similaridade de cosseno usada pelo estudo de referência, as respostas foram avaliadas com as métricas RAGAS, e o juiz automático foi validado contra ele mesmo e contra um juiz de outra família de modelos.
+
+Os principais resultados são os seguintes:
+
+\begin{enumerate}
+  \item \textbf{Custo separa os métodos; qualidade, não.} Em similaridade de cosseno, nenhum método foi estatisticamente superior, e o melhor método variou entre os domínios. Em custo, as diferenças foram grandes: Query Step-Down e Reciprocal usaram cerca de cinco vezes os tokens do Stuff sem qualidade superior. O Reciprocal, melhor método no estudo de referência, não compensou o custo adicional no conjunto das perguntas: foi o melhor apenas no domínio financeiro e teve a pior \emph{Answer Relevancy}.
+  \item \textbf{A métrica muda a ordenação.} O Map-Rerank, com a maior similaridade de cosseno, ficou entre os piores em \emph{Answer Relevancy}, e as correlações entre as métricas foram fracas. As duas métricas reagem à forma da resposta, curta ou explicativa, e nenhuma verifica diretamente se um valor está correto.
+  \item \textbf{Recusas pesam.} O Stuff recusou 30\% das perguntas, na maior parte das vezes com a informação presente no contexto, segundo o juiz. Sem as recusas, sua similaridade fica próxima da do Map-Rerank e sua \emph{Faithfulness} média é a maior entre os métodos.
+  \item \textbf{Compressão precisa de calibração.} Limiares fixos de similaridade ou não descartaram nada, ou descartaram quase tudo. Limiares calibrados pela distribuição observada cortaram cerca de 40\% dos tokens sem perda de similaridade em dois dos três domínios.
+  \item \textbf{O banco vetorial é questão de infraestrutura.} ChromaDB e FAISS recuperaram exatamente os mesmos fragmentos. O FAISS foi muito mais rápido, mas os tempos de ambos são desprezíveis diante da geração nos corpora avaliados.
+\end{enumerate}
+
+Quanto à avaliação automática, a validação não indicou viés de autopreferência do \texttt{gpt-4o-mini} como juiz, mas mostrou que a confiabilidade das métricas RAGAS varia muito: \emph{Answer Relevancy} e \emph{Context Recall} foram estáveis entre execuções e entre juízes, a \emph{Faithfulness} foi moderadamente estável, e a \emph{Context Precision} não foi confiável.
+
+Do ponto de vista prático, o trabalho sugere quatro diretrizes para quem constrói sistemas RAG sobre documentos em português: escolher o método pelo custo e pelo tipo de resposta esperada, e não por uma ordenação geral de qualidade; avaliar com mais de uma métrica e declarar qual noção de qualidade importa para a aplicação; ao usar um LLM como juiz, verificar a estabilidade de cada métrica com um reteste e um juiz independente antes de tirar conclusões dela; e calibrar filtros de compressão na distribuição de similaridade do próprio embedding e domínio.
+
+Como trabalhos futuros, destacam-se: ampliar o número de perguntas por domínio para dar poder estatístico às comparações de qualidade; variar o LLM e o modelo de embedding, retomando o eixo previsto no plano original; testar instruções de recusa mais brandas no prompt; validar as métricas automáticas contra avaliação humana; e avaliar o desempenho dos bancos vetoriais em corpora maiores.

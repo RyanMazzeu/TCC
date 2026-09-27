@@ -302,7 +302,58 @@ paper-âncora já alertava sobre "limiares punitivos" — aqui, com dado nosso, 
 
 Dados brutos: `resultados/metricas/comparativo_compressao_contextual.jsonl`.
 
-## 6. Arquivos gerados nesta etapa
+## 6. Avaliação com RAGAS — a similaridade de cosseno não conta a história toda
+
+Até aqui, a única métrica de qualidade era similaridade de cosseno entre resposta gerada e
+resposta esperada — a mesma limitação que o `plano_de_pesquisa.md` (seção 15) já previa, e que o
+próprio paper-âncora e o paper do IFES/SBC contornam usando **RAGAS**. Implementamos 4 métricas
+RAGAS (`ragas` 0.4.3, API "collections", juiz `gpt-4o-mini`) sobre as 108 linhas do comparativo de
+6 métodos na versão **v2** (`comparativo_6_metodos_v2.jsonl` — não o v3 da seção 3, que tem 162
+linhas e a amostra equilibrada; o RAGAS sobre o v3 está em andamento, ver seção 8): **Answer Relevancy** (a resposta é relevante e não evasiva?), **Faithfulness**
+(a resposta é factualmente sustentada pelo contexto recuperado?), **Context Precision** e
+**Context Recall** (o contexto recuperado é útil e suficiente?). As duas últimas só valem pros 4
+métodos com contexto real (Stuff/Refine/Map-Reduce/Map-Rerank) — Query Step-Down e Reciprocal
+logam perguntas alternativas nesse campo, não trechos recuperados, então ficam de fora dessas duas
+métricas especificamente (não inventamos valor pra isso).
+
+| Método | Answer Relevancy | Faithfulness | Context Precision | Context Recall | (referência) Similaridade cosseno |
+|---|---|---|---|---|---|
+| Stuff | 0,536 | 0,556 | 0,844 | 0,841 | 0,701 |
+| Refine | 0,681 | **0,764** | 0,858 | 0,859 | 0,638 (pior) |
+| Map-Reduce | **0,802** | 0,541 | 0,845 | 0,804 | 0,687 |
+| Map-Rerank | 0,454 | 0,583 | 0,858 | 0,822 | **0,777** (melhor) |
+| Query Step-Down | 0,756 | n/a | n/a | n/a | 0,672 |
+| Reciprocal | **0,323** (pior) | n/a | n/a | n/a | 0,713 |
+
+**Achado principal: cosseno e RAGAS discordam, na direção oposta, exatamente no par que mais
+importava.** O **Refine** — o método com pior similaridade de cosseno em toda a seção 3 — é
+disparado o método **mais fiel ao contexto recuperado** (0,764, muito acima dos outros três). O
+**Map-Rerank** — o método com melhor similaridade de cosseno — não é o pior em fidelidade (isso é
+Map-Reduce, 0,541), mas também não se destaca (0,583, 2º lugar): ele vence por bater com a
+*fraseologia* da resposta esperada, não por ser o mais ancorado no documento. Isso quer dizer que
+**"melhor por similaridade de cosseno" e "mais confiável/fundamentado" são coisas diferentes, e um
+método pode ganhar em uma métrica e não se destacar na outra** — não dá pra escolher "o melhor
+método de RAG" olhando só pra uma métrica de qualidade, tem que declarar qual noção de qualidade
+importa pro caso de uso.
+
+**Achados secundários:**
+- **Map-Reduce** tem a melhor relevância de resposta (0,802) — suas respostas respondem diretamente
+  à pergunta, mesmo não sendo as mais fiéis ao contexto nem as mais parecidas com o gabarito.
+- **Reciprocal** tem a pior relevância de resposta (0,323) de todos os 6 métodos, mesmo com
+  similaridade de cosseno mediana (0,713) — sinal de que a resposta escolhida (maior confiança
+  entre 4 alternativas) às vezes deriva do que a pergunta original pedia.
+- **Context Precision e Context Recall variam pouco entre os 4 métodos com contexto** (0,84-0,86 e
+  0,80-0,86) — faz sentido, os quatro usam a mesma recuperação (mesmo `k=4`, mesma pergunta); a
+  diferença de qualidade entre métodos vem de como cada um *usa* o contexto na geração, não de
+  recuperar contextos diferentes.
+- **Taxa de erro:** 5 de 72 avaliações de fidelidade e 1 de contexto falharam (estouro de limite de
+  tokens do juiz LLM em respostas muito longas, principalmente do Refine) — ficaram como `None`
+  registrado, não um valor inventado. ~7% de falha, vale monitorar se crescer.
+
+Dados brutos: `resultados/metricas/comparativo_6_metodos_v2_ragas.jsonl` (mesmo conteúdo de
+`comparativo_6_metodos_v2.jsonl`, com um campo `ragas` adicionado por linha).
+
+## 7. Arquivos gerados nesta etapa
 
 ```
 Pesquisa/dados/brutos/revalida_2024_2_prova_discursiva.{pdf,txt}
@@ -323,7 +374,8 @@ Pesquisa/scripts/piloto_revalida.py                    <- runner do piloto médi
 Pesquisa/scripts/piloto_grendene.py                    <- runner do piloto financeiro em português
 Pesquisa/scripts/piloto_sbc_paper.py                   <- runner do piloto técnico-científico em português
 Pesquisa/scripts/comparar_metodos.py                   <- comparativo dos 6 métodos, 27 perguntas equilibradas (12+7+8)
-Pesquisa/scripts/testar_compressao.py                  <- teste de compressão contextual (4 limiares, método Stuff)
+Pesquisa/scripts/testar_compressao.py                  <- teste de compressão contextual (4 limiares, método Stuff), retoma de onde parou
+Pesquisa/scripts/avaliar_ragas.py                      <- avaliação RAGAS (4 métricas) sobre um log já rodado, retoma de onde parou
 Pesquisa/scripts/_gerar_vetores_para_benchmark.py      <- passo 1/2 do comparativo Chroma vs FAISS (embeddings + Chroma)
 Pesquisa/scripts/_medir_faiss_puro.py                  <- passo 2/2 (só FAISS, processo separado)
 Pesquisa/resultados/metricas/piloto_revalida_stuff.jsonl
@@ -335,10 +387,13 @@ Pesquisa/resultados/metricas/comparativo_6_metodos.jsonl      <- histórico (6 m
 Pesquisa/resultados/metricas/comparativo_6_metodos_v2.jsonl   <- histórico (6 métodos, Revalida 12 perguntas, mas Grendene/SBC ainda em 3)
 Pesquisa/resultados/metricas/comparativo_6_metodos_v3.jsonl   <- atual (6 métodos, 27 perguntas equilibradas: 12+7+8)
 Pesquisa/resultados/metricas/comparativo_vectorstores.json    <- ChromaDB vs FAISS (infraestrutura)
-Pesquisa/resultados/metricas/comparativo_compressao_contextual.jsonl
+Pesquisa/resultados/metricas/comparativo_compressao_contextual.jsonl    <- rodada de 18 perguntas (seção 5)
+Pesquisa/resultados/metricas/comparativo_compressao_contextual_v2.jsonl <- atual (27 perguntas equilibradas, 108 execuções)
+Pesquisa/resultados/metricas/comparativo_6_metodos_v2_ragas.jsonl       <- v2 + campo `ragas` (seção 6)
+Pesquisa/resultados/metricas/comparativo_6_metodos_v3_ragas.jsonl       <- v3 + campo `ragas` (em andamento)
 ```
 
-## 7. Pendências em aberto
+## 8. Pendências em aberto
 
 **Decisões já tomadas:**
 - Mudança de direção (domínios PT-BR) **validada com o orientador**.
@@ -348,17 +403,88 @@ Pesquisa/resultados/metricas/comparativo_compressao_contextual.jsonl
   3 domínios (27 perguntas, 162 execuções no comparativo dos 6 métodos).
 - Compressão contextual implementada e testada (seção 5).
 - ChromaDB vs FAISS comparado por infraestrutura (seção 4.2).
-- RAGAS, Pinecone e embeddings proprietários (Cohere/OpenAI): **decisão consciente de não cobrir**
-  — o escopo fica com cosseno + BGE-M3 + ChromaDB/FAISS.
+- RAGAS **passou a ser coberto** (seção 6) — revisa a decisão anterior de não cobrir, já que a
+  seção 6 mostrou que só cosseno esconde diferenças reais entre os métodos.
+- Pinecone e embeddings proprietários (Cohere/OpenAI): **decisão consciente de não cobrir** — o
+  escopo fica com BGE-M3 + ChromaDB/FAISS.
 
-**Trabalho técnico que ainda falta (sem decisão pendente, só execução):**
-- Investigar por que o Refine supera o Stuff em qualidade especificamente no Revalida (0,687 vs
-  0,555) — nos outros dois domínios o Stuff continua à frente do Refine.
-- Testar compressão contextual com limiares calibrados por domínio (0,3/0,5 não tiveram efeito
-  nenhum aqui — precisa de valores no intervalo realmente observado, ex. 0,55-0,75).
-- Repetir os 6 métodos com FAISS no lugar do ChromaDB — sabemos que a recuperação será idêntica
-  (seção 4.2), então não precisa refazer as chamadas de LLM, só confirmar que os tempos de ponta a
-  ponta melhoram como esperado.
-- Gerar gráficos a partir dos JSONL (nenhum gráfico existe ainda, só tabelas).
-- Escrever os capítulos da monografia (Materiais e Métodos, Resultados, Discussão, Conclusão) — os
-  achados já estão documentados aqui, falta a redação acadêmica.
+**Trabalho técnico — situação em 27/09/2026:**
+- ✅ RAGAS sobre o v3 completo (162/162, sem falhas) — seção 9. A seção 6 fica como histórico (v2).
+- ✅ Refine × Stuff no Revalida: explicado pelas recusas do Stuff ("Não sei." em 6 das 12 perguntas
+  do Revalida), na maioria com o contexto contendo a resposta segundo o Context Recall — seção 9.
+- ✅ Compressão na amostra equilibrada (27 perguntas), com limiares fixos e calibrados — seção 9.
+  A seção 5 fica como histórico (18 perguntas).
+- ✅ Gráficos e análise estatística (`scripts/analisar_resultados.py` → `resultados/tabelas/`,
+  `resultados/graficos/`, `resultados/analise_estatistica.md`).
+- ✅ Redação: artigo completo em `Artigo_TCC02/` (rascunho para revisão).
+- ⏳ Não feito: repetir os 6 métodos ponta a ponta com FAISS (a recuperação é idêntica, seção 4.2;
+  só mudaria o tempo de recuperação, que já é desprezível diante da geração).
+- ⏳ Não feito: validar as métricas automáticas contra avaliação humana (limitação declarada no artigo).
+
+## 9. Rodada final (27/09/2026)
+
+Todos os números abaixo saem de `scripts/analisar_resultados.py`; o resumo completo, com todos os
+testes, está em `resultados/analise_estatistica.md`, e a redação em `Artigo_TCC02/`.
+
+**Estatística do comparativo (v3, 27 perguntas × 6 métodos).** Friedman sobre a similaridade de
+cosseno: χ² = 7,21, p = 0,205 — nenhum par sobrevive à correção de Holm. O "Map-Rerank é o melhor"
+da seção 3 é uma tendência (0,744, IC 95% [0,67; 0,81]), não uma diferença estatisticamente
+estabelecida. Em custo, as diferenças são grandes: Query Step-Down e Reciprocal usam ~5× os tokens
+do Stuff.
+
+**Recusas.** Stuff: 8 de 27 respostas foram "Não sei." (6 no Revalida). Sem as recusas, a
+similaridade do Stuff vai de 0,647 para 0,746 (Map-Rerank sem recusas: 0,758). Nas 13 recusas dos
+métodos com contexto, o Context Recall médio foi 0,744 (10 com CR ≥ 0,5): na maioria das vezes, o
+contexto tinha a resposta e o modelo recusou. As recusas também são instáveis: repetindo o Stuff três
+vezes (temperatura 0), `revalida_q3_b` recusou numa execução e respondeu certo nas outras duas.
+
+**RAGAS (juiz gpt-4o-mini, sem falhas).**
+
+| Método | Answer Rel. | Faithfulness | Faithf. sem recusas | Cosseno |
+|---|---|---|---|---|
+| Stuff | 0,545 | 0,582 | 0,827 | 0,647 |
+| Refine | 0,706 | 0,749 | 0,808 | 0,657 |
+| Map-Reduce | 0,745 | 0,635 | 0,666 | 0,682 |
+| Map-Rerank | 0,427 | 0,631 | 0,656 | 0,744 |
+| Query Step-Down | 0,782 | n/a | n/a | 0,682 |
+| Reciprocal | 0,285 | n/a | n/a | 0,676 |
+
+Answer Relevancy é a única métrica com diferença significativa (Friedman p < 0,001), e ordena os
+métodos quase ao contrário do cosseno: respostas curtas ("5,3186") ganham no cosseno e perdem na
+Answer Relevancy. Correlação cosseno × RAGAS, linha a linha: ρ entre 0,16 e 0,35.
+
+**Validação do juiz (amostra estratificada de 54, seed 42).** Reteste do próprio gpt-4o-mini e juiz
+independente Cohere Command A (`command-a-03-2025`, chave Trial — 20 chamadas/min).
+
+| Métrica | ρ reteste | ρ inter-juiz | Viés (4o-mini − Command A) |
+|---|---|---|---|
+| Answer Relevancy | 0,99 | 0,93 (mesma ordem de métodos, τ = 1) | −0,050 (p < 0,001) |
+| Faithfulness | 0,76 | 0,57 | −0,038 (p = 0,616) |
+| Context Precision | 0,78 | 0,03 | +0,181 (p = 0,004) |
+| Context Recall | 0,84 | 0,87 | +0,065 (p = 0,068) |
+
+Sem sinal de autopreferência (o 4o-mini é igual ou mais rigoroso com as próprias respostas).
+Answer Relevancy e Context Recall são robustos; Faithfulness é moderada; Context Precision não é
+confiável. Reteste embutido nos dados: os 4 métodos com contexto recebem os mesmos fragmentos, e
+mesmo assim a Context Precision coincidiu nos 4 em só 21 de 27 perguntas.
+
+**Compressão contextual (Stuff, 27 perguntas).** Limiares fixos: 0,3 e 0,5 não cortam nada; 0,7
+corta 65,4% dos tokens com −16,1% de similaridade (p = 0,004). Limiares calibrados pelos quantis
+25/50/75 da similaridade do top-4 de cada domínio (`resultados/metricas/limiares_calibrados.json`):
+
+| Domínio | P50: Δ tokens / Δ similaridade | P75: Δ tokens / Δ similaridade |
+|---|---|---|
+| Revalida | −32,6% / −14,6% | −45,5% / −20,4% |
+| Grendene | −44,9% / 0,0% | −58,0% / −0,5% |
+| SBC | −41,5% / +0,1% | −56,0% / −2,9% |
+
+Calibração dentro da amostra (mesmas perguntas) — os ganhos são um limite superior.
+
+**Problemas de engenharia resolvidos nesta rodada** (vale saber pra próximas rodadas):
+- A telemetria do RAGAS fazia uma chamada de rede bloqueante por avaliação (~9 s vs ~0,6 s por
+  chamada ao juiz). Desligada via `RAGAS_DO_NOT_TRACK=true` em `avaliar_ragas.py`.
+- Paralelismo estourou o limite de 200 mil tokens/min da OpenAI e o de 20 chamadas/min da chave
+  Trial da Cohere. `avaliar_ragas.py` agora tem limitador de requisições (`--por-minuto`) e refaz só
+  as métricas que falharam em linhas já gravadas.
+- A lentidão do BGE-M3 é da CPU (sem GPU; o FlagEmbedding já usa float32 na CPU). Indexar os 430
+  trechos do Revalida leva ~10 min com a máquina ocupada.

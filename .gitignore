@@ -36,3 +36,5 @@ main.log
 *.mtc*
 .venv
 .env
+# Índice local do notebook Testar_RAG (recriado sozinho se faltar)
+Pesquisa/notebooks/.chroma_notebook/

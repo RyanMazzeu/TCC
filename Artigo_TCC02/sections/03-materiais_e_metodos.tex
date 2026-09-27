@@ -1,0 +1,81 @@
+\section{Materiais e métodos}
+\label{sc:metodos}
+
+O estudo é quantitativo e experimental. O desenho segue o de Şakar e Emekci~\cite{sakar2025rag}, com os mesmos seis métodos de RAG e o mesmo tamanho de fragmento, mas com documentos e perguntas em português. Para isolar o efeito do método de injeção de contexto, o modelo de embedding, o LLM, o tamanho dos fragmentos e o número de fragmentos recuperados foram mantidos fixos em todos os experimentos.
+
+\subsection{Corpora e perguntas}
+
+Cada domínio do estudo de referência foi substituído por um equivalente brasileiro do mesmo tipo (Tabela~\ref{tab:corpora}). O critério comum aos três foi que toda resposta de referência tivesse fonte verificável: um gabarito oficial ou um trecho literal do documento. Nenhuma resposta de referência foi escrita a partir de conhecimento próprio dos autores.
+
+\begin{table}[htbp]
+\centering
+\small
+\caption{Domínios, documentos e perguntas utilizados.}
+\label{tab:corpora}
+\begin{tabular}{p{2.4cm}p{6.2cm}cc}
+\toprule
+Domínio & Documentos (corpus de recuperação) & Fragmentos & Perguntas \\
+\midrule
+Médico (Revalida) & Código de Ética Médica (CFM); guia \emph{Consulta do adolescente} (SBP); Diretriz de Tromboembolismo Venoso 2022; artigo Febrasgo sobre as recomendações da OMS (2018) para o parto; Guia de Vigilância em Saúde, cap. Doença Meningocócica (MS) & 430 & 12 \\
+Financeiro (Grendene) & Informações Trimestrais (ITR) de 30/09/2025 da Grendene S.A. \cite{grendene2025itr} & 199 & 7 \\
+Técnico-científico (SBC) & Artigo de Medeiros e Oliveira~\cite{medeiros2025embeddings} & 42 & 8 \\
+\midrule
+Total & & 671 & 27 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Médico.} As perguntas são os subitens das Questões 1, 3, 4 e 5 da prova discursiva do Revalida 2024/2, e as respostas de referência são o padrão de resposta definitivo publicado pelo INEP \cite{inep2024revalida}. O corpus de recuperação é formado pelos documentos citados na referência bibliográfica do próprio gabarito, reunidos em um único índice: para cada pergunta, o recuperador precisa encontrar o documento certo entre os cinco. A Questão 2 foi excluída porque sua única referência é o manual do curso ATLS, material pago e protegido por direitos autorais, e um subitem que dependia da interpretação de uma imagem também foi excluído. A pergunta enviada ao sistema é a vinheta clínica seguida do enunciado do subitem.
+
+\textbf{Financeiro.} O documento é o relatório trimestral oficial da Grendene S.A., com balanço patrimonial, demonstrações de resultado e de fluxo de caixa e notas explicativas (72 páginas). Como o documento não traz perguntas, as sete perguntas foram redigidas pelos autores, cada uma ancorada em um trecho literal do relatório (por exemplo, a taxa de câmbio de fechamento do dólar e o lucro líquido consolidado do trimestre).
+
+\textbf{Técnico-científico.} O documento é o artigo de Medeiros e Oliveira~\cite{medeiros2025embeddings}, escolhido por ser um texto científico brasileiro sobre o próprio tema deste trabalho. As oito perguntas seguem o mesmo procedimento do domínio financeiro.
+
+Os PDFs foram convertidos em texto simples antes da fragmentação. Os arquivos originais, os textos extraídos e as perguntas com suas respostas de referência estão disponíveis no repositório do trabalho.
+
+\subsection{Pipeline}
+
+Os documentos foram divididos com o \texttt{RecursiveCharacterTextSplitter} (fragmentos de 1.000 caracteres com sobreposição de 100, os mesmos valores do estudo de referência) e codificados com o BGE-M3 \cite{chen2024bgem3}, modelo de embedding multilíngue, usando apenas os vetores densos. O BGE-small em inglês, usado pelo estudo de referência, foi substituído por não suportar português. Os vetores foram indexados no ChromaDB com distância euclidiana. Como os vetores são normalizados, a similaridade de cosseno entre pergunta e fragmento é obtida diretamente da distância quadrática $d^2$ retornada pelo banco, como $\cos = 1 - d^2/2$. Em todos os métodos, a recuperação devolve os $k = 4$ fragmentos mais próximos.
+
+A geração foi feita com o \texttt{gpt-4o-mini} da OpenAI, com temperatura 0, um dos três LLMs avaliados por Şakar e Emekci~\cite{sakar2025rag}. O identificador \texttt{gpt-4o-mini} é um apelido que a API resolve para uma versão específica do modelo. Na data de redação deste artigo, ele correspondia a \texttt{gpt-4o-mini-2024-07-18}; os registros dos experimentos armazenaram apenas o apelido.\todo{Confirmar se dá pra afirmar a versão usada nos experimentos (setembro/2026).}
+
+Os seis métodos foram implementados diretamente sobre a API, sem uso de \emph{frameworks} de orquestração, para que cada chamada ao LLM fosse contabilizada:
+
+\begin{itemize}
+  \item \textbf{Stuff} (1 chamada): os $k$ fragmentos são concatenados em um único prompt, com a instrução ``Responda à pergunta usando apenas o contexto abaixo. Se a resposta não estiver no contexto, diga que não sabe.''
+  \item \textbf{Refine} ($k$ chamadas): gera uma resposta com o primeiro fragmento e a refina com cada fragmento seguinte, alterando-a apenas se o novo fragmento trouxer informação relevante.
+  \item \textbf{Map-Reduce} ($k+1$ chamadas): gera uma resposta parcial por fragmento e combina as parciais em uma resposta final.
+  \item \textbf{Map-Rerank} ($k$ chamadas): gera, para cada fragmento isoladamente, uma resposta e uma nota de confiança de 0 a 100, e mantém a resposta de maior confiança.
+  \item \textbf{Query Step-Down} (6 chamadas): a partir da pergunta e de um contexto inicial, gera quatro perguntas alternativas mais específicas, responde cada uma com Stuff e combina as quatro respostas. O estudo de referência não deixa explícito se a combinação usa uma chamada própria ao LLM; aqui optou-se por usá-la.
+  \item \textbf{Reciprocal RAG} (5 chamadas): gera as mesmas quatro perguntas alternativas, responde cada uma com nota de confiança e mantém a resposta mais confiável, sem etapa de combinação.
+\end{itemize}
+
+\subsection{Métricas}
+
+\textbf{Similaridade de cosseno.} É a métrica de qualidade do estudo de referência: a similaridade de cosseno entre os embeddings BGE-M3 da resposta gerada e da resposta de referência.
+
+\textbf{RAGAS.} Foram calculadas quatro métricas do RAGAS \cite{es2024ragas} (biblioteca \texttt{ragas} 0.4.3): \emph{Answer Relevancy}, \emph{Faithfulness}, \emph{Context Precision} e \emph{Context Recall}. O juiz foi o próprio \texttt{gpt-4o-mini}, com limite de 4.096 tokens de saída, e o embedding da \emph{Answer Relevancy} foi o \texttt{text-embedding-3-small} da OpenAI. As três últimas métricas avaliam o conjunto de fragmentos entregue ao gerador e só se aplicam aos quatro métodos que recebem esse conjunto. O Query Step-Down e o Reciprocal RAG fazem uma recuperação por pergunta alternativa, sem um conjunto único a avaliar, e por isso recebem apenas a \emph{Answer Relevancy}. Avaliações que falharam (por exemplo, por saída truncada do juiz) foram registradas como ausentes, e não imputadas.
+
+\textbf{Validação do juiz.} Como o mesmo modelo gera e avalia as respostas, há risco de viés de autopreferência \cite{panickssery2024selfpref}. Para estimá-lo, uma amostra estratificada de 54 respostas (3 por combinação de domínio e método, sorteadas com semente fixa) foi avaliada novamente por dois juízes: um juiz independente de outra família de modelos, o Command A da Cohere (\texttt{command-a-03-2025}), sucessor do Command-R avaliado pelo estudo de referência, com as mesmas métricas e o mesmo embedding; e o próprio \texttt{gpt-4o-mini}, uma segunda vez, para medir a variação do juiz consigo mesmo. A comparação entre as duas medidas indica se a discordância com o juiz independente é maior do que o ruído de uma única avaliação.
+
+\textbf{Custo.} Para cada pergunta, foram registrados os tokens de entrada e de saída informados pela API e o tempo total, da recuperação até o fim da geração. O uso de CPU e memória também foi registrado com a biblioteca \texttt{psutil}, mas não é analisado aqui: como a geração ocorre nos servidores da API, essas medidas refletem apenas o cliente, e não o custo de inferência do método.
+
+\subsection{Compressão contextual}
+
+O filtro de compressão descarta, antes da geração, os fragmentos recuperados cuja similaridade com a pergunta fica abaixo de um limiar. Se todos ficarem abaixo, o fragmento mais similar é mantido. O filtro foi aplicado ao método Stuff, o de menor custo, com as mesmas 27 perguntas, em duas rodadas: com limiares fixos de 0,3, 0,5 e 0,7; e com limiares calibrados por domínio, definidos como os quantis 25, 50 e 75 da similaridade dos fragmentos do top-4 de todas as perguntas do domínio. A segunda rodada foi motivada pelo resultado da primeira (Seção~\ref{sc:resultados}). Como a calibração usa as mesmas perguntas avaliadas, os limiares calibrados medem o efeito de descartar uma fração controlada dos fragmentos, e não o desempenho de um limiar escolhido de antemão.
+
+\subsection{Bancos vetoriais}
+
+O ChromaDB (persistente em disco) foi comparado ao FAISS \cite{johnson2021faiss} (\texttt{IndexFlatL2}, busca exata em memória) sobre os mesmos vetores BGE-M3 dos três domínios, medindo tempo de indexação, tempo médio de consulta, memória alocada na indexação e concordância entre os fragmentos do top-$k$ retornados pelos dois bancos. Como a busca é exata nos dois casos e a métrica de distância é a mesma, a qualidade das respostas não depende do banco, e a comparação se restringe à infraestrutura. As medições foram feitas em processos separados para os dois bancos, sem chamadas ao LLM.
+
+\subsection{Análise estatística}
+
+As 27 perguntas foram tratadas como blocos pareados, já que todos os métodos respondem às mesmas perguntas. A diferença entre métodos foi testada com o teste de Friedman e, em seguida, com testes de Wilcoxon pareados par a par, com os valores-$p$ corrigidos pelo método de Holm \cite{holm1979simple}, seguindo a recomendação de Demšar~\cite{demsar2006statistical} para comparação de vários métodos sobre as mesmas instâncias. Intervalos de confiança de 95\% das médias foram estimados por \emph{bootstrap} percentil (10.000 reamostragens), e as correlações entre métricas e entre juízes, pelo coeficiente de Spearman. O nível de significância adotado foi 0,05. Com 27 perguntas, os testes têm baixo poder: a ausência de significância indica que a diferença não pode ser afirmada com esta amostra, e não que ela seja nula.
+
+\subsection{Ambiente e reprodutibilidade}
+
+Os experimentos foram executados em Python 3.12 em um notebook com processador Intel Core i5-12450H (12 \emph{threads}), cerca de 20 GB de RAM e sem GPU dedicada; os embeddings foram calculados na CPU.\todo{Confirmar que todos os experimentos rodaram nesta máquina.} As principais bibliotecas foram \texttt{chromadb} 1.5.9, \texttt{faiss} 1.14.3, \texttt{FlagEmbedding} 1.4.0, \texttt{openai} 2.41.1, \texttt{ragas} 0.4.3 e \texttt{scipy} 1.17.1. Cada execução foi registrada em um arquivo JSONL, com pergunta, fragmentos recuperados, resposta, tokens, tempos e métricas. O código, os registros e o script que gera todas as tabelas e figuras deste artigo estão no repositório do trabalho.
+
+\subsection{Diferenças em relação ao plano de trabalho}
+
+O plano de trabalho aprovado no TCC01 previa os três conjuntos de dados em inglês do estudo de referência, os bancos ChromaDB, FAISS e Pinecone, três modelos de embedding (BGE-small, text-embedding-3-large e Cohere-en-v3) e métricas de similaridade de cosseno e RAGAS. Durante a execução, verificou-se que o desenho original reproduziria quase integralmente o estudo de referência, já publicado. Por isso, com a concordância do orientador, os conjuntos de dados foram substituídos por equivalentes em português, o que define a contribuição do trabalho. O embedding foi fixado no BGE-M3, único dos modelos considerados com suporte adequado a português e execução local sem custo, e o Pinecone, serviço pago em nuvem, não foi incluído. Essas escolhas reduzem o espaço de configurações em relação ao estudo de referência, mas mantêm o eixo central de comparação: os seis métodos de RAG, a compressão contextual e o custo de infraestrutura dos bancos vetoriais.\todo{Revisar com o orientador a redação da justificativa.}

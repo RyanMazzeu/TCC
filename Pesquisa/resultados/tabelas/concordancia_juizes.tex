@@ -1,0 +1,19 @@
+\begin{table}[htbp]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\caption{Concordância do juiz das métricas RAGAS numa amostra estratificada de respostas. Reteste: o gpt-4o-mini avaliando as mesmas respostas uma segunda vez. Inter-juiz: gpt-4o-mini contra o Cohere Command A, de outra família de modelos.}
+\label{tab:concordancia_juizes}
+\begin{tabular}{lccc|cccccc}
+\toprule
+& \multicolumn{3}{c|}{Reteste (4o-mini $\times$ 4o-mini)} & \multicolumn{6}{c}{Inter-juiz (4o-mini $\times$ Command A)} \\ \cmidrule(lr){2-4} \cmidrule(lr){5-10}
+Métrica & $n$ & $\rho$ & Dif. abs. & $n$ & $\rho$ & Dif. abs. & Viés & $p$ & $\rho$ s/ recusas \\
+\midrule
+Answer Relevancy & 54 & 0,99 & 0,012 & 54 & 0,93 & 0,067 & -0,050 & < 0,001 & 0,90 \\
+Faithfulness & 36 & 0,76 & 0,085 & 36 & 0,57 & 0,179 & -0,038 & 0,616 & 0,59 \\
+Context Precision & 36 & 0,78 & 0,029 & 36 & 0,03 & 0,232 & 0,181 & 0,004 & 0,11 \\
+Context Recall & 36 & 0,84 & 0,033 & 36 & 0,87 & 0,065 & 0,065 & 0,068 & 0,91 \\
+\bottomrule
+\end{tabular}
+\par\smallskip\parbox{0.95\linewidth}{\footnotesize $\rho$: correlação de Spearman; Dif. abs.: diferença absoluta média; Viés: média de (4o-mini $-$ Command A), com $p$ do teste de Wilcoxon pareado; $\rho$ s/ recusas: correlação inter-juiz excluindo as respostas em que o modelo declarou não ter a informação.}
+\end{table}
