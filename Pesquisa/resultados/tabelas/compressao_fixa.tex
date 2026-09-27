@@ -1,0 +1,25 @@
+\begin{table}[htbp]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\caption{Compressão contextual com limiares fixos de similaridade (método Stuff, $k = 4$). $\Delta$: variação relativa à mesma pergunta sem filtro.}
+\label{tab:compressao_fixa}
+\begin{tabular}{llccccc}
+\toprule
+Domínio & Limiar & Chunks & Tokens & $\Delta$ tokens & Similaridade & $\Delta$ sim. \\
+\midrule
+Revalida & sem filtro & 4,00 & 1.159 & -- & 0,592 & -- \\
+Revalida & 0,3 & 4,00 & 1.158 & -0,1\% & 0,592 & -0,1\% \\
+Revalida & 0,5 & 4,00 & 1.162 & 0,2\% & 0,591 & -0,3\% \\
+Revalida & 0,7 & 1,08 & 458 & -60,5\% & 0,434 & -26,7\% \\
+Grendene & sem filtro & 4,00 & 1.578 & -- & 0,602 & -- \\
+Grendene & 0,3 & 4,00 & 1.578 & 0,0\% & 0,602 & 0,0\% \\
+Grendene & 0,5 & 4,00 & 1.578 & 0,0\% & 0,602 & 0,0\% \\
+Grendene & 0,7 & 1,00 & 425 & -73,1\% & 0,582 & -3,3\% \\
+SBC & sem filtro & 4,00 & 1.326 & -- & 0,829 & -- \\
+SBC & 0,3 & 4,00 & 1.326 & 0,0\% & 0,825 & -0,6\% \\
+SBC & 0,5 & 4,00 & 1.326 & 0,0\% & 0,829 & 0,0\% \\
+SBC & 0,7 & 1,12 & 477 & -64,0\% & 0,722 & -12,9\% \\
+\bottomrule
+\end{tabular}
+\end{table}

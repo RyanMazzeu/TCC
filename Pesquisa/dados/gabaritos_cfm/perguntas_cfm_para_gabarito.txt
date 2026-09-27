@@ -1,0 +1,467 @@
+==============================================================================================
+  GABARITOS NOVOS — CÓDIGO DE ÉTICA MÉDICA (Resolução CFM nº 2.217/2018)
+  50 perguntas pra aumentar a amostra do domínio médico
+==============================================================================================
+
+QUEM RESPONDE O QUÊ
+  - Ryan:   P01 a P25  (Resolução, Preâmbulo e Capítulos I a IV)
+  - Afonso: P26 a P50  (Capítulos IV a XIV e Exposição de Motivos)
+  Cada um mexe SÓ na sua parte (assim não dá conflito se os dois editarem e subirem no git).
+
+DOCUMENTO
+  Leia o PDF, que tem a paginação certa:
+  Pesquisa/dados/brutos/codigo_etica_medica_cfm.pdf   (17 páginas)
+
+ATENÇÃO: COMO O CÓDIGO É ESCRITO
+  Quase todos os capítulos começam com "É vedado ao médico:". O texto de cada artigo abaixo
+  disso descreve o que é PROIBIDO. Ex.: "Art. 39 Opor-se à realização de junta médica..."
+  quer dizer que o médico NÃO pode se opor. A resposta precisa deixar isso claro.
+
+COMO PREENCHER CADA PERGUNTA
+  RESPOSTA:  a resposta certa, curta e completa (1 a 2 frases). Use as palavras do Código
+             sempre que der. Se a pergunta tem mais de uma parte, responda todas.
+  TRECHO:    copie e cole do PDF o trecho que prova a resposta, com o número do artigo
+             (ex.: "Art. 39 Opor-se à realização de junta médica..."). OBRIGATÓRIO: é o que torna
+             o gabarito verificável.
+  PÁGINA:    número da página do PDF onde está o trecho.
+  STATUS:    deixe OK. Troque por  DESCARTAR - <motivo>  se a pergunta estiver ambígua, errada,
+             ou tiver mais de uma resposta possível. Não reescreva a pergunta, só marque.
+
+REGRAS
+  1. Responda só com o que está ESCRITO no Código. Nada de conhecimento próprio nem de outras
+     resoluções do CFM.
+  2. Cada campo numa linha só (um script vai ler este arquivo depois).
+  3. Não altere as linhas [Pxx], TIPO: e PERGUNTA:, e não apague nenhum campo.
+  4. Perguntas com TIPO "FORA DO DOCUMENTO" são de propósito sobre algo que acreditamos que o
+     Código NÃO diz (servem pra testar se o RAG sabe dizer "não sei" quando deve). Procure no
+     documento inteiro:
+       - não achou  ->  RESPOSTA: NÃO CONSTA   |   TRECHO: -   |   PÁGINA: -
+       - achou      ->  responda normalmente e escreva em STATUS:  OK - estava no documento
+  5. "ONDE PROCURAR" é só uma dica pra agilizar, não a resposta.
+
+EXEMPLO PREENCHIDO (não conta nas 50)
+  [EXEMPLO]
+  TIPO: FATO | ONDE PROCURAR: Capítulo V (Art. 39)
+  PERGUNTA: O médico pode se opor à realização de junta médica ou segunda opinião solicitada pelo paciente?
+  RESPOSTA: Não. É vedado ao médico opor-se à realização de junta médica ou segunda opinião solicitada pelo paciente ou por seu representante legal.
+  TRECHO: Art. 39 Opor-se à realização de junta médica ou segunda opinião solicitada pelo paciente ou por seu representante legal.
+  PÁGINA: 8
+  STATUS: OK
+
+Tempo estimado: 1 h a 1 h 30 para 25 perguntas.
+Quando os dois terminarem, é só avisar: um script converte isto para o formato do experimento
+e roda os 6 métodos de RAG + RAGAS nas perguntas novas.
+
+
+##############################################################################################
+  PARTE 1 — RYAN (P01 a P25)
+##############################################################################################
+
+[P01]
+TIPO: FATO | ONDE PROCURAR: Resolução (início do documento)
+PERGUNTA: Qual resolução do CFM aprovou o Código de Ética Médica, e em que data ela foi publicada no Diário Oficial da União?
+RESPOSTA: Resolução CFM nº 1931/2009 e foi publicada no dia 15 de agosto de 2018.
+TRECHO: O projeto de reforma do atual Código de Ética Médica (Resolução CFM nº 1931/2009), votado e aprovado na
+III Conferência Nacional de Ética Médica (Conem) pelo Pleno Nacional dos Conselhos de Medicina, na cidade de
+Brasília (DF), no dia 15 de agosto de 2018, foi elaborado tendo em conta a importante participação da sociedade
+brasileira por meio de consulta pública, que reuniu quase 1.500 (um mil e quinhentas) contribuições de médicos
+e não médicos
+PÁGINA: 17
+STATUS: OK
+
+[P02]
+TIPO: LISTA | ONDE PROCURAR: Resolução (início do documento)
+PERGUNTA: Quais resoluções do CFM modificaram a Resolução que aprovou o Código de Ética Médica?
+RESPOSTA:
+TRECHO:
+PÁGINA:
+STATUS: OK
+
+[P03]
+TIPO: NÚMERO | ONDE PROCURAR: Resolução (Art. 3º da Resolução)
+PERGUNTA: Quanto tempo após a publicação o novo Código entrou em vigor, e qual resolução anterior ele revogou?
+RESPOSTA:
+TRECHO:
+PÁGINA:
+STATUS: OK
+
+[P04]
+TIPO: NÚMERO | ONDE PROCURAR: Preâmbulo (item VI)
+PERGUNTA: Na redação atual, quantos princípios fundamentais, normas diceológicas, normas deontológicas e disposições gerais compõem o Código?
+RESPOSTA:
+TRECHO:
+PÁGINA:
+STATUS: OK
+
+[P05]
+TIPO: LISTA | ONDE PROCURAR: Preâmbulo
+PERGUNTA: Segundo o Preâmbulo, a quem cabe a fiscalização do cumprimento das normas do Código?
+RESPOSTA:
+TRECHO:
+PÁGINA:
+STATUS: OK
+
+[P06]
+TIPO: FATO | ONDE PROCURAR: Preâmbulo
+PERGUNTA: O que o Preâmbulo exige para o exercício da medicina?
+RESPOSTA:
+TRECHO:
+PÁGINA:
+STATUS: OK
+
+[P07]
+TIPO: LISTA | ONDE PROCURAR: Capítulo I (Princípios Fundamentais)
+PERGUNTA: O médico não é obrigado a prestar serviços que contrariem sua consciência ou a quem não deseje. Em quais situações essa regra não vale?
+RESPOSTA:
+TRECHO:
+PÁGINA:
+STATUS: OK
+
+[P08]
+TIPO: FATO | ONDE PROCURAR: Capítulo I (Princípios Fundamentais)
+PERGUNTA: O que o Código diz sobre exercer a medicina como comércio?
+RESPOSTA:
+TRECHO:
+PÁGINA:
+STATUS: OK
+
+[P09]
+TIPO: FATO | ONDE PROCURAR: Capítulo I (Princípios Fundamentais)
+PERGUNTA: O que o médico deve fazer diante de formas de deterioração do ecossistema prejudiciais à saúde e à vida?
+RESPOSTA:
+TRECHO:
+PÁGINA:
+STATUS: OK
+
+[P10]
+TIPO: EXPLICAÇÃO | ONDE PROCURAR: Capítulo I (Princípios Fundamentais)
+PERGUNTA: Segundo os Princípios Fundamentais, a atuação profissional do médico caracteriza relação de consumo? Por quê?
+RESPOSTA:
+TRECHO:
+PÁGINA:
+STATUS: OK
+
+[P11]
+TIPO: EXPLICAÇÃO | ONDE PROCURAR: Capítulo I (Princípios Fundamentais)
+PERGUNTA: Como o médico deve agir nas situações clínicas irreversíveis e terminais, segundo os Princípios Fundamentais?
+RESPOSTA:
+TRECHO:
+PÁGINA:
+STATUS: OK
+
+[P12]
+TIPO: FATO | ONDE PROCURAR: Capítulo I (Princípios Fundamentais)
+PERGUNTA: Na aplicação dos conhecimentos criados pelas novas tecnologias, pelo que o médico deve zelar em relação à herança genética das pessoas?
+RESPOSTA:
+TRECHO:
+PÁGINA:
+STATUS: OK
+
+[P13]
+TIPO: LISTA | ONDE PROCURAR: Capítulo II (Direitos dos Médicos)
+PERGUNTA: Quando o médico se recusa a trabalhar em uma instituição por falta de condições dignas, a quem ele deve comunicar essa decisão?
+RESPOSTA:
+TRECHO:
+PÁGINA:
+STATUS: OK
+
+[P14]
+TIPO: EXPLICAÇÃO | ONDE PROCURAR: Capítulo II (Direitos dos Médicos)
+PERGUNTA: Em quais situações o médico tem o direito de suspender suas atividades, qual ressalva o Código faz, e a quem ele deve comunicar a decisão?
+RESPOSTA:
+TRECHO:
+PÁGINA:
+STATUS: OK
+
+[P15]
+TIPO: FATO | ONDE PROCURAR: Capítulo II (Direitos dos Médicos)
+PERGUNTA: O que o médico pode requerer ao Conselho Regional de Medicina quando for atingido no exercício de sua profissão?
+RESPOSTA:
+TRECHO:
+PÁGINA:
+STATUS: OK
+
+[P16]
+TIPO: FATO | ONDE PROCURAR: Capítulo II (Direitos dos Médicos)
+PERGUNTA: Qual direito o Código garante ao médico com deficiência ou com doença?
+RESPOSTA:
+TRECHO:
+PÁGINA:
+STATUS: OK
+
+[P17]
+TIPO: EXPLICAÇÃO | ONDE PROCURAR: Capítulo III (Responsabilidade Profissional)
+PERGUNTA: Segundo o Art. 1º, que tipo de dano ao paciente é vedado ao médico, e como o Código caracteriza a responsabilidade médica?
+RESPOSTA:
+TRECHO:
+PÁGINA:
+STATUS: OK
+
+[P18]
+TIPO: FATO | ONDE PROCURAR: Capítulo III (Responsabilidade Profissional)
+PERGUNTA: O que deve acontecer quando não houver médico plantonista substituto?
+RESPOSTA:
+TRECHO:
+PÁGINA:
+STATUS: OK
+
+[P19]
+TIPO: EXPLICAÇÃO | ONDE PROCURAR: Capítulo III (Responsabilidade Profissional)
+PERGUNTA: O que é vedado ao médico ao receitar, atestar ou emitir laudos, em relação à forma e à identificação?
+RESPOSTA:
+TRECHO:
+PÁGINA:
+STATUS: OK
+
+[P20]
+TIPO: FATO | ONDE PROCURAR: Capítulo III (Responsabilidade Profissional)
+PERGUNTA: Se as condições de trabalho que põem em risco a saúde do trabalhador persistirem depois de comunicadas aos empregadores, o que o médico deve fazer?
+RESPOSTA:
+TRECHO:
+PÁGINA:
+STATUS: OK
+
+[P21]
+TIPO: LISTA | ONDE PROCURAR: Capítulo III (Responsabilidade Profissional)
+PERGUNTA: Com quais objetivos o médico não deve realizar a procriação medicamente assistida?
+RESPOSTA:
+TRECHO:
+PÁGINA:
+STATUS: OK
+
+[P22]
+TIPO: EXPLICAÇÃO | ONDE PROCURAR: Capítulo III (Responsabilidade Profissional)
+PERGUNTA: Em que caso é permitido ao médico intervir sobre o genoma humano, e qual tipo de ação continua excluída?
+RESPOSTA:
+TRECHO:
+PÁGINA:
+STATUS: OK
+
+[P23]
+TIPO: FATO | ONDE PROCURAR: Capítulo IV (Direitos Humanos)
+PERGUNTA: Em que situação o médico pode deixar de obter o consentimento do paciente ou de seu representante legal antes de um procedimento?
+RESPOSTA:
+TRECHO:
+PÁGINA:
+STATUS: OK
+
+[P24]
+TIPO: FORA DO DOCUMENTO | ONDE PROCURAR: documento inteiro
+PERGUNTA: Por quantos anos, no mínimo, o prontuário médico deve ser guardado?
+RESPOSTA:
+TRECHO:
+PÁGINA:
+STATUS: OK
+
+[P25]
+TIPO: FORA DO DOCUMENTO | ONDE PROCURAR: documento inteiro
+PERGUNTA: A partir de qual idade o adolescente pode ser atendido pelo médico sem a presença dos pais ou responsáveis?
+RESPOSTA:
+TRECHO:
+PÁGINA:
+STATUS: OK
+
+
+##############################################################################################
+  PARTE 2 — AFONSO (P26 a P50)
+##############################################################################################
+
+[P26]
+TIPO: EXPLICAÇÃO | ONDE PROCURAR: Capítulo IV (Direitos Humanos)
+PERGUNTA: Como o médico deve agir diante de uma pessoa capaz física e mentalmente que esteja em greve de fome?
+RESPOSTA:
+TRECHO:
+PÁGINA:
+STATUS: OK
+
+[P27]
+TIPO: FATO | ONDE PROCURAR: Capítulo XIV (Disposições Gerais)
+PERGUNTA: O que acontece com o registro do médico portador de doença incapacitante para o exercício profissional?
+RESPOSTA:
+TRECHO:
+PÁGINA:
+STATUS: OK
+
+[P28]
+TIPO: EXPLICAÇÃO | ONDE PROCURAR: Capítulo V (Relação com Pacientes e Familiares)
+PERGUNTA: Em que caso o médico pode deixar de informar diretamente ao paciente o diagnóstico e o prognóstico, e a quem ele deve comunicar nesse caso?
+RESPOSTA:
+TRECHO:
+PÁGINA:
+STATUS: OK
+
+[P29]
+TIPO: EXPLICAÇÃO | ONDE PROCURAR: Capítulo V (Relação com Pacientes e Familiares)
+PERGUNTA: Em que condições o médico tem o direito de renunciar ao atendimento de um paciente?
+RESPOSTA:
+TRECHO:
+PÁGINA:
+STATUS: OK
+
+[P30]
+TIPO: EXPLICAÇÃO | ONDE PROCURAR: Capítulo V (Relação com Pacientes e Familiares)
+PERGUNTA: Em que casos o médico pode prescrever tratamento sem exame direto do paciente, e o que ele deve fazer depois?
+RESPOSTA:
+TRECHO:
+PÁGINA:
+STATUS: OK
+
+[P31]
+TIPO: FATO | ONDE PROCURAR: Capítulo V (Relação com Pacientes e Familiares)
+PERGUNTA: Sob regulamentação de quem se dá o atendimento médico a distância, nos moldes da telemedicina?
+RESPOSTA:
+TRECHO:
+PÁGINA:
+STATUS: OK
+
+[P32]
+TIPO: EXPLICAÇÃO | ONDE PROCURAR: Capítulo V (Relação com Pacientes e Familiares)
+PERGUNTA: O médico pode abreviar a vida do paciente a pedido dele? O que deve fazer nos casos de doença incurável e terminal?
+RESPOSTA:
+TRECHO:
+PÁGINA:
+STATUS: OK
+
+[P33]
+TIPO: LISTA | ONDE PROCURAR: Capítulo V (Relação com Pacientes e Familiares)
+PERGUNTA: Sobre quais aspectos de cada método contraceptivo o médico deve sempre esclarecer o paciente?
+RESPOSTA:
+TRECHO:
+PÁGINA:
+STATUS: OK
+
+[P34]
+TIPO: FATO | ONDE PROCURAR: Capítulo VI (Doação e Transplante de Órgãos e Tecidos)
+PERGUNTA: De qual processo é vedado ao médico participar quando ele pertence à equipe de transplante?
+RESPOSTA:
+TRECHO:
+PÁGINA:
+STATUS: OK
+
+[P35]
+TIPO: FATO | ONDE PROCURAR: Capítulo VI (Doação e Transplante de Órgãos e Tecidos)
+PERGUNTA: Em que situação é vedado retirar órgão de doador vivo, mesmo com autorização do representante legal?
+RESPOSTA:
+TRECHO:
+PÁGINA:
+STATUS: OK
+
+[P36]
+TIPO: EXPLICAÇÃO | ONDE PROCURAR: Capítulo VII (Relação entre Médicos)
+PERGUNTA: Em que situação o médico pode desrespeitar a prescrição ou o tratamento determinado por outro médico, e o que deve fazer nesse caso?
+RESPOSTA:
+TRECHO:
+PÁGINA:
+STATUS: OK
+
+[P37]
+TIPO: LISTA | ONDE PROCURAR: Capítulo XIII (Publicidade Médica)
+PERGUNTA: O que o médico deve incluir em seus anúncios profissionais?
+RESPOSTA:
+TRECHO:
+PÁGINA:
+STATUS: OK
+
+[P38]
+TIPO: EXPLICAÇÃO | ONDE PROCURAR: Capítulo VIII (Remuneração Profissional)
+PERGUNTA: O médico pode subordinar seus honorários ao resultado do tratamento ou à cura do paciente? E o que ele deve ajustar previamente com o paciente?
+RESPOSTA:
+TRECHO:
+PÁGINA:
+STATUS: OK
+
+[P39]
+TIPO: NÚMERO | ONDE PROCURAR: Exposição de Motivos (fim do documento)
+PERGUNTA: Quantas contribuições a consulta pública sobre o novo Código reuniu, e de quem elas vieram?
+RESPOSTA:
+TRECHO:
+PÁGINA:
+STATUS: OK
+
+[P40]
+TIPO: EXPLICAÇÃO | ONDE PROCURAR: Capítulo VIII (Remuneração Profissional, Art. 72 e a redação anterior logo abaixo)
+PERGUNTA: Com que tipo de empresa o médico não pode estabelecer vínculo, segundo a redação atual do Art. 72, e o que foi retirado desse artigo pela Resolução CFM nº 2.226/2019?
+RESPOSTA:
+TRECHO:
+PÁGINA:
+STATUS: OK
+
+[P41]
+TIPO: LISTA | ONDE PROCURAR: Capítulo IX (Sigilo Profissional)
+PERGUNTA: Segundo o Art. 73, em quais situações o médico pode revelar fato de que tenha conhecimento em virtude do exercício da profissão?
+RESPOSTA:
+TRECHO:
+PÁGINA:
+STATUS: OK
+
+[P42]
+TIPO: LISTA | ONDE PROCURAR: Capítulo IX (Sigilo Profissional)
+PERGUNTA: Em quais situações a proibição de revelar o sigilo profissional continua valendo, segundo o parágrafo único do Art. 73?
+RESPOSTA:
+TRECHO:
+PÁGINA:
+STATUS: OK
+
+[P43]
+TIPO: FATO | ONDE PROCURAR: Capítulo IX (Sigilo Profissional)
+PERGUNTA: Que informações o médico pode prestar a empresas seguradoras sobre as circunstâncias da morte de um paciente sob seus cuidados?
+RESPOSTA:
+TRECHO:
+PÁGINA:
+STATUS: OK
+
+[P44]
+TIPO: LISTA | ONDE PROCURAR: Capítulo X (Documentos Médicos)
+PERGUNTA: Em que casos o médico pode atestar óbito de paciente ao qual não prestou assistência?
+RESPOSTA:
+TRECHO:
+PÁGINA:
+STATUS: OK
+
+[P45]
+TIPO: EXPLICAÇÃO | ONDE PROCURAR: Capítulo X (Documentos Médicos)
+PERGUNTA: O que o prontuário deve conter, e como ele deve ser preenchido a cada avaliação?
+RESPOSTA:
+TRECHO:
+PÁGINA:
+STATUS: OK
+
+[P46]
+TIPO: LISTA | ONDE PROCURAR: Capítulo X (Documentos Médicos)
+PERGUNTA: Em quais situações o médico pode liberar cópias do prontuário sob sua guarda?
+RESPOSTA:
+TRECHO:
+PÁGINA:
+STATUS: OK
+
+[P47]
+TIPO: LISTA | ONDE PROCURAR: Capítulo XI (Auditoria e Perícia Médica)
+PERGUNTA: Em quais locais é vedado ao médico realizar exames médico-periciais de corpo de delito?
+RESPOSTA:
+TRECHO:
+PÁGINA:
+STATUS: OK
+
+[P48]
+TIPO: FATO | ONDE PROCURAR: Capítulo XII (Ensino e Pesquisa Médica)
+PERGUNTA: Quando o participante de uma pesquisa é criança, adolescente ou pessoa com transtorno ou doença mental, o que é necessário além do consentimento do representante legal?
+RESPOSTA:
+TRECHO:
+PÁGINA:
+STATUS: OK
+
+[P49]
+TIPO: FORA DO DOCUMENTO | ONDE PROCURAR: documento inteiro
+PERGUNTA: Qual é o valor da multa aplicada ao médico que viola o sigilo profissional?
+RESPOSTA:
+TRECHO:
+PÁGINA:
+STATUS: OK
+
+[P50]
+TIPO: FORA DO DOCUMENTO | ONDE PROCURAR: documento inteiro
+PERGUNTA: Qual é a jornada máxima, em horas, que um médico pode cumprir em um plantão?
+RESPOSTA:
+TRECHO:
+PÁGINA:
+STATUS: OK

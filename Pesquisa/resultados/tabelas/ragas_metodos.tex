@@ -1,0 +1,20 @@
+\begin{table}[htbp]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\caption{Métricas RAGAS médias por método (juiz gpt-4o-mini), com a similaridade de cosseno como referência. Em negrito, o melhor valor de cada coluna.}
+\label{tab:ragas_metodos}
+\begin{tabular}{lcccccc}
+\toprule
+Método & Answer Rel. & Faithf. & Faithf. s/ recusas & Context Prec. & Context Rec. & Cosseno \\
+\midrule
+Stuff & 0,545 & 0,582 & \textbf{0,827} & 0,830 & \textbf{0,857} & 0,647 \\
+Refine & 0,706 & \textbf{0,749} & 0,808 & 0,868 & 0,849 & 0,657 \\
+Map-Reduce & 0,745 & 0,635 & 0,666 & \textbf{0,876} & 0,844 & 0,682 \\
+Map-Rerank & 0,427 & 0,631 & 0,656 & 0,874 & 0,844 & \textbf{0,744} \\
+Query Step-Down & \textbf{0,782} & n/a & n/a & n/a & n/a & 0,682 \\
+Reciprocal & 0,285 & n/a & n/a & n/a & n/a & 0,676 \\
+\bottomrule
+\end{tabular}
+\par\smallskip\parbox{0.95\linewidth}{\footnotesize Faithf. s/ recusas: média excluindo as respostas em que o modelo declarou não ter a informação, para as quais a métrica não tem afirmações a verificar. n/a: Query Step-Down e Reciprocal fazem recuperações próprias por pergunta alternativa, sem um conjunto único de contextos para avaliar; só Answer Relevancy se aplica a eles. Falhas de avaliação registradas como ausentes (não imputadas): Faithfulness 0, Answer Relevancy 0, Context Precision 0, Context Recall 0.}
+\end{table}

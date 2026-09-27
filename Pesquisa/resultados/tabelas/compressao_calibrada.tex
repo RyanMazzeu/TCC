@@ -1,0 +1,25 @@
+\begin{table}[htbp]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\caption{Compressão contextual com limiares calibrados por domínio: quantis 25, 50 e 75 da similaridade dos chunks do top-4 de todas as perguntas do domínio (valor do limiar entre parênteses).}
+\label{tab:compressao_calibrada}
+\begin{tabular}{llccccc}
+\toprule
+Domínio & Limiar & Chunks & Tokens & $\Delta$ tokens & Similaridade & $\Delta$ sim. \\
+\midrule
+Revalida & sem filtro & 4,00 & 1.158 & -- & 0,591 & -- \\
+Revalida & P25 (0,592) & 3,17 & 948 & -18,2\% & 0,570 & -3,6\% \\
+Revalida & P50 (0,626) & 2,33 & 781 & -32,6\% & 0,505 & -14,6\% \\
+Revalida & P75 (0,669) & 1,75 & 631 & -45,5\% & 0,471 & -20,4\% \\
+Grendene & sem filtro & 4,00 & 1.578 & -- & 0,602 & -- \\
+Grendene & P25 (0,625) & 3,00 & 1.230 & -22,0\% & 0,602 & 0,0\% \\
+Grendene & P50 (0,639) & 2,14 & 870 & -44,9\% & 0,602 & 0,0\% \\
+Grendene & P75 (0,661) & 1,57 & 662 & -58,0\% & 0,599 & -0,5\% \\
+SBC & sem filtro & 4,00 & 1.326 & -- & 0,829 & -- \\
+SBC & P25 (0,579) & 3,12 & 1.065 & -19,6\% & 0,827 & -0,2\% \\
+SBC & P50 (0,629) & 2,12 & 776 & -41,5\% & 0,830 & 0,1\% \\
+SBC & P75 (0,671) & 1,50 & 583 & -56,0\% & 0,806 & -2,9\% \\
+\bottomrule
+\end{tabular}
+\end{table}

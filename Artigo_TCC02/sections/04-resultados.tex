@@ -1,0 +1,112 @@
+\section{Resultados}
+\label{sc:resultados}
+
+\subsection{Qualidade e custo dos seis métodos}
+\label{ssc:metodos}
+
+A Tabela~\ref{tab:similaridade_metodos} apresenta a similaridade de cosseno média por domínio e método nas 162 execuções (27 perguntas $\times$ 6 métodos), e a Figura~\ref{fig:similaridade_metodos} mostra as médias gerais com seus intervalos de confiança. O Map-Rerank obteve a maior média geral (0,744), seguido de um grupo praticamente empatado formado por Map-Reduce e Query Step-Down (0,682), Reciprocal (0,676), Refine (0,657) e Stuff (0,647). Os intervalos de confiança, porém, se sobrepõem amplamente, e o teste de Friedman não rejeita a hipótese de igualdade entre os métodos ($\chi^2 = 7{,}21$; $p = 0{,}205$). Nas comparações par a par, as menores diferenças brutas foram Map-Rerank contra Refine ($p = 0{,}017$) e contra Stuff ($p = 0{,}026$), mas nenhuma se mantém após a correção de Holm ($p_{\text{Holm}} \geq 0{,}26$; Tabela~\ref{tab:posthoc_similaridade}).
+
+\tabela{similaridade_metodos}
+
+\tabela{posthoc_similaridade}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.78\linewidth]{similaridade_metodos.pdf}
+\caption{Similaridade de cosseno média por método nas 27 perguntas, com intervalo de confiança de 95\% (\emph{bootstrap}).}
+\label{fig:similaridade_metodos}
+\end{figure}
+
+A ordenação muda de um domínio para outro (Figura~\ref{fig:similaridade_heatmap}). O Map-Rerank lidera no domínio médico (0,714), o Reciprocal no financeiro (0,780) e o Stuff no técnico-científico (0,825) --- justamente o método com a pior média no domínio médico (0,555). Não há, portanto, um método que seja o melhor nos três domínios.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.95\linewidth]{similaridade_heatmap.pdf}
+\caption{Similaridade de cosseno média por domínio e método. Em negrito, o melhor método de cada domínio.}
+\label{fig:similaridade_heatmap}
+\end{figure}
+
+Em custo, as diferenças são grandes e sistemáticas (Tabela~\ref{tab:custo_metodos} e Figura~\ref{fig:custo_qualidade}). O Stuff é o mais barato (1.313 tokens e 3,4 s por pergunta, em média). Map-Rerank e Map-Reduce custam cerca de 1,5 vez o Stuff em tokens, e o Refine, 1,9 vez. Query Step-Down e Reciprocal, que geram e respondem quatro perguntas alternativas, custam cerca de 5 vezes o Stuff em tokens sem superar em qualidade os métodos mais baratos. O Map-Rerank combina a maior similaridade média com um custo próximo ao dos métodos intermediários.
+
+\tabela{custo_metodos}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.72\linewidth]{custo_qualidade.pdf}
+\caption{Custo médio em tokens por pergunta e similaridade de cosseno média de cada método.}
+\label{fig:custo_qualidade}
+\end{figure}
+
+\subsection{Recusas}
+\label{ssc:recusas}
+
+Parte da diferença de qualidade vem das respostas em que o modelo declarou não ter a informação (Tabela~\ref{tab:recusas}). O prompt do Stuff instrui o modelo a dizer que não sabe quando a resposta não estiver no contexto, e o Stuff recusou 8 das 27 perguntas (30\%), seis delas no domínio médico. As 17 recusas observadas no total têm similaridade média de 0,436, contra 0,710 das demais respostas. Excluídas as recusas, a similaridade média do Stuff sobe de 0,647 para 0,746, praticamente a mesma do Map-Rerank sem recusas (0,758). O Map-Rerank recusou apenas uma vez: como cada fragmento gera uma resposta própria, com nota de confiança, basta que um dos quatro fragmentos sustente uma resposta para que ela prevaleça sobre as recusas dos demais. Nas oito perguntas recusadas pelo Stuff, o Map-Rerank respondeu sete, com similaridade maior em todas as sete.\todo{Conferir se a hipótese do mecanismo está bem formulada.}
+
+\tabela{recusas}
+
+A similaridade de cosseno também reage à forma da resposta, e não só ao seu conteúdo. Na pergunta sobre a taxa de câmbio do dólar (Grendene), Stuff, Refine e Map-Reduce responderam o valor correto (5,3186) em uma frase completa e obtiveram similaridade de 0,439, enquanto Map-Rerank e Reciprocal responderam apenas o número e obtiveram 1,0. Na direção oposta, na pergunta sobre o patrimônio líquido consolidado, o Map-Rerank respondeu 4.040.946 mil reais, valor diferente do gabarito (4.050.731), e ainda assim obteve similaridade de 0,613. Métodos que produzem respostas curtas, como Map-Rerank e Reciprocal, tendem a ser favorecidos pela métrica em perguntas factuais, estejam as respostas certas ou não.
+
+\subsection{Métricas RAGAS}
+\label{ssc:ragas}
+
+A Tabela~\ref{tab:ragas_metodos} e a Figura~\ref{fig:ragas_heatmap} apresentam as métricas RAGAS das 162 respostas, todas avaliadas sem falhas. A \emph{Answer Relevancy} é a única métrica em que os métodos diferem de forma significativa (Friedman: $\chi^2 = 55{,}85$; $p < 0{,}001$), e sua ordenação é quase o inverso da obtida com a similaridade de cosseno. Query Step-Down (0,782), Map-Reduce (0,745) e Refine (0,706) lideram, e Map-Rerank (0,427) e Reciprocal (0,285) ficam nas últimas posições. Ou seja, os dois métodos favorecidos pelo cosseno são os mais penalizados. Nas comparações par a par, Query Step-Down, Map-Reduce e Refine superam Map-Rerank e Reciprocal com $p_{\text{Holm}} \leq 0{,}003$, e o Map-Reduce supera o Stuff ($p_{\text{Holm}} = 0{,}032$).
+
+\tabela{ragas_metodos}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.85\linewidth]{ragas_heatmap.pdf}
+\caption{Métricas RAGAS médias por método (juiz gpt-4o-mini) e similaridade de cosseno. As células cinzas indicam métricas que não se aplicam aos métodos com recuperação por pergunta alternativa.}
+\label{fig:ragas_heatmap}
+\end{figure}
+
+A inversão decorre da forma como cada métrica trata respostas curtas. A \emph{Answer Relevancy} gera perguntas a partir da resposta e mede quanto elas se aproximam da pergunta original, atribuindo zero a respostas evasivas \cite{es2024ragas}. Uma resposta como ``5,3186'' ou ``Embolia pulmonar.'' gera perguntas pouco específicas e recebe nota baixa, enquanto a mesma resposta pode ter similaridade de cosseno alta com uma referência igualmente curta. Métodos que selecionam uma única resposta curta por nota de confiança, como Map-Rerank e Reciprocal, ficam no extremo oposto das duas métricas.
+
+A \emph{Faithfulness} não difere significativamente entre os quatro métodos a que se aplica ($\chi^2 = 2{,}65$; $p = 0{,}449$). O Refine tem a maior média (0,749), mas a comparação é afetada pelas recusas: uma resposta como ``Não sei.'' não contém afirmações a verificar, e o juiz atribuiu \emph{Faithfulness} zero a 12 das 13 recusas. Excluídas as recusas, Stuff (0,827) e Refine (0,808) ficam à frente de Map-Reduce (0,666) e Map-Rerank (0,656). \emph{Context Precision} e \emph{Context Recall} variam pouco entre os métodos (0,83 a 0,88 e 0,84 a 0,86), o que era esperado: os quatro métodos recebem exatamente os mesmos fragmentos para cada pergunta, e a diferença entre eles está no uso do contexto, não na recuperação. Por isso mesmo, essas duas métricas deveriam ter valores idênticos entre os métodos, e as pequenas diferenças observadas medem a variação do próprio juiz (Seção~\ref{ssc:juiz}).
+
+As métricas RAGAS confirmam a leitura das recusas da Seção~\ref{ssc:recusas}. Nas 13 recusas dos métodos com contexto, o \emph{Context Recall} médio foi de 0,744, e em 10 delas o juiz considerou que o contexto recuperado cobria ao menos metade da resposta de referência. Na maior parte das recusas, portanto, a informação estava disponível e o modelo não a usou.
+
+A correlação entre a similaridade de cosseno e as métricas RAGAS, linha a linha, é fraca: $\rho = 0{,}20$ com a \emph{Answer Relevancy}, $0{,}35$ com a \emph{Faithfulness}, $0{,}16$ com a \emph{Context Precision} e $0{,}33$ com o \emph{Context Recall}. As métricas medem, em boa parte, coisas diferentes.
+
+\subsection{Validação do juiz}
+\label{ssc:juiz}
+
+A Tabela~\ref{tab:concordancia_juizes} e a Figura~\ref{fig:concordancia_juizes} comparam, na amostra estratificada de 54 respostas, a avaliação principal do \texttt{gpt-4o-mini} com uma segunda avaliação do mesmo modelo (reteste) e com a avaliação do Command A. A confiabilidade variou bastante entre as métricas. Na \emph{Answer Relevancy}, o reteste reproduziu quase exatamente a avaliação principal ($\rho = 0{,}99$), e o juiz independente concordou em alto grau ($\rho = 0{,}93$), com a mesma ordenação dos seis métodos (Kendall $\tau = 1{,}00$). O \emph{Context Recall} também foi estável ($\rho = 0{,}84$ no reteste e $0{,}87$ entre juízes). Na \emph{Faithfulness}, a concordância foi moderada mesmo no reteste ($\rho = 0{,}76$) e menor entre juízes ($\rho = 0{,}57$). Na \emph{Context Precision}, os dois juízes praticamente não concordaram ($\rho = 0{,}03$), e o \texttt{gpt-4o-mini} deu notas mais altas (diferença média de $+0{,}18$; $p = 0{,}004$).
+
+\tabela{concordancia_juizes}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.95\linewidth]{concordancia_juizes.pdf}
+\caption{Notas das métricas RAGAS na amostra de 54 respostas. Em cima, a avaliação principal do gpt-4o-mini (eixo horizontal) contra uma segunda avaliação do mesmo modelo; embaixo, contra o Cohere Command A. A diagonal indica concordância perfeita.}
+\label{fig:concordancia_juizes}
+\end{figure}
+
+Nas métricas que avaliam a resposta gerada, não houve indício de autopreferência: o \texttt{gpt-4o-mini} deu às próprias respostas notas iguais ou menores que as do juiz independente, tanto na \emph{Answer Relevancy} (diferença média de $-0{,}050$; $p < 0{,}001$) quanto na \emph{Faithfulness} ($-0{,}038$; $p = 0{,}616$). As recusas foram tratadas de forma diferente pelos dois juízes: nas 7 recusas da amostra, a \emph{Faithfulness} média foi de 0,08 pelo \texttt{gpt-4o-mini} e de 0,33 pelo Command A.
+
+O próprio comparativo oferece uma segunda medida da variação do juiz. Como os quatro métodos com contexto recebem os mesmos fragmentos, a \emph{Context Precision} e o \emph{Context Recall} de uma pergunta deveriam ser idênticos nos quatro. Isso ocorreu em 21 das 27 perguntas para a \emph{Context Precision} e em 24 para o \emph{Context Recall}. Nas demais, a nota variou entre avaliações da mesma entrada, em um caso de 0 a 1.
+
+\subsection{Compressão contextual}
+\label{ssc:compressao}
+
+Com limiares fixos (Tabela~\ref{tab:compressao_fixa}), os valores de 0,3 e 0,5 não descartaram nenhum fragmento em nenhuma das 27 perguntas: com o BGE-M3, a similaridade dos fragmentos do top-4 ficou entre 0,52 e 0,75 em todos os domínios, sempre acima desses limiares. O limiar de 0,7, ao contrário, ficou acima de quase todos os fragmentos e reduziu o contexto a um único fragmento na maioria das perguntas. O resultado foi um corte de 65,4\% dos tokens com queda de 16,1\% na similaridade (Wilcoxon: $p = 0{,}004$), concentrada no domínio médico ($-26{,}7\%$) e no técnico-científico ($-12{,}9\%$). Os limiares fixos funcionaram, assim, como um interruptor: ou não cortam nada, ou cortam quase tudo.
+
+\tabela{compressao_fixa}
+
+Os limiares calibrados pelos quantis da distribuição observada produziram uma curva gradual (Tabela~\ref{tab:compressao_calibrada} e Figura~\ref{fig:compressao_calibrada}). No conjunto das 27 perguntas, o limiar no quantil 50 cortou 39,0\% dos tokens com queda de 5,7\% na similaridade, e o quantil 75 cortou 52,5\% com queda de 9,3\%. Nenhuma dessas quedas foi significativa ($p = 0{,}139$ e $p = 0{,}093$). O efeito, porém, depende do domínio. Nos domínios financeiro e técnico-científico, o quantil 50 cortou 45\% e 42\% dos tokens sem variação na similaridade (0,0\% e $+0{,}1\%$), e mesmo o quantil 75 manteve a similaridade praticamente estável ($-0{,}5\%$ e $-2{,}9\%$). No domínio médico, cada fragmento descartado custou qualidade: $-14{,}6\%$ no quantil 50 e $-20{,}4\%$ no quantil 75.
+
+\tabela{compressao_calibrada}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.75\linewidth]{compressao_calibrada.pdf}
+\caption{Compressão contextual com limiares calibrados por domínio: tokens médios e similaridade de cosseno média com limiares nos quantis 25, 50 e 75 da similaridade dos fragmentos recuperados. O ponto mais à direita de cada linha corresponde à execução sem filtro.}
+\label{fig:compressao_calibrada}
+\end{figure}
+
+\subsection{Bancos vetoriais}
+\label{ssc:vectorstores}
+
+A Tabela~\ref{tab:vectorstores} compara ChromaDB e FAISS sobre os mesmos vetores. Os fragmentos recuperados foram idênticos em 100\% das consultas nos três domínios, o que confirma que a escolha do banco, com busca exata, não afeta a qualidade das respostas. Em infraestrutura, o FAISS foi muito mais rápido: entre 0,1 e 0,8 ms para indexar, contra 95 a 425 ms do ChromaDB (500 a 1.700 vezes menos), e entre 0,016 e 0,049 ms por consulta, contra 2,8 a 5,9 ms (60 a 270 vezes menos). O FAISS também alocou menos memória (2,1 MB contra 38,7 MB no maior corpus). Parte dessa diferença, porém, corresponde a funcionalidades que o \texttt{IndexFlatL2} não oferece e o ChromaDB sim: persistência em disco, armazenamento dos textos e filtros por metadados. Em valores absolutos, os tempos do ChromaDB (milissegundos) são desprezíveis diante do tempo de geração (segundos).
+
+\tabela{vectorstores}
