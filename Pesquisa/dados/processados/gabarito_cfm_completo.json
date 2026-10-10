@@ -1,0 +1,207 @@
+{
+  "fonte": "Gabarito humano (Ryan + Afonso) sobre o Código de Ética Médica (Resolução CFM nº 2.217/2018)",
+  "observacao": "Respostas e trechos escritos manualmente pelos autores, sem apoio de IA -- ground truth independente para validar as métricas automáticas (cosseno, RAGAS) contra julgamento humano.",
+  "corpus": "Mesmo corpus combinado de 5 documentos já usado no domínio 'revalida' (cfm_codigo_etica + sbp + tev + parto_febrasgo + meningococica).",
+  "perguntas": [
+    {
+      "id": "cfm_p01",
+      "tipo": "FATO",
+      "pergunta": "Qual resolução do CFM aprovou o Código de Ética Médica, e em que data ela foi publicada no Diário Oficial da União?",
+      "resposta_esperada": "Resolução CFM nº 2.217/2018, publicada no Diário Oficial da União em 01 de novembro de 2018.",
+      "trecho_fonte": "RESOLUÇÃO CFM Nº 2.217/2018 — Publicada no D.O.U. de 01 de novembro de 2018, Seção I, p. 179. [...] Aprova o Código de Ética Médica.",
+      "pagina_pdf": "1"
+    },
+    {
+      "id": "cfm_p02",
+      "tipo": "LISTA",
+      "pergunta": "Quais resoluções do CFM modificaram a Resolução que aprovou o Código de Ética Médica?",
+      "resposta_esperada": "As resoluções que modificaram a Resolução CFM Nº 2.217/2018 (que aprova o Código de Ética Médica) foram a Resolução CFM nº 2.222/2018 e a Resolução CFM nº 2.226/2019.",
+      "trecho_fonte": "MODIFICADA: Resolução CFM nº 2.222/2018 Resolução CFM nº 2.226/2019",
+      "pagina_pdf": "1"
+    },
+    {
+      "id": "cfm_p03",
+      "tipo": "NÚMERO",
+      "pergunta": "Quanto tempo após a publicação o novo Código entrou em vigor, e qual resolução anterior ele revogou?",
+      "resposta_esperada": "O novo Código entrou em vigor 180 (cento e oitenta) dias após a data de sua publicação, revogando o Código de Ética Médica que havia sido aprovado pela Resolução CFM nº 1.931/2009",
+      "trecho_fonte": "Art. 3º O Código anexo a esta Resolução entra em vigor cento e oitenta dias após a data de sua publicação e, a partir daí, revoga-se o Código de Ética Médica aprovado pela Resolução CFM nº 1.931/2009, publicada no Diário Oficial da União no dia 13 de outubro de 2009...",
+      "pagina_pdf": "1"
+    },
+    {
+      "id": "cfm_p04",
+      "tipo": "NÚMERO",
+      "pergunta": "Na redação atual, quantos princípios fundamentais, normas diceológicas, normas deontológicas e disposições gerais compõem o Código?",
+      "resposta_esperada": "O Código de Ética Médica é composto por 26 princípios fundamentais, 11 normas diceológicas, 117 normas deontológicas e 4 disposições gerais.",
+      "trecho_fonte": "VI - Este Código de Ética Médica é composto de 26 princípios fundamentais do exercício da medicina, 11 normas diceológicas, 117 normas deontológicas e quatro disposições gerais. A transgressão das normas deontológicas sujeitará os infratores às penas disciplinares previstas em lei. (Redação modificada pela Resolução CFM nº 2.222/2018)",
+      "pagina_pdf": "2"
+    },
+    {
+      "id": "cfm_p05",
+      "tipo": "LISTA",
+      "pergunta": "Segundo o Preâmbulo, a quem cabe a fiscalização do cumprimento das normas do Código?",
+      "resposta_esperada": "fiscalização do cumprimento das normas estabelecidas neste Código é atribuição dos Conselhos de Medicina, das comissões de ética e dos médicos em geral.",
+      "trecho_fonte": "V – A fiscalização do cumprimento das normas estabelecidas neste Código é atribuição dos Conselhos de Medicina, das comissões de ética e dos médicos em geral.",
+      "pagina_pdf": "2"
+    },
+    {
+      "id": "cfm_p06",
+      "tipo": "FATO",
+      "pergunta": "O que o Preâmbulo exige para o exercício da medicina?",
+      "resposta_esperada": "O Preâmbulo exige a inscrição no Conselho Regional do respectivo estado, território ou Distrito Federal.",
+      "trecho_fonte": "\"Para o exercício da medicina, impõe-se a inscrição no Conselho Regional do respectivo estado, território ou Distrito Federal.\"",
+      "pagina_pdf": "2"
+    },
+    {
+      "id": "cfm_p07",
+      "tipo": "LISTA",
+      "pergunta": "O médico não é obrigado a prestar serviços que contrariem sua consciência ou a quem não deseje. Em quais situações essa regra não vale?",
+      "resposta_esperada": "Essa regra não vale nas situações de ausência de outro médico, em casos de urgência ou emergência, ou quando a recusa do médico puder trazer danos à saúde do paciente.",
+      "trecho_fonte": "VII - O médico exercerá sua profissão com autonomia, não sendo obrigado a prestar serviços que contrariem os ditames de sua consciência ou a quem não deseje, excetuadas as situações de ausência de outro médico, em caso de urgência ou emergência, ou quando sua recusa possa trazer danos à saúde do paciente.",
+      "pagina_pdf": "3"
+    },
+    {
+      "id": "cfm_p08",
+      "tipo": "FATO",
+      "pergunta": "O que o Código diz sobre exercer a medicina como comércio?",
+      "resposta_esperada": "O Código estabelece claramente que a medicina não pode ser exercida como comércio sob nenhuma circunstância ou forma.",
+      "trecho_fonte": "IX - A medicina não pode, em nenhuma circunstância ou forma, ser exercida como comércio.",
+      "pagina_pdf": "3"
+    },
+    {
+      "id": "cfm_p09",
+      "tipo": "FATO",
+      "pergunta": "O que o médico deve fazer diante de formas de deterioração do ecossistema prejudiciais à saúde e à vida?",
+      "resposta_esperada": "O médico tem o dever de comunicar às autoridades competentes qualquer forma de deterioração do ecossistema que seja prejudicial à saúde e à vida.",
+      "trecho_fonte": "XIII - O médico comunicará às autoridades competentes quaisquer formas de deterioração do ecossistema, prejudiciais à saúde e à vida.",
+      "pagina_pdf": "3"
+    },
+    {
+      "id": "cfm_p10",
+      "tipo": "EXPLICAÇÃO",
+      "pergunta": "Segundo os Princípios Fundamentais, a atuação profissional do médico caracteriza relação de consumo? Por quê?",
+      "resposta_esperada": "Não, a atuação profissional do médico não caracteriza relação de consumo devido à sua natureza personalíssima.",
+      "trecho_fonte": "XX - A natureza personalíssima da atuação profissional do médico não caracteriza relação de consumo.",
+      "pagina_pdf": "4"
+    },
+    {
+      "id": "cfm_p11",
+      "tipo": "EXPLICAÇÃO",
+      "pergunta": "Como o médico deve agir nas situações clínicas irreversíveis e terminais, segundo os Princípios Fundamentais?",
+      "resposta_esperada": "O médico deve evitar a realização de procedimentos diagnósticos e terapêuticos que sejam desnecessários e deve garantir que sejam oferecidos aos pacientes todos os cuidados paliativos apropriados.",
+      "trecho_fonte": "XXII - Nas situações clínicas irreversíveis e terminais, o médico evitará a realização de procedimentos diagnósticos e terapêuticos desnecessários e propiciará aos pacientes sob sua atenção todos os cuidados paliativos apropriados.",
+      "pagina_pdf": "4"
+    },
+    {
+      "id": "cfm_p12",
+      "tipo": "FATO",
+      "pergunta": "Na aplicação dos conhecimentos criados pelas novas tecnologias, pelo que o médico deve zelar em relação à herança genética das pessoas?",
+      "resposta_esperada": "O médico deve zelar para que as pessoas não sejam discriminadas por nenhuma razão vinculada à sua herança genética, devendo protegê-las em sua dignidade, identidade e integridade",
+      "trecho_fonte": "XXV - Na aplicação dos conhecimentos criados pelas novas tecnologias, considerando-se suas repercussões tanto nas gerações presentes quanto nas futuras, o médico zelará para que as pessoas não sejam discriminadas por nenhuma razão vinculada a herança genética, protegendo-as em sua dignidade, identidade e integridade.",
+      "pagina_pdf": "4"
+    },
+    {
+      "id": "cfm_p13",
+      "tipo": "LISTA",
+      "pergunta": "Quando o médico se recusa a trabalhar em uma instituição por falta de condições dignas, a quem ele deve comunicar essa decisão?",
+      "resposta_esperada": "O médico deve comunicar sua decisão, com justificativa e a maior brevidade, ao diretor técnico, ao Conselho Regional de Medicina de sua jurisdição e à Comissão de Ética da instituição, quando houver.",
+      "trecho_fonte": "Nesse caso, comunicará com justificativa e maior brevidade sua decisão ao diretor técnico, ao Conselho Regional de Medicina de sua jurisdição e à Comissão de Ética da instituição, quando houver.",
+      "pagina_pdf": "5"
+    },
+    {
+      "id": "cfm_p14",
+      "tipo": "EXPLICAÇÃO",
+      "pergunta": "Em quais situações o médico tem o direito de suspender suas atividades, qual ressalva o Código faz, e a quem ele deve comunicar a decisão?",
+      "resposta_esperada": "O médico tem o direito de suspender suas atividades (individual ou coletivamente) quando a instituição, pública ou privada, não oferecer condições adequadas para o exercício profissional ou não o remunerar de forma digna e justa. A ressalva é que esse direito não se aplica em situações de urgência e emergência. A decisão deve ser comunicada imediatamente ao Conselho Regional de Medicina.",
+      "trecho_fonte": "V - Suspender suas atividades, individualmente ou coletivamente, quando a instituição pública ou privada para a qual trabalhe não oferecer condições adequadas para o exercício profissional ou não o remunerar digna e justamente, ressalvadas as situações de urgência e emergência, devendo comunicar imediatamente sua decisão ao Conselho Regional de Medicina.",
+      "pagina_pdf": "5"
+    },
+    {
+      "id": "cfm_p15",
+      "tipo": "FATO",
+      "pergunta": "O que o médico pode requerer ao Conselho Regional de Medicina quando for atingido no exercício de sua profissão?",
+      "resposta_esperada": "O médico pode requerer desagravo público ao Conselho Regional de Medicina.",
+      "trecho_fonte": "VII - Requerer desagravo público ao Conselho Regional de Medicina quando atingido no exercício de sua profissão.",
+      "pagina_pdf": "5"
+    },
+    {
+      "id": "cfm_p16",
+      "tipo": "FATO",
+      "pergunta": "Qual direito o Código garante ao médico com deficiência ou com doença?",
+      "resposta_esperada": "O Código garante ao médico com deficiência ou com doença o direito de exercer a profissão sem ser discriminado, respeitados os limites de suas capacidades e a segurança dos pacientes.",
+      "trecho_fonte": "XI - É direito do médico com deficiência ou com doença, nos limites de suas capacidades e da segurança dos pacientes, exercer a profissão sem ser discriminado.",
+      "pagina_pdf": "5"
+    },
+    {
+      "id": "cfm_p17",
+      "tipo": "EXPLICAÇÃO",
+      "pergunta": "Segundo o Art. 1º, que tipo de dano ao paciente é vedado ao médico, e como o Código caracteriza a responsabilidade médica?",
+      "resposta_esperada": "É vedado ao médico causar dano ao paciente, seja por ação ou omissão, que possa ser caracterizado como imperícia, imprudência ou negligência. Além disso, o Código estabelece que a responsabilidade médica é sempre pessoal e nunca pode ser presumida.",
+      "trecho_fonte": "Art. 1º Causar dano ao paciente, por ação ou omissão, caracterizável como imperícia, imprudência ou negligência. Parágrafo único. A responsabilidade médica é sempre pessoal e não pode ser presumida.",
+      "pagina_pdf": "5"
+    },
+    {
+      "id": "cfm_p18",
+      "tipo": "FATO",
+      "pergunta": "O que deve acontecer quando não houver médico plantonista substituto?",
+      "resposta_esperada": "A direção técnica do estabelecimento de saúde deve providenciar a substituição.",
+      "trecho_fonte": "Parágrafo único. Na ausência de médico plantonista substituto, a direção técnica do estabelecimento de saúde deve providenciar a substituição",
+      "pagina_pdf": "6"
+    },
+    {
+      "id": "cfm_p19",
+      "tipo": "EXPLICAÇÃO",
+      "pergunta": "O que é vedado ao médico ao receitar, atestar ou emitir laudos, em relação à forma e à identificação?",
+      "resposta_esperada": "É vedado ao médico receitar, atestar ou emitir laudos de forma secreta ou ilegível. Ele também está proibido de fazer isso sem a devida identificação do seu número de registro no Conselho Regional de Medicina da sua jurisdição, bem como de assinar em branco folhas de receituários, atestados, laudos ou outros documentos médicos.",
+      "trecho_fonte": "Art. 11 Receitar, atestar ou emitir laudos de forma secreta ou ilegível, sem a devida identificação de seu número de registro no Conselho Regional de Medicina da sua jurisdição, bem como assinar em branco folhas de receituários, atestados, laudos ou quaisquer outros documentos médicos.",
+      "pagina_pdf": "6"
+    },
+    {
+      "id": "cfm_p20",
+      "tipo": "FATO",
+      "pergunta": "Se as condições de trabalho que põem em risco a saúde do trabalhador persistirem depois de comunicadas aos empregadores, o que o médico deve fazer?",
+      "resposta_esperada": "É dever do médico comunicar o ocorrido às autoridades competentes e ao Conselho Regional de Medicina",
+      "trecho_fonte": "Parágrafo único. Se o fato persistir, é dever do médico comunicar o ocorrido às autoridades competentes e ao Conselho Regional de Medicina.",
+      "pagina_pdf": "6"
+    },
+    {
+      "id": "cfm_p21",
+      "tipo": "LISTA",
+      "pergunta": "Com quais objetivos o médico não deve realizar a procriação medicamente assistida?",
+      "resposta_esperada": "O médico não deve realizar a procriação medicamente assistida com os seguintes objetivos: criar seres humanos geneticamente modificados; criar embriões para investigação; ou criar embriões com finalidades de escolha de sexo, eugenia ou para originar híbridos ou quimeras.",
+      "trecho_fonte": "§ 2º O médico não deve realizar a procriação medicamente assistida com nenhum dos seguintes objetivos: I - criar seres humanos geneticamente modificados; II - criar embriões para investigação; III - criar embriões com finalidades de escolha de sexo, eugenia ou para originar híbridos ou quimeras.",
+      "pagina_pdf": "6"
+    },
+    {
+      "id": "cfm_p22",
+      "tipo": "EXPLICAÇÃO",
+      "pergunta": "Em que caso é permitido ao médico intervir sobre o genoma humano, e qual tipo de ação continua excluída?",
+      "resposta_esperada": "A intervenção sobre o genoma humano visando sua modificação é permitida como exceção apenas no caso da terapia gênica. No entanto, continua excluída qualquer ação em células germinativas que resulte na modificação genética da descendência.",
+      "trecho_fonte": "Art. 16 Intervir sobre o genoma humano com vista à sua modificação, exceto na terapia gênica, excluindo-se qualquer ação em células germinativas que resulte na modificação genética da descendência.",
+      "pagina_pdf": "6"
+    },
+    {
+      "id": "cfm_p23",
+      "tipo": "FATO",
+      "pergunta": "Em que situação o médico pode deixar de obter o consentimento do paciente ou de seu representante legal antes de um procedimento?",
+      "resposta_esperada": "O médico só pode deixar de obter o consentimento do paciente ou de seu representante legal em caso de risco iminente de morte.",
+      "trecho_fonte": "Art. 22 Deixar de obter consentimento do paciente ou de seu representante legal após esclarecê-lo sobre o procedimento a ser realizado, salvo em caso de risco iminente de morte.",
+      "pagina_pdf": "7"
+    },
+    {
+      "id": "cfm_p24",
+      "tipo": "FORA DO DOCUMENTO",
+      "pergunta": "Por quantos anos, no mínimo, o prontuário médico deve ser guardado?",
+      "resposta_esperada": "O documento fornecido não estipula um prazo ou quantidade mínima de anos para a guarda do prontuário médico. Ele menciona apenas de quem é a responsabilidade pela guarda do documento.",
+      "trecho_fonte": "Não há trecho sobre o tempo de guarda. A única menção sobre a guarda estabelece que: \"§ 2º O prontuário estará sob a guarda do médico ou da instituição que assiste o paciente.",
+      "pagina_pdf": "12"
+    },
+    {
+      "id": "cfm_p25",
+      "tipo": "FORA DO DOCUMENTO",
+      "pergunta": "A partir de qual idade o adolescente pode ser atendido pelo médico sem a presença dos pais ou responsáveis?",
+      "resposta_esperada": "Não há resposta relevante no documento",
+      "trecho_fonte": "Não há resposta relevante no documento",
+      "pagina_pdf": "Não há resposta relevante no documento"
+    }
+  ]
+}
