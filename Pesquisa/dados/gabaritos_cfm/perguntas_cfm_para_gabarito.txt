@@ -255,7 +255,7 @@ PERGUNTA: A partir de qual idade o adolescente pode ser atendido pelo médico se
 RESPOSTA: NÃO CONSTA
 TRECHO: -
 PÁGINA: -
-STATUS: OK
+STATUS: DESCARTAR - não está no Código, mas o corpus combinado tem resposta parcial no documento da SBP (consulta do adolescente: 16 anos para optar por médico não pediatra, 12 anos para testes sem os pais), então não testa recusa
 
 
 ##############################################################################################

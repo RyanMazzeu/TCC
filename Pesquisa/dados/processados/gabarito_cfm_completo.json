@@ -196,14 +196,6 @@
       "pagina_pdf": "-"
     },
     {
-      "id": "cfm_p25",
-      "tipo": "FORA DO DOCUMENTO",
-      "pergunta": "A partir de qual idade o adolescente pode ser atendido pelo médico sem a presença dos pais ou responsáveis?",
-      "resposta_esperada": "NÃO CONSTA",
-      "trecho_fonte": "-",
-      "pagina_pdf": "-"
-    },
-    {
       "id": "cfm_p26",
       "tipo": "EXPLICAÇÃO",
       "pergunta": "Como o médico deve agir diante de uma pessoa capaz física e mentalmente que esteja em greve de fome?",
