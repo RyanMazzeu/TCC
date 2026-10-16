@@ -62,7 +62,7 @@ def main():
 
     saida = {
         "fonte": "Gabarito humano (Ryan + Afonso) sobre o Código de Ética Médica (Resolução CFM nº 2.217/2018)",
-        "observacao": "Respostas e trechos escritos manualmente pelos autores, sem apoio de IA -- ground truth independente para validar as métricas automáticas (cosseno, RAGAS) contra julgamento humano.",
+        "observacao": "P01-P25: respostas e trechos escritos manualmente pelos autores, sem apoio de IA. P26-P50: redigidas com apoio de IA a partir do texto do Código e revisadas manualmente pelos autores contra o documento. Ground truth para validar as métricas automáticas (cosseno, RAGAS) contra julgamento humano.",
         "corpus": "Mesmo corpus combinado de 5 documentos já usado no domínio 'revalida' (cfm_codigo_etica + sbp + tev + parto_febrasgo + meningococica).",
         "perguntas": perguntas,
     }
