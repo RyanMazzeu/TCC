@@ -36,8 +36,21 @@ def main():
 
     colecao = pb.construir_indice(chunks, colecao_nome="gabarito_cfm")
 
+    # Retomada: pula os pares (método, pergunta) que já estão no log -- assim as perguntas novas
+    # são acrescentadas no fim sem rodar de novo as antigas, e o avaliar_ragas.py (que retoma
+    # contando linhas) avalia só as linhas novas.
+    ja_feitos = set()
+    if LOG_PATH.exists():
+        for linha in LOG_PATH.read_text(encoding="utf-8").splitlines():
+            if linha.strip():
+                r = json.loads(linha)
+                ja_feitos.add((r["metodo_rag"], r["pergunta_id"]))
+        print(f"{len(ja_feitos)} execuções já no log, puladas.")
+
     for metodo in METODOS:
         for p in perguntas:
+            if (metodo, p["id"]) in ja_feitos:
+                continue
             registro = pb.rodar_experimento(
                 query=p["pergunta"],
                 colecao=colecao,
