@@ -244,17 +244,17 @@ STATUS: OK
 [P24]
 TIPO: FORA DO DOCUMENTO | ONDE PROCURAR: documento inteiro
 PERGUNTA: Por quantos anos, no mínimo, o prontuário médico deve ser guardado?
-RESPOSTA: O documento fornecido não estipula um prazo ou quantidade mínima de anos para a guarda do prontuário médico. Ele menciona apenas de quem é a responsabilidade pela guarda do documento.
-TRECHO: Não há trecho sobre o tempo de guarda. A única menção sobre a guarda estabelece que: "§ 2º O prontuário estará sob a guarda do médico ou da instituição que assiste o paciente.
-PÁGINA: 12
+RESPOSTA: NÃO CONSTA
+TRECHO: -
+PÁGINA: -
 STATUS: OK
 
 [P25]
 TIPO: FORA DO DOCUMENTO | ONDE PROCURAR: documento inteiro
 PERGUNTA: A partir de qual idade o adolescente pode ser atendido pelo médico sem a presença dos pais ou responsáveis?
-RESPOSTA: Não há resposta relevante no documento
-TRECHO: Não há resposta relevante no documento
-PÁGINA: Não há resposta relevante no documento
+RESPOSTA: NÃO CONSTA
+TRECHO: -
+PÁGINA: -
 STATUS: OK
 
 
