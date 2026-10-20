@@ -1,55 +1,73 @@
 % !TeX program = pdflatex
-% Artigo do TCC02 -- rascunho. O template oficial da coordenação para o TCC02 não está no
-% repositório (ver Plano_Trabalho/LEIAM-ME.txt); as seções ficam em arquivos separados justamente
-% pra poderem ser movidas para o template oficial sem retrabalho.
+% Artigo do TCC02 no template oficial da coordenação (fork do modelo do IEEE Access com o padrão
+% da Unifei; o original está em EXEMPLO/ECO_artigo_TCC02.zip). O texto fica em sections/, e as
+% tabelas e figuras vêm direto de Pesquisa/resultados, geradas por
+% Pesquisa/scripts/analisar_resultados.py -- rodar o script de novo atualiza o artigo.
 % Compilar: latexmk -pdf main.tex
 
-\documentclass[a4paper,11pt]{article}
-
+\documentclass{ieeeaccess}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[english,brazil]{babel}
-\usepackage{mathptmx}
-\usepackage[top=25mm,bottom=25mm,left=25mm,right=25mm]{geometry}
-\usepackage{setspace}\onehalfspacing
-\usepackage{indentfirst}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
 \usepackage{graphicx}
+\usepackage{textcomp}
 \usepackage{booktabs}
 \usepackage{array}
-\usepackage{amsmath}
-\usepackage{xcolor}
-\usepackage{caption}
-\captionsetup{font=small,labelfont=bf}
-\setlength{\marginparwidth}{2cm}
-\usepackage[disable]{todonotes} % trocar [disable] por [] pra ver as pendências marcadas no texto
-\usepackage[hidelinks]{hyperref}
+\usepackage{url}
+% Pendências marcadas no texto com \todo{...}: o todonotes (pgf) não convive com a classe do
+% template, então \todo não imprime nada -- procurar por \todo nos arquivos de sections/.
+\newcommand{\todo}[2][]{}
+
+% Na figura mais larga que a coluna, a classe põe a legenda numa tabular{l}, que não quebra linha:
+% legendas longas saem pela margem. Troca por uma coluna p{} da largura da figura.
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\@makecaption}{\begin{tabular}{@{}l@{}}}{\begin{tabular}{@{}p{\xfigwd}@{}}}{}%
+  {\PackageWarningNoLine{main}{Nao consegui corrigir a legenda das figuras largas}}
+\makeatother
 
 \graphicspath{{../Pesquisa/resultados/graficos/}}
 \newcommand{\tabela}[1]{\input{../Pesquisa/resultados/tabelas/#1.tex}}
 
-\title{Eficiência de métodos de RAG em documentos em português:\\
-uma análise comparativa em domínios médico, financeiro e técnico-científico}
-\author{
-  Afonso Henriques Massunari \and Ryan Alves Mazzeu\\[2mm]
-  \small Engenharia de Computação -- Universidade Federal de Itajubá (UNIFEI)\\[1mm]
-  \small Orientador: Carlos Henrique Valério de Moraes
+% O template define TABLE/FIGURE em inglês; o babel troca por Tabela/Figura no início do
+% documento. Mantém a caixa alta do padrão IEEE, em português.
+\addto\captionsbrazil{%
+  \renewcommand{\tablename}{TABELA}%
+  \renewcommand{\figurename}{FIGURA}%
+  \renewcommand{\refname}{Referências}%
 }
-\date{}
 
 \begin{document}
+\history{Graduação em Engenharia de Computação}
+\doi{Trabalho de Conclusão de Curso.}
+\dataDaDefesa{xx{\slash}xx{\slash}2026}
+\title{Eficiência de métodos de RAG em documentos em português: uma análise comparativa em domínios médico, financeiro e técnico-científico}
+\author{AFONSO HENRIQUES MASSUNARI,
+        RYAN ALVES MAZZEU,
+        CARLOS HENRIQUE VALÉRIO DE MORAES \IEEEmembership{Orientador}}
+
+\markboth
+{Graduação em Engenharia de Computação}
+{Graduação em Engenharia de Computação}
+
+\input{sections/00-resumo.tex}
+
+\titlepgskip=-15pt
 
 \maketitle
 
-\input{sections/00-resumo.tex}
 \input{sections/01-introducao.tex}
-\input{sections/02-fundamentacao.tex}
-\input{sections/03-materiais_e_metodos.tex}
-\input{sections/04-resultados.tex}
-\input{sections/05-discussao.tex}
-\input{sections/06-conclusao.tex}
+\input{sections/02-revisao_bibliografica.tex}
+\input{sections/03-metodologia.tex}
+\input{sections/04-resultados_e_discussao.tex}
+\input{sections/05-conclusao.tex}
+\input{sections/06-agradecimentos.tex}
 
-\renewcommand\refname{Referências}
 \bibliographystyle{IEEEtran}
 \bibliography{referencias}
+
+\EOD
 
 \end{document}

@@ -1,6 +1,6 @@
-\begin{table}[htbp]
+\begin{table*}[!t]
 \centering
-\small
+\footnotesize
 \setlength{\tabcolsep}{4pt}
 \caption{Métricas RAGAS médias por método (juiz gpt-4o-mini), com a similaridade de cosseno como referência. Em negrito, o melhor valor de cada coluna.}
 \label{tab:ragas_metodos}
@@ -17,4 +17,4 @@ Reciprocal & 0,285 & n/a & n/a & n/a & n/a & 0,676 \\
 \bottomrule
 \end{tabular}
 \par\smallskip\parbox{0.95\linewidth}{\footnotesize Faithf. s/ recusas: média excluindo as respostas em que o modelo declarou não ter a informação, para as quais a métrica não tem afirmações a verificar. n/a: Query Step-Down e Reciprocal fazem recuperações próprias por pergunta alternativa, sem um conjunto único de contextos para avaliar; só Answer Relevancy se aplica a eles. Falhas de avaliação registradas como ausentes (não imputadas): Faithfulness 0, Answer Relevancy 0, Context Precision 0, Context Recall 0.}
-\end{table}
+\end{table*}

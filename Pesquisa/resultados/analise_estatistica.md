@@ -156,3 +156,45 @@ Limiares calibrados: Revalida: p25 = 0,592, p50 = 0,626, p75 = 0,669 (sim. do to
 | Grendene (199) | 170,8 | 0,1 | 5,924 | 0,022 | 2,77 | 0,02 | 100% |
 | SBC (42) | 95,1 | 0,1 | 2,818 | 0,016 | 3,25 | 0,00 | 100% |
 
+## 6. Gabarito humano do CFM (49 perguntas × 6 métodos = 294 execuções; RAGAS em 294 linhas)
+
+Tipos de pergunta: FATO 16, EXPLICAÇÃO 15, LISTA 12, NÚMERO 3, FORA DO DOCUMENTO 3.
+
+| Método | Cosseno | Answer Rel. | Faithfulness | Context Prec. | Context Rec. | Recusas com resposta (46) | Recusas sem resposta (3) | Tokens |
+|---|---|---|---|---|---|---|---|---|
+| Stuff | 0,853 | 0,708 | 0,833 | 0,770 | 0,857 | 3 | 3 | 1.028 |
+| Refine | 0,750 | 0,721 | 0,872 | 0,767 | 0,857 | 0 | 3 | 2.031 |
+| Map-Reduce | 0,814 | 0,745 | 0,798 | 0,782 | 0,857 | 1 | 3 | 1.450 |
+| Map-Rerank | 0,828 | 0,663 | 0,898 | 0,766 | 0,857 | 0 | 3 | 1.491 |
+| Query Step-Down | 0,771 | 0,743 | n/a | n/a | n/a | 0 | 0 | 5.570 |
+| Reciprocal | 0,761 | 0,588 | n/a | n/a | n/a | 0 | 3 | 5.461 |
+
+**Friedman – Similaridade cosseno** (49 perguntas, 6 métodos): χ² = 80,45, p = < 0,001. Pares significativos (Holm): Stuff vs Refine (Δ = 0,103, p_Holm = < 0,001), Stuff vs Map-Reduce (Δ = 0,040, p_Holm = 0,001), Stuff vs Query Step-Down (Δ = 0,082, p_Holm = < 0,001), Stuff vs Reciprocal (Δ = 0,093, p_Holm = < 0,001), Refine vs Map-Reduce (Δ = -0,063, p_Holm = < 0,001), Refine vs Map-Rerank (Δ = -0,077, p_Holm = < 0,001), Refine vs Query Step-Down (Δ = -0,021, p_Holm = 0,041), Map-Reduce vs Query Step-Down (Δ = 0,042, p_Holm = < 0,001), Map-Rerank vs Query Step-Down (Δ = 0,056, p_Holm = 0,002), Map-Rerank vs Reciprocal (Δ = 0,067, p_Holm = 0,003).
+
+**Friedman – Answer Relevancy** (49 perguntas, 6 métodos): χ² = 40,45, p = < 0,001. Pares significativos (Holm): Stuff vs Reciprocal (Δ = 0,120, p_Holm = 0,014), Refine vs Map-Reduce (Δ = -0,024, p_Holm = 0,014), Refine vs Reciprocal (Δ = 0,134, p_Holm = < 0,001), Map-Reduce vs Reciprocal (Δ = 0,158, p_Holm = < 0,001), Query Step-Down vs Reciprocal (Δ = 0,156, p_Holm = < 0,001).
+
+**Friedman – Faithfulness** (49 perguntas, 4 métodos): χ² = 7,66, p = 0,054. Pares significativos (Holm): nenhum.
+
+**Recusas em perguntas com resposta no Código (métodos com contexto):** 4; Context Recall médio nelas = 0,000; com Context Recall ≥ 0,5: 0. cfm_p06 (Stuff); cfm_p07 (Stuff); cfm_p47 (Stuff); cfm_p47 (Map-Reduce).
+
+Cosseno médio nas perguntas com resposta, sem as recusas: Stuff 0,902, Refine 0,761, Map-Reduce 0,843, Map-Rerank 0,853, Query Step-Down 0,800, Reciprocal 0,781.
+
+**Perguntas sem resposta no Código (3):** cosseno médio das recusas = 0,507, das não recusas = 0,332.
+
+**Correlação de Spearman, linha a linha, entre similaridade de cosseno e cada métrica RAGAS:**
+
+- Answer Relevancy: ρ = 0,22 (p = < 0,001, n = 294)
+- Faithfulness: ρ = 0,24 (p = < 0,001, n = 196)
+- Context Precision: ρ = 0,27 (p = < 0,001, n = 196)
+- Context Recall: ρ = 0,48 (p = < 0,001, n = 196)
+
+- Context Precision igual nos 4 métodos com contexto em 38 de 49 perguntas (amplitude máxima 0,417).
+- Context Recall igual nos 4 métodos com contexto em 49 de 49 perguntas (amplitude máxima 0,000).
+
+**Cosseno médio por parte do gabarito, só perguntas com resposta** (n perguntas; palavras médias da resposta de referência):
+
+| Parte | Stuff | Refine | Map-Reduce | Map-Rerank | Query Step-Down | Reciprocal |
+|---|---|---|---|---|---|---|
+| P01–P25 (manual) (n = 23; 27,2 palavras) | 0,898 | 0,805 | 0,879 | 0,875 | 0,829 | 0,796 |
+| P26–P50 (IA + revisão) (n = 23; 25,4 palavras) | 0,844 | 0,718 | 0,791 | 0,830 | 0,771 | 0,767 |
+

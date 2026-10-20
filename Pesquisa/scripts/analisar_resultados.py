@@ -173,13 +173,18 @@ def friedman_com_posthoc(df: pd.DataFrame, coluna: str, metodos: list[str]) -> d
 
 
 def escrever_tabela(nome: str, cabecalho: list[str], linhas: list[list[str]], legenda: str, alinhamento: str,
-                    nota: str | None = None, cabecalho_superior: str | None = None):
+                    nota: str | None = None, cabecalho_superior: str | None = None, larga: bool | None = None):
     """`cabecalho_superior`: linha LaTeX pronta (com \\multicolumn/\\cmidrule) acima do cabeçalho,
-    pra agrupar colunas quando a tabela é larga demais pra cabeçalhos longos numa linha só."""
+    pra agrupar colunas quando a tabela é larga demais pra cabeçalhos longos numa linha só.
+
+    O artigo usa o template do TCC02 (IEEE Access, duas colunas): tabelas com mais de 5 colunas
+    não cabem numa coluna e saem como `table*`, ocupando a largura da página. `larga` força um
+    lado ou outro quando a contagem de colunas engana (ex.: poucas colunas, mas células largas)."""
+    ambiente = "table*" if (len(cabecalho) > 5 if larga is None else larga) else "table"
     corpo = [
-        "\\begin{table}[htbp]",
+        f"\\begin{{{ambiente}}}[!t]",
         "\\centering",
-        "\\small",
+        "\\footnotesize",
         "\\setlength{\\tabcolsep}{4pt}",
         f"\\caption{{{legenda}}}",
         f"\\label{{tab:{nome}}}",
@@ -200,7 +205,7 @@ def escrever_tabela(nome: str, cabecalho: list[str], linhas: list[list[str]], le
     corpo += ["\\bottomrule", "\\end{tabular}"]
     if nota:
         corpo.append(f"\\par\\smallskip\\parbox{{0.95\\linewidth}}{{\\footnotesize {nota}}}")
-    corpo.append("\\end{table}")
+    corpo.append(f"\\end{{{ambiente}}}")
     (TABELAS_DIR / f"{nome}.tex").write_text("\n".join(corpo) + "\n", encoding="utf-8")
 
 
@@ -301,6 +306,7 @@ def analisar_metodos(v3: pd.DataFrame):
          for m, chamadas in zip(METODOS, ["1", "$k$", "$k+1$", "$k$", "6", "5"])],
         "Custo médio por pergunta de cada método de RAG ($k = 4$; 27 perguntas).",
         "lcccc",
+        larga=True,
     )
     resumo.append("### 1.2 Custo por pergunta\n")
     resumo.append(md_tabela(
@@ -759,6 +765,133 @@ def analisar_vectorstores():
                             [[c.replace("\\%", "%") for c in l] for l in linhas]) + "\n")
 
 
+# ---------------------------------------------------------------- 6. gabarito humano do CFM
+
+
+def analisar_gabarito_cfm(execucoes: pd.DataFrame, ragas: pd.DataFrame):
+    """Os 6 métodos sobre o gabarito humano do Código de Ética Médica (perguntas e respostas escritas
+    pelos autores a partir do Código, cada uma com trecho e página -- ver converter_gabarito_cfm.py),
+    no mesmo corpus médico combinado de 5 documentos. Checa se os achados do comparativo (27
+    perguntas) se mantêm numa amostra maior, com outro tipo de pergunta e de gabarito."""
+    if execucoes.empty:
+        return
+    execucoes = execucoes.copy()
+    execucoes["recusa"] = execucoes["resposta_gerada"].str.contains(RECUSA)
+    # FORA DO DOCUMENTO: perguntas feitas de propósito sem resposta no Código -- nelas, recusar é o certo.
+    execucoes["fora"] = execucoes["tipo_pergunta"].str.contains("FORA DO DOCUMENTO")
+    perguntas = execucoes.drop_duplicates("pergunta_id")
+    tipos = perguntas["tipo_pergunta"].value_counts()
+    n_fora = int(perguntas["fora"].sum())
+    n_dentro = len(perguntas) - n_fora
+    resumo.append(f"## 6. Gabarito humano do CFM ({len(perguntas)} perguntas × 6 métodos = {len(execucoes)} execuções; "
+                  f"RAGAS em {len(ragas)} linhas)\n")
+    resumo.append("Tipos de pergunta: " + ", ".join(f"{t} {n}" for t, n in tipos.items()) + ".\n")
+
+    ragas = ragas.merge(execucoes[["experimento_id", "recusa", "fora"]], on="experimento_id", how="left")
+    medias = ragas.groupby("metodo_rag")[METRICAS_RAGAS].mean().reindex(METODOS)
+    medias["similaridade_cosseno"] = execucoes.groupby("metodo_rag")["similaridade_cosseno"].mean().reindex(METODOS)
+    tokens = execucoes.groupby("metodo_rag")["tokens_totais"].mean().reindex(METODOS)
+    recusas_dentro = execucoes[~execucoes.fora].groupby("metodo_rag")["recusa"].sum().reindex(METODOS)
+    recusas_fora = execucoes[execucoes.fora].groupby("metodo_rag")["recusa"].sum().reindex(METODOS)
+
+    colunas = ["similaridade_cosseno"] + METRICAS_RAGAS
+    # Negrito em quem empata no máximo (na precisão exibida); sem negrito se todos empatam -- aqui o
+    # Context Recall sai idêntico nos 4 métodos com contexto, que recebem os mesmos fragmentos.
+    melhores = {}
+    for c in colunas:
+        valores = medias.loc[METODOS if c in ("answer_relevancy", "similaridade_cosseno") else METODOS_COM_CONTEXTO, c].map(br)
+        empatados = set(valores[valores == br(medias[c].max())].index)
+        melhores[c] = empatados if len(empatados) < len(valores) else set()
+
+    def celula(m, c):
+        if c in METRICAS_RAGAS[1:] and m not in METODOS_COM_CONTEXTO:
+            return "n/a"
+        return f"\\textbf{{{br(medias.loc[m, c])}}}" if m in melhores[c] else br(medias.loc[m, c])
+
+    testes = {c: friedman_com_posthoc(df, c, metodos) for c, df, metodos in [
+        ("similaridade_cosseno", execucoes, METODOS),
+        ("answer_relevancy", ragas, METODOS),
+        ("faithfulness", ragas, METODOS_COM_CONTEXTO),
+    ]}
+
+    def friedman_tex(c):
+        t = testes[c]
+        p = f"$p < 0{{,}}001$" if t["p"] < 0.001 else f"$p = {br(t['p'], 3).replace(',', '{,}')}$"
+        return f"$\\chi^2 = {br(t['chi2'], 2).replace(',', '{,}')}$, {p}"
+
+    escrever_tabela(
+        "gabarito_cfm",
+        ["Método", "Cosseno", "Answer Rel.", "Faithf.", "Context Prec.", "Context Rec.",
+         f"Com resposta ({n_dentro})", f"Sem resposta ({n_fora})", "Tokens"],
+        [[NOME_METODO[m]] + [celula(m, c) for c in colunas]
+         + [str(int(recusas_dentro[m])), str(int(recusas_fora[m])), br(tokens[m], 0)] for m in METODOS],
+        f"Gabarito humano sobre o Código de Ética Médica: médias por método nas {len(perguntas)} perguntas "
+        f"(corpus médico combinado, mesma configuração do comparativo). Em negrito, o melhor valor de cada métrica. "
+        f"Friedman: cosseno {friedman_tex('similaridade_cosseno')}; \\emph{{Answer Relevancy}} {friedman_tex('answer_relevancy')}; "
+        f"\\emph{{Faithfulness}} {friedman_tex('faithfulness')}.",
+        "lcccccccc",
+        nota=f"Recusas: respostas em que o modelo declarou não ter a informação, separadas entre as {n_dentro} perguntas "
+             f"com resposta no Código e as {n_fora} feitas de propósito sobre o que o Código não trata, nas quais recusar é o "
+             "comportamento correto. Tokens: média por pergunta. n/a: como na Tabela~\\ref{tab:ragas_metodos}.",
+        cabecalho_superior="& & & & & & \\multicolumn{2}{c}{Recusas} & \\\\ \\cmidrule(lr){7-8}",
+    )
+    resumo.append(md_tabela(
+        ["Método", "Cosseno", "Answer Rel.", "Faithfulness", "Context Prec.", "Context Rec.",
+         f"Recusas com resposta ({n_dentro})", f"Recusas sem resposta ({n_fora})", "Tokens"],
+        [[NOME_METODO[m]] + [celula(m, c).replace("\\textbf{", "").replace("}", "") for c in colunas]
+         + [str(int(recusas_dentro[m])), str(int(recusas_fora[m])), br(tokens[m], 0)] for m in METODOS]) + "\n")
+
+    for c, t in testes.items():
+        sig = [pr for pr in t["pares"] if pr["p_holm"] < 0.05]
+        resumo.append(f"**Friedman – {NOME_METRICA[c]}** ({t['n_blocos']} perguntas, {len(t['metodos'])} métodos): "
+                      f"χ² = {br(t['chi2'], 2)}, p = {br_p(t['p'])}. Pares significativos (Holm): "
+                      + (", ".join(f"{NOME_METODO[pr['a']]} vs {NOME_METODO[pr['b']]} (Δ = {br(pr['dif_media'])}, "
+                                   f"p_Holm = {br_p(pr['p_holm'])})" for pr in sig) or "nenhum") + ".\n")
+
+    # recusas nas perguntas com resposta: o contexto recuperado tinha a resposta?
+    recusas_ctx = ragas[ragas.recusa & ~ragas.fora & ragas.metodo_rag.isin(METODOS_COM_CONTEXTO)]
+    resumo.append(f"**Recusas em perguntas com resposta no Código (métodos com contexto):** {len(recusas_ctx)}; "
+                  f"Context Recall médio nelas = {br(recusas_ctx.context_recall.mean())}; "
+                  f"com Context Recall ≥ 0,5: {int((recusas_ctx.context_recall >= 0.5).sum())}. "
+                  + "; ".join(f"{r.pergunta_id} ({NOME_METODO[r.metodo_rag]})" for r in recusas_ctx.itertuples()) + ".\n")
+    sem_recusa = execucoes[~execucoes.recusa & ~execucoes.fora].groupby("metodo_rag")["similaridade_cosseno"].mean().reindex(METODOS)
+    resumo.append("Cosseno médio nas perguntas com resposta, sem as recusas: "
+                  + ", ".join(f"{NOME_METODO[m]} {br(sem_recusa[m])}" for m in METODOS) + ".\n")
+    fora = execucoes[execucoes.fora]
+    resumo.append(f"**Perguntas sem resposta no Código ({n_fora}):** cosseno médio das recusas = "
+                  f"{br(fora[fora.recusa].similaridade_cosseno.mean())}, das não recusas = "
+                  f"{br(fora[~fora.recusa].similaridade_cosseno.mean())}.\n")
+
+    resumo.append("**Correlação de Spearman, linha a linha, entre similaridade de cosseno e cada métrica RAGAS:**\n")
+    for c in METRICAS_RAGAS:
+        par = ragas[["similaridade_cosseno", c]].dropna()
+        rho, p = stats.spearmanr(par["similaridade_cosseno"], par[c])
+        resumo.append(f"- {NOME_METRICA[c]}: ρ = {br(rho, 2)} (p = {br_p(p)}, n = {len(par)})")
+    resumo.append("")
+
+    com_ctx = ragas[ragas.metodo_rag.isin(METODOS_COM_CONTEXTO)]
+    for c in ["context_precision", "context_recall"]:
+        amplitude = com_ctx.groupby("uid")[c].agg(lambda v: v.max() - v.min())
+        resumo.append(f"- {NOME_METRICA[c]} igual nos 4 métodos com contexto em {int((amplitude < 1e-6).sum())} de "
+                      f"{len(amplitude)} perguntas (amplitude máxima {br(amplitude.max())}).")
+    resumo.append("")
+
+    # P01-P25 foram escritas à mão; P26-P50 redigidas com IA a partir do Código e revisadas à mão.
+    # Só perguntas com resposta: as sem resposta têm cosseno baixo por construção e estão desiguais
+    # entre as partes (1 na primeira, 2 na segunda).
+    dentro = execucoes[~execucoes.fora].copy()
+    dentro["parte"] = np.where(dentro.pergunta_id.str[-2:].astype(int) <= 25, "P01–P25 (manual)", "P26–P50 (IA + revisão)")
+    perguntas_dentro = dentro.drop_duplicates("pergunta_id")
+    por_parte = dentro.groupby(["parte", "metodo_rag"])["similaridade_cosseno"].mean().unstack().reindex(columns=METODOS)
+    n_parte = perguntas_dentro["parte"].value_counts()
+    palavras = perguntas_dentro.groupby("parte")["resposta_esperada"].apply(lambda s: s.str.split().str.len().mean())
+    resumo.append("**Cosseno médio por parte do gabarito, só perguntas com resposta** (n perguntas; palavras médias "
+                  "da resposta de referência):\n")
+    resumo.append(md_tabela(["Parte"] + [NOME_METODO[m] for m in METODOS],
+                            [[f"{p} (n = {n_parte[p]}; {br(palavras[p], 1)} palavras)"] + [br(por_parte.loc[p, m]) for m in METODOS]
+                             for p in por_parte.index]) + "\n")
+
+
 # ---------------------------------------------------------------- main
 
 
@@ -776,6 +909,7 @@ def main():
                     ler_jsonl("comparativo_6_metodos_v3_ragas_reteste_mini.jsonl"), v3)
     analisar_compressao(ler_jsonl("comparativo_compressao_contextual_v2.jsonl"), ler_jsonl("comparativo_compressao_calibrada.jsonl"))
     analisar_vectorstores()
+    analisar_gabarito_cfm(ler_jsonl("gabarito_cfm_6metodos.jsonl"), ler_jsonl("gabarito_cfm_6metodos_ragas.jsonl"))
 
     RESUMO_PATH.write_text("\n".join(resumo) + "\n", encoding="utf-8")
     print(f"Resumo: {RESUMO_PATH}\nTabelas: {TABELAS_DIR}\nFiguras: {GRAFICOS_DIR}")

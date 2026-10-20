@@ -1,26 +1,29 @@
-\section{Materiais e métodos}
-\label{sc:metodos}
+\section{Metodologia}
+\label{sc:metodologia}
 
 O estudo é quantitativo e experimental. O desenho segue o de Şakar e Emekci~\cite{sakar2025rag}, com os mesmos seis métodos de RAG e o mesmo tamanho de fragmento, mas com documentos e perguntas em português. Para isolar o efeito do método de injeção de contexto, o modelo de embedding, o LLM, o tamanho dos fragmentos e o número de fragmentos recuperados foram mantidos fixos em todos os experimentos.
 
 \subsection{Corpora e perguntas}
 
-Cada domínio do estudo de referência foi substituído por um equivalente brasileiro do mesmo tipo (Tabela~\ref{tab:corpora}). O critério comum aos três foi que toda resposta de referência tivesse fonte verificável: um gabarito oficial ou um trecho literal do documento. Nenhuma resposta de referência foi escrita a partir de conhecimento próprio dos autores.
+Cada domínio do estudo de referência foi substituído por um equivalente brasileiro do mesmo tipo (Tabela~\ref{tab:corpora}). O critério comum aos três foi que toda resposta de referência tivesse fonte verificável: um gabarito oficial ou um trecho literal do documento. Nenhuma resposta de referência foi escrita a partir de conhecimento próprio dos autores. Os três domínios formam o \emph{comparativo}, com 27 perguntas; o gabarito sobre o Código de Ética Médica, descrito adiante, é um conjunto à parte.
 
-\begin{table}[htbp]
+\begin{table}[!t]
 \centering
-\small
+\footnotesize
+\setlength{\tabcolsep}{3pt}
 \caption{Domínios, documentos e perguntas utilizados.}
 \label{tab:corpora}
-\begin{tabular}{p{2.4cm}p{6.2cm}cc}
+\begin{tabular}{p{1.55cm}p{4.35cm}cc}
 \toprule
-Domínio & Documentos (corpus de recuperação) & Fragmentos & Perguntas \\
+Domínio & Documentos (corpus de recuperação) & Frag. & Perg. \\
 \midrule
 Médico (Revalida) & Código de Ética Médica (CFM); guia \emph{Consulta do adolescente} (SBP); Diretriz de Tromboembolismo Venoso 2022; artigo Febrasgo sobre as recomendações da OMS (2018) para o parto; Guia de Vigilância em Saúde, cap. Doença Meningocócica (MS) & 430 & 12 \\
 Financeiro (Grendene) & Informações Trimestrais (ITR) de 30/09/2025 da Grendene S.A. \cite{grendene2025itr} & 199 & 7 \\
 Técnico-científico (SBC) & Artigo de Medeiros e Oliveira~\cite{medeiros2025embeddings} & 42 & 8 \\
 \midrule
-Total & & 671 & 27 \\
+Comparativo & & 671 & 27 \\
+\midrule
+Gabarito CFM & O mesmo corpus do domínio médico & 430 & 49 \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -33,11 +36,20 @@ Total & & 671 & 27 \\
 
 Os PDFs foram convertidos em texto simples antes da fragmentação. Os arquivos originais, os textos extraídos e as perguntas com suas respostas de referência estão disponíveis no repositório do trabalho.
 
+\subsection{Gabarito sobre o Código de Ética Médica}
+\label{ssc:met_cfm}
+
+Com 7 a 12 perguntas por domínio, o comparativo não tem poder estatístico para detectar diferenças moderadas de qualidade. Para ampliar a amostra, os autores redigiram 50 perguntas sobre o Código de Ética Médica (Resolução CFM nº 2.217/2018), documento que já integra o corpus médico, divididas entre eles por capítulo. Cada pergunta tem um tipo (fato, explicação, lista ou número) e uma resposta de referência curta, escrita com as palavras do Código, acompanhada do trecho literal que a comprova e da página do PDF, o que torna cada resposta verificável. Quatro perguntas foram feitas de propósito sobre temas que o Código não trata, como o prazo de guarda do prontuário, com resposta de referência ``não consta'': nelas, a resposta correta de um sistema RAG é a recusa.
+
+As respostas das perguntas 1 a 25 foram redigidas manualmente. As das perguntas 26 a 50 foram redigidas com apoio de um assistente de IA (Claude, da Anthropic), a partir exclusivamente do texto do Código, e revisadas manualmente pelos autores contra o documento. Uma das perguntas sem resposta no Código, sobre a idade a partir da qual o adolescente pode ser atendido sem os pais, foi descartada após a execução: o guia da SBP, que também está no corpus, trata de temas vizinhos (a escolha de médico não pediatra a partir dos 16 anos e a testagem sem os pais após os 12), e os seis métodos responderam com uma idade em vez de recusar. A pergunta, portanto, não testava recusa. Restaram 49 perguntas, 3 delas sem resposta no Código.
+
+O gabarito usa o mesmo corpus médico de 430 fragmentos, a mesma configuração e as mesmas métricas do comparativo.
+
 \subsection{Pipeline}
 
-Os documentos foram divididos com o \texttt{RecursiveCharacterTextSplitter} (fragmentos de 1.000 caracteres com sobreposição de 100, os mesmos valores do estudo de referência) e codificados com o BGE-M3 \cite{chen2024bgem3}, modelo de embedding multilíngue, usando apenas os vetores densos. O BGE-small em inglês, usado pelo estudo de referência, foi substituído por não suportar português. Os vetores foram indexados no ChromaDB com distância euclidiana. Como os vetores são normalizados, a similaridade de cosseno entre pergunta e fragmento é obtida diretamente da distância quadrática $d^2$ retornada pelo banco, como $\cos = 1 - d^2/2$. Em todos os métodos, a recuperação devolve os $k = 4$ fragmentos mais próximos.
+Os documentos foram divididos com o \texttt{Recursive\-Character\-Text\-Splitter} (fragmentos de 1.000 caracteres com sobreposição de 100, os mesmos valores do estudo de referência) e codificados com o BGE-M3 \cite{chen2024bgem3}, modelo de embedding multilíngue, usando apenas os vetores densos. O BGE-small em inglês, usado pelo estudo de referência, foi substituído por não suportar português. Os vetores foram indexados no ChromaDB com distância euclidiana. Como os vetores são normalizados, a similaridade de cosseno entre pergunta e fragmento é obtida diretamente da distância quadrática $d^2$ retornada pelo banco, como $\cos = 1 - d^2/2$. Em todos os métodos, a recuperação devolve os $k = 4$ fragmentos mais próximos.
 
-A geração foi feita com o \texttt{gpt-4o-mini} da OpenAI, com temperatura 0, um dos três LLMs avaliados por Şakar e Emekci~\cite{sakar2025rag}. O identificador \texttt{gpt-4o-mini} é um apelido que a API resolve para uma versão específica do modelo. Na data de redação deste artigo, ele correspondia a \texttt{gpt-4o-mini-2024-07-18}; os registros dos experimentos armazenaram apenas o apelido.\todo{Confirmar se dá pra afirmar a versão usada nos experimentos (setembro/2026).}
+A geração foi feita com o \texttt{gpt-4o-mini} da OpenAI, com temperatura 0, um dos três LLMs avaliados por Şakar e Emekci~\cite{sakar2025rag}. O identificador \texttt{gpt-4o-mini} é um apelido que a API resolve para uma versão específica do modelo. Na data de redação deste artigo, ele correspondia a \texttt{gpt-4o-mini-2024-07-18}; os registros dos experimentos armazenaram apenas o apelido.\todo{Confirmar se dá pra afirmar a versão usada nos experimentos (setembro e outubro de 2026).}
 
 Os seis métodos foram implementados diretamente sobre a API, sem uso de \emph{frameworks} de orquestração, para que cada chamada ao LLM fosse contabilizada:
 
@@ -46,7 +58,7 @@ Os seis métodos foram implementados diretamente sobre a API, sem uso de \emph{f
   \item \textbf{Refine} ($k$ chamadas): gera uma resposta com o primeiro fragmento e a refina com cada fragmento seguinte, alterando-a apenas se o novo fragmento trouxer informação relevante.
   \item \textbf{Map-Reduce} ($k+1$ chamadas): gera uma resposta parcial por fragmento e combina as parciais em uma resposta final.
   \item \textbf{Map-Rerank} ($k$ chamadas): gera, para cada fragmento isoladamente, uma resposta e uma nota de confiança de 0 a 100, e mantém a resposta de maior confiança.
-  \item \textbf{Query Step-Down} (6 chamadas): a partir da pergunta e de um contexto inicial, gera quatro perguntas alternativas mais específicas, responde cada uma com Stuff e combina as quatro respostas. O estudo de referência não deixa explícito se a combinação usa uma chamada própria ao LLM; aqui optou-se por usá-la.
+  \item \textbf{Query Step-Down} (6 chamadas): a partir da pergunta e de um contexto inicial, gera quatro perguntas alternativas mais específicas, responde cada uma com Stuff e combina as quatro respostas. O estudo de referência não deixa explícito se a combinação usa uma chamada própria ao LLM; aqui optou-se por usá-la, com um prompt que recebe apenas a pergunta original e as quatro respostas.
   \item \textbf{Reciprocal RAG} (5 chamadas): gera as mesmas quatro perguntas alternativas, responde cada uma com nota de confiança e mantém a resposta mais confiável, sem etapa de combinação.
 \end{itemize}
 
@@ -56,13 +68,15 @@ Os seis métodos foram implementados diretamente sobre a API, sem uso de \emph{f
 
 \textbf{RAGAS.} Foram calculadas quatro métricas do RAGAS \cite{es2024ragas} (biblioteca \texttt{ragas} 0.4.3): \emph{Answer Relevancy}, \emph{Faithfulness}, \emph{Context Precision} e \emph{Context Recall}. O juiz foi o próprio \texttt{gpt-4o-mini}, com limite de 4.096 tokens de saída, e o embedding da \emph{Answer Relevancy} foi o \texttt{text-embedding-3-small} da OpenAI. As três últimas métricas avaliam o conjunto de fragmentos entregue ao gerador e só se aplicam aos quatro métodos que recebem esse conjunto. O Query Step-Down e o Reciprocal RAG fazem uma recuperação por pergunta alternativa, sem um conjunto único a avaliar, e por isso recebem apenas a \emph{Answer Relevancy}. Avaliações que falharam (por exemplo, por saída truncada do juiz) foram registradas como ausentes, e não imputadas.
 
-\textbf{Validação do juiz.} Como o mesmo modelo gera e avalia as respostas, há risco de viés de autopreferência \cite{panickssery2024selfpref}. Para estimá-lo, uma amostra estratificada de 54 respostas (3 por combinação de domínio e método, sorteadas com semente fixa) foi avaliada novamente por dois juízes: um juiz independente de outra família de modelos, o Command A da Cohere (\texttt{command-a-03-2025}), sucessor do Command-R avaliado pelo estudo de referência, com as mesmas métricas e o mesmo embedding; e o próprio \texttt{gpt-4o-mini}, uma segunda vez, para medir a variação do juiz consigo mesmo. A comparação entre as duas medidas indica se a discordância com o juiz independente é maior do que o ruído de uma única avaliação.
+\textbf{Recusas.} Uma resposta foi classificada como recusa quando o modelo declarou não ter a informação (``Não sei'', ``Não há informação relevante'', ``O contexto não fornece\ldots''), por expressões regulares tiradas das próprias respostas.
+
+\textbf{Validação do juiz.} Como o mesmo modelo gera e avalia as respostas, há risco de viés de autopreferência \cite{panickssery2024selfpref}. Para estimá-lo, uma amostra estratificada de 54 respostas do comparativo (3 por combinação de domínio e método, sorteadas com semente fixa) foi avaliada novamente por dois juízes: um juiz independente de outra família de modelos, o Command A da Cohere (\texttt{command-a-03-2025}), sucessor do Command-R avaliado pelo estudo de referência, com as mesmas métricas e o mesmo embedding; e o próprio \texttt{gpt-4o-mini}, uma segunda vez, para medir a variação do juiz consigo mesmo. A comparação entre as duas medidas indica se a discordância com o juiz independente é maior do que o ruído de uma única avaliação.
 
 \textbf{Custo.} Para cada pergunta, foram registrados os tokens de entrada e de saída informados pela API e o tempo total, da recuperação até o fim da geração. O uso de CPU e memória também foi registrado com a biblioteca \texttt{psutil}, mas não é analisado aqui: como a geração ocorre nos servidores da API, essas medidas refletem apenas o cliente, e não o custo de inferência do método.
 
 \subsection{Compressão contextual}
 
-O filtro de compressão descarta, antes da geração, os fragmentos recuperados cuja similaridade com a pergunta fica abaixo de um limiar. Se todos ficarem abaixo, o fragmento mais similar é mantido. O filtro foi aplicado ao método Stuff, o de menor custo, com as mesmas 27 perguntas, em duas rodadas: com limiares fixos de 0,3, 0,5 e 0,7; e com limiares calibrados por domínio, definidos como os quantis 25, 50 e 75 da similaridade dos fragmentos do top-4 de todas as perguntas do domínio. A segunda rodada foi motivada pelo resultado da primeira (Seção~\ref{sc:resultados}). Como a calibração usa as mesmas perguntas avaliadas, os limiares calibrados medem o efeito de descartar uma fração controlada dos fragmentos, e não o desempenho de um limiar escolhido de antemão.
+O filtro de compressão descarta, antes da geração, os fragmentos recuperados cuja similaridade com a pergunta fica abaixo de um limiar. Se todos ficarem abaixo, o fragmento mais similar é mantido. O filtro foi aplicado ao método Stuff, o de menor custo, com as 27 perguntas do comparativo, em duas rodadas: com limiares fixos de 0,3, 0,5 e 0,7; e com limiares calibrados por domínio, definidos como os quantis 25, 50 e 75 da similaridade dos fragmentos do top-4 de todas as perguntas do domínio. A segunda rodada foi motivada pelo resultado da primeira (Seção~\ref{ssc:compressao}). Como a calibração usa as mesmas perguntas avaliadas, os limiares calibrados medem o efeito de descartar uma fração controlada dos fragmentos, e não o desempenho de um limiar escolhido de antemão.
 
 \subsection{Bancos vetoriais}
 
@@ -70,7 +84,7 @@ O ChromaDB (persistente em disco) foi comparado ao FAISS \cite{johnson2021faiss}
 
 \subsection{Análise estatística}
 
-As 27 perguntas foram tratadas como blocos pareados, já que todos os métodos respondem às mesmas perguntas. A diferença entre métodos foi testada com o teste de Friedman e, em seguida, com testes de Wilcoxon pareados par a par, com os valores-$p$ corrigidos pelo método de Holm \cite{holm1979simple}, seguindo a recomendação de Demšar~\cite{demsar2006statistical} para comparação de vários métodos sobre as mesmas instâncias. Intervalos de confiança de 95\% das médias foram estimados por \emph{bootstrap} percentil (10.000 reamostragens), e as correlações entre métricas e entre juízes, pelo coeficiente de Spearman. O nível de significância adotado foi 0,05. Com 27 perguntas, os testes têm baixo poder: a ausência de significância indica que a diferença não pode ser afirmada com esta amostra, e não que ela seja nula.
+Em cada conjunto, as perguntas foram tratadas como blocos pareados, já que todos os métodos respondem às mesmas perguntas. A diferença entre métodos foi testada com o teste de Friedman e, em seguida, com testes de Wilcoxon pareados par a par, com os valores-$p$ corrigidos pelo método de Holm \cite{holm1979simple}, seguindo a recomendação de Demšar~\cite{demsar2006statistical} para comparação de vários métodos sobre as mesmas instâncias. Intervalos de confiança de 95\% das médias foram estimados por \emph{bootstrap} percentil (10.000 reamostragens), e as correlações entre métricas e entre juízes, pelo coeficiente de Spearman. O nível de significância adotado foi 0,05. Com 27 perguntas no comparativo, os testes têm baixo poder: a ausência de significância indica que a diferença não pode ser afirmada com esta amostra, e não que ela seja nula. O gabarito do Código, com 49 perguntas, tem mais poder, mas cobre um único documento.
 
 \subsection{Ambiente e reprodutibilidade}
 
