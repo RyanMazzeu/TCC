@@ -40,14 +40,86 @@ METRICAS_DIR = BASE_DIR / "resultados" / "metricas"
 CHUNK_SIZE = 1000
 CHUNK_OVERLAP = 100
 
-# "ollama" (local, grátis) ou "openai" (pago por token) — trocar via .env, sem mexer no código.
+# LLM gerador — trocar via .env (LLM_BACKEND + <BACKEND>_MODEL) ou, num script que compara
+# vários LLMs no mesmo processo, via configurar_llm():
+#   "ollama"    -> modelo open-source local, grátis (OLLAMA_MODEL)
+#   "openai"    -> GPT (OPENAI_MODEL, OPENAI_REASONING_EFFORT)
+#   "openrouter"-> qualquer modelo (Qwen, DeepSeek, Claude...) por uma chave e um saldo só, formato
+#                  OpenAI (OPENROUTER_MODEL, OPENROUTER_API_KEY)
+#   "deepseek"  -> API da DeepSeek, formato OpenAI (DEEPSEEK_MODEL, DEEPSEEK_API_KEY)
+#   "anthropic" -> Claude, SDK oficial da Anthropic (ANTHROPIC_MODEL, ANTHROPIC_API_KEY; ver backend_anthropic.py)
 LLM_BACKEND = os.getenv("LLM_BACKEND", "ollama")
 
 OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
 OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "qwen2.5:1.5b")
+# Modelos com raciocínio (ex.: qwen3.5) pensam por padrão; OLLAMA_THINK=false desliga. Sem a
+# variável, o campo nem é enviado (modelos sem raciocínio, como o qwen2.5, recusam o parâmetro).
+OLLAMA_THINK = os.getenv("OLLAMA_THINK")
 
 OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
+# Modelos de raciocínio da OpenAI (ex.: gpt-6-astra) recebem reasoning_effort no lugar de
+# temperature. Sem a variável, a chamada segue como no gpt-4o-mini (temperature=0).
+OPENAI_REASONING_EFFORT = os.getenv("OPENAI_REASONING_EFFORT")
 _openai_client = None
+
+DEEPSEEK_BASE_URL = "https://api.deepseek.com"
+DEEPSEEK_MODEL = os.getenv("DEEPSEEK_MODEL", "deepseek-v4-pro")
+_deepseek_client = None
+
+ANTHROPIC_MODEL = os.getenv("ANTHROPIC_MODEL", "claude-opus-4-8")
+
+OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
+OPENROUTER_MODEL = os.getenv("OPENROUTER_MODEL", "qwen/qwen3.5-9b")
+_openrouter_client = None
+
+# Parâmetros extras da chamada (temperature, raciocínio, provedor) do LLM configurado por
+# configurar_llm_por_rotulo; None = os padrões de cada backend.
+_PARAMETROS_LLM = None
+
+# Raciocínio desligado em todos os modelos que permitem: pra comparar os LLMs com os métodos de RAG
+# e não com o quanto cada um "pensa" antes de responder (e porque raciocínio é cobrado como saída).
+_SEM_RACIOCINIO = {"reasoning": {"effort": "none"}}
+
+# Os LLMs do comparativo, em duas camadas (ver plano_execucao_benchmarks.md):
+#   - principal: os 5 modelos de faixa de preço econômica, nos 6 métodos e em 100 perguntas por dataset;
+#   - generalizacao: os 2 intermediários, nos 6 métodos e só nas 25 primeiras dessas perguntas.
+# Raciocínio desligado em todos, pra comparar os métodos de RAG e não o quanto cada modelo "pensa".
+#   - Qwen: precisão cheia (bf16), pra resposta não depender de qual provedor quantizado o OpenRouter
+#     escolheu naquela chamada.
+#   - Claude e GPT-6 não aceitam temperature (a API devolve erro); os demais rodam com temperature 0.
+#     `aceita_temperatura` marca quem precisa das repetições do Stuff.
+#   - Sonnet 5 e GPT-6 Sol no lugar do Sonnet 5.5 e do GPT-6.1 Sol: os mais novos não deixam desligar
+#     o raciocínio.
+#   - gpt-4o-mini fica como ponte: é um dos LLMs do paper-âncora e o das rodadas anteriores do TCC.
+# `preco`: US$ por 1M de tokens (entrada, saída), consultados em 25/10/2026 -- usados só pra estimar
+# o custo de cada execução na análise.
+LLMS_DO_COMPARATIVO = [
+    {"rotulo": "qwen", "camada": "principal", "backend": "openrouter", "modelo": "qwen/qwen3.5-9b",
+     "aceita_temperatura": True, "preco": (0.17, 0.25),
+     "parametros": {"temperature": 0.0, "extra_body": {**_SEM_RACIOCINIO, "provider": {"quantizations": ["bf16"]}}}},
+    {"rotulo": "deepseek", "camada": "principal", "backend": "openrouter", "modelo": "deepseek/deepseek-v4-pro",
+     "aceita_temperatura": True, "preco": (0.209, 0.418),
+     "parametros": {"temperature": 0.0, "extra_body": _SEM_RACIOCINIO}},
+    {"rotulo": "claude_haiku", "camada": "principal", "backend": "openrouter", "modelo": "anthropic/claude-haiku-5.5",
+     "aceita_temperatura": False, "preco": (0.10, 0.50),
+     "parametros": {"extra_body": _SEM_RACIOCINIO}},
+    {"rotulo": "gpt_luna", "camada": "principal", "backend": "openai", "modelo": "gpt-6-luna",
+     "aceita_temperatura": False, "preco": (0.10, 0.50),
+     "parametros": {"reasoning_effort": "none"}},
+    {"rotulo": "gpt_mini", "camada": "principal", "backend": "openai", "modelo": "gpt-4o-mini",
+     "aceita_temperatura": True, "preco": (0.15, 0.60),
+     "parametros": {"temperature": 0.0}},
+    {"rotulo": "claude_sonnet", "camada": "generalizacao", "backend": "openrouter", "modelo": "anthropic/claude-sonnet-5",
+     "aceita_temperatura": False, "preco": (2.0, 10.0),
+     "parametros": {"extra_body": _SEM_RACIOCINIO}},
+    {"rotulo": "gpt_sol", "camada": "generalizacao", "backend": "openai", "modelo": "gpt-6-sol",
+     "aceita_temperatura": False, "preco": (2.0, 10.0),
+     "parametros": {"reasoning_effort": "none"}},
+]
+
+# Versão do modelo que a API de fato usou na última chamada (ex.: o snapshot por trás de um
+# apelido como gpt-4o-mini). Vai pro log em rodar_experimento, pra não depender só do apelido.
+_modelo_llm_versao = None
 
 # bge-small-en-v1.5 (default): mesmo modelo do paper-âncora, mas só serve inglês.
 # Pra corpus em português, trocar via .env pra EMBEDDING_MODEL_NAME=BAAI/bge-m3 (multilíngue,
@@ -62,13 +134,18 @@ _embedding_model = None
 def get_embedding_model():
     global _embedding_model
     if _embedding_model is None:
+        # fp16 só com GPU: em CPU ele é ~2x mais lento que o fp32 (medido no corpus do MedQA), e os
+        # vetores saem iguais (cosseno médio 1,000 entre os dois).
+        import torch
+
+        meia_precisao = torch.cuda.is_available()
         if _EH_MULTILINGUE:
-            _embedding_model = BGEM3FlagModel(EMBEDDING_MODEL_NAME, use_fp16=True)
+            _embedding_model = BGEM3FlagModel(EMBEDDING_MODEL_NAME, use_fp16=meia_precisao)
         else:
             _embedding_model = FlagModel(
                 EMBEDDING_MODEL_NAME,
                 query_instruction_for_retrieval="Represent this sentence for searching relevant passages:",
-                use_fp16=True,
+                use_fp16=meia_precisao,
             )
     return _embedding_model
 
@@ -86,7 +163,12 @@ def _encode_query(modelo, query: str):
 
 
 def carregar_e_chunkar(caminho_documento: str, document_id: str) -> list[dict]:
-    texto = Path(caminho_documento).read_text(encoding="utf-8")
+    return chunkar_texto(Path(caminho_documento).read_text(encoding="utf-8"), document_id)
+
+
+def chunkar_texto(texto: str, document_id: str) -> list[dict]:
+    """Igual a `carregar_e_chunkar`, pra textos que não estão num arquivo próprio (ex.: os 692
+    resumos do Pirá, guardados juntos num JSON)."""
     splitter = RecursiveCharacterTextSplitter(
         chunk_size=CHUNK_SIZE,
         chunk_overlap=CHUNK_OVERLAP,
@@ -99,12 +181,13 @@ def carregar_e_chunkar(caminho_documento: str, document_id: str) -> list[dict]:
     ]
 
 
-def construir_indice(chunks: list[dict], colecao_nome: str, vetores=None):
+def construir_indice(chunks: list[dict], colecao_nome: str, vetores=None, diretorio: Path = VECTORSTORE_DIR):
     """Cria (ou recria) uma coleção Chroma persistente a partir dos chunks.
 
     `vetores` é opcional: passe embeddings já calculados (ex.: em benchmarks que precisam medir
-    só o tempo de indexação em si, sem pagar o custo de reencodar tudo de novo)."""
-    client = chromadb.PersistentClient(path=str(VECTORSTORE_DIR))
+    só o tempo de indexação em si, sem pagar o custo de reencodar tudo de novo).
+    `diretorio`: onde o Chroma persiste a coleção (os índices dos benchmarks ficam fora do git)."""
+    client = chromadb.PersistentClient(path=str(diretorio))
     try:
         client.delete_collection(colecao_nome)
     except Exception:
@@ -116,37 +199,48 @@ def construir_indice(chunks: list[dict], colecao_nome: str, vetores=None):
         modelo = get_embedding_model()
         vetores = _encode_documentos(modelo, textos)
 
-    colecao.add(
-        ids=[f"{c['document_id']}#{c['chunk_index']}" for c in chunks],
-        embeddings=vetores.tolist(),
-        documents=textos,
-        metadatas=[{"document_id": c["document_id"], "chunk_index": c["chunk_index"]} for c in chunks],
-    )
+    # Em lotes: o Chroma recusa um add maior que o limite dele (alguns milhares de itens), e os 20
+    # relatórios 10-Q do Docugami passam disso.
+    lote = client.get_max_batch_size()
+    for inicio in range(0, len(chunks), lote):
+        parte = chunks[inicio : inicio + lote]
+        colecao.add(
+            ids=[f"{c['document_id']}#{c['chunk_index']}" for c in parte],
+            embeddings=vetores[inicio : inicio + lote].tolist(),
+            documents=textos[inicio : inicio + lote],
+            metadatas=[{"document_id": c["document_id"], "chunk_index": c["chunk_index"]} for c in parte],
+        )
     return colecao
 
 
-def recuperar(colecao, query: str, k: int = 4, vetor_query=None) -> list[str]:
-    """`vetor_query` é opcional: passe um embedding de pergunta já calculado (mesmo motivo do
+def consultar_indice(colecao, query: str, k: int = 4, vetor_query=None) -> dict:
+    """Busca crua no Chroma: devolve ids, textos e similaridades dos k chunks mais próximos. A
+    similaridade de cosseno é derivada da distância L2 que o Chroma já calcula internamente
+    (cos_sim = 1 - L2²/2, válido para vetores normalizados -- é o caso do BGE), o que evita
+    reencodar documentos só para pontuar similaridade.
+
+    `vetor_query` é opcional: passe um embedding de pergunta já calculado (mesmo motivo do
     parâmetro `vetores` em construir_indice)."""
     if vetor_query is None:
         modelo = get_embedding_model()
         vetor_query = _encode_query(modelo, query)
     resultado = colecao.query(query_embeddings=vetor_query.tolist(), n_results=k)
-    return resultado["documents"][0]
+    return {
+        "ids": resultado["ids"][0],
+        "documentos": resultado["documents"][0],
+        "similaridades": [1 - d / 2 for d in resultado["distances"][0]],
+    }
+
+
+def recuperar(colecao, query: str, k: int = 4, vetor_query=None) -> list[str]:
+    return consultar_indice(colecao, query, k, vetor_query)["documentos"]
 
 
 def recuperar_com_similaridade(colecao, query: str, k: int = 4, vetor_query=None) -> list[tuple[str, float]]:
-    """Igual a `recuperar`, mas devolve também uma similaridade de cosseno aproximada de cada
-    chunk com a pergunta, derivada da distância L2 que o Chroma já calcula internamente
-    (cos_sim = 1 - L2²/2, válido para vetores normalizados -- é o caso do BGE). Evita reencodar
-    documentos só para pontuar similaridade. Usado pelo filtro de compressão contextual."""
-    if vetor_query is None:
-        modelo = get_embedding_model()
-        vetor_query = _encode_query(modelo, query)
-    resultado = colecao.query(query_embeddings=vetor_query.tolist(), n_results=k)
-    documentos = resultado["documents"][0]
-    similaridades = [1 - d / 2 for d in resultado["distances"][0]]
-    return list(zip(documentos, similaridades))
+    """Igual a `recuperar`, mas devolve também a similaridade de cosseno de cada chunk com a
+    pergunta. Usado pelo filtro de compressão contextual."""
+    resultado = consultar_indice(colecao, query, k, vetor_query)
+    return list(zip(resultado["documentos"], resultado["similaridades"]))
 
 
 def aplicar_compressao_contextual(chunks_com_similaridade: list[tuple[str, float]], limiar: float) -> list[str]:
@@ -157,13 +251,196 @@ def aplicar_compressao_contextual(chunks_com_similaridade: list[tuple[str, float
     return filtrados if filtrados else [chunks_com_similaridade[0][0]]
 
 
+# Prompts dos métodos, um conjunto por tipo de dataset; rodar_benchmarks.py escolhe o conjunto do
+# dataset (CONJUNTO_PROMPTS):
+#   - "pt" e "en": a primeira tentativa foi um conjunto só, em português, com a instrução "Responda no
+#     mesmo idioma da pergunta": o gpt-6-astra obedeceu, mas o gpt-6-luna e o gpt-4o-mini responderam
+#     em português ~80% das perguntas em inglês, e a similaridade com a resposta de referência (em
+#     inglês) caía por causa do idioma, não do conteúdo. O conjunto em inglês é a tradução do
+#     português, instrução por instrução, pra o método ser o mesmo nos dois idiomas. O idioma vem
+#     escrito ("Answer in English."), e não "no mesmo idioma da pergunta": no piloto, com essa
+#     instrução, o gpt-4o-mini respondeu perguntas em inglês em espanhol e em holandês.
+#   - "en_multipla_escolha" (MedQA): os outros conjuntos mandam dizer "não sei" quando a resposta não
+#     está no contexto, e os livros-texto raramente trazem a resposta exata de uma questão de prova --
+#     a acurácia mediria recusa, não conhecimento. Aqui o modelo usa os trechos como apoio e sempre
+#     escolhe uma alternativa, como no MIRAGE (Xiong et al., 2024). Só o passo "map" do Map-Reduce
+#     continua podendo dizer que o trecho não ajuda; o "reduce" é que escolhe a alternativa.
+# "sem_rag" é o grupo de controle: a mesma pergunta, sem nenhum trecho recuperado.
+CONJUNTO_PROMPTS = "pt"
+
+_LETRA_PRIMEIRO = (
+    "Always choose exactly one option. Start your answer with the letter of the chosen option, "
+    "followed by a short justification."
+)
+
+PROMPTS = {
+    "pt": {
+        "stuff": (
+            "Responda à pergunta usando apenas o contexto abaixo. Se a resposta não estiver no contexto, "
+            "diga que não sabe. Responda em português.\n\n"
+            "Contexto:\n{contexto}\n\nPergunta: {pergunta}\nResposta:"
+        ),
+        "refine_inicial": (
+            "Responda à pergunta usando o contexto abaixo. Se a resposta não estiver no contexto, "
+            "diga que não sabe. Responda em português.\n\n"
+            "Contexto:\n{contexto}\n\nPergunta: {pergunta}\nResposta:"
+        ),
+        "refine_passo": (
+            "Sua tarefa é refinar uma resposta existente, apenas se o novo contexto trouxer informação "
+            "relevante que ainda não esteja nela. Se o novo contexto não ajudar, repita a resposta existente "
+            "sem mudanças. Responda em português.\n\n"
+            "Pergunta original: {pergunta}\n\nResposta existente: {resposta}\n\n"
+            "Novo contexto:\n{contexto}\n\nResposta refinada:"
+        ),
+        "map": (
+            "Responda à pergunta usando apenas o contexto abaixo. Se a resposta não estiver no contexto, "
+            "diga apenas 'Não há informação relevante.' Responda em português.\n\n"
+            "Contexto:\n{contexto}\n\nPergunta: {pergunta}\nResposta:"
+        ),
+        "reduce": (
+            "Combine as respostas parciais abaixo (geradas a partir de diferentes trechos de um documento) "
+            "em uma única resposta final, coerente e não repetitiva, para a pergunta original. Ignore "
+            "respostas parciais que digam não haver informação relevante. Responda em português.\n\n"
+            "Pergunta original: {pergunta}\n\nRespostas parciais:\n{respostas}\n\nResposta final combinada:"
+        ),
+        "confianca": (
+            "Responda à pergunta usando apenas o contexto abaixo, e avalie sua própria confiança de que a "
+            "resposta está correta e plenamente sustentada pelo contexto. Responda EXATAMENTE neste formato, "
+            "em duas linhas:\nRESPOSTA: <sua resposta>\nCONFIANCA: <número inteiro de 0 a 100>\n"
+            "Responda em português.\n\nContexto:\n{contexto}\n\nPergunta: {pergunta}"
+        ),
+        "alternativas": (
+            "Com base no contexto abaixo e na pergunta original do usuário, gere exatamente {n} perguntas "
+            "alternativas, mais específicas e menos ambíguas, que ajudem a esclarecer a intenção da pergunta "
+            "original. Responda APENAS com as {n} perguntas, uma por linha, numeradas, sem texto adicional, "
+            "em português.\n\nContexto:\n{contexto}\n\nPergunta original: {pergunta}"
+        ),
+        "combinacao": (
+            "Combine as respostas abaixo (geradas a partir de variações da pergunta original) em uma única "
+            "resposta final, coerente e não repetitiva, para a pergunta original. Responda em português.\n\nPergunta original: {pergunta}\n\nRespostas das variações:\n{respostas}\n\n"
+            "Resposta final combinada:"
+        ),
+        "sem_rag": (
+            "Responda à pergunta. Se não souber a resposta, diga que não sabe. Responda em português.\n\nPergunta: {pergunta}\nResposta:"
+        ),
+    },
+    "en": {
+        "stuff": (
+            "Answer the question using only the context below. If the answer is not in the context, "
+            "say that you don't know. Answer in English.\n\n"
+            "Context:\n{contexto}\n\nQuestion: {pergunta}\nAnswer:"
+        ),
+        "refine_inicial": (
+            "Answer the question using the context below. If the answer is not in the context, "
+            "say that you don't know. Answer in English.\n\n"
+            "Context:\n{contexto}\n\nQuestion: {pergunta}\nAnswer:"
+        ),
+        "refine_passo": (
+            "Your task is to refine an existing answer, only if the new context brings relevant information "
+            "that is not in it yet. If the new context does not help, repeat the existing answer without "
+            "changes. Answer in English.\n\n"
+            "Original question: {pergunta}\n\nExisting answer: {resposta}\n\n"
+            "New context:\n{contexto}\n\nRefined answer:"
+        ),
+        "map": (
+            "Answer the question using only the context below. If the answer is not in the context, "
+            "say only 'There is no relevant information.' Answer in English.\n\n"
+            "Context:\n{contexto}\n\nQuestion: {pergunta}\nAnswer:"
+        ),
+        "reduce": (
+            "Combine the partial answers below (generated from different excerpts of a document) into a "
+            "single final answer, coherent and not repetitive, to the original question. Ignore partial "
+            "answers that say there is no relevant information. Answer in English.\n\n"
+            "Original question: {pergunta}\n\nPartial answers:\n{respostas}\n\nCombined final answer:"
+        ),
+        "confianca": (
+            "Answer the question using only the context below, and rate your own confidence that the answer "
+            "is correct and fully supported by the context. Answer EXACTLY in this format, in two lines:\n"
+            "ANSWER: <your answer>\nCONFIDENCE: <integer from 0 to 100>\n"
+            "Answer in English.\n\nContext:\n{contexto}\n\nQuestion: {pergunta}"
+        ),
+        "alternativas": (
+            "Based on the context below and on the user's original question, generate exactly {n} alternative "
+            "questions, more specific and less ambiguous, that help clarify the intent of the original "
+            "question. Answer ONLY with the {n} questions, one per line, numbered, with no additional text, "
+            "in English.\n\nContext:\n{contexto}\n\nOriginal question: {pergunta}"
+        ),
+        "combinacao": (
+            "Combine the answers below (generated from variations of the original question) into a single "
+            "final answer, coherent and not repetitive, to the original question. Answer in English.\n\nOriginal question: {pergunta}\n\nAnswers to the variations:\n{respostas}\n\n"
+            "Combined final answer:"
+        ),
+        "sem_rag": (
+            "Answer the question. If you don't know the answer, say that you don't know. Answer in English.\n\nQuestion: {pergunta}\nAnswer:"
+        ),
+    },
+    "en_multipla_escolha": {
+        "stuff": (
+            "Answer the multiple-choice question below. Use the context as support; if it does not contain "
+            "the answer, use your own medical knowledge. " + _LETRA_PRIMEIRO + "\n\n"
+            "Context:\n{contexto}\n\nQuestion: {pergunta}\nAnswer:"
+        ),
+        "refine_inicial": (
+            "Answer the multiple-choice question below. Use the context as support; if it does not contain "
+            "the answer, use your own medical knowledge. " + _LETRA_PRIMEIRO + "\n\n"
+            "Context:\n{contexto}\n\nQuestion: {pergunta}\nAnswer:"
+        ),
+        "refine_passo": (
+            "Your task is to refine an existing answer to the multiple-choice question below, only if the new "
+            "context brings relevant information that is not in it yet. If the new context does not help, "
+            "repeat the existing answer without changes. " + _LETRA_PRIMEIRO + "\n\n"
+            "Original question: {pergunta}\n\nExisting answer: {resposta}\n\n"
+            "New context:\n{contexto}\n\nRefined answer:"
+        ),
+        "map": (
+            "Answer the multiple-choice question below using only the context below. If the context is not "
+            "relevant to the question, say only 'There is no relevant information.' Otherwise, start your "
+            "answer with the letter of the chosen option, followed by a short justification.\n\n"
+            "Context:\n{contexto}\n\nQuestion: {pergunta}\nAnswer:"
+        ),
+        "reduce": (
+            "Combine the partial answers below (generated from different excerpts of a document) into a "
+            "single final answer to the original multiple-choice question. Ignore partial answers that say "
+            "there is no relevant information; if all of them say so, use your own medical knowledge. "
+            + _LETRA_PRIMEIRO + "\n\n"
+            "Original question: {pergunta}\n\nPartial answers:\n{respostas}\n\nCombined final answer:"
+        ),
+        "confianca": (
+            "Answer the multiple-choice question below. Use the context as support; if it does not contain "
+            "the answer, use your own medical knowledge. Then rate your own confidence that the answer is "
+            "correct. Answer EXACTLY in this format, in two lines:\n"
+            "ANSWER: <the letter of the chosen option, followed by a short justification>\n"
+            "CONFIDENCE: <integer from 0 to 100>\n\nContext:\n{contexto}\n\nQuestion: {pergunta}"
+        ),
+        "alternativas": (
+            "Based on the context below and on the original multiple-choice question, generate exactly {n} "
+            "alternative versions of the question stem, more specific and less ambiguous, that help clarify "
+            "its intent. Do not include the answer options: they are added automatically. Answer ONLY with "
+            "the {n} questions, one per line, numbered, with no additional text.\n\n"
+            "Context:\n{contexto}\n\nOriginal question: {pergunta}"
+        ),
+        "combinacao": (
+            "Combine the answers below (generated from variations of the original question) into a single "
+            "final answer to the original multiple-choice question. " + _LETRA_PRIMEIRO + "\n\n"
+            "Original question: {pergunta}\n\nAnswers to the variations:\n{respostas}\n\nCombined final answer:"
+        ),
+        "sem_rag": (
+            "Answer the multiple-choice question below using your own medical knowledge. " + _LETRA_PRIMEIRO
+            + "\n\nQuestion: {pergunta}\nAnswer:"
+        ),
+    },
+}
+
+# Nas questões de múltipla escolha, as alternativas vêm no fim da pergunta, a partir de "\n\nA. ".
+_INICIO_ALTERNATIVAS = re.compile(r"\n\nA\. ")
+
+
+def _prompt(nome: str, **campos) -> str:
+    return PROMPTS[CONJUNTO_PROMPTS][nome].format(**campos)
+
+
 def _montar_prompt_stuff(query: str, contextos: list[str]) -> str:
-    contexto_concatenado = "\n\n---\n\n".join(contextos)
-    return (
-        "Responda à pergunta usando apenas o contexto abaixo. "
-        "Se a resposta não estiver no contexto, diga que não sabe.\n\n"
-        f"Contexto:\n{contexto_concatenado}\n\nPergunta: {query}\nResposta:"
-    )
+    return _prompt("stuff", contexto="\n\n---\n\n".join(contextos), pergunta=query)
 
 
 def _gerar_via_ollama(prompt: str) -> dict:
@@ -173,13 +450,36 @@ def _gerar_via_ollama(prompt: str) -> dict:
         "stream": False,
         "options": {"temperature": 0.0, "seed": 42},
     }
-    resposta = requests.post(f"{OLLAMA_BASE_URL}/api/generate", json=payload, timeout=120)
+    if OLLAMA_THINK is not None:
+        payload["think"] = OLLAMA_THINK.lower() == "true"
+    # Em CPU, um modelo de ~9B leva bem mais que 2 min nos prompts longos do Refine/Step-Down.
+    resposta = requests.post(f"{OLLAMA_BASE_URL}/api/generate", json=payload, timeout=900)
     dados = resposta.json()
     return {
         "resposta_texto": dados.get("response", ""),
         "tokens_prompt": dados.get("prompt_eval_count", len(_encoder.encode(prompt))),
         "tokens_gerados": dados.get("eval_count", 0),
         "modelo_llm": OLLAMA_MODEL,
+        "modelo_llm_versao": dados.get("model", OLLAMA_MODEL),
+    }
+
+
+def _gerar_via_api_openai(cliente: OpenAI, modelo: str, prompt: str, **parametros) -> dict:
+    """Chamada no formato Chat Completions, compartilhada pela OpenAI e pela DeepSeek (que expõe
+    a mesma API). `tokens_gerados` inclui os tokens de raciocínio, que também são cobrados."""
+    resposta = cliente.chat.completions.create(
+        model=modelo,
+        messages=[{"role": "user", "content": prompt}],
+        **parametros,
+    )
+    # O OpenRouter informa qual provedor serviu a chamada; OpenAI e DeepSeek não têm esse campo.
+    provedor = getattr(resposta, "provider", None)
+    return {
+        "resposta_texto": resposta.choices[0].message.content or "",
+        "tokens_prompt": resposta.usage.prompt_tokens,
+        "tokens_gerados": resposta.usage.completion_tokens,
+        "modelo_llm": modelo,
+        "modelo_llm_versao": f"{resposta.model}@{provedor}" if provedor else resposta.model,
     }
 
 
@@ -187,24 +487,94 @@ def _gerar_via_openai(prompt: str) -> dict:
     global _openai_client
     if _openai_client is None:
         _openai_client = OpenAI()  # lê OPENAI_API_KEY do ambiente (.env)
+    if _PARAMETROS_LLM is not None:
+        parametros = _PARAMETROS_LLM
+    elif OPENAI_REASONING_EFFORT:
+        parametros = {"reasoning_effort": OPENAI_REASONING_EFFORT}
+    else:
+        parametros = {"temperature": 0.0}
+    return _gerar_via_api_openai(_openai_client, OPENAI_MODEL, prompt, **parametros)
 
-    resposta = _openai_client.chat.completions.create(
-        model=OPENAI_MODEL,
-        messages=[{"role": "user", "content": prompt}],
-        temperature=0.0,
+
+def _gerar_via_deepseek(prompt: str) -> dict:
+    """Raciocínio desligado: no modo com raciocínio (o padrão da DeepSeek), temperature é ignorada."""
+    global _deepseek_client
+    if _deepseek_client is None:
+        _deepseek_client = OpenAI(api_key=os.environ["DEEPSEEK_API_KEY"], base_url=DEEPSEEK_BASE_URL)
+    return _gerar_via_api_openai(
+        _deepseek_client, DEEPSEEK_MODEL, prompt,
+        temperature=0.0, extra_body={"thinking": {"type": "disabled"}},
     )
-    return {
-        "resposta_texto": resposta.choices[0].message.content or "",
-        "tokens_prompt": resposta.usage.prompt_tokens,
-        "tokens_gerados": resposta.usage.completion_tokens,
-        "modelo_llm": OPENAI_MODEL,
-    }
+
+
+def _gerar_via_openrouter(prompt: str) -> dict:
+    global _openrouter_client
+    if _openrouter_client is None:
+        _openrouter_client = OpenAI(api_key=os.environ["OPENROUTER_API_KEY"], base_url=OPENROUTER_BASE_URL)
+    parametros = _PARAMETROS_LLM if _PARAMETROS_LLM is not None else {"temperature": 0.0, "extra_body": _SEM_RACIOCINIO}
+    return _gerar_via_api_openai(_openrouter_client, OPENROUTER_MODEL, prompt, **parametros)
+
+
+def _gerar_via_anthropic(prompt: str) -> dict:
+    import backend_anthropic  # import tardio: o SDK da Anthropic só é exigido por quem usa Claude
+
+    return backend_anthropic.gerar(prompt, ANTHROPIC_MODEL)
+
+
+_BACKENDS_LLM = {
+    "ollama": _gerar_via_ollama,
+    "openai": _gerar_via_openai,
+    "openrouter": _gerar_via_openrouter,
+    "deepseek": _gerar_via_deepseek,
+    "anthropic": _gerar_via_anthropic,
+}
+
+
+def configurar_llm(backend: str, modelo: str | None = None, reasoning_effort: str | None = None):
+    """Troca o LLM gerador em tempo de execução -- pra rodar vários LLMs no mesmo script, com o
+    mesmo índice vetorial, sem reencodar os documentos. `modelo` None mantém o do .env;
+    `reasoning_effort` só vale pro backend openai (None = temperature 0)."""
+    global LLM_BACKEND, OLLAMA_MODEL, OPENAI_MODEL, OPENROUTER_MODEL, DEEPSEEK_MODEL, ANTHROPIC_MODEL
+    global OPENAI_REASONING_EFFORT, _PARAMETROS_LLM
+    if backend not in _BACKENDS_LLM:
+        raise ValueError(f"backend desconhecido: {backend} (opções: {', '.join(_BACKENDS_LLM)})")
+    LLM_BACKEND = backend
+    _PARAMETROS_LLM = None
+    if modelo:
+        if backend == "ollama":
+            OLLAMA_MODEL = modelo
+        elif backend == "openai":
+            OPENAI_MODEL = modelo
+        elif backend == "openrouter":
+            OPENROUTER_MODEL = modelo
+        elif backend == "deepseek":
+            DEEPSEEK_MODEL = modelo
+        else:
+            ANTHROPIC_MODEL = modelo
+    if backend == "openai":
+        OPENAI_REASONING_EFFORT = reasoning_effort
+
+
+def configurar_llm_por_rotulo(rotulo: str):
+    """Configura um LLM de LLMS_DO_COMPARATIVO pelo rótulo (ex.: "claude_haiku"), com os parâmetros dele."""
+    global _PARAMETROS_LLM
+    llm = llm_por_rotulo(rotulo)
+    configurar_llm(llm["backend"], llm["modelo"])
+    _PARAMETROS_LLM = llm["parametros"]
+
+
+def llm_por_rotulo(rotulo: str) -> dict:
+    for llm in LLMS_DO_COMPARATIVO:
+        if llm["rotulo"] == rotulo:
+            return llm
+    raise ValueError(f"rótulo desconhecido: {rotulo} (opções: {', '.join(l['rotulo'] for l in LLMS_DO_COMPARATIVO)})")
 
 
 def _chamar_llm(prompt: str) -> dict:
-    if LLM_BACKEND == "openai":
-        return _gerar_via_openai(prompt)
-    return _gerar_via_ollama(prompt)
+    global _modelo_llm_versao
+    resultado = _BACKENDS_LLM[LLM_BACKEND](prompt)
+    _modelo_llm_versao = resultado.pop("modelo_llm_versao", None)
+    return resultado
 
 
 def gerar_resposta_stuff(query: str, contextos: list[str]) -> dict:
@@ -216,10 +586,7 @@ def gerar_resposta_stuff(query: str, contextos: list[str]) -> dict:
 def gerar_resposta_refine(query: str, contextos: list[str]) -> dict:
     """Método Refine: percorre os contextos em sequência, refinando a resposta a cada novo chunk
     (1 chamada ao LLM por contexto recuperado — mais chamadas e tokens que o Stuff)."""
-    prompt_inicial = (
-        "Responda à pergunta usando o contexto abaixo. Se a resposta não estiver no contexto, "
-        f"diga que não sabe.\n\nContexto:\n{contextos[0]}\n\nPergunta: {query}\nResposta:"
-    )
+    prompt_inicial = _prompt("refine_inicial", contexto=contextos[0], pergunta=query)
     resultado = _chamar_llm(prompt_inicial)
     resposta_atual = resultado["resposta_texto"]
     tokens_prompt_total = resultado["tokens_prompt"]
@@ -227,13 +594,7 @@ def gerar_resposta_refine(query: str, contextos: list[str]) -> dict:
     modelo_llm = resultado["modelo_llm"]
 
     for contexto in contextos[1:]:
-        prompt_refine = (
-            "Sua tarefa é refinar uma resposta existente, apenas se o novo contexto trouxer "
-            "informação relevante que ainda não esteja nela. Se o novo contexto não ajudar, "
-            "repita a resposta existente sem mudanças.\n\n"
-            f"Pergunta original: {query}\n\nResposta existente: {resposta_atual}\n\n"
-            f"Novo contexto:\n{contexto}\n\nResposta refinada:"
-        )
+        prompt_refine = _prompt("refine_passo", pergunta=query, resposta=resposta_atual, contexto=contexto)
         resultado = _chamar_llm(prompt_refine)
         resposta_atual = resultado["resposta_texto"]
         tokens_prompt_total += resultado["tokens_prompt"]
@@ -256,11 +617,7 @@ def gerar_resposta_map_reduce(query: str, contextos: list[str]) -> dict:
     respostas_parciais = []
 
     for contexto in contextos:
-        prompt_map = (
-            "Responda à pergunta usando apenas o contexto abaixo. Se a resposta não estiver no "
-            "contexto, diga apenas 'Não há informação relevante.'\n\n"
-            f"Contexto:\n{contexto}\n\nPergunta: {query}\nResposta:"
-        )
+        prompt_map = _prompt("map", contexto=contexto, pergunta=query)
         resultado = _chamar_llm(prompt_map)
         respostas_parciais.append(resultado["resposta_texto"])
         tokens_prompt_total += resultado["tokens_prompt"]
@@ -268,13 +625,7 @@ def gerar_resposta_map_reduce(query: str, contextos: list[str]) -> dict:
         modelo_llm = resultado["modelo_llm"]
 
     respostas_concatenadas = "\n\n".join(f"- {r}" for r in respostas_parciais)
-    prompt_reduce = (
-        "Combine as respostas parciais abaixo (geradas a partir de diferentes trechos de um "
-        "documento) em uma única resposta final, coerente e não repetitiva, para a pergunta "
-        "original. Ignore respostas parciais que digam não haver informação relevante.\n\n"
-        f"Pergunta original: {query}\n\nRespostas parciais:\n{respostas_concatenadas}\n\n"
-        "Resposta final combinada:"
-    )
+    prompt_reduce = _prompt("reduce", pergunta=query, respostas=respostas_concatenadas)
     resultado_final = _chamar_llm(prompt_reduce)
     tokens_prompt_total += resultado_final["tokens_prompt"]
     tokens_gerados_total += resultado_final["tokens_gerados"]
@@ -292,17 +643,11 @@ def _responder_com_confianca(query: str, contextos: list[str]) -> dict:
     correta e sustentada pelo contexto. Bloco compartilhado por Map-Rerank (por chunk) e
     Reciprocal RAG (por pergunta alternativa)."""
     contexto_concatenado = "\n\n---\n\n".join(contextos)
-    prompt = (
-        "Responda à pergunta usando apenas o contexto abaixo, e avalie sua própria confiança "
-        "de que a resposta está correta e plenamente sustentada pelo contexto. Responda "
-        "EXATAMENTE neste formato, em duas linhas:\nRESPOSTA: <sua resposta>\n"
-        "CONFIANCA: <número inteiro de 0 a 100>\n\n"
-        f"Contexto:\n{contexto_concatenado}\n\nPergunta: {query}"
-    )
+    prompt = _prompt("confianca", contexto=contexto_concatenado, pergunta=query)
     resultado = _chamar_llm(prompt)
     texto = resultado["resposta_texto"]
-    match_resposta = re.search(r"RESPOSTA:\s*(.*?)(?:\n\s*CONFIAN|\Z)", texto, re.DOTALL | re.IGNORECASE)
-    match_confianca = re.search(r"CONFIAN[CÇ]A:\s*(\d+)", texto, re.IGNORECASE)
+    match_resposta = re.search(r"(?:RESPOSTA|ANSWER):\s*(.*?)(?:\n\s*(?:CONFIAN|CONFIDENCE)|\Z)", texto, re.DOTALL | re.IGNORECASE)
+    match_confianca = re.search(r"(?:CONFIAN[CÇ]A|CONFIDENCE):\s*(\d+)", texto, re.IGNORECASE)
     resultado["resposta_texto"] = match_resposta.group(1).strip() if match_resposta else texto.strip()
     resultado["confianca"] = int(match_confianca.group(1)) if match_confianca else 0
     return resultado
@@ -338,16 +683,15 @@ def _gerar_perguntas_alternativas(query: str, contexto_semente: list[str], n: in
     alternativas, mais específicas e menos ambíguas, a partir da pergunta original e de um
     contexto semente (recuperado com a própria pergunta original)."""
     contexto_concatenado = "\n\n---\n\n".join(contexto_semente)
-    prompt = (
-        f"Com base no contexto abaixo e na pergunta original do usuário, gere exatamente {n} "
-        "perguntas alternativas, mais específicas e menos ambíguas, que ajudem a esclarecer a "
-        f"intenção da pergunta original. Responda APENAS com as {n} perguntas, uma por linha, "
-        "numeradas, sem texto adicional.\n\n"
-        f"Contexto:\n{contexto_concatenado}\n\nPergunta original: {query}"
-    )
+    prompt = _prompt("alternativas", n=n, contexto=contexto_concatenado, pergunta=query)
     resultado = _chamar_llm(prompt)
     linhas = [linha.strip() for linha in resultado["resposta_texto"].splitlines() if linha.strip()]
     perguntas = [re.sub(r"^\d+[\.\):]\s*", "", linha).strip() for linha in linhas][:n]
+    # Múltipla escolha: o LLM reescreve só o enunciado, e as alternativas da pergunta original são
+    # coladas em cada versão -- assim cada resposta intermediária também escolhe uma letra.
+    inicio_alternativas = _INICIO_ALTERNATIVAS.search(query)
+    if CONJUNTO_PROMPTS == "en_multipla_escolha" and inicio_alternativas:
+        perguntas = [f"{p}{query[inicio_alternativas.start():]}" for p in perguntas]
     resultado["perguntas_alternativas"] = perguntas if perguntas else [query]
     return resultado
 
@@ -375,12 +719,7 @@ def gerar_resposta_query_step_down(query: str, colecao, k: int = 4, n_alternativ
         tokens_gerados_total += resultado["tokens_gerados"]
 
     respostas_concatenadas = "\n\n".join(f"- {r}" for r in respostas_por_pergunta)
-    prompt_combinacao = (
-        "Combine as respostas abaixo (geradas a partir de variações da pergunta original) em uma "
-        "única resposta final, coerente e não repetitiva, para a pergunta original.\n\n"
-        f"Pergunta original: {query}\n\nRespostas das variações:\n{respostas_concatenadas}\n\n"
-        "Resposta final combinada:"
-    )
+    prompt_combinacao = _prompt("combinacao", pergunta=query, respostas=respostas_concatenadas)
     resultado_final = _chamar_llm(prompt_combinacao)
     tokens_prompt_total += resultado_final["tokens_prompt"]
     tokens_gerados_total += resultado_final["tokens_gerados"]
@@ -426,7 +765,14 @@ def gerar_resposta_reciprocal(query: str, colecao, k: int = 4, n_alternativas: i
     }
 
 
+def gerar_resposta_sem_rag(query: str, contextos: list[str]) -> dict:
+    """Grupo de controle: a mesma pergunta, sem nenhum trecho recuperado (1 chamada ao LLM). Sem ele
+    não dá pra separar o que o RAG acrescentou do que o modelo já sabia (ex.: questões do MedQA)."""
+    return _chamar_llm(_prompt("sem_rag", pergunta=query))
+
+
 _METODOS_RAG = {
+    "sem_rag": gerar_resposta_sem_rag,
     "stuff": gerar_resposta_stuff,
     "refine": gerar_resposta_refine,
     "map_reduce": gerar_resposta_map_reduce,
@@ -470,9 +816,17 @@ def rodar_experimento(
     # o tempo dessas recuperações internas fica contabilizado dentro de tempo_geracao_s.
     if eh_metodo_nivel_query:
         contextos = None
+        ids_recuperados = None
+    elif metodo == "sem_rag":
+        contextos = []
+        ids_recuperados = None
     else:
-        chunks_com_similaridade = recuperar_com_similaridade(colecao, query, k=k)
+        busca = consultar_indice(colecao, query, k=k)
+        chunks_com_similaridade = list(zip(busca["documentos"], busca["similaridades"]))
         contextos = aplicar_compressao_contextual(chunks_com_similaridade, limiar_compressao)
+        # Ids "<document_id>#<chunk_index>" do top-k antes da compressão: é o que permite calcular
+        # Recall@k contra o documento-ouro de cada pergunta, sem juiz LLM.
+        ids_recuperados = busca["ids"]
     tempo_recuperacao_s = round(time.time() - inicio_total, 3)
 
     cpu_antes = psutil.cpu_percent(interval=None)
@@ -501,10 +855,13 @@ def rodar_experimento(
         "metodo_rag": metodo,
         "banco_vetorial": "chromadb",
         "modelo_embedding": EMBEDDING_MODEL_NAME,
+        "llm_backend": LLM_BACKEND,
         "modelo_llm": resultado_geracao["modelo_llm"],
+        "modelo_llm_versao": _modelo_llm_versao,
         "compressao_contextual": {"limiar": limiar_compressao, "n_chunks_mantidos": len(contextos) if contextos is not None else None},
         "pergunta": query,
         "contextos_recuperados": contextos if contextos is not None else resultado_geracao.get("perguntas_alternativas"),
+        "ids_recuperados": ids_recuperados,
         "resposta_gerada": resultado_geracao["resposta_texto"],
         "resposta_esperada": resposta_esperada,
         "similaridade_cosseno": similaridade,

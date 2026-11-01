@@ -1,0 +1,29 @@
+[
+  {
+    "dataset": "faquad",
+    "n_vetores": 318,
+    "n_consultas": 100,
+    "chromadb": {
+      "indice": "HNSW (padrão do ChromaDB)",
+      "tempo_indexacao_s": 0.546,
+      "memoria_indexacao_mb": 32.1,
+      "tempo_consulta_medio_ms": 3.432
+    },
+    "faiss": {
+      "indice": "IndexFlatL2 (busca exata)",
+      "tempo_indexacao_s": 0.004,
+      "memoria_indexacao_mb": 1.6,
+      "tempo_consulta_medio_ms": 0.058
+    },
+    "concordancia_top4": 1.0,
+    "sobreposicao_media_top4": 1.0,
+    "hit@4": {
+      "chromadb": 0.93,
+      "faiss": 0.93
+    },
+    "recall@4": {
+      "chromadb": 0.93,
+      "faiss": 0.93
+    }
+  }
+]
