@@ -39,15 +39,20 @@ $PY -u rodar_benchmarks.py --camada generalizacao --llms gpt_sol
 etapa "repetições do Stuff (modelos sem temperatura 0: gpt_luna, gpt_sol)"
 $PY -u rodar_benchmarks.py --repeticoes --llms gpt_luna gpt_sol
 
+# A conta passou pro tier 2 da OpenAI (5 mil req/min, 2 mi tokens/min no gpt-4o-mini; conferido nos
+# cabeçalhos x-ratelimit em 02/11): 600 req/min fica abaixo do limite de tokens mesmo com ~2,5 mil
+# tokens por chamada. O ritmo não muda as notas, só o tempo.
 etapa "RAGAS: Faithfulness e Answer Relevancy por resposta"
-$PY -u avaliar_ragas_benchmarks.py respostas --llms gpt_mini gpt_luna gpt_sol --por-minuto 120
+$PY -u avaliar_ragas_benchmarks.py respostas --llms gpt_mini gpt_luna gpt_sol --por-minuto 600 --concorrencia 40
 etapa "RAGAS: Context Precision e Context Recall, uma vez por pergunta"
-$PY -u avaliar_ragas_benchmarks.py contexto --por-minuto 120
+$PY -u avaliar_ragas_benchmarks.py contexto --por-minuto 600 --concorrencia 40
 
 etapa "comparativo ChromaDB × FAISS (passo 1: Chroma)"
 $PY -u comparar_bancos_passo1_chroma.py
 etapa "comparativo ChromaDB × FAISS (passo 2: FAISS)"
 $PY -u comparar_bancos_passo2_faiss.py
+etapa "comparativo ChromaDB × FAISS (passo 3: Stuff do gpt_mini com o top-4 do FAISS onde ele muda)"
+$PY -u comparar_bancos_passo3_stuff_faiss.py
 
 etapa "análise"
 $PY -u analisar_benchmarks.py

@@ -15,7 +15,10 @@ avaliar_ragas_benchmarks.py). Escreve resultados/analise_benchmarks.md com:
 
 Métrica principal de cada dataset (comparada direto com o gabarito, sem juiz): acurácia no MedQA,
 cobertura de tokens no FaQuAD (o F1 vai junto, mas pune as respostas em frase contra um gabarito de
-poucas palavras) e similaridade de cosseno no Docugami, cujas respostas de referência são frases.
+poucas palavras) e, no Docugami, a fração dos valores do gabarito (US$, %, milhões...) que aparecem na
+resposta. A similaridade de cosseno, métrica do artigo-base, continua nas tabelas e na comparação com
+ele, mas não mede acerto no Docugami: resposta genérica, sem nenhum número, tira nota alta (ver
+metricas_resposta.py).
 """
 
 import json
@@ -34,7 +37,7 @@ METODOS = ["sem_rag", "stuff", "refine", "map_reduce", "map_rerank", "query_step
 METODOS_RAG = METODOS[1:]
 NOME_METODO = {"sem_rag": "Sem RAG", "stuff": "Stuff", "refine": "Refine", "map_reduce": "Map-Reduce",
                "map_rerank": "Map-Rerank", "query_step_down": "Step-Down", "reciprocal": "Reciprocal"}
-METRICA_PRINCIPAL = {"docugami_10q": ("similaridade_cosseno", "Similaridade de cosseno"),
+METRICA_PRINCIPAL = {"docugami_10q": ("valores_gabarito", "Valores do gabarito na resposta"),
                      "medqa": ("acerto", "Acurácia"),
                      "faquad": ("cobertura_tokens", "Cobertura de tokens")}
 
@@ -99,9 +102,12 @@ def secao_principal(df: pd.DataFrame) -> list[str]:
         if g.empty:
             continue
         partes.append(f"\n### {nome}\n\nMétrica principal: {rotulo_metrica}.\n\n")
+        if col == "valores_gabarito":
+            partes.append("Só entram as perguntas com algum valor numérico no gabarito (as outras são qualitativas). "
+                          "Recusas parciais (\"I don't have verified figures\") contam como recusa.\n\n")
         linhas = []
         for (llm, metodo), h in g.groupby(["llm", "metodo_rag"], sort=False):
-            linhas.append([llm, NOME_METODO[metodo], str(len(h)), _fmt_media_ic(h[col]), br(h["similaridade_cosseno"].mean()),
+            linhas.append([llm, NOME_METODO[metodo], str(h[col].notna().sum()), _fmt_media_ic(h[col]), br(h["similaridade_cosseno"].mean()),
                            f"{br(100 * h['recusa'].mean(), 0)}%", br(h["tokens_totais"].mean(), 0),
                            br(h["custo_usd"].sum(), 4), br(h["tempo_total_s"].median(), 1)])
         partes.append(md_tabela(["LLM", "Método", "n", f"{rotulo_metrica} [IC 95%]", "Cosseno", "Recusas",
@@ -159,7 +165,9 @@ def secao_generalizacao(df: pd.DataFrame) -> list[str]:
             continue
         tabela = g.pivot_table(index="llm", columns="metodo_rag", values=col, aggfunc="mean")
         tabela = tabela.reindex(columns=[m for m in METODOS_RAG if m in tabela]).dropna()
-        partes.append(f"\n### {nome} ({rotulo_metrica}, média nas 25 perguntas)\n\n")
+        n = g.dropna(subset=[col])["pergunta_id"].nunique()
+        partes.append(f"\n### {nome} ({rotulo_metrica}, média nas {n} perguntas"
+                      f"{' com valor no gabarito' if col == 'valores_gabarito' else ''})\n\n")
         partes.append(md_tabela(["LLM"] + [NOME_METODO[m] for m in tabela.columns],
                                 [[llm] + [br(v) for v in linha] for llm, linha in tabela.iterrows()]))
         if len(tabela) >= 2:
@@ -264,12 +272,32 @@ def secao_bancos() -> list[str]:
                        br(c["memoria_indexacao_mb"], 1), br(f["memoria_indexacao_mb"], 1),
                        f"{br(100 * r['concordancia_top4'], 0)}%", f"{br(100 * r['sobreposicao_media_top4'], 0)}%",
                        " × ".join(br(r["hit@4"][b]) for b in ("chromadb", "faiss")) if r["hit@4"]["chromadb"] is not None else "--"])
-    return ["\n## 8. Bancos vetoriais: ChromaDB (HNSW, aproximado) × FAISS (IndexFlatL2, exato)\n\n",
-            md_tabela(["Dataset (vetores)", "Index. Chroma (s)", "Index. FAISS (s)", "Consulta Chroma (ms)",
-                       "Consulta FAISS (ms)", "Mem. Chroma (MB)", "Mem. FAISS (MB)", "Top-4 idêntico",
-                       "Sobreposição top-4", "Hit@4 Chroma × FAISS"], linhas),
-            "\n\nTop-4 idêntico: fração das consultas em que os dois bancos entregam os mesmos 4 fragmentos ao LLM "
-            "(nelas, a resposta do RAG seria a mesma com o FAISS).\n"]
+    partes = ["\n## 8. Bancos vetoriais: ChromaDB (HNSW, aproximado) × FAISS (IndexFlatL2, exato)\n\n",
+              md_tabela(["Dataset (vetores)", "Index. Chroma (s)", "Index. FAISS (s)", "Consulta Chroma (ms)",
+                         "Consulta FAISS (ms)", "Mem. Chroma (MB)", "Mem. FAISS (MB)", "Top-4 idêntico",
+                         "Sobreposição top-4", "Hit@4 Chroma × FAISS"], linhas),
+              "\n\nTop-4 idêntico: fração das consultas em que os dois bancos entregam os mesmos 4 fragmentos ao LLM "
+              "(nelas, a resposta do RAG seria a mesma com o FAISS). Medido num índice Chroma recriado só pro "
+              "comparativo; o HNSW não é determinístico, então a tabela abaixo compara com o índice dos experimentos.\n"]
+    caminho_stuff = METRICAS_DIR / "comparativo_stuff_faiss.json"
+    if caminho_stuff.exists():
+        linhas = []
+        for r in json.loads(caminho_stuff.read_text(encoding="utf-8")):
+            p = r.get("p_mcnemar", r.get("p_wilcoxon"))
+            linhas.append([r["dataset"], r["metrica_rotulo"], f"{br(100 * r['top4_identico_ao_experimento'], 0)}%",
+                           str(r["perguntas_refeitas"]), br(r["media_chroma"]), br(r["media_faiss"]),
+                           " × ".join(br(r[k]) for k in ("media_chroma_nas_refeitas", "media_faiss_nas_refeitas"))
+                           if r["perguntas_refeitas"] else "--",
+                           f"{r['acerta_so_chroma']} × {r['acerta_so_faiss']}" if "acerta_so_chroma" in r else "--",
+                           br_p(p) if p is not None else "--"])
+        partes += ["\n### Efeito na resposta: Stuff do gpt-4o-mini com o top-4 do FAISS (100 perguntas)\n\n",
+                   md_tabela(["Dataset", "Métrica", "Top-4 igual ao dos experimentos", "Perguntas refeitas",
+                              "Chroma", "FAISS", "Nas refeitas (Chroma × FAISS)", "Só um acerta (Chroma × FAISS)", "p"], linhas),
+                   "\n\nSó as perguntas com top-4 diferente são respondidas de novo com os fragmentos do FAISS; nas outras, "
+                   "o LLM recebe a mesma entrada. p: McNemar exato (acurácia) ou Wilcoxon pareado, nas perguntas refeitas. "
+                   "O gpt-4o-mini roda com temperatura 0, mas a API não garante saída idêntica: parte da diferença pode ser "
+                   "variação do próprio modelo.\n"]
+    return partes
 
 
 def main():

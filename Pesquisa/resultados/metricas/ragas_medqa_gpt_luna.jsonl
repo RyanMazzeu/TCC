@@ -1,0 +1,700 @@
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0014", "ragas": {"answer_relevancy": 0.4373372961809474}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0052", "ragas": {"answer_relevancy": 0.6036065679917071}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0055", "ragas": {"answer_relevancy": 0.43265799471302135}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0062", "ragas": {"answer_relevancy": 0.6083786135176494}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0066", "ragas": {"answer_relevancy": 0.47559893600160796}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0089", "ragas": {"answer_relevancy": 0.5216206770675168}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0094", "ragas": {"answer_relevancy": 0.3916675862916832}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0115", "ragas": {"answer_relevancy": 0.4630671820987365}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0136", "ragas": {"answer_relevancy": 0.45627782338966455}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0143", "ragas": {"answer_relevancy": 0.47275321601663506}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0147", "ragas": {"answer_relevancy": 0.6505134997684006}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0162", "ragas": {"answer_relevancy": 0.45066717349356966}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0164", "ragas": {"answer_relevancy": 0.5055273075332443}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0179", "ragas": {"answer_relevancy": 0.6327402552440557}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0190", "ragas": {"answer_relevancy": 0.4474337770345591}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0192", "ragas": {"answer_relevancy": 0.603475763746336}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0199", "ragas": {"answer_relevancy": 0.5059153805333626}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0207", "ragas": {"answer_relevancy": 0.6759279391060607}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0210", "ragas": {"answer_relevancy": 0.6823669432566731}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0229", "ragas": {"answer_relevancy": 0.5193366461464505}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0256", "ragas": {"answer_relevancy": 0.5607097448073195}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0286", "ragas": {"answer_relevancy": 0.5307324342658233}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0293", "ragas": {"answer_relevancy": 0.47654180851601263}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0319", "ragas": {"answer_relevancy": 0.4875457713622935}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0327", "ragas": {"answer_relevancy": 0.45987762778920643}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0334", "ragas": {"answer_relevancy": 0.40136383678488446}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0335", "ragas": {"answer_relevancy": 0.3440909687087905}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0351", "ragas": {"answer_relevancy": 0.529514430986925}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0394", "ragas": {"answer_relevancy": 0.6233939697049149}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0408", "ragas": {"answer_relevancy": 0.43579899008865985}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0430", "ragas": {"answer_relevancy": 0.630436251506353}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0433", "ragas": {"answer_relevancy": 0.5452888785564683}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0436", "ragas": {"answer_relevancy": 0.4672546181507848}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0441", "ragas": {"answer_relevancy": 0.6853016259052699}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0448", "ragas": {"answer_relevancy": 0.468070615641162}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0450", "ragas": {"answer_relevancy": 0.6238423346382462}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0452", "ragas": {"answer_relevancy": 0.6228910343019817}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0458", "ragas": {"answer_relevancy": 0.5129917048484195}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0467", "ragas": {"answer_relevancy": 0.4252912808181111}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0470", "ragas": {"answer_relevancy": 0.5296674704498048}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0477", "ragas": {"answer_relevancy": 0.4611861187340351}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0502", "ragas": {"answer_relevancy": 0.553094418718181}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0506", "ragas": {"answer_relevancy": 0.45343340851186503}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0542", "ragas": {"answer_relevancy": 0.6852819555933024}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0543", "ragas": {"answer_relevancy": 0.6197862339403285}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0547", "ragas": {"answer_relevancy": 0.45190894313445423}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0549", "ragas": {"answer_relevancy": 0.577988520834225}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0553", "ragas": {"answer_relevancy": 0.5595751905836838}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0564", "ragas": {"answer_relevancy": 0.5845178527898963}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0570", "ragas": {"answer_relevancy": 0.5561636461915399}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0593", "ragas": {"answer_relevancy": 0.5976052417308548}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0601", "ragas": {"answer_relevancy": 0.6007081165616773}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0645", "ragas": {"answer_relevancy": 0.6002580801273183}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0647", "ragas": {"answer_relevancy": 0.5588453896341969}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0665", "ragas": {"answer_relevancy": 0.5724474526258969}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0690", "ragas": {"answer_relevancy": 0.5211501317026459}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0697", "ragas": {"answer_relevancy": 0.5029794428408062}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0705", "ragas": {"answer_relevancy": 0.5901725463848689}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0728", "ragas": {"answer_relevancy": 0.41299343436827557}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0736", "ragas": {"answer_relevancy": 0.5205774201450272}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0741", "ragas": {"answer_relevancy": 0.6390557736287517}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0748", "ragas": {"answer_relevancy": 0.38976510779726153}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0759", "ragas": {"answer_relevancy": 0.48691330515505754}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0776", "ragas": {"answer_relevancy": 0.44457905884334475}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0778", "ragas": {"answer_relevancy": 0.47774752894036127}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0779", "ragas": {"answer_relevancy": 0.6568663388234821}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0811", "ragas": {"answer_relevancy": 0.4694797186122273}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0822", "ragas": {"answer_relevancy": 0.5239064624275204}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0860", "ragas": {"answer_relevancy": 0.5801146927040935}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0865", "ragas": {"answer_relevancy": 0.6152443456757731}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0866", "ragas": {"answer_relevancy": 0.5943239121981729}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0920", "ragas": {"answer_relevancy": 0.5736502290691887}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0929", "ragas": {"answer_relevancy": 0.6010583202643022}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0940", "ragas": {"answer_relevancy": 0.5134610125600687}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0941", "ragas": {"answer_relevancy": 0.5695733607393608}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q0947", "ragas": {"answer_relevancy": 0.5041982952615386}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q1023", "ragas": {"answer_relevancy": 0.5905416658993692}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q1035", "ragas": {"answer_relevancy": 0.5402900128097172}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q1094", "ragas": {"answer_relevancy": 0.627075654368148}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q1099", "ragas": {"answer_relevancy": 0.3653989580811457}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q1104", "ragas": {"answer_relevancy": 0.48841605249520664}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q1117", "ragas": {"answer_relevancy": 0.4456906458049765}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q1131", "ragas": {"answer_relevancy": 0.5251577431144129}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q1141", "ragas": {"answer_relevancy": 0.3785562457589071}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q1150", "ragas": {"answer_relevancy": 0.512331613745679}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q1162", "ragas": {"answer_relevancy": 0.3872833279318933}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q1183", "ragas": {"answer_relevancy": 0.5385215827104932}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q1207", "ragas": {"answer_relevancy": 0.5890999436595381}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q1210", "ragas": {"answer_relevancy": 0.4179215175609519}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q1233", "ragas": {"answer_relevancy": 0.5439334214607753}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q1236", "ragas": {"answer_relevancy": 0.4832194588070957}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q1242", "ragas": {"answer_relevancy": 0.49554734872280676}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q1247", "ragas": {"answer_relevancy": 0.6250704267125123}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q1254", "ragas": {"answer_relevancy": 0.5300044964674369}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q1258", "ragas": {"answer_relevancy": 0.5465201161204921}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q1262", "ragas": {"answer_relevancy": 0.5712526116010731}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q1266", "ragas": {"answer_relevancy": 0.5367417971879688}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q1267", "ragas": {"answer_relevancy": 0.5459313238320574}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q1268", "ragas": {"answer_relevancy": 0.536257734982096}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "sem_rag", "pergunta_id": "medqa_q1270", "ragas": {"answer_relevancy": 0.47578395728000383}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0014", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.4089252982780034}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0052", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.6066786050029385}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0055", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5922284365765172}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0062", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.6083786135176494}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0066", "ragas": {"faithfulness": 0.2, "answer_relevancy": 0.5922903295644203}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0089", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5758693673187129}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0094", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.39668675686790267}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0115", "ragas": {"faithfulness": 0.5, "answer_relevancy": 0.465776783622098}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0136", "ragas": {"faithfulness": 0.25, "answer_relevancy": 0.6954649108211512}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0143", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.47275321601663506}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0147", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5529210494652597}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0162", "ragas": {"faithfulness": 0.13333333333333333, "answer_relevancy": 0.45066717349356966}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0164", "ragas": {"faithfulness": 0.25, "answer_relevancy": 0.515105705162403}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0179", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5973014715389772}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0190", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.3655873561362544}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0192", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.6034887306322685}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0199", "ragas": {"faithfulness": 0.6666666666666666, "answer_relevancy": 0.5426058124382503}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0207", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.566048602649293}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0210", "ragas": {"faithfulness": 0.4, "answer_relevancy": 0.66464107492938}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0229", "ragas": {"faithfulness": 0.125, "answer_relevancy": 0.4878060239837669}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0256", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.5453012300155932}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0286", "ragas": {"faithfulness": 0.5, "answer_relevancy": 0.5307910244419267}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0293", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.6208800799491286}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0319", "ragas": {"faithfulness": 0.2857142857142857, "answer_relevancy": 0.4746506794618021}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0327", "ragas": {"faithfulness": 0.3333333333333333, "answer_relevancy": 0.5003894255298927}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0334", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.40921237835538865}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0335", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.47629492900760767}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0351", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.4514727961875036}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0394", "ragas": {"faithfulness": 0.25, "answer_relevancy": 0.56229023016308}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0408", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.49899853217669365}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0430", "ragas": {"faithfulness": 0.3333333333333333, "answer_relevancy": 0.5288200041914921}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0433", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5913942971012738}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0436", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.4672546181507848}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0441", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5920802790517571}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0448", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5267260230668502}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0450", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.6722753060433352}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0452", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.5176959582759495}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0458", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5130006413830082}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0467", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.420672794064287}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0470", "ragas": {"faithfulness": 0.041666666666666664, "answer_relevancy": 0.5337421486652933}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0477", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.4827627469571983}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0502", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.45200101786727237}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0506", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.45338279947856}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0542", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0543", "ragas": {"faithfulness": 0.5, "answer_relevancy": 0.5336871290805161}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0547", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.538026890275654}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0549", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.6061753280393051}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0553", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.6377406371486214}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0564", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.4245224618688325}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0570", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.4972497372066878}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0593", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.49700088860308606}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0601", "ragas": {"faithfulness": 0.6666666666666666, "answer_relevancy": 0.5252083570308287}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0645", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5970497528391443}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0647", "ragas": {"faithfulness": 0.5, "answer_relevancy": 0.626069369286408}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0665", "ragas": {"faithfulness": 0.6666666666666666, "answer_relevancy": 0.523070113643062}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0690", "ragas": {"faithfulness": 0.25, "answer_relevancy": 0.6961584759889874}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0697", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.4948460770453382}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0705", "ragas": {"faithfulness": 0.2, "answer_relevancy": 0.5789259376305915}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0728", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.4151535682083098}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0736", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.47627499431253967}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0741", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.6675074731936638}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0748", "ragas": {"faithfulness": 0.125, "answer_relevancy": 0.40744657787337296}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0759", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.4836637303319091}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0776", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5708041384613927}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0778", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.47930259951919424}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0779", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.68529737344865}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0811", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.4693404142091971}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0822", "ragas": {"faithfulness": 0.3333333333333333, "answer_relevancy": 0.4942894985996638}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0860", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5548574950082638}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0865", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.6236543900773736}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0866", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.600859194555935}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0920", "ragas": {"faithfulness": 0.5, "answer_relevancy": 0.5207017627572462}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0929", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.6008955769469247}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0940", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5371191583166705}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0941", "ragas": {"faithfulness": 0.14285714285714285, "answer_relevancy": 0.6266372297190949}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q0947", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.4871708456350614}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q1023", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5869580210404278}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q1035", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.6149912665921639}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q1094", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5023946984143622}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q1099", "ragas": {"faithfulness": 0.125, "answer_relevancy": 0.503976291286148}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q1104", "ragas": {"faithfulness": 0.25, "answer_relevancy": 0.4682187494185535}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q1117", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.4490178251132369}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q1131", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5380458979712935}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q1141", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.4015760443578828}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q1150", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.47495754457668876}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q1162", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.32572566365990574}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q1183", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.644321834465657}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q1207", "ragas": {"faithfulness": 0.5, "answer_relevancy": 0.6429389180365521}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q1210", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.4202306472679593}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q1233", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5439010675751238}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q1236", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.6044899317270063}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q1242", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5240751852203092}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q1247", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.6119321686431421}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q1254", "ragas": {"faithfulness": 0.5, "answer_relevancy": 0.5300044964674369}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q1258", "ragas": {"faithfulness": 0.3333333333333333, "answer_relevancy": 0.5988394689573246}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q1262", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.4920491891885603}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q1266", "ragas": {"answer_relevancy": 0.5476901113868428, "faithfulness": 0.034482758620689655}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q1267", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.538010359682824}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q1268", "ragas": {"faithfulness": 0.75, "answer_relevancy": 0.5931315936366436}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "stuff", "pergunta_id": "medqa_q1270", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.47630749637666736}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0014", "ragas": {"faithfulness": 0.16666666666666666, "answer_relevancy": 0.3951079557718766}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0052", "ragas": {"faithfulness": 0.6, "answer_relevancy": 0.5926726999284222}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0055", "ragas": {"faithfulness": 0.16666666666666666, "answer_relevancy": 0.5821435266116189}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0062", "ragas": {"faithfulness": 0.6666666666666666, "answer_relevancy": 0.5963319435061898}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0066", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.4790733156889506}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0089", "ragas": {"faithfulness": 0.16666666666666666, "answer_relevancy": 0.6189162360786973}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0094", "ragas": {"faithfulness": 0.16666666666666666, "answer_relevancy": 0.46506934934510663}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0115", "ragas": {"faithfulness": 0.6, "answer_relevancy": 0.40964600350217034}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0136", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5920954428352824}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0143", "ragas": {"faithfulness": 0.5, "answer_relevancy": 0.578806873565669}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0147", "ragas": {"faithfulness": 0.16666666666666666, "answer_relevancy": 0.4511645217732448}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0162", "ragas": {"faithfulness": 0.3333333333333333, "answer_relevancy": 0.45066717349356966}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0164", "ragas": {"faithfulness": 0.6666666666666666, "answer_relevancy": 0.5572305746477214}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0179", "ragas": {"faithfulness": 0.5, "answer_relevancy": 0.5945234243817433}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0190", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.47941402063968774}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0192", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.51940155600357}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0199", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5229629465057694}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0207", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.6759300617733821}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0210", "ragas": {"faithfulness": 0.5, "answer_relevancy": 0.6824371415207854}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0229", "ragas": {"faithfulness": 0.16666666666666666, "answer_relevancy": 0.6059786161973812}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0256", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.6046871576476162}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0286", "ragas": {"faithfulness": 0.4, "answer_relevancy": 0.5203517304967892}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0293", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.6224688864004408}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0319", "ragas": {"faithfulness": 0.2, "answer_relevancy": 0.5063872824770363}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0327", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.479418263949883}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0334", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.4975323682787671}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0335", "ragas": {"faithfulness": 0.6666666666666666, "answer_relevancy": 0.5999463514490146}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0351", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5295184679006314}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0394", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.6177580208180318}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0408", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.4978819746563044}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0430", "ragas": {"faithfulness": 0.6666666666666666, "answer_relevancy": 0.5227073267892423}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0433", "ragas": {"answer_relevancy": 0.5660965378643777, "faithfulness": 0.09090909090909091}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0436", "ragas": {"faithfulness": 0.3333333333333333, "answer_relevancy": 0.43101712288883226}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0441", "ragas": {"faithfulness": 0.3333333333333333, "answer_relevancy": 0.6571947468711365}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0448", "ragas": {"faithfulness": 0.25, "answer_relevancy": 0.5126999786631957}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0450", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.6505781782539781}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0452", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.6402887977075801}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0458", "ragas": {"faithfulness": 0.14285714285714285, "answer_relevancy": 0.5130006413830082}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0467", "ragas": {"faithfulness": 0.125, "answer_relevancy": 0.41609968332785985}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0470", "ragas": {"answer_relevancy": 0.4557882789676883, "faithfulness": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0477", "ragas": {"faithfulness": 0.2, "answer_relevancy": 0.48448872775210994}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0502", "ragas": {"faithfulness": 0.3333333333333333, "answer_relevancy": 0.501395150429963}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0506", "ragas": {"faithfulness": 0.16666666666666666, "answer_relevancy": 0.48493211017438137}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0542", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.6426273686086096}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0543", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.6143258288583534}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0547", "ragas": {"faithfulness": 0.2, "answer_relevancy": 0.5291103650957024}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0549", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.6274549065155072}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0553", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.5375897383782549}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0564", "ragas": {"faithfulness": 0.5, "answer_relevancy": 0.5984996321322045}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0570", "ragas": {"faithfulness": 0.25, "answer_relevancy": 0.5021036793548156}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0593", "ragas": {"faithfulness": 0.25, "answer_relevancy": 0.5445830102675526}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0601", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.6795996538731647}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0645", "ragas": {"faithfulness": 0.2857142857142857, "answer_relevancy": 0.5928685986666368}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0647", "ragas": {"faithfulness": 0.5, "answer_relevancy": 0.5901877204323354}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0665", "ragas": {"faithfulness": 0.75, "answer_relevancy": 0.4840839648920067}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0690", "ragas": {"faithfulness": 0.5, "answer_relevancy": 0.5759565435889287}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0697", "ragas": {"faithfulness": 0.25, "answer_relevancy": 0.5581870415466658}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0705", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.432909668323802}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0728", "ragas": {"faithfulness": 0.75, "answer_relevancy": 0.5020087197796856}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0736", "ragas": {"answer_relevancy": 0.45136959674218424, "faithfulness": 0.16}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0741", "ragas": {"faithfulness": 0.2, "answer_relevancy": 0.4756156931819719}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0748", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.481602086002706}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0759", "ragas": {"faithfulness": 0.3333333333333333, "answer_relevancy": 0.4988330252730044}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0776", "ragas": {"faithfulness": 0.3333333333333333, "answer_relevancy": 0.47902101182616813}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0778", "ragas": {"faithfulness": 0.25, "answer_relevancy": 0.4756792131749196}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0779", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.6743505200164245}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0811", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.4694797186122273}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0822", "ragas": {"faithfulness": 0.4, "answer_relevancy": 0.4492252361898879}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0860", "ragas": {"faithfulness": 0.14285714285714285, "answer_relevancy": 0.5535972862014163}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0865", "ragas": {"faithfulness": 0.4, "answer_relevancy": 0.5258460448995472}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0866", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5943239121981729}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0920", "ragas": {"faithfulness": 0.6666666666666666, "answer_relevancy": 0.300671627443194}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0929", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5805986970433048}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0940", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.3562034568549523}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0941", "ragas": {"faithfulness": 0.8, "answer_relevancy": 0.6333440131891271}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q0947", "ragas": {"faithfulness": 0.125, "answer_relevancy": 0.48714532335751953}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q1023", "ragas": {"faithfulness": 0.2, "answer_relevancy": 0.6020776315571214}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q1035", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.6149958702790537}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q1094", "ragas": {"faithfulness": 0.2, "answer_relevancy": 0.5423416649606664}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q1099", "ragas": {"faithfulness": 0.25, "answer_relevancy": 0.36153443941171987}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q1104", "ragas": {"faithfulness": 0.3333333333333333, "answer_relevancy": 0.5790023702729786}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q1117", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.4448524153166599}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q1131", "ragas": {"faithfulness": 0.125, "answer_relevancy": 0.5033276127984342}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q1141", "ragas": {"faithfulness": 0.25, "answer_relevancy": 0.34996237969150124}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q1150", "ragas": {"faithfulness": 0.2, "answer_relevancy": 0.43879708367144205}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q1162", "ragas": {"faithfulness": 0.25, "answer_relevancy": 0.34599315394706504}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q1183", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.6038964553669316}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q1207", "ragas": {"faithfulness": 0.16666666666666666, "answer_relevancy": 0.6843613735003687}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q1210", "ragas": {"faithfulness": 0.5, "answer_relevancy": 0.4956281088421244}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q1233", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5438914667328019}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q1236", "ragas": {"faithfulness": 0.14285714285714285, "answer_relevancy": 0.46373641776413327}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q1242", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.49551686843360815}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q1247", "ragas": {"faithfulness": 0.6, "answer_relevancy": 0.6106877423235614}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q1254", "ragas": {"faithfulness": 0.16666666666666666, "answer_relevancy": 0.5676396903598144}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q1258", "ragas": {"faithfulness": 0.25, "answer_relevancy": 0.6049450917144167}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q1262", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5021429352004129}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q1266", "ragas": {"faithfulness": 0.5, "answer_relevancy": 0.5518099239668374}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q1267", "ragas": {"faithfulness": 0.25, "answer_relevancy": 0.49178368579343923}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q1268", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.44807448009401535}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "refine", "pergunta_id": "medqa_q1270", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.4851446222339222}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0014", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.4008694909195459}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0052", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.6085468582288742}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0055", "ragas": {"faithfulness": 0.6, "answer_relevancy": 0.5812034969375016}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0062", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.5962842140251722}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0066", "ragas": {"faithfulness": 0.5, "answer_relevancy": 0.44208905845652774}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0089", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5479696007955521}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0094", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.4576446363481537}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0115", "ragas": {"faithfulness": 0.75, "answer_relevancy": 0.4830670388491778}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0136", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5379677546174761}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0143", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5246853959994279}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0147", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.49666899242638723}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0162", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.4506781967476383}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0164", "ragas": {"faithfulness": 0.5, "answer_relevancy": 0.5949624666209439}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0179", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.586485270807709}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0190", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.42055507911014756}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0192", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.46394720109031756}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0199", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.47187363800941284}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0207", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.6813532826879917}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0210", "ragas": {"faithfulness": 0.6, "answer_relevancy": 0.4489999619454379}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0229", "ragas": {"faithfulness": 0.1111111111111111, "answer_relevancy": 0.4877630331449871}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0256", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.5147578429251364}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0286", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5289862576648664}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0293", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.6356213474861808}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0319", "ragas": {"faithfulness": 0.2857142857142857, "answer_relevancy": 0.49015484593515635}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0327", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.4850442637237599}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0334", "ragas": {"faithfulness": 0.2, "answer_relevancy": 0.3965566915973562}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0335", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.6460828046721743}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0351", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5295184679006314}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0394", "ragas": {"faithfulness": 0.25, "answer_relevancy": 0.6199711979513748}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0408", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.476313745711106}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0430", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5933775992886593}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0433", "ragas": {"answer_relevancy": 0.5686739872384221, "faithfulness": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0436", "ragas": {"faithfulness": 0.2, "answer_relevancy": 0.46726463118401496}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0441", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.6432154415703827}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0448", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.45357242612379345}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0450", "ragas": {"faithfulness": 0.75, "answer_relevancy": 0.6131988571937735}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0452", "ragas": {"faithfulness": 0.25, "answer_relevancy": 0.6157027159015024}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0458", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5130006413830082}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0467", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.4183241544570744}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0470", "ragas": {"answer_relevancy": 0.5027610742191059, "faithfulness": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0477", "ragas": {"faithfulness": 0.2, "answer_relevancy": 0.46117564284869267}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0502", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.45322503596203306}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0506", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.47119473926855077}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0542", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.638990091724886}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0543", "ragas": {"faithfulness": 0.5, "answer_relevancy": 0.5586993854619765}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0547", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.4013304114137632}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0549", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.6015611470126335}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0553", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.4308295947098772}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0564", "ragas": {"faithfulness": 0.6666666666666666, "answer_relevancy": 0.5984789010774686}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0570", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5806751256807864}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0593", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.6054645118019136}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0601", "ragas": {"faithfulness": 0.75, "answer_relevancy": 0.6484384764286516}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0645", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5970497528391443}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0647", "ragas": {"faithfulness": 0.75, "answer_relevancy": 0.5588487431100043}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0665", "ragas": {"faithfulness": 0.4, "answer_relevancy": 0.6204238026056327}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0690", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5487504722650509}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0697", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5156070388877473}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0705", "ragas": {"faithfulness": 0.25, "answer_relevancy": 0.5392844339556412}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0728", "ragas": {"faithfulness": 0.4, "answer_relevancy": 0.46388009730272545}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0736", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5571769253892047}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0741", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5507564195073291}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0748", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.4074347495242023}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0759", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5232416316451779}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0776", "ragas": {"faithfulness": 0.5, "answer_relevancy": 0.5135204360586757}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0778", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.46471651930131946}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0779", "ragas": {"faithfulness": 0.25, "answer_relevancy": 0.532343460155947}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0811", "ragas": {"faithfulness": 0.25, "answer_relevancy": 0.4694797186122273}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0822", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5236986435659795}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0860", "ragas": {"faithfulness": 0.16666666666666666, "answer_relevancy": 0.5535972862014163}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0865", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.4667190145831981}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0866", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5827599133263452}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0920", "ragas": {"faithfulness": 0.6666666666666666, "answer_relevancy": 0.48166655166997496}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0929", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5972757973532247}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0940", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5450927900189649}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0941", "ragas": {"faithfulness": 0.75, "answer_relevancy": 0.5700385046598431}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q0947", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.4871177393675718}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q1023", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.537859443889629}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q1035", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.698289270333254}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q1094", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5124833860249342}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q1099", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.41257497670095916}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q1104", "ragas": {"faithfulness": 0.2, "answer_relevancy": 0.35503121034140656}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q1117", "ragas": {"faithfulness": 0.2222222222222222, "answer_relevancy": 0.4490181086191069}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q1131", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5362802430842065}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q1141", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.42051162328210506}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q1150", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5072310091492492}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q1162", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.4287005957373318}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q1183", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.505596390230877}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q1207", "ragas": {"faithfulness": 0.07692307692307693, "answer_relevancy": 0.6354577413380388}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q1210", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5140588281723016}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q1233", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5439439838301177}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q1236", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.6350014721521343}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q1242", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.49972108686146405}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q1247", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5459088890384924}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q1254", "ragas": {"faithfulness": 0.2, "answer_relevancy": 0.5420688852618692}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q1258", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5250636650086306}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q1262", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5814050252566949}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q1266", "ragas": {"answer_relevancy": 0.50983443445776, "faithfulness": 0.23333333333333334}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q1267", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5199375411668438}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q1268", "ragas": {"faithfulness": 0.8, "answer_relevancy": 0.5756786792286775}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_reduce", "pergunta_id": "medqa_q1270", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.44052350509498234}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0014", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5202380112911386}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0052", "ragas": {"faithfulness": 0.6, "answer_relevancy": 0.6155344055760373}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0055", "ragas": {"faithfulness": 0.2, "answer_relevancy": 0.5765523484251445}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0062", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.6083732060565514}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0066", "ragas": {"faithfulness": 0.25, "answer_relevancy": 0.4805959622386617}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0089", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5871946630083408}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0094", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.49415326522967756}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0115", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.450117150293688}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0136", "ragas": {"faithfulness": 0.5, "answer_relevancy": 0.5391222109838679}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0143", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.47827910876555185}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0147", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5562866890637661}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0162", "ragas": {"faithfulness": 0.125, "answer_relevancy": 0.4506781967476383}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0164", "ragas": {"faithfulness": 0.6666666666666666, "answer_relevancy": 0.32866122644745704}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0179", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5883664513814153}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0190", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.4235919973201184}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0192", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5228453994524299}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0199", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.41077870883150197}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0207", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5676523577301663}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0210", "ragas": {"faithfulness": 0.2, "answer_relevancy": 0.6168678900905302}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0229", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5063691234046342}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0256", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.4329659520288183}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0286", "ragas": {"faithfulness": 0.5, "answer_relevancy": 0.42343184014282936}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0293", "ragas": {"faithfulness": 0.5, "answer_relevancy": 0.5497820723749148}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0319", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.48651343022555116}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0327", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5126804560517096}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0334", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.47206650954768614}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0335", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.6484475903942997}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0351", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5295137031708217}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0394", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5502300810558806}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0408", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.5171985650593055}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0430", "ragas": {"faithfulness": 0.25, "answer_relevancy": 0.6610405797949228}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0433", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5352850353133877}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0436", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.4343217328340183}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0441", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.6255058184773737}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0448", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0450", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.667480480930334}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0452", "ragas": {"faithfulness": 0.25, "answer_relevancy": 0.6226963863417484}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0458", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5130006413830082}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0467", "ragas": {"faithfulness": 0.16666666666666666, "answer_relevancy": 0.4962907100548816}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0470", "ragas": {"faithfulness": 0.2, "answer_relevancy": 0.49250613520987185}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0477", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5225398984849292}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0502", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.4574610229125177}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0506", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.43176691719602683}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0542", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0543", "ragas": {"faithfulness": 0.6666666666666666, "answer_relevancy": 0.536645473591279}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0547", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5689557201293117}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0549", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.4923912228669765}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0553", "ragas": {"faithfulness": 0.6666666666666666, "answer_relevancy": 0.5928348009140947}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0564", "ragas": {"faithfulness": 0.3333333333333333, "answer_relevancy": 0.4929396292762233}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0570", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5251227795873904}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0593", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.49385289469735394}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0601", "ragas": {"faithfulness": 0.5, "answer_relevancy": 0.5849102615585043}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0645", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.6788505412147091}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0647", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.598368951153806}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0665", "ragas": {"faithfulness": 0.75, "answer_relevancy": 0.5647478304925665}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0690", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.567435081734201}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0697", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5971989097847138}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0705", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5740507274616157}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0728", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.4151535682083098}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0736", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.4225208384975749}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0741", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.6116598081383006}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0748", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.3472439397865769}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0759", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.48989812557173223}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0776", "ragas": {"faithfulness": 0.5, "answer_relevancy": 0.4612409272328883}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0778", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.3968326638520787}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0779", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5079424492681053}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0811", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5671643565880609}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0822", "ragas": {"faithfulness": 0.6666666666666666, "answer_relevancy": 0.48757347242617927}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0860", "ragas": {"faithfulness": 0.25, "answer_relevancy": 0.5595756216204474}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0865", "ragas": {"answer_relevancy": 0.6237628208014698, "faithfulness": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0866", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.6144325082614512}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0920", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5149192184452129}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0929", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.4920638637809596}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0940", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.37907492153969}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0941", "ragas": {"faithfulness": 0.375, "answer_relevancy": 0.6287838191183525}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q0947", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5383053387636733}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q1023", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5038635683355266}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q1035", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.6371295516700526}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q1094", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5478990191181157}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q1099", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5468490997328436}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q1104", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5768688966517067}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q1117", "ragas": {"answer_relevancy": 0.44903170457813474, "faithfulness": 0.03125}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q1131", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5347815157563162}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q1141", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.4494873715271406}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q1150", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5206434691240973}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q1162", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.4509793311596075}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q1183", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.563507033115478}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q1207", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.6726672106392675}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q1210", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.45757325770283397}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q1233", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5759630842332899}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q1236", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.613335798097252}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q1242", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.3715932902316093}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q1247", "ragas": {"faithfulness": 0.3333333333333333, "answer_relevancy": 0.4643343467833252}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q1254", "ragas": {"faithfulness": 0.5, "answer_relevancy": 0.5416386636414846}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q1258", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5632290568797601}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q1262", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.5074629096980433}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q1266", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.40102692015145625}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q1267", "ragas": {"faithfulness": 0.16666666666666666, "answer_relevancy": 0.5181497835937711}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q1268", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.5789365451539117}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "map_rerank", "pergunta_id": "medqa_q1270", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.49589794697638556}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0014", "ragas": {"answer_relevancy": 0.40088533412136323}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0052", "ragas": {"answer_relevancy": 0.5637037055891743}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0055", "ragas": {"answer_relevancy": 0.43273273520997635}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0062", "ragas": {"answer_relevancy": 0.5835586693689493}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0066", "ragas": {"answer_relevancy": 0.40728341833622284}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0089", "ragas": {"answer_relevancy": 0.63022047483758}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0094", "ragas": {"answer_relevancy": 0.3865925570890923}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0115", "ragas": {"answer_relevancy": 0.4861390944155359}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0136", "ragas": {"answer_relevancy": 0.5410868274262192}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0143", "ragas": {"answer_relevancy": 0.5607387565712431}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0147", "ragas": {"answer_relevancy": 0.49732885260156195}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0162", "ragas": {"answer_relevancy": 0.45066717349356966}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0164", "ragas": {"answer_relevancy": 0.5947933994635239}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0179", "ragas": {"answer_relevancy": 0.5946408031882101}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0190", "ragas": {"answer_relevancy": 0.39906859547014495}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0192", "ragas": {"answer_relevancy": 0.51940155600357}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0199", "ragas": {"answer_relevancy": 0.46703321853243845}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0207", "ragas": {"answer_relevancy": 0.5676188585649196}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0210", "ragas": {"answer_relevancy": 0.5318903319198736}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0229", "ragas": {"answer_relevancy": 0.4877801365981738}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0256", "ragas": {"answer_relevancy": 0.5752897777167332}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0286", "ragas": {"answer_relevancy": 0.5289956220166515}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0293", "ragas": {"answer_relevancy": 0.472770853870615}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0319", "ragas": {"answer_relevancy": 0.4901880808846009}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0327", "ragas": {"answer_relevancy": 0.47822776727456756}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0334", "ragas": {"answer_relevancy": 0.3990443406618833}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0335", "ragas": {"answer_relevancy": 0.47747808256725666}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0351", "ragas": {"answer_relevancy": 0.5295184679006314}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0394", "ragas": {"answer_relevancy": 0.6199711979513748}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0408", "ragas": {"answer_relevancy": 0.4625519195765199}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0430", "ragas": {"answer_relevancy": 0.5698576422792906}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0433", "ragas": {"answer_relevancy": 0.5552193716760887}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0436", "ragas": {"answer_relevancy": 0.45252790638874013}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0441", "ragas": {"answer_relevancy": 0.625998262062662}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0448", "ragas": {"answer_relevancy": 0.45357508878909797}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0450", "ragas": {"answer_relevancy": 0.6005315527162155}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0452", "ragas": {"answer_relevancy": 0.6226870289679111}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0458", "ragas": {"answer_relevancy": 0.5135080638717315}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0467", "ragas": {"answer_relevancy": 0.4183860214024513}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0470", "ragas": {"answer_relevancy": 0.5337421486652933}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0477", "ragas": {"answer_relevancy": 0.49164312863939236}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0502", "ragas": {"answer_relevancy": 0.49455263562370305}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0506", "ragas": {"answer_relevancy": 0.4835338001542772}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0542", "ragas": {"answer_relevancy": 0.6224130318184977}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0543", "ragas": {"answer_relevancy": 0.5395871740793311}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0547", "ragas": {"answer_relevancy": 0.4714744059836144}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0549", "ragas": {"answer_relevancy": 0.36853033581567035}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0553", "ragas": {"answer_relevancy": 0.5505954462499396}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0564", "ragas": {"answer_relevancy": 0.4149209482450827}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0570", "ragas": {"answer_relevancy": 0.5808032672351233}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0593", "ragas": {"answer_relevancy": 0.5468157867114667}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0601", "ragas": {"answer_relevancy": 0.6638605578269996}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0645", "ragas": {"answer_relevancy": 0.5872275582752401}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0647", "ragas": {"answer_relevancy": 0.596629110242027}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0665", "ragas": {"answer_relevancy": 0.5215886700326441}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0690", "ragas": {"answer_relevancy": 0.6243715550506403}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0697", "ragas": {"answer_relevancy": 0.4948258932830021}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0705", "ragas": {"answer_relevancy": 0.5521716578390276}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0728", "ragas": {"answer_relevancy": 0.4522568655366152}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0736", "ragas": {"answer_relevancy": 0.49455548007611966}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0741", "ragas": {"answer_relevancy": 0.6088346756827127}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0748", "ragas": {"answer_relevancy": 0.4241202578608221}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0759", "ragas": {"answer_relevancy": 0.48035428550479536}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0776", "ragas": {"answer_relevancy": 0.5039743128701276}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0778", "ragas": {"answer_relevancy": 0.4778643419141127}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0779", "ragas": {"answer_relevancy": 0.5990120934826685}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0811", "ragas": {"answer_relevancy": 0.43516007622305924}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0822", "ragas": {"answer_relevancy": 0.5618606398258299}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0860", "ragas": {"answer_relevancy": 0.5082171715771949}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0865", "ragas": {"answer_relevancy": 0.5536462394825719}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0866", "ragas": {"answer_relevancy": 0.5814963586661244}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0920", "ragas": {"answer_relevancy": 0.5482297518079768}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0929", "ragas": {"answer_relevancy": 0.6013709408954432}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0940", "ragas": {"answer_relevancy": 0.5450923901244457}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0941", "ragas": {"answer_relevancy": 0.5044234037324178}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q0947", "ragas": {"answer_relevancy": 0.5383157847803355}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q1023", "ragas": {"answer_relevancy": 0.5775446406916509}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q1035", "ragas": {"answer_relevancy": 0.49311620075325097}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q1094", "ragas": {"answer_relevancy": 0.5324967766129011}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q1099", "ragas": {"answer_relevancy": 0.38482680556333176}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q1104", "ragas": {"answer_relevancy": 0.5270725700601048}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q1117", "ragas": {"answer_relevancy": 0.44436728622387095}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q1131", "ragas": {"answer_relevancy": 0.5190534912601433}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q1141", "ragas": {"answer_relevancy": 0.5057890417561342}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q1150", "ragas": {"answer_relevancy": 0.4792834986668179}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q1162", "ragas": {"answer_relevancy": 0.35732513972486085}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q1183", "ragas": {"answer_relevancy": 0.6158507856013129}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q1207", "ragas": {"answer_relevancy": 0.6330753605825814}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q1210", "ragas": {"answer_relevancy": 0.4048956963741175}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q1233", "ragas": {"answer_relevancy": 0.5440625467905481}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q1236", "ragas": {"answer_relevancy": 0.5605628137485087}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q1242", "ragas": {"answer_relevancy": 0.4636244074569973}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q1247", "ragas": {"answer_relevancy": 0.5678495423667845}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q1254", "ragas": {"answer_relevancy": 0.5421155144135277}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q1258", "ragas": {"answer_relevancy": 0.5149385060703667}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q1262", "ragas": {"answer_relevancy": 0.5125413539803831}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q1266", "ragas": {"answer_relevancy": 0.48152135033909543}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q1267", "ragas": {"answer_relevancy": 0.49451452956521136}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q1268", "ragas": {"answer_relevancy": 0.5928329121674731}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "query_step_down", "pergunta_id": "medqa_q1270", "ragas": {"answer_relevancy": 0.4749238792638895}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0014", "ragas": {"answer_relevancy": 0.45607528722971696}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0052", "ragas": {"answer_relevancy": 0.5637099749790803}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0055", "ragas": {"answer_relevancy": 0.61170352214001}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0062", "ragas": {"answer_relevancy": 0.3781441604893192}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0066", "ragas": {"answer_relevancy": 0.6137276284261813}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0089", "ragas": {"answer_relevancy": 0.49840735366631356}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0094", "ragas": {"answer_relevancy": 0.49114715400111136}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0115", "ragas": {"answer_relevancy": 0.42290409818795743}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0136", "ragas": {"answer_relevancy": 0.4773658112385942}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0143", "ragas": {"answer_relevancy": 0.4727509486056874}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0147", "ragas": {"answer_relevancy": 0.5445926399977528}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0162", "ragas": {"answer_relevancy": 0.45066717349356966}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0164", "ragas": {"answer_relevancy": 0.6149289756904062}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0179", "ragas": {"answer_relevancy": 0.6029620207073338}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0190", "ragas": {"answer_relevancy": 0.4526997608482783}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0192", "ragas": {"answer_relevancy": 0.4659670138243081}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0199", "ragas": {"answer_relevancy": 0.5150054575762311}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0207", "ragas": {"answer_relevancy": 0.6173632312578}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0210", "ragas": {"answer_relevancy": 0.6650556973664801}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0229", "ragas": {"answer_relevancy": 0.536221296342884}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0256", "ragas": {"answer_relevancy": 0.5912837032153135}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0286", "ragas": {"answer_relevancy": 0.5533932228744746}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0293", "ragas": {"answer_relevancy": 0.46775054534699284}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0319", "ragas": {"answer_relevancy": 0.48556030535639333}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0327", "ragas": {"answer_relevancy": 0.49492208907521684}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0334", "ragas": {"answer_relevancy": 0.3784692797011287}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0335", "ragas": {"answer_relevancy": 0.5649342666295558}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0351", "ragas": {"answer_relevancy": 0.5572904284282196}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0394", "ragas": {"answer_relevancy": 0.4830763991329173}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0408", "ragas": {"answer_relevancy": 0.49274196456666647}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0430", "ragas": {"answer_relevancy": 0.4985351255226798}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0433", "ragas": {"answer_relevancy": 0.5401724913264367}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0436", "ragas": {"answer_relevancy": 0.5015824767367593}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0441", "ragas": {"answer_relevancy": 0.5380901974402926}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0448", "ragas": {"answer_relevancy": 0.45080879888913533}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0450", "ragas": {"answer_relevancy": 0.5911896870080695}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0452", "ragas": {"answer_relevancy": 0.6157632242385963}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0458", "ragas": {"answer_relevancy": 0.5963662737238288}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0467", "ragas": {"answer_relevancy": 0.4726179545577259}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0470", "ragas": {"answer_relevancy": 0.49250617650622336}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0477", "ragas": {"answer_relevancy": 0.5370507716000403}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0502", "ragas": {"answer_relevancy": 0.4520327557131562}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0506", "ragas": {"answer_relevancy": 0.4139884840873851}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0542", "ragas": {"answer_relevancy": 0.5795422763773543}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0543", "ragas": {"answer_relevancy": 0.45279120134132617}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0547", "ragas": {"answer_relevancy": 0.39040618526287724}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0549", "ragas": {"answer_relevancy": 0.5096927649072878}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0553", "ragas": {"answer_relevancy": 0.592183369778346}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0564", "ragas": {"answer_relevancy": 0.47033043998714263}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0570", "ragas": {"answer_relevancy": 0.5036154077535091}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0593", "ragas": {"answer_relevancy": 0.4643514992849173}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0601", "ragas": {"answer_relevancy": 0.525213237323895}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0645", "ragas": {"answer_relevancy": 0.6788505412147091}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0647", "ragas": {"answer_relevancy": 0.5541821549446215}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0665", "ragas": {"answer_relevancy": 0.5776744658429155}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0690", "ragas": {"answer_relevancy": 0.5738319256166218}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0697", "ragas": {"answer_relevancy": 0.4344132745387577}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0705", "ragas": {"answer_relevancy": 0.52477900727242}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0728", "ragas": {"answer_relevancy": 0.48220090878230754}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0736", "ragas": {"answer_relevancy": 0.4401778375681036}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0741", "ragas": {"answer_relevancy": 0.5587729192033353}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0748", "ragas": {"answer_relevancy": 0.4903698256238009}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0759", "ragas": {"answer_relevancy": 0.48069297356731844}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0776", "ragas": {"answer_relevancy": 0.47773270880630486}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0778", "ragas": {"answer_relevancy": 0.4794755284536894}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0779", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0811", "ragas": {"answer_relevancy": 0.46711250513346575}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0822", "ragas": {"answer_relevancy": 0.48966802639969104}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0860", "ragas": {"answer_relevancy": 0.5265226528281614}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0865", "ragas": {"answer_relevancy": 0.47334993787890167}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0866", "ragas": {"answer_relevancy": 0.6274521422987946}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0920", "ragas": {"answer_relevancy": 0.5107641565462299}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0929", "ragas": {"answer_relevancy": 0.5006091855820641}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0940", "ragas": {"answer_relevancy": 0.47348718672894624}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0941", "ragas": {"answer_relevancy": 0.4871320976638318}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q0947", "ragas": {"answer_relevancy": 0.52372411716506}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q1023", "ragas": {"answer_relevancy": 0.499253130412365}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q1035", "ragas": {"answer_relevancy": 0.6972441578666168}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q1094", "ragas": {"answer_relevancy": 0.39702872053635746}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q1099", "ragas": {"answer_relevancy": 0.436605238266651}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q1104", "ragas": {"answer_relevancy": 0.5466286435596543}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q1117", "ragas": {"answer_relevancy": 0.4197870609809056}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q1131", "ragas": {"answer_relevancy": 0.4921962531102}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q1141", "ragas": {"answer_relevancy": 0.5274669436633318}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q1150", "ragas": {"answer_relevancy": 0.4730172309576861}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q1162", "ragas": {"answer_relevancy": 0.299381542895508}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q1183", "ragas": {"answer_relevancy": 0.5345897098654724}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q1207", "ragas": {"answer_relevancy": 0.5701865366912229}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q1210", "ragas": {"answer_relevancy": 0.4795969507333468}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q1233", "ragas": {"answer_relevancy": 0.7016537592635052}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q1236", "ragas": {"answer_relevancy": 0.5972208094544978}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q1242", "ragas": {"answer_relevancy": 0.474274662408253}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q1247", "ragas": {"answer_relevancy": 0.5644270895249052}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q1254", "ragas": {"answer_relevancy": 0.5040658924854168}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q1258", "ragas": {"answer_relevancy": 0.5809549583414506}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q1262", "ragas": {"answer_relevancy": 0.5157513259588496}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q1266", "ragas": {"answer_relevancy": 0.4850733066830773}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q1267", "ragas": {"answer_relevancy": 0.4870531876638327}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q1268", "ragas": {"answer_relevancy": 0.5225706162669517}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "medqa", "llm": "gpt_luna", "metodo_rag": "reciprocal", "pergunta_id": "medqa_q1270", "ragas": {"answer_relevancy": 0.42960031119687764}, "ragas_juiz": "gpt-4o-mini"}

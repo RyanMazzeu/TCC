@@ -9,7 +9,8 @@ PyTorch), lendo o que o passo 1 (comparar_bancos_passo1_chroma.py) guardou. Mede
 - Hit@4 e Recall@4 dos dois bancos contra o documento-ouro (Docugami e FaQuAD): se a busca
   aproximada do Chroma perde o trecho certo que a exata acharia.
 
-Saída: resultados/metricas/comparativo_vectorstores_benchmarks.json.
+Saída: resultados/metricas/comparativo_vectorstores_benchmarks.json, e o top-4 do FAISS de cada consulta
+(vectorstores_benchmarks/_comparativo_bancos/<dataset>_top4_faiss.json) pro passo 3.
 """
 
 import json
@@ -67,12 +68,17 @@ def medir(r: dict) -> dict:
     tempo_indexacao = time.time() - inicio
     memoria = _rss_mb() - rss_antes
 
-    tempos, ids_faiss = [], []
+    tempos, ids_faiss, distancias_faiss = [], [], []
     for vq in consultas:
         inicio = time.time()
-        _, indices = indice.search(vq.reshape(1, -1), K)
+        distancias, indices = indice.search(vq.reshape(1, -1), K)
         tempos.append(time.time() - inicio)
         ids_faiss.append([ids_fragmentos[i] for i in indices[0]])
+        distancias_faiss.append([float(d) for d in distancias[0]])
+    # O passo 3 (comparar_bancos_passo3_stuff_faiss.py) responde de novo, com estes fragmentos, as
+    # perguntas em que o top-4 do FAISS difere do que o LLM recebeu nos experimentos.
+    (CACHE_DIR / f"{nome}_top4_faiss.json").write_text(
+        json.dumps({"ids": ids_faiss, "distancias": distancias_faiss}, ensure_ascii=False), encoding="utf-8")
 
     ids_chroma = [ids[:K] for ids in dados["ids_chroma"]]
     iguais = [set(a) == set(b) for a, b in zip(ids_chroma, ids_faiss)]
