@@ -1,0 +1,700 @@
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q029", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q164", "ragas": {"answer_relevancy": 0.8239335050963836}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q029", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.547035430851963}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q164", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q029", "ragas": {"faithfulness": 0.7777777777777778, "answer_relevancy": 0.7984041068800076}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q164", "ragas": {"faithfulness": 0.5555555555555556, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q029", "ragas": {"faithfulness": 0.5, "answer_relevancy": 0.9299952182282825}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q164", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q029", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q164", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q029", "ragas": {"answer_relevancy": 0.7839739914708946}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q164", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q029", "ragas": {"answer_relevancy": 0.7902140225532044}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q164", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q002", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q005", "ragas": {"answer_relevancy": 0.9191848347226342}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q007", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q008", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q009", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q010", "ragas": {"answer_relevancy": 0.8765003423251839}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q012", "ragas": {"answer_relevancy": 0.876887297732944}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q018", "ragas": {"answer_relevancy": 0.9711070902985144}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q021", "ragas": {"answer_relevancy": 0.9245830151663882}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q022", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q023", "ragas": {"answer_relevancy": 0.8503216043108351}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q024", "ragas": {"answer_relevancy": 0.9260818819226752}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q025", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q026", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q027", "ragas": {"answer_relevancy": 0.9058373438298731}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q030", "ragas": {"answer_relevancy": 0.8372774526990718}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q032", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q035", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q036", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q040", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q041", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q042", "ragas": {"answer_relevancy": 0.9725333737231864}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q046", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q048", "ragas": {"answer_relevancy": 0.9795976960584842}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q049", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q050", "ragas": {"answer_relevancy": 0.9140225904895027}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q051", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q056", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q057", "ragas": {"answer_relevancy": 0.7654029409510347}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q058", "ragas": {"answer_relevancy": 0.8574866925653671}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q059", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q060", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q063", "ragas": {"answer_relevancy": 0.8740209674384111}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q068", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q069", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q071", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q072", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q075", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q076", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q078", "ragas": {"answer_relevancy": 0.9334839228614079}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q082", "ragas": {"answer_relevancy": 0.8383048063202935}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q083", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q086", "ragas": {"answer_relevancy": 0.9278789108964368}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q087", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q088", "ragas": {"answer_relevancy": 0.9730383286087304}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q089", "ragas": {"answer_relevancy": 0.9181768780295214}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q090", "ragas": {"answer_relevancy": 0.888938122624681}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q092", "ragas": {"answer_relevancy": 0.9370044372624021}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q093", "ragas": {"answer_relevancy": 0.91894551042905}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q094", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q097", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q098", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q099", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q100", "ragas": {"answer_relevancy": 0.9537031313381695}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q108", "ragas": {"answer_relevancy": 0.9237473283584734}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q109", "ragas": {"answer_relevancy": 0.9077660368391373}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q115", "ragas": {"answer_relevancy": 0.817384192817472}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q116", "ragas": {"answer_relevancy": 0.9782584357863646}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q117", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q118", "ragas": {"answer_relevancy": 0.9364118503192538}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q120", "ragas": {"answer_relevancy": 0.9044094566787639}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q121", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q123", "ragas": {"answer_relevancy": 0.8514541975308828}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q128", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q129", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q130", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q131", "ragas": {"answer_relevancy": 0.9736893448538457}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q134", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q135", "ragas": {"answer_relevancy": 0.8218951512598983}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q138", "ragas": {"answer_relevancy": 0.8528321391471545}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q140", "ragas": {"answer_relevancy": 0.8105971270052549}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q142", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q144", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q146", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q149", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q151", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q152", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q154", "ragas": {"answer_relevancy": 0.8845724309649902}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q155", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q156", "ragas": {"answer_relevancy": 0.8869922322588252}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q160", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q161", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q163", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q165", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q166", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q167", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q173", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q174", "ragas": {"answer_relevancy": 0.8356790360320098}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q177", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q178", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q179", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q180", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q182", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q185", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q187", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q190", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q193", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "sem_rag", "pergunta_id": "docugami_q194", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q002", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q005", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.8707061525180805}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q007", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.87062162741466}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q008", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.677896366543639}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q009", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q010", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.8999497387888047}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q012", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q018", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q021", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q022", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q023", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q024", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q025", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q026", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q027", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q030", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q032", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.6947598991475915}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q035", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q036", "ragas": {"faithfulness": 0.75, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q040", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q041", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q042", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q046", "ragas": {"answer_relevancy": 0.9503428358495182, "faithfulness": 0.6666666666666666}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q048", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q049", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q050", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q051", "ragas": {"faithfulness": 0.8, "answer_relevancy": 0.9749078966595798}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q056", "ragas": {"faithfulness": 0.9166666666666666, "answer_relevancy": 0.9035629835973381}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q057", "ragas": {"faithfulness": 0.6666666666666666, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q058", "ragas": {"answer_relevancy": 0.8543028887403291, "faithfulness": 0.9285714285714286}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q059", "ragas": {"faithfulness": 0.875, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q060", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q063", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q068", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q069", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.712132729294329}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q071", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q072", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.2528484426273104}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q075", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.25365051728739635}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q076", "ragas": {"faithfulness": 0.8333333333333334, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q078", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.9334845828431414}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q082", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q083", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q086", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q087", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.25834597857946523}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q088", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q089", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q090", "ragas": {"faithfulness": 0.6666666666666666, "answer_relevancy": 0.8913454691254756}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q092", "ragas": {"answer_relevancy": 0.8712874899604488, "faithfulness": 0.9130434782608695}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q093", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q094", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.6552151072496222}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q097", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q098", "ragas": {"faithfulness": 0.9444444444444444, "answer_relevancy": 0.46833627042819553}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q099", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q100", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q108", "ragas": {"faithfulness": 0.75, "answer_relevancy": 0.9198109336373933}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q109", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q115", "ragas": {"faithfulness": 0.9, "answer_relevancy": 0.897279317980031}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q116", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q117", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q118", "ragas": {"faithfulness": 0.6, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q120", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q121", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.8889693202228258}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q123", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q128", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q129", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q130", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q131", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q134", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.8305988990908433}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q135", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q138", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.8943964218681812}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q140", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q142", "ragas": {"faithfulness": 0.8, "answer_relevancy": 0.6900427353504446}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q144", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q146", "ragas": {"faithfulness": 0.75, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q149", "ragas": {"faithfulness": 0.75, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q151", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.5598911067270933}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q152", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q154", "ragas": {"faithfulness": 0.9090909090909091, "answer_relevancy": 0.9101107668797189}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q155", "ragas": {"faithfulness": 0.4, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q156", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q160", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.6597892726856203}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q161", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q163", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q165", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q166", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q167", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q173", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q174", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q177", "ragas": {"faithfulness": 0.75, "answer_relevancy": 0.5505722151488011}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q178", "ragas": {"faithfulness": 0.42857142857142855, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q179", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q180", "ragas": {"faithfulness": 0.5, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q182", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q185", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q187", "ragas": {"faithfulness": 0.875, "answer_relevancy": 0.9131660093274595}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q190", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q193", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.7249405559336385}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "stuff", "pergunta_id": "docugami_q194", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q002", "ragas": {"faithfulness": 0.6666666666666666, "answer_relevancy": 0.9234365054153727}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q005", "ragas": {"faithfulness": 0.8947368421052632, "answer_relevancy": 0.8698953904581831}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q007", "ragas": {"answer_relevancy": 0.806209810692185, "faithfulness": 0.6363636363636364}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q008", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.7731964407657831}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q009", "ragas": {"faithfulness": 0.5833333333333334, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q010", "ragas": {"faithfulness": 0.8888888888888888, "answer_relevancy": 0.8466225103019299}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q012", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q018", "ragas": {"faithfulness": 0.5, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q021", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q022", "ragas": {"answer_relevancy": 0.904121900338159, "faithfulness": 0.8387096774193549}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q023", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q024", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q025", "ragas": {"faithfulness": 0.2222222222222222, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q026", "ragas": {"faithfulness": 0.9090909090909091, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q027", "ragas": {"faithfulness": 0.6666666666666666, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q030", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q032", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q035", "ragas": {"faithfulness": 0.25, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q036", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q040", "ragas": {"faithfulness": 0.75, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q041", "ragas": {"faithfulness": 0.9166666666666666, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q042", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q046", "ragas": {"faithfulness": 0.6666666666666666, "answer_relevancy": 0.6695521229131541}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q048", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q049", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.7476377191258393}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q050", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q051", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.8174280228968415}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q056", "ragas": {"faithfulness": 0.8, "answer_relevancy": 0.8478902374707099}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q057", "ragas": {"faithfulness": 0.7142857142857143, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q058", "ragas": {"faithfulness": 0.5714285714285714, "answer_relevancy": 0.9073485107748595}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q059", "ragas": {"faithfulness": 0.9285714285714286, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q060", "ragas": {"answer_relevancy": 0.8463614082214965, "faithfulness": 1.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q063", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.8451758915886168}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q068", "ragas": {"faithfulness": 0.8461538461538461, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q069", "ragas": {"faithfulness": 0.625, "answer_relevancy": 0.9518317067239633}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q071", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q072", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.9309345500136682}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q075", "ragas": {"faithfulness": 0.9, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q076", "ragas": {"faithfulness": 0.9285714285714286, "answer_relevancy": 0.878413643900566}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q078", "ragas": {"faithfulness": 0.9166666666666666, "answer_relevancy": 0.9322675723297328}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q082", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q083", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.6795578782023917}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q086", "ragas": {"faithfulness": 0.8333333333333334, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q087", "ragas": {"faithfulness": 0.4, "answer_relevancy": 0.9239315852227556}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q088", "ragas": {"faithfulness": 0.9166666666666666, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q089", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q090", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q092", "ragas": {"answer_relevancy": 0.0, "faithfulness": 1.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q093", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q094", "ragas": {"faithfulness": 0.7647058823529411, "answer_relevancy": 0.8241307546555992}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q097", "ragas": {"faithfulness": 0.75, "answer_relevancy": 0.6438382908465989}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q098", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q099", "ragas": {"faithfulness": 0.75, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q100", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q108", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.8220970920581081}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q109", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q115", "ragas": {"answer_relevancy": 0.9236639662221241, "faithfulness": 0.8333333333333334}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q116", "ragas": {"answer_relevancy": 0.0, "faithfulness": 0.9047619047619048}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q117", "ragas": {"faithfulness": 0.5, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q118", "ragas": {"faithfulness": 0.75, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q120", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.3217043484489051}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q121", "ragas": {"faithfulness": 0.3333333333333333, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q123", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q128", "ragas": {"faithfulness": 0.9, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q129", "ragas": {"faithfulness": 0.7142857142857143, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q130", "ragas": {"answer_relevancy": 0.0, "faithfulness": 1.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q131", "ragas": {"faithfulness": 0.4, "answer_relevancy": 0.9577070879320453}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q134", "ragas": {"faithfulness": 0.8461538461538461, "answer_relevancy": 0.8685896063836865}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q135", "ragas": {"faithfulness": 0.75, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q138", "ragas": {"faithfulness": 0.6666666666666666, "answer_relevancy": 0.9030118219970574}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q140", "ragas": {"faithfulness": 0.75, "answer_relevancy": 0.7330244646146978}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q142", "ragas": {"faithfulness": 0.8666666666666667, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q144", "ragas": {"faithfulness": 0.8333333333333334, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q146", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q149", "ragas": {"faithfulness": 0.8, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q151", "ragas": {"answer_relevancy": 0.0, "faithfulness": 0.48148148148148145}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q152", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q154", "ragas": {"faithfulness": 0.7142857142857143, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q155", "ragas": {"faithfulness": 0.75, "answer_relevancy": 0.7351159781557485}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q156", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q160", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.6886139370267422}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q161", "ragas": {"faithfulness": 0.6666666666666666, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q163", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q165", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q166", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q167", "ragas": {"faithfulness": 0.8333333333333334, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q173", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q174", "ragas": {"faithfulness": 0.7, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q177", "ragas": {"faithfulness": 0.75, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q178", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q179", "ragas": {"faithfulness": 0.6842105263157895, "answer_relevancy": 0.7361363066599482}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q180", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q182", "ragas": {"faithfulness": 0.8571428571428571, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q185", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q187", "ragas": {"answer_relevancy": 0.6599440427663207, "faithfulness": 0.7272727272727273}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q190", "ragas": {"faithfulness": 0.8333333333333334, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q193", "ragas": {"faithfulness": 0.6, "answer_relevancy": 0.6759795873404526}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "refine", "pergunta_id": "docugami_q194", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q002", "ragas": {"faithfulness": 0.5, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q005", "ragas": {"faithfulness": 0.5, "answer_relevancy": 0.7538546795991344}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q007", "ragas": {"faithfulness": 0.25, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q008", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.8259427489687622}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q009", "ragas": {"faithfulness": 0.8333333333333334, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q010", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.8918778427358388}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q012", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q018", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q021", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q022", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q023", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q024", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q025", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q026", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q027", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q030", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q032", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q035", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q036", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q040", "ragas": {"faithfulness": 0.6666666666666666, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q041", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.7431162388213178}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q042", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q046", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q048", "ragas": {"faithfulness": 0.5, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q049", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q050", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q051", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q056", "ragas": {"faithfulness": 0.875, "answer_relevancy": 0.8435394843007362}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q057", "ragas": {"faithfulness": 0.5, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q058", "ragas": {"faithfulness": 0.8181818181818182, "answer_relevancy": 0.9108644352353581}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q059", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q060", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q063", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q068", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q069", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.9999995325364549}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q071", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q072", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.9586683983292227}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q075", "ragas": {"faithfulness": 0.5, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q076", "ragas": {"faithfulness": 0.75, "answer_relevancy": 0.907253542992767}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q078", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.9334839228614079}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q082", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q083", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q086", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q087", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.9291832553343534}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q088", "ragas": {"faithfulness": 0.5, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q089", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.9795161438695902}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q090", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q092", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q093", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q094", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.8244438743157837}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q097", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q098", "ragas": {"faithfulness": 0.5, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q099", "ragas": {"faithfulness": 0.6666666666666666, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q100", "ragas": {"faithfulness": 0.5, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q108", "ragas": {"faithfulness": 0.6666666666666666, "answer_relevancy": 0.8229741196783423}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q109", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q115", "ragas": {"faithfulness": 0.625, "answer_relevancy": 0.8949056200502107}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q116", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q117", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q118", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q120", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.9510194328547151}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q121", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q123", "ragas": {"faithfulness": 0.6666666666666666, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q128", "ragas": {"faithfulness": 0.5, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q129", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q130", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q131", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q134", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.9322014187572366}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q135", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q138", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q140", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q142", "ragas": {"faithfulness": 0.5, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q144", "ragas": {"faithfulness": 0.5, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q146", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q149", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q151", "ragas": {"faithfulness": 0.3333333333333333, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q152", "ragas": {"faithfulness": 0.5, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q154", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q155", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q156", "ragas": {"faithfulness": 0.3333333333333333, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q160", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q161", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q163", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q165", "ragas": {"faithfulness": 0.5, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q166", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q167", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q173", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q174", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q177", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q178", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q179", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q180", "ragas": {"faithfulness": 0.5, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q182", "ragas": {"faithfulness": 0.5, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q185", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q187", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.6454878139453294}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q190", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q193", "ragas": {"faithfulness": 0.3333333333333333, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_reduce", "pergunta_id": "docugami_q194", "ragas": {"faithfulness": 0.5, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q002", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.2825200276153384}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q005", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.5660788378391183}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q007", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.6459780247412531}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q008", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.7924590741848174}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q009", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.6041865720509265}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q010", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.7313774274431623}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q012", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q018", "ragas": {"faithfulness": 0.5, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q021", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q022", "ragas": {"faithfulness": 0.16666666666666666, "answer_relevancy": 0.24439159410012248}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q023", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q024", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q025", "ragas": {"faithfulness": 0.5, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q026", "ragas": {"faithfulness": 0.75, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q027", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q030", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q032", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q035", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q036", "ragas": {"faithfulness": 0.5, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q040", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.5982242767545302}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q041", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.8249569754456529}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q042", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q046", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q048", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q049", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q050", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q051", "ragas": {"faithfulness": 0.3333333333333333, "answer_relevancy": 0.6852508142287141}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q056", "ragas": {"faithfulness": 0.5, "answer_relevancy": 0.5705320135358637}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q057", "ragas": {"faithfulness": 0.5, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q058", "ragas": {"faithfulness": 0.6666666666666666, "answer_relevancy": 0.81367178576433}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q059", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q060", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.5888882509244384}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q063", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.7286787196885215}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q068", "ragas": {"faithfulness": 0.5, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q069", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.2924381553420479}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q071", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q072", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q075", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q076", "ragas": {"faithfulness": 0.5, "answer_relevancy": 0.8287687328787198}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q078", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.8090822540538031}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q082", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q083", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q086", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q087", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.271379562659329}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q088", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q089", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q090", "ragas": {"faithfulness": 0.8, "answer_relevancy": 0.8631722502280516}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q092", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q093", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q094", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.6552176227001479}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q097", "ragas": {"faithfulness": 0.6666666666666666, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q098", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q099", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q100", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q108", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q109", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q115", "ragas": {"faithfulness": 0.75, "answer_relevancy": 0.8948784374531075}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q116", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q117", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.46363364498172843}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q118", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q120", "ragas": {"faithfulness": 0.6666666666666666, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q121", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.9876615918421305}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q123", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q128", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q129", "ragas": {"faithfulness": 0.5, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q130", "ragas": {"faithfulness": 0.3333333333333333, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q131", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q134", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.6475286460572464}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q135", "ragas": {"faithfulness": 0.3333333333333333, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q138", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q140", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q142", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q144", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q146", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q149", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q151", "ragas": {"faithfulness": 0.3333333333333333, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q152", "ragas": {"faithfulness": 0.6666666666666666, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q154", "ragas": {"faithfulness": 0.6666666666666666, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q155", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q156", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q160", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q161", "ragas": {"faithfulness": 0.3333333333333333, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q163", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q165", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q166", "ragas": {"faithfulness": 0.6666666666666666, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q167", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q173", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q174", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q177", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q178", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q179", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q180", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q182", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q185", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q187", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.5622856560401633}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q190", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q193", "ragas": {"faithfulness": 0.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "map_rerank", "pergunta_id": "docugami_q194", "ragas": {"faithfulness": 1.0, "answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q002", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q005", "ragas": {"answer_relevancy": 0.8219763187019137}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q007", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q008", "ragas": {"answer_relevancy": 0.7902034082141497}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q009", "ragas": {"answer_relevancy": 0.7889655935753646}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q010", "ragas": {"answer_relevancy": 0.8864391155357915}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q012", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q018", "ragas": {"answer_relevancy": 0.894326427546475}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q021", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q022", "ragas": {"answer_relevancy": 0.9055635986477069}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q023", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q024", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q025", "ragas": {"answer_relevancy": 0.6396508096129833}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q026", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q027", "ragas": {"answer_relevancy": 0.6572894775531094}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q030", "ragas": {"answer_relevancy": 0.9041908125821626}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q032", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q035", "ragas": {"answer_relevancy": 0.9263673135420966}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q036", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q040", "ragas": {"answer_relevancy": 0.9368506976701251}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q041", "ragas": {"answer_relevancy": 0.7351910035541404}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q042", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q046", "ragas": {"answer_relevancy": 0.7376190877253656}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q048", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q049", "ragas": {"answer_relevancy": 0.7677229132801671}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q050", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q051", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q056", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q057", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q058", "ragas": {"answer_relevancy": 0.7507425087992506}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q059", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q060", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q063", "ragas": {"answer_relevancy": 0.8020128922965162}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q068", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q069", "ragas": {"answer_relevancy": 0.9637588683139487}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q071", "ragas": {"answer_relevancy": 0.8699443014454408}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q072", "ragas": {"answer_relevancy": 0.9512698444954263}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q075", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q076", "ragas": {"answer_relevancy": 0.9072468351795574}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q078", "ragas": {"answer_relevancy": 0.7763338486199313}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q082", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q083", "ragas": {"answer_relevancy": 0.939255727810678}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q086", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q087", "ragas": {"answer_relevancy": 0.8508443122506121}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q088", "ragas": {"answer_relevancy": 0.8721465896500217}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q089", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q090", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q092", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q093", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q094", "ragas": {"answer_relevancy": 0.8241307546555992}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q097", "ragas": {"answer_relevancy": 0.879471988090815}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q098", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q099", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q100", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q108", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q109", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q115", "ragas": {"answer_relevancy": 0.9539579235908057}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q116", "ragas": {"answer_relevancy": 0.9823479461298165}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q117", "ragas": {"answer_relevancy": 0.9492355951405829}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q118", "ragas": {"answer_relevancy": 0.8758095995666594}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q120", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q121", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q123", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q128", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q129", "ragas": {"answer_relevancy": 0.828360857581728}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q130", "ragas": {"answer_relevancy": 0.8057039733771165}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q131", "ragas": {"answer_relevancy": 0.9694243434095027}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q134", "ragas": {"answer_relevancy": 0.8696642587205643}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q135", "ragas": {"answer_relevancy": 0.7268479974448502}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q138", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q140", "ragas": {"answer_relevancy": 0.9220339273398953}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q142", "ragas": {"answer_relevancy": 0.8526877183910875}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q144", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q146", "ragas": {"answer_relevancy": 0.8702805663920258}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q149", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q151", "ragas": {"answer_relevancy": 0.6285883460901669}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q152", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q154", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q155", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q156", "ragas": {"answer_relevancy": 0.7866215197023627}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q160", "ragas": {"answer_relevancy": 0.8864922170093704}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q161", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q163", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q165", "ragas": {"answer_relevancy": 0.7751556441455905}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q166", "ragas": {"answer_relevancy": 0.912473902363871}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q167", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q173", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q174", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q177", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q178", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q179", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q180", "ragas": {"answer_relevancy": 0.8058023812174272}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q182", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q185", "ragas": {"answer_relevancy": 0.7342148415246418}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q187", "ragas": {"answer_relevancy": 0.7599843794233351}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q190", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q193", "ragas": {"answer_relevancy": 0.8070867056222628}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "query_step_down", "pergunta_id": "docugami_q194", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q002", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q005", "ragas": {"answer_relevancy": 0.5608672319855065}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q007", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q008", "ragas": {"answer_relevancy": 0.7759087721129464}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q009", "ragas": {"answer_relevancy": 0.4798464013850275}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q010", "ragas": {"answer_relevancy": 0.7220812685295822}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q012", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q018", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q021", "ragas": {"answer_relevancy": 0.3700912996375412}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q022", "ragas": {"answer_relevancy": 0.6764185756946367}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q023", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q024", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q025", "ragas": {"answer_relevancy": 0.48915848179853105}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q026", "ragas": {"answer_relevancy": 0.5317288362846049}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q027", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q030", "ragas": {"answer_relevancy": 0.7383136538820504}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q032", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q035", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q036", "ragas": {"answer_relevancy": 0.6431036868756695}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q040", "ragas": {"answer_relevancy": 0.6387758455743625}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q041", "ragas": {"answer_relevancy": 0.5833314414292012}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q042", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q046", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q048", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q049", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q050", "ragas": {"answer_relevancy": 0.696920705043953}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q051", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q056", "ragas": {"answer_relevancy": 0.5031340979872037}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q057", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q058", "ragas": {"answer_relevancy": 0.6520946070248574}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q059", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q060", "ragas": {"answer_relevancy": 0.41981092916532764}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q063", "ragas": {"answer_relevancy": 0.6268253605010321}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q068", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q069", "ragas": {"answer_relevancy": 0.20677322593260064}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q071", "ragas": {"answer_relevancy": 0.5325034004253745}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q072", "ragas": {"answer_relevancy": 0.2861873407202656}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q075", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q076", "ragas": {"answer_relevancy": 0.7171767695739789}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q078", "ragas": {"answer_relevancy": 0.2572483328311966}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q082", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q083", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q086", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q087", "ragas": {"answer_relevancy": 0.25179048875701715}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q088", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q089", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q090", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q092", "ragas": {"answer_relevancy": 0.6026948642140927}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q093", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q094", "ragas": {"answer_relevancy": 0.8241307546555992}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q097", "ragas": {"answer_relevancy": 0.6011882725239024}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q098", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q099", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q100", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q108", "ragas": {"answer_relevancy": 0.26690018504949586}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q109", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q115", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q116", "ragas": {"answer_relevancy": 0.4177180849092699}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q117", "ragas": {"answer_relevancy": 0.26954034203653704}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q118", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q120", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q121", "ragas": {"answer_relevancy": 0.21735726904825925}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q123", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q128", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q129", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q130", "ragas": {"answer_relevancy": 0.12893956003559026}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q131", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q134", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q135", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q138", "ragas": {"answer_relevancy": 0.702013786676892}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q140", "ragas": {"answer_relevancy": 0.7083787097021631}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q142", "ragas": {"answer_relevancy": 0.7816950810758185}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q144", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q146", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q149", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q151", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q152", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q154", "ragas": {"answer_relevancy": 0.50176024481055}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q155", "ragas": {"answer_relevancy": 0.42728738477785183}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q156", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q160", "ragas": {"answer_relevancy": 0.6002739873272072}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q161", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q163", "ragas": {"answer_relevancy": 0.41884209702616754}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q165", "ragas": {"answer_relevancy": 0.7185988795001738}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q166", "ragas": {"answer_relevancy": 0.6003976362515742}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q167", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q173", "ragas": {"answer_relevancy": 0.37395633008742307}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q174", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q177", "ragas": {"answer_relevancy": 0.4162242736960587}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q178", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q179", "ragas": {"answer_relevancy": 0.5786968266495873}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q180", "ragas": {"answer_relevancy": 0.6708516557166972}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q182", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q185", "ragas": {"answer_relevancy": 0.4395896289336108}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q187", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q190", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q193", "ragas": {"answer_relevancy": 0.6310037862915975}, "ragas_juiz": "gpt-4o-mini"}
+{"dataset": "docugami_10q", "llm": "qwen", "metodo_rag": "reciprocal", "pergunta_id": "docugami_q194", "ragas": {"answer_relevancy": 0.0}, "ragas_juiz": "gpt-4o-mini"}

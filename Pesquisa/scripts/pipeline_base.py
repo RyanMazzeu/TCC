@@ -97,9 +97,12 @@ LLMS_DO_COMPARATIVO = [
     {"rotulo": "qwen", "camada": "principal", "backend": "openrouter", "modelo": "qwen/qwen3.5-9b",
      "aceita_temperatura": True, "preco": (0.17, 0.25),
      "parametros": {"temperature": 0.0, "extra_body": {**_SEM_RACIOCINIO, "provider": {"quantizations": ["bf16"]}}}},
+    # DeepSeek: em 02/11/2026 o preço no OpenRouter subiu de 0,209/0,418 pra 1,60/3,20 no provedor padrão.
+    # Fica o provedor mais barato em fp8 (a precisão em que o V4 é distribuído, sem quantização extra);
+    # o provedor usado em cada chamada vai no log (modelo_llm_versao = "<modelo>@<provedor>").
     {"rotulo": "deepseek", "camada": "principal", "backend": "openrouter", "modelo": "deepseek/deepseek-v4-pro",
-     "aceita_temperatura": True, "preco": (0.209, 0.418),
-     "parametros": {"temperature": 0.0, "extra_body": _SEM_RACIOCINIO}},
+     "aceita_temperatura": True, "preco": (0.90, 1.80),
+     "parametros": {"temperature": 0.0, "extra_body": {**_SEM_RACIOCINIO, "provider": {"quantizations": ["fp8"], "sort": "price"}}}},
     {"rotulo": "claude_haiku", "camada": "principal", "backend": "openrouter", "modelo": "anthropic/claude-haiku-5.5",
      "aceita_temperatura": False, "preco": (0.10, 0.50),
      "parametros": {"extra_body": _SEM_RACIOCINIO}},

@@ -12,6 +12,8 @@ avaliar_ragas_benchmarks.py). Escreve resultados/analise_benchmarks.md com:
 6. Comparação com a Tabela 1 de Şakar & Emekci (2025) no Docugami e no MedQA.
 7. RAGAS: Faithfulness e Answer Relevancy por LLM e método; Context Precision/Recall por dataset, e a
    correlação delas com o Hit@4 onde há gabarito de recuperação.
+8. Bancos vetoriais: ChromaDB (HNSW) × FAISS (busca exata).
+9. Efeito do porte (FrugalGPT): o econômico com o melhor método contra o intermediário com o Stuff.
 
 Métrica principal de cada dataset (comparada direto com o gabarito, sem juiz): acurácia no MedQA,
 cobertura de tokens no FaQuAD (o F1 vai junto, mas pune as respostas em frase contra um gabarito de
@@ -75,6 +77,72 @@ def kendall_w(tabela: pd.DataFrame) -> float:
     m, n = postos.shape
     s = ((postos.sum(axis=0) - m * (n + 1) / 2) ** 2).sum()
     return float(12 * s / (m**2 * (n**3 - n)))
+
+
+def kendall_w_p(tabela: pd.DataFrame) -> float:
+    """Valor-p do W de Kendall pela aproximação qui-quadrado: m(n-1)W ~ χ² com n-1 graus de liberdade."""
+    m, n = tabela.shape
+    return float(stats.chi2.sf(m * (n - 1) * kendall_w(tabela), n - 1))
+
+
+# Efeito do porte: em cada família fechada, um modelo econômico e um intermediário.
+FAMILIAS = [("OpenAI", "gpt_luna", "gpt_sol"), ("Anthropic", "claude_haiku", "claude_sonnet")]
+
+
+def _melhores(medias: pd.Series) -> list[str]:
+    return [m for m, v in medias.items() if np.isclose(v, medias.max())]
+
+
+def comparar_porte(df: pd.DataFrame) -> pd.DataFrame:
+    """FrugalGPT (Chen, Zaharia & Zou 2023) aplicado aos métodos de RAG: o modelo econômico com o seu
+    melhor método alcança o intermediário da mesma família com o Stuff? O melhor método do econômico é
+    escolhido nas 100 perguntas da camada principal e avaliado nas 25 da camada de generalização (as
+    únicas que o intermediário respondeu), pareado pergunta a pergunta. Também registra se o melhor
+    método nas 25 perguntas muda do econômico pro intermediário."""
+    linhas = []
+    for nome in benchmarks.DATASETS:
+        col = METRICA_PRINCIPAL[nome][0]
+        ids = {p["id"] for p in benchmarks.amostra(benchmarks.carregar_perguntas(nome), benchmarks.PERGUNTAS_POR_CAMADA["generalizacao"])}
+        g = df[(df["dataset"] == nome) & (df["repeticao"] == 1) & (df["metodo_rag"].isin(METODOS_RAG))]
+        for familia, econ, inter in FAMILIAS:
+            melhor = g[g["llm"] == econ].groupby("metodo_rag")[col].mean().idxmax()
+            e = g[(g["llm"] == econ) & (g["metodo_rag"] == melhor) & g["pergunta_id"].isin(ids)].set_index("pergunta_id")
+            i = g[(g["llm"] == inter) & (g["metodo_rag"] == "stuff") & g["pergunta_id"].isin(ids)].set_index("pergunta_id")
+            par = pd.concat([e[col].rename("econ"), i[col].rename("inter")], axis=1).dropna()
+            if par.empty:
+                continue
+            if col == "acerto":
+                so_e, so_i = int(((par.econ == 1) & (par.inter == 0)).sum()), int(((par.econ == 0) & (par.inter == 1)).sum())
+                p = stats.binomtest(so_e, so_e + so_i).pvalue if so_e + so_i else 1.0
+            else:
+                p = stats.wilcoxon(par.econ, par.inter).pvalue if (par.econ != par.inter).any() else 1.0
+            g25 = g[g["pergunta_id"].isin(ids)]
+            linhas.append({
+                "dataset": nome, "familia": familia, "economico": econ, "intermediario": inter, "n": len(par),
+                "melhor_metodo_economico": melhor, "media_economico_melhor": par.econ.mean(),
+                "media_intermediario_stuff": par.inter.mean(), "p": p,
+                "custo_economico_melhor": e.loc[par.index, "custo_usd"].mean(),
+                "custo_intermediario_stuff": i.loc[par.index, "custo_usd"].mean(),
+                "melhores_economico_25": _melhores(g25[g25["llm"] == econ].groupby("metodo_rag")[col].mean()),
+                "melhores_intermediario_25": _melhores(g25[g25["llm"] == inter].groupby("metodo_rag")[col].mean()),
+            })
+    return pd.DataFrame(linhas)
+
+
+def secao_porte(df: pd.DataFrame) -> list[str]:
+    porte = comparar_porte(df)
+    if porte.empty:
+        return []
+    linhas = [[r.dataset, r.familia, f"{r.economico} + {NOME_METODO[r.melhor_metodo_economico]}", br(r.media_economico_melhor),
+               br(r.media_intermediario_stuff), br_p(r.p), br(r.custo_intermediario_stuff / r.custo_economico_melhor, 1) + "×",
+               ", ".join(NOME_METODO[m] for m in r.melhores_economico_25), ", ".join(NOME_METODO[m] for m in r.melhores_intermediario_25)]
+              for r in porte.itertuples()]
+    return ["\n## 9. Efeito do porte (FrugalGPT): econômico com o melhor método × intermediário com o Stuff\n\n",
+            md_tabela(["Dataset", "Família", "Econômico + melhor método (camada principal)", "Econômico", "Intermediário + Stuff",
+                       "p", "Custo do intermediário / econômico", "Melhor(es) nas 25 (econômico)", "Melhor(es) nas 25 (intermediário)"], linhas),
+            "\n\nMédias nas perguntas da camada de generalização (25; no Docugami, as com valor no gabarito), pareadas. "
+            "p: McNemar exato (acurácia) ou Wilcoxon pareado. O melhor método do econômico vem das 100 perguntas da "
+            "camada principal, que incluem essas 25.\n"]
 
 
 def _fmt_media_ic(serie: pd.Series) -> str:
@@ -172,7 +240,7 @@ def secao_generalizacao(df: pd.DataFrame) -> list[str]:
                                 [[llm] + [br(v) for v in linha] for llm, linha in tabela.iterrows()]))
         if len(tabela) >= 2:
             partes.append(f"\n\nW de Kendall (concordância da ordem dos métodos entre os {len(tabela)} LLMs): **{br(kendall_w(tabela))}** "
-                          "(1 = mesma ordem em todos; 0 = nenhuma concordância).\n")
+                          f"(p = {br_p(kendall_w_p(tabela))}; 1 = mesma ordem em todos; 0 = nenhuma concordância).\n")
     return partes
 
 
@@ -207,6 +275,19 @@ def secao_paper_ancora(df: pd.DataFrame) -> list[str]:
         partes.append("\n")
     partes.append("\nO paper-âncora agrega vários LLMs, embeddings e bancos vetoriais, e não informa o embedding da "
                   "similaridade: a comparação é indicativa.\n")
+    caminho = METRICAS_DIR / "similaridade_bge_small.jsonl"
+    if caminho.exists():
+        bge = pd.DataFrame([json.loads(t) for t in caminho.read_text(encoding="utf-8").splitlines()])
+        partes.append("\n### Com o bge-small-en-v1.5, o embedding do artigo-base (mediana de todas as respostas, 7 LLMs)\n\n")
+        linhas = []
+        for m in METODOS_RAG:
+            linha = [NOME_METODO[m]]
+            for nome, ref in SIMILARIDADE_PAPER_ANCORA.items():
+                h = bge[(bge["dataset"] == nome) & (bge["metodo_rag"] == m)]["similaridade_bge_small"]
+                linha += [br(ref[m]), br(h.median())]
+            linhas.append(linha)
+        partes.append(md_tabela(["Método"] + [c for nome in SIMILARIDADE_PAPER_ANCORA for c in (f"{nome}: artigo", f"{nome}: este trabalho")], linhas))
+        partes.append("\n\nCalculada por `similaridade_bge_small.py`, com o mesmo cálculo da similaridade dos experimentos.\n")
     return partes
 
 
@@ -307,6 +388,8 @@ def main():
     if not df.empty:
         partes += secao_principal(df) + secao_efeito_rag(df) + secao_generalizacao(df) + secao_repeticoes(df) + secao_paper_ancora(df)
     partes += secao_ragas() + secao_bancos()
+    if not df.empty:
+        partes += secao_porte(df)
     SAIDA.write_text("".join(partes), encoding="utf-8")
     print(f"Escrito {SAIDA.relative_to(BASE_DIR)} ({len(df)} execuções)")
 

@@ -1,0 +1,19 @@
+\begin{table}[!t]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{2.6pt}
+\caption{Modelo econômico com o seu melhor método (escolhido na camada principal) contra o intermediário da mesma família com o Stuff (Luna e Sol, da OpenAI; Haiku e Sonnet, da Anthropic), nas perguntas da camada de generalização (25; no Docugami, as 14 com valor no gabarito). $p$: McNemar exato (acurácia) ou Wilcoxon pareado. Custo: razão entre o custo médio por pergunta do intermediário e o do econômico.}
+\label{tab:porte}
+\begin{tabular}{llccc c}
+\toprule
+Dataset & Econômico + método & Econ. & Interm. + Stuff & $p$ & Custo \\
+\midrule
+Docugami & Luna + Step-Down & 0,33 & 0,14 & 0,041 & 3,4× \\
+Docugami & Haiku + Step-Down & 0,22 & 0,10 & 0,109 & 3,3× \\
+MedQA & Luna + Map-Rerank & 0,92 & 0,96 & 1,000 & 8,7× \\
+MedQA & Haiku + Map-Rerank & 0,96 & 0,92 & 1,000 & 7,4× \\
+FaQuAD & Luna + Stuff & 0,86 & 0,82 & 0,463 & 19,5× \\
+FaQuAD & Haiku + Stuff & 0,91 & 0,91 & 0,686 & 18,3× \\
+\bottomrule
+\end{tabular}
+\end{table}

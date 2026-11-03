@@ -48,9 +48,9 @@ _VALOR = re.compile(
 
 # A letra escolhida, na ordem de preferência: no começo da resposta ("B.", "(B)", "B:", "Answer: B"),
 # depois em "the answer is B" / "option B" em qualquer ponto.
-# Depois da letra, exige pontuação ou fim de linha: "A patient with..." começa com o artigo "A", não
+# Depois da letra, exige pontuação (inclusive vírgula: "A, Chikungunya...") ou fim de linha: "A patient with..." começa com o artigo "A", não
 # com a alternativa A.
-_LETRA_NO_INICIO = re.compile(r"^\s*(?:\*\*)?(?:answer\s*[:\-]\s*)?(?:\*\*)?\(?([A-D])(?:\)|\*\*|[.:\-]|\s+[-–—]|\s*$|\s*\n)", re.IGNORECASE)
+_LETRA_NO_INICIO = re.compile(r"^\s*(?:\*\*)?(?:answer\s*[:\-]\s*)?(?:\*\*)?\(?([A-D])(?:\)|\*\*|[.:,\-]|\s+[-–—]|\s*$|\s*\n)", re.IGNORECASE)
 _LETRA_NO_TEXTO = re.compile(r"\b(?:answer|option|choice)\s+(?:is\s+)?\(?([A-D])\)?\b", re.IGNORECASE)
 
 
@@ -157,6 +157,7 @@ if __name__ == "__main__":
     assert letra_escolhida("A patient with fever...") is None
     assert letra_escolhida("B") == "B"
     assert letra_escolhida("B - Ceftriaxone") == "B"
+    assert letra_escolhida("A, Chikungunya presents with polyarthralgia") == "A"
     assert exact_match("Informática.", ["informática", "Tecnologia da Informação"]) == 1.0
     assert f1("a informática", ["Informática"]) == 2 * 0.5 * 1 / 1.5
     assert f1("nada a ver", ["Informática"]) == 0.0

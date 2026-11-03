@@ -1,0 +1,25 @@
+\begin{table*}[!t]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{2.6pt}
+\caption{Métrica principal de cada dataset por método e LLM na camada principal (100 perguntas por dataset; no Docugami, as 66 com valor numérico no gabarito). Em negrito, o melhor valor de cada coluna. * diferença em relação ao controle sem RAG com $p_{\text{Holm}} < 0{,}05$ (Wilcoxon pareado). Na última linha, o valor-$p$ do teste de Friedman entre os seis métodos de RAG.}
+\label{tab:principal}
+\begin{tabular}{lccccc@{\hspace{7pt}}ccccc@{\hspace{7pt}}ccccc}
+\toprule
+ & \multicolumn{5}{c}{Docugami SEC 10-Q (valores do gabarito)} & \multicolumn{5}{c}{MedQA (acurácia)} & \multicolumn{5}{c}{FaQuAD (cobertura de tokens)} \\
+\cmidrule(lr){2-6}\cmidrule(lr){7-11}\cmidrule(lr){12-16}
+Método & Qwen & DeepSeek & Haiku & Luna & 4o-mini & Qwen & DeepSeek & Haiku & Luna & 4o-mini & Qwen & DeepSeek & Haiku & Luna & 4o-mini \\
+\midrule
+Sem RAG & 0,03 & 0,07 & 0,01 & 0,08 & 0,00 & 0,72 & 0,80 & 0,83 & 0,88 & 0,71 & 0,50 & 0,49 & 0,50 & 0,35 & 0,41 \\
+\midrule
+Stuff & 0,11 & 0,13 & 0,19* & 0,15 & 0,10* & 0,74 & 0,81 & 0,80 & 0,89 & 0,68 & \textbf{0,87*} & 0,87* & \textbf{0,92*} & \textbf{0,85*} & 0,86* \\
+Refine & 0,07 & 0,08 & 0,16* & 0,14 & 0,16* & 0,79 & 0,88 & 0,81 & 0,89 & 0,68 & 0,84* & 0,86* & 0,89* & 0,78* & \textbf{0,92*} \\
+Map-Reduce & 0,08 & 0,10 & 0,14* & 0,20 & 0,09* & 0,80 & 0,81 & 0,85 & 0,88 & \textbf{0,73} & 0,85* & 0,86* & 0,84* & 0,80* & 0,85* \\
+Map-Rerank & 0,05 & 0,07 & 0,05 & 0,07 & 0,04 & 0,75 & 0,88 & \textbf{0,92*} & \textbf{0,91} & 0,69 & 0,79* & 0,80* & 0,71* & 0,77* & 0,82* \\
+Step-Down & \textbf{0,14*} & \textbf{0,15} & \textbf{0,28*} & \textbf{0,23} & \textbf{0,16*} & \textbf{0,83} & \textbf{0,91*} & 0,89 & \textbf{0,91} & 0,65 & 0,82* & \textbf{0,87*} & 0,92* & 0,79* & 0,79* \\
+Reciprocal & 0,06 & 0,06 & 0,15* & 0,16 & 0,11* & 0,76 & 0,83 & 0,88 & 0,90 & 0,61 & 0,65* & 0,75* & 0,77* & 0,70* & 0,59* \\
+\midrule
+Friedman $p$ & 0,019 & 0,008 & $<$0,001 & $<$0,001 & $<$0,001 & 0,165 & 0,008 & 0,005 & 0,844 & 0,034 & $<$0,001 & $<$0,001 & $<$0,001 & $<$0,001 & $<$0,001 \\
+\bottomrule
+\end{tabular}
+\end{table*}
