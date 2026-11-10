@@ -1,0 +1,7 @@
+Answer the multiple-choice question below using only the context below. If the context is not relevant to the question, say only 'There is no relevant information.' Otherwise, start your answer with the letter of the chosen option, followed by a short justification.
+
+Context:
+{contexto}
+
+Question: {pergunta}
+Answer:

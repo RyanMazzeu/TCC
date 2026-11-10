@@ -1,0 +1,729 @@
+RESUMO COMPLETO DA PESQUISA DO TCC
+Eficiência de métodos de RAG: uma análise comparativa com sete modelos de linguagem
+nos domínios financeiro, médico e educacional
+
+Ryan Alves Mazzeu e Afonso Henriques Massunari
+Orientador: Carlos Henrique Valério de Moraes
+Versão de 05/11/2026. Artigo completo: Artigo_TCC02/main.pdf
+
+
+======================================================================
+1. MOTIVAÇÃO E PROBLEMA
+======================================================================
+
+1.1 O contexto
+
+Os modelos de linguagem (LLMs) erram de dois jeitos que importam na prática: inventam
+informações (alucinação) e não conhecem nada que não estava nos dados de treinamento,
+como documentos internos de uma empresa ou fatos recentes. A Geração Aumentada por
+Recuperação (RAG, Lewis et al., 2020) resolve isso sem retreinar o modelo:
+
+  1. os documentos são cortados em pedaços (fragmentos, ou "chunks");
+  2. cada fragmento vira um vetor numérico (embedding) e é guardado num banco vetorial;
+  3. quando chega uma pergunta, o sistema busca os fragmentos mais parecidos com ela;
+  4. esses fragmentos vão para o LLM junto com a pergunta, e ele responde com base neles.
+
+O passo 4 tem várias formas de ser feito. Essas formas são os MÉTODOS DE RAG (ou
+métodos de injeção de contexto), e são o objeto principal deste trabalho:
+
+  - Stuff (1 chamada ao LLM): junta os k fragmentos num único prompt com a pergunta.
+  - Refine (k chamadas): responde com o 1º fragmento e vai refinando a resposta com cada
+    fragmento seguinte, só alterando se o novo fragmento trouxer algo relevante.
+  - Map-Reduce (k+1 chamadas): gera uma resposta parcial por fragmento e, numa chamada
+    final, combina as parciais.
+  - Map-Rerank (k chamadas): gera uma resposta por fragmento com uma nota de confiança
+    (0 a 100) e fica só com a de maior confiança.
+  - Query Step-Down (6 chamadas): a partir da pergunta e de um contexto inicial, gera 4
+    perguntas alternativas mais específicas, responde cada uma com o Stuff (cada uma faz
+    a sua própria busca) e combina as 4 respostas numa chamada final.
+  - Reciprocal RAG (5 chamadas): gera as mesmas 4 perguntas alternativas, responde cada
+    uma com nota de confiança e fica só com a mais confiante, sem combinar.
+
+Cada método muda o número de chamadas ao LLM (logo, o custo e o tempo) e a forma como
+o modelo usa o contexto (logo, a qualidade). Escolher o método é uma decisão de
+engenharia que raramente é medida de forma sistemática.
+
+1.2 O estudo de referência e as suas lacunas
+
+O estudo mais completo sobre isso é o de Şakar e Emekci (2025): uma busca em grade com
+23.625 configurações, cruzando os 6 métodos, 3 bancos vetoriais, 3 embeddings, 3 LLMs e
+filtros de compressão, em três domínios em inglês (relatórios financeiros SEC 10-Q,
+artigo do Llama 2 e questões médicas do MedQA). Conclusão deles: não há configuração
+ótima universal; o Reciprocal teve a maior similaridade com as respostas de referência
+e o Stuff foi o mais rápido e barato.
+
+Esse desenho deixa quatro lacunas, que motivaram o trabalho:
+
+  a) A qualidade foi medida só pela SIMILARIDADE DE COSSENO entre a resposta gerada e a
+     de referência. Ela mede se os textos "parecem" um com o outro, não se a resposta
+     está certa. Uma resposta fluente no vocabulário do domínio pode ficar próxima da
+     referência sem conter o número pedido.
+  b) Não há um CONTROLE SEM RAG (o mesmo LLM respondendo sem nenhum fragmento). Sem ele,
+     não dá para saber o que o RAG acrescenta e o que o modelo já sabia. Isso é central
+     no MedQA, que é uma prova pública.
+  c) A comparação entre os métodos (Tabela 1 deles) AGREGA os 3 LLMs e as outras
+     configurações, então não mostra se a ordem dos métodos se mantém de um modelo para
+     outro.
+  d) Só documentos em INGLÊS. A avaliação de RAG em português ainda é escassa
+     (Medeiros e Oliveira, 2025).
+
+1.3 O que este trabalho faz
+
+Compara os mesmos 6 métodos e um controle sem RAG em três conjuntos de dados públicos
+com gabarito (dois do estudo de referência e um em português), com 7 LLMs de 4
+empresas, medindo a qualidade diretamente contra o gabarito, o custo, a qualidade da
+busca e o efeito do banco vetorial. Ao todo, 12.150 execuções.
+
+
+======================================================================
+2. QUESTÕES DE PESQUISA
+======================================================================
+
+QP1. Como os seis métodos de RAG se comparam em qualidade da resposta e em custo
+     (tokens, tempo e US$) em cada domínio?
+QP2. A ordem dos métodos se mantém entre LLMs de empresas, tamanhos e faixas de preço
+     diferentes?
+QP3. Quanto a recuperação acrescenta em relação ao próprio LLM sem RAG, e esse ganho
+     depende do domínio e do modelo?
+QP4. A busca aproximada do banco vetorial (HNSW, no ChromaDB) altera os resultados em
+     relação à busca exata (FAISS)?
+
+Questão metodológica transversal: a similaridade de cosseno, métrica do estudo de
+referência, mede o acerto das respostas?
+
+
+======================================================================
+3. CONJUNTOS DE DADOS
+======================================================================
+
+3.1 Critério de escolha
+
+Três exigências para cada conjunto:
+  - ser PÚBLICO, para que o experimento possa ser reproduzido;
+  - ter perguntas e respostas de referência construídas e revisadas por TERCEIROS, e não
+    pelos autores (gabarito independente evita que a avaliação favoreça o que os
+    autores esperam);
+  - o corpus de busca ser o PRÓPRIO MATERIAL de onde as respostas saem.
+
+Além disso, o desenho precisava de domínios diferentes (para responder se o domínio
+muda o resultado), de pelo menos um conjunto do estudo de referência (para comparar
+direto com ele) e de um conjunto em português.
+
+3.2 Docugami SEC 10-Q (financeiro, inglês)
+
+  - O que é: 195 perguntas sobre 20 relatórios trimestrais (formulário 10-Q da SEC) de
+    Apple, Amazon, Intel, Microsoft e NVIDIA, do 3º trimestre de 2022 ao 3º de 2023.
+    Distribuído pelo LlamaIndex (llama-datasets).
+  - Gabarito: perguntas escritas por pessoas; respostas de referência geradas pelo GPT-4
+    e revisadas por pessoas. Cada resposta cita o relatório de onde saiu, o que permite
+    medir a busca (Recall@k).
+  - Índice: 4.463 fragmentos.
+  - Por que este: é um dos três conjuntos do estudo de referência (comparação direta);
+    a maioria das perguntas pede VALORES das demonstrações financeiras (receitas,
+    despesas, percentuais), muitas comparando empresas ou trimestres, o que testa
+    justamente o ponto fraco do cosseno e uma busca que precisa juntar informação de
+    vários lugares.
+  - Detalhe de preparação: os PDFs viraram texto com "pdftotext -layout". Sem o
+    -layout, o rótulo de cada linha das tabelas ("Total net sales") se separa dos
+    valores ("117,154"), e o fragmento perde o sentido.
+
+3.3 MedQA-USMLE (médico, inglês)
+
+  - O que é: questões reais do USMLE, o exame de licenciamento médico dos EUA, da divisão
+    de teste do MedQA (Jin et al., 2021): 1.273 questões de 4 alternativas.
+  - Gabarito: a alternativa correta oficial.
+  - Corpus: os 18 livros-texto de medicina que acompanham o MedQA, na versão do MedRAG
+    (Xiong et al., 2024), remontados livro a livro e refragmentados no mesmo tamanho dos
+    outros conjuntos. Índice: 121.553 fragmentos.
+  - Pergunta enviada: o caso clínico seguido das 4 alternativas.
+  - Por que este: é outro conjunto do estudo de referência; tem a métrica mais objetiva
+    possível (acurácia contra a resposta oficial); e, por ser uma prova pública de
+    conteúdo amplamente disponível, permite testar se o RAG acrescenta algo ao que o
+    modelo já sabe. Limitação: o gabarito não diz de onde, nos livros, sai a resposta,
+    então não há Recall@k aqui.
+
+3.4 FaQuAD (ensino superior, português)
+
+  - O que é: conjunto de compreensão de leitura no formato do SQuAD (Sayama et al.,
+    BRACIS 2019), com 900 perguntas escritas por pessoas sobre 249 parágrafos de 18
+    documentos oficiais de uma universidade federal e 21 artigos da Wikipédia sobre o
+    ensino superior brasileiro.
+  - Gabarito: a resposta é um trecho do parágrafo; algumas perguntas têm mais de uma
+    resposta aceita (vale a melhor).
+  - Índice: os 249 parágrafos viraram 318 fragmentos; o parágrafo de cada pergunta é o
+    "trecho certo" para medir a busca.
+  - Por que este: traz o português com perguntas e respostas HUMANAS sobre textos
+    ORIGINALMENTE em português, e o conteúdo (normas de uma universidade específica) é
+    o caso típico em que o modelo não tem como saber a resposta de memória.
+
+3.5 Conjuntos descartados e por quê
+
+  - Artigo do Llama 2 (o terceiro do estudo de referência): perguntas E respostas foram
+    geradas pelo GPT-4, sem gabarito independente.
+  - Pirá (português): os documentos são traduzidos, e não originais em português.
+
+3.6 Amostragem: desenho em duas camadas
+
+  - Camada principal: 5 LLMs econômicos x 100 perguntas por conjunto.
+  - Camada de generalização: 2 LLMs intermediários x 25 perguntas por conjunto.
+  - As 100 perguntas são sorteadas com semente fixa (42). As 25 são as 25 primeiras da
+    mesma permutação, ou seja, um SUBCONJUNTO das 100. Assim os 7 modelos respondem às
+    mesmas 75 perguntas e a comparação entre eles é pareada (pergunta a pergunta).
+  - Por que duas camadas: CUSTO. Os intermediários custam ~20 vezes mais por token. Com
+    duas camadas, os baratos têm amostra grande (o intervalo de confiança da média cai de
+    ~±0,04 com 25 perguntas para ~±0,02 com 100, menor que boa parte das diferenças entre
+    métodos), e os caros só verificam se as conclusões se mantêm. Mesmo assim, o Sonnet
+    sozinho, com 25 perguntas, custou mais que qualquer modelo barato com 100.
+  - Por que 100: equilíbrio entre poder estatístico e orçamento (o custo total de
+    geração foi de ~US$ 20).
+  - No Docugami, 66 das 100 perguntas (14 das 25) têm algum valor numérico na resposta de
+    referência; as outras 34 são qualitativas e ficam fora da métrica principal.
+
+
+======================================================================
+4. PIPELINE DE RAG
+======================================================================
+
+4.1 Fragmentação: 1.000 caracteres com sobreposição de 100
+(RecursiveCharacterTextSplitter).
+  Por quê: são os mesmos valores do estudo de referência, para os resultados serem
+  comparáveis com os dele. Os mesmos em todos os conjuntos.
+
+4.2 Embedding: BGE-M3 (só os vetores densos).
+  Por quê:
+  - é multilíngue, então serve aos dois idiomas (inglês e português) com um modelo só.
+    O embedding do estudo de referência (bge-small-en-v1.5) só funciona em inglês;
+  - roda localmente, sem custo de API;
+  - fixar um único embedding isola o efeito do método e do LLM.
+  Os vetores do Docugami e do MedQA foram calculados em GPU no Google Colab (na CPU do
+  notebook levaria ~1,7 h e ~27 h) e conferidos contra os fragmentos locais por um hash
+  dos textos, garantindo que cada vetor corresponde ao fragmento certo.
+
+4.3 Banco vetorial: ChromaDB 1.5.9, distância euclidiana, índice padrão HNSW (busca
+aproximada). Recuperação de k = 4 fragmentos em todos os métodos.
+  Por quê: o ChromaDB persiste em disco e guarda os textos; o HNSW é o padrão dele. Como
+  a busca é aproximada, o efeito disso foi medido à parte contra uma busca exata (seção
+  8). k fixo em 4 para todos os métodos e LLMs.
+
+4.4 Implementação dos métodos: escrita diretamente sobre as APIs, sem frameworks
+(LangChain etc.).
+  Por quê: para que cada chamada ao LLM fosse registrada e contabilizada (tokens, tempo,
+  custo). Na etapa de combinação do Query Step-Down, o estudo de referência não deixa
+  claro o que entra; aqui ela recebe a pergunta original e as 4 respostas.
+
+4.5 Controle sem RAG (1 chamada): só a pergunta, sem fragmento nenhum, com a mesma
+instrução do conjunto.
+  Por quê: é a linha de base que mostra o que o RAG acrescenta além da memória do
+  modelo. É o mesmo controle usado pelo MIRAGE (Xiong et al., 2024) no domínio médico.
+
+4.6 Prompts
+  - Escritos em português e traduzidos literalmente para o inglês, usado no Docugami e no
+    MedQA. Por quê: num piloto com os prompts em português, o GPT-6 Luna e o gpt-4o-mini
+    responderam em português ~80% das perguntas em inglês, o que derrubaria as métricas
+    por causa do idioma, e não do método.
+  - Docugami e FaQuAD: "responda usando apenas o contexto; se a resposta não estiver
+    nele, diga que não sabe" (no controle: "se não souber, diga que não sabe"). Por quê:
+    mede se o modelo se ancora nos documentos, que é o objetivo do RAG.
+  - MedQA: o modelo usa os trechos como apoio, recorre ao próprio conhecimento quando
+    eles não bastam e SEMPRE escolhe uma alternativa, começando pela letra e depois uma
+    justificativa curta. Por quê: os livros-texto raramente trazem a resposta exata de um
+    caso clínico; com a instrução de recusa, a acurácia mediria quantas vezes o modelo
+    recusa, e não o que ele sabe. É a mesma escolha do MIRAGE. O formato "letra primeiro"
+    é igual em todos os métodos, para a extração da letra ser uniforme.
+
+
+======================================================================
+5. MODELOS DE LINGUAGEM
+======================================================================
+
+5.1 Por que variar o LLM
+  O resultado de um sistema RAG depende do modelo (Şakar e Emekci, 2025; RAGBench, Friel
+  et al., 2024; MIRAGE, Xiong et al., 2024). Para que as conclusões sobre os métodos
+  valham além de um modelo específico, foram escolhidos modelos diversos em empresa,
+  tamanho, abertura dos pesos e preço. As faixas são de PREÇO, não de tamanho.
+
+5.2 Os sete modelos (preço em US$ por milhão de tokens, entrada/saída)
+
+  Camada principal (econômicos, 100 perguntas por conjunto):
+  - gpt-4o-mini (OpenAI, fechado; 0,15/0,60; temperatura 0).
+    Por quê: é um dos 3 LLMs do estudo de referência; faz a ponte com os números dele.
+  - GPT-6 Luna (OpenAI, fechado; 0,10/0,50).
+    Por quê: modelo econômico atual da OpenAI.
+  - Claude Haiku 5.5 (Anthropic, fechado; 0,10/0,50).
+    Por quê: modelo econômico atual da Anthropic, a outra grande empresa de modelos
+    fechados.
+  - Qwen3.5-9B (Alibaba, pesos abertos Apache-2.0, 9,7 bilhões de parâmetros; 0,17/0,25;
+    temperatura 0; precisão bf16).
+    Por quê: modelo pequeno e aberto, que roda localmente. Garante que parte dos
+    resultados possa ser reproduzida sem depender de uma API comercial, que pode mudar
+    sem aviso (Chen, Zaharia e Zou, 2024; Palmer, Smith e Spirling, 2024). Rodou em bf16
+    (precisão cheia) para a resposta não depender de qual provedor quantizado o
+    OpenRouter escolhesse.
+  - DeepSeek V4 Pro (DeepSeek, pesos abertos MIT, 1,6 trilhão de parâmetros em mistura de
+    especialistas; 0,90/1,80; temperatura 0; fp8).
+    Por quê: um dos maiores modelos abertos, a preço de modelo econômico; mostra que
+    "barato" não é sinônimo de "pequeno". Rodou em fp8, a precisão em que é
+    distribuído, no provedor mais barato (o preço do provedor padrão subiu para
+    1,60/3,20 durante o experimento).
+
+  Camada de generalização (intermediários, 25 perguntas por conjunto):
+  - Claude Sonnet 5 (Anthropic; 2/10) e GPT-6 Sol (OpenAI; 2/10).
+    Por quê: são os intermediários das MESMAS duas famílias fechadas. Isso permite medir
+    o efeito do porte dentro de cada família (Haiku x Sonnet, Luna x Sol) e testar a
+    ideia do FrugalGPT (Chen, Zaharia e Zou, 2023): um modelo barato bem configurado
+    alcança um caro?
+
+5.3 Por que intermediários, e não os modelos de topo (Claude Opus 4.8 e GPT-6 Astra)
+  - Custo: os de topo custam de 2,5 a 5 vezes mais por token. Nas 75 perguntas e 6
+    métodos, o Astra sozinho sairia ~US$ 21 e o Opus ~US$ 9, contra ~US$ 3,6 de cada
+    intermediário (estimativa do planejamento).
+  - Condições iguais: o Astra não permite desligar o raciocínio; os intermediários
+    permitem, então rodam nas mesmas condições dos outros modelos.
+  - Desempenho próximo (levantamento de out/2026): o Sonnet 5 fica perto do Opus 4.8 no
+    GPQA (88,9% x 92,4%) e o supera em contexto longo, o teste mais próximo de RAG (82,0%
+    x 77,7% no AA-LCR); o GPT-6 Sol fica a ~5 pontos do Astra no placar geral do BenchLM
+    (78,7 x 84,2).
+  - Pelo mesmo motivo do raciocínio, foram usados o Sonnet 5 e o GPT-6 Sol, e não as
+    versões mais novas (Sonnet 5.5 e GPT-6.1 Sol), que não permitem desligá-lo.
+  - PENDENTE: confirmar essa troca com o orientador.
+
+5.4 Configuração comum
+  - Raciocínio estendido DESLIGADO em todos. Por quê: o objetivo é comparar os métodos
+    de RAG, e não o quanto cada modelo "pensa" antes de responder; além disso, o
+    raciocínio é cobrado como tokens de saída e distorceria o custo.
+  - Temperatura 0 onde a API aceita (Qwen, DeepSeek, gpt-4o-mini). Os modelos Claude e
+    GPT-6 rejeitam a temperatura 0 (a API devolve erro) e rodaram com a padrão.
+  - Repetições: como as respostas desses 4 modelos variam entre execuções, o Stuff foi
+    executado 3 vezes com eles nas 25 perguntas de cada conjunto. Por quê: medir quanto
+    da diferença entre métodos é só variação do próprio modelo.
+  - Acesso: modelos da OpenAI pela API da OpenAI; os demais pelo OpenRouter (uma chave e
+    um saldo só, formato compatível com a OpenAI). O provedor e a versão do modelo
+    informada pela API foram registrados em cada chamada.
+
+5.5 Volume: 12.150 execuções
+  - 10.500 na camada principal (5 LLMs x 3 conjuntos x 7 condições x 100 perguntas);
+  - 1.050 na camada de generalização (2 x 3 x 7 x 25);
+  - 600 repetições do Stuff (4 modelos x 3 conjuntos x 2 repetições extras x 25).
+
+
+======================================================================
+6. MÉTRICAS
+======================================================================
+
+6.1 Métrica principal de cada conjunto (comparada direto com o gabarito, sem juiz)
+  Por que sem juiz: é objetiva, reprodutível, barata e não tem os vieses de um LLM
+  avaliador. As conclusões principais vêm dela.
+
+  - MedQA: ACURÁCIA. A letra escolhida é extraída do início da resposta e comparada com a
+    oficial.
+  - FaQuAD: COBERTURA DE TOKENS. Fração dos tokens da resposta de referência que aparecem
+    na resposta gerada, após normalização (minúsculas, sem pontuação), vale a melhor
+    entre as respostas aceitas.
+    Por que não o F1/exact match oficial do SQuAD: os LLMs respondem em frase completa e a
+    referência tem poucas palavras; o F1 pune a resposta por ser longa, mesmo certa (o
+    exact match do Stuff não passou de 0,12 em nenhum modelo). F1 e exact match foram
+    calculados mesmo assim. Os artigos não foram removidos na normalização porque, em
+    português, "a" e "o" também são preposição e pronome.
+  - Docugami: VALORES DO GABARITO. Fração dos valores numéricos distintos da resposta de
+    referência (US$, percentuais, valores em milhões ou bilhões) que aparecem na resposta,
+    aceitando arredondamento e troca de escala (US$ 7.442 milhões = US$ 7,44 bilhões),
+    com tolerância de até 2%. Datas, anos e numeração de itens não contam.
+    Por quê: a similaridade de cosseno dava ~0,86 a uma resposta genérica e sem nenhum
+    número ("I don't have verified figures", seguida de comentários gerais sobre a
+    empresa) contra uma referência cheia de valores. Ela não mede acerto aqui.
+
+6.2 Similaridade de cosseno (métrica do estudo de referência)
+  Calculada em todas as execuções com o BGE-M3, para comparação, e recalculada com o
+  bge-small-en-v1.5 (o embedding do estudo de referência) no Docugami e no MedQA, para
+  comparar diretamente com a Tabela 1 deles.
+
+6.3 Recusas
+  Expressões regulares (PT e EN) tiradas das próprias respostas, incluindo recusas
+  parciais ("I don't have verified figures"). Por quê: recusar é um comportamento
+  distinto de errar e explica parte das diferenças entre métodos.
+
+6.4 Custo
+  - Tokens de entrada e saída informados pela API.
+  - US$ nominal: tokens x preço de tabela. Não considera descontos de cache de prompt,
+    porque eles dependem do provedor e da ordem das chamadas (o gasto real do DeepSeek
+    foi menor por causa do cache).
+  - Tempo total: da busca até o fim da geração.
+  - CPU e memória locais não foram analisados: com os LLMs acessados por API, essas
+    medidas não refletem o custo de inferência dos métodos.
+
+6.5 Qualidade da busca
+  Hit@4, Recall@4 e MRR@10 contra o trecho certo do gabarito (relatório citado, no
+  Docugami; parágrafo de origem, no FaQuAD), em todas as perguntas dos dois conjuntos e
+  sem chamar o LLM.
+
+6.6 RAGAS (métricas complementares, com LLM como juiz)
+  - Juiz: gpt-4o-mini; embedding da Answer Relevancy: text-embedding-3-small; ragas 0.4.3.
+  - Faithfulness (se a resposta se sustenta nos trechos): só nos 4 métodos que entregam ao
+    LLM um conjunto único de trechos (Stuff, Refine, Map-Reduce, Map-Rerank). Step-Down e
+    Reciprocal fazem uma busca por pergunta alternativa e não têm um conjunto único.
+  - Answer Relevancy (se a resposta trata do que foi perguntado): em todos os métodos e no
+    controle.
+  - Context Precision e Context Recall (qualidade dos trechos): UMA vez por pergunta.
+    Por quê: os trechos recuperados com a pergunta original são os mesmos nos 4 métodos e
+    em todos os LLMs; avaliar de novo a cada linha só mediria o ruído do juiz (e custaria
+    mais). No MedQA, são a única avaliação da busca.
+  - Validação do juiz: a Faithfulness do juiz foi comparada com os rótulos do RAGBench
+    (Friel et al., 2024) em 206 respostas de 7 subconjuntos (metade sustentadas, metade
+    com alucinação). AUROC de 0,701, contra 0,567 da Faithfulness calculada pelos autores
+    do RAGBench sobre as mesmas respostas; de 0,54 a 0,90 entre subconjuntos. Leitura: o
+    juiz é moderadamente confiável, por isso o RAGAS entra como complementar.
+  - Autopreferência: como o gpt-4o-mini também é um dos modelos testados, as notas RAGAS
+    dele não foram usadas para comparar LLMs (Panickssery et al., 2024).
+
+
+======================================================================
+7. ANÁLISE ESTATÍSTICA
+======================================================================
+
+  - Perguntas como blocos pareados: todos os métodos respondem às mesmas perguntas, então
+    a comparação é feita pergunta a pergunta (mais poder estatístico).
+  - Diferença entre os 6 métodos: teste de Friedman e, em seguida, Wilcoxon pareado par a
+    par com correção de Holm. Por quê: é a recomendação de Demšar (2006) para comparar
+    vários métodos nas mesmas instâncias, sem supor normalidade.
+  - Efeito do RAG: cada método contra o controle sem RAG (Wilcoxon), com Holm sobre as 6
+    comparações.
+  - Concordância entre LLMs: W de Kendall (0 = nenhuma; 1 = mesma ordem em todos), com
+    teste qui-quadrado. Por quê: mede diretamente a QP2.
+  - Acurácia pareada entre duas condições: McNemar exato (só contam as perguntas em que
+    uma condição acerta e a outra erra).
+  - Intervalos de confiança de 95%: bootstrap percentil com 10.000 reamostragens.
+  - Nível de significância: 0,05. Na camada de generalização (25 perguntas; 14 no
+    Docugami), só diferenças grandes podem ser detectadas.
+
+
+======================================================================
+8. COMPARATIVO DE BANCOS VETORIAIS
+======================================================================
+
+  - ChromaDB (HNSW, aproximado) x FAISS (IndexFlatL2, busca exata por força bruta).
+  - Por quê: o HNSW do ChromaDB não garante devolver os 4 vizinhos mais próximos de
+    verdade. Como todos os experimentos usaram o ChromaDB, era preciso saber se a
+    aproximação mudava os trechos entregues ao LLM e, portanto, os resultados. O Pinecone
+    ficou de fora por ser serviço pago.
+  - Mesmos vetores BGE-M3, três escalas: 318 (FaQuAD), 4.463 (Docugami) e 121.553 (MedQA).
+  - Medidos em processos separados, sem nada rodando junto: tempo de indexação, tempo
+    médio de consulta, memória e concordância do top-4; Hit@4 dos dois bancos onde há
+    gabarito.
+  - Efeito na resposta: o Stuff do gpt-4o-mini foi refeito com o top-4 do FAISS SÓ nas
+    perguntas em que ele diferia do top-4 dos experimentos. Por quê: se os trechos são os
+    mesmos, a entrada do LLM é a mesma e a resposta também; refazer só o que muda custa
+    centavos.
+
+
+======================================================================
+9. EXECUÇÃO
+======================================================================
+
+  - Outubro e novembro de 2026, Python 3.12, notebook Intel Core i5-12450H (12 threads),
+    ~20 GB de RAM, sem GPU dedicada.
+  - Bibliotecas: chromadb 1.5.9, faiss 1.14.3, FlagEmbedding 1.4.0, openai 2.41.1,
+    ragas 0.4.3, scipy 1.17.1.
+  - Cada execução registrada em JSONL: pergunta, fragmentos recuperados, resposta,
+    tokens, tempos, versão do modelo e provedor. Todo script retoma de onde parou.
+  - Os modelos rodaram em paralelo na mesma máquina (os tempos incluem essa disputa de
+    CPU; tokens e custo não são afetados).
+  - Custo nominal da geração: US$ 20,09 (Sonnet 7,77; DeepSeek 4,81; Sol 3,34; Haiku 1,42;
+    Qwen 1,17; gpt-4o-mini 0,93; Luna 0,64).
+
+
+======================================================================
+10. RESULTADOS
+======================================================================
+
+10.1 Qualidade da busca
+
+               Hit@4   Recall@4   MRR@10   Context Precision   Context Recall
+  Docugami     0,82    0,75       0,63     0,55                0,45
+  MedQA        --      --         --       0,44                0,52
+  FaQuAD       0,91    0,91       0,81     0,87                0,94
+
+  - FaQuAD: o parágrafo certo vem no top-4 em 91% das perguntas, e os trechos cobrem 94%
+    da resposta de referência. A busca quase nunca é o problema.
+  - Docugami: o relatório certo vem em 82% das vezes, mas os trechos cobrem menos da
+    metade da resposta (0,45). Achar o relatório não basta quando a pergunta exige
+    valores de tabelas, trimestres ou empresas diferentes: com 4 fragmentos, nem tudo
+    cabe. A busca é o gargalo.
+  - MedQA: os livros cobrem ~metade da resposta (0,52), esperado para casos clínicos que
+    exigem raciocinar sobre o conteúdo.
+  - A Context Precision do juiz concorda com o gabarito no FaQuAD (Spearman 0,34;
+    p < 0,001), mas não no Docugami (0,11; p = 0,29): serve como indicação geral, não
+    como medida precisa.
+
+10.2 Efeito do RAG (QP3): depende do domínio
+
+  FaQuAD:
+  - Sem RAG: 35% a 50% de cobertura, com 15% a 43% de recusas.
+  - Com o Stuff: 85% a 92% nos 5 econômicos; os 6 métodos melhoraram os 5 modelos com
+    significância (p_Holm < 0,05).
+  - Intermediários: Sonnet de 0,50 para 0,91; Sol de 0,48 para 0,82.
+  - Leitura: são normas e fatos de uma universidade específica, que o modelo não tem
+    como saber. É o cenário para o qual o RAG foi feito.
+
+  MedQA:
+  - Sem RAG: 71% a 88% de acurácia nos econômicos; 96% no Sonnet e no Sol.
+  - O Stuff mudou a acurácia em no máximo 4 pontos, sem significância em nenhum dos 7.
+  - Só dois ganhos sobreviveram à correção de Holm: Haiku com Map-Rerank (83% -> 92%) e
+    DeepSeek com Step-Down (80% -> 91%).
+  - No gpt-4o-mini nenhum método ajudou (o Reciprocal tirou 10 pontos, sem significância).
+  - No Sol, todos os 6 métodos deram exatamente a acurácia do controle; no Sonnet, 5 de 6.
+  - Leitura: coerente com Mallen et al. (2023). O conteúdo do USMLE está nos livros e,
+    provavelmente, nos dados de treino; quanto mais forte o modelo sem RAG, menor o
+    espaço para o RAG.
+
+  Docugami:
+  - Sem RAG: 0% a 8% dos valores, com 23% (Luna) a 87% (Haiku) de recusas.
+  - Melhor método de cada modelo: 14% a 28% dos valores (ganho significativo no Haiku, no
+    gpt-4o-mini e no Qwen).
+  - Nível absoluto baixo: o Stuff recusou 36% a 68% das perguntas; a melhor combinação
+    (Haiku + Step-Down) trouxe menos de 30% dos valores. Causa: a busca (10.1).
+
+10.3 Comparação entre os métodos (QP1)
+
+  Métrica principal na camada principal (100 perguntas; Docugami: as 66 com valor):
+
+                Docugami (valores)              MedQA (acurácia)                FaQuAD (cobertura)
+                Qwen DSeek Haiku Luna 4o-mini   Qwen DSeek Haiku Luna 4o-mini   Qwen DSeek Haiku Luna 4o-mini
+  Sem RAG       0,03 0,07  0,01  0,08 0,00      0,72 0,80  0,83  0,88 0,71      0,50 0,49  0,50  0,35 0,41
+  Stuff         0,11 0,13  0,19  0,15 0,10      0,74 0,81  0,80  0,89 0,68      0,87 0,87  0,92  0,85 0,86
+  Refine        0,07 0,08  0,16  0,14 0,16      0,79 0,88  0,81  0,89 0,68      0,84 0,86  0,89  0,78 0,92
+  Map-Reduce    0,08 0,10  0,14  0,20 0,09      0,80 0,81  0,85  0,88 0,73      0,85 0,86  0,84  0,80 0,85
+  Map-Rerank    0,05 0,07  0,05  0,07 0,04      0,75 0,88  0,92  0,91 0,69      0,79 0,80  0,71  0,77 0,82
+  Step-Down     0,14 0,15  0,28  0,23 0,16      0,83 0,91  0,89  0,91 0,65      0,82 0,87  0,92  0,79 0,79
+  Reciprocal    0,06 0,06  0,15  0,16 0,11      0,76 0,83  0,88  0,90 0,61      0,65 0,75  0,77  0,70 0,59
+
+  - O teste de Friedman achou diferença entre os métodos em 13 das 15 combinações de
+    conjunto e LLM (exceções: Qwen e Luna no MedQA).
+
+  Posto médio entre os 5 econômicos (1 = melhor):
+                Docugami   MedQA   FaQuAD
+  Stuff         2,8        5,1     1,4
+  Refine        3,6        3,7     3,0
+  Map-Reduce    3,6        3,7     2,8
+  Map-Rerank    5,8        2,4     5,0
+  Step-Down     1,0        2,1     3,0
+  Reciprocal    4,2        4,0     5,8
+
+  FaQuAD: o Stuff, o mais simples e mais barato, foi o melhor em 4 dos 5 modelos (no
+  gpt-4o-mini, o Refine ficou à frente). O Reciprocal foi o pior em todos os 5, 11 a 28
+  pontos abaixo do Stuff, com significância após Holm em todos; o Map-Rerank, o
+  penúltimo. Explicação: os dois escolhem UMA resposta por nota de confiança e descartam
+  o resto; no Reciprocal, a resposta escolhida responde a uma reformulação da pergunta, e
+  não à pergunta original. Quando a resposta está inteira num parágrafo que a busca já
+  acha, esse desvio só custa qualidade.
+
+  Docugami: o Step-Down foi o 1º nos 5 modelos (posto médio 1,0) e reduziu as recusas de
+  36%-68% (Stuff) para 5%-31%. A vantagem sobre o Stuff (2 a 9 pontos) NÃO sobreviveu à
+  correção de Holm em nenhum modelo: é uma tendência consistente, não um resultado
+  individualmente significativo. Mecanismo: o Step-Down faz 4 buscas extras com perguntas
+  mais específicas e amplia os trechos que chegam ao LLM, justamente onde a busca é o
+  gargalo. Resultado firme: o Map-Rerank foi o pior (posto 5,8), significativamente
+  abaixo do Step-Down no Haiku, no Luna e no gpt-4o-mini; ao responder com um fragmento
+  por vez, não consegue juntar valores espalhados.
+
+  MedQA: sem ordem consistente (W = 0,35; p = 0,12). Step-Down e Map-Rerank à frente na
+  média e o Stuff em último, mas com diferenças de poucos pontos; só no Haiku algum par
+  sobreviveu a Holm (Map-Rerank e Step-Down acima do Stuff).
+
+10.4 Generalização entre os LLMs (QP2)
+
+  Concordância da ordem dos métodos (W de Kendall):
+                              Docugami          MedQA            FaQuAD
+  5 econômicos (100 perg.)    0,72 (p=0,003)    0,35 (p=0,124)   0,74 (p=0,002)
+  7 LLMs (25 perg.)           0,64 (p<0,001)    0,24 (p=0,142)   0,61 (p<0,001)
+
+  - Os intermediários seguiram o padrão: no FaQuAD, o Sonnet teve 0,91 com o Stuff e 0,56
+    com o Map-Rerank e com o Reciprocal; no Docugami, Step-Down e Refine à frente nos dois
+    e o Map-Rerank em último (zero valores corretos no Sonnet); no MedQA, os dois acertaram
+    de 92% a 96% com qualquer método (teto da escala: o método não importa).
+  - Resposta à QP2: a ordem dos métodos depende MAIS DO DOMÍNIO DO QUE DO LLM.
+
+10.5 Efeito do porte (FrugalGPT): econômico + melhor método x intermediário + Stuff
+  (nas 25 perguntas; melhor método do econômico escolhido na camada principal)
+
+  Conjunto   Econômico + método        Econ.   Interm.+Stuff   p       Custo interm./econ.
+  Docugami   Luna + Step-Down          0,33    0,14 (Sol)      0,041   3,4x
+  Docugami   Haiku + Step-Down         0,22    0,10 (Sonnet)   0,109   3,3x
+  MedQA      Luna + Map-Rerank         0,92    0,96 (Sol)      1,000   8,7x
+  MedQA      Haiku + Map-Rerank        0,96    0,92 (Sonnet)   1,000   7,4x
+  FaQuAD     Luna + Stuff              0,86    0,82 (Sol)      0,463   19,5x
+  FaQuAD     Haiku + Stuff             0,91    0,91 (Sonnet)   0,686   18,3x
+
+  - Em nenhum caso o intermediário com o Stuff foi significativamente melhor; em 5 de 6 o
+    econômico teve média igual ou maior, custando de 3 a 20 vezes menos.
+  - Leitura: escolher o método certo para o domínio valeu tanto quanto pagar por um
+    modelo maior.
+
+10.6 Custo (QP1)
+
+                Chamadas   Tokens/resposta   Custo relativo ao Stuff (mediana; faixa)   Tempo mediano
+  Sem RAG       1          319               0,4 (0,2-0,8)                               6,0 s
+  Stuff         1          1.139             1                                           5,6 s
+  Refine        4          2.466             2,7 (1,5-4,5)                               12,4 s
+  Map-Reduce    5          2.062             1,8 (0,9-2,7)                               10,5 s
+  Map-Rerank    4          1.862             1,8 (0,9-2,5)                               9,0 s
+  Step-Down     6          6.097             5,6 (3,6-7,5)                               18,8 s
+  Reciprocal    5          5.442             5,1 (3,5-6,0)                               15,0 s
+
+  - O Reciprocal é DOMINADO: custa ~5 vezes o Stuff e não o superou em nenhum domínio.
+  - O Step-Down é o único cujo custo extra trouxe ganho consistente, e só no domínio em
+    que a busca é o gargalo.
+
+10.7 Variação do próprio modelo
+  - Desvio-padrão entre as 3 execuções do Stuff, por pergunta: de 0 a 0,06 (maiores:
+    Haiku no Docugami 0,063; Sol no Docugami 0,053; Luna no FaQuAD 0,051). No MedQA, 3 dos
+    4 modelos escolheram a mesma alternativa nas 3 execuções de todas as perguntas.
+  - As diferenças do FaQuAD (Reciprocal 11 a 28 pontos abaixo do Stuff) são muito maiores
+    que essa variação: são reais. Já a vantagem do Step-Down no Docugami tem a mesma ordem
+    de grandeza da variação do Haiku, outro motivo para tratá-la como tendência.
+
+10.8 A métrica muda a conclusão (questão metodológica)
+  - Nas 66 perguntas do Docugami com valor, o cosseno deu ao controle SEM RAG nota maior
+    que ao Stuff em 6 dos 7 modelos (ex.: DeepSeek 0,82 x 0,71; Qwen 0,81 x 0,64), embora
+    o Stuff trouxesse mais valores corretos em todos os 7.
+  - O cosseno acompanha o acerto só de forma fraca (Spearman 0,45 com a proporção de
+    valores, em 2.506 respostas): respostas sem nenhum valor certo tiveram 0,71 de
+    similaridade média; com todos os valores, 0,87.
+  - Quem usasse só o cosseno concluiria que o RAG PIORA as respostas financeiras da maioria
+    dos modelos: o oposto do que mostra o gabarito.
+
+  Comparação com a Tabela 1 do estudo de referência (mesmo embedding, bge-small-en-v1.5;
+  mediana de todas as respostas dos 7 LLMs; posição entre parênteses):
+
+                Docugami: artigo   Docugami: nós   MedQA: artigo   MedQA: nós
+  Stuff         0,895 (2º)         0,839 (4º)      0,641 (3º)      0,757 (6º)
+  Refine        0,836 (5º)         0,865 (2º)      0,609 (4º)      0,760 (5º)
+  Map-Reduce    0,873 (4º)         0,841 (3º)      0,569 (5º)      0,769 (4º)
+  Map-Rerank    0,801 (6º)         0,705 (5º)      0,148 (6º)      0,773 (2º)
+  Step-Down     0,890 (3º)         0,881 (1º)      0,678 (1º)      0,769 (3º)
+  Reciprocal    0,971 (1º)         0,684 (6º)      0,673 (2º)      0,776 (1º)
+
+  - No Docugami, o Reciprocal foi de 1º lá para ÚLTIMO aqui, e o Step-Down foi o 1º (em
+    linha com a métrica principal).
+  - No MedQA, os métodos ficaram todos entre 0,757 e 0,776: com respostas "letra +
+    justificativa", o cosseno com o texto da alternativa mede pouco; a acurácia é a
+    métrica certa.
+  - A vantagem do Reciprocal não se reproduziu com nenhuma métrica. Como o estudo de
+    referência agrega LLMs, embeddings, bancos e compressão e não detalha a
+    implementação, não dá para apontar uma causa única, mas a ordem relatada lá não é uma
+    propriedade geral dos métodos.
+
+10.9 RAGAS
+  Faithfulness média (7 LLMs): Stuff 0,75 / 0,22 / 0,90; Refine 0,77 / 0,33 / 0,86;
+  Map-Reduce 0,48 / 0,19 / 0,82; Map-Rerank 0,68 / 0,18 / 0,85 (Docugami / MedQA / FaQuAD).
+  - Stuff e Refine são os mais fiéis aos trechos no Docugami e no FaQuAD; o Map-Reduce, o
+    menos fiel no Docugami (0,48), porque a combinação final recebe as respostas parciais e
+    não os trechos, o que abre espaço para afirmações sem sustentação.
+  - No MedQA, a Faithfulness é baixa em todos (0,18 a 0,33) POR DESENHO: o prompt deixa o
+    modelo usar o próprio conhecimento; não é sinal de alucinação.
+  - Answer Relevancy: no FaQuAD, Map-Rerank (0,47) e Reciprocal (0,50) ficaram abaixo até do
+    controle sem RAG (0,56), confirmando a métrica principal; no Docugami, valores baixos
+    em todos (0,22 a 0,42) por causa das recusas (resposta evasiva recebe zero), com o
+    Step-Down, que menos recusou, no topo; no MedQA, praticamente constante (0,50 a 0,54).
+
+10.10 Bancos vetoriais (QP4)
+
+                Vetores   Indexação (s)      Consulta (ms)     Memória (MB)      Top-4 idêntico   Stuff: Chroma x FAISS
+                          Chroma   FAISS     Chroma  FAISS     Chroma  FAISS
+  FaQuAD        318       0,63     0,001     3,78    0,05      29,3    1,6       100%             0,86 x 0,86
+  Docugami      4.463     5,77     0,017     2,75    1,20      184,7   17,4      100%             0,10 x 0,10
+  MedQA         121.553   260,83   0,304     5,00    36,47     801,5   474,8     82%              0,68 x 0,69
+
+  - Bases pequena e média: exatamente os mesmos 4 trechos em todas as consultas.
+  - MedQA: o HNSW divergiu da busca exata em 16-18% das consultas; refeitas as 16
+    perguntas afetadas, a acurácia foi de 0,68 para 0,69, com uma única pergunta mudando
+    (McNemar p = 1,0). A busca aproximada NÃO alterou os resultados.
+  - Infraestrutura: o FAISS indexa 340 a 860 vezes mais rápido e com menos memória (o
+    ChromaDB também grava textos e metadados); na consulta, o FAISS ganha nas bases
+    pequenas, mas perde na grande (36,5 ms x 5,0 ms), porque a busca exata cresce
+    linearmente e o HNSW de forma sublinear. Em todos os casos, milissegundos diante de
+    segundos de geração.
+
+
+======================================================================
+11. CONCLUSÕES
+======================================================================
+
+  1. O DOMÍNIO DECIDE QUANTO O RAG ACRESCENTA: quase dobra a qualidade em documentos que o
+     modelo não conhece (FaQuAD) e não muda nada em conhecimento que ele já domina
+     (MedQA).
+  2. O DOMÍNIO DECIDE O MELHOR MÉTODO, E OS MODELOS CONCORDAM: Stuff no FaQuAD, Step-Down
+     no Docugami; W de Kendall de 0,61 a 0,74 nesses dois conjuntos. O domínio pesa mais
+     que o LLM.
+  3. MÉTODOS CAROS SÓ COMPENSAM QUANDO A BUSCA É O GARGALO: o Step-Down (~5x o Stuff)
+     liderou só no financeiro; o Reciprocal (~5x) ficou entre os piores em todos os
+     domínios.
+  4. O MÉTODO CERTO VALE TANTO QUANTO UM MODELO MAIS CARO: econômicos com o método
+     adequado igualaram ou superaram os intermediários com o Stuff, a 3-20x menos custo.
+  5. A MÉTRICA MUDA A CONCLUSÃO: o cosseno inverte o efeito do RAG no financeiro e não
+     reproduz o ganho do Reciprocal relatado no estudo de referência.
+  6. A BUSCA APROXIMADA NÃO DISTORCEU NADA, mesmo com 121 mil vetores.
+
+  Recomendações práticas:
+  - medir primeiro o modelo SEM RAG no domínio de interesse;
+  - começar pelo Stuff, o mais barato;
+  - usar métodos que reformulam a pergunta (Step-Down) só quando a busca for o gargalo;
+  - evitar métodos que escolhem uma única resposta por nota de confiança (Reciprocal,
+    Map-Rerank);
+  - antes de pagar por um modelo maior, testar um econômico com o método adequado;
+  - avaliar com uma métrica que confira o conteúdo pedido (o valor, a alternativa, o
+    trecho), e não só a semelhança do texto.
+
+  Contribuições do trabalho:
+  - primeira comparação dos 6 métodos que cruza domínios, idiomas e 7 LLMs com um controle
+    sem RAG e métricas verificadas contra o gabarito;
+  - evidência de que a similaridade de cosseno pode inverter conclusões em respostas
+    numéricas, e uma métrica alternativa (valores do gabarito);
+  - medida do efeito da busca aproximada em três escalas de base;
+  - um juiz RAGAS validado contra um gabarito anotado (AUROC 0,70);
+  - código, registros e scripts que geram todas as tabelas e figuras, reprodutíveis.
+
+
+======================================================================
+12. LIMITAÇÕES
+======================================================================
+
+  - Amostra: 100 perguntas por conjunto (66 com valor no Docugami) e 25 na generalização
+    (14 no Docugami).
+  - Configuração fixa: um embedding (BGE-M3), um tamanho de fragmento, k = 4, sem
+    compressão nem reordenação dos trechos. Com k maior, a desvantagem do Stuff no
+    Docugami poderia diminuir.
+  - Gabaritos: as respostas do Docugami foram geradas pelo GPT-4 (com revisão humana); as
+    questões do MedQA são públicas desde 2020 e podem estar no treino dos modelos, o que
+    inflaria a acurácia sem RAG.
+  - Métricas: a proporção de valores não pune números errados a mais; a cobertura de
+    tokens não pune respostas longas; a acurácia depende de extrair a letra; o juiz do
+    RAGAS tem AUROC 0,70 e também é um dos modelos testados. Não houve avaliação humana.
+  - Determinismo: 4 dos 7 modelos não aceitam temperatura 0; a variação foi medida só no
+    Stuff.
+  - Tempo e custo: modelos rodando em paralelo na mesma máquina; custo nominal, sem
+    descontos de cache.
+  - Modelos comerciais podem mudar sem aviso (versão e provedor ficaram registrados; 2 dos
+    7 modelos são abertos).
+
+  Trabalhos futuros: variar k, embedding e compressão; testar reordenadores (rerankers) e
+  busca híbrida no domínio financeiro; ampliar a generalização, inclusive com os modelos
+  de topo; mais conjuntos em português; validar as métricas com avaliação humana.
+
+
+======================================================================
+13. ONDE ESTÁ CADA COISA
+======================================================================
+
+  - Artigo (PDF): Artigo_TCC02/main.pdf (texto em Artigo_TCC02/sections/).
+  - Análise completa em Markdown: Pesquisa/resultados/analise_benchmarks.md.
+  - Tabelas e figuras do artigo: Pesquisa/resultados/tabelas_benchmarks/ e
+    graficos_benchmarks/, geradas por Pesquisa/scripts/gerar_artigo_benchmarks.py; os
+    números citados no texto estão em tabelas_benchmarks/numeros_artigo.json.
+  - Registros de cada execução: Pesquisa/resultados/metricas/benchmarks_<conjunto>_<llm>.jsonl
+    (geração) e ragas_<conjunto>_<llm>.jsonl (RAGAS).
+  - Scripts principais (Pesquisa/scripts/): preparar_benchmarks.py (dados),
+    construir_indices.py (índices), rodar_benchmarks.py (geração), metricas_resposta.py
+    (métricas), avaliar_ragas_benchmarks.py (RAGAS), validar_juiz_ragbench.py (juiz),
+    comparar_bancos_passo1/2/3 (bancos vetoriais), similaridade_bge_small.py,
+    analisar_benchmarks.py (análise).
+  - Repositório: github.com/RyanMazzeu/TCC, branch benchmarks-datasets-prontos.

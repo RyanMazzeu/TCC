@@ -1,0 +1,10 @@
+Sua tarefa é refinar uma resposta existente, apenas se o novo contexto trouxer informação relevante que ainda não esteja nela. Se o novo contexto não ajudar, repita a resposta existente sem mudanças. Responda em português.
+
+Pergunta original: {pergunta}
+
+Resposta existente: {resposta}
+
+Novo contexto:
+{contexto}
+
+Resposta refinada:

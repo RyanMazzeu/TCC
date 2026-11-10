@@ -1,0 +1,9 @@
+Answer the question using only the context below, and rate your own confidence that the answer is correct and fully supported by the context. Answer EXACTLY in this format, in two lines:
+ANSWER: <your answer>
+CONFIDENCE: <integer from 0 to 100>
+Answer in English.
+
+Context:
+{contexto}
+
+Question: {pergunta}

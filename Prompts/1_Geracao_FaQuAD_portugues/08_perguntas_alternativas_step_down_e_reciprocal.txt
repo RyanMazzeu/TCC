@@ -1,0 +1,6 @@
+Com base no contexto abaixo e na pergunta original do usuário, gere exatamente 4 perguntas alternativas, mais específicas e menos ambíguas, que ajudem a esclarecer a intenção da pergunta original. Responda APENAS com as 4 perguntas, uma por linha, numeradas, sem texto adicional, em português.
+
+Contexto:
+{contexto}
+
+Pergunta original: {pergunta}

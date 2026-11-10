@@ -1,0 +1,79 @@
+Answer the question using only the context below. If the answer is not in the context, say that you don't know. Answer in English.
+
+Context:
+Apple Inc. | Q1 2023 Form 10-Q | 18
+
+Operating Expenses
+Operating expenses for the three months ended December 31, 2022 and December 25, 2021 were as follows (dollars in millions):
+  Three Months Ended
+  December 31,  December 25,
+  2022  2021
+Research and development  $  7,709  $  6,306
+  Percentage of total net sales  7%  5%
+Selling, general and administrative  $  6,607  $  6,449
+  Percentage of total net sales  6%  5%
+Total operating expenses  $  14,316  $  12,755
+  Percentage of total net sales  12 %  10 %
+
+Research and Development
+The growth in research and development (“R&D”) expense during the first quarter of 2023 compared to the same quarter in 2022 was driven primarily by
+increases in headcount-related expenses.
+
+Selling, General and Administrative
+The growth in selling, general and administrative expense during the first quarter of 2023 compared to the same quarter in 2022 was driven primarily by
+increases in headcount-related expenses.
+
+---
+
+Apple Inc. | Q2 2023 Form 10-Q | 17
+
+Operating Expenses
+Operating expenses for the three- and six-month periods ended April 1, 2023 and March 26, 2022 were as follows (dollars in millions):
+  Three Months Ended  Six Months Ended
+  April 1,  March 26,  April 1,  March 26,
+  2023  2022  2023  2022
+Research and development  $  7,457  $  6,387  $  15,166  $  12,693
+  Percentage of total net sales  8%  7%  7%  6%
+Selling, general and administrative  $  6,201  $  6,193  $  12,808  $  12,642
+  Percentage of total net sales  7%  6%  6%  6%
+Total operating expenses  $  13,658  $  12,580  $  27,974  $  25,335
+  Percentage of total net sales  14 %  13 %  13 %  11 %
+
+Research and Development
+The growth in research and development (“R&D”) expense during the second quarter and first six months of 2023 compared to the same periods in 2022 was
+driven primarily by increases in headcount-related expenses.
+
+---
+
+Apple Inc. | Q3 2023 Form 10-Q | 17
+
+Operating Expenses
+Operating expenses for the three- and nine-month periods ended July 1, 2023 and June 25, 2022 were as follows (dollars in millions):
+  Three Months Ended  Nine Months Ended
+  July 1,  June 25,  July 1,  June 25,
+  2023  2022  2023  2022
+Research and development  $  7,442  $  6,797  $  22,608  $  19,490
+  Percentage of total net sales  9%  8%  8%  6%
+Selling, general and administrative  $  5,973  $  6,012  $  18,781  $  18,654
+  Percentage of total net sales  7%  7%  6%  6%
+Total operating expenses  $  13,415  $  12,809  $  41,389  $  38,144
+  Percentage of total net sales  16 %  15 %  14 %  13 %
+
+Research and Development
+The growth in research and development (“R&D”) expense during the third quarter and first nine months of 2023 compared to the same periods in 2022 was
+driven primarily by increases in headcount-related expenses.
+
+---
+
+Research and Development
+The growth in research and development (“R&D”) expense during the third quarter and first nine months of 2022 compared to the same periods in 2021 was
+driven primarily by increases in headcount-related expenses, engineering program costs and professional services. The Company continues to believe that
+focused investments in R&D are critical to its future growth and competitive position in the marketplace, and to the development of new and updated products
+and services that are central to the Company’s core business strategy.
+
+Selling, General and Administrative
+The growth in selling, general and administrative expense during the third quarter and first nine months of 2022 compared to the same periods in 2021 was
+driven primarily by increases in headcount-related expenses, advertising and professional services.
+
+Question: How does Apple's R&D expenditure in the most recent quarter compare to previous quarters and what implications might this have?
+Answer:

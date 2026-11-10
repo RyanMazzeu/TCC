@@ -1,0 +1,8 @@
+Combine as respostas parciais abaixo (geradas a partir de diferentes trechos de um documento) em uma única resposta final, coerente e não repetitiva, para a pergunta original. Ignore respostas parciais que digam não haver informação relevante. Responda em português.
+
+Pergunta original: {pergunta}
+
+Respostas parciais:
+{respostas}
+
+Resposta final combinada:

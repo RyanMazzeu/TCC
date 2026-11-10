@@ -1,0 +1,4 @@
+Answer the question. If you don't know the answer, say that you don't know. Answer in English.
+
+Question: {pergunta}
+Answer:

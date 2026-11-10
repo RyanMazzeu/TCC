@@ -1,0 +1,19 @@
+Responda à pergunta usando apenas o contexto abaixo. Se a resposta não estiver no contexto, diga que não sabe. Responda em português.
+
+Contexto:
+Os fundamentos matemáticos da Ciência da Computação moderna começaram a ser definidos por Kurt Gödel com seu teorema da incompletude (1931). Essa teoria mostra que existem limites no que pode ser provado ou desaprovado em um sistema formal; isso levou a trabalhos posteriores por Gödel e outros teóricos para definir e descrever tais sistemas formais, incluindo conceitos como recursividade e cálculo lambda. Em 1936 Alan Turing e Alonzo Church independentemente, e também juntos, introduziram a formalização de um algoritmo, definindo os limites do que pode ser computador e um modelo puramente mecânico para a computação. Tais tópicos são abordados no que atualmente chama-se Tese de Church-Turing, uma hipótese sobre a natureza de dispositivos mecânicos de cálculo. Essa tese define que qualquer cálculo possível pode ser realizado por um algoritmo sendo executado em um computador, desde que haja tempo e armazenamento suficiente para tal.
+
+---
+
+Turing também incluiu na tese uma descrição da Máquina de Turing, que possui uma fita de tamanho infinito e um cabeçote para leitura e escrita que move-se pela fita. Devido ao seu caráter infinito, tal máquina não pode ser construída, mas tal modelo pode simular a computação de qualquer algoritmo executado em um computador moderno. Turing é bastante importante para a Ciência da Computação, tanto que seu nome é usado para o Prêmio Turing e o teste de Turing. Ele contribuiu para a quebra do código da Alemanha pela Grã-Bretanha na Segunda Guerra Mundial, e continuou a projetar computadores e programas de computador pela década de 1940; cometeu suicídio em 1954
+
+---
+
+Todos os formalismos propostos acima são equivalentes em termos de poder computacional—ou seja, qualquer computação que possa ser realizada com um modelo pode ser realizada com qualquer um dos outros modelos. Ainda em termos teóricos, os modelos propostos são equivalentes aos computadores eletrônicos, desde que não haja restrições de memória envolvidas. Na verdade, acredita-se que todas as formalizações teoricamente possíveis para o conceito de algoritmo são equivalentes em poder a uma máquina de Turing; esta é a tese de Church-Turing. As questões relativas à possibilidade de realizar certos tipos de computação em determinados tipos de máquina (ou formalismo teórico) são investigadas pela teoria da computabilidade.
+
+---
+
+Diversos modelos diferentes da computação foram propostos pelos primeiros pesquisadores. Um modelo, conhecido como Máquina de Turing, propunha a construção de uma máquina universal, capaz de operar com uma sequência de instruções e dados entremeados em uma fita de comprimento infinito; a máquina poderia operar em um ponto da fita de cada vez utilizando um cabeçote de leitura e escrita, executando assim a programação que lhe for passada. Outro modelo, se baseia em funções recursivas compostas para operar diretamente sobre os números. Uma abordagem similar é o cálculo lambda. Outra classe de abordagens trabalha com regras gramaticais operando sobre cadeias de caracteres, como é o caso dos cadeias de Markov e dos sistemas de Post.
+
+Pergunta: O que diz a Tese de Church-Turing?
+Resposta:

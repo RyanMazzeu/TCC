@@ -1,0 +1,135 @@
+########## MENSAGEM 1 (role: system) ##########
+
+            As a genius expert, your task is to understand the content and provide
+            the parsed objects in json that match the following json_schema:
+
+
+            {
+  "$defs": {
+    "ContextRecallClassification": {
+      "description": "Classification of a single statement.",
+      "properties": {
+        "statement": {
+          "description": "Individual statement extracted from the answer",
+          "title": "Statement",
+          "type": "string"
+        },
+        "reason": {
+          "description": "Reasoning for why the statement is or isn't attributable to context",
+          "title": "Reason",
+          "type": "string"
+        },
+        "attributed": {
+          "description": "Binary classification: 1 if the statement can be attributed to context, 0 otherwise",
+          "title": "Attributed",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "statement",
+        "reason",
+        "attributed"
+      ],
+      "title": "ContextRecallClassification",
+      "type": "object"
+    }
+  },
+  "description": "Structured output for context recall classifications.",
+  "properties": {
+    "classifications": {
+      "description": "List of statement classifications",
+      "items": {
+        "$ref": "#/$defs/ContextRecallClassification"
+      },
+      "title": "Classifications",
+      "type": "array"
+    }
+  },
+  "required": [
+    "classifications"
+  ],
+  "title": "ContextRecallOutput",
+  "type": "object"
+}
+
+            Make sure to return an instance of the JSON, not the schema itself
+
+########## MENSAGEM 2 (role: user) ##########
+Given a context and an answer, analyze each statement in the answer and classify if the statement can be attributed to the given context or not.
+Use only binary classification: 1 if the statement can be attributed to the context, 0 if it cannot.
+Provide detailed reasoning for each classification.
+Please return the output in a JSON format that complies with the following schema as specified in JSON Schema:
+{"$defs": {"ContextRecallClassification": {"description": "Classification of a single statement.", "properties": {"statement": {"description": "Individual statement extracted from the answer", "title": "Statement", "type": "string"}, "reason": {"description": "Reasoning for why the statement is or isn't attributable to context", "title": "Reason", "type": "string"}, "attributed": {"description": "Binary classification: 1 if the statement can be attributed to context, 0 otherwise", "title": "Attributed", "type": "integer"}}, "required": ["statement", "reason", "attributed"], "title": "ContextRecallClassification", "type": "object"}}, "description": "Structured output for context recall classifications.", "properties": {"classifications": {"description": "List of statement classifications", "items": {"$ref": "#/$defs/ContextRecallClassification"}, "title": "Classifications", "type": "array"}}, "required": ["classifications"], "title": "ContextRecallOutput", "type": "object"}Do not use single quotes in your response but double quotes,properly escaped with a backslash.
+
+--------EXAMPLES-----------
+Example 1
+Input: {
+    "question": "What can you tell me about Albert Einstein?",
+    "context": "Albert Einstein (14 March 1879 - 18 April 1955) was a German-born theoretical physicist, widely held to be one of the greatest and most influential scientists of all time. Best known for developing the theory of relativity, he also made important contributions to quantum mechanics, and was thus a central figure in the revolutionary reshaping of the scientific understanding of nature that modern physics accomplished in the first decades of the twentieth century. His mass-energy equivalence formula E = mc2, which arises from relativity theory, has been called 'the world's most famous equation'. He received the 1921 Nobel Prize in Physics 'for his services to theoretical physics, and especially for his discovery of the law of the photoelectric effect', a pivotal step in the development of quantum theory. His work is also known for its influence on the philosophy of science. In a 1999 poll of 130 leading physicists worldwide by the British journal Physics World, Einstein was ranked the greatest physicist of all time. His intellectual achievements and originality have made Einstein synonymous with genius.",
+    "answer": "Albert Einstein, born on 14 March 1879, was a German-born theoretical physicist, widely held to be one of the greatest and most influential scientists of all time. He received the 1921 Nobel Prize in Physics for his services to theoretical physics. He published 4 papers in 1905. Einstein moved to Switzerland in 1895."
+}
+Output: {
+    "classifications": [
+        {
+            "statement": "Albert Einstein, born on 14 March 1879, was a German-born theoretical physicist, widely held to be one of the greatest and most influential scientists of all time.",
+            "reason": "The date of birth of Einstein is mentioned clearly in the context.",
+            "attributed": 1
+        },
+        {
+            "statement": "He received the 1921 Nobel Prize in Physics for his services to theoretical physics.",
+            "reason": "The exact sentence is present in the given context.",
+            "attributed": 1
+        },
+        {
+            "statement": "He published 4 papers in 1905.",
+            "reason": "There is no mention about papers he wrote in the given context.",
+            "attributed": 0
+        },
+        {
+            "statement": "Einstein moved to Switzerland in 1895.",
+            "reason": "There is no supporting evidence for this in the given context.",
+            "attributed": 0
+        }
+    ]
+}
+
+Example 2
+Input: {
+    "question": "who won 2020 icc world cup?",
+    "context": "The 2022 ICC Men's T20 World Cup, held from October 16 to November 13, 2022, in Australia, was the eighth edition of the tournament. Originally scheduled for 2020, it was postponed due to the COVID-19 pandemic. England emerged victorious, defeating Pakistan by five wickets in the final to clinch their second ICC Men's T20 World Cup title.",
+    "answer": "England"
+}
+Output: {
+    "classifications": [
+        {
+            "statement": "England",
+            "reason": "The context clarifies that England won the 2022 edition (which was originally scheduled for 2020).",
+            "attributed": 1
+        }
+    ]
+}
+
+Example 3
+Input: {
+    "question": "What is the tallest mountain in the world?",
+    "context": "The Andes is the longest continental mountain range in the world, located in South America. It stretches across seven countries and features many of the highest peaks in the Western Hemisphere. The range is known for its diverse ecosystems, including the high-altitude Andean Plateau and the Amazon rainforest.",
+    "answer": "Mount Everest."
+}
+Output: {
+    "classifications": [
+        {
+            "statement": "Mount Everest.",
+            "reason": "The provided context discusses the Andes mountain range, which does not include Mount Everest or directly relate to the world's tallest mountain.",
+            "attributed": 0
+        }
+    ]
+}
+-----------------------------
+
+Now perform the same with the following input
+input: {
+    "question": "{pergunta}",
+    "context": "{trecho_1}\n{trecho_2}\n{trecho_3}\n{trecho_4}",
+    "answer": "{resposta_de_referencia}"
+}
+Output: 
