@@ -717,8 +717,9 @@ instrução do conjunto.
   - Artigo (PDF): Artigo_TCC02/main.pdf (texto em Artigo_TCC02/sections/).
   - Análise completa em Markdown: Pesquisa/resultados/analise_benchmarks.md.
   - Tabelas e figuras do artigo: Pesquisa/resultados/tabelas_benchmarks/ e
-    graficos_benchmarks/, geradas por Pesquisa/scripts/gerar_artigo_benchmarks.py; os
-    números citados no texto estão em tabelas_benchmarks/numeros_artigo.json.
+    graficos_benchmarks/, geradas por Pesquisa/scripts/gerar_artigo_benchmarks.py, que também
+    as copia para Artigo_TCC02/tabelas/ e Artigo_TCC02/figuras/ (o artigo compila sozinho,
+    inclusive no Overleaf); os números citados no texto estão em tabelas_benchmarks/numeros_artigo.json.
   - Registros de cada execução: Pesquisa/resultados/metricas/benchmarks_<conjunto>_<llm>.jsonl
     (geração) e ragas_<conjunto>_<llm>.jsonl (RAGAS).
   - Scripts principais (Pesquisa/scripts/): preparar_benchmarks.py (dados),

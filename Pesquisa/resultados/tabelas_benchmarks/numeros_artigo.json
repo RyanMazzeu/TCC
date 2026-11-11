@@ -56,6 +56,24 @@
    "sem_rag": 0.0,
    "stuff": 0.104
   },
+  "docugami_10q|claude_sonnet": {
+   "map_reduce": 0.203,
+   "map_rerank": 0.0,
+   "query_step_down": 0.256,
+   "reciprocal": 0.095,
+   "refine": 0.248,
+   "sem_rag": 0.048,
+   "stuff": 0.099
+  },
+  "docugami_10q|gpt_sol": {
+   "map_reduce": 0.149,
+   "map_rerank": 0.054,
+   "query_step_down": 0.286,
+   "reciprocal": 0.113,
+   "refine": 0.277,
+   "sem_rag": 0.089,
+   "stuff": 0.143
+  },
   "medqa|qwen": {
    "map_reduce": 0.8,
    "map_rerank": 0.75,
@@ -101,6 +119,24 @@
    "sem_rag": 0.71,
    "stuff": 0.68
   },
+  "medqa|claude_sonnet": {
+   "map_reduce": 0.96,
+   "map_rerank": 0.96,
+   "query_step_down": 0.96,
+   "reciprocal": 0.96,
+   "refine": 0.96,
+   "sem_rag": 0.96,
+   "stuff": 0.92
+  },
+  "medqa|gpt_sol": {
+   "map_reduce": 0.96,
+   "map_rerank": 0.96,
+   "query_step_down": 0.96,
+   "reciprocal": 0.96,
+   "refine": 0.96,
+   "sem_rag": 0.96,
+   "stuff": 0.96
+  },
   "faquad|qwen": {
    "map_reduce": 0.853,
    "map_rerank": 0.795,
@@ -145,6 +181,24 @@
    "refine": 0.922,
    "sem_rag": 0.411,
    "stuff": 0.861
+  },
+  "faquad|claude_sonnet": {
+   "map_reduce": 0.786,
+   "map_rerank": 0.561,
+   "query_step_down": 0.901,
+   "reciprocal": 0.56,
+   "refine": 0.919,
+   "sem_rag": 0.501,
+   "stuff": 0.908
+  },
+  "faquad|gpt_sol": {
+   "map_reduce": 0.722,
+   "map_rerank": 0.683,
+   "query_step_down": 0.735,
+   "reciprocal": 0.751,
+   "refine": 0.727,
+   "sem_rag": 0.482,
+   "stuff": 0.817
   }
  },
  "efeito_rag": {
@@ -278,6 +332,58 @@
     0.0185
    ]
   },
+  "docugami_10q|claude_sonnet": {
+   "stuff": [
+    0.051,
+    0.9519
+   ],
+   "refine": [
+    0.2,
+    0.1662
+   ],
+   "map_reduce": [
+    0.155,
+    0.6871
+   ],
+   "map_rerank": [
+    -0.048,
+    0.9519
+   ],
+   "query_step_down": [
+    0.209,
+    0.1662
+   ],
+   "reciprocal": [
+    0.048,
+    0.9519
+   ]
+  },
+  "docugami_10q|gpt_sol": {
+   "stuff": [
+    0.054,
+    1.0
+   ],
+   "refine": [
+    0.188,
+    0.3125
+   ],
+   "map_reduce": [
+    0.06,
+    1.0
+   ],
+   "map_rerank": [
+    -0.036,
+    1.0
+   ],
+   "query_step_down": [
+    0.197,
+    0.1637
+   ],
+   "reciprocal": [
+    0.024,
+    1.0
+   ]
+  },
   "medqa|qwen": {
    "stuff": [
     0.02,
@@ -408,6 +514,58 @@
     0.1105
    ]
   },
+  "medqa|claude_sonnet": {
+   "stuff": [
+    -0.04,
+    1.0
+   ],
+   "refine": [
+    0.0,
+    1.0
+   ],
+   "map_reduce": [
+    0.0,
+    1.0
+   ],
+   "map_rerank": [
+    0.0,
+    1.0
+   ],
+   "query_step_down": [
+    0.0,
+    1.0
+   ],
+   "reciprocal": [
+    0.0,
+    1.0
+   ]
+  },
+  "medqa|gpt_sol": {
+   "stuff": [
+    0.0,
+    1.0
+   ],
+   "refine": [
+    0.0,
+    1.0
+   ],
+   "map_reduce": [
+    0.0,
+    1.0
+   ],
+   "map_rerank": [
+    0.0,
+    1.0
+   ],
+   "query_step_down": [
+    0.0,
+    1.0
+   ],
+   "reciprocal": [
+    0.0,
+    1.0
+   ]
+  },
   "faquad|qwen": {
    "stuff": [
     0.372,
@@ -536,6 +694,58 @@
    "reciprocal": [
     0.174,
     0.0006
+   ]
+  },
+  "faquad|claude_sonnet": {
+   "stuff": [
+    0.407,
+    0.0049
+   ],
+   "refine": [
+    0.419,
+    0.0012
+   ],
+   "map_reduce": [
+    0.285,
+    0.0208
+   ],
+   "map_rerank": [
+    0.06,
+    0.9295
+   ],
+   "query_step_down": [
+    0.4,
+    0.0042
+   ],
+   "reciprocal": [
+    0.06,
+    0.9295
+   ]
+  },
+  "faquad|gpt_sol": {
+   "stuff": [
+    0.335,
+    0.0114
+   ],
+   "refine": [
+    0.246,
+    0.0114
+   ],
+   "map_reduce": [
+    0.24,
+    0.0158
+   ],
+   "map_rerank": [
+    0.201,
+    0.0475
+   ],
+   "query_step_down": [
+    0.253,
+    0.0025
+   ],
+   "reciprocal": [
+    0.269,
+    0.0096
    ]
   }
  },
@@ -799,6 +1009,8 @@
    "p": 0.0412268333,
    "custo_economico_melhor": 0.0007870643,
    "custo_intermediario_stuff": 0.0026634286,
+   "tokens_economico_melhor": 5868.6428571429,
+   "tokens_intermediario_stuff": 1107.4285714286,
    "melhores_economico_25": [
     "query_step_down"
    ],
@@ -818,6 +1030,8 @@
    "p": 0.10880943,
    "custo_economico_melhor": 0.0017304643,
    "custo_intermediario_stuff": 0.0057088571,
+   "tokens_economico_melhor": 10085.5,
+   "tokens_intermediario_stuff": 1714.7142857143,
    "melhores_economico_25": [
     "reciprocal"
    ],
@@ -837,6 +1051,8 @@
    "p": 1.0,
    "custo_economico_melhor": 0.0002768,
    "custo_intermediario_stuff": 0.00242152,
+   "tokens_economico_melhor": 2093.92,
+   "tokens_intermediario_stuff": 1054.6,
    "melhores_economico_25": [
     "map_rerank",
     "query_step_down",
@@ -864,6 +1080,8 @@
    "p": 1.0,
    "custo_economico_melhor": 0.000648568,
    "custo_intermediario_stuff": 0.00480512,
+   "tokens_economico_melhor": 3759.44,
+   "tokens_intermediario_stuff": 1800.48,
    "melhores_economico_25": [
     "map_rerank"
    ],
@@ -887,6 +1105,8 @@
    "p": 0.463071015,
    "custo_economico_melhor": 7.7584e-05,
    "custo_intermediario_stuff": 0.00151208,
+   "tokens_economico_melhor": 662.08,
+   "tokens_intermediario_stuff": 658.12,
    "melhores_economico_25": [
     "stuff"
    ],
@@ -906,6 +1126,8 @@
    "p": 0.6858304345,
    "custo_economico_melhor": 0.000171168,
    "custo_intermediario_stuff": 0.00313936,
+   "tokens_economico_melhor": 1283.2,
+   "tokens_intermediario_stuff": 1254.8,
    "melhores_economico_25": [
     "stuff"
    ],

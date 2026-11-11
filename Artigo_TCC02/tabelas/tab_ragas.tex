@@ -1,0 +1,22 @@
+\begin{table}[!t]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{2.4pt}
+\caption{Métricas RAGAS por método (média das respostas dos 7 LLMs; juiz gpt-4o-mini). A \emph{Faithfulness} só se aplica aos métodos com um conjunto único de trechos.}
+\label{tab:ragas}
+\begin{tabular}{lcccccc}
+\toprule
+ & \multicolumn{3}{c}{\emph{Faithfulness}} & \multicolumn{3}{c}{\emph{Answer Relevancy}} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+Método & Docug. & MedQA & FaQuAD & Docug. & MedQA & FaQuAD \\
+\midrule
+Sem RAG & -- & -- & -- & 0,26 & 0,53 & 0,56 \\
+Stuff & 0,75 & 0,22 & 0,90 & 0,27 & 0,54 & 0,69 \\
+Refine & 0,77 & 0,33 & 0,86 & 0,36 & 0,51 & 0,68 \\
+Map-Reduce & 0,48 & 0,19 & 0,82 & 0,36 & 0,54 & 0,77 \\
+Map-Rerank & 0,68 & 0,18 & 0,85 & 0,22 & 0,50 & 0,47 \\
+Step-Down & -- & -- & -- & 0,42 & 0,54 & 0,68 \\
+Reciprocal & -- & -- & -- & 0,27 & 0,50 & 0,50 \\
+\bottomrule
+\end{tabular}
+\end{table}

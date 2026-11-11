@@ -1,13 +1,16 @@
 """
 Tabelas (LaTeX) e figuras (PDF) do artigo do TCC02 a partir da rodada dos benchmarks, com os mesmos
-dados e cálculos de analisar_benchmarks.py. O artigo (Artigo_TCC02/main.tex) lê direto destas pastas:
-rodar este script de novo atualiza o artigo.
+dados e cálculos de analisar_benchmarks.py. No fim, copia as tabelas e as figuras para dentro do
+artigo (Artigo_TCC02/tabelas e Artigo_TCC02/figuras), para que a pasta do artigo compile sozinha,
+inclusive no Overleaf: rodar este script de novo atualiza o artigo.
 
-Saídas: resultados/tabelas_benchmarks/*.tex e resultados/graficos_benchmarks/*.pdf.
+Saídas: resultados/tabelas_benchmarks/*.tex e resultados/graficos_benchmarks/*.pdf, e as cópias em
+Artigo_TCC02/tabelas/*.tex e Artigo_TCC02/figuras/*.pdf.
 Uso: python gerar_artigo_benchmarks.py
 """
 
 import json
+import shutil
 
 import matplotlib
 
@@ -26,6 +29,7 @@ from analisar_resultados import BASE_DIR, METRICAS_DIR, friedman_com_posthoc, ho
 
 TABELAS = BASE_DIR / "resultados" / "tabelas_benchmarks"
 GRAFICOS = BASE_DIR / "resultados" / "graficos_benchmarks"
+ARTIGO = BASE_DIR.parent / "Artigo_TCC02"
 
 PRINCIPAIS = ["qwen", "deepseek", "claude_haiku", "gpt_luna", "gpt_mini"]
 TODOS = PRINCIPAIS + ["claude_sonnet", "gpt_sol"]
@@ -77,32 +81,46 @@ def efeito_rag(g: pd.DataFrame, col: str) -> dict:
     return {m: (difs[m], p) for m, p in zip(ab.METODOS_RAG, holm(pvals))}
 
 
+INTERMEDIARIOS = ["claude_sonnet", "gpt_sol"]
+NOTA_INTERMEDIARIOS = ("$^\\dagger$ Intermediários: nas 25 perguntas da camada de generalização (no Docugami, as 14 com valor "
+                       "no gabarito), as únicas em que foram executados.")
+
+
+def cabecalho_7llms(rotulo_dataset) -> list[str]:
+    """Abertura do tabular com os sete LLMs por dataset: os cinco econômicos e, separados, os dois intermediários.
+    Com 21 colunas, o DeepSeek vai em duas linhas no cabeçalho para a tabela caber na largura da página."""
+    bloco = "ccccc@{\\hspace{3pt}}cc"
+    cab = " & ".join(f"\\multicolumn{{7}}{{c}}{{{rotulo_dataset(n)}}}" for n in benchmarks.DATASETS)
+    nomes = {**NOME_LLM, "deepseek": "\\shortstack{Deep\\\\Seek}"}
+    sub = " & ".join(" & ".join(nomes[l] + ("$^\\dagger$" if l in INTERMEDIARIOS else "") for l in TODOS)
+                     for _ in benchmarks.DATASETS)
+    return ["\\begin{tabular}{l" + bloco.join(["", "@{\\hspace{4pt}}", "@{\\hspace{4pt}}", ""]) + "}",
+            "\\toprule", f" & {cab} \\\\",
+            "\\cmidrule(lr){2-8}\\cmidrule(lr){9-15}\\cmidrule(lr){16-22}", f"Método & {sub} \\\\", "\\midrule"]
+
+
 def tabela_principal(df: pd.DataFrame):
     medias, sig, friedman = {}, {}, {}
     for nome in benchmarks.DATASETS:
         col = ab.METRICA_PRINCIPAL[nome][0]
-        for llm in PRINCIPAIS:
+        for llm in TODOS:
             g = df[(df.dataset == nome) & (df.llm == llm) & (df.repeticao == 1)]
             medias[nome, llm] = g.groupby("metodo_rag")[col].mean()
             sig[nome, llm] = efeito_rag(g, col)
             friedman[nome, llm] = friedman_com_posthoc(g, col, ab.METODOS_RAG).get("p", np.nan)
-    cab = " & ".join(f"\\multicolumn{{5}}{{c}}{{{NOME_DATASET[n]} ({METRICA_CURTA[n]})}}" for n in benchmarks.DATASETS)
-    sub = " & ".join(" & ".join(NOME_LLM[l] for l in PRINCIPAIS) for _ in benchmarks.DATASETS)
     linhas = [
-        "\\begin{table*}[!t]", "\\centering", "\\footnotesize", "\\setlength{\\tabcolsep}{2.6pt}",
-        "\\caption{Métrica principal de cada dataset por método e LLM na camada principal (100 perguntas por dataset; no "
-        "Docugami, as 66 com valor numérico no gabarito). Em negrito, o melhor valor de cada coluna. * diferença em relação ao "
-        "controle sem RAG com $p_{\\text{Holm}} < 0{,}05$ (Wilcoxon pareado). Na última linha, o valor-$p$ do teste de Friedman "
-        "entre os seis métodos de RAG.}",
+        "\\begin{table*}[!t]", "\\centering", "\\scriptsize", "\\setlength{\\tabcolsep}{1.5pt}",
+        "\\caption{Métrica principal de cada dataset por método e LLM. Econômicos: camada principal (100 perguntas por dataset; "
+        "no Docugami, as 66 com valor numérico no gabarito). " + NOTA_INTERMEDIARIOS + " Em negrito, o melhor valor de cada "
+        "coluna. * diferença em relação ao controle sem RAG com $p_{\\text{Holm}} < 0{,}05$ (Wilcoxon pareado). Na última "
+        "linha, o valor-$p$ do teste de Friedman entre os seis métodos de RAG (--: o mesmo resultado com todos os métodos em "
+        "todas as perguntas, sem teste possível).}",
         "\\label{tab:principal}",
-        "\\begin{tabular}{l" + "ccccc".join(["", "@{\\hspace{7pt}}", "@{\\hspace{7pt}}", ""]) + "}",
-        "\\toprule", f" & {cab} \\\\",
-        "\\cmidrule(lr){2-6}\\cmidrule(lr){7-11}\\cmidrule(lr){12-16}", f"Método & {sub} \\\\", "\\midrule",
-    ]
+    ] + cabecalho_7llms(lambda n: f"{NOME_DATASET[n]} ({METRICA_CURTA[n]})")
     for m in ab.METODOS:
         celulas = []
         for nome in benchmarks.DATASETS:
-            for llm in PRINCIPAIS:
+            for llm in TODOS:
                 serie = medias[nome, llm]
                 v = serie[m]
                 texto = num(v)
@@ -114,10 +132,67 @@ def tabela_principal(df: pd.DataFrame):
         linhas.append(f"{ab.NOME_METODO[m]} & " + " & ".join(celulas) + " \\\\")
         if m == "sem_rag":
             linhas.append("\\midrule")
-    linhas += ["\\midrule", "Friedman $p$ & " + " & ".join(p_tex(friedman[n, l]) for n in benchmarks.DATASETS for l in PRINCIPAIS) + " \\\\",
+    linhas += ["\\midrule", "Friedman $p$ & " + " & ".join(p_tex(friedman[n, l]).replace("$<$", "\\textless{}")  # mais estreito
+                                                for n in benchmarks.DATASETS for l in TODOS) + " \\\\",
                "\\bottomrule", "\\end{tabular}", "\\end{table*}"]
     escrever("tab_principal", linhas)
     return medias, sig
+
+
+def tabela_tokens(df: pd.DataFrame):
+    """Mesmo recorte da Tabela de resultados principal (no Docugami, só as perguntas com valor no gabarito), com os
+    tokens consumidos por pergunta no lugar da métrica: soma da entrada e da saída de todas as chamadas ao LLM feitas
+    pelo método, em média por pergunta."""
+    medias = {}
+    for nome in benchmarks.DATASETS:
+        col = ab.METRICA_PRINCIPAL[nome][0]
+        for llm in TODOS:
+            g = df[(df.dataset == nome) & (df.llm == llm) & (df.repeticao == 1) & df[col].notna()]
+            medias[nome, llm] = g.groupby("metodo_rag")["tokens_totais"].mean()
+    linhas = [
+        "\\begin{table*}[!t]", "\\centering", "\\scriptsize", "\\setlength{\\tabcolsep}{1.5pt}",
+        "\\caption{Tokens consumidos por pergunta, por método e LLM, nas mesmas perguntas da Tabela~\\ref{tab:principal} "
+        "(econômicos: 100 perguntas por dataset; no Docugami, as 66 com valor numérico no gabarito). " + NOTA_INTERMEDIARIOS +
+        " Cada valor é a média, por pergunta, da soma dos tokens de entrada e de saída de todas as chamadas ao LLM feitas pelo "
+        "método. Os tokens são contados pelo tokenizador de cada modelo, de modo que a comparação entre LLMs reflete também a "
+        "diferença entre tokenizadores.}",
+        "\\label{tab:tokens}",
+    ] + cabecalho_7llms(lambda n: NOME_DATASET[n])
+    for m in ab.METODOS:
+        celulas = [num(medias[nome, llm][m], 0) for nome in benchmarks.DATASETS for llm in TODOS]
+        linhas.append(f"{ab.NOME_METODO[m]} & " + " & ".join(celulas) + " \\\\")
+        if m == "sem_rag":
+            linhas.append("\\midrule")
+    linhas += ["\\bottomrule", "\\end{tabular}", "\\end{table*}"]
+    escrever("tab_tokens", linhas)
+    return medias
+
+
+def tabela_custo_usd(df: pd.DataFrame):
+    """Mesmo recorte da Tabela de tokens, com o custo em dólares no lugar dos tokens: US$ por 1.000 perguntas, somando
+    todas as chamadas ao LLM feitas pelo método (tokens de entrada e de saída vezes o preço de tabela de cada um)."""
+    medias = {}
+    for nome in benchmarks.DATASETS:
+        col = ab.METRICA_PRINCIPAL[nome][0]
+        for llm in TODOS:
+            g = df[(df.dataset == nome) & (df.llm == llm) & (df.repeticao == 1) & df[col].notna()]
+            medias[nome, llm] = 1000 * g.groupby("metodo_rag")["custo_usd"].mean()
+    linhas = [
+        "\\begin{table*}[!t]", "\\centering", "\\scriptsize", "\\setlength{\\tabcolsep}{1.5pt}",
+        "\\caption{Custo em US\\$ por 1.000 perguntas, por método e LLM, nas mesmas perguntas da Tabela~\\ref{tab:principal} "
+        "(econômicos: 100 perguntas por dataset; no Docugami, as 66 com valor numérico no gabarito). " + NOTA_INTERMEDIARIOS +
+        " Cada valor soma todas as chamadas ao LLM feitas pelo método: tokens de entrada e de saída vezes o preço de tabela de "
+        "cada um (Tabela~\\ref{tab:llms}). Custo nominal, sem descontos de cache de prompt.}",
+        "\\label{tab:custo_usd}",
+    ] + cabecalho_7llms(lambda n: NOME_DATASET[n])
+    for m in ab.METODOS:
+        celulas = [num(medias[nome, llm][m]) for nome in benchmarks.DATASETS for llm in TODOS]
+        linhas.append(f"{ab.NOME_METODO[m]} & " + " & ".join(celulas) + " \\\\")
+        if m == "sem_rag":
+            linhas.append("\\midrule")
+    linhas += ["\\bottomrule", "\\end{tabular}", "\\end{table*}"]
+    escrever("tab_custo_usd", linhas)
+    return medias
 
 
 def ranking(tabela: pd.DataFrame) -> pd.Series:
@@ -198,19 +273,38 @@ def tabela_llms(df: pd.DataFrame):
 
 
 def tabela_porte(df: pd.DataFrame) -> pd.DataFrame:
+    """Econômico + melhor método × intermediário + Stuff, com o preço por token, os tokens gastos e o
+    custo de cada configuração, para que a razão de custo possa ser conferida na própria tabela."""
     porte = ab.comparar_porte(df)
-    linhas = ["\\begin{table}[!t]", "\\centering", "\\footnotesize", "\\setlength{\\tabcolsep}{2.6pt}",
-              "\\caption{Modelo econômico com o seu melhor método (escolhido na camada principal) contra o intermediário da mesma "
-              "família com o Stuff (Luna e Sol, da OpenAI; Haiku e Sonnet, da Anthropic), nas perguntas da camada de generalização (25; no Docugami, as 14 com valor no gabarito). "
-              "$p$: McNemar exato (acurácia) ou Wilcoxon pareado. Custo: razão entre o custo médio por pergunta do intermediário "
-              "e o do econômico.}", "\\label{tab:porte}",
-              "\\begin{tabular}{llccc c}", "\\toprule",
-              "Dataset & Econômico + método & Econ. & Interm. + Stuff & $p$ & Custo \\\\", "\\midrule"]
+    precos = {l["rotulo"]: l["preco"] for l in pb.LLMS_DO_COMPARATIVO}
+    linhas = ["\\begin{table*}[!t]", "\\centering", "\\footnotesize", "\\setlength{\\tabcolsep}{4pt}",
+              "\\caption{Modelo econômico com o seu melhor método (escolhido nas 100 perguntas da camada principal) contra o "
+              "intermediário da mesma família com o Stuff, nas perguntas da camada de generalização (25; no Docugami, as 14 com "
+              "valor no gabarito). Preço: US\\$ por milhão de tokens de entrada e de saída (Tabela~\\ref{tab:llms}). Tokens: média "
+              "por pergunta, somando a entrada e a saída de todas as chamadas do método, contados pelo tokenizador de cada modelo. "
+              "Custo: US\\$ por 1.000 perguntas (tokens de entrada e de saída vezes o preço de cada um). Métrica: a principal de cada "
+              "conjunto. $p$: McNemar exato (acurácia) ou Wilcoxon pareado entre as duas configurações. Razão: custo do "
+              "intermediário dividido pelo do econômico.}", "\\label{tab:porte}",
+              "\\begin{tabular}{lllcrrccc}", "\\toprule",
+              "Dataset & Família & Configuração & Preço (US\\$/1M) & Tokens & Custo (US\\$/1.000) & Métrica & $p$ & Razão \\\\",
+              "\\midrule"]
+    anterior = None
     for r in porte.itertuples():
-        linhas.append(f"{NOME_DATASET[r.dataset].replace(' SEC 10-Q', '')} & {NOME_LLM[r.economico]} + {ab.NOME_METODO[r.melhor_metodo_economico]} "
-                      f"& {num(r.media_economico_melhor)} & {num(r.media_intermediario_stuff)} & "
-                      f"{p_tex(r.p)} & {num(r.custo_intermediario_stuff / r.custo_economico_melhor, 1)}× \\\\")
-    linhas += ["\\bottomrule", "\\end{tabular}", "\\end{table}"]
+        if anterior is not None:
+            linhas.append("\\midrule" if r.dataset != anterior else "\\addlinespace")
+        conjunto = NOME_DATASET[r.dataset].replace(" SEC 10-Q", "") if r.dataset != anterior else ""
+        anterior = r.dataset
+        for k, (llm, metodo, media, tokens, custo) in enumerate([
+                (r.economico, ab.NOME_METODO[r.melhor_metodo_economico], r.media_economico_melhor,
+                 r.tokens_economico_melhor, r.custo_economico_melhor),
+                (r.intermediario, "Stuff", r.media_intermediario_stuff, r.tokens_intermediario_stuff, r.custo_intermediario_stuff)]):
+            entrada, saida = precos[llm]
+            linhas.append(" & ".join([
+                conjunto if k == 0 else "", r.familia if k == 0 else "", f"{NOME_LLM[llm]} + {metodo}",
+                f"{num(entrada)} / {num(saida)}", num(tokens, 0), num(1000 * custo), num(media),
+                p_tex(r.p) if k == 1 else "",
+                f"{num(r.custo_intermediario_stuff / r.custo_economico_melhor, 1)}×" if k == 1 else ""]) + " \\\\")
+    linhas += ["\\bottomrule", "\\end{tabular}", "\\end{table*}"]
     escrever("tab_porte", linhas)
     return porte
 
@@ -357,9 +451,128 @@ def figura_efeito_rag(medias: dict):
     plt.close(fig)
 
 
-def figura_ordem_metodos(resumo: dict):
+# Figura de custo × desempenho com todos os métodos: a cor identifica o método, e a sigla dentro do marcador, o LLM.
+# As cores vêm da paleta categórica de referência (Stuff em azul, como na Fig. 1), atribuídas de modo que os métodos
+# de custo parecido, cujos pontos ficam lado a lado, tenham as cores mais distantes entre si; o controle sem RAG é
+# vazado, em cinza. A sigla usa branco ou quase preto, o de maior contraste com o preenchimento.
+COR_METODO = {"stuff": "#2a78d6", "refine": "#eda100", "map_reduce": "#e87ba4", "map_rerank": "#008300",
+              "query_step_down": "#6250d6", "reciprocal": "#1baf7a"}
+TINTA_METODO = {"stuff": "white", "refine": TEXTO, "map_reduce": TEXTO, "map_rerank": "white",
+                "query_step_down": "white", "reciprocal": TEXTO}
+SIGLA_LLM = {"qwen": "Q", "deepseek": "D", "claude_haiku": "H", "gpt_luna": "L", "gpt_mini": "M",
+             "claude_sonnet": "Sn", "gpt_sol": "Sl"}
+# Limites e intervalo das marcas do eixo y de cada painel (as métricas têm escalas diferentes).
+EIXO_Y_CUSTO = {"docugami_10q": (-0.02, 0.33, 0.1), "medqa": (0.56, 1.0, 0.1), "faquad": (0.3, 1.0, 0.1)}
+DIAMETRO_MARCADOR = 10.0  # pt
+
+
+def afastar_marcadores(ancoras: np.ndarray, raios: np.ndarray, caixa, iteracoes: int = 600) -> np.ndarray:
+    """Posições (em pontos) em que os marcadores não se sobrepõem: cada um parte da sua posição real, é empurrado
+    pelos que o sobrepõem e puxado de volta para ela, dentro da área do gráfico. Quem não colide fica no lugar exato."""
+    n = len(ancoras)
+    pos = ancoras + np.column_stack([np.zeros(n), (np.arange(n) % 3 - 1) * 0.01])  # desempata pontos coincidentes
+    (x0, y0), (x1, y1) = caixa
+    for _ in range(iteracoes):
+        d = pos[:, None, :] - pos[None, :, :]
+        dist = np.hypot(d[..., 0], d[..., 1])
+        minimo = raios[:, None] + raios[None, :] + 0.8
+        fator = np.where((dist < minimo) & ~np.eye(n, dtype=bool), (minimo - dist) / (2 * np.maximum(dist, 1e-6)), 0.0)
+        pos = pos + 0.5 * (fator[..., None] * d).sum(axis=1) + 0.03 * (ancoras - pos)
+        pos[:, 0] = np.clip(pos[:, 0], x0 + raios, x1 - raios)
+        pos[:, 1] = np.clip(pos[:, 1], y0 + raios, y1 - raios)
+    parados = np.hypot(*(pos - ancoras).T) < 0.6
+    pos[parados] = ancoras[parados]
+    return pos
+
+
+def _marcador(ax, x, y, metodo: str | None, llm: str, zorder: float = 3):
+    """Marcador com a sigla do LLM: círculo para os econômicos e quadrado para os intermediários, preenchido com a
+    cor do método (vazado no controle sem RAG)."""
+    intermediario = llm in INTERMEDIARIOS
+    forma, tamanho = ("s", (0.93 * DIAMETRO_MARCADOR) ** 2) if intermediario else ("o", DIAMETRO_MARCADOR ** 2)
+    cor = COR_METODO.get(metodo)
+    if cor is None:
+        ax.scatter(x, y, s=tamanho, marker=forma, facecolor="white", edgecolor=CINZA, linewidth=0.9, zorder=zorder)
+        tinta = TEXTO_2 if metodo == "sem_rag" else TEXTO
+    else:
+        ax.scatter(x, y, s=tamanho, marker=forma, facecolor=cor, edgecolor="white", linewidth=0.7, zorder=zorder)
+        tinta = TINTA_METODO[metodo]
+    ax.text(x, y, SIGLA_LLM[llm], ha="center", va="center_baseline", fontsize=5.3 if intermediario else 5.8,
+            fontweight="bold", color=tinta, zorder=zorder + 1)
+
+
+def _linha_de_legenda(ax, y: float, titulo: str, itens: list):
+    """Uma linha da legenda no topo da figura: o título e, em sequência, cada marcador seguido do seu nome. As
+    posições são medidas no texto renderizado, para os nomes não encostarem no marcador seguinte."""
+    renderizador = ax.figure.canvas.get_renderer()
+    largura_eixo = ax.get_window_extent(renderizador).width
+    raio = DIAMETRO_MARCADOR / 2 * ax.figure.dpi / 72 / largura_eixo
+    t = ax.text(0, y, titulo, fontsize=7.5, color=TEXTO, va="center", fontweight="bold")
+    x = 0.105
+    for desenhar, rotulo in itens:
+        desenhar(x + raio, y)
+        t = ax.text(x + 2 * raio + 0.006, y, rotulo, fontsize=7.5, color=TEXTO, va="center")
+        x += 2 * raio + 0.006 + t.get_window_extent(renderizador).width / largura_eixo + 0.03
+
+
+def figura_custo_desempenho(medias: dict, custo_usd: dict):
+    """Todos os métodos e LLMs: custo em US$ por 1.000 perguntas (escala log) × métrica principal, um painel por
+    dataset, com os mesmos valores das Tabelas de resultado principal e de custo em dólares. Onde dois marcadores se
+    sobreporiam, um deles é deslocado o mínimo necessário, e uma linha fina o liga à posição real (um ponto)."""
+    fig, eixos = plt.subplots(3, 1, figsize=(7.1, 7.5))
+    fig.subplots_adjust(left=0.07, right=0.99, top=0.885, bottom=0.065, hspace=0.42)
+    for ax, nome in zip(eixos, benchmarks.DATASETS):
+        _estilo(ax)
+        ax.yaxis.grid(True, color=GRADE, linewidth=0.6)
+        ax.set_xscale("log")
+        ax.set_xlim(0.015, 50)
+        ax.set_xticks([0.03, 0.1, 0.3, 1, 3, 10, 30])
+        ax.xaxis.set_minor_locator(plt.NullLocator())
+        ax.xaxis.set_major_formatter(FuncFormatter(lambda x, _: f"{x:g}".replace(".", ",")))
+        y0, y1, passo = EIXO_Y_CUSTO[nome]
+        ax.set_ylim(y0, y1)
+        ax.yaxis.set_major_locator(plt.MultipleLocator(passo))
+        ax.yaxis.set_major_formatter(FuncFormatter(lambda v, _: f"{v:.1f}".replace(".", ",")))
+        ax.set_title(f"{NOME_DATASET[nome]} ({METRICA_CURTA[nome]})", fontsize=8, color=TEXTO, loc="left", pad=4)
+    eixos[-1].set_xlabel("Custo (US\\$ por 1.000 perguntas, escala logarítmica)", fontsize=7.5, color=TEXTO_2)
+
+    escala = 72 / fig.dpi  # pixels -> pontos
+    for ax, nome in zip(eixos, benchmarks.DATASETS):
+        pontos = [(m, llm, custo_usd[nome, llm][m], medias[nome, llm][m]) for m in ab.METODOS for llm in TODOS]
+        dados = np.array([(x, y) for _, _, x, y in pontos])
+        ancoras = ax.transData.transform(dados) * escala
+        bb = ax.get_window_extent()
+        caixa = ((bb.x0 * escala, bb.y0 * escala), (bb.x1 * escala, bb.y1 * escala))
+        raios = np.array([DIAMETRO_MARCADOR / 2 + (0.6 if llm in INTERMEDIARIOS else 0) for _, llm, _, _ in pontos])
+        afastadas = afastar_marcadores(ancoras, raios, caixa)
+        deslocados = np.hypot(*(afastadas - ancoras).T) > 0
+        posicoes = np.where(deslocados[:, None], ax.transData.inverted().transform(afastadas / escala), dados)
+        for (m, llm, x, y), (xm, ym), deslocado in zip(pontos, posicoes, deslocados):
+            if deslocado:
+                ax.plot([x, xm], [y, ym], color="#a9a8a2", linewidth=0.5, zorder=2, solid_capstyle="round")
+                ax.scatter(x, y, s=5, color=COR_METODO.get(m, CINZA), linewidth=0, zorder=2.5)
+            _marcador(ax, xm, ym, m, llm)
+
+    legenda = fig.add_axes([0.07, 0.915, 0.92, 0.08])
+    legenda.axis("off")
+    legenda.set_xlim(0, 1)
+    legenda.set_ylim(0, 1)
+    def metodo(m):
+        return lambda x, y: legenda.scatter(x, y, s=DIAMETRO_MARCADOR ** 2, facecolor=COR_METODO.get(m, "white"),
+                                            edgecolor=CINZA if m == "sem_rag" else "white",
+                                            linewidth=0.9 if m == "sem_rag" else 0.7)
+    _linha_de_legenda(legenda, 0.78, "Método", [(metodo(m), ab.NOME_METODO[m]) for m in ab.METODOS])
+    _linha_de_legenda(legenda, 0.22, "Modelo", [(lambda x, y, l=llm: _marcador(legenda, x, y, None, l),
+                                                 NOME_LLM[llm] + ("$^\\dagger$" if llm in INTERMEDIARIOS else ""))
+                                                for llm in TODOS])
+    fig.savefig(GRAFICOS / "custo_desempenho.pdf")
+    plt.close(fig)
+
+
+def figura_ordem_metodos(resumo: dict, caminhos=None, casas: int = 2):
     """Generalização: métrica principal nas 25 perguntas, 7 LLMs × 6 métodos; cor = posição do método
-    dentro do LLM (mais escuro = melhor)."""
+    dentro do LLM (mais escuro = melhor). `caminhos` e `casas` servem para reaproveitar o desenho com
+    outra métrica (figura_ordem_metodos_cosseno.py); sem eles, grava a figura do artigo."""
     cmap = LinearSegmentedColormap.from_list("seq_azul", SEQ_AZUL[::-1])
     fig, eixos = plt.subplots(1, 3, figsize=(7.1, 2.75), sharey=True)
     for ax, nome in zip(eixos, benchmarks.DATASETS):
@@ -369,7 +582,7 @@ def figura_ordem_metodos(resumo: dict):
         for i in range(t.shape[0]):
             for j in range(t.shape[1]):
                 escuro = postos.values[i, j] <= 3
-                ax.text(j, i, num(t.values[i, j]), ha="center", va="center", fontsize=6.3,
+                ax.text(j, i, num(t.values[i, j], casas), ha="center", va="center", fontsize=6.3,
                         color="white" if escuro else TEXTO)
         ax.set_xticks(range(len(ab.METODOS_RAG)), [ab.NOME_METODO[m] for m in ab.METODOS_RAG], rotation=40, ha="right", fontsize=7)
         ax.set_xticks(np.arange(-0.5, len(ab.METODOS_RAG)), minor=True)
@@ -382,7 +595,8 @@ def figura_ordem_metodos(resumo: dict):
         ax.set_title(f"{NOME_DATASET[nome]}\nW = {num(resumo[nome]['w7'])}", fontsize=8, color=TEXTO, pad=4)
     eixos[0].set_yticks(range(len(TODOS)), [NOME_LLM[l] for l in TODOS], fontsize=7.5)
     fig.tight_layout(w_pad=0.8)
-    fig.savefig(GRAFICOS / "ordem_metodos.pdf", bbox_inches="tight")
+    for caminho in caminhos or [GRAFICOS / "ordem_metodos.pdf"]:
+        fig.savefig(caminho, bbox_inches="tight", **({"dpi": 300} if str(caminho).endswith(".png") else {}))
     plt.close(fig)
 
 
@@ -414,12 +628,23 @@ def resumo_numeros(df, medias, sig, resumo, relativo, tokens, tempo, porte, med_
     (TABELAS / "numeros_artigo.json").write_text(json.dumps(saida, ensure_ascii=False, indent=1), encoding="utf-8")
 
 
+def copiar_para_artigo():
+    """Copia as tabelas (.tex) e as figuras (.pdf) para dentro da pasta do artigo, que assim não
+    depende de nada fora dela (o Overleaf só enxerga a pasta enviada)."""
+    for origem, destino, padrao in [(TABELAS, ARTIGO / "tabelas", "*.tex"), (GRAFICOS, ARTIGO / "figuras", "*.pdf")]:
+        destino.mkdir(parents=True, exist_ok=True)
+        for arquivo in origem.glob(padrao):
+            shutil.copy2(arquivo, destino / arquivo.name)
+
+
 def main():
     TABELAS.mkdir(parents=True, exist_ok=True)
     GRAFICOS.mkdir(parents=True, exist_ok=True)
     plt.rcParams.update({"font.family": "serif", "font.serif": ["DejaVu Serif"], "pdf.fonttype": 42})
     df = ab.carregar_execucoes()
     medias, sig = tabela_principal(df)
+    tabela_tokens(df)
+    custo_usd = tabela_custo_usd(df)
     resumo = tabela_concordancia(df)
     relativo, tokens, tempo = tabela_custo(df)
     tabela_llms(df)
@@ -430,8 +655,11 @@ def main():
     bancos, stuff = tabela_bancos()
     figura_efeito_rag(medias)
     figura_ordem_metodos(resumo)
+    figura_custo_desempenho(medias, custo_usd)
     resumo_numeros(df, medias, sig, resumo, relativo, tokens, tempo, porte, med_bge, rag, bancos, stuff)
-    print(f"Escritos {TABELAS.relative_to(BASE_DIR)} e {GRAFICOS.relative_to(BASE_DIR)}")
+    copiar_para_artigo()
+    print(f"Escritos {TABELAS.relative_to(BASE_DIR)} e {GRAFICOS.relative_to(BASE_DIR)}, copiados para "
+          f"{ARTIGO.name}/tabelas e {ARTIGO.name}/figuras")
 
 
 if __name__ == "__main__":

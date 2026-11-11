@@ -1,8 +1,10 @@
 % !TeX program = pdflatex
 % Artigo do TCC02 no template oficial da coordenação (fork do modelo do IEEE Access com o padrão
-% da Unifei; o original está em EXEMPLO/ECO_artigo_TCC02.zip). O texto fica em sections/, e as
-% tabelas e figuras vêm direto de Pesquisa/resultados/{tabelas,graficos}_benchmarks, geradas por
-% Pesquisa/scripts/gerar_artigo_benchmarks.py -- rodar o script de novo atualiza o artigo.
+% da Unifei; o original está em EXEMPLO/ECO_artigo_TCC02.zip). O texto fica em sections/, as
+% tabelas em tabelas/ e as figuras em figuras/. As duas pastas são geradas por
+% Pesquisa/scripts/gerar_artigo_benchmarks.py, que grava em Pesquisa/resultados/ e copia para cá:
+% rodar o script de novo atualiza o artigo. Nada aqui depende de arquivos fora desta pasta, que pode
+% ser enviada sozinha ao Overleaf (compilador pdfLaTeX).
 % Compilar: latexmk -pdf main.tex
 
 \documentclass{ieeeaccess}
@@ -28,8 +30,8 @@
   {\PackageWarningNoLine{main}{Nao consegui corrigir a legenda das figuras largas}}
 \makeatother
 
-\graphicspath{{../Pesquisa/resultados/graficos_benchmarks/}}
-\newcommand{\tabela}[1]{\input{../Pesquisa/resultados/tabelas_benchmarks/#1.tex}}
+\graphicspath{{figuras/}}
+\newcommand{\tabela}[1]{\input{tabelas/#1.tex}}
 
 % O template define TABLE/FIGURE em inglês; o babel troca por Tabela/Figura no início do
 % documento. Mantém a caixa alta do padrão IEEE, em português.
@@ -42,8 +44,8 @@
 \begin{document}
 \history{Graduação em Engenharia de Computação}
 \doi{Trabalho de Conclusão de Curso.}
-\dataDaDefesa{xx{\slash}xx{\slash}2026}
-\title{Eficiência de métodos de RAG: uma análise comparativa com sete modelos de linguagem nos domínios financeiro, médico e educacional}
+\dataDaDefesa{11{\slash}2026}
+\title{Maximizando eficiência de RAG: uma análise comparativa de métodos RAG}
 \author{AFONSO HENRIQUES MASSUNARI,
         RYAN ALVES MAZZEU,
         CARLOS HENRIQUE VALÉRIO DE MORAES \IEEEmembership{Orientador}}

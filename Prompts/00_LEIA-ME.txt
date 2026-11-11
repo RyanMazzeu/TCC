@@ -14,7 +14,8 @@ arquivo .txt traz o texto exatamente como foi enviado, sem nenhum comentário de
   2_Geracao_Docugami_ingles/             os mesmos 9, traduzidos para o inglês (Docugami SEC 10-Q)
   3_Geracao_MedQA_multipla_escolha/      os mesmos 9, adaptados à múltipla escolha (MedQA-USMLE)
   4_Juiz_RAGAS/                          5 prompts do juiz (gpt-4o-mini) das métricas RAGAS
-  5_Exemplos_reais/                      3 prompts reais do Stuff, já preenchidos (um por dataset)
+  5_Exemplos_reais/                      5 prompts reais, já preenchidos (3 do Stuff, um por dataset,
+                                         e o exemplo da apresentação, sem RAG e com o Stuff)
 
 
 2. COMO LER OS ARQUIVOS
@@ -205,3 +206,13 @@ gpt-4o-mini (mais os 7 tokens fixos de formatação da mensagem).
 As três estão entre as 25 perguntas respondidas pelos 7 LLMs. Foram escolhidas por serem casos em
 que a busca trouxe a informação da resposta de referência, para ilustrar o funcionamento normal
 do método.
+
+Exemplo da apresentação (pergunta 3a04d81a9c6e4d50bcb2470019978a45, "Qual o objetivo do período
+letivo especial?", FaQuAD; resposta de referência: oferecimento de disciplinas obrigatórias e
+optativas):
+
+  sem_rag_FaQuAD_periodo_letivo.txt   o controle sem RAG (01_controle_sem_rag.txt preenchido)
+  stuff_FaQuAD_periodo_letivo.txt     o Stuff (02_stuff.txt preenchido com os 4 trechos recuperados)
+
+Mesma conferência de tokens (45 e 639 no gpt-4o-mini). Esta pergunta está entre as 25
+respondidas pelos 7 LLMs.

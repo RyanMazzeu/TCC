@@ -13,12 +13,16 @@ A \emph{Context Precision} do juiz se correlacionou com o Hit@4 do gabarito no F
 \subsection{Efeito do RAG}
 \label{ssc:efeito_rag}
 
-A Fig.~\ref{fig:efeito_rag} e a primeira linha da Tabela~\ref{tab:principal} comparam o controle sem RAG com os métodos de RAG. O efeito da recuperação dependeu, sobretudo, do domínio (QP3).
+A Fig.~\ref{fig:efeito_rag} e a primeira linha da Tabela~\ref{tab:principal} comparam o controle sem RAG com os métodos de RAG. O efeito da recuperação dependeu, sobretudo, do domínio (QP3). As Tabelas~\ref{tab:tokens} e~\ref{tab:custo_usd} trazem, nas mesmas perguntas, os tokens consumidos e o custo em dólares de cada combinação de método e LLM, discutidos na Seção~\ref{ssc:custo}.
 
 \Figure[!t](topskip=0pt, botskip=0pt, midskip=0pt)[width=\textwidth]{efeito_rag.pdf}
 {Métrica principal de cada conjunto na camada principal (100 perguntas; no Docugami, as 66 com valor no gabarito): controle sem RAG, Stuff e o melhor método de RAG de cada LLM, indicado à direita.\label{fig:efeito_rag}}
 
 \tabela{tab_principal}
+
+\tabela{tab_tokens}
+
+\tabela{tab_custo_usd}
 
 \textbf{FaQuAD.} Sem recuperação, os modelos cobriram de 35\% a 50\% dos tokens da resposta de referência e recusaram de 15\% a 43\% das perguntas; com o Stuff, a cobertura subiu para 85\%--92\%, e todos os seis métodos melhoraram todos os cinco modelos ($p_{\text{Holm}} < 0{,}05$). Os intermediários seguiram o padrão: o Stuff elevou a cobertura do Sonnet de 0,50 para 0,91 e a do Sol de 0,48 para 0,82, nas 25 perguntas. As perguntas tratam de normas e fatos de uma universidade específica, que o modelo não tem como saber de memória; é o cenário para o qual o RAG foi concebido.
 
@@ -29,7 +33,7 @@ A Fig.~\ref{fig:efeito_rag} e a primeira linha da Tabela~\ref{tab:principal} com
 \subsection{Comparação entre os métodos}
 \label{ssc:metodos}
 
-O teste de Friedman indicou diferença entre os seis métodos em 13 das 15 combinações de conjunto e LLM da camada principal (Tabela~\ref{tab:principal}); as exceções foram o Qwen e o Luna no MedQA. A ordem dos métodos, porém, mudou de um domínio para outro (QP1), e, dentro de cada domínio, se repetiu entre os LLMs (QP2; Tabela~\ref{tab:concordancia}).
+O teste de Friedman indicou diferença entre os seis métodos em 13 das 15 combinações de conjunto e LLM da camada principal (Tabela~\ref{tab:principal}); as exceções foram o Qwen e o Luna no MedQA. Nos intermediários, com 25 perguntas, o teste indicou diferença no Docugami nos dois modelos e no FaQuAD só no Sonnet; no MedQA, não houve diferença no Sonnet, e o Sol teve o mesmo resultado com todos os métodos. A ordem dos métodos, porém, mudou de um domínio para outro (QP1), e, dentro de cada domínio, se repetiu entre os LLMs (QP2; Tabela~\ref{tab:concordancia}).
 
 \tabela{tab_concordancia}
 
@@ -47,18 +51,23 @@ A Fig.~\ref{fig:ordem_metodos} mostra os sete modelos nas 25 perguntas comuns. A
 \Figure[!t](topskip=0pt, botskip=0pt, midskip=0pt)[width=\textwidth]{ordem_metodos.pdf}
 {Métrica principal dos sete LLMs nas 25 perguntas comuns de cada conjunto (no Docugami, as 14 com valor no gabarito). A cor indica a posição do método dentro de cada LLM (mais escuro, melhor); W é o coeficiente de concordância de Kendall entre os sete LLMs. Abaixo da linha, os intermediários.\label{fig:ordem_metodos}}
 
-A Tabela~\ref{tab:porte} testa, em cada família, se o modelo econômico com o seu melhor método alcança o intermediário com o Stuff, a configuração mais simples \cite{chen2023frugalgpt}. Em nenhum caso o intermediário com o Stuff foi significativamente superior, e em cinco dos seis o econômico teve média igual ou maior. No Docugami, o Luna com o Query Step-Down trouxe 33\% dos valores, contra 14\% do Sol com o Stuff ($p = 0{,}041$), a um custo 3,4 vezes menor; o Haiku teve vantagem semelhante sobre o Sonnet, sem significância. No MedQA e no FaQuAD, as duas configurações empataram, a um custo de 7 a 20 vezes menor para o modelo econômico. Com 25 perguntas (14 no Docugami), o teste só detectaria diferenças grandes, mas a tendência é clara: escolher o método adequado ao domínio valeu tanto quanto trocar por um modelo mais caro.
+A Tabela~\ref{tab:porte} testa, em cada família, se o modelo econômico com o seu melhor método alcança o intermediário com o Stuff, a configuração mais simples \cite{chen2023frugalgpt}. Em nenhum caso o intermediário com o Stuff foi significativamente superior, e em cinco dos seis o econômico teve média igual ou maior. No Docugami, o Luna com o Query Step-Down trouxe 33\% dos valores, contra 14\% do Sol com o Stuff ($p = 0{,}041$), a um custo 3,4 vezes menor; o Haiku teve vantagem semelhante sobre o Sonnet, sem significância. A diferença de custo vem do preço do token, e não do consumo: o Luna com o Query Step-Down gastou 5,3 vezes mais tokens por pergunta que o Sol com o Stuff, mas cada token custa 20 vezes menos. No MedQA e no FaQuAD, as duas configurações empataram, a um custo de 7 a 20 vezes menor para o modelo econômico. Com 25 perguntas (14 no Docugami), o teste só detectaria diferenças grandes, mas a tendência é clara: escolher o método adequado ao domínio valeu tanto quanto trocar por um modelo mais caro.
 
 \tabela{tab_porte}
 
 \subsection{Custo}
 \label{ssc:custo}
 
-A Tabela~\ref{tab:custo} resume o custo dos métodos. As diferenças são grandes e estáveis entre LLMs e conjuntos. Em relação ao Stuff (1.139 tokens e 5,6~s por resposta, em mediana), o Map-Reduce e o Map-Rerank custaram 1,8 vez, o Refine 2,7 vezes, e o Reciprocal e o Query Step-Down, que geram e respondem quatro perguntas alternativas, 5,1 e 5,6 vezes. O Query Step-Down também foi o mais lento, com 18,8~s em mediana, mais de três vezes o Stuff. O controle sem RAG custou 0,4 vez o Stuff.
+A Tabela~\ref{tab:custo} resume o custo dos métodos. As diferenças são grandes e estáveis entre LLMs e conjuntos. Em relação ao Stuff (1.139 tokens e 5,6~s por resposta, em mediana), o Map-Reduce e o Map-Rerank custaram 1,8 vez, o Refine 2,7 vezes, e o Reciprocal e o Query Step-Down, que geram e respondem quatro perguntas alternativas, 5,1 e 5,6 vezes. O Query Step-Down também foi o mais lento, com 18,8~s em mediana, mais de três vezes o Stuff. O controle sem RAG custou 0,4 vez o Stuff. A Tabela~\ref{tab:tokens} detalha o consumo por LLM e conjunto: nas 21 combinações, incluindo os intermediários, o Query Step-Down foi o método que mais consumiu tokens, seguido do Reciprocal, com 3.682 a 10.063 tokens por pergunta, contra 658 a 1.892 do Stuff. Em dólares (Tabela~\ref{tab:custo_usd}), o preço do token pesou mais que o método: em cada conjunto, o Haiku e o Luna com o Query Step-Down, o seu método mais caro, custaram menos que o Sonnet e o Sol com o Stuff, o seu método de RAG mais barato. Por 1.000 perguntas, os econômicos custaram de US\$~0,02 a US\$~5,77, e os intermediários, de US\$~0,43 a US\$~34,91.
 
 \tabela{tab_custo}
 
 Cruzando custo e qualidade, o Reciprocal é dominado: custa cerca de cinco vezes o Stuff e não o superou em nenhum domínio, ficando significativamente abaixo dele no FaQuAD. O Query Step-Down é o único método cujo custo adicional trouxe um ganho consistente, e apenas no domínio em que a recuperação é o gargalo. Entre os LLMs, o custo nominal total da geração variou de US\$~0,64 (Luna) a US\$~7,77 (Sonnet), e o Sonnet, com apenas 25 perguntas por conjunto, custou mais que qualquer modelo da camada principal com 100.
+
+A Fig.~\ref{fig:custo_desempenho} reúne o custo e o desempenho de todos os métodos e LLMs. Entre os pontos de um mesmo modelo, a distância horizontal mostra quanto cada método custa a mais, e a vertical, quanto ele muda a métrica. No Docugami, o Query Step-Down, o método mais caro em todos os modelos, também teve a maior métrica nos sete. No FaQuAD, ocorreu o oposto: o Stuff, o método de RAG mais barato em todos os modelos, teve a maior cobertura, ou empatou com a maior, em cinco dos sete. No MedQA, os pontos de cada modelo se espalham mais na horizontal que na vertical: do ponto mais barato ao mais caro, o custo variou de 7 a 15 vezes, e a acurácia, no máximo 12 pontos percentuais. Com o mesmo método, os intermediários custaram mais que todos os econômicos nos três conjuntos; como eles foram avaliados em 25 perguntas, a comparação entre os dois grupos nas mesmas perguntas é a da Tabela~\ref{tab:porte}.
+
+\Figure[!t](topskip=0pt, botskip=0pt, midskip=0pt)[width=\textwidth]{custo_desempenho.pdf}
+{Desempenho e custo de cada método e LLM: métrica principal de cada conjunto contra o custo em US\$ por 1.000 perguntas, em escala logarítmica (os mesmos valores das Tabelas~\ref{tab:principal} e~\ref{tab:custo_usd}). A cor indica o método, e a sigla, o LLM. Econômicos (círculos): camada principal (100 perguntas; no Docugami, as 66 com valor no gabarito). $^\dagger$Intermediários (quadrados): as 25 perguntas da camada de generalização (no Docugami, as 14 com valor no gabarito). Onde dois marcadores se sobreporiam, um deles foi deslocado, e uma linha fina o liga à sua posição real.\label{fig:custo_desempenho}}
 
 \subsection{Variação do modelo}
 \label{ssc:variacao}

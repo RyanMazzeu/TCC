@@ -1,0 +1,4 @@
+Responda à pergunta. Se não souber a resposta, diga que não sabe. Responda em português.
+
+Pergunta: Qual o objetivo do período letivo especial?
+Resposta:

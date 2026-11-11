@@ -123,6 +123,8 @@ def comparar_porte(df: pd.DataFrame) -> pd.DataFrame:
                 "media_intermediario_stuff": par.inter.mean(), "p": p,
                 "custo_economico_melhor": e.loc[par.index, "custo_usd"].mean(),
                 "custo_intermediario_stuff": i.loc[par.index, "custo_usd"].mean(),
+                "tokens_economico_melhor": e.loc[par.index, "tokens_totais"].mean(),
+                "tokens_intermediario_stuff": i.loc[par.index, "tokens_totais"].mean(),
                 "melhores_economico_25": _melhores(g25[g25["llm"] == econ].groupby("metodo_rag")[col].mean()),
                 "melhores_intermediario_25": _melhores(g25[g25["llm"] == inter].groupby("metodo_rag")[col].mean()),
             })

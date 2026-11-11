@@ -1,19 +1,30 @@
-\begin{table}[!t]
+\begin{table*}[!t]
 \centering
 \footnotesize
-\setlength{\tabcolsep}{2.6pt}
-\caption{Modelo econômico com o seu melhor método (escolhido na camada principal) contra o intermediário da mesma família com o Stuff (Luna e Sol, da OpenAI; Haiku e Sonnet, da Anthropic), nas perguntas da camada de generalização (25; no Docugami, as 14 com valor no gabarito). $p$: McNemar exato (acurácia) ou Wilcoxon pareado. Custo: razão entre o custo médio por pergunta do intermediário e o do econômico.}
+\setlength{\tabcolsep}{4pt}
+\caption{Modelo econômico com o seu melhor método (escolhido nas 100 perguntas da camada principal) contra o intermediário da mesma família com o Stuff, nas perguntas da camada de generalização (25; no Docugami, as 14 com valor no gabarito). Preço: US\$ por milhão de tokens de entrada e de saída (Tabela~\ref{tab:llms}). Tokens: média por pergunta, somando a entrada e a saída de todas as chamadas do método, contados pelo tokenizador de cada modelo. Custo: US\$ por 1.000 perguntas (tokens de entrada e de saída vezes o preço de cada um). Métrica: a principal de cada conjunto. $p$: McNemar exato (acurácia) ou Wilcoxon pareado entre as duas configurações. Razão: custo do intermediário dividido pelo do econômico.}
 \label{tab:porte}
-\begin{tabular}{llccc c}
+\begin{tabular}{lllcrrccc}
 \toprule
-Dataset & Econômico + método & Econ. & Interm. + Stuff & $p$ & Custo \\
+Dataset & Família & Configuração & Preço (US\$/1M) & Tokens & Custo (US\$/1.000) & Métrica & $p$ & Razão \\
 \midrule
-Docugami & Luna + Step-Down & 0,33 & 0,14 & 0,041 & 3,4× \\
-Docugami & Haiku + Step-Down & 0,22 & 0,10 & 0,109 & 3,3× \\
-MedQA & Luna + Map-Rerank & 0,92 & 0,96 & 1,000 & 8,7× \\
-MedQA & Haiku + Map-Rerank & 0,96 & 0,92 & 1,000 & 7,4× \\
-FaQuAD & Luna + Stuff & 0,86 & 0,82 & 0,463 & 19,5× \\
-FaQuAD & Haiku + Stuff & 0,91 & 0,91 & 0,686 & 18,3× \\
+Docugami & OpenAI & Luna + Step-Down & 0,10 / 0,50 & 5.869 & 0,79 & 0,33 &  &  \\
+ &  & Sol + Stuff & 2,00 / 10,00 & 1.107 & 2,66 & 0,14 & 0,041 & 3,4× \\
+\addlinespace
+ & Anthropic & Haiku + Step-Down & 0,10 / 0,50 & 10.086 & 1,73 & 0,22 &  &  \\
+ &  & Sonnet + Stuff & 2,00 / 10,00 & 1.715 & 5,71 & 0,10 & 0,109 & 3,3× \\
+\midrule
+MedQA & OpenAI & Luna + Map-Rerank & 0,10 / 0,50 & 2.094 & 0,28 & 0,92 &  &  \\
+ &  & Sol + Stuff & 2,00 / 10,00 & 1.055 & 2,42 & 0,96 & 1,000 & 8,7× \\
+\addlinespace
+ & Anthropic & Haiku + Map-Rerank & 0,10 / 0,50 & 3.759 & 0,65 & 0,96 &  &  \\
+ &  & Sonnet + Stuff & 2,00 / 10,00 & 1.800 & 4,81 & 0,92 & 1,000 & 7,4× \\
+\midrule
+FaQuAD & OpenAI & Luna + Stuff & 0,10 / 0,50 & 662 & 0,08 & 0,86 &  &  \\
+ &  & Sol + Stuff & 2,00 / 10,00 & 658 & 1,51 & 0,82 & 0,463 & 19,5× \\
+\addlinespace
+ & Anthropic & Haiku + Stuff & 0,10 / 0,50 & 1.283 & 0,17 & 0,91 &  &  \\
+ &  & Sonnet + Stuff & 2,00 / 10,00 & 1.255 & 3,14 & 0,91 & 0,686 & 18,3× \\
 \bottomrule
 \end{tabular}
-\end{table}
+\end{table*}
