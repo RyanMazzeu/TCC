@@ -601,7 +601,65 @@ def figura_ordem_metodos(resumo: dict, caminhos=None, casas: int = 2):
     plt.close(fig)
 
 
-def resumo_numeros(df, medias, sig, resumo, relativo, tokens, tempo, porte, med_bge, rag, bancos, stuff):
+# Recusas (classificar_recusas.py): o veredito do juiz sobre o contexto que o LLM recebeu. Os dois tons de azul são as
+# recusas justificadas (a informação não veio, ou veio só em parte); o laranja, as injustificadas (veio toda).
+VEREDITOS_RECUSA = [("ausente", "#184f95", "Justificada: o contexto não tinha a informação"),
+                    ("parcial", "#6da7ec", "Justificada: o contexto tinha só parte da informação"),
+                    ("completa", LARANJA, "Injustificada: o contexto tinha toda a informação")]
+
+
+def figura_recusas() -> dict:
+    """Recusas por método e LLM (repetição 1), empilhadas pelo veredito do juiz sobre o contexto, no Docugami e no
+    FaQuAD. Devolve as contagens para o JSON de números do artigo."""
+    rec = pd.read_json(METRICAS_DIR / "recusas_classificadas.jsonl", lines=True)
+    contagem = rec.groupby(["dataset", "metodo_rag", "llm", "veredito_juiz"]).size()
+    datasets = ["docugami_10q", "faquad"]
+    fig, eixos = plt.subplots(2, 1, figsize=(7.1, 4.9))
+    fig.subplots_adjust(left=0.065, right=0.995, top=0.86, bottom=0.07, hspace=0.42)
+    # Os intermediários (25 perguntas) ficam um pouco afastados dos econômicos (100) dentro de cada método.
+    posicao = {llm: j + (0.45 if llm in INTERMEDIARIOS else 0) for j, llm in enumerate(TODOS)}
+    largura = max(posicao.values()) + 1
+    passo = largura + 1.6
+    for ax, nome in zip(eixos, datasets):
+        _estilo(ax)
+        ax.xaxis.grid(False)
+        ax.yaxis.grid(True, color=GRADE, linewidth=0.6)
+        for i, metodo in enumerate(ab.METODOS_RAG):
+            for j, llm in enumerate(TODOS):
+                x, base = i * passo + posicao[llm], 0
+                for veredito, cor, _ in VEREDITOS_RECUSA:
+                    n = int(contagem.get((nome, metodo, llm, veredito), 0))
+                    if n:
+                        ax.bar(x, n, bottom=base, width=0.8, color=cor, edgecolor="white", linewidth=0.5)
+                        base += n
+                ax.text(x, -0.025, SIGLA_LLM[llm],
+                        transform=ax.get_xaxis_transform(), ha="center", va="top", fontsize=5.3, color=TEXTO_2)
+            ax.text(i * passo + (largura - 1) / 2, -0.15, ab.NOME_METODO[metodo], transform=ax.get_xaxis_transform(),
+                    ha="center", va="top", fontsize=7.3, color=TEXTO)
+        ax.set_xticks([])
+        ax.set_xlim(-0.8, (len(ab.METODOS_RAG) - 1) * passo + largura - 0.2)
+        ax.yaxis.set_major_locator(plt.MaxNLocator(5, integer=True))
+        ax.set_ylabel("Recusas", fontsize=7.5, color=TEXTO_2)
+        ax.set_title(NOME_DATASET[nome], fontsize=8, color=TEXTO, loc="left", pad=4)
+    legenda = [plt.Rectangle((0, 0), 1, 1, color=cor, label=rotulo) for _, cor, rotulo in VEREDITOS_RECUSA]
+    fig.legend(handles=legenda, loc="upper left", ncol=2, frameon=False, fontsize=7.3, bbox_to_anchor=(0.055, 1.0),
+               handlelength=1.2, columnspacing=1.5)
+    fig.savefig(GRAFICOS / "recusas.pdf")
+    plt.close(fig)
+
+    saida = {}
+    for (nome, metodo, llm), g in rec.groupby(["dataset", "metodo_rag", "llm"]):
+        saida[f"{nome}|{llm}|{metodo}"] = {v: int((g.veredito_juiz == v).sum()) for v, _, _ in VEREDITOS_RECUSA}
+    for (nome, metodo), g in rec[rec.llm.isin(PRINCIPAIS)].groupby(["dataset", "metodo_rag"]):
+        saida[f"{nome}|principais|{metodo}"] = {v: int((g.veredito_juiz == v).sum()) for v, _, _ in VEREDITOS_RECUSA}
+    for nome, g in rec.groupby("dataset"):
+        saida[f"{nome}|todos"] = {v: int((g.veredito_juiz == v).sum()) for v, _, _ in VEREDITOS_RECUSA}
+    fq = rec[rec.dataset == "faquad"]
+    saida["validacao_faquad"] = pd.crosstab(fq.veredito_juiz, fq.resposta_no_contexto.astype(bool)).to_dict()
+    return saida
+
+
+def resumo_numeros(df, medias, sig, resumo, relativo, tokens, tempo, porte, med_bge, rag, bancos, stuff, recusas=None):
     """Números citados no texto do artigo, num JSON só (pra conferência)."""
     saida = {"execucoes": len(df), "custo_nominal_total_usd": round(float(df["custo_usd"].sum()), 2),
              "custo_nominal_por_llm_usd": df.groupby("llm")["custo_usd"].sum().round(2).to_dict()}
@@ -625,6 +683,8 @@ def resumo_numeros(df, medias, sig, resumo, relativo, tokens, tempo, porte, med_
         if h["repeticao"].nunique() > 1 and len(dp):
             dps[f"{nome}|{llm}"] = round(float(dp.mean()), 3)
     saida["desvio_repeticoes"] = dps
+    if recusas:
+        saida["recusas_por_veredito"] = recusas
     saida["ragas_faithfulness"] = rag.pivot_table(index=["dataset", "llm"], columns="metodo_rag", values="faithfulness").round(3).to_json()
     (TABELAS / "numeros_artigo.json").write_text(json.dumps(saida, ensure_ascii=False, indent=1), encoding="utf-8")
 
@@ -657,9 +717,10 @@ def main():
     figura_efeito_rag(medias)
     figura_ordem_metodos(resumo)
     figura_custo_desempenho(medias, custo_usd)
+    recusas = figura_recusas()
     diagramas_rag.figura_pipeline(GRAFICOS)
     diagramas_rag.figura_metodos(GRAFICOS)
-    resumo_numeros(df, medias, sig, resumo, relativo, tokens, tempo, porte, med_bge, rag, bancos, stuff)
+    resumo_numeros(df, medias, sig, resumo, relativo, tokens, tempo, porte, med_bge, rag, bancos, stuff, recusas)
     copiar_para_artigo()
     print(f"Escritos {TABELAS.relative_to(BASE_DIR)} e {GRAFICOS.relative_to(BASE_DIR)}, copiados para "
           f"{ARTIGO.name}/tabelas e {ARTIGO.name}/figuras")

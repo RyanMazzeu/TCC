@@ -11,13 +11,14 @@ Map-Reduce e Map-Rerank, e a união dos fragmentos das perguntas alternativas no
 Reciprocal. Os logos desses dois guardam só as perguntas alternativas, e a busca é refeita com elas no
 mesmo índice (a recuperação é determinística: o script confere isso refazendo a do Stuff).
 
-Como saber se a informação estava no contexto:
-- FaQuAD: as respostas aceitas são trechos copiados do parágrafo, então basta procurar alguma delas,
-  normalizada, no texto do contexto (critério exato, sem juiz).
-- Docugami: a resposta de referência é texto livre e costuma juntar valores de vários relatórios. Um
-  juiz (gpt-4o-mini, temperatura 0, o mesmo do RAGAS) recebe a pergunta, a resposta de referência e o
-  contexto e diz se o contexto tem toda a informação, só parte ou nenhuma. O juiz também roda no
-  FaQuAD, e a concordância dele com o critério exato fica no resumo, como validação.
+Como saber se a informação estava no contexto: um juiz (gpt-4o-mini, temperatura 0, o mesmo do RAGAS)
+recebe a pergunta, a resposta de referência e o contexto e diz se o contexto tem toda a informação
+("completa"), só parte ("parcial") ou nenhuma ("ausente"); a recusa é injustificada só com "completa".
+No Docugami não há critério exato: a referência é texto livre e costuma juntar valores de vários
+relatórios. No FaQuAD há um, que serve de validação do juiz: as respostas aceitas são trechos copiados
+do parágrafo, e basta procurar alguma delas, normalizada, no contexto. Ele não é usado como critério
+porque erra para o outro lado: uma resposta de uma palavra ("custos", "algoritmo") aparece no contexto
+em outra frase, sem responder à pergunta.
 
 O MedQA fica de fora: o prompt manda sempre escolher uma alternativa, e houve só 3 recusas.
 
@@ -156,7 +157,7 @@ def main():
         p = perguntas[r.dataset][r.pergunta_id]
         veredito = julgados[r.chave]["veredito"]
         exato = resposta_no_contexto(r.contexto, p["respostas_aceitas"]) if r.dataset == "faquad" else None
-        informacao_no_contexto = exato if r.dataset == "faquad" else veredito == "completa"
+        informacao_no_contexto = veredito == "completa"
         linhas.append({"dataset": r.dataset, "llm": r.llm, "camada": r.camada, "metodo_rag": r.metodo_rag,
                        "pergunta_id": r.pergunta_id, "n_fragmentos": len(r.contexto), "veredito_juiz": veredito,
                        "resposta_no_contexto": exato, "informacao_no_contexto": bool(informacao_no_contexto),
@@ -169,7 +170,10 @@ def main():
     print(out.groupby(["dataset", "classificacao"]).size().to_string())
     print(out.groupby(["dataset", "veredito_juiz"]).size().to_string())
     fq = out[out.dataset == "faquad"]
-    print("FaQuAD, juiz 'completa' × resposta no contexto:\n", pd.crosstab(fq.veredito_juiz, fq.resposta_no_contexto))
+    print("FaQuAD, juiz × resposta aceita no contexto:\n", pd.crosstab(fq.veredito_juiz, fq.resposta_no_contexto))
+    from sklearn.metrics import cohen_kappa_score
+    print(f"concordância (completa × resposta no contexto): {(fq.informacao_no_contexto.astype(bool) == fq.resposta_no_contexto.astype(bool)).mean():.3f}, "
+          f"kappa de Cohen {cohen_kappa_score(fq.informacao_no_contexto.astype(bool), fq.resposta_no_contexto.astype(bool)):.3f}")
     print(f"Escritos {SAIDA.name} e {SAIDA_JUIZ.name}")
 
 
