@@ -23,6 +23,7 @@ from matplotlib.ticker import FuncFormatter
 from scipy import stats
 
 import analisar_benchmarks as ab
+import diagramas_rag
 import benchmarks
 import pipeline_base as pb
 from analisar_resultados import BASE_DIR, METRICAS_DIR, friedman_com_posthoc, holm
@@ -656,6 +657,8 @@ def main():
     figura_efeito_rag(medias)
     figura_ordem_metodos(resumo)
     figura_custo_desempenho(medias, custo_usd)
+    diagramas_rag.figura_pipeline(GRAFICOS)
+    diagramas_rag.figura_metodos(GRAFICOS)
     resumo_numeros(df, medias, sig, resumo, relativo, tokens, tempo, porte, med_bge, rag, bancos, stuff)
     copiar_para_artigo()
     print(f"Escritos {TABELAS.relative_to(BASE_DIR)} e {GRAFICOS.relative_to(BASE_DIR)}, copiados para "
