@@ -422,31 +422,36 @@ def _estilo(ax):
 
 
 def figura_efeito_rag(medias: dict):
-    """Por dataset e LLM: sem RAG, Stuff e o melhor método de RAG daquele LLM (camada principal)."""
-    fig, eixos = plt.subplots(1, 3, figsize=(7.1, 2.45), sharey=True)
+    """Por dataset e LLM: sem RAG, Stuff e o melhor método de RAG daquele LLM. Econômicos (círculos):
+    camada principal. Intermediários (quadrados): as 25 perguntas da generalização."""
+    fig, eixos = plt.subplots(1, 3, figsize=(7.1, 3.15), sharey=True)
     for ax, nome in zip(eixos, benchmarks.DATASETS):
         _estilo(ax)
-        for y, llm in enumerate(PRINCIPAIS):
+        for y, llm in enumerate(TODOS):
             s = medias[nome, llm]
             rag = s[ab.METODOS_RAG]
             melhor = rag.idxmax()
+            forma, tamanho = ("s", 32) if llm in INTERMEDIARIOS else ("o", 34)
             ax.plot([s["sem_rag"], rag.max()], [y, y], color=GRADE, linewidth=2.2, zorder=1, solid_capstyle="round")
-            ax.scatter(s["sem_rag"], y, s=34, facecolor="white", edgecolor=CINZA, linewidth=1.4, zorder=3)
-            ax.scatter(s["stuff"], y, s=34, color=AZUL, edgecolor="white", linewidth=1.0, zorder=4)
-            ax.scatter(rag.max(), y, s=34, color=LARANJA, edgecolor="white", linewidth=1.0, zorder=5)
+            ax.scatter(s["sem_rag"], y, s=tamanho, marker=forma, facecolor="white", edgecolor=CINZA, linewidth=1.4, zorder=3)
+            ax.scatter(s["stuff"], y, s=tamanho, marker=forma, color=AZUL, edgecolor="white", linewidth=1.0, zorder=4)
+            ax.scatter(rag.max(), y, s=tamanho, marker=forma, color=LARANJA, edgecolor="white", linewidth=1.0, zorder=5)
             ax.annotate(ab.NOME_METODO[melhor], (rag.max(), y), xytext=(5, 0), textcoords="offset points",
                         va="center", fontsize=6.5, color=TEXTO_2)
+        ax.axhline(len(PRINCIPAIS) - 0.5, color=TEXTO, linewidth=0.7, zorder=0)
         ax.set_title(f"{NOME_DATASET[nome]}\n({METRICA_CURTA[nome]})", fontsize=8, color=TEXTO, pad=4)
         ax.set_xlim(0, 1.15 if nome != "docugami_10q" else 0.45)
-        ax.set_ylim(-0.6, len(PRINCIPAIS) - 0.4)
+        ax.set_ylim(-0.6, len(TODOS) - 0.4)
         ax.xaxis.set_major_formatter(FuncFormatter(lambda x, _: f"{x:g}".replace(".", ",")))
-    eixos[0].set_yticks(range(len(PRINCIPAIS)), [NOME_LLM[l] for l in PRINCIPAIS])
+    eixos[0].set_yticks(range(len(TODOS)),
+                        [NOME_LLM[l] + ("$^\\dagger$" if l in INTERMEDIARIOS else "") for l in TODOS])
     eixos[0].invert_yaxis()
     marcadores = [plt.Line2D([], [], marker="o", linestyle="", markerfacecolor="white", markeredgecolor=CINZA, markersize=5.5, label="Sem RAG"),
                   plt.Line2D([], [], marker="o", linestyle="", color=AZUL, markersize=5.5, label="Stuff"),
-                  plt.Line2D([], [], marker="o", linestyle="", color=LARANJA, markersize=5.5, label="Melhor método de RAG do LLM")]
-    fig.legend(handles=marcadores, loc="lower center", ncol=3, frameon=False, fontsize=7.5, bbox_to_anchor=(0.5, -0.02))
-    fig.tight_layout(rect=(0, 0.07, 1, 1), w_pad=1.2)
+                  plt.Line2D([], [], marker="o", linestyle="", color=LARANJA, markersize=5.5, label="Melhor método de RAG do LLM"),
+                  plt.Line2D([], [], marker="s", linestyle="", color=CINZA, markersize=5.0, label="Intermediário$^\\dagger$")]
+    fig.legend(handles=marcadores, loc="lower center", ncol=4, frameon=False, fontsize=7.5, bbox_to_anchor=(0.5, -0.02))
+    fig.tight_layout(rect=(0, 0.08, 1, 1), w_pad=1.2)
     fig.savefig(GRAFICOS / "efeito_rag.pdf", bbox_inches="tight")
     plt.close(fig)
 
