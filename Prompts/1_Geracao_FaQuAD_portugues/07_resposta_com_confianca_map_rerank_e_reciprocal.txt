@@ -1,0 +1,9 @@
+Responda à pergunta usando apenas o contexto abaixo, e avalie sua própria confiança de que a resposta está correta e plenamente sustentada pelo contexto. Responda EXATAMENTE neste formato, em duas linhas:
+RESPOSTA: <sua resposta>
+CONFIANCA: <número inteiro de 0 a 100>
+Responda em português.
+
+Contexto:
+{contexto}
+
+Pergunta: {pergunta}

@@ -1,0 +1,8 @@
+Combine the answers below (generated from variations of the original question) into a single final answer to the original multiple-choice question. Always choose exactly one option. Start your answer with the letter of the chosen option, followed by a short justification.
+
+Original question: {pergunta}
+
+Answers to the variations:
+{respostas}
+
+Combined final answer:

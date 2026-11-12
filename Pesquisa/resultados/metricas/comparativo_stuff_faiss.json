@@ -1,0 +1,44 @@
+[
+  {
+    "dataset": "docugami_10q",
+    "llm": "gpt_mini",
+    "metrica": "valores_gabarito",
+    "metrica_rotulo": "Valores do gabarito na resposta",
+    "n_perguntas": 100,
+    "top4_identico_ao_experimento": 0.99,
+    "perguntas_refeitas": 1,
+    "media_chroma": 0.1042,
+    "media_faiss": 0.1042,
+    "media_chroma_nas_refeitas": 1.0,
+    "media_faiss_nas_refeitas": 1.0
+  },
+  {
+    "dataset": "medqa",
+    "llm": "gpt_mini",
+    "metrica": "acerto",
+    "metrica_rotulo": "Acurácia",
+    "n_perguntas": 100,
+    "top4_identico_ao_experimento": 0.84,
+    "perguntas_refeitas": 16,
+    "media_chroma": 0.68,
+    "media_faiss": 0.69,
+    "media_chroma_nas_refeitas": 0.75,
+    "media_faiss_nas_refeitas": 0.8125,
+    "acerta_so_chroma": 0,
+    "acerta_so_faiss": 1,
+    "p_mcnemar": 1.0
+  },
+  {
+    "dataset": "faquad",
+    "llm": "gpt_mini",
+    "metrica": "cobertura_tokens",
+    "metrica_rotulo": "Cobertura de tokens",
+    "n_perguntas": 100,
+    "top4_identico_ao_experimento": 1.0,
+    "perguntas_refeitas": 0,
+    "media_chroma": 0.8611,
+    "media_faiss": 0.8611,
+    "media_chroma_nas_refeitas": null,
+    "media_faiss_nas_refeitas": null
+  }
+]

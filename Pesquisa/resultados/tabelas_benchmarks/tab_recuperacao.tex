@@ -1,0 +1,16 @@
+\begin{table}[!t]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\caption{Recuperação ($k = 4$). Hit@4, Recall@4 e MRR@10 contra o trecho certo marcado no gabarito, em todas as perguntas; o MedQA não marca o trecho. Context Precision (CP) e Context Recall (CR) do RAGAS, uma vez por pergunta da amostra de 100.}
+\label{tab:recuperacao}
+\begin{tabular}{lccccc}
+\toprule
+Dataset & Hit@4 & Recall@4 & MRR@10 & CP & CR \\
+\midrule
+Docugami & 0,82 & 0,75 & 0,63 & 0,55 & 0,45 \\
+MedQA & -- & -- & -- & 0,44 & 0,52 \\
+FaQuAD & 0,91 & 0,91 & 0,81 & 0,87 & 0,94 \\
+\bottomrule
+\end{tabular}
+\end{table}

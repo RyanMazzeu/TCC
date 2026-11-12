@@ -1,0 +1,22 @@
+\begin{table}[!t]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{1.8pt}
+\caption{LLMs avaliados. Preço em US\$ por milhão de tokens (entrada/saída), consultado em outubro e novembro de 2026. Temp. 0: o modelo aceita temperatura 0; os demais rodaram com a temperatura padrão da API e tiveram o Stuff repetido três vezes. n. d.: não divulgado.}
+\label{tab:llms}
+\begin{tabular}{llllcc}
+\toprule
+Modelo & Empresa & Pesos & Parâm. & US\$/1M & Temp. 0 \\
+\midrule
+\multicolumn{6}{l}{\emph{Camada principal (econômicos): 100 perguntas por dataset}} \\
+Qwen3.5-9B & Alibaba & abertos & 9,7 bi & 0,17/0,25 & sim \\
+DeepSeek V4 Pro & DeepSeek & abertos & 1,6 tri & 0,90/1,80 & sim \\
+Claude Haiku 5.5 & Anthropic & fechados & n. d. & 0,10/0,50 & não \\
+GPT-6 Luna & OpenAI & fechados & n. d. & 0,10/0,50 & não \\
+gpt-4o-mini & OpenAI & fechados & n. d. & 0,15/0,60 & sim \\
+\multicolumn{6}{l}{\emph{Camada de generalização (intermediários): 25 perguntas por dataset}} \\
+Claude Sonnet 5 & Anthropic & fechados & n. d. & 2,00/10,00 & não \\
+GPT-6 Sol & OpenAI & fechados & n. d. & 2,00/10,00 & não \\
+\bottomrule
+\end{tabular}
+\end{table}

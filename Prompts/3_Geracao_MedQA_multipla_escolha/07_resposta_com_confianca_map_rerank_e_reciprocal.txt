@@ -1,0 +1,8 @@
+Answer the multiple-choice question below. Use the context as support; if it does not contain the answer, use your own medical knowledge. Then rate your own confidence that the answer is correct. Answer EXACTLY in this format, in two lines:
+ANSWER: <the letter of the chosen option, followed by a short justification>
+CONFIDENCE: <integer from 0 to 100>
+
+Context:
+{contexto}
+
+Question: {pergunta}

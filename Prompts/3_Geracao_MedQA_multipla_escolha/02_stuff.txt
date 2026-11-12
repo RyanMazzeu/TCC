@@ -1,0 +1,7 @@
+Answer the multiple-choice question below. Use the context as support; if it does not contain the answer, use your own medical knowledge. Always choose exactly one option. Start your answer with the letter of the chosen option, followed by a short justification.
+
+Context:
+{contexto}
+
+Question: {pergunta}
+Answer:

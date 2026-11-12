@@ -1,0 +1,50 @@
+{
+  "delucionqa": {
+    "n": 27,
+    "falhas_juiz": 0,
+    "auroc_nosso_juiz": 0.833,
+    "auroc_ragas_ragbench": 0.75
+  },
+  "covidqa": {
+    "n": 30,
+    "falhas_juiz": 0,
+    "auroc_nosso_juiz": 0.902,
+    "auroc_ragas_ragbench": 0.671
+  },
+  "pubmedqa": {
+    "n": 30,
+    "falhas_juiz": 0,
+    "auroc_nosso_juiz": 0.584,
+    "auroc_ragas_ragbench": 0.496
+  },
+  "finqa": {
+    "n": 30,
+    "falhas_juiz": 0,
+    "auroc_nosso_juiz": 0.627,
+    "auroc_ragas_ragbench": 0.548
+  },
+  "tatqa": {
+    "n": 30,
+    "falhas_juiz": 0,
+    "auroc_nosso_juiz": 0.756,
+    "auroc_ragas_ragbench": 0.64
+  },
+  "techqa": {
+    "n": 30,
+    "falhas_juiz": 0,
+    "auroc_nosso_juiz": 0.66,
+    "auroc_ragas_ragbench": 0.333
+  },
+  "emanual": {
+    "n": 29,
+    "falhas_juiz": 0,
+    "auroc_nosso_juiz": 0.536,
+    "auroc_ragas_ragbench": 0.607
+  },
+  "geral": {
+    "n": 206,
+    "falhas_juiz": 0,
+    "auroc_nosso_juiz": 0.701,
+    "auroc_ragas_ragbench": 0.567
+  }
+}

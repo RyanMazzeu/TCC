@@ -38,3 +38,15 @@ main.log
 .env
 # Índice local do notebook Testar_RAG (recriado sozinho se faltar)
 Pesquisa/notebooks/.chroma_notebook/
+# Dados brutos grandes dos benchmarks: preparar_benchmarks.py baixa de novo o que faltar
+# (RAGBench completo, livros-texto do MedQA).
+Pesquisa/dados/brutos/ragbench/
+Pesquisa/dados/brutos/medqa/
+# Índices e embeddings dos benchmarks (o do MedQA tem centenas de MB): benchmarks.obter_indice recria.
+Pesquisa/vectorstores_benchmarks/
+Pesquisa/dados/processados/medqa.json
+Pesquisa/scripts/construir_indices.log
+# Fragmentos exportados e vetores do Colab (grandes; exportar_fragmentos.py recria)
+Pesquisa/colab/*.gz
+Pesquisa/colab/*.zip
+Pesquisa/scripts/*.log

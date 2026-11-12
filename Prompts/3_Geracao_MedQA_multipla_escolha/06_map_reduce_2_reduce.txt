@@ -1,0 +1,8 @@
+Combine the partial answers below (generated from different excerpts of a document) into a single final answer to the original multiple-choice question. Ignore partial answers that say there is no relevant information; if all of them say so, use your own medical knowledge. Always choose exactly one option. Start your answer with the letter of the chosen option, followed by a short justification.
+
+Original question: {pergunta}
+
+Partial answers:
+{respostas}
+
+Combined final answer:

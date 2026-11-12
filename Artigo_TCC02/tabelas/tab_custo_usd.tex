@@ -1,0 +1,23 @@
+\begin{table*}[!t]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{1.5pt}
+\caption{Custo em US\$ por 1.000 perguntas, por método e LLM, nas mesmas perguntas da Tabela~\ref{tab:principal} (econômicos: 100 perguntas por dataset; no Docugami, as 66 com valor numérico no gabarito). $^\dagger$ Intermediários: nas 25 perguntas da camada de generalização (no Docugami, as 14 com valor no gabarito), as únicas em que foram executados. Cada valor soma todas as chamadas ao LLM feitas pelo método: tokens de entrada e de saída vezes o preço de tabela de cada um (Tabela~\ref{tab:llms}). Custo nominal, sem descontos de cache de prompt.}
+\label{tab:custo_usd}
+\begin{tabular}{lccccc@{\hspace{3pt}}cc@{\hspace{4pt}}ccccc@{\hspace{3pt}}cc@{\hspace{4pt}}ccccc@{\hspace{3pt}}cc}
+\toprule
+ & \multicolumn{7}{c}{Docugami SEC 10-Q} & \multicolumn{7}{c}{MedQA} & \multicolumn{7}{c}{FaQuAD} \\
+\cmidrule(lr){2-8}\cmidrule(lr){9-15}\cmidrule(lr){16-22}
+Método & Qwen & \shortstack{Deep\\Seek} & Haiku & Luna & 4o-mini & Sonnet$^\dagger$ & Sol$^\dagger$ & Qwen & \shortstack{Deep\\Seek} & Haiku & Luna & 4o-mini & Sonnet$^\dagger$ & Sol$^\dagger$ & Qwen & \shortstack{Deep\\Seek} & Haiku & Luna & 4o-mini & Sonnet$^\dagger$ & Sol$^\dagger$ \\
+\midrule
+Sem RAG & 0,07 & 0,30 & 0,16 & 0,04 & 0,04 & 4,88 & 0,56 & 0,24 & 0,43 & 0,15 & 0,05 & 0,10 & 2,77 & 0,92 & 0,06 & 0,30 & 0,14 & 0,02 & 0,05 & 3,00 & 0,43 \\
+\midrule
+Stuff & 0,37 & 0,92 & 0,25 & 0,13 & 0,17 & 5,71 & 2,66 & 0,31 & 1,14 & 0,27 & 0,13 & 0,21 & 4,81 & 2,42 & 0,13 & 0,74 & 0,17 & 0,08 & 0,11 & 3,14 & 1,51 \\
+Refine & 0,48 & 1,57 & 0,76 & 0,30 & 0,45 & 30,32 & 5,60 & 1,03 & 2,54 & 0,74 & 0,30 & 0,58 & 15,82 & 5,70 & 0,34 & 1,47 & 0,69 & 0,23 & 0,52 & 15,99 & 3,38 \\
+Map-Reduce & 0,28 & 1,28 & 0,41 & 0,22 & 0,25 & 13,32 & 4,96 & 0,85 & 2,76 & 0,64 & 0,29 & 0,52 & 12,48 & 5,65 & 0,20 & 1,16 & 0,31 & 0,14 & 0,21 & 5,93 & 2,86 \\
+Map-Rerank & 0,30 & 1,40 & 0,42 & 0,23 & 0,27 & 7,23 & 4,89 & 0,55 & 1,93 & 0,67 & 0,28 & 0,40 & 9,62 & 5,34 & 0,22 & 1,30 & 0,36 & 0,16 & 0,22 & 6,02 & 3,27 \\
+Step-Down & 1,17 & 5,16 & 1,58 & 0,72 & 0,98 & 34,91 & 14,08 & 1,66 & 5,77 & 1,51 & 0,69 & 1,12 & 26,48 & 13,43 & 0,75 & 4,55 & 1,31 & 0,50 & 0,74 & 26,13 & 9,84 \\
+Reciprocal & 1,08 & 4,86 & 1,13 & 0,66 & 0,89 & 20,60 & 12,54 & 1,10 & 4,64 & 1,24 & 0,64 & 0,89 & 21,03 & 12,38 & 0,70 & 4,32 & 1,01 & 0,48 & 0,67 & 19,41 & 9,42 \\
+\bottomrule
+\end{tabular}
+\end{table*}

@@ -1,0 +1,35 @@
+[
+  {
+    "dataset": "faquad",
+    "n_vetores": 318,
+    "n_consultas": 100,
+    "chromadb": {
+      "indice": "HNSW (padrão do ChromaDB)",
+      "tempo_indexacao_s": 0.627,
+      "memoria_indexacao_mb": 29.3,
+      "tempo_consulta_medio_ms": 3.784
+    }
+  },
+  {
+    "dataset": "docugami_10q",
+    "n_vetores": 4463,
+    "n_consultas": 100,
+    "chromadb": {
+      "indice": "HNSW (padrão do ChromaDB)",
+      "tempo_indexacao_s": 5.77,
+      "memoria_indexacao_mb": 184.7,
+      "tempo_consulta_medio_ms": 2.751
+    }
+  },
+  {
+    "dataset": "medqa",
+    "n_vetores": 121553,
+    "n_consultas": 100,
+    "chromadb": {
+      "indice": "HNSW (padrão do ChromaDB)",
+      "tempo_indexacao_s": 260.834,
+      "memoria_indexacao_mb": 801.5,
+      "tempo_consulta_medio_ms": 4.998
+    }
+  }
+]

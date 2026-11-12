@@ -1,0 +1,218 @@
+PROMPTS DA PESQUISA
+===================
+
+Esta pasta reúne todos os prompts enviados a LLMs nos experimentos do artigo: os da geração de
+respostas pelos 6 métodos de RAG e pelo controle sem RAG, e os do juiz automático do RAGAS. Cada
+arquivo .txt traz o texto exatamente como foi enviado, sem nenhum comentário dentro dele.
+
+
+1. ORGANIZAÇÃO
+--------------
+
+  00_LEIA-ME.txt                         este arquivo
+  1_Geracao_FaQuAD_portugues/            9 prompts de geração usados no FaQuAD (português)
+  2_Geracao_Docugami_ingles/             os mesmos 9, traduzidos para o inglês (Docugami SEC 10-Q)
+  3_Geracao_MedQA_multipla_escolha/      os mesmos 9, adaptados à múltipla escolha (MedQA-USMLE)
+  4_Juiz_RAGAS/                          5 prompts do juiz (gpt-4o-mini) das métricas RAGAS
+  5_Exemplos_reais/                      5 prompts reais, já preenchidos (3 do Stuff, um por dataset,
+                                         e o exemplo da apresentação, sem RAG e com o Stuff)
+
+
+2. COMO LER OS ARQUIVOS
+-----------------------
+
+- O que está entre chaves é preenchido na hora da chamada:
+    {pergunta}    a pergunta do dataset (no MedQA: o enunciado, uma linha em branco e as
+                  alternativas "A. ...", "B. ...", "C. ...", "D. ...", uma por linha)
+    {contexto}    trecho(s) recuperado(s) do banco vetorial (fragmentos de 1.000 caracteres, com
+                  sobreposição de 100). Quando há mais de um trecho, eles vêm em ordem de
+                  similaridade, separados por uma linha com "---" entre linhas em branco
+    {resposta}    a resposta atual, no Refine
+    {respostas}   as respostas intermediárias, cada uma começando com "- " e separadas por uma
+                  linha em branco (Map-Reduce e Query Step-Down)
+- O número de perguntas alternativas já aparece preenchido ("4"), porque foi sempre 4.
+- Em todos os métodos foram recuperados k = 4 trechos por busca.
+- Cada chamada de geração foi uma única mensagem com o papel "user", contendo só o texto do prompt,
+  sem mensagem de sistema. Os 7 LLMs receberam exatamente o mesmo texto.
+- Qual conjunto vale para cada dataset está definido em Pesquisa/scripts/benchmarks.py
+  (CONJUNTO_PROMPTS); os textos ficam em Pesquisa/scripts/pipeline_base.py (dicionário PROMPTS).
+
+
+3. PROMPTS DE GERAÇÃO (pastas 1, 2 e 3)
+---------------------------------------
+
+As três pastas têm os mesmos 9 arquivos. Usados com os 7 LLMs (gpt-4o-mini, GPT-6 Luna, Claude
+Haiku 5.5, Qwen3.5-9B e DeepSeek V4 Pro em 100 perguntas por dataset; Claude Sonnet 5 e GPT-6 Sol
+em 25), nas 12.150 execuções do artigo. Rodados por Pesquisa/scripts/rodar_benchmarks.py.
+
+Chamadas por pergunta em cada método:
+  Controle sem RAG ... 1   (01)
+  Stuff .............. 1   (02)
+  Refine ............. 4   (03 uma vez + 04 três vezes)
+  Map-Reduce ......... 5   (05 quatro vezes + 06 uma vez)
+  Map-Rerank ......... 4   (07 quatro vezes)
+  Query Step-Down .... 6   (08 uma vez + 02 quatro vezes + 09 uma vez)
+  Reciprocal RAG ..... 5   (08 uma vez + 07 quatro vezes)
+
+01_controle_sem_rag.txt
+  Onde: controle sem RAG (função gerar_resposta_sem_rag).
+  Como: 1 chamada só com a pergunta, sem nenhum trecho. Serve para separar o que o RAG acrescenta
+  do que o modelo já sabia.
+
+02_stuff.txt
+  Onde: método Stuff (gerar_resposta_stuff) e, dentro do Query Step-Down, na resposta a cada
+  pergunta alternativa.
+  Como: 1 chamada com os 4 trechos recuperados juntos em {contexto}. No Query Step-Down, são 4
+  chamadas: {pergunta} é a pergunta alternativa e {contexto} são os 4 trechos recuperados com ela.
+  Também é o prompt das repetições do Stuff (2 execuções a mais nas 25 perguntas, nos modelos que
+  não aceitam temperatura 0: Claude Haiku 5.5, Claude Sonnet 5, GPT-6 Luna e GPT-6 Sol) e da
+  comparação entre busca aproximada e busca exata no banco vetorial
+  (comparar_bancos_passo3_stuff_faiss.py).
+
+03_refine_1_resposta_inicial.txt
+  Onde: método Refine, 1ª chamada (gerar_resposta_refine).
+  Como: {contexto} é só o 1º trecho (o mais similar). Gera a resposta inicial.
+
+04_refine_2_refinamento.txt
+  Onde: método Refine, chamadas 2 a 4.
+  Como: uma chamada para cada trecho seguinte (2º, 3º e 4º). {resposta} é a resposta da chamada
+  anterior e {contexto} é o novo trecho. A resposta final é a da 4ª chamada.
+
+05_map_reduce_1_map.txt
+  Onde: método Map-Reduce, etapa "map" (gerar_resposta_map_reduce).
+  Como: 4 chamadas independentes, uma por trecho; cada uma gera uma resposta parcial.
+
+06_map_reduce_2_reduce.txt
+  Onde: método Map-Reduce, etapa "reduce".
+  Como: 1 chamada que recebe a pergunta original e as 4 respostas parciais em {respostas}, sem os
+  trechos, e produz a resposta final.
+
+07_resposta_com_confianca_map_rerank_e_reciprocal.txt
+  Onde: método Map-Rerank e Reciprocal RAG (função _responder_com_confianca).
+  Como: o modelo devolve a resposta e uma nota de confiança de 0 a 100.
+    - Map-Rerank: 4 chamadas, uma por trecho ({contexto} = 1 trecho).
+    - Reciprocal: 4 chamadas, uma por pergunta alternativa ({pergunta} = pergunta alternativa;
+      {contexto} = os 4 trechos recuperados com ela).
+  Nos dois, fica a resposta de maior confiança. O código lê as linhas RESPOSTA/ANSWER e
+  CONFIANCA/CONFIDENCE; se o modelo não seguir o formato, a confiança conta como 0.
+
+08_perguntas_alternativas_step_down_e_reciprocal.txt
+  Onde: 1ª chamada do Query Step-Down e do Reciprocal RAG (_gerar_perguntas_alternativas).
+  Como: 1 chamada que gera 4 perguntas alternativas, mais específicas, a partir da pergunta
+  original e de um contexto inicial ({contexto} = os 4 trechos recuperados com a pergunta
+  original). O código separa as linhas, tira a numeração e fica com as 4 primeiras. No MedQA, o
+  modelo reescreve só o enunciado, e as alternativas da pergunta original são coladas
+  automaticamente no fim de cada pergunta gerada.
+
+09_combinacao_step_down.txt
+  Onde: última chamada do Query Step-Down.
+  Como: 1 chamada que recebe a pergunta original e as 4 respostas às perguntas alternativas em
+  {respostas}, e as combina em uma resposta final.
+
+Diferenças entre as três pastas
+  - 1_Geracao_FaQuAD_portugues: versão original, em português. O modelo responde só com o
+    contexto, diz que não sabe quando a resposta não está nele e responde em português.
+  - 2_Geracao_Docugami_ingles: tradução literal, instrução por instrução, da versão em português,
+    com "Answer in English." no lugar de "Responda em português.". O método é o mesmo nos dois
+    idiomas.
+  - 3_Geracao_MedQA_multipla_escolha: no MedQA não há instrução de recusa. O modelo usa os trechos
+    como apoio, recorre ao próprio conhecimento médico quando eles não bastam e sempre escolhe uma
+    alternativa, começando a resposta pela letra, seguida de uma justificativa curta (como no
+    MIRAGE, Xiong et al., 2024). Só a etapa "map" do Map-Reduce (05) ainda pode responder que o
+    trecho não ajuda; quem escolhe a alternativa é o "reduce" (06).
+
+Versão do piloto
+  Antes da rodada final, um piloto usou a instrução de idioma "Responda no mesmo idioma da
+  pergunta." (primeiro só com o conjunto em português, também nas perguntas em inglês; depois com
+  a tradução "Answer in the same language as the question."). Parte dos modelos respondeu em
+  português, ou até em espanhol e holandês, a perguntas em inglês, o que derrubava as métricas por
+  causa do idioma. Por isso a versão final fixa o idioma ("Responda em português." /
+  "Answer in English."). Fora essa frase, o texto do piloto era o mesmo destas pastas, e as
+  respostas do piloto não entram em nenhum resultado do artigo.
+
+
+4. PROMPTS DO JUIZ RAGAS (pasta 4)
+----------------------------------
+
+Estes prompts NÃO foram escritos pelos autores: são os prompts padrão da biblioteca ragas 0.4.3,
+sem nenhuma alteração ou tradução (estão em inglês para os três datasets, inclusive o FaQuAD). Os
+arquivos foram gerados pela própria configuração do TCC (Pesquisa/scripts/avaliar_ragas.py), com
+a chamada interceptada antes de sair da máquina, então são exatamente as mensagens que o juiz
+recebeu.
+
+Configuração do juiz: gpt-4o-mini, temperature 0,01, top_p 0,1 (padrões do ragas), max_tokens
+4096, saída em JSON. Cada chamada tem 2 mensagens:
+  - MENSAGEM 1 (system): adicionada pela biblioteca instructor, que o ragas usa para obrigar a
+    saída em JSON. O recuo irregular faz parte do texto enviado.
+  - MENSAGEM 2 (user): o prompt da métrica (instrução, esquema JSON da saída, exemplos e a
+    entrada da vez).
+Na entrada, os textos reais aparecem como strings JSON: quebras de linha viram \n e aspas são
+escapadas. Placeholders: {pergunta}, {resposta_gerada} (resposta do LLM avaliado),
+{resposta_de_referencia} (gabarito do dataset; no MedQA, o texto da alternativa correta),
+{trecho_1} a {trecho_4} (trechos recuperados), {afirmacao_...} (afirmações extraídas no passo 1
+da Faithfulness).
+
+Rodados por Pesquisa/scripts/avaliar_ragas_benchmarks.py (modos "respostas" e "contexto").
+
+01_faithfulness_1_extrair_afirmacoes.txt
+02_faithfulness_2_verificar_afirmacoes.txt
+  Métrica: Faithfulness (fração das afirmações da resposta sustentadas pelos trechos).
+  Onde: respostas dos métodos Stuff, Refine, Map-Reduce e Map-Rerank (os que entregam ao LLM um
+  conjunto único de trechos), nos 3 datasets e nos 7 LLMs.
+  Como: 2 chamadas por resposta. O passo 1 quebra a resposta em afirmações; o passo 2 verifica
+  cada afirmação contra os 4 trechos, unidos por quebra de linha (nota 1 ou 0). A Faithfulness é
+  a fração de afirmações com nota 1.
+  Também usados na validação do juiz contra o RAGBench (validar_juiz_ragbench.py): as mesmas 2
+  chamadas em 206 respostas anotadas, com os documentos do RAGBench no lugar dos trechos.
+
+03_answer_relevancy.txt
+  Métrica: Answer Relevancy (quanto a resposta endereça a pergunta).
+  Onde: respostas de todos os 6 métodos e do controle sem RAG, nos 3 datasets e nos 7 LLMs.
+  Como: o juiz recebe só a resposta e gera, a partir dela, uma pergunta que ela responderia,
+  marcando se a resposta é evasiva. A chamada é feita 3 vezes com o mesmo texto. Depois, as 3
+  perguntas geradas e a pergunta original viram vetores com o text-embedding-3-small da OpenAI
+  (sem prompt), e a nota é a similaridade de cosseno média entre elas; se as 3 chamadas
+  marcarem a resposta como evasiva, a nota é 0.
+
+04_context_precision.txt
+  Métrica: Context Precision (os trechos úteis vieram nas primeiras posições?).
+  Onde: uma vez por pergunta em cada dataset (100 por dataset), sobre os 4 trechos recuperados
+  com a pergunta original, que são os mesmos para todos os métodos e LLMs.
+  Como: 4 chamadas por pergunta, uma por trecho ({trecho_i}, i = 1 a 4, na ordem da busca); o
+  juiz diz se o trecho foi útil para chegar à resposta de referência (1 ou 0). A nota é a
+  precisão média dessas decisões.
+
+05_context_recall.txt
+  Métrica: Context Recall (os trechos cobrem a resposta de referência?).
+  Onde: igual à Context Precision, uma vez por pergunta.
+  Como: 1 chamada por pergunta, com os 4 trechos unidos por quebra de linha. O juiz quebra a
+  resposta de referência em afirmações e diz se cada uma pode ser atribuída aos trechos. A nota é
+  a fração atribuída.
+
+
+5. EXEMPLOS REAIS (pasta 5)
+---------------------------
+
+Três prompts do Stuff exatamente como foram enviados, montados a partir dos logs da pesquisa (a
+pergunta e os trechos gravados) com o texto de 02_stuff.txt. Os trechos são os mesmos para os 7
+LLMs. Conferência: a contagem de tokens desses textos bate com a registrada pela API do
+gpt-4o-mini (mais os 7 tokens fixos de formatação da mensagem).
+
+  stuff_FaQuAD.txt     pergunta 0c5af052543447e081b723ed3f7aca08 ("O que diz a Tese de
+                       Church-Turing?")
+  stuff_Docugami.txt   pergunta docugami_q008 (gastos de P&D da Apple no trimestre mais recente)
+  stuff_MedQA.txt      pergunta medqa_q0052 (hipertensão com hipocalemia; alternativa correta: A)
+
+As três estão entre as 25 perguntas respondidas pelos 7 LLMs. Foram escolhidas por serem casos em
+que a busca trouxe a informação da resposta de referência, para ilustrar o funcionamento normal
+do método.
+
+Exemplo da apresentação (pergunta 3a04d81a9c6e4d50bcb2470019978a45, "Qual o objetivo do período
+letivo especial?", FaQuAD; resposta de referência: oferecimento de disciplinas obrigatórias e
+optativas):
+
+  sem_rag_FaQuAD_periodo_letivo.txt   o controle sem RAG (01_controle_sem_rag.txt preenchido)
+  stuff_FaQuAD_periodo_letivo.txt     o Stuff (02_stuff.txt preenchido com os 4 trechos recuperados)
+
+Mesma conferência de tokens (45 e 639 no gpt-4o-mini). Esta pergunta está entre as 25
+respondidas pelos 7 LLMs.

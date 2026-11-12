@@ -1,0 +1,83 @@
+[
+  {
+    "dataset": "faquad",
+    "n_vetores": 318,
+    "n_consultas": 100,
+    "chromadb": {
+      "indice": "HNSW (padrão do ChromaDB)",
+      "tempo_indexacao_s": 0.627,
+      "memoria_indexacao_mb": 29.3,
+      "tempo_consulta_medio_ms": 3.784
+    },
+    "faiss": {
+      "indice": "IndexFlatL2 (busca exata)",
+      "tempo_indexacao_s": 0.001,
+      "memoria_indexacao_mb": 1.6,
+      "tempo_consulta_medio_ms": 0.049
+    },
+    "concordancia_top4": 1.0,
+    "sobreposicao_media_top4": 1.0,
+    "hit@4": {
+      "chromadb": 0.93,
+      "faiss": 0.93
+    },
+    "recall@4": {
+      "chromadb": 0.93,
+      "faiss": 0.93
+    }
+  },
+  {
+    "dataset": "docugami_10q",
+    "n_vetores": 4463,
+    "n_consultas": 100,
+    "chromadb": {
+      "indice": "HNSW (padrão do ChromaDB)",
+      "tempo_indexacao_s": 5.77,
+      "memoria_indexacao_mb": 184.7,
+      "tempo_consulta_medio_ms": 2.751
+    },
+    "faiss": {
+      "indice": "IndexFlatL2 (busca exata)",
+      "tempo_indexacao_s": 0.017,
+      "memoria_indexacao_mb": 17.4,
+      "tempo_consulta_medio_ms": 1.204
+    },
+    "concordancia_top4": 1.0,
+    "sobreposicao_media_top4": 1.0,
+    "hit@4": {
+      "chromadb": 0.8485,
+      "faiss": 0.8485
+    },
+    "recall@4": {
+      "chromadb": 0.7879,
+      "faiss": 0.7879
+    }
+  },
+  {
+    "dataset": "medqa",
+    "n_vetores": 121553,
+    "n_consultas": 100,
+    "chromadb": {
+      "indice": "HNSW (padrão do ChromaDB)",
+      "tempo_indexacao_s": 260.834,
+      "memoria_indexacao_mb": 801.5,
+      "tempo_consulta_medio_ms": 4.998
+    },
+    "faiss": {
+      "indice": "IndexFlatL2 (busca exata)",
+      "tempo_indexacao_s": 0.304,
+      "memoria_indexacao_mb": 474.8,
+      "tempo_consulta_medio_ms": 36.471
+    },
+    "concordancia_top4": 0.82,
+    "sobreposicao_media_top4": 0.945,
+    "hit@4": {
+      "chromadb": null,
+      "faiss": null
+    },
+    "recall@4": {
+      "chromadb": null,
+      "faiss": null
+    }
+  }
+]

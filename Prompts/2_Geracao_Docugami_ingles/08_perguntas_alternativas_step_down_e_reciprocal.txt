@@ -1,0 +1,6 @@
+Based on the context below and on the user's original question, generate exactly 4 alternative questions, more specific and less ambiguous, that help clarify the intent of the original question. Answer ONLY with the 4 questions, one per line, numbered, with no additional text, in English.
+
+Context:
+{contexto}
+
+Original question: {pergunta}

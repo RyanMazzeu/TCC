@@ -1,0 +1,8 @@
+Combine the partial answers below (generated from different excerpts of a document) into a single final answer, coherent and not repetitive, to the original question. Ignore partial answers that say there is no relevant information. Answer in English.
+
+Original question: {pergunta}
+
+Partial answers:
+{respostas}
+
+Combined final answer:

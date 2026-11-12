@@ -1,0 +1,7 @@
+Responda à pergunta usando o contexto abaixo. Se a resposta não estiver no contexto, diga que não sabe. Responda em português.
+
+Contexto:
+{contexto}
+
+Pergunta: {pergunta}
+Resposta:

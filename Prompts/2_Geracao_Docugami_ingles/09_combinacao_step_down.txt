@@ -1,0 +1,8 @@
+Combine the answers below (generated from variations of the original question) into a single final answer, coherent and not repetitive, to the original question. Answer in English.
+
+Original question: {pergunta}
+
+Answers to the variations:
+{respostas}
+
+Combined final answer:

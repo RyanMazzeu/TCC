@@ -1,0 +1,18 @@
+\begin{table*}[!t]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\caption{ChromaDB (HNSW, busca aproximada) e FAISS (\texttt{IndexFlatL2}, busca exata) sobre os mesmos vetores BGE-M3. Top-4 idêntico: consultas em que os dois bancos entregam os mesmos quatro fragmentos. Nas duas últimas colunas, a métrica principal do Stuff do gpt-4o-mini nas 100 perguntas, refazendo com o top-4 do FAISS as perguntas em que ele difere do índice dos experimentos.}
+\label{tab:bancos}
+\begin{tabular}{lrcccccccc}
+\toprule
+ & & \multicolumn{2}{c}{Indexação (s)} & \multicolumn{2}{c}{Consulta (ms)} & \multicolumn{2}{c}{Memória (MB)} & & \\
+\cmidrule(lr){3-4}\cmidrule(lr){5-6}\cmidrule(lr){7-8}
+Dataset & Vetores & Chroma & FAISS & Chroma & FAISS & Chroma & FAISS & Top-4 idêntico & Stuff: Chroma × FAISS \\
+\midrule
+FaQuAD & 318 & 0,63 & 0,001 & 3,78 & 0,05 & 29,3 & 1,6 & 100\% & 0,86 × 0,86 \\
+Docugami SEC 10-Q & 4.463 & 5,77 & 0,017 & 2,75 & 1,20 & 184,7 & 17,4 & 100\% & 0,10 × 0,10 \\
+MedQA & 121.553 & 260,83 & 0,304 & 5,00 & 36,47 & 801,5 & 474,8 & 82\% & 0,68 × 0,69 \\
+\bottomrule
+\end{tabular}
+\end{table*}

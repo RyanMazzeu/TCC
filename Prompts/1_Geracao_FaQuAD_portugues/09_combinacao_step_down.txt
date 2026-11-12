@@ -1,0 +1,8 @@
+Combine as respostas abaixo (geradas a partir de variações da pergunta original) em uma única resposta final, coerente e não repetitiva, para a pergunta original. Responda em português.
+
+Pergunta original: {pergunta}
+
+Respostas das variações:
+{respostas}
+
+Resposta final combinada:

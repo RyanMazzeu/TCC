@@ -1,0 +1,21 @@
+\begin{table}[!t]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\caption{Mediana da similaridade de cosseno com a resposta de referência: Tabela 1 de Şakar e Emekci \cite{sakar2025rag} e este trabalho, com o mesmo embedding (bge-small-en-v1.5) e todas as respostas dos 7 LLMs. Entre parênteses, a posição do método.}
+\label{tab:ancora}
+\begin{tabular}{lcccc}
+\toprule
+ & \multicolumn{2}{c}{Docugami SEC 10-Q} & \multicolumn{2}{c}{MedQA} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+Método & Artigo-base & Este trabalho & Artigo-base & Este trabalho \\
+\midrule
+Stuff & 0,895 (2º) & 0,839 (4º) & 0,641 (3º) & 0,757 (6º) \\
+Refine & 0,836 (5º) & 0,865 (2º) & 0,609 (4º) & 0,760 (5º) \\
+Map-Reduce & 0,873 (4º) & 0,841 (3º) & 0,569 (5º) & 0,769 (4º) \\
+Map-Rerank & 0,801 (6º) & 0,705 (5º) & 0,148 (6º) & 0,773 (2º) \\
+Step-Down & 0,890 (3º) & 0,881 (1º) & 0,678 (1º) & 0,769 (3º) \\
+Reciprocal & 0,971 (1º) & 0,684 (6º) & 0,673 (2º) & 0,776 (1º) \\
+\bottomrule
+\end{tabular}
+\end{table}

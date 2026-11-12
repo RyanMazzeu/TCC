@@ -1,0 +1,34 @@
+Answer the multiple-choice question below. Use the context as support; if it does not contain the answer, use your own medical knowledge. Always choose exactly one option. Start your answer with the letter of the chosen option, followed by a short justification.
+
+Context:
+A 66-year-old man was admitted to hospital with a plasma K+ concentration of 1.7 meq/L and profound weakness. The patient had noted progressive weakness over several days, to the point that he was unable to rise from bed. Past medical history was notable for small-cell lung cancer with metastases to brain, liver, and adrenals. The patient had been treated with one cycle of cisplatin/etoposide 1 year before this admission, which was complicated by acute kidney injury (peak creatinine of 5, with residual chronic kidney disease), and three subsequent cycles of cyclophosphamide/doxorubicin/vincristine, in addition to 15 treatments with whole-brain radiation. On physical examination, the patient was jaundiced. Blood pressure was 130/70 mmHg, increasing to 160/98 mmHg after 1 L of saline, with a JVP at 8 cm. There was generalized muscle weakness. Potassium 3.7 1.7 3.5 meq/L 7.47 Creatinine 2.8 2.9 2.3 mg/dL Magnesium 1.3 1.6 2.4 mg/dL Albumin 3.4 2.8 2.3 Total bilirubin 0.65 5.19 5.5
+
+---
+
+causes of hypertension must always be considered—renal disease, renal artery stenosis, eclampsia, pheochromocytoma, hyperaldosteronism, adrenocorticotropic hormone or corticosteroid excess and, of course, sympathetically active drugs as mentioned.
+
+---
+
+B. Presents with fever, cough, and dyspnea hours after exposure; resolves with removal of the exposure C. Chronic exposure leads to interstitial fibrosis. I. BASIC PRINCIPLES A. High pressure in the pulmonary circuit (mean arterial pressure > 25 mm Hg; normal is 10 mm Hg) B. Characterized by atherosclerosis of the pulmonary trunk, smooth muscle hypertrophy of pulmonary arteries, and intimal fibrosis; plexiform lesions are seen with severe, long-standing disease (Fig. 9.16). C. Leads to right ventricular hypertrophy with eventual cor pulmonale D. Presents with exertional dyspnea or right-sided heart failure E. Subclassified as primary or secondary based on etiology II. PRIMARY PULMONARY HYPERTENSION A. Classically seen in young adult females B. Etiology is unknown; some familial forms are related to inactivating mutations of BMPR2, leading to proliferation ofvascular smooth muscle. III. SECONDARY PULMONARY HYPERTENSION
+
+---
+
+B. Etiology is unknown; some familial forms are related to inactivating mutations of BMPR2, leading to proliferation ofvascular smooth muscle. III. SECONDARY PULMONARY HYPERTENSION A. Due to hypoxemia (e.g., COPD and interstitial lung disease) or increased volume in the pulmonary circuit (e.g., congenital heart disease); may also arise with recurrent pulmonary embolism I. ACUTE RESPIRATORY DISTRESS SYNDROME A. Diffuse damage to the alveolar-capillary interface (diffuse alveolar damage) B. Leakage of protein-rich fluid leads to edema that combines with necrotic epithelial cells to form hyaline membranes lining alveoli (Fig. 9.17A). C. Clinical features 1. Hypoxemia and cyanosis with respiratory distress-due to thickened diffusion barrier and collapse of air sacs (increased surface tension) 2. 'White-out' on chest x-ray (Fig. 9.17B)
+
+Question: A 56-year-old man with a history of hypertension presents to his physician with progressive fatigue and new onset muscle cramps. He has had no recent changes to his medication regimen, which includes hydrochlorothiazide, lisinopril, and amlodipine. His temperature is 98.0°F (36.7°C), blood pressure is 174/111 mmHg, pulse is 70/min, respirations are 12/min, and oxygen saturation is 98% on room air. The patient's cardiopulmonary and abdominal exams are unremarkable. Laboratory values are ordered as seen below.
+
+Serum:
+Na+: 138 mEq/L
+Cl-: 100 mEq/L
+K+: 3.3 mEq/L
+HCO3-: 33 mEq/L
+BUN: 20 mg/dL
+Glucose: 129 mg/dL
+
+What is the most likely underlying etiology of this patient's hypertension?
+
+A. Aldosterone excess
+B. Catecholamine-secreting mass
+C. Cortisol excess
+D. Impaired kidney perfusion
+Answer:

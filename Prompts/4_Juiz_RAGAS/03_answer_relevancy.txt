@@ -1,0 +1,71 @@
+########## MENSAGEM 1 (role: system) ##########
+
+            As a genius expert, your task is to understand the content and provide
+            the parsed objects in json that match the following json_schema:
+
+
+            {
+  "description": "Structured output for answer relevance question generation.",
+  "properties": {
+    "question": {
+      "description": "Question that can be answered from the response",
+      "title": "Question",
+      "type": "string"
+    },
+    "noncommittal": {
+      "description": "1 if the response is evasive/vague, 0 if it is substantive",
+      "title": "Noncommittal",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "question",
+    "noncommittal"
+  ],
+  "title": "AnswerRelevanceOutput",
+  "type": "object"
+}
+
+            Make sure to return an instance of the JSON, not the schema itself
+
+########## MENSAGEM 2 (role: user) ##########
+Generate a question for the given answer and identify if the answer is noncommittal.
+Give noncommittal as 1 if the answer is noncommittal (evasive, vague, or ambiguous) and 0 if the answer is substantive.
+Examples of noncommittal answers: "I don't know", "I'm not sure", "It depends".
+Please return the output in a JSON format that complies with the following schema as specified in JSON Schema:
+{"description": "Structured output for answer relevance question generation.", "properties": {"question": {"description": "Question that can be answered from the response", "title": "Question", "type": "string"}, "noncommittal": {"description": "1 if the response is evasive/vague, 0 if it is substantive", "title": "Noncommittal", "type": "integer"}}, "required": ["question", "noncommittal"], "title": "AnswerRelevanceOutput", "type": "object"}Do not use single quotes in your response but double quotes,properly escaped with a backslash.
+
+--------EXAMPLES-----------
+Example 1
+Input: {
+    "response": "Albert Einstein was born in Germany."
+}
+Output: {
+    "question": "Where was Albert Einstein born?",
+    "noncommittal": 0
+}
+
+Example 2
+Input: {
+    "response": "The capital of France is Paris, a city known for its architecture and culture."
+}
+Output: {
+    "question": "What is the capital of France?",
+    "noncommittal": 0
+}
+
+Example 3
+Input: {
+    "response": "I don't know about the groundbreaking feature of the smartphone invented in 2023 as I am unaware of information beyond 2022."
+}
+Output: {
+    "question": "What was the groundbreaking feature of the smartphone invented in 2023?",
+    "noncommittal": 1
+}
+-----------------------------
+
+Now perform the same with the following input
+input: {
+    "response": "{resposta_gerada}"
+}
+Output: 

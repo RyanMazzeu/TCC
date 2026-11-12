@@ -1,0 +1,7 @@
+Answer the question using only the context below. If the answer is not in the context, say that you don't know. Answer in English.
+
+Context:
+{contexto}
+
+Question: {pergunta}
+Answer:

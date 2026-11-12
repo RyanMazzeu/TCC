@@ -1,0 +1,6 @@
+Based on the context below and on the original multiple-choice question, generate exactly 4 alternative versions of the question stem, more specific and less ambiguous, that help clarify its intent. Do not include the answer options: they are added automatically. Answer ONLY with the 4 questions, one per line, numbered, with no additional text.
+
+Context:
+{contexto}
+
+Original question: {pergunta}

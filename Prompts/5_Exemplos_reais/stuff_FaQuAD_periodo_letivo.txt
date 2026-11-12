@@ -1,0 +1,19 @@
+Responda à pergunta usando apenas o contexto abaixo. Se a resposta não estiver no contexto, diga que não sabe. Responda em português.
+
+Contexto:
+o período letivo especial ocorre entre dois períodos letivos regulares com duração de no mínimo duas e no máximo seis semanas, destinando-se ao oferecimento de disciplinas obrigatórias e optativas a critério do colegiado de curso. cada turma deverá ter, no mínimo, dez acadêmicos, podendo o colegiado de curso, excepcionalmente, autorizar turmas com número menor. o acadêmico poderá inscrever-se em até três disciplinas. a coordenação de curso deverá solicitar o oferecimento dessas turmas à direção da unidade da administração setorial na qual a disciplina está lotada. as atividades acadêmicas, no período letivo especial, deverão obedecer às disposições vigentes para o período letivo regular, exceto no que tange à duração.
+
+---
+
+Será considerado dia letivo, para efeito de cumprimento do Calendário Acadêmico, aquele que, efetivamente, possibilitar a realização de atividades acadêmicas com participação de acadêmicos e professores. O período letivo especial ocorre entre dois períodos letivos regulares com duração de no mínimo duas e no máximo seis semanas, destinando-se ao oferecimento de disciplinas obrigatórias e optativas a critério do Colegiado de Curso. Cada turma deverá ter, no mínimo, dez acadêmicos, podendo o Colegiado de Curso, excepcionalmente, autorizar turmas com número menor.
+
+---
+
+No regime didático semestral de matrícula em disciplinas, o ano letivo compreende os períodos regulares de atividades (o primeiro e o segundo semestres) e os períodos letivos especiais, oferecidos entre os períodos regulares. Os períodos regulares de um ano letivo, independentemente do ano civil, abrangem, no mínimo, duzentos dias de atividades acadêmicas efetivas. O Calendário Acadêmico que estabelece os prazos para a efetivação das atividades acadêmicas dos Cursos de Graduação será aprovado pelo Conselho de Ensino de Graduação (Coeg), por proposta da Pró-Reitoria de Ensino de Graduação (Preg). No caso de interrupção das atividades acadêmicas no âmbito do curso não prevista no Calendário Acadêmico, deverá ser elaborado pelo Colegiado de Curso plano de reposição, prevendo o cumprimento integral da carga horária de cada disciplina, e atendendo o disposto no art. 1o, deste Regulamento.
+
+---
+
+A Coordenação de Curso deverá solicitar o oferecimento dessas turmas à Direção da Unidade da Administração Setorial na qual a disciplina está lotada. Os lançamentos no Sistema de Controle Acadêmico (Siscad), referentes ao período letivo especial, devem anteceder, no mínimo, em cinco dias úteis, a data prevista para matrícula do período letivo regular subsequente. As atividades acadêmicas, no período letivo especial, deverão obedecer às disposições vigentes para o período letivo regular, exceto no que tange à duração.
+
+Pergunta: Qual o objetivo do período letivo especial?
+Resposta:

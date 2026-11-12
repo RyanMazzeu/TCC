@@ -1,0 +1,10 @@
+Your task is to refine an existing answer to the multiple-choice question below, only if the new context brings relevant information that is not in it yet. If the new context does not help, repeat the existing answer without changes. Always choose exactly one option. Start your answer with the letter of the chosen option, followed by a short justification.
+
+Original question: {pergunta}
+
+Existing answer: {resposta}
+
+New context:
+{contexto}
+
+Refined answer:

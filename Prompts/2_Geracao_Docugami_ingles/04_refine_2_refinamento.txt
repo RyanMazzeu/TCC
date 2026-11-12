@@ -1,0 +1,10 @@
+Your task is to refine an existing answer, only if the new context brings relevant information that is not in it yet. If the new context does not help, repeat the existing answer without changes. Answer in English.
+
+Original question: {pergunta}
+
+Existing answer: {resposta}
+
+New context:
+{contexto}
+
+Refined answer:
