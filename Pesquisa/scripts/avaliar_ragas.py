@@ -76,7 +76,9 @@ class LimitadorDeTaxa:
 
 def _cliente(por_minuto: float, **kwargs) -> AsyncOpenAI:
     http = DefaultAsyncHttpxClient(event_hooks={"request": [LimitadorDeTaxa(por_minuto)]})
-    return AsyncOpenAI(http_client=http, max_retries=8, **kwargs)
+    # timeout de 120 s (o padrão do SDK é 600 s): uma chamada que trava é refeita pelo próprio cliente em 2 min,
+    # em vez de segurar o lote inteiro por 10 min e virar métrica ausente.
+    return AsyncOpenAI(http_client=http, max_retries=8, timeout=120, **kwargs)
 
 
 def montar_metricas(juiz: str, por_minuto: float) -> dict:

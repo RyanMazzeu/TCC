@@ -21,8 +21,10 @@ import pandas as pd
 from matplotlib.colors import LinearSegmentedColormap
 from matplotlib.ticker import FuncFormatter
 from scipy import stats
+from scipy.optimize import nnls
 
 import analisar_benchmarks as ab
+import diagramas_rag
 import benchmarks
 import pipeline_base as pb
 from analisar_resultados import BASE_DIR, METRICAS_DIR, friedman_com_posthoc, holm
@@ -55,6 +57,13 @@ def num(x, casas: int = 2) -> str:
     return f"{x:,.{casas}f}".replace(",", "X").replace(".", ",").replace("X", ".")
 
 
+def empatados_no_maior(serie: pd.Series, casas: int = 2) -> list:
+    """Os itens cujo valor, escrito como no artigo (`casas` decimais), é igual ao maior. O negrito das tabelas e os
+    rótulos das figuras usam este critério, para nunca distinguir dois valores que o leitor vê iguais."""
+    maior = num(serie.max(), casas)
+    return [k for k, v in serie.items() if num(v, casas) == maior]
+
+
 def p_tex(p: float) -> str:
     if p is None or np.isnan(p):
         return "--"
@@ -82,8 +91,7 @@ def efeito_rag(g: pd.DataFrame, col: str) -> dict:
 
 
 INTERMEDIARIOS = ["claude_sonnet", "gpt_sol"]
-NOTA_INTERMEDIARIOS = ("$^\\dagger$ Intermediários: nas 25 perguntas da camada de generalização (no Docugami, as 14 com valor "
-                       "no gabarito), as únicas em que foram executados.")
+NOTA_INTERMEDIARIOS = "$^\\dagger$ Intermediários: nas 25 perguntas da camada de generalização."
 
 
 def cabecalho_7llms(rotulo_dataset) -> list[str]:
@@ -110,9 +118,9 @@ def tabela_principal(df: pd.DataFrame):
             friedman[nome, llm] = friedman_com_posthoc(g, col, ab.METODOS_RAG).get("p", np.nan)
     linhas = [
         "\\begin{table*}[!t]", "\\centering", "\\scriptsize", "\\setlength{\\tabcolsep}{1.5pt}",
-        "\\caption{Métrica principal de cada dataset por método e LLM. Econômicos: camada principal (100 perguntas por dataset; "
-        "no Docugami, as 66 com valor numérico no gabarito). " + NOTA_INTERMEDIARIOS + " Em negrito, o melhor valor de cada "
-        "coluna. * diferença em relação ao controle sem RAG com $p_{\\text{Holm}} < 0{,}05$ (Wilcoxon pareado). Na última "
+        "\\caption{Métrica principal de cada dataset por método e LLM. Econômicos: camada principal (100 perguntas por dataset). "
+        + NOTA_INTERMEDIARIOS + " Em negrito, o melhor valor de cada "
+        "coluna (mais de um quando empatam na segunda casa decimal). * diferença em relação ao controle sem RAG com $p_{\\text{Holm}} < 0{,}05$ (Wilcoxon pareado). Na última "
         "linha, o valor-$p$ do teste de Friedman entre os seis métodos de RAG (--: o mesmo resultado com todos os métodos em "
         "todas as perguntas, sem teste possível).}",
         "\\label{tab:principal}",
@@ -126,7 +134,7 @@ def tabela_principal(df: pd.DataFrame):
                 texto = num(v)
                 if m != "sem_rag" and sig[nome, llm][m][1] < 0.05:
                     texto += "*"
-                if np.isclose(v, serie.max()):
+                if m in empatados_no_maior(serie):
                     texto = f"\\textbf{{{texto}}}"
                 celulas.append(texto)
         linhas.append(f"{ab.NOME_METODO[m]} & " + " & ".join(celulas) + " \\\\")
@@ -140,7 +148,7 @@ def tabela_principal(df: pd.DataFrame):
 
 
 def tabela_tokens(df: pd.DataFrame):
-    """Mesmo recorte da Tabela de resultados principal (no Docugami, só as perguntas com valor no gabarito), com os
+    """Mesmo recorte da Tabela de resultados principal, com os
     tokens consumidos por pergunta no lugar da métrica: soma da entrada e da saída de todas as chamadas ao LLM feitas
     pelo método, em média por pergunta."""
     medias = {}
@@ -152,7 +160,7 @@ def tabela_tokens(df: pd.DataFrame):
     linhas = [
         "\\begin{table*}[!t]", "\\centering", "\\scriptsize", "\\setlength{\\tabcolsep}{1.5pt}",
         "\\caption{Tokens consumidos por pergunta, por método e LLM, nas mesmas perguntas da Tabela~\\ref{tab:principal} "
-        "(econômicos: 100 perguntas por dataset; no Docugami, as 66 com valor numérico no gabarito). " + NOTA_INTERMEDIARIOS +
+        "(econômicos: 100 perguntas por dataset). " + NOTA_INTERMEDIARIOS +
         " Cada valor é a média, por pergunta, da soma dos tokens de entrada e de saída de todas as chamadas ao LLM feitas pelo "
         "método. Os tokens são contados pelo tokenizador de cada modelo, de modo que a comparação entre LLMs reflete também a "
         "diferença entre tokenizadores.}",
@@ -180,7 +188,7 @@ def tabela_custo_usd(df: pd.DataFrame):
     linhas = [
         "\\begin{table*}[!t]", "\\centering", "\\scriptsize", "\\setlength{\\tabcolsep}{1.5pt}",
         "\\caption{Custo em US\\$ por 1.000 perguntas, por método e LLM, nas mesmas perguntas da Tabela~\\ref{tab:principal} "
-        "(econômicos: 100 perguntas por dataset; no Docugami, as 66 com valor numérico no gabarito). " + NOTA_INTERMEDIARIOS +
+        "(econômicos: 100 perguntas por dataset). " + NOTA_INTERMEDIARIOS +
         " Cada valor soma todas as chamadas ao LLM feitas pelo método: tokens de entrada e de saída vezes o preço de tabela de "
         "cada um (Tabela~\\ref{tab:llms}). Custo nominal, sem descontos de cache de prompt.}",
         "\\label{tab:custo_usd}",
@@ -212,7 +220,7 @@ def tabela_concordancia(df: pd.DataFrame) -> dict:
                         "ranking": ranking(t5).to_dict(), "tabela7": t7}
     linhas = ["\\begin{table}[!t]", "\\centering", "\\footnotesize", "\\setlength{\\tabcolsep}{4pt}",
               "\\caption{Posto médio de cada método entre os cinco LLMs da camada principal (1 = melhor) e concordância da ordem "
-              "dos seis métodos entre os LLMs (W de Kendall: 1 = mesma ordem em todos; 0 = nenhuma concordância; entre parênteses, "
+              "dos seis métodos entre os LLMs (W de Kendall, com correção de empates: 1 = mesma ordem em todos; 0 = nenhuma concordância; entre parênteses, "
               "o valor-$p$).}", "\\label{tab:concordancia}",
               "\\begin{tabular}{lccc}", "\\toprule",
               "Método & Docugami & MedQA & FaQuAD \\\\", "\\midrule"]
@@ -232,7 +240,9 @@ def tabela_custo(df: pd.DataFrame):
     custo = g.groupby(["dataset", "llm", "metodo_rag"])["custo_usd"].mean().unstack()
     relativo = custo.div(custo["stuff"], axis=0)
     tokens = g.groupby("metodo_rag")["tokens_totais"].mean()
-    tempo = g.groupby("metodo_rag")["tempo_total_s"].median()
+    # Da recuperação ao fim da geração. O tempo_total_s do log não serve: ele é medido depois do cálculo da similaridade
+    # de cosseno com a referência (rodar_experimento), que é avaliação, não parte do RAG, e somava ~2 s à mediana.
+    tempo = (g["tempo_recuperacao_s"] + g["tempo_geracao_s"]).groupby(g["metodo_rag"]).median()
     linhas = ["\\begin{table}[!t]", "\\centering", "\\footnotesize", "\\setlength{\\tabcolsep}{3.5pt}",
               "\\caption{Custo por resposta na camada principal (5 LLMs, 3 datasets, 1.500 respostas por método). Custo relativo: "
               "custo em US\\$ do método dividido pelo do Stuff, por LLM e dataset (mediana e faixa dos 15 pares). Tempo: da "
@@ -257,7 +267,7 @@ def tabela_llms(df: pd.DataFrame):
     linhas = ["\\begin{table}[!t]", "\\centering", "\\footnotesize", "\\setlength{\\tabcolsep}{1.8pt}",
               "\\caption{LLMs avaliados. Preço em US\\$ por milhão de tokens (entrada/saída), consultado em outubro e novembro de "
               "2026. Temp. 0: o modelo aceita temperatura 0; os demais rodaram com a temperatura padrão da API e tiveram o Stuff "
-              "repetido três vezes. n. d.: não divulgado.}", "\\label{tab:llms}",
+              "executado três vezes nas 25 perguntas da camada de generalização. n. d.: não divulgado.}", "\\label{tab:llms}",
               "\\begin{tabular}{llllcc}", "\\toprule",
               "Modelo & Empresa & Pesos & Parâm. & US\\$/1M & Temp. 0 \\\\", "\\midrule",
               "\\multicolumn{6}{l}{\\emph{Camada principal (econômicos): 100 perguntas por dataset}} \\\\"]
@@ -274,17 +284,18 @@ def tabela_llms(df: pd.DataFrame):
 
 def tabela_porte(df: pd.DataFrame) -> pd.DataFrame:
     """Econômico + melhor método × intermediário + Stuff, com o preço por token, os tokens gastos e o
-    custo de cada configuração, para que a razão de custo possa ser conferida na própria tabela."""
+    custo de cada configuração. A razão de custo é calculada com os custos sem arredondamento, por isso pode diferir um
+    pouco da divisão dos custos impressos."""
     porte = ab.comparar_porte(df)
     precos = {l["rotulo"]: l["preco"] for l in pb.LLMS_DO_COMPARATIVO}
     linhas = ["\\begin{table*}[!t]", "\\centering", "\\footnotesize", "\\setlength{\\tabcolsep}{4pt}",
-              "\\caption{Modelo econômico com o seu melhor método (escolhido nas 100 perguntas da camada principal) contra o "
-              "intermediário da mesma família com o Stuff, nas perguntas da camada de generalização (25; no Docugami, as 14 com "
-              "valor no gabarito). Preço: US\\$ por milhão de tokens de entrada e de saída (Tabela~\\ref{tab:llms}). Tokens: média "
+              "\\caption{Modelo econômico com o seu melhor método (escolhido nas 100 perguntas da camada principal; em empate, o mais "
+              "barato) contra o "
+              "intermediário da mesma família com o Stuff, nas perguntas da camada de generalização (25). Preço: US\\$ por milhão de tokens de entrada e de saída (Tabela~\\ref{tab:llms}). Tokens: média "
               "por pergunta, somando a entrada e a saída de todas as chamadas do método, contados pelo tokenizador de cada modelo. "
               "Custo: US\\$ por 1.000 perguntas (tokens de entrada e de saída vezes o preço de cada um). Métrica: a principal de cada "
               "conjunto. $p$: McNemar exato (acurácia) ou Wilcoxon pareado entre as duas configurações. Razão: custo do "
-              "intermediário dividido pelo do econômico.}", "\\label{tab:porte}",
+              "intermediário dividido pelo do econômico, calculada antes do arredondamento.}", "\\label{tab:porte}",
               "\\begin{tabular}{lllcrrccc}", "\\toprule",
               "Dataset & Família & Configuração & Preço (US\\$/1M) & Tokens & Custo (US\\$/1.000) & Métrica & $p$ & Razão \\\\",
               "\\midrule"]
@@ -310,12 +321,13 @@ def tabela_porte(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def tabela_ancora(df: pd.DataFrame) -> pd.DataFrame:
-    bge = pd.DataFrame([json.loads(t) for t in (METRICAS_DIR / "similaridade_bge_small.jsonl").read_text(encoding="utf-8").splitlines()])
+    bge = pd.DataFrame([r for r in map(json.loads, (METRICAS_DIR / "similaridade_bge_small.jsonl").read_text(encoding="utf-8").splitlines())
+                        if ab.na_amostra(r)])
     med = bge.groupby(["dataset", "metodo_rag"])["similaridade_bge_small"].median().unstack()
     linhas = ["\\begin{table}[!t]", "\\centering", "\\footnotesize", "\\setlength{\\tabcolsep}{4pt}",
               "\\caption{Mediana da similaridade de cosseno com a resposta de referência: Tabela 1 de Şakar e Emekci "
-              "\\cite{sakar2025rag} e este trabalho, com o mesmo embedding (bge-small-en-v1.5) e todas as respostas dos 7 LLMs. "
-              "Entre parênteses, a posição do método.}", "\\label{tab:ancora}",
+              "\\cite{sakar2025rag} e este trabalho, com o bge-small-en-v1.5, um dos três embeddings daquele estudo, e todas as respostas dos 7 LLMs. "
+              "Entre parênteses, a posição do método (valores iguais na terceira casa decimal dividem a posição).}", "\\label{tab:ancora}",
               "\\begin{tabular}{lcccc}", "\\toprule",
               " & \\multicolumn{2}{c}{Docugami SEC 10-Q} & \\multicolumn{2}{c}{MedQA} \\\\",
               "\\cmidrule(lr){2-3}\\cmidrule(lr){4-5}", "Método & Artigo-base & Este trabalho & Artigo-base & Este trabalho \\\\", "\\midrule"]
@@ -323,7 +335,8 @@ def tabela_ancora(df: pd.DataFrame) -> pd.DataFrame:
     for nome in ("docugami_10q", "medqa"):
         ref = pd.Series(ab.SIMILARIDADE_PAPER_ANCORA[nome])
         posicoes[nome, "ref"] = ref.rank(ascending=False).astype(int)
-        posicoes[nome, "nos"] = med.loc[nome, ab.METODOS_RAG].rank(ascending=False, method="min").astype(int)
+        impressos = med.loc[nome, ab.METODOS_RAG].map(lambda v: float(num(v, 3).replace(",", ".")))
+        posicoes[nome, "nos"] = impressos.rank(ascending=False, method="min").astype(int)  # iguais na 3ª casa dividem a posição
     for m in ab.METODOS_RAG:
         celulas = []
         for nome in ("docugami_10q", "medqa"):
@@ -340,12 +353,13 @@ def tabela_recuperacao() -> dict:
     bancos = {r["dataset"]: r for r in json.loads((METRICAS_DIR / "comparativo_vectorstores_benchmarks.json").read_text(encoding="utf-8"))}
     ctx = {}
     for nome in benchmarks.DATASETS:
-        linhas_ctx = [json.loads(t)["ragas"] for t in (METRICAS_DIR / f"ragas_contexto_{nome}.jsonl").read_text(encoding="utf-8").splitlines()]
+        linhas_ctx = [r["ragas"] for r in map(json.loads, (METRICAS_DIR / f"ragas_contexto_{nome}.jsonl").read_text(encoding="utf-8").splitlines())
+                      if ab.na_amostra(r)]
         ctx[nome] = (np.nanmean([l.get("context_precision", np.nan) for l in linhas_ctx]),
                      np.nanmean([l.get("context_recall", np.nan) for l in linhas_ctx]))
     linhas = ["\\begin{table}[!t]", "\\centering", "\\footnotesize", "\\setlength{\\tabcolsep}{3pt}",
-              "\\caption{Recuperação ($k = 4$). Hit@4, Recall@4 e MRR@10 contra o trecho certo marcado no gabarito, em todas as "
-              "perguntas; o MedQA não marca o trecho. Context Precision (CP) e Context Recall (CR) do RAGAS, uma vez por pergunta "
+              "\\caption{Recuperação ($k = 4$). Hit@4, Recall@4 e MRR@10 contra a origem da resposta marcada no gabarito (o relatório, no Docugami; o "
+              "parágrafo, no FaQuAD), em todas as perguntas que a marcam (193 das 195 no Docugami); o MedQA não a marca. Context Precision (CP) e Context Recall (CR) do RAGAS, uma vez por pergunta "
               "da amostra de 100.}", "\\label{tab:recuperacao}",
               "\\begin{tabular}{lccccc}", "\\toprule",
               "Dataset & Hit@4 & Recall@4 & MRR@10 & CP & CR \\\\", "\\midrule"]
@@ -366,7 +380,8 @@ def tabela_ragas() -> pd.DataFrame:
             continue
         for texto in caminho.read_text(encoding="utf-8").splitlines():
             r = json.loads(texto)
-            respostas.append({**{k: r[k] for k in ("dataset", "llm", "metodo_rag", "pergunta_id")}, **r["ragas"]})
+            if ab.na_amostra(r):
+                respostas.append({**{k: r[k] for k in ("dataset", "llm", "metodo_rag", "pergunta_id")}, **r["ragas"]})
     rag = pd.DataFrame(respostas)
     fiel = rag.pivot_table(index="metodo_rag", columns="dataset", values="faithfulness", aggfunc="mean")
     relev = rag.pivot_table(index="metodo_rag", columns="dataset", values="answer_relevancy", aggfunc="mean")
@@ -391,8 +406,8 @@ def tabela_bancos():
     stuff = {r["dataset"]: r for r in json.loads((METRICAS_DIR / "comparativo_stuff_faiss.json").read_text(encoding="utf-8"))}
     linhas = ["\\begin{table*}[!t]", "\\centering", "\\footnotesize", "\\setlength{\\tabcolsep}{4pt}",
               "\\caption{ChromaDB (HNSW, busca aproximada) e FAISS (\\texttt{IndexFlatL2}, busca exata) sobre os mesmos vetores "
-              "BGE-M3. Top-4 idêntico: consultas em que os dois bancos entregam os mesmos quatro fragmentos. Nas duas últimas "
-              "colunas, a métrica principal do Stuff do gpt-4o-mini nas 100 perguntas, refazendo com o top-4 do FAISS as perguntas "
+              "BGE-M3. Top-4 idêntico: consultas em que os dois bancos entregam os mesmos quatro fragmentos. Na última "
+              "coluna, a métrica principal do Stuff do gpt-4o-mini nas 100 perguntas, refazendo com o top-4 do FAISS as perguntas "
               "em que ele difere do índice dos experimentos.}", "\\label{tab:bancos}",
               "\\begin{tabular}{lrcccccccc}", "\\toprule",
               " & & \\multicolumn{2}{c}{Indexação (s)} & \\multicolumn{2}{c}{Consulta (ms)} & \\multicolumn{2}{c}{Memória (MB)} & "
@@ -430,13 +445,16 @@ def figura_efeito_rag(medias: dict):
         for y, llm in enumerate(TODOS):
             s = medias[nome, llm]
             rag = s[ab.METODOS_RAG]
-            melhor = rag.idxmax()
+            # Com empate no melhor valor na segunda casa decimal (comum na acurácia do MedQA), o rótulo diz quantos métodos
+            # empataram, em vez de nomear só um deles.
+            empatados = empatados_no_maior(rag)
+            rotulo = ab.NOME_METODO[empatados[0]] if len(empatados) == 1 else f"{len(empatados)} empatados"
             forma, tamanho = ("s", 32) if llm in INTERMEDIARIOS else ("o", 34)
             ax.plot([s["sem_rag"], rag.max()], [y, y], color=GRADE, linewidth=2.2, zorder=1, solid_capstyle="round")
             ax.scatter(s["sem_rag"], y, s=tamanho, marker=forma, facecolor="white", edgecolor=CINZA, linewidth=1.4, zorder=3)
             ax.scatter(s["stuff"], y, s=tamanho, marker=forma, color=AZUL, edgecolor="white", linewidth=1.0, zorder=4)
             ax.scatter(rag.max(), y, s=tamanho, marker=forma, color=LARANJA, edgecolor="white", linewidth=1.0, zorder=5)
-            ax.annotate(ab.NOME_METODO[melhor], (rag.max(), y), xytext=(5, 0), textcoords="offset points",
+            ax.annotate(rotulo, (rag.max(), y), xytext=(5, 0), textcoords="offset points",
                         va="center", fontsize=6.5, color=TEXTO_2)
         ax.axhline(len(PRINCIPAIS) - 0.5, color=TEXTO, linewidth=0.7, zorder=0)
         ax.set_title(f"{NOME_DATASET[nome]}\n({METRICA_CURTA[nome]})", fontsize=8, color=TEXTO, pad=4)
@@ -467,25 +485,81 @@ TINTA_METODO = {"stuff": "white", "refine": TEXTO, "map_reduce": TEXTO, "map_rer
 SIGLA_LLM = {"qwen": "Q", "deepseek": "D", "claude_haiku": "H", "gpt_luna": "L", "gpt_mini": "M",
              "claude_sonnet": "Sn", "gpt_sol": "Sl"}
 # Limites e intervalo das marcas do eixo y de cada painel (as métricas têm escalas diferentes).
-EIXO_Y_CUSTO = {"docugami_10q": (-0.02, 0.33, 0.1), "medqa": (0.56, 1.0, 0.1), "faquad": (0.3, 1.0, 0.1)}
+EIXO_Y_CUSTO = {"docugami_10q": (-0.02, 0.38, 0.1), "medqa": (0.56, 1.0, 0.1), "faquad": (0.3, 1.0, 0.1)}
 DIAMETRO_MARCADOR = 10.0  # pt
 
 
-def afastar_marcadores(ancoras: np.ndarray, raios: np.ndarray, caixa, iteracoes: int = 600) -> np.ndarray:
-    """Posições (em pontos) em que os marcadores não se sobrepõem: cada um parte da sua posição real, é empurrado
-    pelos que o sobrepõem e puxado de volta para ela, dentro da área do gráfico. Quem não colide fica no lugar exato."""
+FOLGA_MARCADORES = 0.8  # pt entre dois marcadores vizinhos
+
+
+def _menor_distancia(G: np.ndarray, h: np.ndarray) -> np.ndarray:
+    """O menor vetor x com G x >= h (least distance programming), resolvido de forma exata por mínimos quadrados não
+    negativos (Lawson e Hanson, Solving Least Squares Problems, cap. 23)."""
+    m, n = G.shape
+    E = np.vstack([G.T, h[None, :]])
+    f = np.zeros(n + 1)
+    f[-1] = 1.0
+    u, _ = nnls(E, f, maxiter=50 * m)
+    r = E @ u - f
+    if np.linalg.norm(r) < 1e-10:
+        raise RuntimeError("afastar_marcadores: restrições incompatíveis")
+    return -r[:n] / r[n]
+
+
+def afastar_marcadores(ancoras: np.ndarray, raios: np.ndarray, caixa, max_rodadas: int = 40) -> np.ndarray:
+    """Posições (em pontos) em que os marcadores não se sobrepõem, o mais perto possível das posições reais (menor soma
+    dos quadrados dos deslocamentos), sem nunca inverter a ordem dos dados: um valor maior em x (ou em y) fica à
+    direita (ou acima) do menor, ou no máximo alinhado com ele, e valores iguais continuam alinhados. Cada par que se
+    sobreporia é afastado ao longo da reta que liga as duas posições reais, o que por si só mantém a ordem dos dois
+    nos dois eixos. As restrições de afastamento entram em rodadas, até nenhum par se sobrepor.
+
+    A versão anterior (empurrar os marcadores sobrepostos e puxá-los de volta, sem restrição de ordem) chegava a
+    desenhar um valor maior abaixo de um menor quando os dois estavam a menos de um diâmetro de distância."""
     n = len(ancoras)
-    pos = ancoras + np.column_stack([np.zeros(n), (np.arange(n) % 3 - 1) * 0.01])  # desempata pontos coincidentes
+    a = ancoras.astype(float).copy()
+    # Dois pontos idênticos nos dois eixos não teriam direção de afastamento: desempata em x, pela ordem de chegada.
+    for i in range(n):
+        for j in range(i + 1, n):
+            if np.allclose(a[i], a[j], rtol=0, atol=1e-6):
+                a[j, 0] += 1e-3
+    fixas = []  # (linha, limite) de G p >= h
+    for eixo in (0, 1):  # ordem: só entre vizinhos na ordenação; o resto vem por transitividade
+        ordem = np.argsort(a[:, eixo], kind="stable")
+        for i, j in zip(ordem[:-1], ordem[1:]):
+            linha = np.zeros(2 * n)
+            linha[2 * j + eixo], linha[2 * i + eixo] = 1.0, -1.0
+            fixas.append((linha, 0.0))
+            if np.isclose(a[i, eixo], a[j, eixo], rtol=0, atol=1e-6):
+                fixas.append((-linha, 0.0))  # empate: as duas desigualdades fazem a igualdade
     (x0, y0), (x1, y1) = caixa
-    for _ in range(iteracoes):
-        d = pos[:, None, :] - pos[None, :, :]
-        dist = np.hypot(d[..., 0], d[..., 1])
-        minimo = raios[:, None] + raios[None, :] + 0.8
-        fator = np.where((dist < minimo) & ~np.eye(n, dtype=bool), (minimo - dist) / (2 * np.maximum(dist, 1e-6)), 0.0)
-        pos = pos + 0.5 * (fator[..., None] * d).sum(axis=1) + 0.03 * (ancoras - pos)
-        pos[:, 0] = np.clip(pos[:, 0], x0 + raios, x1 - raios)
-        pos[:, 1] = np.clip(pos[:, 1], y0 + raios, y1 - raios)
-    parados = np.hypot(*(pos - ancoras).T) < 0.6
+    for k, r in enumerate(raios):  # dentro da área do gráfico
+        for eixo, (lo, hi) in enumerate(((x0 + r, x1 - r), (y0 + r, y1 - r))):
+            linha = np.zeros(2 * n)
+            linha[2 * k + eixo] = 1.0
+            fixas += [(linha, lo), (-linha, -hi)]
+    minimo = raios[:, None] + raios[None, :] + FOLGA_MARCADORES
+
+    def sobrepostos(p):
+        d = np.hypot(*(p[:, None, :] - p[None, :, :]).transpose(2, 0, 1))
+        return {(i, j) for i, j in zip(*np.nonzero(d < minimo - 1e-3)) if i < j}
+
+    pares, pos, alvo = set(), a.copy(), a.ravel()
+    for _ in range(max_rodadas):
+        novos = sobrepostos(pos) - pares
+        if not novos:
+            break
+        pares |= novos
+        linhas = list(fixas)
+        for i, j in sorted(pares):
+            u = (a[j] - a[i]) / np.hypot(*(a[j] - a[i]))
+            linha = np.zeros(2 * n)
+            linha[2 * j:2 * j + 2], linha[2 * i:2 * i + 2] = u, -u
+            linhas.append((linha, minimo[i, j]))
+        G, h = np.array([l for l, _ in linhas]), np.array([v for _, v in linhas])
+        pos = (alvo + _menor_distancia(G, h - G @ alvo)).reshape(n, 2)
+    if sobrepostos(pos):
+        raise RuntimeError("afastar_marcadores: ainda há marcadores sobrepostos")
+    parados = np.hypot(*(pos - ancoras).T) < 1e-3  # ruído numérico
     pos[parados] = ancoras[parados]
     return pos
 
@@ -520,12 +594,46 @@ def _linha_de_legenda(ax, y: float, titulo: str, itens: list):
         x += 2 * raio + 0.006 + t.get_window_extent(renderizador).width / largura_eixo + 0.03
 
 
+def _eixo_y_metrica(ax, nome: str):
+    y0, y1, passo = EIXO_Y_CUSTO[nome]
+    ax.set_ylim(y0, y1)
+    ax.yaxis.set_major_locator(plt.MultipleLocator(passo))
+    ax.yaxis.set_major_formatter(FuncFormatter(lambda v, _: f"{v:.1f}".replace(".", ",")))
+    ax.set_title(f"{NOME_DATASET[nome]} ({METRICA_CURTA[nome]})", fontsize=8, color=TEXTO, loc="left", pad=4)
+
+
+def _eixo_y_tokens(ax, nome: str):
+    """Tokens por pergunta em escala log, com a mesma faixa nos três painéis (de 80 a 10.063 na Tabela de tokens)."""
+    ax.set_yscale("log")
+    ax.set_ylim(55, 16000)
+    ax.set_yticks([100, 300, 1000, 3000, 10000])
+    ax.yaxis.set_minor_locator(plt.NullLocator())
+    ax.yaxis.set_major_formatter(FuncFormatter(lambda v, _: f"{v:,.0f}".replace(",", ".")))
+    ax.set_title(NOME_DATASET[nome], fontsize=8, color=TEXTO, loc="left", pad=4)
+
+
 def figura_custo_desempenho(medias: dict, custo_usd: dict):
     """Todos os métodos e LLMs: custo em US$ por 1.000 perguntas (escala log) × métrica principal, um painel por
-    dataset, com os mesmos valores das Tabelas de resultado principal e de custo em dólares. Onde dois marcadores se
-    sobreporiam, um deles é deslocado o mínimo necessário, e uma linha fina o liga à posição real (um ponto)."""
+    dataset, com os mesmos valores das Tabelas de resultado principal e de custo em dólares."""
+    _figura_contra_custo(medias, custo_usd, _eixo_y_metrica, None, "custo_desempenho.pdf")
+
+
+def figura_custo_tokens(tokens: dict, custo_usd: dict):
+    """Igual à figura de custo × desempenho, com os tokens por pergunta (Tabela de tokens) no eixo y, em escala log,
+    no lugar da métrica principal. Num mesmo LLM, os pontos ficam numa reta (o preço por token é quase fixo); a
+    distância vertical entre LLMs com o mesmo custo mostra a diferença de preço do token."""
+    _figura_contra_custo(tokens, custo_usd, _eixo_y_tokens, "Tokens por pergunta (escala logarítmica)",
+                         "custo_tokens.pdf")
+
+
+def _figura_contra_custo(valores_y: dict, custo_usd: dict, configurar_y, rotulo_y: str | None, arquivo: str):
+    """Um painel por dataset, com custo em US$ por 1.000 perguntas (escala log) no eixo x e `valores_y` no y. Onde
+    dois marcadores se sobreporiam, um deles é deslocado o mínimo necessário, e uma linha fina o liga à posição real
+    (um ponto)."""
+    medias = valores_y
     fig, eixos = plt.subplots(3, 1, figsize=(7.1, 7.5))
-    fig.subplots_adjust(left=0.07, right=0.99, top=0.885, bottom=0.065, hspace=0.42)
+    esquerda = 0.105 if rotulo_y else 0.07  # espaço para o rótulo do eixo y e para as marcas "10.000"
+    fig.subplots_adjust(left=esquerda, right=0.99, top=0.885, bottom=0.065, hspace=0.42)
     for ax, nome in zip(eixos, benchmarks.DATASETS):
         _estilo(ax)
         ax.yaxis.grid(True, color=GRADE, linewidth=0.6)
@@ -534,31 +642,35 @@ def figura_custo_desempenho(medias: dict, custo_usd: dict):
         ax.set_xticks([0.03, 0.1, 0.3, 1, 3, 10, 30])
         ax.xaxis.set_minor_locator(plt.NullLocator())
         ax.xaxis.set_major_formatter(FuncFormatter(lambda x, _: f"{x:g}".replace(".", ",")))
-        y0, y1, passo = EIXO_Y_CUSTO[nome]
-        ax.set_ylim(y0, y1)
-        ax.yaxis.set_major_locator(plt.MultipleLocator(passo))
-        ax.yaxis.set_major_formatter(FuncFormatter(lambda v, _: f"{v:.1f}".replace(".", ",")))
-        ax.set_title(f"{NOME_DATASET[nome]} ({METRICA_CURTA[nome]})", fontsize=8, color=TEXTO, loc="left", pad=4)
+        configurar_y(ax, nome)
+        if rotulo_y:
+            ax.set_ylabel(rotulo_y if ax is eixos[1] else "", fontsize=7.5, color=TEXTO_2)
     eixos[-1].set_xlabel("Custo (US\\$ por 1.000 perguntas, escala logarítmica)", fontsize=7.5, color=TEXTO_2)
 
     escala = 72 / fig.dpi  # pixels -> pontos
     for ax, nome in zip(eixos, benchmarks.DATASETS):
         pontos = [(m, llm, custo_usd[nome, llm][m], medias[nome, llm][m]) for m in ab.METODOS for llm in TODOS]
         dados = np.array([(x, y) for _, _, x, y in pontos])
+        # Nenhum ponto pode cair fora dos eixos: o marcador seria empurrado para dentro e a posição real sumiria.
+        (xa, xb), (ya, yb) = ax.get_xlim(), ax.get_ylim()
+        fora = [(m, llm, x, y) for m, llm, x, y in pontos if not (xa < x < xb and ya < y < yb)]
+        if fora:
+            raise ValueError(f"{nome}: pontos fora dos limites do gráfico: {fora}")
         ancoras = ax.transData.transform(dados) * escala
         bb = ax.get_window_extent()
         caixa = ((bb.x0 * escala, bb.y0 * escala), (bb.x1 * escala, bb.y1 * escala))
         raios = np.array([DIAMETRO_MARCADOR / 2 + (0.6 if llm in INTERMEDIARIOS else 0) for _, llm, _, _ in pontos])
         afastadas = afastar_marcadores(ancoras, raios, caixa)
-        deslocados = np.hypot(*(afastadas - ancoras).T) > 0
-        posicoes = np.where(deslocados[:, None], ax.transData.inverted().transform(afastadas / escala), dados)
+        no_lugar = (afastadas == ancoras).all(axis=1)
+        posicoes = np.where(no_lugar[:, None], dados, ax.transData.inverted().transform(afastadas / escala))
+        deslocados = np.hypot(*(afastadas - ancoras).T) > 0.05  # a linha até a posição real só aparece se houver o que ligar
         for (m, llm, x, y), (xm, ym), deslocado in zip(pontos, posicoes, deslocados):
             if deslocado:
                 ax.plot([x, xm], [y, ym], color="#a9a8a2", linewidth=0.5, zorder=2, solid_capstyle="round")
                 ax.scatter(x, y, s=5, color=COR_METODO.get(m, CINZA), linewidth=0, zorder=2.5)
             _marcador(ax, xm, ym, m, llm)
 
-    legenda = fig.add_axes([0.07, 0.915, 0.92, 0.08])
+    legenda = fig.add_axes([esquerda, 0.915, 0.99 - esquerda, 0.08])
     legenda.axis("off")
     legenda.set_xlim(0, 1)
     legenda.set_ylim(0, 1)
@@ -570,7 +682,7 @@ def figura_custo_desempenho(medias: dict, custo_usd: dict):
     _linha_de_legenda(legenda, 0.22, "Modelo", [(lambda x, y, l=llm: _marcador(legenda, x, y, None, l),
                                                  NOME_LLM[llm] + ("$^\\dagger$" if llm in INTERMEDIARIOS else ""))
                                                 for llm in TODOS])
-    fig.savefig(GRAFICOS / "custo_desempenho.pdf")
+    fig.savefig(GRAFICOS / arquivo)
     plt.close(fig)
 
 
@@ -582,7 +694,10 @@ def figura_ordem_metodos(resumo: dict, caminhos=None, casas: int = 2):
     fig, eixos = plt.subplots(1, 3, figsize=(7.1, 2.75), sharey=True)
     for ax, nome in zip(eixos, benchmarks.DATASETS):
         t = resumo[nome]["tabela7"].reindex(TODOS)
-        postos = t.rank(axis=1, ascending=False, method="average")
+        # A cor vem da posição pelo valor impresso na célula: dois valores que o leitor vê iguais têm a mesma cor. O W do
+        # título continua calculado com os valores exatos.
+        impressos = t.apply(lambda coluna: coluna.map(lambda v: float(f"{v:.{casas}f}")))
+        postos = impressos.rank(axis=1, ascending=False, method="average")
         ax.imshow(postos.values, cmap=cmap, vmin=1, vmax=6, aspect="auto")
         for i in range(t.shape[0]):
             for j in range(t.shape[1]):
@@ -605,7 +720,131 @@ def figura_ordem_metodos(resumo: dict, caminhos=None, casas: int = 2):
     plt.close(fig)
 
 
-def resumo_numeros(df, medias, sig, resumo, relativo, tokens, tempo, porte, med_bge, rag, bancos, stuff):
+# Recusas (classificar_recusas.py): o veredito do juiz sobre o contexto que o LLM recebeu. Os dois tons de azul são as
+# recusas justificadas (a informação não veio, ou veio só em parte); o laranja, as injustificadas (veio toda).
+VEREDITOS_RECUSA = [("ausente", "#184f95", "Justificada: o contexto não tinha a informação"),
+                    ("parcial", "#6da7ec", "Justificada: o contexto tinha só parte da informação"),
+                    ("completa", LARANJA, "Injustificada: o contexto tinha toda a informação")]
+
+
+def _barras_por_metodo_llm(contagem: pd.Series, categorias: list, rotulo_y: str, arquivo: str):
+    """Barras empilhadas por método (grupos) e LLM (barras, pela sigla), um painel por dataset (Docugami e FaQuAD).
+    `contagem` é indexada por (dataset, método, LLM, categoria); `categorias`, uma lista de (categoria, cor, rótulo)."""
+    fig, eixos = plt.subplots(2, 1, figsize=(7.1, 4.9))
+    fig.subplots_adjust(left=0.065, right=0.995, top=0.86, bottom=0.07, hspace=0.42)
+    # Os intermediários (25 perguntas) ficam um pouco afastados dos econômicos (100) dentro de cada método.
+    posicao = {llm: j + (0.45 if llm in INTERMEDIARIOS else 0) for j, llm in enumerate(TODOS)}
+    largura = max(posicao.values()) + 1
+    passo = largura + 1.6
+    for ax, nome in zip(eixos, DATASETS_CONTEXTO):
+        _estilo(ax)
+        ax.xaxis.grid(False)
+        ax.yaxis.grid(True, color=GRADE, linewidth=0.6)
+        for i, metodo in enumerate(ab.METODOS_RAG):
+            for llm in TODOS:
+                x, base = i * passo + posicao[llm], 0
+                for categoria, cor, _ in categorias:
+                    n = int(contagem.get((nome, metodo, llm, categoria), 0))
+                    if n:
+                        ax.bar(x, n, bottom=base, width=0.8, color=cor, edgecolor="white", linewidth=0.5)
+                        base += n
+                ax.text(x, -0.025, SIGLA_LLM[llm],
+                        transform=ax.get_xaxis_transform(), ha="center", va="top", fontsize=5.3, color=TEXTO_2)
+            ax.text(i * passo + (largura - 1) / 2, -0.15, ab.NOME_METODO[metodo], transform=ax.get_xaxis_transform(),
+                    ha="center", va="top", fontsize=7.3, color=TEXTO)
+        ax.set_xticks([])
+        ax.set_xlim(-0.8, (len(ab.METODOS_RAG) - 1) * passo + largura - 0.2)
+        ax.yaxis.set_major_locator(plt.MaxNLocator(5, integer=True))
+        ax.set_ylabel(rotulo_y, fontsize=7.5, color=TEXTO_2)
+        ax.set_title(NOME_DATASET[nome], fontsize=8, color=TEXTO, loc="left", pad=4)
+    legenda = [plt.Rectangle((0, 0), 1, 1, color=cor, label=rotulo) for _, cor, rotulo in categorias]
+    fig.legend(handles=legenda, loc="upper left", ncol=2, frameon=False, fontsize=7.3, bbox_to_anchor=(0.055, 1.0),
+               handlelength=1.2, columnspacing=1.5)
+    fig.savefig(GRAFICOS / arquivo)
+    plt.close(fig)
+
+
+DATASETS_CONTEXTO = ["docugami_10q", "faquad"]
+# O que o modelo fez quando o contexto não tinha nada da informação: azul, o comportamento pedido pelo prompt (recusar);
+# laranja, responder assim mesmo -- as mesmas cores do certo e do errado na figura de recusas.
+CONDUTAS_SEM_INFORMACAO = [("recusou", "#184f95", "Recusou (o que o prompt pede)"),
+                           ("respondeu", LARANJA, "Respondeu mesmo sem a informação")]
+
+
+def carregar_contextos() -> pd.DataFrame:
+    """Uma linha por resposta dos métodos de RAG, com o veredito do juiz sobre o contexto (classificar_contextos.py)."""
+    ctx = pd.read_json(METRICAS_DIR / "contextos_classificados.jsonl", lines=True)
+    return ctx[[ab.na_amostra(r) for r in ctx[["dataset", "pergunta_id"]].to_dict("records")]].reset_index(drop=True)
+
+
+def figura_recusas(ctx: pd.DataFrame) -> dict:
+    """Recusas por método e LLM (repetição 1), empilhadas pelo veredito do juiz sobre o contexto, no Docugami e no
+    FaQuAD. Devolve as contagens para o JSON de números do artigo."""
+    rec = ctx[ctx.recusa]
+    _barras_por_metodo_llm(rec.groupby(["dataset", "metodo_rag", "llm", "veredito_juiz"]).size(), VEREDITOS_RECUSA,
+                           "Recusas", "recusas.pdf")
+    saida = {}
+    for (nome, metodo, llm), g in rec.groupby(["dataset", "metodo_rag", "llm"]):
+        saida[f"{nome}|{llm}|{metodo}"] = {v: int((g.veredito_juiz == v).sum()) for v, _, _ in VEREDITOS_RECUSA}
+    for (nome, metodo), g in rec[rec.llm.isin(PRINCIPAIS)].groupby(["dataset", "metodo_rag"]):
+        saida[f"{nome}|principais|{metodo}"] = {v: int((g.veredito_juiz == v).sum()) for v, _, _ in VEREDITOS_RECUSA}
+    for nome, g in rec.groupby("dataset"):
+        saida[f"{nome}|todos"] = {v: int((g.veredito_juiz == v).sum()) for v, _, _ in VEREDITOS_RECUSA}
+    fq = ctx[ctx.dataset == "faquad"]
+    saida["validacao_faquad_recusas"] = pd.crosstab(fq[fq.recusa].veredito_juiz, fq[fq.recusa].resposta_no_contexto.astype(bool)).to_dict()
+    saida["validacao_faquad_todas"] = pd.crosstab(fq.veredito_juiz, fq.resposta_no_contexto.astype(bool)).to_dict()
+    return saida
+
+
+def figura_sem_informacao(ctx: pd.DataFrame):
+    """Respostas em que o contexto não tinha nada da informação (veredito "ausente"), por método e LLM: recusou ou
+    respondeu assim mesmo. A altura da barra é o número de perguntas em que a informação não chegou ao modelo."""
+    sem = ctx[ctx.veredito_juiz == "ausente"].assign(conduta=lambda d: np.where(d.recusa, "recusou", "respondeu"))
+    _barras_por_metodo_llm(sem.groupby(["dataset", "metodo_rag", "llm", "conduta"]).size(), CONDUTAS_SEM_INFORMACAO,
+                           "Respostas sem a informação\nno contexto", "sem_informacao.pdf")
+
+
+def tabela_contexto(ctx: pd.DataFrame) -> dict:
+    """Decomposição por método nos cinco econômicos (camada principal): com que frequência a informação chegou ao
+    LLM, o que ele fez sem ela (rejeição negativa, como no RGB) e com ela (recusa injustificada), e a métrica
+    principal em cada caso."""
+    g = ctx[ctx.llm.isin(PRINCIPAIS)]
+    saida, linhas_tex = {}, []
+    for metodo in ab.METODOS_RAG:
+        celulas = []
+        for nome in DATASETS_CONTEXTO:
+            h = g[(g.dataset == nome) & (g.metodo_rag == metodo)]
+            completa, ausente = h[h.veredito_juiz == "completa"], h[h.veredito_juiz == "ausente"]
+            r = {"n": len(h), "completa": (h.veredito_juiz == "completa").mean(), "parcial": (h.veredito_juiz == "parcial").mean(),
+                 "ausente": (h.veredito_juiz == "ausente").mean(),
+                 "rejeicao_negativa": ausente.recusa.mean(), "respondeu_sem_informacao": int((~ausente.recusa).sum()),
+                 "recusa_injustificada": completa.recusa.mean(),
+                 "metrica_com_informacao": completa.metrica_principal.mean(),
+                 "metrica_respondeu_sem_informacao": ausente[~ausente.recusa].metrica_principal.mean()}
+            saida[f"{nome}|{metodo}"] = {k: (round(float(v), 3) if isinstance(v, float) else v) for k, v in r.items()}
+            celulas += [num(100 * r["completa"], 0), num(100 * r["ausente"], 0), num(100 * r["rejeicao_negativa"], 0),
+                        num(100 * r["recusa_injustificada"], 0), num(r["metrica_com_informacao"]),
+                        num(r["metrica_respondeu_sem_informacao"])]
+        linhas_tex.append(f"{ab.NOME_METODO[metodo]} & " + " & ".join(celulas) + " \\\\")
+    linha1 = " & " + " & ".join(["Inf.", "Inf.", "Rej.", "Recusa", "Métrica", "Métrica"] * 2) + " \\\\"
+    linha2 = "Método & " + " & ".join(["completa", "ausente", "negativa", "injust.", "c/ inf.", "s/ inf."] * 2) + " \\\\"
+    linhas = ["\\begin{table*}[!t]", "\\centering", "\\footnotesize", "\\setlength{\\tabcolsep}{3.5pt}",
+              "\\caption{O que chegou ao LLM e o que ele fez, por método, nos cinco econômicos (camada principal, 500 respostas por "
+              "método e conjunto), segundo o juiz. Inf. completa e Inf. ausente: porcentagem das respostas em que o contexto tinha toda a "
+              "informação ou nada dela (o restante teve parte). Rej. negativa: dos casos sem a informação, a porcentagem em que o modelo "
+              "recusou, como no RGB \\cite{chen2024rgb}; o restante respondeu sem a informação. Recusa injust.: dos casos com toda a "
+              "informação, a porcentagem em que o modelo recusou. Métrica c/ inf.: métrica principal quando o contexto tinha toda a "
+              "informação; Métrica s/ inf.: quando não tinha nada dela e o modelo respondeu assim mesmo.}", "\\label{tab:contexto}",
+              "\\begin{tabular}{l" + "c" * 12 + "}", "\\toprule",
+              " & \\multicolumn{6}{c}{Docugami SEC 10-Q (valores do gabarito)} & \\multicolumn{6}{c}{FaQuAD (cobertura de tokens)} \\\\",
+              "\\cmidrule(lr){2-7}\\cmidrule(lr){8-13}",
+              linha1, linha2,
+              "\\midrule"] + linhas_tex + ["\\bottomrule", "\\end{tabular}", "\\end{table*}"]
+    escrever("tab_contexto", linhas)
+    return saida
+
+
+def resumo_numeros(df, medias, sig, resumo, relativo, tokens, tempo, porte, med_bge, rag, bancos, stuff, recusas=None):
     """Números citados no texto do artigo, num JSON só (pra conferência)."""
     saida = {"execucoes": len(df), "custo_nominal_total_usd": round(float(df["custo_usd"].sum()), 2),
              "custo_nominal_por_llm_usd": df.groupby("llm")["custo_usd"].sum().round(2).to_dict()}
@@ -629,6 +868,8 @@ def resumo_numeros(df, medias, sig, resumo, relativo, tokens, tempo, porte, med_
         if h["repeticao"].nunique() > 1 and len(dp):
             dps[f"{nome}|{llm}"] = round(float(dp.mean()), 3)
     saida["desvio_repeticoes"] = dps
+    if recusas:
+        saida["recusas_por_veredito"] = recusas
     saida["ragas_faithfulness"] = rag.pivot_table(index=["dataset", "llm"], columns="metodo_rag", values="faithfulness").round(3).to_json()
     (TABELAS / "numeros_artigo.json").write_text(json.dumps(saida, ensure_ascii=False, indent=1), encoding="utf-8")
 
@@ -648,7 +889,7 @@ def main():
     plt.rcParams.update({"font.family": "serif", "font.serif": ["DejaVu Serif"], "pdf.fonttype": 42})
     df = ab.carregar_execucoes()
     medias, sig = tabela_principal(df)
-    tabela_tokens(df)
+    tokens_por_pergunta = tabela_tokens(df)
     custo_usd = tabela_custo_usd(df)
     resumo = tabela_concordancia(df)
     relativo, tokens, tempo = tabela_custo(df)
@@ -661,7 +902,14 @@ def main():
     figura_efeito_rag(medias)
     figura_ordem_metodos(resumo)
     figura_custo_desempenho(medias, custo_usd)
-    resumo_numeros(df, medias, sig, resumo, relativo, tokens, tempo, porte, med_bge, rag, bancos, stuff)
+    figura_custo_tokens(tokens_por_pergunta, custo_usd)
+    ctx = carregar_contextos()
+    recusas = figura_recusas(ctx)
+    figura_sem_informacao(ctx)
+    recusas["decomposicao_por_metodo"] = tabela_contexto(ctx)
+    diagramas_rag.figura_pipeline(GRAFICOS)
+    diagramas_rag.figura_metodos(GRAFICOS)
+    resumo_numeros(df, medias, sig, resumo, relativo, tokens, tempo, porte, med_bge, rag, bancos, stuff, recusas)
     copiar_para_artigo()
     print(f"Escritos {TABELAS.relative_to(BASE_DIR)} e {GRAFICOS.relative_to(BASE_DIR)}, copiados para "
           f"{ARTIGO.name}/tabelas e {ARTIGO.name}/figuras")

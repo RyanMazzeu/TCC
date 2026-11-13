@@ -51,7 +51,9 @@ _VALOR = re.compile(
 # Depois da letra, exige pontuação (inclusive vírgula: "A, Chikungunya...") ou fim de linha: "A patient with..." começa com o artigo "A", não
 # com a alternativa A.
 _LETRA_NO_INICIO = re.compile(r"^\s*(?:\*\*)?(?:answer\s*[:\-]\s*)?(?:\*\*)?\(?([A-D])(?:\)|\*\*|[.:,\-]|\s+[-–—]|\s*$|\s*\n)", re.IGNORECASE)
-_LETRA_NO_TEXTO = re.compile(r"\b(?:answer|option|choice)\s+(?:is\s+)?\(?([A-D])\)?\b", re.IGNORECASE)
+# Letra sempre maiúscula: com IGNORECASE, "the answer is a reduction..." viraria a alternativa A (nenhuma resposta dos
+# experimentos caiu nesse caso, mas o padrão aceitava).
+_LETRA_NO_TEXTO = re.compile(r"\b(?:answer|option|choice)\s+(?:is\s+)?\(?(?-i:([A-D]))\)?\b", re.IGNORECASE)
 
 
 def _normalizar(texto: str) -> str:
@@ -88,9 +90,34 @@ def cobertura_tokens(gerada: str, aceitas: list[str]) -> float:
     )
 
 
+# Quando a letra não está no começo nem num "the answer is B" simples, ela é procurada em qualquer ponto da resposta:
+# primeiro numa conclusão explícita, mesmo com formatação ("The correct answer is **C. Down syndrome**",
+# "**Answer:** A. 9/100", "I'll go with **A**"), ignorando as negadas ("Answer: D is incorrect"); depois, numa linha que
+# começa por uma alternativa ("**D. 46XX**", "A. MRI of the hip"), fora de listas ("- A. ..."), que é como os modelos
+# destacam a escolha depois de explicar o raciocínio. Havendo mais de uma, vale a última (a conclusão costuma vir no fim).
+# Só entra quando os dois padrões acima falham, então não muda a letra de nenhuma resposta que eles já reconhecem. A
+# letra é sempre maiúscula: "the answer is a reduction..." não é a alternativa A.
+_CONCLUSAO = re.compile(
+    r"\b(?:answer|option|choice)\b\s*(?:is|would\s+be|=)?\s*:?\s*\(?(?-i:([A-D]))\)?(?![A-Za-z0-9])"
+    r"|\b(?:go(?:ing)?\s+with|choose|select|pick)\s+(?:option\s+)?\(?(?-i:([A-D]))\)?(?![A-Za-z0-9])",
+    re.IGNORECASE)
+_NEGADA = re.compile(r"^\W{0,4}(?:is|was|would\s+be)?\s*(?:not\b|n't\b|incorrect\b|wrong\b|false\b)", re.IGNORECASE)
+_LINHA_DE_ALTERNATIVA = re.compile(r"^[ \t]*\(?([A-D])[.):](?=\s|$)", re.MULTILINE)
+
+
+def _letra_em_qualquer_ponto(resposta: str) -> str | None:
+    texto = re.sub(r"\*\*|__|`", "", resposta)
+    conclusoes = [(m.group(1) or m.group(2)) for m in _CONCLUSAO.finditer(texto)
+                  if not _NEGADA.match(texto[m.end():m.end() + 20])]
+    if conclusoes:
+        return conclusoes[-1].upper()
+    linhas = _LINHA_DE_ALTERNATIVA.findall(texto)
+    return linhas[-1] if linhas else None
+
+
 def letra_escolhida(resposta: str) -> str | None:
     m = _LETRA_NO_INICIO.search(resposta) or _LETRA_NO_TEXTO.search(resposta)
-    return m.group(1).upper() if m else None
+    return m.group(1).upper() if m else _letra_em_qualquer_ponto(resposta)
 
 
 def valores(texto: str) -> list[tuple[float, float, str]]:
@@ -154,6 +181,16 @@ if __name__ == "__main__":
     assert letra_escolhida("Answer: A. Metformin") == "A"
     assert letra_escolhida("Based on the context, the answer is C, since...") == "C"
     assert letra_escolhida("I cannot determine the answer.") is None
+    # Letra fora do começo (respostas reais do MedQA):
+    assert letra_escolhida("The correct answer is **C. Down syndrome**.\n\n**Justification:** ...") == "C"
+    assert letra_escolhida("Complete moles are 46,XX.\n\nTherefore, the correct answer is:  \n\n**D. 46XX**") == "D"
+    assert letra_escolhida("... = 9/100.\n\n**Answer:** A. 9/100") == "A"
+    assert letra_escolhida("The correct answer is:\n**A. He is overcommitting**\n**Answer: D** is incorrect.\nI'll go with **A**") == "A"
+    assert letra_escolhida("Since all partial answers state there is no relevant information, I rely on medical knowledge.\n\n"
+                           "- A. Resistance is increased.\n- B. Extraction is increased.\n\n**C. Baroreceptor firing** is decreased.") == "C"
+    assert letra_escolhida("Based on the context, this is the most logical link.\n\nB. Parkinson disease") == "B"
+    assert letra_escolhida("D is not correct; the correct answer is an eye exam at diagnosis, not among the choices.") is None
+    assert letra_escolhida("Overall, the answer is a reduction in diastolic filling time.") is None
     assert letra_escolhida("A patient with fever...") is None
     assert letra_escolhida("B") == "B"
     assert letra_escolhida("B - Ceftriaxone") == "B"

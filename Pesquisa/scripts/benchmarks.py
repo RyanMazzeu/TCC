@@ -12,6 +12,7 @@ import time
 import chromadb
 import numpy as np
 
+import metricas_resposta
 import pipeline_base as pb
 
 DADOS_DIR = pb.BASE_DIR / "dados"
@@ -57,14 +58,28 @@ def carregar(nome: str) -> tuple[list[dict], list[dict]]:
     return chunks, dados["perguntas"]
 
 
+def elegivel(pergunta: dict) -> bool:
+    """Se a pergunta pode entrar na amostra. No Docugami, a métrica principal é a fração dos valores do gabarito
+    (US$, %, milhões...) que aparecem na resposta, então só entram as perguntas cuja resposta de referência tem algum
+    valor (133 das 195); as qualitativas ("que processos judiciais a Apple divulga?") não têm o que medir. Nos outros
+    datasets, todas."""
+    if pergunta["id"].startswith("docugami_"):
+        return bool(metricas_resposta.valores(pergunta.get("resposta_esperada") or ""))
+    return True
+
+
 def amostra(perguntas: list[dict], n: int) -> list[dict]:
-    """As n primeiras perguntas de uma permutação fixa (seed 42), na ordem original do dataset.
-    Como a permutação é a mesma pra qualquer n, a amostra de 25 está sempre dentro da de 100.
-    n=0 ou n >= total: todas."""
-    if n <= 0 or n >= len(perguntas):
-        return perguntas
+    """As n primeiras perguntas elegíveis de uma permutação fixa (seed 42) de todas as perguntas do dataset, na ordem
+    original do dataset. Como a permutação é a mesma pra qualquer n, a amostra de 25 está sempre dentro da de 100. A
+    permutação é sorteada sobre todas as perguntas, e não só sobre as elegíveis, para que a amostra do Docugami
+    mantenha as 66 perguntas com valor que já estavam entre as 100 primeiras da permutação. n=0 ou n >= total de
+    elegíveis: todas as elegíveis."""
+    elegiveis = [i for i, p in enumerate(perguntas) if elegivel(p)]
+    if n <= 0 or n >= len(elegiveis):
+        return [perguntas[i] for i in elegiveis]
     permutacao = random.Random(SEED_AMOSTRA).sample(range(len(perguntas)), len(perguntas))
-    return [perguntas[i] for i in sorted(permutacao[:n])]
+    escolhidas = [i for i in permutacao if elegivel(perguntas[i])][:n]
+    return [perguntas[i] for i in sorted(escolhidas)]
 
 
 def _nome_colecao(nome: str) -> str:

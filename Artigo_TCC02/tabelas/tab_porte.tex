@@ -2,17 +2,17 @@
 \centering
 \footnotesize
 \setlength{\tabcolsep}{4pt}
-\caption{Modelo econômico com o seu melhor método (escolhido nas 100 perguntas da camada principal) contra o intermediário da mesma família com o Stuff, nas perguntas da camada de generalização (25; no Docugami, as 14 com valor no gabarito). Preço: US\$ por milhão de tokens de entrada e de saída (Tabela~\ref{tab:llms}). Tokens: média por pergunta, somando a entrada e a saída de todas as chamadas do método, contados pelo tokenizador de cada modelo. Custo: US\$ por 1.000 perguntas (tokens de entrada e de saída vezes o preço de cada um). Métrica: a principal de cada conjunto. $p$: McNemar exato (acurácia) ou Wilcoxon pareado entre as duas configurações. Razão: custo do intermediário dividido pelo do econômico.}
+\caption{Modelo econômico com o seu melhor método (escolhido nas 100 perguntas da camada principal; em empate, o mais barato) contra o intermediário da mesma família com o Stuff, nas perguntas da camada de generalização (25). Preço: US\$ por milhão de tokens de entrada e de saída (Tabela~\ref{tab:llms}). Tokens: média por pergunta, somando a entrada e a saída de todas as chamadas do método, contados pelo tokenizador de cada modelo. Custo: US\$ por 1.000 perguntas (tokens de entrada e de saída vezes o preço de cada um). Métrica: a principal de cada conjunto. $p$: McNemar exato (acurácia) ou Wilcoxon pareado entre as duas configurações. Razão: custo do intermediário dividido pelo do econômico, calculada antes do arredondamento.}
 \label{tab:porte}
 \begin{tabular}{lllcrrccc}
 \toprule
 Dataset & Família & Configuração & Preço (US\$/1M) & Tokens & Custo (US\$/1.000) & Métrica & $p$ & Razão \\
 \midrule
-Docugami & OpenAI & Luna + Step-Down & 0,10 / 0,50 & 5.869 & 0,79 & 0,33 &  &  \\
- &  & Sol + Stuff & 2,00 / 10,00 & 1.107 & 2,66 & 0,14 & 0,041 & 3,4× \\
+Docugami & OpenAI & Luna + Step-Down & 0,10 / 0,50 & 5.715 & 0,75 & 0,29 &  &  \\
+ &  & Sol + Stuff & 2,00 / 10,00 & 1.037 & 2,47 & 0,16 & 0,122 & 3,3× \\
 \addlinespace
- & Anthropic & Haiku + Step-Down & 0,10 / 0,50 & 10.086 & 1,73 & 0,22 &  &  \\
- &  & Sonnet + Stuff & 2,00 / 10,00 & 1.715 & 5,71 & 0,10 & 0,109 & 3,3× \\
+ & Anthropic & Haiku + Step-Down & 0,10 / 0,50 & 9.661 & 1,63 & 0,26 &  &  \\
+ &  & Sonnet + Stuff & 2,00 / 10,00 & 1.630 & 5,23 & 0,10 & 0,018 & 3,2× \\
 \midrule
 MedQA & OpenAI & Luna + Map-Rerank & 0,10 / 0,50 & 2.094 & 0,28 & 0,92 &  &  \\
  &  & Sol + Stuff & 2,00 / 10,00 & 1.055 & 2,42 & 0,96 & 1,000 & 8,7× \\
