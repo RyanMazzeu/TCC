@@ -626,15 +626,21 @@ def figura_custo_tokens(tokens: dict, custo_usd: dict):
                          "custo_tokens.pdf")
 
 
-def _figura_contra_custo(valores_y: dict, custo_usd: dict, configurar_y, rotulo_y: str | None, arquivo: str):
+def _figura_contra_custo(valores_y: dict, custo_usd: dict, configurar_y, rotulo_y: str | None, arquivo,
+                         conjuntos=None, figsize=(7.1, 7.5), ajuste=None, legenda_ret=None, dpi=None):
     """Um painel por dataset, com custo em US$ por 1.000 perguntas (escala log) no eixo x e `valores_y` no y. Onde
     dois marcadores se sobreporiam, um deles é deslocado o mínimo necessário, e uma linha fina o liga à posição real
-    (um ponto)."""
+    (um ponto). Os parâmetros opcionais (só alguns conjuntos, tamanho, margens, posição da legenda, resolução) servem
+    para as versões dos slides; sem eles, sai a figura do artigo."""
     medias = valores_y
-    fig, eixos = plt.subplots(3, 1, figsize=(7.1, 7.5))
+    conjuntos = conjuntos or benchmarks.DATASETS
+    fig, eixos = plt.subplots(len(conjuntos), 1, figsize=figsize, squeeze=False)
+    eixos = eixos[:, 0]
     esquerda = 0.105 if rotulo_y else 0.07  # espaço para o rótulo do eixo y e para as marcas "10.000"
-    fig.subplots_adjust(left=esquerda, right=0.99, top=0.885, bottom=0.065, hspace=0.42)
-    for ax, nome in zip(eixos, benchmarks.DATASETS):
+    ajuste = ajuste or dict(left=esquerda, right=0.99, top=0.885, bottom=0.065, hspace=0.42)
+    fig.subplots_adjust(**ajuste)
+    esquerda = ajuste["left"]
+    for ax, nome in zip(eixos, conjuntos):
         _estilo(ax)
         ax.yaxis.grid(True, color=GRADE, linewidth=0.6)
         ax.set_xscale("log")
@@ -644,11 +650,11 @@ def _figura_contra_custo(valores_y: dict, custo_usd: dict, configurar_y, rotulo_
         ax.xaxis.set_major_formatter(FuncFormatter(lambda x, _: f"{x:g}".replace(".", ",")))
         configurar_y(ax, nome)
         if rotulo_y:
-            ax.set_ylabel(rotulo_y if ax is eixos[1] else "", fontsize=7.5, color=TEXTO_2)
+            ax.set_ylabel(rotulo_y if ax is eixos[len(eixos) // 2] else "", fontsize=7.5, color=TEXTO_2)
     eixos[-1].set_xlabel("Custo (US\\$ por 1.000 perguntas, escala logarítmica)", fontsize=7.5, color=TEXTO_2)
 
     escala = 72 / fig.dpi  # pixels -> pontos
-    for ax, nome in zip(eixos, benchmarks.DATASETS):
+    for ax, nome in zip(eixos, conjuntos):
         pontos = [(m, llm, custo_usd[nome, llm][m], medias[nome, llm][m]) for m in ab.METODOS for llm in TODOS]
         dados = np.array([(x, y) for _, _, x, y in pontos])
         # Nenhum ponto pode cair fora dos eixos: o marcador seria empurrado para dentro e a posição real sumiria.
@@ -670,7 +676,7 @@ def _figura_contra_custo(valores_y: dict, custo_usd: dict, configurar_y, rotulo_
                 ax.scatter(x, y, s=5, color=COR_METODO.get(m, CINZA), linewidth=0, zorder=2.5)
             _marcador(ax, xm, ym, m, llm)
 
-    legenda = fig.add_axes([esquerda, 0.915, 0.99 - esquerda, 0.08])
+    legenda = fig.add_axes(legenda_ret or [esquerda, 0.915, 0.99 - esquerda, 0.08])
     legenda.axis("off")
     legenda.set_xlim(0, 1)
     legenda.set_ylim(0, 1)
@@ -682,7 +688,7 @@ def _figura_contra_custo(valores_y: dict, custo_usd: dict, configurar_y, rotulo_
     _linha_de_legenda(legenda, 0.22, "Modelo", [(lambda x, y, l=llm: _marcador(legenda, x, y, None, l),
                                                  NOME_LLM[llm] + ("$^\\dagger$" if llm in INTERMEDIARIOS else ""))
                                                 for llm in TODOS])
-    fig.savefig(GRAFICOS / arquivo)
+    fig.savefig(GRAFICOS / arquivo, **({"dpi": dpi} if dpi else {}))
     plt.close(fig)
 
 
@@ -727,16 +733,20 @@ VEREDITOS_RECUSA = [("ausente", "#184f95", "Justificada: o contexto não tinha a
                     ("completa", LARANJA, "Injustificada: o contexto tinha toda a informação")]
 
 
-def _barras_por_metodo_llm(contagem: pd.Series, categorias: list, rotulo_y: str, arquivo: str):
+def _barras_por_metodo_llm(contagem: pd.Series, categorias: list, rotulo_y: str, arquivo, conjuntos=None,
+                           figsize=(7.1, 4.9), ajuste=None, legenda_ancora=(0.055, 1.0), dpi=None):
     """Barras empilhadas por método (grupos) e LLM (barras, pela sigla), um painel por dataset (Docugami e FaQuAD).
-    `contagem` é indexada por (dataset, método, LLM, categoria); `categorias`, uma lista de (categoria, cor, rótulo)."""
-    fig, eixos = plt.subplots(2, 1, figsize=(7.1, 4.9))
-    fig.subplots_adjust(left=0.065, right=0.995, top=0.86, bottom=0.07, hspace=0.42)
+    `contagem` é indexada por (dataset, método, LLM, categoria); `categorias`, uma lista de (categoria, cor, rótulo).
+    Os parâmetros opcionais servem para as versões dos slides; sem eles, sai a figura do artigo."""
+    conjuntos = conjuntos or DATASETS_CONTEXTO
+    fig, eixos = plt.subplots(len(conjuntos), 1, figsize=figsize, squeeze=False)
+    eixos = eixos[:, 0]
+    fig.subplots_adjust(**(ajuste or dict(left=0.065, right=0.995, top=0.86, bottom=0.07, hspace=0.42)))
     # Os intermediários (25 perguntas) ficam um pouco afastados dos econômicos (100) dentro de cada método.
     posicao = {llm: j + (0.45 if llm in INTERMEDIARIOS else 0) for j, llm in enumerate(TODOS)}
     largura = max(posicao.values()) + 1
     passo = largura + 1.6
-    for ax, nome in zip(eixos, DATASETS_CONTEXTO):
+    for ax, nome in zip(eixos, conjuntos):
         _estilo(ax)
         ax.xaxis.grid(False)
         ax.yaxis.grid(True, color=GRADE, linewidth=0.6)
@@ -758,9 +768,9 @@ def _barras_por_metodo_llm(contagem: pd.Series, categorias: list, rotulo_y: str,
         ax.set_ylabel(rotulo_y, fontsize=7.5, color=TEXTO_2)
         ax.set_title(NOME_DATASET[nome], fontsize=8, color=TEXTO, loc="left", pad=4)
     legenda = [plt.Rectangle((0, 0), 1, 1, color=cor, label=rotulo) for _, cor, rotulo in categorias]
-    fig.legend(handles=legenda, loc="upper left", ncol=2, frameon=False, fontsize=7.3, bbox_to_anchor=(0.055, 1.0),
+    fig.legend(handles=legenda, loc="upper left", ncol=2, frameon=False, fontsize=7.3, bbox_to_anchor=legenda_ancora,
                handlelength=1.2, columnspacing=1.5)
-    fig.savefig(GRAFICOS / arquivo)
+    fig.savefig(GRAFICOS / arquivo, **({"dpi": dpi} if dpi else {}))
     plt.close(fig)
 
 
