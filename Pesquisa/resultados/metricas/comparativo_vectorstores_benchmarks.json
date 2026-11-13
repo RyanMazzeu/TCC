@@ -32,25 +32,25 @@
     "n_consultas": 100,
     "chromadb": {
       "indice": "HNSW (padrão do ChromaDB)",
-      "tempo_indexacao_s": 5.77,
-      "memoria_indexacao_mb": 184.7,
-      "tempo_consulta_medio_ms": 2.751
+      "tempo_indexacao_s": 4.011,
+      "memoria_indexacao_mb": 191.9,
+      "tempo_consulta_medio_ms": 2.106
     },
     "faiss": {
       "indice": "IndexFlatL2 (busca exata)",
       "tempo_indexacao_s": 0.017,
-      "memoria_indexacao_mb": 17.4,
-      "tempo_consulta_medio_ms": 1.204
+      "memoria_indexacao_mb": 17.8,
+      "tempo_consulta_medio_ms": 2.082
     },
     "concordancia_top4": 1.0,
     "sobreposicao_media_top4": 1.0,
     "hit@4": {
-      "chromadb": 0.8485,
-      "faiss": 0.8485
+      "chromadb": 0.82,
+      "faiss": 0.82
     },
     "recall@4": {
-      "chromadb": 0.7879,
-      "faiss": 0.7879
+      "chromadb": 0.7617,
+      "faiss": 0.7617
     }
   },
   {

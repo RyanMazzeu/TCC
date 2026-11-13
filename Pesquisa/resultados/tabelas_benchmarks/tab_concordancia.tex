@@ -2,21 +2,21 @@
 \centering
 \footnotesize
 \setlength{\tabcolsep}{4pt}
-\caption{Posto médio de cada método entre os cinco LLMs da camada principal (1 = melhor) e concordância da ordem dos seis métodos entre os LLMs (W de Kendall: 1 = mesma ordem em todos; 0 = nenhuma concordância; entre parênteses, o valor-$p$).}
+\caption{Posto médio de cada método entre os cinco LLMs da camada principal (1 = melhor) e concordância da ordem dos seis métodos entre os LLMs (W de Kendall, com correção de empates: 1 = mesma ordem em todos; 0 = nenhuma concordância; entre parênteses, o valor-$p$).}
 \label{tab:concordancia}
 \begin{tabular}{lccc}
 \toprule
 Método & Docugami & MedQA & FaQuAD \\
 \midrule
 Stuff & 2,8 & 5,1 & 1,4 \\
-Refine & 3,6 & 3,7 & 3,0 \\
-Map-Reduce & 3,6 & 3,7 & 2,8 \\
-Map-Rerank & 5,8 & 2,4 & 5,0 \\
-Step-Down & 1,0 & 2,1 & 3,0 \\
-Reciprocal & 4,2 & 4,0 & 5,8 \\
+Refine & 3,2 & 3,7 & 3,0 \\
+Map-Reduce & 3,8 & 3,7 & 2,8 \\
+Map-Rerank & 6,0 & 2,4 & 5,0 \\
+Step-Down & 1,2 & 2,1 & 3,0 \\
+Reciprocal & 4,0 & 4,0 & 5,8 \\
 \midrule
-W, 5 LLMs (100 perg.) & 0,72 (0,003) & 0,35 (0,124) & 0,74 (0,002) \\
-W, 7 LLMs (25 perg.) & 0,64 ($<$0,001) & 0,24 (0,142) & 0,61 ($<$0,001) \\
+W, 5 LLMs (100 perg.) & 0,71 (0,003) & 0,36 (0,113) & 0,74 (0,002) \\
+W, 7 LLMs (25 perg.) & 0,64 ($<$0,001) & 0,35 (0,032) & 0,61 ($<$0,001) \\
 \bottomrule
 \end{tabular}
 \end{table}

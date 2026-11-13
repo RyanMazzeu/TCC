@@ -1,0 +1,22 @@
+\begin{table*}[!t]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{3.5pt}
+\caption{O que chegou ao LLM e o que ele fez, por método, nos cinco econômicos (camada principal, 500 respostas por método e conjunto), segundo o juiz. Inf. completa e Inf. ausente: porcentagem das respostas em que o contexto tinha toda a informação ou nada dela (o restante teve parte). Rej. negativa: dos casos sem a informação, a porcentagem em que o modelo recusou, como no RGB \cite{chen2024rgb}; o restante respondeu sem a informação. Recusa injust.: dos casos com toda a informação, a porcentagem em que o modelo recusou. Métrica c/ inf.: métrica principal quando o contexto tinha toda a informação; Métrica s/ inf.: quando não tinha nada dela e o modelo respondeu assim mesmo.}
+\label{tab:contexto}
+\begin{tabular}{lcccccccccccc}
+\toprule
+ & \multicolumn{6}{c}{Docugami SEC 10-Q (valores do gabarito)} & \multicolumn{6}{c}{FaQuAD (cobertura de tokens)} \\
+\cmidrule(lr){2-7}\cmidrule(lr){8-13}
+ & Inf. & Inf. & Rej. & Recusa & Métrica & Métrica & Inf. & Inf. & Rej. & Recusa & Métrica & Métrica \\
+Método & completa & ausente & negativa & injust. & c/ inf. & s/ inf. & completa & ausente & negativa & injust. & c/ inf. & s/ inf. \\
+\midrule
+Stuff & 20 & 57 & 81 & 26 & 0,42 & 0,01 & 92 & 7 & 51 & 1 & 0,93 & 0,36 \\
+Refine & 20 & 57 & 49 & 13 & 0,39 & 0,01 & 92 & 7 & 26 & 2 & 0,90 & 0,44 \\
+Map-Reduce & 20 & 57 & 52 & 22 & 0,34 & 0,02 & 92 & 7 & 43 & 1 & 0,89 & 0,36 \\
+Map-Rerank & 20 & 57 & 70 & 45 & 0,08 & 0,01 & 92 & 7 & 34 & 4 & 0,82 & 0,36 \\
+Step-Down & 32 & 46 & 23 & 9 & 0,38 & 0,03 & 94 & 4 & 11 & 0 & 0,86 & 0,53 \\
+Reciprocal & 32 & 45 & 48 & 20 & 0,23 & 0,02 & 94 & 3 & 13 & 1 & 0,72 & 0,18 \\
+\bottomrule
+\end{tabular}
+\end{table*}

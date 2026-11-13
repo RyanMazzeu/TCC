@@ -50,6 +50,23 @@ SIMILARIDADE_PAPER_ANCORA = {
 }
 
 
+_IDS_AMOSTRA: dict[str, set[str]] = {}
+
+
+def ids_amostra(nome: str) -> set[str]:
+    """Ids das 100 perguntas da camada principal de um dataset (as 25 da generalização estão dentro delas). Toda a
+    análise se restringe a elas: no Docugami, os logs e os arquivos de avaliação guardam também respostas a perguntas
+    qualitativas, sem valor no gabarito, de uma amostra anterior à restrição de benchmarks.elegivel."""
+    if nome not in _IDS_AMOSTRA:
+        _IDS_AMOSTRA[nome] = {p["id"] for p in benchmarks.amostra(benchmarks.carregar_perguntas(nome),
+                                                                  benchmarks.PERGUNTAS_POR_CAMADA["principal"])}
+    return _IDS_AMOSTRA[nome]
+
+
+def na_amostra(registro: dict) -> bool:
+    return registro["pergunta_id"] in ids_amostra(registro["dataset"])
+
+
 def carregar_execucoes() -> pd.DataFrame:
     precos = {l["rotulo"]: l["preco"] for l in pb.LLMS_DO_COMPARATIVO}
     linhas = []
@@ -60,6 +77,8 @@ def carregar_execucoes() -> pd.DataFrame:
                 if not texto.strip():
                     continue
                 r = json.loads(texto)
+                if not na_amostra(r):
+                    continue
                 r.setdefault("repeticao", 1)
                 r.update(metricas_resposta.metricas(r, gabarito[r["pergunta_id"]]))
                 preco_entrada, preco_saida = precos.get(r["llm"], (np.nan, np.nan))
@@ -72,15 +91,25 @@ def carregar_execucoes() -> pd.DataFrame:
 
 
 def kendall_w(tabela: pd.DataFrame) -> float:
-    """W de Kendall: linhas = avaliadores (LLMs), colunas = itens (métodos). 1 = mesma ordem em todos."""
+    """W de Kendall: linhas = avaliadores (LLMs), colunas = itens (métodos). 1 = mesma ordem em todos; 0 = nenhuma
+    concordância.
+
+    Com correção de empates: métodos com o mesmo valor num LLM dividem a posição (posto médio), e o denominador desconta,
+    para cada LLM, a soma de t³ - t sobre os seus grupos de t métodos empatados. Sem a correção, um LLM que empata tudo
+    (o Sol no MedQA, com 96% em todos os métodos nas 25 perguntas) pesa como se discordasse dos outros, e o W fica
+    subestimado (no MedQA com 7 LLMs, 0,24 em vez de 0,35). Com ela, m(n-1)W é exatamente a estatística do teste de
+    Friedman com correção de empates, a mesma usada na Tabela de resultado principal."""
     postos = tabela.rank(axis=1)
     m, n = postos.shape
     s = ((postos.sum(axis=0) - m * (n + 1) / 2) ** 2).sum()
-    return float(12 * s / (m**2 * (n**3 - n)))
+    empates = sum(float((t**3 - t).sum()) for t in (linha.value_counts().to_numpy(dtype=float) for _, linha in tabela.iterrows()))
+    denominador = m**2 * (n**3 - n) - m * empates
+    return float(12 * s / denominador) if denominador > 0 else float("nan")
 
 
 def kendall_w_p(tabela: pd.DataFrame) -> float:
-    """Valor-p do W de Kendall pela aproximação qui-quadrado: m(n-1)W ~ χ² com n-1 graus de liberdade."""
+    """Valor-p do W de Kendall pela aproximação qui-quadrado: m(n-1)W ~ χ² com n-1 graus de liberdade (com a correção de
+    empates do W, é o mesmo valor-p do teste de Friedman com os LLMs como blocos)."""
     m, n = tabela.shape
     return float(stats.chi2.sf(m * (n - 1) * kendall_w(tabela), n - 1))
 
@@ -105,7 +134,11 @@ def comparar_porte(df: pd.DataFrame) -> pd.DataFrame:
         ids = {p["id"] for p in benchmarks.amostra(benchmarks.carregar_perguntas(nome), benchmarks.PERGUNTAS_POR_CAMADA["generalizacao"])}
         g = df[(df["dataset"] == nome) & (df["repeticao"] == 1) & (df["metodo_rag"].isin(METODOS_RAG))]
         for familia, econ, inter in FAMILIAS:
-            melhor = g[g["llm"] == econ].groupby("metodo_rag")[col].mean().idxmax()
+            # Melhor método do econômico; se dois empatam (ex.: Luna no MedQA, Map-Rerank e Step-Down com 91%), fica o
+            # mais barato -- antes o idxmax escolhia o primeiro em ordem alfabética, sem dizer.
+            ge = g[g["llm"] == econ].groupby("metodo_rag")
+            medias, custos = ge[col].mean(), ge["custo_usd"].mean()
+            melhor = min(_melhores(medias), key=lambda m: custos[m])
             e = g[(g["llm"] == econ) & (g["metodo_rag"] == melhor) & g["pergunta_id"].isin(ids)].set_index("pergunta_id")
             i = g[(g["llm"] == inter) & (g["metodo_rag"] == "stuff") & g["pergunta_id"].isin(ids)].set_index("pergunta_id")
             par = pd.concat([e[col].rename("econ"), i[col].rename("inter")], axis=1).dropna()
@@ -279,7 +312,7 @@ def secao_paper_ancora(df: pd.DataFrame) -> list[str]:
                   "similaridade: a comparação é indicativa.\n")
     caminho = METRICAS_DIR / "similaridade_bge_small.jsonl"
     if caminho.exists():
-        bge = pd.DataFrame([json.loads(t) for t in caminho.read_text(encoding="utf-8").splitlines()])
+        bge = pd.DataFrame([r for r in map(json.loads, caminho.read_text(encoding="utf-8").splitlines()) if na_amostra(r)])
         partes.append("\n### Com o bge-small-en-v1.5, o embedding do artigo-base (mediana de todas as respostas, 7 LLMs)\n\n")
         linhas = []
         for m in METODOS_RAG:
@@ -301,7 +334,8 @@ def secao_ragas() -> list[str]:
             continue
         for texto in caminho.read_text(encoding="utf-8").splitlines():
             r = json.loads(texto)
-            respostas.append({**{k: r[k] for k in ("dataset", "llm", "metodo_rag", "pergunta_id")}, **r["ragas"]})
+            if na_amostra(r):
+                respostas.append({**{k: r[k] for k in ("dataset", "llm", "metodo_rag", "pergunta_id")}, **r["ragas"]})
     if respostas:
         rag = pd.DataFrame(respostas)
         for coluna, rotulo in (("faithfulness", "Faithfulness"), ("answer_relevancy", "Answer Relevancy")):
@@ -326,8 +360,8 @@ def secao_ragas() -> list[str]:
         caminho = METRICAS_DIR / f"ragas_contexto_{nome}.jsonl"
         if not caminho.exists():
             continue
-        ctx = pd.DataFrame([{"pergunta_id": json.loads(t)["pergunta_id"], **json.loads(t)["ragas"]}
-                            for t in caminho.read_text(encoding="utf-8").splitlines()])
+        ctx = pd.DataFrame([{"pergunta_id": r["pergunta_id"], **r["ragas"]}
+                            for r in map(json.loads, caminho.read_text(encoding="utf-8").splitlines()) if na_amostra(r)])
         ctx["hit4"] = [hit4.get((nome, p)) for p in ctx["pergunta_id"]]
         pares = ctx.dropna(subset=["context_precision", "hit4"])
         rho = stats.spearmanr(pares["context_precision"], pares["hit4"]) if len(pares) > 2 and pares["hit4"].nunique() > 1 else None

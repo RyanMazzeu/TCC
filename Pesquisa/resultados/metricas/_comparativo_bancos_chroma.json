@@ -16,9 +16,9 @@
     "n_consultas": 100,
     "chromadb": {
       "indice": "HNSW (padrão do ChromaDB)",
-      "tempo_indexacao_s": 5.77,
-      "memoria_indexacao_mb": 184.7,
-      "tempo_consulta_medio_ms": 2.751
+      "tempo_indexacao_s": 4.011,
+      "memoria_indexacao_mb": 191.9,
+      "tempo_consulta_medio_ms": 2.106
     }
   },
   {

@@ -21,51 +21,51 @@ Só entram as perguntas com algum valor numérico no gabarito (as outras são qu
 
 | LLM | Método | n | Valores do gabarito na resposta [IC 95%] | Cosseno | Recusas | Tokens (média) | Custo total US$ | Tempo s (mediana) |
 |---|---|---|---|---|---|---|---|---|
-| claude_haiku | Sem RAG | 66 | 0,009 [0,000; 0,023] | 0,799 | 87% | 386 | 0,0161 | 7,5 |
-| claude_haiku | Stuff | 66 | 0,189 [0,111; 0,274] | 0,787 | 59% | 1.578 | 0,0250 | 5,3 |
-| claude_haiku | Refine | 66 | 0,158 [0,087; 0,237] | 0,788 | 46% | 3.386 | 0,0736 | 10,0 |
-| claude_haiku | Map-Reduce | 66 | 0,143 [0,073; 0,222] | 0,816 | 14% | 2.380 | 0,0409 | 9,1 |
-| claude_haiku | Map-Rerank | 66 | 0,045 [0,008; 0,095] | 0,703 | 60% | 2.323 | 0,0430 | 7,9 |
-| claude_haiku | Step-Down | 66 | 0,275 [0,188; 0,370] | 0,832 | 31% | 9.137 | 0,1528 | 18,0 |
-| claude_haiku | Reciprocal | 66 | 0,148 [0,076; 0,229] | 0,663 | 42% | 7.755 | 0,1107 | 14,1 |
-| deepseek | Sem RAG | 66 | 0,067 [0,021; 0,124] | 0,823 | 64% | 194 | 0,0300 | 8,5 |
-| deepseek | Stuff | 66 | 0,127 [0,057; 0,208] | 0,702 | 68% | 950 | 0,0901 | 5,8 |
-| deepseek | Refine | 66 | 0,078 [0,027; 0,138] | 0,717 | 62% | 1.494 | 0,1529 | 13,3 |
-| deepseek | Map-Reduce | 66 | 0,100 [0,039; 0,172] | 0,667 | 71% | 1.309 | 0,1255 | 13,2 |
-| deepseek | Map-Rerank | 66 | 0,066 [0,024; 0,117] | 0,653 | 59% | 1.375 | 0,1387 | 13,2 |
-| deepseek | Step-Down | 66 | 0,150 [0,084; 0,226] | 0,811 | 31% | 5.127 | 0,5012 | 30,2 |
-| deepseek | Reciprocal | 66 | 0,056 [0,016; 0,108] | 0,615 | 52% | 4.890 | 0,4709 | 25,9 |
-| gpt_luna | Sem RAG | 66 | 0,080 [0,030; 0,143] | 0,808 | 23% | 140 | 0,0048 | 6,1 |
-| gpt_luna | Stuff | 66 | 0,149 [0,079; 0,229] | 0,777 | 36% | 997 | 0,0126 | 15,0 |
-| gpt_luna | Refine | 66 | 0,143 [0,079; 0,217] | 0,783 | 4% | 1.705 | 0,0295 | 18,0 |
-| gpt_luna | Map-Reduce | 66 | 0,202 [0,124; 0,289] | 0,812 | 2% | 1.465 | 0,0214 | 16,1 |
-| gpt_luna | Map-Rerank | 66 | 0,068 [0,027; 0,121] | 0,693 | 22% | 1.451 | 0,0230 | 16,6 |
-| gpt_luna | Step-Down | 66 | 0,225 [0,142; 0,317] | 0,825 | 10% | 5.293 | 0,0702 | 31,4 |
-| gpt_luna | Reciprocal | 66 | 0,163 [0,091; 0,244] | 0,651 | 24% | 5.072 | 0,0641 | 16,7 |
-| gpt_mini | Sem RAG | 66 | 0,000 [0,000; 0,000] | 0,568 | 84% | 108 | 0,0040 | 4,8 |
-| gpt_mini | Stuff | 66 | 0,104 [0,044; 0,174] | 0,599 | 59% | 977 | 0,0166 | 7,2 |
-| gpt_mini | Refine | 66 | 0,157 [0,085; 0,235] | 0,733 | 25% | 1.771 | 0,0430 | 19,2 |
-| gpt_mini | Map-Reduce | 66 | 0,093 [0,030; 0,165] | 0,692 | 38% | 1.358 | 0,0245 | 15,3 |
-| gpt_mini | Map-Rerank | 66 | 0,038 [0,004; 0,087] | 0,714 | 63% | 1.382 | 0,0270 | 11,7 |
-| gpt_mini | Step-Down | 66 | 0,163 [0,087; 0,246] | 0,830 | 5% | 5.198 | 0,0938 | 27,0 |
-| gpt_mini | Reciprocal | 66 | 0,106 [0,045; 0,182] | 0,671 | 29% | 5.015 | 0,0871 | 13,7 |
-| qwen | Sem RAG | 66 | 0,026 [0,007; 0,052] | 0,812 | 61% | 315 | 0,0073 | 9,5 |
-| qwen | Stuff | 66 | 0,109 [0,045; 0,185] | 0,648 | 66% | 1.585 | 0,0310 | 4,9 |
-| qwen | Refine | 66 | 0,073 [0,031; 0,124] | 0,771 | 28% | 2.398 | 0,0457 | 12,3 |
-| qwen | Map-Reduce | 66 | 0,075 [0,023; 0,138] | 0,769 | 79% | 1.570 | 0,0275 | 7,6 |
-| qwen | Map-Rerank | 66 | 0,054 [0,013; 0,106] | 0,676 | 72% | 1.635 | 0,0293 | 7,7 |
-| qwen | Step-Down | 66 | 0,143 [0,074; 0,220] | 0,807 | 12% | 6.239 | 0,1106 | 13,5 |
-| qwen | Reciprocal | 66 | 0,064 [0,015; 0,125] | 0,622 | 37% | 6.245 | 0,1125 | 18,4 |
+| claude_haiku | Sem RAG | 100 | 0,008 [0,000; 0,019] | 0,793 | 89% | 377 | 0,0157 | 7,7 |
+| claude_haiku | Stuff | 100 | 0,174 [0,110; 0,242] | 0,791 | 52% | 1.591 | 0,0249 | 7,1 |
+| claude_haiku | Refine | 100 | 0,148 [0,091; 0,210] | 0,784 | 44% | 3.444 | 0,0753 | 12,2 |
+| claude_haiku | Map-Reduce | 100 | 0,135 [0,078; 0,196] | 0,811 | 11% | 2.352 | 0,0396 | 10,0 |
+| claude_haiku | Map-Rerank | 100 | 0,043 [0,015; 0,077] | 0,693 | 61% | 2.315 | 0,0420 | 8,3 |
+| claude_haiku | Step-Down | 100 | 0,239 [0,169; 0,312] | 0,835 | 31% | 9.332 | 0,1551 | 20,1 |
+| claude_haiku | Reciprocal | 100 | 0,125 [0,072; 0,185] | 0,658 | 40% | 7.867 | 0,1121 | 15,5 |
+| deepseek | Sem RAG | 100 | 0,072 [0,031; 0,120] | 0,812 | 59% | 197 | 0,0306 | 11,5 |
+| deepseek | Stuff | 100 | 0,106 [0,054; 0,165] | 0,696 | 71% | 960 | 0,0907 | 7,8 |
+| deepseek | Refine | 100 | 0,065 [0,028; 0,109] | 0,712 | 62% | 1.492 | 0,1520 | 16,1 |
+| deepseek | Map-Reduce | 100 | 0,084 [0,038; 0,138] | 0,631 | 68% | 1.317 | 0,1262 | 14,4 |
+| deepseek | Map-Rerank | 100 | 0,047 [0,019; 0,083] | 0,642 | 60% | 1.380 | 0,1388 | 14,3 |
+| deepseek | Step-Down | 100 | 0,144 [0,091; 0,201] | 0,816 | 25% | 5.294 | 0,5165 | 30,4 |
+| deepseek | Reciprocal | 100 | 0,052 [0,019; 0,094] | 0,599 | 49% | 5.024 | 0,4822 | 30,5 |
+| gpt_luna | Sem RAG | 100 | 0,062 [0,025; 0,105] | 0,795 | 26% | 126 | 0,0042 | 7,9 |
+| gpt_luna | Stuff | 100 | 0,141 [0,083; 0,203] | 0,775 | 42% | 1.006 | 0,0124 | 19,5 |
+| gpt_luna | Refine | 100 | 0,129 [0,078; 0,186] | 0,776 | 7% | 1.699 | 0,0291 | 18,0 |
+| gpt_luna | Map-Reduce | 100 | 0,161 [0,102; 0,226] | 0,796 | 3% | 1.467 | 0,0211 | 16,1 |
+| gpt_luna | Map-Rerank | 100 | 0,048 [0,018; 0,085] | 0,679 | 24% | 1.455 | 0,0227 | 15,9 |
+| gpt_luna | Step-Down | 100 | 0,184 [0,122; 0,252] | 0,830 | 12% | 5.451 | 0,0714 | 27,8 |
+| gpt_luna | Reciprocal | 100 | 0,144 [0,088; 0,205] | 0,654 | 25% | 5.206 | 0,0652 | 18,0 |
+| gpt_mini | Sem RAG | 100 | 0,000 [0,000; 0,000] | 0,558 | 83% | 101 | 0,0036 | 6,8 |
+| gpt_mini | Stuff | 100 | 0,089 [0,041; 0,146] | 0,593 | 59% | 990 | 0,0167 | 9,4 |
+| gpt_mini | Refine | 100 | 0,139 [0,085; 0,199] | 0,735 | 27% | 1.783 | 0,0432 | 23,0 |
+| gpt_mini | Map-Reduce | 100 | 0,076 [0,031; 0,130] | 0,657 | 46% | 1.369 | 0,0246 | 15,8 |
+| gpt_mini | Map-Rerank | 100 | 0,025 [0,003; 0,058] | 0,688 | 63% | 1.391 | 0,0269 | 12,0 |
+| gpt_mini | Step-Down | 100 | 0,138 [0,083; 0,202] | 0,828 | 4% | 5.304 | 0,0958 | 26,1 |
+| gpt_mini | Reciprocal | 100 | 0,091 [0,044; 0,143] | 0,658 | 29% | 5.096 | 0,0879 | 17,3 |
+| qwen | Sem RAG | 100 | 0,022 [0,007; 0,042] | 0,811 | 56% | 309 | 0,0072 | 9,7 |
+| qwen | Stuff | 100 | 0,099 [0,050; 0,155] | 0,644 | 69% | 1.595 | 0,0310 | 5,8 |
+| qwen | Refine | 100 | 0,083 [0,044; 0,126] | 0,769 | 30% | 2.434 | 0,0464 | 14,5 |
+| qwen | Map-Reduce | 100 | 0,065 [0,025; 0,112] | 0,760 | 76% | 1.585 | 0,0278 | 9,9 |
+| qwen | Map-Rerank | 100 | 0,036 [0,008; 0,071] | 0,657 | 76% | 1.647 | 0,0295 | 8,8 |
+| qwen | Step-Down | 100 | 0,127 [0,074; 0,187] | 0,807 | 12% | 6.548 | 0,1160 | 15,3 |
+| qwen | Reciprocal | 100 | 0,068 [0,025; 0,115] | 0,623 | 40% | 6.102 | 0,1068 | 16,6 |
 
 Friedman entre os 6 métodos (perguntas como blocos) e pares significativos após Holm:
 
 | LLM | Perguntas | χ² | p | Pares com p_Holm < 0,05 |
 |---|---|---|---|---|
-| claude_haiku | 66 | 43,42 | < 0,001 | Stuff×Map-Rerank, Map-Reduce×Step-Down, Map-Rerank×Step-Down |
-| deepseek | 66 | 15,62 | 0,008 | -- |
-| gpt_luna | 66 | 29,24 | < 0,001 | Map-Reduce×Map-Rerank, Map-Rerank×Step-Down |
-| gpt_mini | 66 | 26,79 | < 0,001 | Refine×Map-Rerank, Map-Rerank×Step-Down |
-| qwen | 66 | 13,50 | 0,019 | -- |
+| claude_haiku | 100 | 56,34 | < 0,001 | Stuff×Map-Rerank, Refine×Map-Rerank, Map-Reduce×Map-Rerank, Map-Reduce×Step-Down, Map-Rerank×Step-Down, Map-Rerank×Reciprocal, Step-Down×Reciprocal |
+| deepseek | 100 | 28,90 | < 0,001 | Refine×Step-Down, Map-Rerank×Step-Down, Step-Down×Reciprocal |
+| gpt_luna | 100 | 34,91 | < 0,001 | Stuff×Map-Rerank, Refine×Map-Rerank, Map-Reduce×Map-Rerank, Map-Rerank×Step-Down, Map-Rerank×Reciprocal |
+| gpt_mini | 100 | 43,10 | < 0,001 | Refine×Map-Rerank, Map-Rerank×Step-Down |
+| qwen | 100 | 22,32 | < 0,001 | Map-Rerank×Step-Down |
 
 ### medqa
 
@@ -177,13 +177,13 @@ Friedman entre os 6 métodos (perguntas como blocos) e pares significativos apó
 
 | LLM | Sem RAG | Stuff | Refine | Map-Reduce | Map-Rerank | Step-Down | Reciprocal |
 |---|---|---|---|---|---|---|---|
-| claude_haiku | 0,009 | +0,180* | +0,150* | +0,135* | +0,037 | +0,266* | +0,139* |
-| claude_sonnet | 0,048 | +0,051 | +0,200 | +0,155 | -0,048 | +0,209 | +0,048 |
-| deepseek | 0,067 | +0,060 | +0,010 | +0,033 | -0,002 | +0,082 | -0,012 |
-| gpt_luna | 0,080 | +0,069 | +0,063 | +0,122 | -0,012 | +0,145 | +0,082 |
-| gpt_mini | 0,000 | +0,104* | +0,157* | +0,093* | +0,038 | +0,163* | +0,106* |
-| gpt_sol | 0,089 | +0,054 | +0,188 | +0,060 | -0,036 | +0,197 | +0,024 |
-| qwen | 0,026 | +0,083 | +0,047 | +0,049 | +0,028 | +0,116* | +0,038 |
+| claude_haiku | 0,008 | +0,165* | +0,139* | +0,127* | +0,034 | +0,230* | +0,117* |
+| claude_sonnet | 0,027 | +0,075 | +0,212* | +0,147 | -0,027 | +0,317* | +0,127 |
+| deepseek | 0,072 | +0,034 | -0,007 | +0,012 | -0,025 | +0,072 | -0,019 |
+| gpt_luna | 0,062 | +0,079 | +0,067 | +0,099* | -0,014 | +0,122* | +0,082 |
+| gpt_mini | 0,000 | +0,089* | +0,139* | +0,076* | +0,025 | +0,138* | +0,091* |
+| gpt_sol | 0,098 | +0,062 | +0,137 | +0,026 | -0,028 | +0,142 | -0,011 |
+| qwen | 0,022 | +0,076 | +0,060 | +0,042 | +0,013 | +0,104* | +0,045 |
 
 \* diferença com p_Holm < 0,05 (Wilcoxon pareado contra o sem RAG).
 
@@ -217,19 +217,19 @@ Friedman entre os 6 métodos (perguntas como blocos) e pares significativos apó
 
 ## 4. Generalização (7 modelos, as mesmas 25 perguntas por dataset)
 
-### docugami_10q (Valores do gabarito na resposta, média nas 14 perguntas com valor no gabarito)
+### docugami_10q (Valores do gabarito na resposta, média nas 25 perguntas com valor no gabarito)
 
 | LLM | Stuff | Refine | Map-Reduce | Map-Rerank | Step-Down | Reciprocal |
 |---|---|---|---|---|---|---|
-| claude_haiku | 0,215 | 0,140 | 0,185 | 0,089 | 0,219 | 0,232 |
-| claude_sonnet | 0,099 | 0,248 | 0,203 | 0,000 | 0,256 | 0,095 |
-| deepseek | 0,071 | 0,125 | 0,078 | 0,054 | 0,090 | 0,006 |
-| gpt_luna | 0,176 | 0,251 | 0,245 | 0,054 | 0,328 | 0,161 |
-| gpt_mini | 0,089 | 0,236 | 0,018 | 0,018 | 0,107 | 0,071 |
-| gpt_sol | 0,143 | 0,277 | 0,149 | 0,054 | 0,286 | 0,113 |
-| qwen | 0,143 | 0,099 | 0,143 | 0,036 | 0,185 | 0,000 |
+| claude_haiku | 0,180 | 0,112 | 0,164 | 0,050 | 0,260 | 0,190 |
+| claude_sonnet | 0,102 | 0,239 | 0,174 | 0,000 | 0,344 | 0,153 |
+| deepseek | 0,120 | 0,090 | 0,110 | 0,043 | 0,100 | 0,064 |
+| gpt_luna | 0,099 | 0,174 | 0,217 | 0,030 | 0,290 | 0,200 |
+| gpt_mini | 0,090 | 0,206 | 0,050 | 0,010 | 0,160 | 0,100 |
+| gpt_sol | 0,160 | 0,235 | 0,124 | 0,070 | 0,240 | 0,087 |
+| qwen | 0,103 | 0,109 | 0,103 | 0,033 | 0,193 | 0,040 |
 
-W de Kendall (concordância da ordem dos métodos entre os 7 LLMs): **0,639** (p = < 0,001; 1 = mesma ordem em todos; 0 = nenhuma concordância).
+W de Kendall (concordância da ordem dos métodos entre os 7 LLMs): **0,637** (p = < 0,001; 1 = mesma ordem em todos; 0 = nenhuma concordância).
 
 ### medqa (Acurácia, média nas 25 perguntas)
 
@@ -243,7 +243,7 @@ W de Kendall (concordância da ordem dos métodos entre os 7 LLMs): **0,639** (p
 | gpt_sol | 0,960 | 0,960 | 0,960 | 0,960 | 0,960 | 0,960 |
 | qwen | 0,800 | 0,800 | 0,880 | 0,800 | 0,960 | 0,880 |
 
-W de Kendall (concordância da ordem dos métodos entre os 7 LLMs): **0,236** (p = 0,142; 1 = mesma ordem em todos; 0 = nenhuma concordância).
+W de Kendall (concordância da ordem dos métodos entre os 7 LLMs): **0,349** (p = 0,032; 1 = mesma ordem em todos; 0 = nenhuma concordância).
 
 ### faquad (Cobertura de tokens, média nas 25 perguntas)
 
@@ -263,10 +263,10 @@ W de Kendall (concordância da ordem dos métodos entre os 7 LLMs): **0,606** (p
 
 | Dataset | LLM | Perguntas | Desvio médio na métrica principal |
 |---|---|---|---|
-| docugami_10q | claude_haiku | 14 | 0,063 |
-| docugami_10q | claude_sonnet | 14 | 0,014 |
-| docugami_10q | gpt_luna | 14 | 0,009 |
-| docugami_10q | gpt_sol | 14 | 0,053 |
+| docugami_10q | claude_haiku | 25 | 0,035 |
+| docugami_10q | claude_sonnet | 25 | 0,015 |
+| docugami_10q | gpt_luna | 25 | 0,028 |
+| docugami_10q | gpt_sol | 25 | 0,053 |
 | faquad | claude_haiku | 25 | 0,010 |
 | faquad | claude_sonnet | 25 | 0,005 |
 | faquad | gpt_luna | 25 | 0,051 |
@@ -284,12 +284,12 @@ Compare com as diferenças entre métodos da seção 2: diferenças menores que 
 
 | Método | Paper-âncora | claude_haiku | claude_sonnet | deepseek | gpt_luna | gpt_mini | gpt_sol | qwen |
 |---|---|---|---|---|---|---|---|---|
-| Reciprocal | 0,971 | 0,667 | 0,570 | 0,638 | 0,666 | 0,686 | 0,595 | 0,639 |
-| Stuff | 0,895 | 0,792 | 0,776 | 0,713 | 0,784 | 0,421 | 0,747 | 0,704 |
-| Step-Down | 0,890 | 0,839 | 0,831 | 0,828 | 0,838 | 0,840 | 0,818 | 0,823 |
-| Map-Reduce | 0,873 | 0,809 | 0,837 | 0,708 | 0,837 | 0,785 | 0,770 | 0,746 |
-| Refine | 0,836 | 0,792 | 0,796 | 0,716 | 0,788 | 0,819 | 0,806 | 0,773 |
-| Map-Rerank | 0,801 | 0,710 | 0,625 | 0,655 | 0,696 | 0,705 | 0,656 | 0,671 |
+| Reciprocal | 0,971 | 0,651 | 0,523 | 0,614 | 0,670 | 0,677 | 0,559 | 0,641 |
+| Stuff | 0,895 | 0,797 | 0,800 | 0,702 | 0,773 | 0,401 | 0,738 | 0,678 |
+| Step-Down | 0,890 | 0,853 | 0,871 | 0,829 | 0,851 | 0,838 | 0,860 | 0,810 |
+| Map-Reduce | 0,873 | 0,804 | 0,846 | 0,679 | 0,829 | 0,740 | 0,801 | 0,739 |
+| Refine | 0,836 | 0,786 | 0,824 | 0,703 | 0,781 | 0,830 | 0,806 | 0,768 |
+| Map-Rerank | 0,801 | 0,692 | 0,625 | 0,643 | 0,682 | 0,684 | 0,707 | 0,649 |
 
 ### medqa
 
@@ -308,12 +308,12 @@ O paper-âncora agrega vários LLMs, embeddings e bancos vetoriais, e não infor
 
 | Método | docugami_10q: artigo | docugami_10q: este trabalho | medqa: artigo | medqa: este trabalho |
 |---|---|---|---|---|
-| Stuff | 0,895 | 0,839 | 0,641 | 0,757 |
-| Refine | 0,836 | 0,865 | 0,609 | 0,760 |
-| Map-Reduce | 0,873 | 0,841 | 0,569 | 0,769 |
-| Map-Rerank | 0,801 | 0,705 | 0,148 | 0,773 |
-| Step-Down | 0,890 | 0,881 | 0,678 | 0,769 |
-| Reciprocal | 0,971 | 0,684 | 0,673 | 0,776 |
+| Stuff | 0,895 | 0,838 | 0,641 | 0,757 |
+| Refine | 0,836 | 0,866 | 0,609 | 0,760 |
+| Map-Reduce | 0,873 | 0,836 | 0,569 | 0,769 |
+| Map-Rerank | 0,801 | 0,690 | 0,148 | 0,773 |
+| Step-Down | 0,890 | 0,883 | 0,678 | 0,769 |
+| Reciprocal | 0,971 | 0,683 | 0,673 | 0,776 |
 
 Calculada por `similaridade_bge_small.py`, com o mesmo cálculo da similaridade dos experimentos.
 
@@ -323,13 +323,13 @@ Calculada por `similaridade_bge_small.py`, com o mesmo cálculo da similaridade 
 
 | Dataset | LLM | Stuff | Refine | Map-Reduce | Map-Rerank |
 |---|---|---|---|---|---|
-| docugami_10q | claude_haiku | 0,907 | 0,813 | 0,669 | 0,645 |
-| docugami_10q | claude_sonnet | 0,893 | 0,883 | 0,648 | 0,713 |
-| docugami_10q | deepseek | 0,766 | 0,716 | 0,362 | 0,704 |
-| docugami_10q | gpt_luna | 0,869 | 0,792 | 0,559 | 0,719 |
-| docugami_10q | gpt_mini | 0,461 | 0,678 | 0,377 | 0,666 |
-| docugami_10q | gpt_sol | 0,777 | 0,726 | 0,686 | 0,766 |
-| docugami_10q | qwen | 0,684 | 0,828 | 0,313 | 0,631 |
+| docugami_10q | claude_haiku | 0,901 | 0,811 | 0,662 | 0,638 |
+| docugami_10q | claude_sonnet | 0,902 | 0,893 | 0,633 | 0,584 |
+| docugami_10q | deepseek | 0,776 | 0,725 | 0,391 | 0,655 |
+| docugami_10q | gpt_luna | 0,861 | 0,796 | 0,575 | 0,701 |
+| docugami_10q | gpt_mini | 0,454 | 0,691 | 0,433 | 0,663 |
+| docugami_10q | gpt_sol | 0,789 | 0,735 | 0,709 | 0,663 |
+| docugami_10q | qwen | 0,655 | 0,831 | 0,390 | 0,597 |
 | faquad | claude_haiku | 0,927 | 0,846 | 0,831 | 0,737 |
 | faquad | claude_sonnet | 0,912 | 0,886 | 0,819 | 0,747 |
 | faquad | deepseek | 0,906 | 0,886 | 0,822 | 0,872 |
@@ -349,13 +349,13 @@ Calculada por `similaridade_bge_small.py`, com o mesmo cálculo da similaridade 
 
 | Dataset | LLM | Sem RAG | Stuff | Refine | Map-Reduce | Map-Rerank | Step-Down | Reciprocal |
 |---|---|---|---|---|---|---|---|---|
-| docugami_10q | claude_haiku | 0,008 | 0,237 | 0,247 | 0,226 | 0,169 | 0,265 | 0,254 |
-| docugami_10q | claude_sonnet | 0,035 | 0,191 | 0,295 | 0,481 | 0,250 | 0,359 | 0,237 |
-| docugami_10q | deepseek | 0,277 | 0,237 | 0,226 | 0,288 | 0,245 | 0,362 | 0,182 |
-| docugami_10q | gpt_luna | 0,575 | 0,339 | 0,457 | 0,609 | 0,256 | 0,521 | 0,315 |
-| docugami_10q | gpt_mini | 0,130 | 0,351 | 0,608 | 0,457 | 0,268 | 0,547 | 0,364 |
-| docugami_10q | gpt_sol | 0,297 | 0,215 | 0,356 | 0,346 | 0,178 | 0,459 | 0,331 |
-| docugami_10q | qwen | 0,349 | 0,230 | 0,274 | 0,167 | 0,160 | 0,403 | 0,250 |
+| docugami_10q | claude_haiku | 0,008 | 0,255 | 0,296 | 0,241 | 0,165 | 0,316 | 0,303 |
+| docugami_10q | claude_sonnet | 0,035 | 0,259 | 0,363 | 0,416 | 0,170 | 0,426 | 0,323 |
+| docugami_10q | deepseek | 0,328 | 0,223 | 0,237 | 0,274 | 0,231 | 0,371 | 0,175 |
+| docugami_10q | gpt_luna | 0,536 | 0,330 | 0,485 | 0,570 | 0,261 | 0,533 | 0,300 |
+| docugami_10q | gpt_mini | 0,140 | 0,359 | 0,601 | 0,406 | 0,256 | 0,571 | 0,370 |
+| docugami_10q | gpt_sol | 0,405 | 0,261 | 0,356 | 0,402 | 0,191 | 0,504 | 0,355 |
+| docugami_10q | qwen | 0,403 | 0,233 | 0,324 | 0,205 | 0,170 | 0,411 | 0,251 |
 | faquad | claude_haiku | 0,331 | 0,747 | 0,685 | 0,742 | 0,507 | 0,558 | 0,583 |
 | faquad | claude_sonnet | 0,240 | 0,693 | 0,623 | 0,667 | 0,312 | 0,604 | 0,343 |
 | faquad | deepseek | 0,638 | 0,622 | 0,713 | 0,699 | 0,455 | 0,635 | 0,428 |
@@ -377,7 +377,7 @@ O gpt-4o-mini é juiz e também um dos modelos testados (viés de autopreferênc
 
 | Dataset | Perguntas | Context Precision | Context Recall | Spearman com o Hit@4 |
 |---|---|---|---|---|
-| docugami_10q | 100 | 0,549 | 0,449 | 0,107 (p=0,291) |
+| docugami_10q | 100 | 0,562 | 0,409 | 0,215 (p=0,032) |
 | medqa | 100 | 0,439 | 0,523 | -- |
 | faquad | 100 | 0,872 | 0,940 | 0,341 (p=< 0,001) |
 
@@ -386,7 +386,7 @@ O gpt-4o-mini é juiz e também um dos modelos testados (viés de autopreferênc
 | Dataset (vetores) | Index. Chroma (s) | Index. FAISS (s) | Consulta Chroma (ms) | Consulta FAISS (ms) | Mem. Chroma (MB) | Mem. FAISS (MB) | Top-4 idêntico | Sobreposição top-4 | Hit@4 Chroma × FAISS |
 |---|---|---|---|---|---|---|---|---|---|
 | faquad (318) | 0,63 | 0,001 | 3,78 | 0,05 | 29,3 | 1,6 | 100% | 100% | 0,930 × 0,930 |
-| docugami_10q (4.463) | 5,77 | 0,017 | 2,75 | 1,20 | 184,7 | 17,4 | 100% | 100% | 0,849 × 0,849 |
+| docugami_10q (4.463) | 4,01 | 0,017 | 2,11 | 2,08 | 191,9 | 17,8 | 100% | 100% | 0,820 × 0,820 |
 | medqa (121.553) | 260,83 | 0,304 | 5,00 | 36,47 | 801,5 | 474,8 | 82% | 94% | -- |
 
 Top-4 idêntico: fração das consultas em que os dois bancos entregam os mesmos 4 fragmentos ao LLM (nelas, a resposta do RAG seria a mesma com o FAISS). Medido num índice Chroma recriado só pro comparativo; o HNSW não é determinístico, então a tabela abaixo compara com o índice dos experimentos.
@@ -395,7 +395,7 @@ Top-4 idêntico: fração das consultas em que os dois bancos entregam os mesmos
 
 | Dataset | Métrica | Top-4 igual ao dos experimentos | Perguntas refeitas | Chroma | FAISS | Nas refeitas (Chroma × FAISS) | Só um acerta (Chroma × FAISS) | p |
 |---|---|---|---|---|---|---|---|---|
-| docugami_10q | Valores do gabarito na resposta | 99% | 1 | 0,104 | 0,104 | 1,000 × 1,000 | -- | -- |
+| docugami_10q | Valores do gabarito na resposta | 99% | 1 | 0,089 | 0,089 | 1,000 × 1,000 | -- | -- |
 | medqa | Acurácia | 84% | 16 | 0,680 | 0,690 | 0,750 × 0,812 | 0 × 1 | 1,000 |
 | faquad | Cobertura de tokens | 100% | 0 | 0,861 | 0,861 | -- | -- | -- |
 
@@ -405,8 +405,8 @@ Só as perguntas com top-4 diferente são respondidas de novo com os fragmentos 
 
 | Dataset | Família | Econômico + melhor método (camada principal) | Econômico | Intermediário + Stuff | p | Custo do intermediário / econômico | Melhor(es) nas 25 (econômico) | Melhor(es) nas 25 (intermediário) |
 |---|---|---|---|---|---|---|---|---|
-| docugami_10q | OpenAI | gpt_luna + Step-Down | 0,328 | 0,143 | 0,041 | 3,4× | Step-Down | Step-Down |
-| docugami_10q | Anthropic | claude_haiku + Step-Down | 0,219 | 0,099 | 0,109 | 3,3× | Reciprocal | Step-Down |
+| docugami_10q | OpenAI | gpt_luna + Step-Down | 0,290 | 0,160 | 0,122 | 3,3× | Step-Down | Step-Down |
+| docugami_10q | Anthropic | claude_haiku + Step-Down | 0,260 | 0,102 | 0,018 | 3,2× | Step-Down | Step-Down |
 | medqa | OpenAI | gpt_luna + Map-Rerank | 0,920 | 0,960 | 1,000 | 8,7× | Map-Rerank, Step-Down, Reciprocal, Stuff | Map-Reduce, Map-Rerank, Step-Down, Reciprocal, Refine, Stuff |
 | medqa | Anthropic | claude_haiku + Map-Rerank | 0,960 | 0,920 | 1,000 | 7,4× | Map-Rerank | Map-Reduce, Map-Rerank, Step-Down, Reciprocal, Refine |
 | faquad | OpenAI | gpt_luna + Stuff | 0,862 | 0,817 | 0,463 | 19,5× | Stuff | Stuff |

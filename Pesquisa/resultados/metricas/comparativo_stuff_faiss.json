@@ -7,8 +7,8 @@
     "n_perguntas": 100,
     "top4_identico_ao_experimento": 0.99,
     "perguntas_refeitas": 1,
-    "media_chroma": 0.1042,
-    "media_faiss": 0.1042,
+    "media_chroma": 0.0887,
+    "media_faiss": 0.0887,
     "media_chroma_nas_refeitas": 1.0,
     "media_faiss_nas_refeitas": 1.0
   },
