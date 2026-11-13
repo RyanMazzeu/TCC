@@ -10,16 +10,16 @@
 \cmidrule(lr){2-8}\cmidrule(lr){9-15}\cmidrule(lr){16-22}
 Método & Qwen & \shortstack{Deep\\Seek} & Haiku & Luna & 4o-mini & Sonnet$^\dagger$ & Sol$^\dagger$ & Qwen & \shortstack{Deep\\Seek} & Haiku & Luna & 4o-mini & Sonnet$^\dagger$ & Sol$^\dagger$ & Qwen & \shortstack{Deep\\Seek} & Haiku & Luna & 4o-mini & Sonnet$^\dagger$ & Sol$^\dagger$ \\
 \midrule
-Sem RAG & 0,02 & 0,07 & 0,01 & 0,06 & 0,00 & 0,03 & 0,10 & 0,72 & 0,80 & 0,83 & 0,88 & 0,71 & \textbf{0,96} & \textbf{0,96} & 0,50 & 0,49 & 0,50 & 0,35 & 0,41 & 0,50 & 0,48 \\
+Sem RAG & 0,02 & 0,07 & 0,01 & 0,06 & 0,00 & 0,03 & 0,10 & 0,72 & 0,86 & 0,84 & 0,88 & 0,71 & \textbf{0,96} & \textbf{0,96} & 0,50 & 0,49 & 0,50 & 0,35 & 0,41 & 0,50 & 0,48 \\
 \midrule
-Stuff & 0,10 & 0,11 & 0,17* & 0,14 & 0,09* & 0,10 & 0,16 & 0,74 & 0,81 & 0,80 & 0,89 & 0,68 & 0,92 & \textbf{0,96} & \textbf{0,87*} & \textbf{0,87*} & \textbf{0,92*} & \textbf{0,85*} & 0,86* & 0,91* & \textbf{0,82*} \\
-Refine & 0,08 & 0,07 & 0,15* & 0,13 & \textbf{0,14*} & 0,24* & \textbf{0,24} & 0,79 & 0,88 & 0,81 & 0,89 & 0,68 & \textbf{0,96} & \textbf{0,96} & 0,84* & 0,86* & 0,89* & 0,78* & \textbf{0,92*} & \textbf{0,92*} & 0,73* \\
-Map-Reduce & 0,06 & 0,08 & 0,13* & 0,16* & 0,08* & 0,17 & 0,12 & 0,80 & 0,81 & 0,85 & 0,88 & \textbf{0,73} & \textbf{0,96} & \textbf{0,96} & 0,85* & 0,86* & 0,84* & 0,80* & 0,85* & 0,79* & 0,72* \\
-Map-Rerank & 0,04 & 0,05 & 0,04 & 0,05 & 0,03 & 0,00 & 0,07 & 0,75 & 0,88 & \textbf{0,92*} & \textbf{0,91} & 0,69 & \textbf{0,96} & \textbf{0,96} & 0,79* & 0,80* & 0,71* & 0,77* & 0,82* & 0,56 & 0,68* \\
-Step-Down & \textbf{0,13*} & \textbf{0,14} & \textbf{0,24*} & \textbf{0,18*} & \textbf{0,14*} & \textbf{0,34*} & \textbf{0,24} & \textbf{0,83} & \textbf{0,91*} & 0,89 & \textbf{0,91} & 0,65 & \textbf{0,96} & \textbf{0,96} & 0,82* & \textbf{0,87*} & \textbf{0,92*} & 0,79* & 0,79* & 0,90* & 0,74* \\
+Stuff & 0,10 & 0,11 & 0,17* & 0,14 & 0,09* & 0,10 & 0,16 & 0,74 & 0,82 & 0,80 & 0,89 & 0,68 & 0,92 & \textbf{0,96} & \textbf{0,87*} & \textbf{0,87*} & \textbf{0,92*} & \textbf{0,85*} & 0,86* & 0,91* & \textbf{0,82*} \\
+Refine & 0,08 & 0,07 & 0,15* & 0,13 & \textbf{0,14*} & 0,24* & \textbf{0,24} & 0,79 & 0,88 & 0,82 & 0,89 & 0,68 & \textbf{0,96} & \textbf{0,96} & 0,84* & 0,86* & 0,89* & 0,78* & \textbf{0,92*} & \textbf{0,92*} & 0,73* \\
+Map-Reduce & 0,06 & 0,08 & 0,13* & 0,16* & 0,08* & 0,17 & 0,12 & 0,80 & 0,84 & 0,90 & 0,88 & \textbf{0,73} & \textbf{0,96} & \textbf{0,96} & 0,85* & 0,86* & 0,84* & 0,80* & 0,85* & 0,79* & 0,72* \\
+Map-Rerank & 0,04 & 0,05 & 0,04 & 0,05 & 0,03 & 0,00 & 0,07 & 0,75 & 0,88 & \textbf{0,92} & \textbf{0,91} & 0,69 & \textbf{0,96} & \textbf{0,96} & 0,79* & 0,80* & 0,71* & 0,77* & 0,82* & 0,56 & 0,68* \\
+Step-Down & \textbf{0,13*} & \textbf{0,14} & \textbf{0,24*} & \textbf{0,18*} & \textbf{0,14*} & \textbf{0,34*} & \textbf{0,24} & \textbf{0,83} & \textbf{0,91} & 0,89 & \textbf{0,91} & 0,65 & \textbf{0,96} & \textbf{0,96} & 0,82* & \textbf{0,87*} & \textbf{0,92*} & 0,79* & 0,79* & 0,90* & 0,74* \\
 Reciprocal & 0,07 & 0,05 & 0,12* & 0,14 & 0,09* & 0,15 & 0,09 & 0,76 & 0,83 & 0,88 & 0,90 & 0,61 & \textbf{0,96} & \textbf{0,96} & 0,65* & 0,75* & 0,77* & 0,70* & 0,59* & 0,56 & 0,75* \\
 \midrule
-Friedman $p$ & \textless{}0,001 & \textless{}0,001 & \textless{}0,001 & \textless{}0,001 & \textless{}0,001 & \textless{}0,001 & 0,005 & 0,165 & 0,008 & 0,005 & 0,844 & 0,034 & 0,416 & -- & \textless{}0,001 & \textless{}0,001 & \textless{}0,001 & \textless{}0,001 & \textless{}0,001 & \textless{}0,001 & 0,122 \\
+Friedman $p$ & \textless{}0,001 & \textless{}0,001 & \textless{}0,001 & \textless{}0,001 & \textless{}0,001 & \textless{}0,001 & 0,005 & 0,165 & 0,053 & 0,002 & 0,844 & 0,034 & 0,416 & -- & \textless{}0,001 & \textless{}0,001 & \textless{}0,001 & \textless{}0,001 & \textless{}0,001 & \textless{}0,001 & 0,122 \\
 \bottomrule
 \end{tabular}
 \end{table*}

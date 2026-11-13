@@ -84,21 +84,21 @@
    "stuff": 0.74
   },
   "medqa|deepseek": {
-   "map_reduce": 0.81,
+   "map_reduce": 0.84,
    "map_rerank": 0.88,
    "query_step_down": 0.91,
    "reciprocal": 0.83,
    "refine": 0.88,
-   "sem_rag": 0.8,
-   "stuff": 0.81
+   "sem_rag": 0.86,
+   "stuff": 0.82
   },
   "medqa|claude_haiku": {
-   "map_reduce": 0.85,
+   "map_reduce": 0.9,
    "map_rerank": 0.92,
    "query_step_down": 0.89,
    "reciprocal": 0.88,
-   "refine": 0.81,
-   "sem_rag": 0.83,
+   "refine": 0.82,
+   "sem_rag": 0.84,
    "stuff": 0.8
   },
   "medqa|gpt_luna": {
@@ -412,54 +412,54 @@
   },
   "medqa|deepseek": {
    "stuff": [
-    0.01,
+    -0.04,
     1.0
    ],
    "refine": [
-    0.08,
-    0.1046
+    0.02,
+    1.0
    ],
    "map_reduce": [
-    0.01,
+    -0.02,
     1.0
    ],
    "map_rerank": [
-    0.08,
-    0.1046
+    0.02,
+    1.0
    ],
    "query_step_down": [
-    0.11,
-    0.0271
+    0.05,
+    0.9931
    ],
    "reciprocal": [
-    0.03,
+    -0.03,
     1.0
    ]
   },
   "medqa|claude_haiku": {
    "stuff": [
-    -0.03,
-    1.0
+    -0.04,
+    0.7446
    ],
    "refine": [
     -0.02,
-    1.0
+    0.7446
    ],
    "map_reduce": [
-    0.02,
-    1.0
-   ],
-   "map_rerank": [
-    0.09,
-    0.0399
-   ],
-   "query_step_down": [
     0.06,
     0.4163
    ],
-   "reciprocal": [
+   "map_rerank": [
+    0.08,
+    0.0685
+   ],
+   "query_step_down": [
     0.05,
-    0.6621
+    0.5267
+   ],
+   "reciprocal": [
+    0.04,
+    0.7446
    ]
   },
   "medqa|gpt_luna": {
@@ -765,17 +765,17 @@
    }
   },
   "medqa": {
-   "w5": 0.356,
-   "p5": 0.113,
-   "w7": 0.349,
-   "p7": 0.032,
+   "w5": 0.388,
+   "p5": 0.084,
+   "w7": 0.344,
+   "p7": 0.034,
    "ranking": {
-    "query_step_down": 2.1,
+    "query_step_down": 2.3,
     "map_rerank": 2.4,
-    "map_reduce": 3.7,
+    "map_reduce": 3.0,
     "refine": 3.7,
-    "reciprocal": 4.0,
-    "stuff": 5.1
+    "reciprocal": 4.4,
+    "stuff": 5.2
    }
   },
   "faquad": {
@@ -856,7 +856,7 @@
    "claude_haiku": {
     "stuff": 0.8,
     "refine": 0.88,
-    "map_reduce": 0.84,
+    "map_reduce": 0.88,
     "map_rerank": 0.96,
     "query_step_down": 0.88,
     "reciprocal": 0.92

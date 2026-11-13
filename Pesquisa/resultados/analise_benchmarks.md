@@ -73,17 +73,17 @@ Métrica principal: Acurácia.
 
 | LLM | Método | n | Acurácia [IC 95%] | Cosseno | Recusas | Tokens (média) | Custo total US$ | Tempo s (mediana) |
 |---|---|---|---|---|---|---|---|---|
-| claude_haiku | Sem RAG | 100 | 0,830 [0,750; 0,900] | 0,607 | 0% | 614 | 0,0152 | 8,2 |
+| claude_haiku | Sem RAG | 100 | 0,840 [0,770; 0,910] | 0,607 | 0% | 614 | 0,0152 | 8,2 |
 | claude_haiku | Stuff | 100 | 0,800 [0,720; 0,870] | 0,604 | 1% | 1.892 | 0,0275 | 13,3 |
-| claude_haiku | Refine | 100 | 0,810 [0,730; 0,880] | 0,596 | 0% | 4.343 | 0,0740 | 13,8 |
-| claude_haiku | Map-Reduce | 100 | 0,850 [0,780; 0,920] | 0,616 | 8% | 4.239 | 0,0643 | 13,1 |
+| claude_haiku | Refine | 100 | 0,820 [0,740; 0,890] | 0,596 | 0% | 4.343 | 0,0740 | 13,8 |
+| claude_haiku | Map-Reduce | 100 | 0,900 [0,840; 0,950] | 0,616 | 8% | 4.239 | 0,0643 | 13,1 |
 | claude_haiku | Map-Rerank | 100 | 0,920 [0,860; 0,970] | 0,606 | 0% | 3.805 | 0,0674 | 10,4 |
 | claude_haiku | Step-Down | 100 | 0,890 [0,830; 0,950] | 0,615 | 0% | 10.063 | 0,1511 | 16,9 |
 | claude_haiku | Reciprocal | 100 | 0,880 [0,810; 0,940] | 0,596 | 1% | 8.741 | 0,1244 | 13,9 |
-| deepseek | Sem RAG | 100 | 0,800 [0,720; 0,870] | 0,611 | 0% | 358 | 0,0427 | 6,9 |
-| deepseek | Stuff | 100 | 0,810 [0,730; 0,880] | 0,601 | 1% | 1.137 | 0,1141 | 8,2 |
+| deepseek | Sem RAG | 100 | 0,860 [0,790; 0,920] | 0,611 | 0% | 358 | 0,0427 | 6,9 |
+| deepseek | Stuff | 100 | 0,820 [0,740; 0,890] | 0,601 | 1% | 1.137 | 0,1141 | 8,2 |
 | deepseek | Refine | 100 | 0,880 [0,810; 0,940] | 0,656 | 0% | 2.476 | 0,2543 | 17,0 |
-| deepseek | Map-Reduce | 100 | 0,810 [0,730; 0,880] | 0,611 | 0% | 2.702 | 0,2756 | 17,9 |
+| deepseek | Map-Reduce | 100 | 0,840 [0,770; 0,910] | 0,611 | 0% | 2.702 | 0,2756 | 17,9 |
 | deepseek | Map-Rerank | 100 | 0,880 [0,820; 0,940] | 0,820 | 0% | 2.014 | 0,1928 | 10,4 |
 | deepseek | Step-Down | 100 | 0,910 [0,850; 0,960] | 0,619 | 0% | 5.764 | 0,5767 | 29,3 |
 | deepseek | Reciprocal | 100 | 0,830 [0,750; 0,900] | 0,771 | 0% | 4.862 | 0,4637 | 21,1 |
@@ -113,8 +113,8 @@ Friedman entre os 6 métodos (perguntas como blocos) e pares significativos apó
 
 | LLM | Perguntas | χ² | p | Pares com p_Holm < 0,05 |
 |---|---|---|---|---|
-| claude_haiku | 100 | 16,54 | 0,005 | Stuff×Map-Rerank, Stuff×Step-Down |
-| deepseek | 100 | 15,76 | 0,008 | -- |
+| claude_haiku | 100 | 18,70 | 0,002 | Stuff×Map-Rerank, Stuff×Step-Down |
+| deepseek | 100 | 10,94 | 0,053 | -- |
 | gpt_luna | 100 | 2,04 | 0,844 | -- |
 | gpt_mini | 100 | 12,08 | 0,034 | -- |
 | qwen | 100 | 7,84 | 0,165 | -- |
@@ -191,9 +191,9 @@ Friedman entre os 6 métodos (perguntas como blocos) e pares significativos apó
 
 | LLM | Sem RAG | Stuff | Refine | Map-Reduce | Map-Rerank | Step-Down | Reciprocal |
 |---|---|---|---|---|---|---|---|
-| claude_haiku | 0,830 | -0,030 | -0,020 | +0,020 | +0,090* | +0,060 | +0,050 |
+| claude_haiku | 0,840 | -0,040 | -0,020 | +0,060 | +0,080 | +0,050 | +0,040 |
 | claude_sonnet | 0,960 | -0,040 | +0,000 | +0,000 | +0,000 | +0,000 | +0,000 |
-| deepseek | 0,800 | +0,010 | +0,080 | +0,010 | +0,080 | +0,110* | +0,030 |
+| deepseek | 0,860 | -0,040 | +0,020 | -0,020 | +0,020 | +0,050 | -0,030 |
 | gpt_luna | 0,880 | +0,010 | +0,010 | +0,000 | +0,030 | +0,030 | +0,020 |
 | gpt_mini | 0,710 | -0,030 | -0,030 | +0,020 | -0,020 | -0,060 | -0,100 |
 | gpt_sol | 0,960 | +0,000 | +0,000 | +0,000 | +0,000 | +0,000 | +0,000 |
@@ -235,7 +235,7 @@ W de Kendall (concordância da ordem dos métodos entre os 7 LLMs): **0,637** (p
 
 | LLM | Stuff | Refine | Map-Reduce | Map-Rerank | Step-Down | Reciprocal |
 |---|---|---|---|---|---|---|
-| claude_haiku | 0,800 | 0,880 | 0,840 | 0,960 | 0,880 | 0,920 |
+| claude_haiku | 0,800 | 0,880 | 0,880 | 0,960 | 0,880 | 0,920 |
 | claude_sonnet | 0,920 | 0,960 | 0,960 | 0,960 | 0,960 | 0,960 |
 | deepseek | 0,880 | 0,920 | 0,880 | 0,920 | 1,000 | 0,960 |
 | gpt_luna | 0,920 | 0,880 | 0,880 | 0,920 | 0,920 | 0,920 |
@@ -243,7 +243,7 @@ W de Kendall (concordância da ordem dos métodos entre os 7 LLMs): **0,637** (p
 | gpt_sol | 0,960 | 0,960 | 0,960 | 0,960 | 0,960 | 0,960 |
 | qwen | 0,800 | 0,800 | 0,880 | 0,800 | 0,960 | 0,880 |
 
-W de Kendall (concordância da ordem dos métodos entre os 7 LLMs): **0,349** (p = 0,032; 1 = mesma ordem em todos; 0 = nenhuma concordância).
+W de Kendall (concordância da ordem dos métodos entre os 7 LLMs): **0,344** (p = 0,034; 1 = mesma ordem em todos; 0 = nenhuma concordância).
 
 ### faquad (Cobertura de tokens, média nas 25 perguntas)
 
