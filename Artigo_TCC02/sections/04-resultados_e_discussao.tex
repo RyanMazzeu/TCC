@@ -94,6 +94,11 @@ A Figura~\ref{fig:custo_desempenho} reúne o custo e o desempenho de todos os m�
 \Figure[!t](topskip=0pt, botskip=0pt, midskip=0pt)[width=\textwidth]{custo_desempenho.pdf}
 {Desempenho e custo de cada método e LLM: métrica principal de cada conjunto contra o custo em US\$ por 1.000 perguntas, em escala logarítmica (os mesmos valores das Tabelas~\ref{tab:principal} e~\ref{tab:custo_usd}). A cor indica o método, e a sigla, o LLM. Econômicos (círculos): camada principal (100 perguntas). $^\dagger$Intermediários (quadrados): as 25 perguntas da camada de generalização. Marcadores que se sobreporiam foram afastados o mínimo necessário, sem inverter a ordem dos valores nos dois eixos, e uma linha fina liga cada um à sua posição real.\label{fig:custo_desempenho}}
 
+A Figura~\ref{fig:custo_tokens} mostra os mesmos métodos e modelos com os tokens consumidos no lugar da métrica. Dentro de cada modelo, os pontos ficam quase sobre uma diagonal, já que o custo cresce na proporção dos tokens; a distância vertical entre modelos de mesmo custo é a diferença de preço do token. Com o mesmo consumo de tokens, o Sonnet e o Sol custam 20 vezes o Haiku e o Luna, o que explica por que, nos intermediários, até o Stuff custou mais que o Query Step-Down dos econômicos da mesma família.
+
+\Figure[!t](topskip=0pt, botskip=0pt, midskip=0pt)[width=\textwidth]{custo_tokens.pdf}
+{Tokens e custo de cada método e LLM: tokens por pergunta contra o custo em US\$ por 1.000 perguntas, ambos em escala logarítmica (os mesmos valores das Tabelas~\ref{tab:tokens} e~\ref{tab:custo_usd}). A cor indica o método, e a sigla, o LLM. Econômicos (círculos): camada principal (100 perguntas). $^\dagger$Intermediários (quadrados): as 25 perguntas da camada de generalização. Marcadores que se sobreporiam foram afastados o mínimo necessário, sem inverter a ordem dos valores nos dois eixos, e uma linha fina liga cada um à sua posição real.\label{fig:custo_tokens}}
+
 \subsection{Variação do modelo}
 \label{ssc:variacao}
 
